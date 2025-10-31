@@ -21,3 +21,7 @@ A curated collection of helpful resources for PCB design and electronics.
 
 - **PCB Design Tutorial (Rev A)**: [documents/PCBDesignTutorialRevA.pdf](documents/PCBDesignTutorialRevA.pdf)
 - **Rick's Reading Recommendation**: [documents/Ricks-Reading-Recommendation.pdf](documents/Ricks-Reading-Recommendation.pdf)
+
+
+## Reference Projects
+- **HackRF**: https://github.com/greatscottgadgets/hackrf
