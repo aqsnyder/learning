@@ -25,3 +25,4 @@ A curated collection of helpful resources for PCB design and electronics.
 
 ## Reference Projects
 - **HackRF**: https://github.com/greatscottgadgets/hackrf
+- **CommaAI**: https://github.com/commaai

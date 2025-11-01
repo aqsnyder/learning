@@ -22,14 +22,11 @@ A curated collection of helpful resources for ML
 - **Code samples for the book**:https://github.com/mnielsen/neural-networks-and-deep-learning
 
 
-## Colah's blog
+## Blogs
 
-- **Misc ML goodness**:https://colah.github.io/
-
-
-## Distill
-
-- **More Misc ML goodness**:https://distill.pub/ 
+- **Colah's blog**:https://colah.github.io/
+- **Anthropic**: https://www.anthropic.com/
+- **Distill**:https://distill.pub/ 
 
 
 ## Deep learning reading list from Ilya Sutskever
