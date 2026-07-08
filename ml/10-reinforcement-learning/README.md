@@ -24,6 +24,19 @@ Reinforcement learning teaches agents to make sequential decisions by maximizing
 
 ---
 
+## RL for Language Models
+
+Reinforcement learning has become central to aligning large language models with human preferences. RLHF (via PPO) was the key technique behind ChatGPT's behavior, while DPO simplifies the pipeline by eliminating the reward model entirely. Self-play and self-taught reasoning push the boundaries further.
+
+| # | Resource | Type | Marking | Link |
+|---|----------|------|---------|------|
+| 10 | Deep RL from Human Preferences – Christiano et al. (2017) | Paper | 🔑 | [arxiv.org/abs/1706.03741](https://arxiv.org/abs/1706.03741) |
+| 11 | Direct Preference Optimization (DPO) – Rafailov et al. (2023) | Paper | 🔑 | [arxiv.org/abs/2305.18290](https://arxiv.org/abs/2305.18290) |
+| 12 | Self-Play Fine-Tuning (SPIN) – Chen et al. (2024) | Paper | | [arxiv.org/abs/2401.01335](https://arxiv.org/abs/2401.01335) |
+| 13 | STaR – Self-Taught Reasoner – Zelikman et al. (2022) | Paper | | [arxiv.org/abs/2203.14465](https://arxiv.org/abs/2203.14465) |
+
+---
+
 ## Suggested Order
 
 1. **Foundations** – Work through Sutton & Barto chapters 1–6 (bandits, MDPs, dynamic programming, MC, TD learning).
@@ -33,3 +46,6 @@ Reinforcement learning teaches agents to make sequential decisions by maximizing
 5. **Policy gradients** – Read PPO to understand clipped surrogate objectives and why PPO became the default algorithm.
 6. **Game-playing agents** – Read AlphaGo, then AlphaGo Zero to see how self-play and MCTS combine with deep RL.
 7. **Deeper study** – Optionally follow Stanford CS234 for a more rigorous mathematical treatment.
+8. **RLHF origins** – Read Christiano et al. to understand learning reward models from human comparisons.
+9. **DPO** – Read Rafailov et al. to see how preference optimization can replace RL entirely.
+10. **Self-play** – Read SPIN and STaR for self-improvement without human feedback.

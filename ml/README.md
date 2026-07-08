@@ -33,10 +33,12 @@ Section 04  →  CNNs and Computer Vision
 Section 05  →  RNNs, Sequences, and Memory
 Section 06  →  Transformers and Attention
 Section 07  →  Generative Models
-Section 08  →  Scaling and Training
+Section 08  →  Scaling, Efficiency, and Deployment
 Section 09  →  Large Language Models
 Section 10  →  Reinforcement Learning
-Section 11  →  Frontiers (2023–2025+)
+Section 11  →  Frontiers (2023–2026+)
+Section 12  →  Interpretability and Alignment
+Section 13  →  Graphs, Geometry, and Science
 ```
 
 ### Cross-Cutting References
