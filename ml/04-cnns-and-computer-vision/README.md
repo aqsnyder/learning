@@ -2,7 +2,9 @@
 
 ## Why This Section Matters
 
-Convolutional Neural Networks are where deep learning proved it could work at scale. AlexNet's 2012 ImageNet victory wasn't just a benchmark improvement — it was the moment that convinced the broader ML community that deep neural networks were viable. The progression from AlexNet to VGGNet to GoogLeNet to ResNet tells the story of how the field learned to train deeper and deeper networks, discovering architectural principles (skip connections, 1×1 convolutions, batch normalization) that remain foundational across all of modern deep learning. Understanding CNNs gives you the vocabulary and intuition for feature hierarchies, spatial invariance, and representation learning that carry over into every other domain.
+Convolutional Neural Networks are where deep learning proved it could work at scale. AlexNet's 2012 ImageNet victory wasn't just a benchmark improvement — it was the moment that convinced the broader ML community that deep neural networks were viable. The progression from AlexNet to VGGNet to GoogLeNet to ResNet tells the story of how the field learned to train deeper and deeper networks, discovering architectural principles (skip connections, 1×1 convolutions, batch normalization) that remain foundational across all of modern deep learning.
+
+But the story doesn't end with CNNs. Starting with ViT (2020), Vision Transformers proved that the attention mechanism from NLP could match or surpass CNNs on vision tasks — fundamentally reshaping the field. Understanding both the CNN foundations and the ViT transition gives you the full vocabulary of modern computer vision: feature hierarchies, spatial invariance, patch embeddings, and multi-scale attention.
 
 ## Prerequisites
 
@@ -29,6 +31,15 @@ Convolutional Neural Networks are where deep learning proved it could work at sc
 | | 📝 Article | Feature Visualization | Olah et al. | 2017 | [Distill](https://distill.pub/2017/feature-visualization/) | Beautiful interactive exploration of what neural network neurons learn to detect. Makes CNN internals tangible and intuitive. |
 | | 📝 Article | The Building Blocks of Interpretability | Olah et al. | 2018 | [Distill](https://distill.pub/2018/building-blocks/) | Builds on feature visualization to show how network components combine into interpretable explanations of model behavior. |
 
+### Vision Transformers
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|-----------|------|------|-------------|
+| 🔑 | 📄 Paper | An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale (ViT) | Dosovitskiy et al. | 2020 | [Paper](https://arxiv.org/abs/2010.11929) | THE must-read. Proved transformers could match/beat CNNs on vision by treating image patches as tokens. |
+| | 📄 Paper | Training Data-Efficient Image Transformers (DeiT) | Touvron et al. | 2021 | [Paper](https://arxiv.org/abs/2012.12877) | Showed how to train ViTs without massive datasets using knowledge distillation and strong data augmentation. |
+| | 📄 Paper | Swin Transformer: Hierarchical Vision Transformer using Shifted Windows | Liu et al. | 2021 | [Paper](https://arxiv.org/abs/2103.14030) | Hierarchical vision transformer with shifted windows — efficient multi-scale feature extraction for dense prediction. |
+| | 📄 Paper | End-to-End Object Detection with Transformers (DETR) | Carion et al. | 2020 | [Paper](https://arxiv.org/abs/2005.12872) | Eliminated hand-designed components (anchors, NMS) in object detection by framing it as a set prediction problem. |
+
 ## Suggested Order
 
 1. **CS231n lectures** — Watch lectures 1–9 for the full foundation (convolutions, architectures, training)
@@ -39,3 +50,7 @@ Convolutional Neural Networks are where deep learning proved it could work at sc
 6. **ResNet** — The most important architecture paper; understand skip connections deeply
 7. **Dilated Convolutions** — Expanding receptive fields without downsampling
 8. **Distill: Feature Visualization** → **Building Blocks** — End with interpretability to understand what your networks actually learn
+9. **ViT** — Read the paper that proved transformers could rival CNNs; understand patch embeddings and positional encodings
+10. **DeiT** — See how to train ViTs efficiently without JFT-scale data
+11. **Swin Transformer** — Learn hierarchical multi-scale attention with shifted windows
+12. **DETR** — Understand how transformers replace hand-designed detection pipelines

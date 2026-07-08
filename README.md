@@ -6,6 +6,11 @@
 
 <p align="center">
   <a href="ml/">🧠 Machine Learning</a> •
+  <a href="math/">🔢 Mathematics</a> •
+  <a href="physics/">⚛️ Physics</a> •
+  <a href="bio/">🧬 Biology</a> •
+  <a href="econ/">📈 Economics</a> •
+  <a href="philosophy/">🧠 Philosophy</a> •
   <a href="pcb/">🔌 PCB Design</a> •
   <a href="btc/">₿ Bitcoin</a> •
   <a href="software/">🏗️ Software Engineering</a>
@@ -15,10 +20,10 @@
 
 ## What Is This?
 
-A personal knowledge repository containing **four structured learning curricula** — each with curated resources, ordered sections, and progress tracking. Built for deep, self-directed study paired with [NotebookLM](https://notebooklm.google.com/).
+A personal knowledge repository containing **nine structured learning curricula** — each with curated resources, ordered sections, and progress tracking. Built for deep, self-directed study paired with [NotebookLM](https://notebooklm.google.com/).
 
 Every curriculum follows the same structure:
-- **12 numbered sections** progressing from foundations to frontiers
+- **12+ numbered sections** progressing from foundations to frontiers
 - **Must-read markers** (🔑) highlighting absolute priorities
 - **Cross-cutting references** (books, courses, blogs/tools)
 - **Progress tracker** (`PROGRESS.md`) for checking off items
@@ -33,9 +38,64 @@ Every curriculum follows the same structure:
 
 | Highlights | |
 |---|---|
-| **Sections** | Historical foundations → Math → Classical ML → Neural nets → CNNs → RNNs → Transformers → Generative models → Scaling → LLMs → RL → Frontiers |
+| **Sections** | Historical foundations → Math → Classical ML → Neural nets → CNNs/ViTs → RNNs → Transformers → Generative models → Scaling/Efficiency → LLMs → RL → Frontiers → **Interpretability & Alignment** → **Graphs, Geometry & Science** |
 | **Special marker** | ⭐ = Ilya Sutskever's reading list ("*If you really learn all of these, you'll know 90% of what matters today*") |
-| **Key resources** | Karpathy, 3Blue1Brown, Andrew Ng, Stanford CS courses, Goodfellow, Sutton & Barto |
+| **Key resources** | Karpathy, 3Blue1Brown, Andrew Ng, Stanford CS courses, Goodfellow, Sutton & Barto, Anthropic (mechanistic interpretability) |
+
+---
+
+### [🔢 Mathematics](math/)
+> From foundational reasoning to the mathematical machinery powering modern AI and science.
+
+| Highlights | |
+|---|---|
+| **Sections** | Mathematical thinking → Linear algebra → Analysis → Probability → Optimization → Information theory → Graph theory → Differential equations → Abstract algebra → Topology/geometry → Causal inference → Category theory |
+| **Key resources** | Axler, Strang, Abbott, Boyd & Vandenberghe, Cover & Thomas, Pearl, Strogatz, 3Blue1Brown |
+| **Focus** | Genuine mathematical maturity, not just "math for ML" |
+
+---
+
+### [⚛️ Physics](physics/)
+> From classical mechanics to quantum computing — the physical principles underlying simulation, modeling, and AI for science.
+
+| Highlights | |
+|---|---|
+| **Sections** | Classical mechanics → Waves/optics → Thermodynamics → Electromagnetism → Quantum mechanics → Relativity → Computational physics → Quantum computing → Condensed matter → Fluids → Chaos → Physics-informed ML |
+| **Key resources** | Feynman Lectures, Griffiths, Schroeder, Strogatz, Newman, Nielsen & Chuang, Qiskit |
+| **Focus** | Physics that connects to computation, simulation, and AI applications |
+
+---
+
+### [🧬 Biology & Computational Life Sciences](bio/)
+> From molecular biology fundamentals to AI-driven drug discovery and protein design.
+
+| Highlights | |
+|---|---|
+| **Sections** | Molecular biology → Biochemistry → Genetics/genomics → Structural biology → Bioinformatics → Systems biology → Drug discovery → Protein design → Genomic medicine → Neuroscience → AI for biology → Frontiers |
+| **Key resources** | Alberts, Lehninger, Durbin, Dayan & Abbott, AlphaFold, RFdiffusion, ESM-2 |
+| **Focus** | The conceptual foundation for AI × life sciences innovation |
+
+---
+
+### [📈 Economics, Decision Theory & Game Theory](econ/)
+> The mathematics of incentives, strategy, and coordination.
+
+| Highlights | |
+|---|---|
+| **Sections** | Economic thinking → Microeconomics → Game theory → Decision theory → Mechanism design → Information economics → Behavioral economics → Network economics → Computational economics → Social choice → Monetary/crypto → AI alignment economics |
+| **Key resources** | Varian, Tadelis, Kahneman, Börgers, Easley & Kleinberg, Nisan et al., Roughgarden |
+| **Focus** | Foundations for AI alignment, multi-agent systems, and incentive design |
+
+---
+
+### [🧠 Philosophy of Mind & Intelligence](philosophy/)
+> The deepest questions about minds, machines, consciousness, and what it means to understand.
+
+| Highlights | |
+|---|---|
+| **Sections** | Foundations → Philosophy of mind → Consciousness → Computation & mind → Intelligence → Philosophy of AI → Ethics of AI → Existential risk → Language & meaning → Free will → Eastern philosophy → Frontiers |
+| **Key resources** | Hofstadter (GEB), Chalmers, Dennett, Bostrom, Russell, Kim, Searle, Turing |
+| **Focus** | What intelligence actually *is* — the questions that shape how you build AI |
 
 ---
 
@@ -85,6 +145,51 @@ learning/
 │   ├── README.md
 │   ├── PROGRESS.md
 │   ├── 00-historical-foundations/
+│   ├── ...
+│   ├── 13-graphs-geometry-and-science/
+│   ├── books/
+│   ├── courses/
+│   └── blogs-and-references/
+├── math/                  ← Mathematics curriculum
+│   ├── README.md
+│   ├── PROGRESS.md
+│   ├── 00-mathematical-thinking/
+│   ├── ...
+│   ├── 11-category-theory-and-frontiers/
+│   ├── books/
+│   ├── courses/
+│   └── blogs-and-references/
+├── physics/               ← Physics curriculum
+│   ├── README.md
+│   ├── PROGRESS.md
+│   ├── 00-classical-mechanics/
+│   ├── ...
+│   ├── 11-physics-informed-ml-and-frontiers/
+│   ├── books/
+│   ├── courses/
+│   └── blogs-and-references/
+├── bio/                   ← Biology curriculum
+│   ├── README.md
+│   ├── PROGRESS.md
+│   ├── 00-molecular-biology-fundamentals/
+│   ├── ...
+│   ├── 11-frontiers/
+│   ├── books/
+│   ├── courses/
+│   └── blogs-and-references/
+├── econ/                  ← Economics curriculum
+│   ├── README.md
+│   ├── PROGRESS.md
+│   ├── 00-economic-thinking/
+│   ├── ...
+│   ├── 11-ai-alignment-economics-and-frontiers/
+│   ├── books/
+│   ├── courses/
+│   └── blogs-and-references/
+├── philosophy/            ← Philosophy curriculum
+│   ├── README.md
+│   ├── PROGRESS.md
+│   ├── 00-foundations-of-philosophy/
 │   ├── ...
 │   ├── 11-frontiers/
 │   ├── books/
