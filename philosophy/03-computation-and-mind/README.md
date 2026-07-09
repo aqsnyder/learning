@@ -28,6 +28,8 @@ This is where philosophy meets computer science at the deepest level. Can a mind
 | | 📕 Book | I Am a Strange Loop | Douglas Hofstadter | 2007 | — | Hofstadter's more focused sequel to GEB. Argues that consciousness arises from self-referential "strange loops" in the brain. |
 | | 📝 Encyclopedia | Computationalism | SEP | — | [SEP](https://plato.stanford.edu/entries/computational-mind/) | The view that cognition is computation. Surveys the main arguments for and against. |
 | | 📕 Book | The Mind's I: Fantasies and Reflections on Self & Soul | Hofstadter & Dennett (eds.) | 1981 | — | Anthology of thought experiments and stories about minds, consciousness, and identity. Accessible entry point to many of the themes in this section. |
+| | 📕 Book | A New Kind of Science (Ch. 12: The Principle of Computational Equivalence) | Stephen Wolfram | 2002 | [Link](https://www.wolframscience.com/nks/) | Argues that almost all processes that aren't obviously simple are computationally equivalent — a radical extension of Church-Turing with implications for whether minds are "special" computations or just one of many equivalent ones. |
+| | 🌐 Project | The Wolfram Physics Project — Ruliad concept | Stephen Wolfram | 2020+ | [Link](https://www.wolframphysics.org/bulletins/2021/11/the-concept-of-the-ruliad/) | The "ruliad" is the entangled limit of all possible computations. If physics itself is computation, then consciousness and mind are patterns within this structure. A provocative modern extension of computationalism. |
 
 ## Suggested Order
 
@@ -38,3 +40,5 @@ This is where philosophy meets computer science at the deepest level. Can a mind
 5. **SEP — Computationalism** — Systematic overview of computational theories of mind
 6. **Penrose — The Emperor's New Mind** — A physicist's argument that consciousness transcends computation
 7. **Hofstadter — I Am a Strange Loop** — Deepens the GEB thesis with a focus on self and consciousness
+8. **Wolfram — A New Kind of Science (Ch. 12)** — The Principle of Computational Equivalence: if almost everything computes at the same level, what makes a mind special?
+9. **Wolfram Physics Project — Ruliad** — Explore the concept of the ruliad as the space of all possible computations, and what it means for mind and physics
