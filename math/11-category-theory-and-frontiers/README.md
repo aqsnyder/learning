@@ -27,6 +27,7 @@ Category theory is the "mathematics of mathematics" — it provides a unified la
 | | Paper | Backprop as Functor | Brendan Fong, David Spivak, Rémy Tuyéras | 2019 | [Link](https://arxiv.org/abs/1711.10455) | Demonstrates that backpropagation in neural networks can be understood as a functor between categories. A striking connection between category theory and deep learning. |
 | | Paper | Categorical Foundations of Gradient-Based Learning | Bruno Gavranović et al. | 2022 | [Link](https://arxiv.org/abs/2103.01931) | Extends the categorical view of learning, providing a compositional framework for gradient-based optimization. Frontier research. |
 | | Book | Homotopy Type Theory | The Univalent Foundations Program | 2013 | [Link](https://homotopytypetheory.org/book/) | Free book connecting type theory, category theory, and homotopy theory. Frontier mathematics with deep connections to logic and computer science. |
+| | Book/Project | A New Kind of Science + Wolfram Physics Project | Stephen Wolfram | 2002/2020+ | [Link](https://www.wolframphysics.org/) | Computational irreducibility as a fundamental mathematical concept: many systems cannot be predicted without running them step-by-step. The "ruliad" — the entangled limit of all possible computations — connects to foundational questions about mathematical structure. |
 
 ---
 
@@ -39,3 +40,4 @@ Category theory is the "mathematics of mathematics" — it provides a unified la
 5. **Fong & Spivak — Backprop as Functor** — See category theory applied to deep learning.
 6. **Mac Lane** — Reference text for deeper study.
 7. **HoTT book** — Frontier. Explore when curious about the foundations of mathematics.
+8. **Wolfram — NKS + Physics Project** — Explore computational irreducibility and the ruliad concept. Best approached after category theory gives you a framework for thinking about structure and composition.
