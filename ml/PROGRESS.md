@@ -168,6 +168,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Rafailov et al. — Direct Preference Optimization / DPO (2023)
 - [ ] Christiano et al. — Deep RL from Human Preferences (2017)
 - [ ] Hubinger et al. — Sleeper Agents (2024)
+- [ ] Baker, Korbak et al. — Chain of Thought Monitorability (2025)
 - [ ] Bostrom — *Superintelligence* (2014)
 - [ ] Russell — *Human Compatible* (2019)
 - [ ] Schaeffer et al. — Are Emergent Abilities a Mirage? (2023)

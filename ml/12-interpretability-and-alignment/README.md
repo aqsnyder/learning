@@ -34,8 +34,9 @@ Alignment research aims to ensure AI systems act in accordance with human values
 | 10 | 🔑 | Paper | Direct Preference Optimization (DPO) | Rafailov et al. | 2023 | [arxiv.org/abs/2305.18290](https://arxiv.org/abs/2305.18290) |
 | 11 | | Paper | Deep RL from Human Preferences | Christiano et al. | 2017 | [arxiv.org/abs/1706.03741](https://arxiv.org/abs/1706.03741) |
 | 12 | | Paper | Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training | Hubinger et al. | 2024 | [arxiv.org/abs/2401.05566](https://arxiv.org/abs/2401.05566) |
-| 13 | | Book | Superintelligence: Paths, Dangers, Strategies | Bostrom | 2014 | — |
-| 14 | | Book | Human Compatible: Artificial Intelligence and the Problem of Control | Russell | 2019 | — |
+| 13 | | Paper | Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety | Baker, Korbak et al. | 2025 | [arxiv.org/abs/2503.07972](https://arxiv.org/abs/2503.07972) |
+| 14 | | Book | Superintelligence: Paths, Dangers, Strategies | Bostrom | 2014 | — |
+| 15 | | Book | Human Compatible: Artificial Intelligence and the Problem of Control | Russell | 2019 | — |
 
 ---
 
@@ -45,8 +46,8 @@ How do we know if models are truly improving, or if our benchmarks are misleadin
 
 | # | Priority | Type | Resource | Author(s) | Year | Link |
 |---|----------|------|----------|-----------|------|------|
-| 15 | | Paper | Are Emergent Abilities of Large Language Models a Mirage? | Schaeffer et al. | 2023 | [arxiv.org/abs/2304.15004](https://arxiv.org/abs/2304.15004) |
-| 16 | | Paper | Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference | Chiang et al. | 2024 | [arxiv.org/abs/2403.04132](https://arxiv.org/abs/2403.04132) |
+| 16 | | Paper | Are Emergent Abilities of Large Language Models a Mirage? | Schaeffer et al. | 2023 | [arxiv.org/abs/2304.15004](https://arxiv.org/abs/2304.15004) |
+| 17 | | Paper | Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference | Chiang et al. | 2024 | [arxiv.org/abs/2403.04132](https://arxiv.org/abs/2403.04132) |
 
 ---
 
