@@ -160,6 +160,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Elhage et al. — Toy Models of Superposition (2022)
 - [ ] Burt et al. — Scaling Monosemanticity (2024)
 - [ ] Anthropic — On the Biology of a Large Language Model (2025)
+- [ ] Gurnee, Sofroniew, Lindsey et al. — Verbalizable Representations Form a Global Workspace in Language Models (2026)
 - [ ] Anthropic — Softmax Linear Units (2022)
 - [ ] Zou et al. — Representation Engineering (2023)
 - [ ] Neel Nanda — TransformerLens & Mech Interp tutorials

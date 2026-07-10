@@ -17,9 +17,10 @@ The core arc: **early circuits** → **superposition** → **monosemanticity** �
 | 3 | 🔑 | Paper | Toy Models of Superposition | Elhage et al. | 2022 | [transformer-circuits.pub](https://transformer-circuits.pub/2022/toy_model/) |
 | 4 | 🔑 | Paper | Scaling Monosemanticity | Burt et al. | 2024 | [transformer-circuits.pub](https://transformer-circuits.pub/2024/scaling-monosemanticity/) |
 | 5 | 🔑 | Paper | On the Biology of a Large Language Model | Anthropic | 2025 | [transformer-circuits.pub](https://transformer-circuits.pub/) |
-| 6 | | Paper | Softmax Linear Units | Anthropic | 2022 | [transformer-circuits.pub](https://transformer-circuits.pub/2022/solu/) |
-| 7 | | Paper | Representation Engineering | Zou et al. | 2023 | [arxiv.org/abs/2310.01405](https://arxiv.org/abs/2310.01405) |
-| 8 | | Tutorial | TransformerLens & Mech Interp tutorials | Neel Nanda | ongoing | [neelnanda.io](https://www.neelnanda.io/mechanistic-interpretability) |
+| 6 | 🔑 | Paper | Verbalizable Representations Form a Global Workspace in Language Models | Gurnee, Sofroniew, Lindsey et al. | 2026 | [transformer-circuits.pub](https://transformer-circuits.pub/2026/workspace/index.html) |
+| 7 | | Paper | Softmax Linear Units | Anthropic | 2022 | [transformer-circuits.pub](https://transformer-circuits.pub/2022/solu/) |
+| 8 | | Paper | Representation Engineering | Zou et al. | 2023 | [arxiv.org/abs/2310.01405](https://arxiv.org/abs/2310.01405) |
+| 9 | | Tutorial | TransformerLens & Mech Interp tutorials | Neel Nanda | ongoing | [neelnanda.io](https://www.neelnanda.io/mechanistic-interpretability) |
 
 ---
 
@@ -60,11 +61,12 @@ How do we know if models are truly improving, or if our benchmarks are misleadin
 3. **Toy Models of Superposition** — Understand why features are entangled and what superposition means
 4. **Scaling Monosemanticity** — See how sparse autoencoders extract interpretable features at scale
 5. **Biology of a Large Language Model** — The frontier of full-model mechanistic understanding
-6. **Neel Nanda tutorials** — Hands-on practice with TransformerLens for mech interp research
-7. **Softmax Linear Units** & **Representation Engineering** — Deeper dives into architectural choices and control
-8. **Constitutional AI** — Understand principle-based alignment without per-example human labels
-9. **DPO** — See how direct preference optimization simplifies the RLHF pipeline
-10. **Deep RL from Human Preferences** — The foundational RLHF paper for historical context
-11. **Sleeper Agents** — Understand the challenges of deceptive alignment
-12. **Superintelligence** & **Human Compatible** — Broader philosophical context for AI safety
-13. **Emergent Abilities** & **Chatbot Arena** — End with evaluation to calibrate your understanding
+6. **Global Workspace / J-Space** — The Jacobian Lens reveals a privileged set of verbalizable representations used for internal reasoning
+7. **Neel Nanda tutorials** — Hands-on practice with TransformerLens for mech interp research
+8. **Softmax Linear Units** & **Representation Engineering** — Deeper dives into architectural choices and control
+9. **Constitutional AI** — Understand principle-based alignment without per-example human labels
+10. **DPO** — See how direct preference optimization simplifies the RLHF pipeline
+11. **Deep RL from Human Preferences** — The foundational RLHF paper for historical context
+12. **Sleeper Agents** — Understand the challenges of deceptive alignment
+13. **Superintelligence** & **Human Compatible** — Broader philosophical context for AI safety
+14. **Emergent Abilities** & **Chatbot Arena** — End with evaluation to calibrate your understanding
