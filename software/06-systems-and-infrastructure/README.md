@@ -12,11 +12,22 @@ Understanding how systems connect — APIs, databases, containers, deployment �
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Explain how append-only logs with hash indexes, LSM-trees and B-trees trade write cost against read cost, and demonstrate it with a toy store and a benchmark.
+- Design indexes for real query patterns and verify them with `EXPLAIN QUERY PLAN` and timings.
+- Produce back-of-the-envelope capacity estimates for a device fleet (requests/s, bandwidth, storage, replication) that land within an order of magnitude.
+- Specify an HTTP API contract-first in OpenAPI, and test an implementation against that contract automatically.
+- Harden a queued, containerized service with timeouts, circuit breakers, bulkheads, back-pressure, logs, metrics and traces, and find its first bottleneck from evidence.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
-| 🔑 | Book | Designing Data-Intensive Applications | Martin Kleppmann | 2017 | — | Replication, partitioning, consistency, batch and stream processing. If not read in Section 04, start here. |
+| 🔑 | Book | Designing Data-Intensive Applications (2nd ed) | Martin Kleppmann, Chris Riccomini | 2026 | — | Replication, partitioning, consistency, batch and stream processing. If not read in Section 04, start here. |
 | 🔑 | Book | The Software Engineer's Guidebook | Gergely Orosz | 2023 | — | Practical senior engineer field guide covering career growth, code reviews, technical strategy, and team dynamics. |
 | 🔑 | Newsletter | ByteByteGo | Alex Xu | — | [Link](https://bytebytego.com/) | System design visualized. Weekly breakdowns of how real-world systems — payment processing, rate limiting, CDNs — actually work. |
 | | Tool | Docker | — | — | [Link](https://docs.docker.com/) | Containerization fundamentals. Understand images, containers, volumes, networks, and Docker Compose for local development. |
@@ -26,8 +37,9 @@ Understanding how systems connect — APIs, databases, containers, deployment �
 | | Concept | Message queues and async processing | — | — | — | RabbitMQ, Redis, Celery — decoupling services, handling background jobs, and managing eventual consistency. |
 | | Concept | Monitoring and observability | — | — | — | The three pillars: logging, metrics, and distributed tracing. Know how to diagnose production issues. |
 | | Concept | Infrastructure as Code | — | — | — | Terraform, Ansible basics — declarative infrastructure, reproducible environments, and configuration management. |
-| 🔑 | Book | System Design Interview (Vol 1 and 2) | Alex Xu | 2020–2022 | — | Step-by-step system design practice. Breaks down real problems: rate limiter, URL shortener, notification system, chat system, and more. |
+| 🔑 | Book | System Design Interview (Vol 1 and 2) | Alex Xu (Vol 2 with Sahn Lam) | 2020–2022 | — | Step-by-step system design practice. Breaks down real problems: rate limiter, URL shortener, notification system, chat system, and more. |
 | | Book | Release It! (2nd ed) | Michael Nygard | 2018 | — | Stability patterns for production systems — circuit breakers, bulkheads, timeouts, and designing for failure. |
+| | Book (Free) | Beej's Guide to Network Programming | Brian "Beej Jorgensen" Hall | 2026 (v3.3.2) | [Link](https://beej.us/guide/bgnet/) | Sockets in C: TCP vs UDP, IPv4/IPv6, client-server examples, `select()`/`poll()`. The layer beneath every API in this section, and the one an Ethernet-connected instrument or test rig actually speaks. |
 
 ---
 
@@ -37,11 +49,68 @@ Understanding how systems connect — APIs, databases, containers, deployment �
 2. **System Design Interview (Vol 1 and 2)** — Practice structured system design thinking with concrete examples.
 3. **ByteByteGo newsletter** — Subscribe and read weekly to build system design intuition over time.
 4. **Docker** — Get hands-on with containerization; you'll use it constantly.
-5. **REST API design + OpenAPI** — Understand API contracts before building or reviewing them.
-6. **Database fundamentals** — SQL, indexing, and choosing the right data store for the problem.
-7. **Git advanced workflows** — Level up from basic Git to power-user workflows.
-8. **Message queues and async processing** — Learn when and how to decouple with RabbitMQ/Redis/Celery.
-9. **The Software Engineer's Guidebook** — Read for the senior engineer perspective on technical strategy and leadership.
-10. **Monitoring and observability** — Understand how to diagnose production systems.
-11. **Infrastructure as Code** — Learn Terraform/Ansible basics when you start managing environments.
-12. **Release It!** — Read when you're designing systems that need to survive real-world failure modes.
+5. **Beej's Guide to Network Programming** — Learn the sockets layer that every networked API and instrument link sits on.
+6. **REST API design + OpenAPI** — Understand API contracts before building or reviewing them.
+7. **Database fundamentals** — SQL, indexing, and choosing the right data store for the problem.
+8. **Git advanced workflows** — Level up from basic Git to power-user workflows.
+9. **Message queues and async processing** — Learn when and how to decouple with RabbitMQ/Redis/Celery.
+10. **The Software Engineer's Guidebook** — Read for the senior engineer perspective on technical strategy and leadership.
+11. **Monitoring and observability** — Understand how to diagnose production systems.
+12. **Infrastructure as Code** — Learn Terraform/Ansible basics when you start managing environments.
+13. **Release It!** — Read when you're designing systems that need to survive real-world failure modes.
+
+---
+
+## 🛠️ Practice
+
+1. **The world's simplest database, grown up** — Start from DDIA's two-function bash key-value store — `db_set () { echo "$1,$2" >> database; }` and `db_get () { grep "^$1," database | sed -e "s/^$1,//" | tail -n 1; }` — and port it to Python. Then extend it in three steps:
+   - (a) an in-memory hash index of byte offsets;
+   - (b) segment files with compaction;
+   - (c) an index rebuild on startup after a crash.
+
+   After each step, benchmark 10⁵ writes and 10⁴ random reads. Done when you can explain how each step changes read and write cost, and what this Bitcask-style design gives up (range queries, and keys must fit in RAM). *(~3 h · Kleppmann, DDIA, storage and retrieval chapter)*
+2. **Index lab on production-test data** — Generate 5 million synthetic rows in SQLite with columns `serial, station_id, test_name, value, lo, hi, passed, ts`. Time four queries:
+   - daily yield per station;
+   - latest result per serial;
+   - all failures of one test in a date range;
+   - one serial's history at one station.
+
+   Run them first with no indexes, then with indexes you design, and read every `EXPLAIN QUERY PLAN`. Done when each query uses the index you intended and you can explain why column order matters in a composite index. *(~3 h · database fundamentals; DDIA's B-tree material)*
+3. **Fleet Fermi + rate limiter** — 10,000 devices each send a 200-byte record every 10 s. Estimate:
+   - writes per second;
+   - ingest bandwidth;
+   - GB per day;
+   - storage per year at 3× replication;
+   - the reconnect storm when a fleet-wide update reboots every unit at once.
+
+   Then implement a token-bucket rate limiter in Python. Simulate the reboot storm with and without client-side jitter plus exponential backoff, and plot server load over time. Done when your hand estimates land within 2× of a scripted calculation, and you can say what sets the new peak once jitter is on. *(~3 h · Xu, System Design Interview Vol 1, back-of-the-envelope estimation and rate-limiter chapters; Release It! on dogpiles)*
+4. **Contract-first ingestion API** — Write an OpenAPI 3.1 spec for a results-ingestion service with:
+   - `POST /v1/runs` with an idempotency key;
+   - `GET /v1/runs/{id}`;
+   - cursor pagination on `GET /v1/runs`;
+   - one error schema used everywhere.
+
+   Have an agent implement it in FastAPI. Diff FastAPI's generated `/openapi.json` against your spec, then run Schemathesis against the running service using *your* spec. Done when Schemathesis reports no failures and you've fixed at least one spec/implementation mismatch it surfaced. If it finds none, plant one. *(~4 h · REST API design and OpenAPI; ByteByteGo's API-design explainers)*
+
+**🏗️ Mini-project — Test-Data Pipeline in Compose:** A single `docker compose up` starts this pipeline:
+- the FastAPI ingestion service from exercise 4;
+- a Redis-backed queue;
+- a worker that computes per-lot yield and Cpk;
+- Postgres.
+
+Add structured JSON logs, a Prometheus-format `/metrics` endpoint (request rate, queue depth, processing latency) and a trace ID carried from the request through to the worker log. Apply *Release It!* patterns: timeouts and a circuit breaker on the database path, and a bounded queue that pushes back with 429/503. Load-test at 10× your Fermi rate.
+
+Deliverable: `projects/software/06-test-data-pipeline/` with a one-page performance note. Success: a clean clone starts with one command; killing the worker mid-load loses no accepted result (at-least-once delivery plus idempotent writes); and the note names the first bottleneck, with evidence from your own metrics. *(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Why are appends to a log fast and lookups slow without an index? What does an LSM-tree add, and what does compaction cost you?
+2. Define backward and forward compatibility as DDIA does. When a fleet runs mixed firmware versions against one backend, which kind does each message direction need?
+3. A query filters on `station_id =` and a range on `ts`. Which composite-index column order serves it, and why not the reverse?
+4. 10,000 devices each send 200 bytes every 10 s. Roughly how many writes/s, GB/day and TB/year at 3× replication is that?
+5. Distinguish at-most-once, at-least-once and effectively-once processing. Why does at-least-once force idempotent consumers?
+6. Name four of *Release It!*'s stability patterns and the failure mode each one contains.
+7. Misconception check: "Retries make clients more reliable." When do retries turn a blip into an outage, and which two mechanisms prevent it?
+8. Explain to a smart friend in three sentences what a message queue buys you and what it costs.

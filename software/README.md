@@ -41,13 +41,17 @@ Section 08  →  Security and Reliability Engineering
 Section 09  →  Agentic AI Development Workflows        ← THE future-facing section
 Section 10  →  Version Control and Collaboration
 Section 11  →  Professional Practice and Technical Leadership
+Section 12  →  Firmware Toolchain, Debug, and Observability       ← take after 07
+Section 13  →  Hardware-in-the-Loop Testing and Lab Automation    ← take after 05, or right after 12
 ```
+
+Sections 12 and 13 were added later and are numbered at the end so existing links don't change. Take them in the positions marked above, not last.
 
 ### Cross-Cutting References
 
 | Directory | Contents |
 |-----------|----------|
-| [books/](books/) | Curated book list (20 titles) with reading order |
+| [books/](books/) | Curated book list (24 titles) with level and notes |
 | [courses/](courses/) | Video courses, channels, newsletters, and podcasts |
 | [blogs-and-references/](blogs-and-references/) | Essential blogs, tools, and community resources |
 

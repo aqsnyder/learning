@@ -6,12 +6,23 @@
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Predict where every C object lives (`.text`, `.rodata`, `.data`, `.bss`, stack, heap) and what it costs in flash vs RAM, then verify it from the linker map file and `nm`/`objdump`.
+- Decode complex C declarations, state precisely what `volatile`, `const` and `static` do, and show a missing `volatile` breaking a busy-wait at `-O2` in the disassembly.
+- Drive GPIO, a timer and the NVIC at register level using only CMSIS headers, and explain why BSRR writes are atomic where an ODR read-modify-write is not.
+- Review code that shares data between an ISR and `main` for races and real-time hazards (torn 64-bit reads, missing `volatile`, uncleared flags, unbounded ISRs), and fix each with the right mechanism.
+- Design a small HAL interface that lets the same application code build for the target and run on your PC.
+
+---
+
 ## Resources
 
 | # | Type | Resource | Notes |
 |---|------|----------|-------|
-| 1 | 🔑 Book | *The C Programming Language* (K&R, 2nd ed) — Kernighan and Ritchie (1988) | THE definitive C reference |
-| 2 | 🔑 Book | *Expert C Programming: Deep Secrets* — Peter van der Linden | Linking, memory, and advanced C |
+| 1 | 🔑 Book | *The C Programming Language* (K&R, 2nd ed) — Kernighan and Ritchie (1988) | The classic: short, precise, still worth reading. It covers ANSI C (C89) only, so pair it with *Modern C* or *Effective C* for C99 through C23 |
+| 2 | 🔑 Book | *Expert C Programming: Deep Secrets* — Peter van der Linden (1994) | Linking, memory, and advanced C |
 | 3 | 🔑 Book | *Making Embedded Systems* (2nd ed) — Elecia White (2024) | Best intro to embedded architecture and design patterns |
 | 4 | Book | *Embedded Software Design* — Jacob Beningo | Modern firmware architecture and maintainability |
 | 5 | Book | [*Embedded C Coding Standard*](https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard) — Barr Group | Minimizing bugs and improving portability |
@@ -19,6 +30,9 @@
 | 7 | 🔑 Blog | [Embedded Artistry](https://embeddedartistry.com/) | Modular, testable firmware architecture articles |
 | 8 | Blog | [Jacob Beningo](https://beningo.com/) | Firmware architecture best practices |
 | 9 | Course | FastBit Embedded Brain Academy (Udemy) | ARM Cortex-M, bare-metal, RTOS |
+| 10 | 🔑 Book | [*Modern C* (3rd ed)](https://gustedt.gitlabpages.inria.fr/modern-c/) — Jens Gustedt (2025) | C as it is written today, updated for C23 (ISO/IEC 9899:2024). The modern counterpart to K&R; the author also offers a free CC-licensed edition |
+| 11 | Book | [*Effective C* (2nd ed)](https://nostarch.com/effective-c-2nd-edition) — Robert C. Seacord (2024) | Professional, security-minded intro to C23 by the convenor of the C standards committee and author of *The CERT C Coding Standard* |
+| 12 | Standard | [MISRA C:2025](https://misra.org.uk/product/misra-c2025/) — MISRA | The safety-critical C subset most embedded static analyzers check against; supersedes MISRA C:2012 and C:2023. Paid. Even if you never certify, the rules and their rationale sharpen embedded code review |
 
 ### Key Concepts
 
@@ -35,10 +49,104 @@
 ## Suggested Order
 
 ```
-1. K&R (read cover-to-cover, it's short)
-2. Making Embedded Systems (embedded architecture and thinking)
-3. Expert C Programming (fill in the deep C knowledge)
-4. Quantum Leaps YouTube (state machines and real-time patterns)
-5. Embedded Artistry blog (ongoing reference for firmware design)
-6. Embedded C Coding Standard (adopt as your style guide)
+1. K&R (read cover-to-cover, it's short, but remember it stops at C89)
+2. Modern C or Effective C (catch up to C11/C17/C23; pick one)
+3. Making Embedded Systems (embedded architecture and thinking)
+4. Expert C Programming (fill in the deep C knowledge)
+5. Quantum Leaps YouTube (state machines and real-time patterns)
+6. Embedded Artistry blog (ongoing reference for firmware design)
+7. Embedded C Coding Standard (adopt as your style guide); consult MISRA C:2025 for rule rationale
 ```
+
+---
+
+## 🛠️ Practice
+
+1. **Where does it live?** — Using your Cortex-M33 STM32 toolchain, declare ten objects:
+   - a `const` lookup table, an initialized global and a zero-initialized global;
+   - a `static` local, an automatic array and a large local struct;
+   - a string literal and a `malloc`'d block;
+   - a `static` function and a `const` array of function pointers.
+
+   Predict the section and address range of each, then verify them with the linker `.map`, `arm-none-eabi-nm -S --size-sort`, `arm-none-eabi-size` and the debugger. Done when your table matches, you can explain why `.data` costs both flash and RAM, and you can say what the startup code does before `main()`. *(~2 h · K&R ch. 4 "Functions and Program Structure" and ch. 5 "Pointers and Arrays"; Expert C Programming on linking and runtime data structures; Quantum Leaps #13–15 on startup code)*
+2. **`volatile` at `-O2`** — In Compiler Explorer (ARM GCC, `-mcpu=cortex-m33`), compile two loops: a busy-wait on a flag set by an ISR, and a poll of a memory-mapped status register. Build each with and without `volatile`, at `-O0` and `-O2`, and annotate where the load is hoisted out of the loop. Then decode eight declarations with van der Linden's precedence rule, for example:
+   - `void (*signal(int, void (*)(int)))(int);`
+   - `const volatile uint32_t * const p;`
+   - `char *(*(*x[3])(void))[5];`
+
+   Done when you can predict the `-O2` loop shape before compiling, and read each declaration aloud correctly the first time. *(~2 h · Quantum Leaps #5 "Preprocessor and the 'volatile' keyword in C"; Expert C Programming on unscrambling declarations; Barr Group standard's rules on `volatile`)*
+3. **Registers, no HAL** — Blink an LED from a hardware-timer interrupt using only the CMSIS device header:
+   - enable the clocks in RCC;
+   - configure the pin in `MODER` and drive it through `BSRR`;
+   - set the timer's `PSC`/`ARR`/`DIER`;
+   - call `NVIC_SetPriority`/`NVIC_EnableIRQ`.
+
+   On a scope, check the period against your `PSC`/`ARR` arithmetic (within the datasheet tolerance of your clock source) and measure the interrupt-to-toggle latency. Rebuild with the vendor HAL and compare `arm-none-eabi-size` output and latency. *(~4 h · Quantum Leaps #4 (blinking an LED) and #16–18 (interrupts on Cortex-M); Making Embedded Systems ch. 4 "Inputs, Outputs, and Timers" and ch. 5 "Interrupts"; FastBit's bare-metal Cortex-M course; your MCU's reference manual)*
+4. **Seeded-defect ISR review** — The STM32 USART receive path below has at least six defects. List each one, classify it (optimization, race, real-time, robustness or design) and write the fix.
+
+   ```c
+   #include <stdint.h>
+   #include <stdbool.h>
+   #include <stdio.h>
+   #include "stm32u5xx.h"   /* your part's CMSIS device header */
+
+   #define RX_SIZE 100
+   static uint8_t  rx_buf[RX_SIZE];
+   static uint16_t head, tail;
+   static bool     line_ready;
+   uint64_t        g_ms;              /* incremented every 1 ms */
+
+   void SysTick_Handler(void) { g_ms++; }
+
+   void USART1_IRQHandler(void) {
+       uint8_t c = (uint8_t)USART1->RDR;
+       rx_buf[head] = c;
+       head = (head + 1) % RX_SIZE;
+       if (c == '\n') {
+           line_ready = true;
+           printf("line at %llu ms\n", g_ms);
+       }
+   }
+
+   int uart_getc(void) {
+       while (head == tail) { }        /* wait for data */
+       uint8_t c = rx_buf[tail];
+       tail = (tail + 1) % RX_SIZE;
+       return c;
+   }
+
+   uint64_t millis(void) { return g_ms; }
+
+   void wait_for_line(void) {
+       while (!line_ready) { }
+       line_ready = false;
+   }
+   ```
+
+   Then prove two of the defects on hardware:
+   - show the hoisted load in the `-O2` disassembly;
+   - halt the CPU in the debugger while a Python script streams bytes at 1 Mbaud, provoking an overrun, and watch what the ISR does after you resume.
+
+   Done when your fixed version receives 10⁶ random bytes with zero loss, or with every lost byte counted. *(~4 h · Quantum Leaps #20 "Race Conditions: What are they and how to avoid them?"; Making Embedded Systems ch. 5 "Interrupts"; Barr Group Embedded C Coding Standard)*
+
+**🏗️ Mini-project — Reviewed UART Command Shell:** On your STM32 board, build:
+- an interrupt-driven UART driver, using your fixed ring buffer from exercise 4;
+- a line parser;
+- five commands: `ver`, `uptime`, `led on|off`, `adc <ch>` and `peek <addr>` (which must reject unmapped addresses instead of faulting).
+
+Put it all behind a HAL of no more than 10 functions (`hal_uart.h`, `hal_gpio.h`, `hal_adc.h`). The parser and ring buffer must also compile and run on your PC against a fake HAL. Build with `-Wall -Wextra -Werror` and record any deviations from the Barr Group standard. Write a one-page memory-and-ISR budget from the map file and your scope measurements. For the HAL boundary, draw on Beningo's *Embedded Software Design* and Embedded Artistry's articles on modular, testable firmware.
+
+Deliverable: `projects/software/02-uart-shell/`. Success: a Python script sends 10,000 random commands, including garbage, overlong lines and bursts. Every reply is either correct or a defined error, and the board never resets. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Where do an initialized global, a zero-initialized global and a `const` table end up? What does the startup code do for each before `main()` runs?
+2. What exactly does `volatile` tell the compiler? Name three things it does *not* guarantee.
+3. Why is reading a `uint64_t` millisecond counter that SysTick increments unsafe on a 32-bit Cortex-M? Give two fixes.
+4. At 1 Mbaud 8N1, how many microseconds and how many CPU cycles (at 160 MHz) do you have per received byte? What does that imply for receiving with one interrupt per byte?
+5. Read these aloud: `const uint8_t *p`, `uint8_t * const p`, `const volatile uint32_t *reg`. Which one models a read-only hardware status register, and why?
+6. Why do STM32 GPIOs have a BSRR register when you could just write ODR?
+7. Name three things that must never happen inside an ISR, with the reason for each.
+8. Explain to a smart friend in three sentences why embedded C programmers care so much about where each variable lives.

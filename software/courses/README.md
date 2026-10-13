@@ -9,7 +9,7 @@
 | 1 | 🔑 | Modern Embedded Systems Programming | Miro Samek (Quantum Leaps) | YouTube | [Channel](https://www.youtube.com/@StateMachineCOM) | Sections 02, 07 | Gold standard embedded education |
 | 2 | 🔑 | MIT 6.006 Algorithms | MIT | OCW | [Course](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) | Section 00 | Foundational algorithms |
 | 3 | | CS50 | David Malan | Harvard | [Course](https://cs50.harvard.edu/) | Section 00 | Best intro CS course |
-| 4 | 🔑 | System Design Interview | — | YouTube | [Channel](https://www.youtube.com/@SystemDesignInterview) | Sections 04, 06 | Architecture walkthroughs |
+| 4 | 🔑 | System Design Interview | Mikhail Smarshchok | YouTube | [Channel](https://www.youtube.com/@SystemDesignInterview) | Sections 04, 06 | Seven in-depth architecture walkthroughs; channel no longer active |
 | 5 | 🔑 | ByteByteGo | Alex Xu | Newsletter / YouTube | [Site](https://bytebytego.com/) | Sections 04, 06 | Visual system design |
 | 6 | 🔑 | ArjanCodes | — | YouTube | [Channel](https://www.youtube.com/@ArjanCodes) | Section 01 | Python architecture and design patterns |
 | 7 | | Talk Python to Me | — | Podcast | [Site](https://talkpython.fm/) | Section 01 | Python ecosystem deep dives |

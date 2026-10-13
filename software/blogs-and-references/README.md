@@ -72,6 +72,9 @@
 | Priority | Tool | Link |
 |----------|------|------|
 | 🤖 | GitHub Copilot | [github.com/features/copilot](https://github.com/features/copilot) |
-| 🤖 | Cursor | [cursor.sh](https://cursor.sh/) |
-| 🤖 | Antigravity (Google) | Your current AI development environment |
+| 🤖 | Cursor | [cursor.com](https://cursor.com/) |
+| 🤖 | Antigravity (Google) | [antigravity.google](https://antigravity.google/) |
 | 🤖 | Claude (Anthropic) | [claude.ai](https://claude.ai/) |
+| 🤖 | Claude Code (Anthropic) | [code.claude.com/docs](https://code.claude.com/docs/en/overview) |
+| 🤖 | Model Context Protocol | [modelcontextprotocol.io](https://modelcontextprotocol.io/) |
+| 🤖 | AGENTS.md | [agents.md](https://agents.md/) |

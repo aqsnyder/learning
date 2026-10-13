@@ -8,8 +8,19 @@ AI-generated code can introduce subtle security vulnerabilities. You need to rec
 
 ## Prerequisites
 
-- [Section 01 — Foundations](../01-foundations/README.md)
-- [Section 02 — Core Programming](../02-core-programming/README.md)
+- [Section 01 — Python Mastery](../01-python-mastery/README.md)
+- [Section 02 — Embedded C Mastery](../02-embedded-c-mastery/README.md)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Threat-model a firmware update path with STRIDE: a data-flow diagram, trust boundaries, ranked threats, mitigations and residual risk.
+- Exploit (locally) and fix Python's classic footguns — `eval`, `pickle`, unsafe YAML loading, tar path traversal, `shell=True`, SSRF — and map each to an OWASP Top 10 category.
+- Find memory-safety bugs in a C parser by fuzzing with sanitizers, and explain each root cause in terms of bounds, integer overflow or signedness.
+- Automate security review with Bandit and Semgrep, including a custom, tested Semgrep rule that encodes one of your project's policies.
+- Define SLIs, SLOs and an error budget, and write a blameless postmortem with contributing factors and owned follow-ups.
 
 ---
 
@@ -17,8 +28,8 @@ AI-generated code can introduce subtle security vulnerabilities. You need to rec
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
-| 🔑 | Web Resource | OWASP Top 10 | OWASP Foundation | [Link](https://owasp.org/www-project-top-ten/) | THE web vulnerability reference. Understand these ten categories and you'll catch the majority of web security issues in review. |
-| 🔑 | Book | The Web Application Hacker's Handbook (2nd ed) | Dafydd Stuttard, Marcus Pinto | — | Practical web security from the attacker's perspective. Teaches you to think like an adversary when reviewing code. |
+| 🔑 | Web Resource | OWASP Top 10 | OWASP Foundation | [Link](https://owasp.org/www-project-top-ten/) | THE web vulnerability reference. Understand these ten categories and you'll catch the majority of web security issues in review. The 2025 edition adds Software Supply Chain Failures (A03) and Mishandling of Exceptional Conditions (A10). |
+| | Book | The Web Application Hacker's Handbook (2nd ed, 2011) | Dafydd Stuttard, Marcus Pinto | — | Practical web security from the attacker's perspective. Teaches you to think like an adversary when reviewing code. Dated: lead author Stuttard's company, PortSwigger, chose to build the free, continuously updated [Web Security Academy](https://portswigger.net/web-security) instead of a 3rd edition, so use that for hands-on labs. |
 | 🔑🤖 | Concept | Reviewing AI-generated code for security | — | — | AI often introduces: hardcoded secrets, SQL injection, improper input validation, unsafe deserialization. Build a mental checklist for every AI-generated PR. |
 | | Concept | Secure C programming | — | — | Buffer overflows, format string vulnerabilities, integer overflow. The classic low-level attack surface — critical for embedded work. |
 | | Concept | Python security pitfalls | — | — | `eval()`, `pickle`, SSRF, path traversal. Python's dynamic nature makes it easy to write insecure code that *looks* clean. |
@@ -27,6 +38,10 @@ AI-generated code can introduce subtle security vulnerabilities. You need to rec
 | | Concept | Threat modeling | — | — | STRIDE methodology for systematic security review. Ask: what can go wrong? before writing a line of code. |
 | | Book (Free) | Site Reliability Engineering (Google SRE Book) | Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy | [Link](https://sre.google/sre-book/table-of-contents/) | Production reliability practices from Google. Error budgets, SLOs, incident management — the operational side of quality. |
 | | Concept | Incident response and post-mortems | — | — | Blameless post-mortems, root cause analysis, and building a culture that learns from failures rather than hiding them. |
+| 🔑 | Standard (Free) | SEI CERT C Coding Standard | Carnegie Mellon SEI (CERT) | [Link](https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard) | Rules and recommendations, each with noncompliant and compliant code, for the C vulnerabilities listed under "Secure C programming" above. Static analyzers commonly report findings against CERT rule IDs. |
+| 🤖 | Paper | We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs | Joseph Spracklen et al. (USENIX Security 2025) | [Link](https://arxiv.org/abs/2406.10279) | 576,000 samples from 16 code LLMs: at least 5.2% (commercial models) and 21.7% (open-source models) of suggested packages did not exist, names an attacker can register. Verify every dependency an agent adds. |
+| | Regulation | EU Cyber Resilience Act | European Commission | [Link](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act) | Mandatory cybersecurity requirements for hardware and software "products with digital elements" sold in the EU. In force since 10 Dec 2024; vulnerability-reporting obligations apply from 11 Sep 2026, main obligations from 11 Dec 2027. Required reading for anyone shipping connected devices. |
+| | Framework (Free) | Threat Modeling Manifesto | Zoe Braiterman, Adam Shostack, et al. | [Link](https://www.threatmodelingmanifesto.org/) | The four questions (What are we working on? What can go wrong? What are we going to do about it? Did we do a good enough job?) plus values and anti-patterns. A methodology-agnostic frame to use before reaching for STRIDE. |
 
 ---
 
@@ -34,10 +49,60 @@ AI-generated code can introduce subtle security vulnerabilities. You need to rec
 
 1. **OWASP Top 10** — Start here. Memorize the ten categories — they're the vocabulary of web security.
 2. **Reviewing AI-generated code for security** — Build your security review checklist specifically for AI output.
-3. **Python security pitfalls** — Learn the Python-specific footguns: `eval()`, `pickle`, path traversal.
-4. **Secure C programming** — Buffer overflows, format strings, integer overflow — the embedded attack surface.
-5. **Bandit + Semgrep** — Set up automated security linting in your workflow before manual review.
-6. **The Web Application Hacker's Handbook** — Deep dive into the attacker's mindset. Read the chapters relevant to your stack.
-7. **Threat modeling (STRIDE)** — Learn to think systematically about threats before writing code.
-8. **Google SRE Book** — Read the chapters on monitoring, alerting, and incident management.
-9. **Incident response and post-mortems** — Learn the operational discipline of learning from failures.
+3. **Package hallucinations paper** — Add "does this dependency exist, and is it the one I meant?" to that checklist.
+4. **Python security pitfalls** — Learn the Python-specific footguns: `eval()`, `pickle`, path traversal.
+5. **Secure C programming + SEI CERT C** — Buffer overflows, format strings, integer overflow — the embedded attack surface, with CERT C as the rulebook.
+6. **Bandit + Semgrep** — Set up automated security linting in your workflow before manual review.
+7. **Threat Modeling Manifesto, then threat modeling (STRIDE)** — Learn to think systematically about threats before writing code.
+8. **EU Cyber Resilience Act** — Understand what shipping a connected product now obliges you to do (secure design, lifecycle vulnerability handling, incident reporting).
+9. **The Web Application Hacker's Handbook / Web Security Academy** — Deep dive into the attacker's mindset if you build web-facing software.
+10. **Google SRE Book** — Read the chapters on monitoring, alerting, and incident management.
+11. **Incident response and post-mortems** — Learn the operational discipline of learning from failures.
+
+---
+
+## 🛠️ Practice
+
+1. **Python footgun range** — In a throwaway container, write six 10-line vulnerable snippets:
+   - `eval()` on a "math expression";
+   - `pickle.loads()` on a received blob;
+   - `yaml.load(data, Loader=yaml.Loader)`;
+   - `tarfile.extractall()` on an uploaded archive;
+   - `subprocess.run(f"flash {name}", shell=True)`;
+   - `requests.get(user_url)`.
+
+   Write a working proof-of-concept exploit for each one (e.g., a tar member named `../../evil.sh`). Then fix each — with `ast.literal_eval` or a real parser, a schema'd data format, `yaml.safe_load`, `extractall(filter="data")`, argument lists, and a URL allow-list — and re-run the PoC to show it now fails. Map each snippet to its OWASP Top 10 (2025) category. *(~3 h · Python security pitfalls; OWASP Top 10; The Web Application Hacker's Handbook, or its free successor the Web Security Academy, on injection and path traversal)*
+2. **Bandit + Semgrep on AI code, plus your own rule** — Ask an agent for a small FastAPI "device config upload" service. It accepts a file and a device name, stores the file, and triggers a flash through a CLI tool. Run `bandit -r .` and Semgrep with the `p/python` and `p/owasp-top-ten` rulesets, record the findings, and then list what both tools missed; add each miss to your Section 03 review checklist. Finally, write one Semgrep rule for a policy you actually want, for example:
+   - every `serial.Serial(...)` call must pass `timeout=`;
+   - no f-strings in instrument `write()` calls.
+
+   Include a test file annotated with `# ruleid:` / `# ok:` so that `semgrep --test` passes. *(~3 h · Bandit; Semgrep; this section's "Reviewing AI-generated code for security")*
+3. **SLOs and a postmortem** — Define two or three SLIs/SLOs for something you run, such as a results-upload service or a lab instrument server. Cover availability and latency, with explicit windows. Compute the monthly error budget (99.5% ≈ 3.6 hours) and write down what happens when it's spent. Then write a blameless postmortem of a real incident you lived through — a firmware bug that escaped, or a test station that passed bad units. Follow the structure of the SRE book's example: summary, impact, root causes and trigger, detection, resolution, action items, what went well, what went badly, where you got lucky, and a timeline. Done when every action item has an owner and a date, and no sentence names a person as the cause. *(~3 h · Google SRE book ch. 3 "Embracing Risk", ch. 4 "Service Level Objectives", ch. 15 "Postmortem Culture: Learning from Failure", Appendix D "Example Postmortem")*
+4. **Fuzz a C frame parser** — Take (or have an agent write) the C parser for your UART protocol: length-prefixed TLV records with a CRC-16.
+   - Write a libFuzzer harness (`LLVMFuzzerTestOneInput`) and build it on the host with `clang -g -fsanitize=fuzzer,address,undefined`.
+   - Seed it with five valid frames and run until the first crash.
+   - Minimize the crashing input and find the root cause: a missing bounds check, `len + header` wrapping, or a signed length?
+   - Fix the bug and add the crasher as a Unity regression test.
+
+   Done when the fixed parser survives 30 minutes of fuzzing clean. *(~4 h · secure C programming (buffer and integer overflows); Unity from Section 05)*
+
+**🏗️ Mini-project — Hardened Firmware Update Path:** Draw the data-flow diagram of your update path: build → sign → distribute (host tool, USB or network) → bootloader → flash slots. Mark the trust boundaries, run STRIDE against every element and flow, and rank the threats by likelihood × impact. Then implement the top mitigations, on the board or off-target with Unity:
+- signature verification of the image before boot, using a vetted library (e.g., ECDSA P-256 or Ed25519; never home-made crypto);
+- a version header with anti-rollback;
+- a magic/CRC header to detect corruption;
+- a debug-port lockdown plan (e.g., STM32 readout-protection levels).
+
+For the architecture, draw on *Making Embedded Systems* ch. 10 "Building Connected Devices" (firmware update security, fallback) and Interrupt's "Device Firmware Update Cookbook" (both listed in Section 07). Deliverable: `projects/software/08-secure-update/` with the threat model and a test log. Success: unsigned, tampered, wrong-key and downgraded images are each rejected; every High threat has either a mitigation or a written risk acceptance; and the memo states exactly what an attacker gains if the signing key leaks. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Name the six STRIDE categories and the security property each one violates.
+2. Why is `pickle.loads()` on untrusted bytes equivalent to remote code execution?
+3. Which OWASP Top 10 (2025) category covers an auto-updater that doesn't verify signatures? Which one covers silently swallowed exceptions?
+4. Why can `if (len + HDR_SIZE > MAX_FRAME)` fail to reject an oversized frame in C, and how do you write the check safely?
+5. What do AddressSanitizer and UndefinedBehaviorSanitizer each catch, and why do fuzzers find far more bugs with them enabled?
+6. Roughly how many minutes of downtime per 30-day month does a 99.9% availability SLO allow?
+7. Misconception check: "We encrypt the firmware image, so attackers can't push malicious updates." What property do you actually need, and why doesn't encryption provide it?
+8. Explain to a smart friend in three sentences what a blameless postmortem is and why "blameless" makes systems safer.

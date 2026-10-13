@@ -8,7 +8,18 @@ Architecture is the skill AI cannot replace. Understanding system design, design
 
 ## Prerequisites
 
-- [Section 01](../../software/01-python-fundamentals/README.md) through [Section 03](../../software/03-git-and-collaboration/README.md)
+- [Section 01](../01-python-mastery/README.md) through [Section 03](../03-reading-and-reviewing-code/README.md)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Design two genuinely different interfaces for the same module ("design it twice") and judge them on depth, information leakage and what each caller must know.
+- Recognize GoF patterns in real code (the Python standard library, vendor HALs, RTOS kernels) and judge whether each one earns its complexity.
+- Enforce Clean Architecture's Dependency Rule in Python with ports and adapters, and verify it automatically in CI.
+- Identify the driving architecture characteristics of a system, choose an architecture style, and defend the choice with explicit trade-offs (Richards & Ford's laws of software architecture).
+- Model state as an append-only event log with derived read models (event sourcing + CQRS), and argue when that is worth the extra complexity.
 
 ---
 
@@ -16,20 +27,21 @@ Architecture is the skill AI cannot replace. Understanding system design, design
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
-| 🔑 | Book | Fundamentals of Software Architecture | Mark Richards, Neal Ford | 2020 | — | THE architecture primer for transitioning from developer to architect. Covers architecture styles, component design, and the soft skills of architecture. |
+| 🔑 | Book | Fundamentals of Software Architecture (2nd ed) | Mark Richards, Neal Ford | 2025 | — | THE architecture primer for transitioning from developer to architect. Covers architecture styles, component design, and the soft skills of architecture. |
 | 🔑 | Book | Software Architecture: The Hard Parts | Neal Ford, Mark Richards et al. | 2021 | — | Trade-offs when there's no right answer — service granularity, data decomposition, contracts, and distributed workflows. |
 | 🔑 | Book | Clean Architecture | Robert C. Martin | 2017 | — | SOLID principles, dependency inversion, and separating business logic from frameworks. The architectural counterpart to Clean Code. |
-| 🔑 | Book | A Philosophy of Software Design | John Ousterhout | 2018 | — | Complexity management through deep modules and strategic programming. Complements and challenges some Clean Code dogma. |
+| 🔑 | Book | A Philosophy of Software Design (2nd ed) | John Ousterhout | 2021 | — | Complexity management through deep modules and strategic programming. Complements and challenges some Clean Code dogma. |
 | 🔑 | Book | Design Patterns: Elements of Reusable Object-Oriented Software | Gamma, Helm, Johnson, Vlissides (Gang of Four) | 1994 | — | The classic patterns vocabulary — Strategy, Observer, Factory, Decorator, etc. Read for recognition, not memorization. |
 | | Book | Head First Design Patterns (2nd ed) | Eric Freeman, Elisabeth Robson | 2020 | — | A more accessible, visual introduction to design patterns. Good if GoF feels too dense. |
-| 🔑 | Book | Designing Data-Intensive Applications (DDIA) | Martin Kleppmann | 2017 | — | THE distributed systems bible — replication, partitioning, consistency, batch/stream processing. Essential for any systems architect. |
+| 🔑 | Book | Designing Data-Intensive Applications (DDIA, 2nd ed) | Martin Kleppmann, Chris Riccomini | 2026 | — | THE distributed systems bible — replication, partitioning, consistency, batch/stream processing. The 2nd edition (March 2026) revises the 2017 original with newer technologies and trends. Essential for any systems architect. |
 | | Newsletter | ByteByteGo | Alex Xu | — | [Link](https://bytebytego.com/) | Visual system design explanations. Excellent for building intuition about how real-world systems are built. |
-| 🔑 | Video | System Design Interview channel | — | — | [Link](https://www.youtube.com/@SystemDesignInterview) | Practical architecture walkthroughs for real-world system design problems. |
+| 🔑 | Video | System Design Interview channel | Mikhail Smarshchok | — | [Link](https://www.youtube.com/@SystemDesignInterview) | Seven long-form walkthroughs of classic distributed-system design problems. High quality, but the channel is no longer active. |
 | | Book | The Pragmatic Programmer (20th Anniversary) | Andrew Hunt, David Thomas | 2019 | — | Engineering mindset — DRY, orthogonality, tracer bullets, and pragmatic thinking about software craft. |
 | | Book | Domain-Driven Design | Eric Evans | 2003 | — | Aligning code structure with business domains. Essential vocabulary: bounded contexts, aggregates, ubiquitous language. |
 | | Concept | SOLID principles | — | — | — | Recognize violations in code review: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion. |
 | | Concept | Microservices vs monolith trade-offs | — | — | — | When to decompose, when to stay monolithic, and how to evaluate the distributed systems tax. |
 | | Concept | Event-driven architecture, CQRS, and event sourcing | — | — | — | Decoupling through events, separating reads from writes, and using event logs as the source of truth. |
+| | Method (Free) | The C4 model | Simon Brown | — | [Link](https://c4model.com/) | Hierarchical architecture diagrams (system context → containers → components → code), notation- and tool-independent. The lightest way to communicate a design to reviewers, and a compact context/container sketch is high-value context for coding agents too. |
 
 ---
 
@@ -39,9 +51,65 @@ Architecture is the skill AI cannot replace. Understanding system design, design
 2. **Clean Architecture** — Build on that with SOLID principles and dependency boundaries.
 3. **Design Patterns (GoF or Head First)** — Learn the shared vocabulary; focus on recognizing patterns in existing code.
 4. **Fundamentals of Software Architecture** — Step up to system-level thinking: architecture styles, trade-off analysis, and the architect's role.
-5. **Designing Data-Intensive Applications** — Deep-dive into distributed systems, data storage, and consistency models.
-6. **Software Architecture: The Hard Parts** — Tackle the messy, real-world decomposition decisions.
-7. **System Design Interview channel + ByteByteGo** — Practice applying architectural thinking to concrete system design problems.
-8. **Domain-Driven Design** — Read when you're working on complex business domains and need strategic modeling.
-9. **The Pragmatic Programmer** — Weave in throughout as an engineering mindset companion.
-10. **Concepts (SOLID, microservices, event-driven)** — Revisit as they arise in your architecture reading and code reviews.
+5. **The C4 model** — Learn to draw what you design: context and container diagrams for every system you own.
+6. **Designing Data-Intensive Applications** — Deep-dive into distributed systems, data storage, and consistency models.
+7. **Software Architecture: The Hard Parts** — Tackle the messy, real-world decomposition decisions.
+8. **System Design Interview channel + ByteByteGo** — Practice applying architectural thinking to concrete system design problems.
+9. **Domain-Driven Design** — Read when you're working on complex business domains and need strategic modeling.
+10. **The Pragmatic Programmer** — Weave in throughout as an engineering mindset companion.
+11. **Concepts (SOLID, microservices, event-driven)** — Revisit as they arise in your architecture reading and code reviews.
+
+---
+
+## 🛠️ Practice
+
+1. **Design it twice: the instrument API** — Write two interfaces for a DMM/PSU layer: signatures, docstrings and two usage examples each, with no implementation.
+   - (A) A thin SCPI pass-through: `write()` and `query()`.
+   - (B) A deep, intention-revealing API: `measure_dc_voltage(range_v, nplc) -> Volts` and `with psu.output(5.0, current_limit=0.1): ...`.
+
+   For each design, list everything a caller must know (command syntax, units, ordering, error-queue polling) and every implementation detail that leaks. Done when you can say which design hides more, what that costs in flexibility, and what escape hatch you'd keep. *(~2 h · A Philosophy of Software Design on deep modules, information hiding and "design it twice")*
+2. **Pattern safari** — Find six GoF patterns in code you already use, document each with file:line, and don't look up the answers first. Places to look:
+   - what `open()` returns in text mode, and what that object wraps;
+   - `logging` handlers, formatters and filters;
+   - `json.JSONEncoder.default`;
+   - `queue.PriorityQueue` compared with `Queue`;
+   - `concurrent.futures.Executor`;
+   - your vendor HAL's callback registration;
+   - FreeRTOS software timers.
+
+   For each pattern, record its name, the participants, the variation it enables, and a verdict: earns its keep, or ceremony. *(~3 h · Design Patterns (GoF) or Head First Design Patterns)*
+3. **Enforce the Dependency Rule** — Take a "measure a board and log the result" script, AI-generated or your own, that mixes PyVISA calls, limit checks and CSV/database writes. Refactor it into two layers:
+   - a core of entities and use cases with no I/O imports;
+   - adapters (PyVISA, CSV, SQLite) behind `Protocol` ports.
+
+   Add an import-linter `layers` contract to CI. Done when the limit logic is unit-tested with fakes, `lint-imports` passes, and a deliberate `import pyvisa` in the core turns CI red. *(~4 h · Clean Architecture on the Dependency Rule, boundaries and Humble Object; SOLID's dependency inversion)*
+4. **Event-sourced calibration history** — Model each unit's lifecycle as an append-only JSON Lines event log with these events: `Manufactured`, `Calibrated{coeffs, reference, due}`, `FirmwareUpdated`, `Repaired`, `CalibrationExpired`. Write a projector that builds a SQLite read model (serial → firmware, calibration status, due date), plus an `as_of(serial, date)` query. Then write 150 words on what a mutable `devices` table would lose. Done when deleting the read model and replaying the log reproduces it exactly, and an as-of query returns the coefficients that were valid on a past date. *(~4 h · event-driven architecture, CQRS and event sourcing; DDIA on event sourcing; Domain-Driven Design on aggregates)*
+5. **Architecture kata** — Before watching any walkthrough, give yourself 60 minutes for this brief: "500 networked data-acquisition units on factory floors, a desktop configuration app, and a cloud dashboard with alerting." Produce one page covering:
+   - the top three architecture characteristics, and why;
+   - the chosen style (layered, microkernel, event-driven, service-based or microservices), defended with Richards & Ford's trade-off ratings;
+   - one fitness function per characteristic;
+   - a *Hard Parts*-style granularity call: are ingestion and alerting one service or two, judged by disintegrators vs integrators?
+
+   Then watch a comparable System Design Interview channel walkthrough and list three things you missed. *(~3 h · Fundamentals of Software Architecture; Software Architecture: The Hard Parts; System Design Interview channel; ByteByteGo)*
+
+**🏗️ Mini-project — Lab-Automation Walking Skeleton:** Build a thin end-to-end skeleton (the Pragmatic Programmer's tracer bullet) of a microkernel-style lab framework in Python. It needs:
+- a core sequencer with no hardware imports;
+- instrument drivers as plugins, discovered through package entry points;
+- an in-process event bus publishing `MeasurementTaken` and `LimitFailed`;
+- PyVISA and simulator adapters;
+- a one-page architecture doc: C4 context and container diagrams, driving characteristics, style choice and fitness functions.
+
+Deliverable: `projects/software/04-lab-skeleton/`. Success: import contracts pass in CI; adding a new instrument driver means installing a separate package with zero edits to the core (demonstrate it); and a complete test sequence runs in CI against the simulator. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State Richards & Ford's First and Second Laws of Software Architecture.
+2. What does Clean Architecture's Dependency Rule say? How does dependency inversion let a use case save data without depending on the database?
+3. Ousterhout pushes back on "many small classes and short methods". What's his argument, and when does it matter most?
+4. You find this hierarchy: `Instrument → DMM → VendorDmm → VendorDmmWithLogging`. Which GoF principle does it violate, and which pattern should handle the logging instead?
+5. Name two of *Hard Parts*' granularity disintegrators and two of its integrators.
+6. Misconception check: "Start with microservices so you can scale later." What tax do you pay up front, and when does a modular monolith win?
+7. What does event sourcing give you that a CRUD table can't, and what new problems does it create?
+8. Explain to a smart friend in three sentences what a software architect actually decides, and what they deliberately leave open.

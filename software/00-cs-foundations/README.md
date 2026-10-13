@@ -2,7 +2,18 @@
 
 > **Why this section matters:** You don't need to implement every algorithm from scratch, but you need to recognize patterns, understand complexity, and evaluate trade-offs when reviewing code — whether written by humans or AI agents.
 
-**Prerequisites:** Basic math.
+**Prerequisites:** Basic math. For discrete math and proof skills, use the math curriculum's [Section 00 — Mathematical Thinking](../../math/00-mathematical-thinking/README.md) (Epp, Bazett) instead of duplicating it here.
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Predict the time and space complexity of a code snippet by reading it, then confirm the prediction with a log-log timing fit.
+- Spot the wrong data structure in a review (list membership inside loops, `pop(0)`, repeated sorting, linear min-scans) and name the replacement and its complexity.
+- Turn a tree recursion into memoized and bottom-up dynamic programming using MIT 6.006's SRTBOT steps, and state the resulting time and space.
+- Apply DFS, BFS and topological sort to real dependency graphs (Python imports, C `#include`s, build order) to find cycles and critical chains.
+- Explain when a worse Big-O wins in practice: small n, constant factors, cache behavior, worst-case determinism.
 
 ---
 
@@ -10,11 +21,14 @@
 
 | # | Type | Resource | Notes |
 |---|------|----------|-------|
-| 1 | 🔑 Book (Free) | [Teach Yourself Computer Science](https://teachyourselfcs.com/) | The best curated CS self-study guide |
+| 1 | 🔑 Guide (Free) | [Teach Yourself Computer Science](https://teachyourselfcs.com/) | The best curated CS self-study guide |
 | 2 | 🔑 Course | [MIT 6.006 Introduction to Algorithms (OCW)](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) | Foundational algorithms and data structures |
-| 3 | 🔑 Book | *Grokking Algorithms* — Aditya Bhargava | Visual, accessible intro to algorithms |
-| 4 | Video | [CS50 (Harvard)](https://cs50.harvard.edu/) — David Malan | Best intro CS course ever made |
+| 3 | 🔑 Book | *Grokking Algorithms* (2nd ed) — Aditya Bhargava (2024) | Visual, accessible intro to algorithms |
+| 4 | Course | [CS50 (Harvard)](https://cs50.harvard.edu/) — David Malan | Harvard's widely used intro CS course, free online |
 | 5 | Book (Free) | [Structure and Interpretation of Computer Programs](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html) | Classic computational thinking |
+| 6 | 🔑 Book | [*Computer Systems: A Programmer's Perspective* (3rd ed)](https://csapp.cs.cmu.edu/) — Randal Bryant and David O'Hallaron (2015) | How C becomes machine behavior: integer and floating-point representation, assembly, linking, caches, exceptions, concurrency. Teach Yourself CS's pick for architecture and the CS book closest to embedded C work |
+| 7 | Book (Free) | [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/) — Remzi and Andrea Arpaci-Dusseau (v1.10, 2023) | Virtualization, concurrency, persistence. The concurrency chapters (threads, locks, condition variables, semaphores, common bugs) are the groundwork for the RTOS material in Section 07 |
+| 8 | Book | [*The Algorithm Design Manual* (3rd ed)](https://www.algorist.com/) — Steven Skiena (2020) | Practitioner's algorithms: model the real problem, then pick from a catalog of known solutions. Teach Yourself CS's main algorithms text, and better data-structures practice than puzzle grinding |
 
 ### Key Concepts
 
@@ -31,6 +45,34 @@
 ```
 1. Teach Yourself CS (read the roadmap, use it to guide everything)
 2. CS50 or Grokking Algorithms (pick your learning style)
-3. MIT 6.006 (deep dive into algorithms and data structures)
-4. SICP (when you want to level up your computational thinking)
+3. CS:APP (how C maps to the machine; read alongside Section 02)
+4. MIT 6.006 (deep dive into algorithms and data structures)
+5. The Algorithm Design Manual (practice modeling real problems; keep the catalog as a reference)
+6. OSTEP (concurrency chapters before Section 07; the rest as needed)
+7. SICP (when you want to level up your computational thinking)
 ```
+
+---
+
+## 🛠️ Practice
+
+1. **Predict, then measure** — Take eight snippets: `x in a_list` inside a loop, `lst.pop(0)` until empty, `s += piece` in a loop, `sorted()` inside a loop, nested loops over all pairs, `heapq.nlargest(10, data)`, `bisect.insort` called n times, and naive recursive Fibonacci. Write down your predicted complexity for each before running anything. Then time each with `timeit` from n = 10³ upward (n ≈ 20–35 for the recursive Fibonacci, which is hopeless at 10³), as far as is feasible, and fit the slope of log(time) vs log(n) with NumPy. Use a semi-log plot for the exponential one. Done when every slope is within ±0.2 of your prediction, or you can explain the gap (CPython's in-place string-concatenation optimization, `memmove` speed, cache effects). *(~3 h · MIT 6.006 lectures on asymptotics and data structures; Grokking Algorithms on Big O)*
+2. **Wrong-structure hunt** — Ask an AI agent, with no performance hints, for a script that does three things: (a) deduplicate 1 M synthetic measurement records, (b) return the 20 largest outliers, (c) for each of 10 k event timestamps, list the records within ±5 s. Review it for data-structure misuse. For each operation, name the right structure (set/dict, heap, sorted array + `bisect`, `deque`) and its complexity, then fix the code and measure the speedup. If the agent's code is already optimal, write the naive version yourself and measure the gap. Done when every choice is backed by both a complexity argument and a measurement. *(~3 h · Grokking Algorithms on hash tables and arrays vs linked lists; MIT 6.006 hashing and sorting lectures)*
+3. **Recursion → memo → table** — Port SICP's counting-change procedure (§1.2.2 "Tree Recursion") to Python. Confirm there are 292 ways to change $1.00 with SICP's five coin kinds (1, 5, 10, 25, 50 ¢), and count the calls made for 100, 300 and 500 cents (expect ≈ 15.5 k at 100 ¢ and ≈ 12.8 M at 500 ¢). Add `functools.cache`, then write the bottom-up table. For each version, state the time and space cost using 6.006's SRTBOT steps. Apply the same pattern to a 0/1 knapsack: choose optional firmware features (flash bytes, value) under a 64 KB budget. Cross-check a small instance by hand against Grokking's knapsack grid. *(~3 h · SICP §1.2.2; MIT 6.006 dynamic-programming lectures; Grokking Algorithms' dynamic-programming chapter)*
+4. **Graphs in your own code** — Extract a real dependency graph: the import graph of a Python package you use (parse imports with `ast`), or the `#include` graph of a firmware project. Implement DFS cycle detection and Kahn's topological sort, reporting any leftover cycle. Then find the longest dependency chain on the acyclic part using DP over the DAG. Cross-check everything against `networkx`. Done when your results match and every cycle you found has a one-line verdict: harmless, or a design smell. *(~3 h · MIT 6.006 BFS/DFS lectures; CS50's data-structures material)*
+5. **CS50 Speller by hand** — Do CS50's *Speller* problem set (a hash-table spell-checker in C) without AI help on the first pass. Then try three hash functions × three bucket counts and record load factor, longest chain and run time for each. Run Valgrind until it reports zero leaks. Done when you can predict, before running, which configuration wins and why. *(~5 h · CS50's memory and data-structures weeks)*
+
+**🏗️ Mini-project — Timer-Queue Showdown:** Build three software-timer queues in Python: an unsorted list (scan for the minimum), a sorted list (`bisect.insort`) and a binary heap (`heapq`). Each supports `start(deadline) -> id`, `cancel(id)` and `pop_expired(now)`. Predict the per-operation complexity of each, then benchmark from 10 to 10⁶ active timers under a realistic start/cancel/expire mix and plot the results. Write a one-page memo recommending a structure for two cases: (a) a host-side test sequencer juggling 10⁵ timers, and (b) an MCU with at most 16 timers. The memo must also explain why the FreeRTOS kernel keeps delayed tasks in a sorted linked list (`vListInsert` in `list.c`; FreeRTOS is listed in Section 07). Deliverable: notebook + memo in `projects/software/00-timer-queues/`. Success: measured scaling matches your predictions, and the memo names the crossover n with evidence. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the definition of f(n) = O(g(n)). What does Θ add, and why do reviewers usually mean Θ when they say "O"?
+2. Why does `if x in seen_list:` inside a loop over n items make the loop quadratic, and what is the one-line fix?
+3. Roughly how long would an O(n²) pairwise dedupe of 1 million records take in pure Python at ~10⁷ simple operations per second? How long would a set-based pass take?
+4. Which two properties make a problem suitable for dynamic programming? Which SRTBOT step guarantees the subproblems can be evaluated without cycles?
+5. A binary heap has O(log n) insert; a sorted array has O(n) insert. Give two reasons the sorted array can still be faster for 10 timers.
+6. Python's `list.append` is "amortized O(1)". Explain the mechanism. What does "amortized" *not* promise about any single append, and why does that matter in real-time code?
+7. When does BFS give shortest paths, and what changes when edges have weights?
+8. Explain hash tables to a smart friend in three sentences, including why they can degrade to linear time.

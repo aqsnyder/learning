@@ -1,0 +1,126 @@
+# Hardware-in-the-Loop Testing and Lab Automation
+
+## Why This Section Matters
+
+Host-side unit tests (Section 05) prove the logic. They can't prove that the firmware works on the board, against a real instrument, at the edges of its operating range. Hardware-in-the-loop (HIL) testing closes that gap: Python powers and flashes the device under test, drives instruments over USB and Ethernet, measures the result, and decides pass or fail with nobody at the bench. If you build measurement or test equipment, these skills are also the product: a clean SCPI command set, a dependable USB/Ethernet link, and host software that customers can script. And once coding agents write firmware and drivers, a HIL suite in CI is the only ground truth that tells them — and you — whether a change works on hardware.
+
+---
+
+## Prerequisites
+
+- [Section 01 — Python Mastery](../01-python-mastery/README.md), including the Typed Instrument Library mini-project
+- [Section 05 — Testing and Quality](../05-testing-and-quality/README.md), including the Bench HIL Rig mini-project, which this section turns into shared CI infrastructure
+- [Section 12 — Firmware Toolchain, Debug, and Observability](../12-firmware-toolchain-debug-and-observability/README.md), for the one-command build and flash scripts your rig calls
+- Helpful: [Section 06](../06-systems-and-infrastructure/README.md) for sockets (Beej's Guide), and [Section 04](../04-architecture-and-design-patterns/README.md)'s Lab-Automation Walking Skeleton
+
+> Recommended position: after Section 05 for the instrument-control half (exercises 1, 2 and 5). The simulation and CI half (exercises 3–4 and the mini-project) works best right after Section 12.
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Explain the instrument-control stack — VISA, IEEE 488.2 common commands and status reporting, SCPI command trees and the error queue — and how it runs over USB (USBTMC) and Ethernet (raw sockets, VXI-11, HiSLIP).
+- Write instrument drivers that synchronize correctly with slow operations, surface every instrument error, and run in CI against recorded sessions with no hardware attached.
+- Place each test at the cheapest layer that can catch its bug (host unit, Renode simulation, HIL, bench), and justify the split with run-time and flake-rate numbers.
+- Operate a HIL rig as shared CI infrastructure: remote access, exclusive locking, power-cycle recovery, archived artifacts, and quarantine for flaky tests.
+- Design a SCPI command set for your own instrument that a script, a person at a terminal and an AI agent can each use correctly from the reference alone.
+
+---
+
+## Resources
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| 🔑 | Library | PyVISA | PyVISA developers | — | [Link](https://pyvisa.readthedocs.io/en/latest/) | Controls measurement devices "independently of the interface" (GPIB, RS-232, USB, Ethernet), either by wrapping a vendor VISA library or through the pure-Python PyVISA-py backend. The standard first layer for Python instrument code. |
+| 🔑 | Standard | SCPI — Standard Commands for Programmable Instrumentation | IVI Foundation | — | [Link](https://www.ivifoundation.org/About-IVI/scpi.html) | The common command language between computers and test instruments. It is built on IEEE 488.2 and requires conformance to it. The IVI Foundation has maintained it since the SCPI Consortium merged into IVI in late 2003, and the spec is on IVI's specifications page. Read it before you design your own instrument's commands. |
+| | Library | PyMeasure | PyMeasure developers | — | [Link](https://pymeasure.readthedocs.io/en/latest/) | A repository of instrument driver classes plus a system for running measurement procedures, with live-plotting GUIs and experiment queues. Compare its driver classes with your own before you reinvent them. |
+| | Library | labgrid | Pengutronix and contributors | — | [Link](https://labgrid.readthedocs.io/en/latest/) | Embedded board-control library for testing and automation: power switching, serial consoles, USB and SD-card multiplexers, software installation, and a pytest plugin. Its exporter/coordinator layer makes boards attached to one machine usable from another. It isn't a test framework; your pytest tests use it to drive hardware. The examples lean toward Linux boards, but the power, console and remote-access layers apply to MCU targets too. |
+| | Tool | Renode | Antmicro | 2026 (1.17.0) | [Link](https://antmicro.com/platforms/renode/) | Open-source emulation of CPUs, SoCs, peripherals and multi-node systems, built for running firmware tests in CI before (or instead of) real hardware. Tests are commonly written in Robot Framework. STM32 peripherals are among its models; check your exact part before relying on it. |
+| | Concept | Instrument transports: USBTMC, raw sockets, VXI-11, HiSLIP | — | — | — | How SCPI actually travels: the USB Test & Measurement Class over USB; plain TCP sockets (commonly port 5025); and VXI-11 (RPC-based) and HiSLIP (IVI's newer LAN protocol) on LAN instruments. The transport decides termination characters, timeouts, device clear and service requests. |
+| | Concept | IEEE 488.2 status reporting and the SCPI error queue | — | — | — | `*IDN?`, `*RST`, `*CLS`, `*OPC?`, `*ESR?` and `SYST:ERR?`: synchronize with slow operations instead of sleeping, and never let an instrument error pass silently. Every driver should drain the error queue. |
+| | Concept | The firmware test pyramid | — | — | [Sec 05](../05-testing-and-quality/README.md) | Host unit tests, then simulation, then HIL, then bench/system tests. Covers which bugs each layer can catch, what a run costs, and how many tests belong at each level. Extends Section 05's testing pyramid onto hardware. |
+| | Concept | HIL rigs as CI infrastructure | — | — | — | Self-hosted runners attached to fixtures, exclusive locks on boards, power-cycle recovery from hung targets, archived logs and captures, and quarantine for flaky tests. |
+| 🤖 | Concept | HIL as the agent's ground truth | — | — | [Sec 09](../09-agentic-ai-workflows/README.md) | An agent changing firmware or instrument code needs a pass/fail signal from real hardware, not its own claim that the change "should work". Expose the HIL suite as one command (or as an MCP tool), and require its report in every agent PR. |
+
+---
+
+## Suggested Order
+
+1. **The firmware test pyramid** — Decide what each layer is for before building anything.
+2. **SCPI + IEEE 488.2 status reporting** — Learn the command language, the common commands and the error queue from IVI's SCPI page and the spec it links to.
+3. **PyVISA** — Drive a real bench instrument from Python, then harden your Section 01 instrument library.
+4. **Instrument transports** — Learn what changes between USBTMC, raw sockets, VXI-11 and HiSLIP, so that a hung connection becomes diagnosable.
+5. **PyMeasure** — Compare its driver classes and procedures with your own design.
+6. **Renode** — Run firmware tests in emulation on every push.
+7. **labgrid** — Drive power, consoles and flashing from pytest, locally and remotely.
+8. **HIL rigs as CI infrastructure** — Put the rig behind a self-hosted runner.
+9. **HIL as the agent's ground truth** — Make the HIL report a merge requirement for agent PRs.
+
+---
+
+## 🛠️ Practice
+
+1. **SCPI by hand, then in code** — With any SCPI instrument you have (bench supply, DMM, scope), open a raw session: a socket to its SCPI port (often 5025) or a USBTMC terminal. Then:
+   - send `*IDN?`, set an output or range, and read it back;
+   - send a misspelled command, then read `SYST:ERR?` until it returns `+0,"No error"`;
+   - wait for a slow operation (a long-integration measurement or an autorange) with `*OPC?` instead of `sleep()`.
+
+   Repeat the session in PyVISA. Deliverable: both transcripts, plus a note on which termination characters, timeouts and read sizes you had to set, and why. *(~2 h · SCPI (IVI Foundation); PyVISA)*
+2. **Drivers that never fail silently** — Harden the Typed Instrument Library from Section 01:
+   - check the error queue after every configuration write, and raise a typed exception carrying the instrument's error number and text;
+   - replace every fixed delay with `*OPC?` or status polling;
+   - add a record/replay transport that captures a real session to a file, and replay those files in CI.
+
+   Done when:
+   - CI replays real sessions with no hardware attached;
+   - a provoked instrument error (e.g. an out-of-range setting) raises the right exception with the instrument's message;
+   - no slow measurement depends on a hard-coded sleep.
+
+   *(~4 h · PyVISA; SCPI; PyMeasure's instrument classes for comparison)*
+3. **Firmware tests without a board** — Run a small firmware image in Renode, such as a UART echo or the link object from Section 07's data logger. Write a Robot Framework test that sends bytes into the emulated UART and checks the reply, and add it to CI. Then write down two bugs this layer can catch that host unit tests can't, and two it can never catch. *(~4 h · Renode)*
+4. **Share the rig safely** — Take the Section 05 Bench HIL Rig and make it CI infrastructure:
+   - export the board, power control and console with labgrid, so that a CI runner on another machine can lock and use them;
+   - recover from a hung target automatically by power-cycling;
+   - archive the console log, the JUnit report and any logic-analyzer capture (sigrok, Section 12) from every run.
+
+   Run the suite 50 times back to back. Done when:
+   - you know the flake rate of each test;
+   - every flaky test is fixed, or quarantined with a written reason;
+   - two jobs started at once never touch the board at the same time.
+
+   *(~6 h · labgrid; Section 05 mini-project; sigrok/PulseView)*
+5. **Design your instrument's SCPI interface** — Write the command reference for a small instrument you could build, such as a 4-channel source-measure unit or a GPIO/ADC box. Include:
+   - the mandatory IEEE 488.2 common commands;
+   - `SOURce`, `MEASure` and `CONFigure` subsystems with units, limits and defaults;
+   - an error number and message for each failure;
+   - the `*OPC?` pattern for slow operations.
+
+   Implement a subset as a Python simulator, or in firmware on top of the Section 02 command shell, and test it with your driver from exercise 2. Done when someone else — or an agent given only your reference — writes a working measurement script without asking you a question. *(~5 h · SCPI (IVI Foundation); PyVISA)*
+
+**🏗️ Mini-project — Hardware CI Pipeline:** Turn one board and its fixture into a pipeline that runs on every push to main:
+- **Stage 1:** host unit tests (Unity/Ceedling and pytest) on a hosted runner.
+- **Stage 2:** the Renode tests from exercise 3.
+- **Stage 3:** HIL on a self-hosted runner, using the rig from exercise 4. Flash with Section 12's scripts, run the functional tests, and take measurements through your hardened driver from exercise 2.
+- **Nightly:** a soak run that also tracks flake rate and supply current over time.
+- **Agent gate:** a PR that touches firmware or drivers can't merge without a green Stage 3, and the agent must link the run in the PR.
+
+Deliverable: `projects/software/13-hardware-ci/`, plus a one-page README with the fixture wiring and the pyramid split. Success:
+- three planted bugs are each caught at the lowest stage that can catch them: a ring-buffer off-by-one, a wrong DMA or ADC channel, and a SCPI reply in the wrong units;
+- the pipeline recovers from a hung board without human help;
+- a full run, flashing included, takes under 10 minutes.
+
+*(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Which IEEE 488.2 common commands must every SCPI instrument implement, and what does `*OPC?` give you that a fixed `sleep()` doesn't?
+2. Why should a driver read `SYST:ERR?` after configuration writes, and what goes wrong in a long automated run if it doesn't?
+3. A query times out over LAN but works over USB. Name three causes you'd check, in order.
+4. Place each bug at the cheapest layer that can catch it: an off-by-one in a ring buffer; a DMA channel mapped to the wrong peripheral; an ADC reading that drifts with temperature; a SCPI reply in the wrong units.
+5. What can a Renode run tell you that host unit tests can't, and what can only real hardware tell you?
+6. Misconception check: "All the HIL tests pass, so the hardware is good." What doesn't a HIL suite prove?
+7. One fixture takes 6 minutes per full HIL run, including flashing and power cycling. Roughly how many runs per day can it support, and what does that say about which tests belong at the HIL layer?
+8. Explain to a smart friend in three sentences why an AI agent's "all tests pass" means little for firmware until a HIL run backs it up.
