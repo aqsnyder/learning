@@ -11,7 +11,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Harford — *The Undercover Economist*
 - [ ] Hazlitt — *Economics in One Lesson*
 - [ ] Read — "I, Pencil"
-- [ ] MRUniversity — Principles of Economics
+- [ ] MRUniversity — Principles of Microeconomics
 - [ ] Dalio — "How The Economic Machine Works"
 - [ ] Marginal Revolution blog
 - [ ] 🛠️ Practice exercises 1–5
@@ -137,7 +137,8 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Blum, Hajiaghayi, Ligett & Roth — "Regret Minimization and the Price of Total Anarchy" (2008)
 - [ ] Sargent & Stachurski — QuantEcon Lectures
 - [ ] ter Hoeven et al. — "Mesa 3: Agent-Based Modeling with Python" (2025)
-- [ ] Horton, Filippas & Manning — "Homo Silicus" (2023)
+- [ ] Horton, Filippas & Manning — "Homo Silicus" (2023; rev. 2026)
+- [ ] Calvano, Calzolari, Denicolò & Pastorello — "Artificial Intelligence, Algorithmic Pricing, and Collusion" (2020)
 - [ ] Tim Roughgarden's page (course materials and notes)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Algorithmic pricing and tacit collusion
@@ -164,27 +165,96 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Nakamoto — Bitcoin Whitepaper (2008)
 - [ ] Buterin — Ethereum Whitepaper (2014)
 - [ ] Gensler — Blockchain and Money (MIT)
-- [ ] Hayek — *The Denationalization of Money*
+- [ ] Hayek — *Denationalisation of Money: The Argument Refined*
 - [ ] Martin — *Money: The Unauthorized Biography*
 - [ ] Walsh — *Monetary Theory and Policy*
 - [ ] Voskuil — *Cryptoeconomics*
 - [ ] Vitalik Buterin's blog
+- [ ] Halaburda, Haeringer, Gans & Gandal — "The Microeconomics of Cryptocurrencies" (2022)
+- [ ] Budish — "The Economic Limits of Bitcoin and the Blockchain" (2018; *QJE* 2025 as "Trust at Scale")
+- [ ] Roughgarden — "Transaction Fee Mechanism Design for the Ethereum Blockchain" (2020)
+- [ ] Liu, Makarov & Schoar — "Anatomy of a Run: The Terra Luna Crash" (2023)
+- [ ] BIS — "The next-generation monetary and financial system" (Annual Economic Report 2025, Ch. III)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Payments and treasury policy for a hardware shop
 - [ ] ✅ Check Yourself — answered from memory
 
-## Section 11 — AI Alignment, Economics, and Frontiers
+## Section 11 — AI Alignment through an Economic Lens
 - [ ] Manheim & Garrabrant — "Goodhart's Law" (2018)
 - [ ] Dafoe et al. — "Open Problems in Cooperative AI" (2020)
 - [ ] Hadfield-Menell et al. — "The Off-Switch Game" (2017)
+- [ ] Hadfield-Menell & Hadfield — "Incomplete Contracting and AI Alignment" (2019)
 - [ ] Amodei et al. — "Concrete Problems in AI Safety" (2016)
 - [ ] Christian — *The Alignment Problem*
 - [ ] Fickinger et al. — "Multi-Principal Assistance Games" (2020)
-- [ ] AI Safety Fundamentals (BlueDot Impact)
+- [ ] BlueDot Impact — AI safety course (formerly AI Safety Fundamentals)
 - [ ] LessWrong — Goodhart's Law (wiki)
 - [ ] AI Alignment Forum
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Goodhart bench for code generation
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 12 — Economics of AI
+- [ ] Acemoglu & Restrepo — "Automation and New Tasks" (2019)
+- [ ] Agrawal, Gans & Goldfarb — "The Ambiguous Labor Market Impact of Automating Prediction" (2019)
+- [ ] Eloundou, Manning, Mishkin & Rock — "GPTs are GPTs" (2023)
+- [ ] Handa et al. — "Which Economic Tasks are Performed with AI?" (Anthropic Economic Index, 2025)
+- [ ] Brynjolfsson, Li & Raymond — "Generative AI at Work" (2025)
+- [ ] Noy & Zhang — "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence" (2023)
+- [ ] Dell'Acqua et al. — "Navigating the Jagged Technological Frontier" (2023)
+- [ ] Peng, Kalliamvakou, Cihon & Demirer — "The Impact of AI on Developer Productivity" (2023)
+- [ ] Becker, Rush, Barnes & Rein — "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity" (2025)
+- [ ] Humlum & Vestergaard — "Still Waters, Rapid Currents" (2025)
+- [ ] Brynjolfsson, Chandar & Chen — "Canaries in the Coal Mine?" (2025; rev. 2026)
+- [ ] Acemoglu — "The Simple Macroeconomics of AI" (2024)
+- [ ] Korinek & Suh — "Scenarios for the Transition to AGI" (2024)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: AI adoption memo for a small hardware company
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 13 — Empirical Economics and Causal Inference
+- [ ] Angrist & Pischke — *Mastering 'Metrics* (2014)
+- [ ] Angrist — Mastering Econometrics (MRU)
+- [ ] Cunningham — *Causal Inference: The Mixtape* (2021)
+- [ ] Huntington-Klein — *The Effect* (2nd ed., 2025)
+- [ ] Angrist & Pischke — *Mostly Harmless Econometrics* (2009)
+- [ ] Angrist & Pischke — "The Credibility Revolution in Empirical Economics" (2010)
+- [ ] Royal Swedish Academy — "Natural experiments help answer important questions" (Nobel 2021 popular background)
+- [ ] Camerer et al. — "Evaluating replicability of laboratory experiments in economics" (2016)
+- [ ] Brodeur, Lé, Sangnier & Zylberberg — "Star Wars: The Empirics Strike Back" (2016)
+- [ ] causaldata (example datasets, Python/R/Stata)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Causal pipeline and a pre-analysis plan
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 14 — Macroeconomics, Money and Financial Markets
+- [ ] Mehrling — Economics of Money and Banking (Coursera)
+- [ ] Shiller — Financial Markets (Yale ECON 252)
+- [ ] Cowen & Tabarrok — Principles of Macroeconomics (MRU)
+- [ ] McLeay, Radia & Thomas — "Money creation in the modern economy" (2014)
+- [ ] Federal Reserve Board — *The Fed Explained* (11th ed.)
+- [ ] Royal Swedish Academy — "The laureates explained the central role of banks in financial crises" (Nobel 2022 popular background)
+- [ ] Diamond & Dybvig — "Bank Runs, Deposit Insurance, and Liquidity" (1983)
+- [ ] Royal Swedish Academy — "Trendspotting in asset markets" (Nobel 2013 popular background)
+- [ ] Glosten & Milgrom — "Bid, ask and transaction prices in a specialist market with heterogeneously informed traders" (1985)
+- [ ] Budish, Cramton & Shim — "The High-Frequency Trading Arms Race" (2015)
+- [ ] FRED — Federal Reserve Economic Data
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Order-book lab: continuous trading vs. frequent batch auctions
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 15 — Industrial Organization and Strategy
+- [ ] Cabral — *Introduction to Industrial Organization* (2nd ed., 2017)
+- [ ] Royal Swedish Academy — "Market power and regulation" (Nobel 2014 popular background)
+- [ ] Royal Swedish Academy — "Scientific Background: Market power and regulation" (2014)
+- [ ] Belleflamme & Peitz — *Industrial Organization: Markets and Strategies* (2nd ed., 2015)
+- [ ] Belleflamme & Peitz — *The Economics of Platforms* (2021)
+- [ ] Porter — "The Five Competitive Forces That Shape Strategy" (2008)
+- [ ] Khan — "Amazon's Antitrust Paradox" (2017)
+- [ ] Shapiro — "Antitrust in a time of populism" (2018)
+- [ ] Stigler Committee on Digital Platforms — Final Report (2019)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Pricing and competitive-strategy memo for a small instrument maker
 - [ ] ✅ Check Yourself — answered from memory
 
 ## Books (supplementary)

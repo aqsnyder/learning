@@ -433,3 +433,118 @@ Other gaps checked, and where they now live:
 3. **Fix the order in practice.** Do normative decision theory (SEP *Decision Theory*, the vNM appendix) before game theory, and information economics before mechanism design. Then add Axelrod and the bargaining book before Section 11.
 4. **Get a macro, money and finance base before Section 10.** Start now with CORE's macro volume, then P3 (Mehrling, Shiller). Read crypto through mainstream analyses as well as Ammous.
 5. **Use the founder-relevant tools.** Market design (Nobel 2012 matching), contracts and incentives (Nobel 2016 primer), platforms and IO (Tirole background, P4), and QuantEcon/Mesa for hands-on Python modeling.
+
+
+## Follow-up pass (2026-10-13)
+- **New sections created:**
+  - `econ/12-economics-of-ai/` · take after 11 (with 13 before or alongside) · 13 resources
+  - `econ/13-empirical-economics-and-causal-inference/` · take after 01 · 10 resources (cross-links math/10 instead of duplicating it)
+  - `econ/14-macroeconomics-money-and-financial-markets/` · take before 10 · 11 resources (educational only; no investment advice)
+  - `econ/15-industrial-organization-and-strategy/` · take after 07 · 9 resources
+  - Section 11 retitled "AI Alignment through an Economic Lens" (H1, README learning path, PROGRESS heading; directory unchanged). Its intro now points to 12 for the economics of AI and to philosophy/07 and ml/12 for alignment as such. README "Keeping Current" now points to 12. Pointers to the new sections were added in 00, 01, 02, 03, 04, 05, 06, 07, 08 and 10. Key titles were also added to `books/` (5) and `courses/` (4). Every check value in the new practice blocks was computed in Python; the 13 values use the `causaldata` datasets.
+- **Added:**
+  - Automation and New Tasks: How Technology Displaces and Reinstates Labor — Daron Acemoglu & Pascual Restrepo — 2019 — 12
+  - Artificial Intelligence: The Ambiguous Labor Market Impact of Automating Prediction — Ajay Agrawal, Joshua S. Gans & Avi Goldfarb — 2019 — 12
+  - GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models — Tyna Eloundou, Sam Manning, Pamela Mishkin & Daniel Rock — 2023 (Science 2024) — 12
+  - Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations — Kunal Handa, Alex Tamkin, Miles McCain et al. — 2025 — 12
+  - Generative AI at Work — Erik Brynjolfsson, Danielle Li & Lindsey Raymond — 2025 (NBER WP 2023) — 12
+  - Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence — Shakked Noy & Whitney Zhang — 2023 — 12
+  - Navigating the Jagged Technological Frontier — Fabrizio Dell'Acqua, Edward McFowland III, Ethan R. Mollick et al. — 2023 — 12
+  - The Impact of AI on Developer Productivity: Evidence from GitHub Copilot — Sida Peng, Eirini Kalliamvakou, Peter Cihon & Mert Demirer — 2023 — 12
+  - Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity — Joel Becker, Nate Rush, Elizabeth Barnes & David Rein — 2025 — 12
+  - Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI — Anders Humlum & Emilie Vestergaard — 2025 — 12 (first circulated as "Large Language Models, Small Labor Market Effects", BFI WP 2025-56)
+  - Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence — Erik Brynjolfsson, Bharat Chandar & Ruyu Chen — 2025 (rev. Aug 2026) — 12
+  - The Simple Macroeconomics of AI — Daron Acemoglu — 2024 (Economic Policy 2025) — 12
+  - Scenarios for the Transition to AGI — Anton Korinek & Donghyun Suh — 2024 — 12
+  - Mastering 'Metrics: The Path from Cause to Effect — Joshua D. Angrist & Jörn-Steffen Pischke — 2014 — 13
+  - Mastering Econometrics (MRU course) — Joshua Angrist — n.d. — 13
+  - Causal Inference: The Mixtape — Scott Cunningham — 2021 — 13
+  - The Effect: An Introduction to Research Design and Causality (2nd ed.) — Nick Huntington-Klein — 2025 — 13
+  - Mostly Harmless Econometrics: An Empiricist's Companion — Joshua D. Angrist & Jörn-Steffen Pischke — 2009 — 13
+  - The Credibility Revolution in Empirical Economics — Joshua D. Angrist & Jörn-Steffen Pischke — 2010 — 13
+  - Natural experiments help answer important questions (Nobel 2021 popular background) — Royal Swedish Academy of Sciences — 2021 — 13
+  - Evaluating replicability of laboratory experiments in economics — Colin F. Camerer, Anna Dreber, Eskil Forsell et al. — 2016 — 13
+  - Star Wars: The Empirics Strike Back — Abel Brodeur, Mathias Lé, Marc Sangnier & Yanos Zylberberg — 2016 — 13
+  - causaldata (example datasets, v0.1.5) — Nick Huntington-Klein — 2024 — 13
+  - Economics of Money and Banking (Coursera) — Perry G. Mehrling — n.d. — 14
+  - Financial Markets (Open Yale ECON 252) — Robert J. Shiller — 2011 — 14
+  - Principles of Macroeconomics (MRU) — Tyler Cowen & Alex Tabarrok — n.d. — 14
+  - Money creation in the modern economy — Michael McLeay, Amar Radia & Ryland Thomas — 2014 — 14
+  - The Fed Explained: What the Central Bank Does (11th ed.) — Board of Governors of the Federal Reserve System — n.d. — 14
+  - The laureates explained the central role of banks in financial crises (Nobel 2022 popular background) — Royal Swedish Academy of Sciences — 2022 — 14
+  - Bank Runs, Deposit Insurance, and Liquidity — Douglas W. Diamond & Philip H. Dybvig — 1983 — 14
+  - Trendspotting in asset markets (Nobel 2013 popular background) — Royal Swedish Academy of Sciences — 2013 — 14
+  - Bid, ask and transaction prices in a specialist market with heterogeneously informed traders — Lawrence R. Glosten & Paul R. Milgrom — 1985 — 14
+  - The High-Frequency Trading Arms Race: Frequent Batch Auctions as a Market Design Response — Eric Budish, Peter Cramton & John Shim — 2015 — 14
+  - FRED (Federal Reserve Economic Data) — Federal Reserve Bank of St. Louis — n.d. — 14
+  - Introduction to Industrial Organization (2nd ed.) — Luis Cabral — 2017 — 15
+  - Market power and regulation (Nobel 2014 popular background) — Royal Swedish Academy of Sciences — 2014 — 15
+  - Scientific Background: Market power and regulation — Royal Swedish Academy of Sciences — 2014 — 15
+  - Industrial Organization: Markets and Strategies (2nd ed.) — Paul Belleflamme & Martin Peitz — 2015 — 15
+  - The Economics of Platforms: Concepts and Strategy — Paul Belleflamme & Martin Peitz — 2021 — 15
+  - The Five Competitive Forces That Shape Strategy — Michael E. Porter — 2008 — 15
+  - Amazon's Antitrust Paradox — Lina M. Khan — 2017 — 15
+  - Antitrust in a time of populism — Carl Shapiro — 2018 — 15
+  - Stigler Committee on Digital Platforms: Final Report — Stigler Center, Chicago Booth — 2019 — 15
+  - Artificial Intelligence, Algorithmic Pricing, and Collusion — Emilio Calvano, Giacomo Calzolari, Vincenzo Denicolò & Sergio Pastorello — 2020 — 08 (mini-project's "not in the list" note removed)
+  - The Microeconomics of Cryptocurrencies — Hanna Halaburda, Guillaume Haeringer, Joshua S. Gans & Neil Gandal — 2022 — 10
+  - The Economic Limits of Bitcoin and the Blockchain (published as "Trust at Scale", QJE 140(1), 2025) — Eric Budish — 2018 — 10 (Practice 3's "outside reading" note removed; also in btc/09, the one-home section for Bitcoin economics)
+  - Transaction Fee Mechanism Design for the Ethereum Blockchain: An Economic Analysis of EIP-1559 — Tim Roughgarden — 2020 — 10
+  - Anatomy of a Run: The Terra Luna Crash — Jiageng Liu, Igor Makarov & Antoinette Schoar — 2023 (JFE 2026) — 10
+  - III. The next-generation monetary and financial system (BIS Annual Economic Report 2025) — Bank for International Settlements — 2025 — 10
+  - Incomplete Contracting and AI Alignment — Dylan Hadfield-Menell & Gillian K. Hadfield — 2019 — 11
+- **Removed (confirmed nonexistent):** none.
+- **Flags resolved:**
+  - `econ/08-computational-economics/README.md:39` (+ PROGRESS.md:140) — Homo Silicus authorship. The checker thought WP 31122 was by Horton alone. NBER WP 31122 (issued Apr 2023, revised Feb 2026) and arXiv 2301.07543 v2 (26 Feb 2026) both list John J. Horton, Apostolos Filippas & Benjamin S. Manning, so the row was correct. The year cell is now "2023 (rev. 2026)". Evidence: https://www.nber.org/papers/w31122 · https://arxiv.org/abs/2301.07543
+  - `econ/blogs-and-references/README.md:14` — Money Illusion status. Confirmed: "A long strange trip" (1 Sept 2024) says "This will be my final Money Illusion post" and points to scottsumner.substack.com, titled *The Pursuit of Happiness*. Replaced the ageing "now writes at" with dated wording. Evidence: https://www.themoneyillusion.com/a-long-strange-trip/ · https://scottsumner.substack.com/
+  - `econ/10-monetary-economics-and-crypto/README.md:31, 53, 67` (+ PROGRESS.md:168) — Hayek's title. Now *Denationalisation of Money: The Argument Refined*, year "1976 (2nd ed. 1978)". The row notes that the 1976 first edition was subtitled *An Analysis of the Theory and Practice of Concurrent Currencies*, and that the link is the IEA's 1990 text hosted by the Mises Institute (an advocacy site). The IEA's own page failed to load, so the link is unchanged. Evidence: https://mises.org/library/denationalisation-money-argument-refined · https://libcat.library.tamu.edu/Record/in00000504000 (2nd ed., 1978, Hobart Paper 70) · https://fff.org/?p=25637 (1976 first edition)
+  - `econ/00-economic-thinking/README.md:38` vs `:32` — The Dalio order step contradicted the hedged row. Step 1 is now an "optional warm-up: one investor's model of credit cycles, not textbook macroeconomics", to check against CORE's macro volume and Section 14. Editorial; no lookup needed.
+  - `econ/10-monetary-economics-and-crypto/README.md:73` — The treasury mini-project was close to investment advice. Added "This is an operations-cost and risk analysis for a business, not investment advice." Editorial.
+  - `econ/*/README.md` (V5 cross-curriculum flag) — Mini-project paths lacked the `NN-` prefix. All 12 are now `projects/econ/NN-<name>/`, matching STUDY-GUIDE and projects/README; the four new sections follow the same convention.
+  - This review's own open dependencies: Budish (NBER WP 24717, verified with its *QJE* 140(1) DOI 10.1093/qje/qjae033) is added to 10, and Calvano et al. (*AER* 110(10), DOI 10.1257/aer.20190623) to 08. Evidence: https://www.nber.org/papers/w24717 · https://api.crossref.org/works/10.1093/qje/qjae033 · https://api.crossref.org/works/10.1257/aer.20190623
+- **Still unverified:**
+  - Harris, *Trading and Exchanges* (OUP 2003) — not attempted (OUP pages refused fetches last run). Microstructure is covered by Glosten & Milgrom and Budish, Cramton & Shim instead.
+  - Bernanke's 2022 Nobel lecture — not added; the 2022 popular background was verified and used instead.
+  - Halaburda et al. JEL DOI (10.1257/jel.20201552) — Crossref and AEA fetches errored. The row links the verified NBER WP page, which carries the JEL 60(3):971–1013 citation.
+  - Camerer et al. (2016) headline numbers — science.org refused the fetch, so the row gives no replication rate.
+  - Dell'Acqua et al.: the size of the outside-the-frontier effect is unclear ("19%" in the SSRN abstract; percentage points or relative not determined), so the row gives no number.
+  - The Effect's first-edition year — not checked; the row cites the verified 2nd edition (Chapman & Hall, 2025).
+  - The Fed Explained (11th ed.) — the edition year is not stated on the Fed's page; the Year cell is "—".
+  - A Crossref bibliographic query for "Trust at Scale" returned HTTP 429 and was not refetched. The DOI record itself verified fine.
+
+## Link-audit fixes (2026-10-13)
+| File:line | Was | Now | Evidence URL |
+|---|---|---|---|
+| econ/00-economic-thinking/README.md:28 ; econ/courses/README.md:17 | MRU Principles at `mru.org/principles-economics-microeconomics` (302) | `learn.mru.org/courses/principles-of-microeconomics` (L3-104) | https://learn.mru.org/courses/principles-of-microeconomics |
+| econ/02-game-theory/README.md:31 ; econ/books/README.md:16 | Osborne & Rubinstein, *A Course in Game Theory*, at `books.osborne.economics.utoronto.ca/coursesingt` (4xx) | The authors' page for the book, which offers the free electronic text (L3-017) | https://www.economics.utoronto.ca/osborne/cgt/ |
+| econ/03-decision-theory/README.md:37, 53 ; econ/courses/README.md:11 | Ariely, Behavioral Economics (Coursera), `coursera.org/learn/predictably-irrational` (4xx twice) | Row kept; "⚠️ Link dead (checked Oct 2026)" appended; order step 8 marked "(optional; link dead)". Coursera's search page is robots-blocked, so no replacement was found (L2-026) | https://www.coursera.org/search?query=behavioral%20economics (robots-blocked) |
+| econ/04-mechanism-design/README.md:31 | Krishna, *Auction Theory*, at `www.elsevier.com/books/…` (302) | `shop.elsevier.com/books/…` (L3-062) | https://shop.elsevier.com/books/auction-theory/krishna/978-0-12-374507-1 |
+| econ/04-mechanism-design/README.md:33 | Ausubel & Milgrom, "The Lovely but Lonely Vickrey Auction", Stanford-hosted PDF (4xx; Milgrom's pages moved to robots-blocked milgrom.net) | Stanford SIEPR's page for the August 2004 working paper, which links the free PDF; the description says so. It is the sole source for objective 5 and Practice 4, so one WebSearch was used (L3-164) | https://siepr.stanford.edu/publications/working-paper/lovely-lonely-vickrey-auction |
+| econ/06-behavioral-economics/README.md:37, 57 | Behavioral Economics in Action (Coursera), `…/learn/behavioural-economics-in-action` (4xx twice) | Row kept; "⚠️ Link dead (checked Oct 2026)" appended; order step 9 marked "(optional; link dead)". The US-spelling slug also fails, and U of T's Coursera partner page does not show the course (L2-024) | https://www.coursera.org/learn/behavioral-economics-in-action (4xx) · https://www.coursera.org/utoronto |
+| econ/07-network-economics/README.md:30 | Rochet & Tirole at JSTOR `stable/3590984`, which is a different paper (Houseman, Kalleberg & Erickcek, *ILR Review* 2003) | DOI for *JEEA* 1(4), 2003 (L3-086) | https://doi.org/10.1162/154247603322493212 |
+| econ/07-network-economics/README.md:33 ; econ/courses/README.md:13 | Jackson's course at `…/learn/social-and-economic-networks` (4xx) | `…/learn/social-economic-networks`, the canonical slug (L1-027) | https://www.coursera.org/learn/social-economic-networks |
+| econ/08-computational-economics/README.md:33 | Arora, Hazan & Kale at `cs.princeton.edu/~arora/pubs/MWsurvey.pdf` (302 to his homepage) | The open-access *Theory of Computing* 8(6) article page (L1-029) | https://theoryofcomputing.org/articles/v008a006/ |
+| econ/08-computational-economics/README.md:34 | "Algorithmic Game Theory (CS364B)", year "—" | "Frontiers in Mechanism Design (CS364B)", 2014 (Winter 2014 offering); order step and PROGRESS name only "CS364B", so unchanged (L1-159) | https://timroughgarden.org/w14/w14.html |
+| econ/11-ai-alignment-economics-and-frontiers/README.md:44, 61, 73 ; econ/courses/README.md:15 ; econ/PROGRESS.md:190 | "AI Safety Fundamentals" at `aisafetyfundamentals.com` (302 to bluedot.org; the AISF name no longer appears there) | "BlueDot Impact AI safety courses (formerly AI Safety Fundamentals)" at `bluedot.org`, matching philosophy/07; the row notes the redirect, and the order step, Practice 5 source and PROGRESS line were renamed to match (L1-006) | https://bluedot.org/ |
+- Already fixed in the follow-up pass above: Hayek (10:31; L2-102). The title and the "link is the 1990 IEA text" note were already there; "1990 printing" now reads "3rd ed., 1990", per the audit's fix_meta.
+- Left unchanged because the auditor could not load the page and none is flagged as probably dead: Friedman (01:32; L1-032), Vickrey 🔑 (04:29; L1-086), Myerson 1981 (04:32; L1-087), Bolton & Dewatripont (05:33, books/README.md:17; L1-103), Sen (09:30; L2-074), Nash (02:33; L2-085), NotebookLM (README:9; L2-114), *Nudge* 🔑 (06:31; L2-128), Akerlof 🔑 (05:29; L3-083), Gibbard (09:31; L3-084), Arrow 🔑 (09:29, books/README.md:18; L3-166), and The Economist, *Games and Economic Behavior* and SSRN (blogs-and-references/README.md:24, 38, 47; L3-061, L3-147, L3-151).
+- Katz & Shapiro (07:31; L2-083): the auditor suspects JSTOR `stable/1816044` is the wrong id (from memory, `1814809`). A Crossref check today got HTTP 429 and was not retried, so the link is unchanged. Check it by hand.
+
+## Tier lists (2026-10-13)
+🔑 trimmed to ≤3 per section; each Suggested Order now opens with a "Core path" line. Reverse any call by re-adding 🔑 to the row and the Core path line.
+| Section | 🔑 kept | 🔑 removed (why, ≤8 words) |
+|---|---|---|
+| 10 | Nakamoto, Bitcoin whitepaper; Gensler, *Blockchain and Money* (MIT) | Ammous, *The Bitcoin Standard* (advocacy book; core excludes advocacy items) |
+- `econ/books/README.md:19`: 🔑 removed from *The Bitcoin Standard*, which lost its 🔑 in Section 10, its only econ section.
+- Core path lines added to all 16 sections (00–15). No section had more than 3 🔑 resource rows (31 before, 30 after; 01 has 3; 07, 09 and 13 have 1; the rest have 2), so Ammous is the only marker change, and no section has 0 🔑.
+- books/README.md #7 Thaler & Sunstein, *Nudge*: 🔑 added (core in 06)
+- books/README.md #19 Angrist & Pischke, *Mastering 'Metrics*: 🔑 added (core in 13)
+- books/README.md #22 Cabral, *Introduction to Industrial Organization* (2nd ed.): 🔑 added (core in 15)
+- courses/README.md #15 Mehrling, Economics of Money and Banking: 🔑 added (core in 14)
+- courses/README.md #16 Shiller, Financial Markets (ECON 252): 🔑 added (core in 14)
+- econ/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
+- Second check (2026-10-13), from `independent-check.md` "Second check":
+  - 01: Khan Academy demoted (review aid, already core in 00).
+  - 03: SEP "Decision Theory" (Steele & Stefánsson) made 🔑, so the normative side is on the core path.
+  - 12: Acemoglu, "The Simple Macroeconomics of AI" made 🔑, so the skeptical estimate is on the core path.
+  - Each Core path line was updated to match.

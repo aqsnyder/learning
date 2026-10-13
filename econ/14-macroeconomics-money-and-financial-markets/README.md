@@ -1,0 +1,91 @@
+# Macroeconomics, Money and Financial Markets
+
+## Why This Section Matters
+
+The rest of this curriculum is mostly microeconomics. This section supplies the macro, money and finance base underneath it:
+- **Macroeconomics.** What GDP, inflation and unemployment measure; why economies grow and fluctuate; what central banks and fiscal policy try to do.
+- **Money and banking.** Where money comes from (banks create deposits when they lend), how payments clear, and why banks are fragile: they turn runnable deposits into long-term loans.
+- **Financial markets.** How markets price risk, what the efficient-markets debate is actually about, and how trading works: bid–ask spreads, order books, and exchange design.
+
+It is the foundation Section 10 assumes. Read it before stablecoins, Bitcoin's monetary claims and the Taylor-rule exercise there. For a founder, interest rates set the cost of capital and shape customers' budgets, and the 2022 Nobel work on bank runs explains why credit can dry up suddenly.
+
+**Educational only:** nothing in this section is investment advice. The market exercises are about how prices and institutions work, not about what to buy or sell.
+
+**Where it fits:** this section is numbered 14 only because it was added after the original sections. Take it before Section 10.
+
+## Prerequisites
+
+- [Section 00 — Economic Thinking](../00-economic-thinking/README.md), including the macroeconomics volume of CORE's *The Economy 2.0* listed there
+- [Section 01 — Microeconomics](../01-microeconomics/README.md)
+- [Section 05 — Information Economics](../05-information-economics/README.md) (adverse selection, for bid–ask spreads)
+- [Section 04 — Mechanism Design](../04-mechanism-design/README.md) (auctions, for the exchange-design mini-project)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Trace money creation and payment clearing through bank balance sheets (T-accounts), and explain why the textbook money multiplier misdescribes how money is created today.
+- Solve the Diamond–Dybvig model for its optimal deposit contract and its run threshold, and explain how deposit insurance removes the run equilibrium and what moral hazard it brings.
+- Price a bond, compute its duration, and show how a rise in interest rates can turn a liquidity problem into a solvency problem for a bank funded by runnable deposits.
+- Derive Glosten–Milgrom bid and ask quotes from adverse selection, and simulate how trading reveals private information.
+- State the efficient-markets evidence on both sides (short-run unpredictability, long-run predictability), and explain why predictability alone cannot separate changing risk premia from mispricing.
+
+---
+
+## Resources
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| 🔑 | 🎥 Course | Economics of Money and Banking | Perry G. Mehrling (Columbia University) | — | [Link](https://www.coursera.org/learn/money-banking) | Money and banking seen from the payments side, produced with the Institute for New Economic Thinking. Thirteen modules: banking as a clearing system, banking as market making, international money and banking, money in the real world. Free to enroll; certificates cost extra. |
+| 🔑 | 🎥 Course | Financial Markets (ECON 252) | Robert J. Shiller (Yale) | 2011 | [Link](https://oyc.yale.edu/economics/econ-252) | Open Yale Courses, recorded spring 2011 (CC BY-NC-SA). Risk and crises, efficient markets, debt and leverage cycles, behavioral finance, banks, futures, options, monetary policy, and exchanges, brokers, dealers and clearinghouses. |
+| | 🎥 Course | Principles of Macroeconomics | Tyler Cowen & Alex Tabarrok (MRU) | — | [Link](https://learn.mru.org/courses/principles-of-macroeconomics) | Free short videos: GDP, growth (capital accumulation and the economics of ideas), the financial system, unemployment, inflation and the quantity theory, business cycles, the Fed, and fiscal policy. Its personal-finance unit is outside this section's scope. |
+| | 📝 Article | Money creation in the modern economy | Michael McLeay, Amar Radia & Ryland Thomas | 2014 | [Link](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy) | Bank of England *Quarterly Bulletin* 2014 Q1. Commercial banks create most money by making loans; banks do not "multiply up" central-bank money; what ultimately limits money creation is monetary policy, through interest rates and asset purchases (QE). Short and canonical. |
+| | 📖 Book (Free) | The Fed Explained: What the Central Bank Does (11th ed.) | Board of Governors of the Federal Reserve System | — | [Link](https://www.federalreserve.gov/aboutthefed/the-fed-explained.htm) | The Federal Reserve's own guide, formerly *Purposes & Functions*: monetary policy, financial stability, supervision and regulation, payment systems. A primary source, so read it as the institution's description of itself. |
+| | 📝 Article | The laureates explained the central role of banks in financial crises (Nobel 2022 popular background) | Royal Swedish Academy of Sciences | 2022 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2022/popular-information/) | Bernanke, Diamond and Dybvig in plain language. Maturity transformation creates liquidity but makes banks vulnerable to self-fulfilling runs; deposit insurance can stop runs but encourages risk-taking, so capital rules are needed too. Bernanke shows that bank failures deepened the Great Depression. |
+| | 📄 Paper | Bank Runs, Deposit Insurance, and Liquidity | Douglas W. Diamond & Philip H. Dybvig | 1983 | [Link](https://doi.org/10.1086/261155) | *Journal of Political Economy* 91(3). The bank-run model behind Practice 2. |
+| | 📝 Article | Trendspotting in asset markets (Nobel 2013 popular background) | Royal Swedish Academy of Sciences | 2013 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2013/popular-information/) | Fama, Hansen and Shiller. Asset prices are very hard to predict over days or weeks but somewhat predictable over several years. Whether that reflects changing risk or mispricing is still unsettled. Both sides of the efficient-markets debate in one short document. |
+| | 📄 Paper | Bid, ask and transaction prices in a specialist market with heterogeneously informed traders | Lawrence R. Glosten & Paul R. Milgrom | 1985 | [Link](https://doi.org/10.1016/0304-405X(85)90044-3) | *Journal of Financial Economics* 14(1). The adverse-selection theory of the bid–ask spread: Section 05 applied to markets. |
+| | 📄 Paper | The High-Frequency Trading Arms Race: Frequent Batch Auctions as a Market Design Response | Eric Budish, Peter Cramton & John Shim | 2015 | [Link](https://doi.org/10.1093/qje/qjv027) | *Quarterly Journal of Economics* 130(4). Argues that continuous-time trading creates an arms race for speed, and proposes frequent batch auctions as the market-design fix. Section 04's auction theory applied to exchanges. |
+| | 🛠️ Tool | FRED (Federal Reserve Economic Data) | Federal Reserve Bank of St. Louis | — | [Link](https://fred.stlouisfed.org/) | Free macroeconomic and financial time series (about 850,000) with an API. Used here and in Section 10's Taylor-rule exercise. |
+
+---
+
+## Suggested Order
+
+**Core path (🔑):** Mehrling's Economics of Money and Banking → Shiller's Financial Markets (ECON 252)
+
+1. **MRU — Principles of Macroeconomics** — Or the macroeconomics volume of CORE's *The Economy 2.0* (Section 00): national accounts, growth, unemployment, inflation, the Fed.
+2. **McLeay, Radia & Thomas — "Money creation in the modern economy"** — Where money comes from.
+3. **Mehrling — Economics of Money and Banking** — The core of the section: banking as a clearing system and as market making.
+4. **The Fed Explained** — The monetary-policy and financial-stability chapters, as the institution describes them.
+5. **Nobel 2022 popular background, then Diamond & Dybvig** — Why banks are fragile.
+6. **Shiller — Financial Markets** — The second core course: efficient markets, debt and leverage, banks, exchanges.
+7. **Nobel 2013 popular background ("Trendspotting in asset markets")** — The efficient-markets debate, both sides.
+8. **Glosten & Milgrom, then Budish, Cramton & Shim** — Market microstructure: spreads from adverse selection, and exchange design.
+9. **FRED** — Use it throughout. Then go on to Section 10.
+
+---
+
+## 🛠️ Practice
+
+1. **Where money comes from, in T-accounts** — Write a tiny double-entry ledger in Python: each agent is a balance sheet, and every posting must keep assets = liabilities + equity. The agents are a central bank, two commercial banks, a firm, a supplier and a household. Post: (a) Bank A lends $50 to the firm, crediting its deposit account; (b) the firm pays the $50 to a supplier that banks at B; (c) settlement in reserves: A started with $30 of reserves, so it must borrow the $20 shortfall overnight from B or from the central bank; (d) the central bank buys $40 of bonds from the household. Track broad money (deposits) and reserves after each step. Then write 200 words: which steps create money, which only move it, and what limits a bank's lending (the Bank of England's answer, and Mehrling's point that a bank must be able to settle its payments when they come due). **Check:** (a) raises broad money by $50 with no change in reserves; (b) leaves broad money unchanged; (c) moves $50 of reserves from A to B and leaves A $20 short, which it funds in the money market; (d) adds $40 to both reserves and deposits. Every step balances. *(~2 h · McLeay, Radia & Thomas; Mehrling, modules on banking as a clearing system; The Fed Explained, monetary policy chapter)*
+2. **Diamond–Dybvig by numbers** — There are three dates. One unit invested at date 0 returns 1 if liquidated at date 1, or R = 2 if held to date 2. A fraction π = ¼ of depositors turn out to be impatient; utility is u(c) = −1/c (CRRA with γ = 2). (a) Derive the optimal deposit contract (c₁, c₂) from u′(c₁) = R·u′(c₂) and the resource constraint, and show c₁ > 1: the bank insures depositors against needing their money early. (b) If a fraction f ≥ π withdraws at date 1, the bank liquidates f·c₁ and pays each waiting depositor R(1 − f·c₁)/(1 − f). Find the f* above which waiting is worse than running, and the share of depositors the bank can pay if everyone runs. (c) Show that suspending convertibility at f = π, or credible deposit insurance, removes the run equilibrium. Then name the moral-hazard cost the Nobel background warns about. (d) Redo (a) with log utility and explain why c₁ = 1 makes the contract run-proof but also useless. **Check:** c₁ ≈ 1.2815 and c₂ = √2·c₁ ≈ 1.8123; f* ≈ 0.561; if everyone runs the bank can pay only 1/c₁ ≈ 78% of depositors; with log utility c₁ = 1 and c₂ = R. *(~3 h · Diamond & Dybvig; Nobel 2022 popular background; Mehrling)*
+3. **Duration and a stylized bank failure** — A stylized bank holds $10 of reserves and $90 (book value) of 10-year bonds with a 1.5% annual coupon, bought at par. It is funded by $92 of deposits and $8 of equity. (a) Ten-year yields jump from 1.5% to 5%. Reprice the bonds, compute Macaulay and modified duration at the old yield, and compare the duration approximation with the exact loss. (b) Compute mark-to-market equity. (c) Depositors start withdrawing. Once reserves run out, every withdrawal forces bond sales at the new price: what withdrawals, as a share of deposits, wipe out book equity through realized losses? (d) Link to Practice 2: why does uninsured, concentrated, fast-moving funding turn a solvency problem into a run? (e) Founder's version: a $35k machine saves $700 a month for five years. What is its NPV at 5% and at 10% a year (monthly compounding)? **Check:** the bond price falls from 100 to ≈ 72.97 (−27.0%); modified duration ≈ 9.22, so the linear approximation (≈ −32%) overstates the loss because of convexity; mark-to-market equity ≈ −$16.3; withdrawals of ≈ $31.6 (≈ 34% of deposits) exhaust book equity; NPV ≈ +$2.1k at 5% and ≈ −$2.1k at 10%. *(~2.5 h · Shiller, lectures on debt and leverage cycles and on banks; Mehrling; Nobel 2022 background)*
+4. **Bid–ask spreads from adverse selection** — The Glosten–Milgrom setup: an asset is worth 0 or 100 (prior ½). Each period one trader arrives: informed with probability α (buys if the value is 100, sells if 0), otherwise uninformed (buys or sells with probability ½ each). (a) Derive ask = E[V | buy] and bid = E[V | sell], and show the spread equals α × 100 at a prior of ½. (b) Simulate 5,000 trading histories with α = 0.2 and V = 100: update the dealer's belief after every trade, record the quotes, and plot spread and price paths. (c) Explain why the dealer breaks even on average while losing to informed traders, who pays for that, and what it implies for liquidity in thinly traded markets. **Check:** with α = 0.2, ask 60 and bid 40; after one buy the belief is 0.6, the next ask ≈ 69.2 and the bid 50; the median history needs ≈ 50 trades before the belief passes 0.99. *(~3 h · Glosten & Milgrom; Section 05 on adverse selection; Shiller's lecture on exchanges, brokers, dealers and clearinghouses)*
+5. **Fama vs. Shiller in simulation** — Simulate 1,000 years of monthly log prices two ways. (A) Efficient: price = fundamental, a random walk with a monthly SD of 4%. (B) Fads: price = fundamental + an AR(1) mispricing with monthly persistence 0.98 and stationary SD 0.25. For each, compute the first-order autocorrelation of monthly returns and the R² from regressing five-year-ahead returns on today's price-minus-fundamental gap. Then read "Trendspotting in asset markets" and write 250 words: what pattern does (B) share with the real data, and why can't that pattern by itself tell you whether markets misprice or risk premia move? **Check:** in (B) the monthly autocorrelation is ≈ −0.006 (statistically invisible), while the five-year R² ≈ 0.17 with slope ≈ −0.70 (simulated values scatter roughly 0.11–0.23); in (A) both are ≈ 0. *(~2 h · Nobel 2013 popular background; Shiller, lectures on efficient markets and behavioral finance)*
+
+**🏗️ Mini-project — Order-book lab: continuous trading vs. frequent batch auctions:** Build an agent-based limit-order-book simulator. A liquidity provider quotes a bid and an ask around a public value that jumps at random times; several fast traders race (with random latencies) to pick off stale quotes after a jump; uninformed investors arrive at random and trade at the quotes. (1) In a continuous limit order book, find the spread at which the liquidity provider breaks even, both by simulation and from your own zero-profit condition, and how it changes with jump frequency and the number of fast traders. (2) Switch to frequent batch auctions: clear orders in uniform-price batches (e.g., every 100 ms of simulated time), so the provider's quote update and the snipers' orders land in the same batch, and recompute the break-even spread. (3) Add Glosten–Milgrom informed traders (Practice 4) and split the spread into an adverse-selection component and a sniping component. Deliverable: `projects/econ/14-order-book-lab/`, a notebook plus a blog-style explainer. **Success:** in the continuous market, your simulated break-even spread matches your analytic zero-profit condition within 10%; under batch auctions the sniping component falls to ≈ 0 while the adverse-selection component remains; the write-up relates both results to Budish, Cramton & Shim's argument and names one way your model is too simple. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Who creates most of the money in a modern economy, and through what transaction? What does the money-multiplier story get wrong?
+2. What does a central bank actually set, and how does that influence how much money banks create?
+3. In Diamond–Dybvig, what socially useful service makes banks fragile? Name two ways to eliminate the run equilibrium and the cost of each.
+4. Roughly how much does a 10-year bond lose when its yield rises 3.5 points from 1.5%, and why does the duration approximation overstate the loss?
+5. In Glosten–Milgrom, why is there a spread even when the dealer has no costs and earns zero profit? What happens to it as trading reveals information?
+6. Misconception probe: "If stock returns are predictable over five years, markets must be inefficient." What is the competing explanation?
+7. Why does a continuous limit order book create an arms race for speed, and how do frequent batch auctions change the race?
+8. Explain to a smart friend in three sentences how a bank can be solvent on paper and still fail within a week.

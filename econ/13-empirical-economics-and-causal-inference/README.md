@@ -1,0 +1,90 @@
+# Empirical Economics and Causal Inference
+
+## Why This Section Matters
+
+Most of this curriculum is theory. This section is about how economists find out whether a theory's causal claims hold in data. The "credibility revolution" replaced kitchen-sink regressions with research *designs* that make the source of variation explicit. The 2021 Nobel Prize went to David Card for his empirical labor economics and to Joshua Angrist and Guido Imbens for the methodology of causal analysis. Five tools carry most of the weight: randomized trials, regression used as a control strategy, instrumental variables, regression discontinuity, and difference-in-differences. Each turns "did X cause Y?" into a comparison you can defend when the perfect experiment is impossible.
+
+You need these tools to judge three things:
+- the replication debates behind Sections 03 and 06;
+- the AI-productivity and labor-market evidence in [Section 12](../12-economics-of-ai/README.md);
+- changes in your own business, such as a price test, a staggered firmware rollout, or a new production-test step.
+
+The graphical side of causal inference (DAGs, the do-calculus, inverse-probability weighting) lives in the math curriculum's [Section 10 — Causal Inference](../../math/10-causal-inference/README.md). This section is its econometrics companion and does not repeat it.
+
+**Where it fits:** this section is numbered 13 only because it was added after the original sections. Take it after Section 01.
+
+## Prerequisites
+
+- [Section 01 — Microeconomics](../01-microeconomics/README.md)
+- Math curriculum: [Section 03 — Probability and Statistics](../../math/03-probability-and-statistics/README.md) (regression, sampling distributions, hypothesis tests)
+- Math curriculum: [Section 10 — Causal Inference](../../math/10-causal-inference/README.md) (potential outcomes, DAGs); recommended alongside, not before
+- Python with pandas and statsmodels, plus `pip install causaldata` for the datasets
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Write the decomposition "observed difference = effect on the treated + selection bias", and show with the NSW job-training data how far observational comparisons can miss an experimental benchmark.
+- Estimate instrumental-variables effects (Wald ratio and 2SLS), check first-stage strength, and explain why IV identifies a local average treatment effect for compliers.
+- Implement regression discontinuity and difference-in-differences, including event-study leads as a check on parallel trends, and diagnose the bias of two-way fixed effects under staggered adoption with growing effects.
+- Quantify how low power, multiple comparisons, optional stopping and the significance filter inflate false positives and effect sizes, and use that to judge a published claim.
+- Choose a credible design for a causal question in your own business and write a pre-analysis plan for it.
+
+---
+
+## Resources
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| 🔑 | 📖 Book | Mastering 'Metrics: The Path from Cause to Effect | Joshua D. Angrist & Jörn-Steffen Pischke | 2014 | [Link](https://press.princeton.edu/books/paperback/9780691152844/mastering-metrics) | The gentlest rigorous introduction, one chapter per tool: randomized trials, regression, instrumental variables, regression discontinuity, differences-in-differences, then the returns to schooling as a case study. Princeton UP lists it as December 2014 (©2015). |
+| | 🎥 Course | Mastering Econometrics | Joshua Angrist (MRU) | — | [Link](https://learn.mru.org/courses/mastering-econometrics) | Free video companion to *Mastering 'Metrics* from Marginal Revolution University: units on randomized trials, regression, IV, RD and DiD, plus bonus material on the 2021 Nobel. |
+| | 📖 Book (Free) | Causal Inference: The Mixtape | Scott Cunningham | 2021 | [Link](https://mixtape.scunning.com/) | Yale University Press, 2021. The free online edition has been updated as *Causal Inference: The Remix*: DAGs and potential outcomes, unconfoundedness and matching, RD, IV, and panel designs including complex difference-in-differences and synthetic control. R and Stata code; the data are in `causaldata`. |
+| | 📖 Book (Free) | The Effect: An Introduction to Research Design and Causality (2nd ed.) | Nick Huntington-Klein | 2025 | [Link](https://theeffectbook.net/) | Chapman & Hall, 2nd ed. 2025, free to read online. Strongest on research design and causal diagrams before it opens the toolbox: regression, matching, fixed effects, event studies, DiD, IV, RD, partial identification. Code in R, Stata and Python. |
+| | 📖 Book | Mostly Harmless Econometrics: An Empiricist's Companion | Joshua D. Angrist & Jörn-Steffen Pischke | 2009 | [Link](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics) | The graduate-level reference behind *Mastering 'Metrics*. Use it after the five tools make sense. |
+| | 📄 Paper | The Credibility Revolution in Empirical Economics: How Better Research Design is Taking the Con out of Econometrics | Joshua D. Angrist & Jörn-Steffen Pischke | 2010 | [Link](https://doi.org/10.1257/jep.24.2.3) | *Journal of Economic Perspectives* 24(2), free. The manifesto: why design-based empirical work displaced specification searching. |
+| | 📝 Article | Natural experiments help answer important questions (Nobel 2021 popular background) | Royal Swedish Academy of Sciences | 2021 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2021/popular-information/) | The credibility revolution in plain language. Card and Krueger's New Jersey–Pennsylvania minimum-wage comparison; quarter of birth as an instrument for schooling (about 9% per extra year, against 7% from the raw correlation); LATE; the Mariel boatlift. |
+| | 📄 Paper | Evaluating replicability of laboratory experiments in economics | Colin F. Camerer, Anna Dreber, Eskil Forsell et al. | 2016 | [Link](https://doi.org/10.1126/science.aaf0918) | *Science* 351(6280). A coordinated replication of published economics lab experiments: the calibration point for "how often does this replicate?", next to the multi-lab replications in Section 06. |
+| | 📄 Paper | Star Wars: The Empirics Strike Back | Abel Brodeur, Mathias Lé, Marc Sangnier & Yanos Zylberberg | 2016 | [Link](https://doi.org/10.1257/app.20150044) | *AEJ: Applied Economics* 8(1). About 50,000 test statistics from the *AER*, *JPE* and *QJE* form a "two-humped camel": p-values missing between 0.25 and 0.10 reappear just past 0.05. The authors estimate that 10–20% of marginally significant results are inflated by specification choices. |
+| | 🛠️ Tool | causaldata | Nick Huntington-Klein | 2024 | [Link](https://pypi.org/project/causaldata/) | Example datasets for causal inference in Python, R and Stata, from *The Effect* and *The Mixtape*: NSW/CPS job training, Card's college proximity, close U.S. House elections, castle-doctrine laws, organ-donor registration and more. Every exercise below uses it (v0.1.5, MIT licence). |
+
+---
+
+## Suggested Order
+
+**Core path (🔑):** Angrist & Pischke, *Mastering 'Metrics*
+
+1. **Nobel 2021 popular background** — Read the motivation: what natural experiments made possible.
+2. **Angrist & Pischke — "The Credibility Revolution"** — The argument for design-based empirical work.
+3. **Angrist & Pischke — Mastering 'Metrics, with Angrist's MRU course** — The core: one chapter and one video unit per tool, in order.
+4. **Huntington-Klein — The Effect** — Research design and causal diagrams first, then the toolbox chapters you need for the exercises.
+5. **Cunningham — The Mixtape (The Remix online)** — For matching, modern difference-in-differences with staggered timing, and synthetic control.
+6. **Camerer et al., then Brodeur et al.** — How often results replicate and how the 0.05 threshold shapes what gets published. Read them with Section 06's evidence-check callout and Data Colada (`blogs-and-references/`).
+7. **Angrist & Pischke — Mostly Harmless Econometrics** — Reference for the theory behind the tools.
+8. **causaldata** — Install it before Practice 1; it supplies every dataset below.
+9. **Cross-link** — DAGs, the backdoor criterion and IP weighting (Hernán & Robins) are in [math/10](../../math/10-causal-inference/README.md).
+
+---
+
+## 🛠️ Practice
+
+1. **Selection bias, measured: NSW vs. CPS** — (a) Using `causaldata`'s `nsw_mixtape`, estimate the job-training program's experimental effect on 1978 earnings (difference in means with a robust SE) and build a covariate-balance table. (b) Swap the experimental controls for `cps_mixtape`'s 15,992 Current Population Survey respondents. Compute the naive difference, then regression adjustment (age, education, race and ethnicity, marital status, no degree, 1974 and 1975 earnings), then propensity-score weighting and nearest-neighbor matching for the effect on the treated. (c) Decompose the naive gap into treatment effect plus selection bias in *Mastering 'Metrics*' terms, and plot propensity-score overlap. **Check:** experimental ≈ $1,794 (SE ≈ $670); naive ≈ −$8,498; the adjusted estimates land roughly between $700 and $2,000 depending on specification; ≈ 91% of CPS controls have an estimated propensity score below 0.01, and that lack of overlap is the lesson. *(~3 h · Mastering 'Metrics, chapters on randomized trials and regression; The Mixtape's matching chapter; The Effect's matching chapter)*
+2. **Instrumenting schooling with college proximity** — `close_college` holds Card's National Longitudinal Survey (Young Men) data. (a) Regress log wage on education with experience, experience², black, south and urban (smsa) controls. (b) Run the first stage on `nearc4` (a four-year college in the county) and report its F-statistic. (c) Compute the reduced form and the IV estimate, both as a ratio and by 2SLS. (d) In 250 words: who are the compliers, why is an IV estimate above OLS plausible (LATE, measurement error, heterogeneous returns), and what would violate the exclusion restriction? **Check:** OLS ≈ 0.075; first stage ≈ 0.33 years (F ≈ 17); reduced form ≈ 0.045; IV ≈ 0.13 (SE ≈ 0.05). Compare with the Nobel background's quarter-of-birth estimate (≈ 9% vs. 7%). *(~2.5 h · Mastering 'Metrics, chapter on instrumental variables; The Mixtape's IV chapter; Nobel 2021 background)*
+3. **Close elections: regression discontinuity** — `close_elections_lmb` holds Lee, Moretti & Butler's U.S. House data. (a) Plot the ADA voting score against Democratic vote share with binned means. (b) Estimate a local linear RD of score on a Democratic win at 50%, with bandwidths 0.02, 0.05, 0.1 and 0.2 and with uniform and triangular kernels. (c) Density check: count elections just below vs. just above 50%. (d) Elect or affect? In the window where the *previous* Democratic share was 48–52%, estimate the effect of a past Democratic win on today's score (γ) and on today's Democratic win (P_D − P_R), and the effect of a Democratic win on score (π). Compute the "elect" component π·(P_D − P_R) and compare it with γ. **Check:** RD ≈ 44–48 ADA points across bandwidths; γ ≈ 21, P_D − P_R ≈ 0.48 and π ≈ 48, so the elect component is ≈ 23 and the "affect" residual is ≈ 0. Voters choose policies by choosing representatives; candidates don't converge. *(~3 h · Mastering 'Metrics, chapter on regression discontinuity; The Mixtape's RD chapter)*
+4. **Difference-in-differences and an event study** — `organ_donations`: California switched to an active-choice question for organ-donor registration in Q3 2011. (a) Compute the 2×2 DiD by hand from group means. (b) Run a two-way fixed-effects regression with state and quarter effects, clustered by state. (c) Run an event study with leads and lags (reference quarter Q2 2011) to check parallel trends. (d) Simulated staggered adoption: 40 units over 12 periods, 30 of them treated in three cohorts at t = 4, 7, 10 and 10 never treated, with the effect growing 0.1 per period since adoption. Compare TWFE with a cohort-by-period 2×2 estimator that uses only never- or not-yet-treated controls, over ~200 simulations, then repeat with the never-treated units removed. **Check:** DiD = −0.0225 (−2.25 points; clustered SE ≈ 0.007); the leads are ≈ 0 (−0.003, +0.006) and the lags ≈ −0.02. In the simulation TWFE ≈ 0.20 against a true average effect of 0.40, while the clean estimator ≈ 0.40. Without never-treated units, TWFE ≈ 0.05 and the clean estimator ≈ 0.30, the true average over the cells it can identify. *(~4 h · Mastering 'Metrics, chapter on differences-in-differences; The Effect's chapters on event studies and DiD; The Mixtape on staggered timing)*
+5. **How often is a "significant" result true?** — Simulate: (a) the power of a two-arm study with 50 per arm at d = 0.2, and the sample per arm needed for 80% power; (b) the false-positive rate with no true effect when the researcher (i) tests five independent outcomes and reports any hit, or (ii) peeks every 10 subjects per arm from 20 to 100 and stops at p < 0.05; (c) the significance filter: with true d = 0.2 and 50 per arm, the average |estimate| among significant results relative to the truth. (d) Read Brodeur et al. and Camerer et al. and write 200 words on what (a)–(c) predict about a literature, and what pre-registration changes. **Check:** power ≈ 0.17; ≈ 394 per arm for 80%; false-positive rates ≈ 0.23 (= 1 − 0.95⁵) and ≈ 0.17; significant estimates exaggerate the true effect ≈ 2.5×. *(~2.5 h · Brodeur et al.; Camerer et al.; Section 06's evidence-check callout; Data Colada in blogs-and-references)*
+
+**🏗️ Mini-project — Causal pipeline and a pre-analysis plan:** (1) Replicate a published design end to end with `castle` (Cheng & Hoekstra's castle-doctrine data). Run a population-weighted TWFE regression of log homicides on the law with state and year effects and state-clustered SEs, then an event study, then a staggered-robust estimator (cohort-by-year 2×2s against not-yet-treated states, or a package that implements Callaway–Sant'Anna), and explain any gap. (2) Write a pre-analysis plan for a causal question in your own business: a staggered firmware rollout's effect on support tickets, a price change in one sales channel, or a new production-test step's effect on field returns. State the estimand, design, data, power calculation, and the result that would change your decision. (3) Run the plan on simulated data with a known effect to show the pipeline recovers it. Deliverable: `projects/econ/13-causal-pipeline/` (notebook + 2-page plan). **Success:** you reproduce a castle TWFE estimate of ≈ 0.076 log points (weighted) and report your robust estimate beside it, with a sentence on why they differ or don't; in 200 simulated replications your estimator's 95% CI covers the true effect at least 90% of the time; the plan states its minimum detectable effect before any real data are examined. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the identity "observed difference in means = effect on the treated + selection bias". Which term does randomization remove, and why?
+2. Name Angrist & Pischke's five tools and the key identifying assumption behind each.
+3. In the NSW–CPS comparison, why does regression adjustment get closer to the experiment, and why should poor overlap still make you nervous?
+4. What is a LATE? Who are the compliers in the college-proximity IV, and why might IV exceed OLS?
+5. Misconception probe: "Difference-in-differences needs the treated and control groups to have similar levels before treatment." What does it actually need?
+6. Why can two-way fixed effects mislead when adoption is staggered and effects grow over time?
+7. A study with 50 subjects per arm reports d = 0.5 with p = 0.03. Using your Practice 5 results, what is your best guess about the true effect, and why?
+8. Explain to a smart friend in three sentences why "people who used the product earn more" doesn't show that the product raised their earnings.
