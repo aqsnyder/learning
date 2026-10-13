@@ -45,6 +45,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** 3Blue1Brown, *Essence of Calculus* → Abbott, *Understanding Analysis*
+
 1. **3Blue1Brown — Essence of Calculus** — Start here for visual intuition.
 2. **MIT 18.01 / Khan Academy** — Build computational fluency if needed. Skip if you're already comfortable with single-variable calculus.
 3. **Understanding Analysis (Abbott)** — The core text. Work through this to build rigorous understanding of limits, continuity, and convergence.

@@ -45,7 +45,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Paper | What Every Computer Scientist Should Know About Floating-Point Arithmetic | David Goldberg | 1991 | [Link](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html) | The classic tutorial on IEEE-754 (ACM *Computing Surveys*): rounding, ulps and relative error, guard digits, cancellation, and why "obvious" formulas fail. Required reading before writing numeric firmware; free reprint in Oracle's *Numerical Computation Guide*. |
-| 🔑 | Book (Free) | Fundamentals of Numerical Computation | Tobin A. Driscoll, Richard J. Braun | — | [Link](https://fncbook.com/) | Free online textbook with complete Julia, MATLAB, and Python versions: floating point and conditioning, linear systems and least squares, root finding, interpolation, quadrature, and initial-value problems including stiffness. The best hands-on first course. |
+| 🔑 | Book (Free) | Fundamentals of Numerical Computation | Tobin A. Driscoll, Richard J. Braun | 2022 | [Link](https://fncbook.com/) | Free online textbook with complete Julia, MATLAB, and Python versions: floating point and conditioning, linear systems and least squares, root finding, interpolation, quadrature, and initial-value problems including stiffness. The best hands-on first course. Print editions are SIAM's MATLAB (2017) and Julia (2022) editions; the online text has updated exercises, so take exercise numbers from it. |
 | | Course (Free) | MIT 18.335J Introduction to Numerical Methods | Steven G. Johnson | 2019 | [Link](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/) | Graduate numerical analysis: floating point, backward error analysis, conditioning and stability, and dense and iterative linear algebra, with a brief survey of integration and optimization (notes, problem sets and exams; no videos). |
 | | Book | Numerical Linear Algebra | Lloyd N. Trefethen, David Bau III | 2022 | — | The classic on how linear algebra is actually computed (25th-anniversary edition of the 1997 text): conditioning, floating-point stability, QR, SVD, eigenvalue algorithms, and iterative Krylov methods in 40 short lectures. Essential once you rely on NumPy/LAPACK results in real work. |
 | | Book | Scientific Computing: An Introductory Survey | Michael T. Heath | 2018 | [Link](https://doi.org/10.1137/1.9781611975581) | A broad, readable survey of the whole field (revised 2nd edition, SIAM Classics): error analysis, linear and nonlinear equations, optimization, interpolation, quadrature, ODEs and PDEs, and the FFT. A good single reference. |
@@ -54,6 +54,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Goldberg's floating-point paper → Driscoll & Braun, *Fundamentals of Numerical Computation*
 
 1. **Goldberg** — Floating point first; everything else depends on it.
 2. **Driscoll & Braun** — The main text. Work through it in Python, chapter by chapter, alongside the exercises below.

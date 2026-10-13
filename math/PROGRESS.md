@@ -16,6 +16,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Buzzard & Eugster — Natural Number Game (Lean 4)
 - [ ] Macbeth — *The Mechanics of Proof* (free)
 - [ ] MIT 6.042J — Mathematics for Computer Science (Meyer & Chlipala)
+- [ ] Velleman — *How To Prove It with Lean* (free)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Verified integer square root
 - [ ] ✅ Check Yourself — answered from memory
@@ -139,6 +140,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Carter — *Visual Group Theory* (book)
 - [ ] Lang — *Algebra*
 - [ ] Cohen & Welling — Group Equivariant Convolutional Networks (paper)
+- [ ] Group Explorer (web app)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Reed–Solomon erasure coding over GF(2⁸)
 - [ ] ✅ Check Yourself — answered from memory
@@ -163,7 +165,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Pearl, Glymour & Jewell — *Causal Inference in Statistics: A Primer*
 - [ ] Hernán & Robins — *Causal Inference: What If* (free)
 - [ ] Pearl — *Causality*
-- [ ] Peters et al. — *Elements of Causal Inference*
+- [ ] Peters et al. — *Elements of Causal Inference* (free)
 - [ ] Schölkopf et al. — Towards Causal Representation Learning
 - [ ] Dasgupta et al. — Causal Reasoning from Meta-Reinforcement Learning (paper)
 - [ ] 🛠️ Practice exercises 1–5

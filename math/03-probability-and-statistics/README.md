@@ -31,10 +31,10 @@ After this section you can:
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Course (Free) | Statistics 110: Probability | Joe Blitzstein | — | [Link](https://projects.iq.harvard.edu/stat110) | Harvard's legendary probability course. Blitzstein's teaching is exceptional — builds deep intuition through storytelling and strategic problem-solving. Full lectures, textbook, and problem sets available free. |
 | 🔑 | Book | All of Statistics: A Concise Course in Statistical Inference | Larry Wasserman | 2004 | — | Covers probability, statistical inference, Bayesian methods, and nonparametric statistics in one dense but accessible volume. The ideal single reference for a mathematically mature reader. |
-| | Book (Free) | Introduction to Probability | Joe Blitzstein, Jessica Hwang | 2019 | [Link](https://projects.iq.harvard.edu/stat110/home) | The textbook companion to Stat 110. Excellent exposition with strategic exercises. Covers counting, conditioning, distributions, Markov chains, and more. |
+| | Book (Free) | Introduction to Probability | Joe Blitzstein, Jessica Hwang | 2019 | [Link](https://stat110.hsites.harvard.edu/) | The textbook companion to Stat 110. Excellent exposition with strategic exercises. Covers counting, conditioning, distributions, Markov chains, and more. |
 | | Book | Introduction to Probability and Statistics for Engineers and Scientists | Sheldon Ross | 2020 | — | Applied probability and statistics with engineering focus. Good for building computational fluency alongside theory. |
 | | Video Series | StatQuest | Josh Starmer | — | [Link](https://www.youtube.com/@statquest) | Fun, clear, no-nonsense visual explanations of probability, distributions, hypothesis testing, Bayesian inference, and more. Excellent gap-filler. |
-| | Book (Free) | Bayesian Data Analysis | Andrew Gelman et al. | 2013 | [Link](http://www.stat.columbia.edu/~gelman/book/) | The definitive reference for applied Bayesian statistics. Covers hierarchical models, MCMC, model checking, and practical Bayesian workflow. The 3rd-edition PDF is free for non-commercial use on the book page. |
+| | Book (Free) | Bayesian Data Analysis | Andrew Gelman et al. | 2013 | [Link](https://sites.stat.columbia.edu/gelman/book/) | The definitive reference for applied Bayesian statistics. Covers hierarchical models, MCMC, model checking, and practical Bayesian workflow. The 3rd-edition PDF is free for non-commercial use on the book page. |
 | | Book | Introduction to Probability Models | Sheldon Ross | 2023 | — | Focused treatment of stochastic processes: Markov chains, Poisson processes, queuing theory, and renewal theory (13th edition). Essential for understanding MCMC and diffusion models. |
 | | Course (Free) | MIT 6.041 Probabilistic Systems Analysis | John Tsitsiklis | — | [Link](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/) | MIT's rigorous probability course with excellent problem sets. Good complement to Blitzstein for a more engineering-oriented perspective. |
 | | Book | Probability Theory: The Logic of Science | E.T. Jaynes | 2003 | — | A philosophical and mathematical defense of Bayesian probability as extended logic. Deeply influential and thought-provoking. Advanced but illuminating. |
@@ -45,6 +45,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Harvard Stat 110 (Blitzstein) → Wasserman, *All of Statistics*
 
 1. **Stat 110 (Blitzstein)** — Start here. Watch the lectures, read the textbook, do the problem sets. This builds the deepest intuition.
 2. **StatQuest** — Use as a supplement to visualize specific concepts (distributions, Bayes' theorem, etc.).

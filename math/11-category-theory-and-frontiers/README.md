@@ -47,6 +47,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Fong & Spivak, *Seven Sketches in Compositionality*
+
 1. **Math3ma blog** — Start here for intuitive, visual introductions to categorical thinking.
 2. **Seven Sketches (Fong & Spivak)** — The core text. Work through the examples to build applied category theory intuition.
 3. **Milewski — Category Theory for Programmers** — Watch for the programming perspective on categories, functors, and monads.

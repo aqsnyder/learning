@@ -14,7 +14,7 @@ This repository is a structured curriculum for self-studying mathematics with ge
 
 | Symbol | Meaning |
 |--------|---------|
-| 🔑 | **Must-read / must-watch** — absolute priority items |
+| 🔑 | **Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first |
 
 ---
 

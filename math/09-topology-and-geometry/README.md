@@ -43,6 +43,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Needham, *Visual Differential Geometry and Forms*
+
 1. **Tokieda — Topology & Geometry lectures** — Start with intuitive visual understanding.
 2. **Morris — Topology Without Tears** — Build basic topological vocabulary (open sets, continuity, compactness).
 3. **Munkres — Topology** — The core text for point-set topology. Focus on Part I first.

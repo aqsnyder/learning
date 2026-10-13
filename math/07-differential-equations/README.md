@@ -45,6 +45,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Strogatz, *Nonlinear Dynamics and Chaos*
+
 1. **3Blue1Brown — Differential Equations** — Start with visual intuition.
 2. **MIT 18.03** — Build computational fluency with ODEs.
 3. **Strogatz — Nonlinear Dynamics and Chaos** — The core text. Study phase portraits, bifurcations, and chaos.

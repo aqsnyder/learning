@@ -31,7 +31,7 @@ After this section you can:
 | 🔑 | Book (Free) | Graph Theory | Reinhard Diestel | 2025 | [Link](https://diestel-graph-theory.com/) | The standard graduate text (6th edition, Springer GTM 173). Comprehensive and rigorous; the main text is free to read online as a preview. Covers connectivity, matching, coloring, planarity, flows, and more. |
 | | Book | Introduction to Graph Theory | Douglas West | 2001 | — | More accessible than Diestel with extensive exercises. Good first book for graph theory with emphasis on combinatorial proofs. |
 | | Book | Algebraic Graph Theory | Chris Godsil, Gordon Royle | 2001 | — | Connects graph theory to linear algebra: adjacency matrices, Laplacians, spectral properties. Essential foundation for spectral graph theory and GNNs. |
-| | Course (Free) | Spectral Graph Theory | Daniel Spielman | — | [Link](http://www.cs.yale.edu/homes/spielman/sgta/) | Yale course on spectral graph theory — the mathematics behind spectral clustering, graph Laplacians, and random walks on graphs. |
+| | Course (Free) | Spectral Graph Theory | Daniel Spielman | 2025 | [Link](https://www.cs.yale.edu/homes/spielman/462/462schedule.html) | Spielman's Yale course (Spring 2025 offering): a lecture schedule with notes for most lectures, and readings from his draft book *Spectral and Algebraic Graph Theory*. Covers the Laplacian, graph partitioning and Cheeger's inequality, random walks, resistor networks and effective resistance, expanders, and Laplacian solvers — the mathematics behind spectral clustering. |
 | | Paper | Semi-Supervised Classification with Graph Convolutional Networks | Thomas Kipf, Max Welling | 2016 | [Link](https://arxiv.org/abs/1609.02907) | The GCN paper. Understanding this requires spectral graph theory — seeing the math behind it deepens appreciation of both. |
 | | Book | Combinatorics and Graph Theory | John Harris, Jeffry Hirst, Michael Mossinghoff | 2008 | — | Accessible introduction covering both combinatorics and graph theory with good problem sets. Good starting point. |
 | | Video Series | Graph Theory (Full Course) | Sarada Herke | — | [Link](https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg) | Clear, methodical video lectures covering fundamental graph theory. Good visual supplement. |
@@ -41,6 +41,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Diestel, *Graph Theory*
 
 1. **Harris, Hirst & Mossinghoff** or **Herke videos** — Start with an accessible introduction to graph fundamentals.
 2. **Diestel — Graph Theory** — The core text. Work through the key chapters on connectivity, matching, and planarity.

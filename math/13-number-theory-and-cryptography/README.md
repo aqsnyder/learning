@@ -47,6 +47,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Silverman, *A Friendly Introduction to Number Theory* → Hoffstein, Pipher & Silverman, *An Introduction to Mathematical Cryptography*
+
 1. **Silverman — A Friendly Introduction to Number Theory** (or **Stein's free ENT**) — gcd, congruences, Fermat and Euler, CRT, primality, RSA.
 2. **Shoup — A Computational Introduction** — Keep it beside you while implementing. Read the chapters on the algorithms you are coding.
 3. **Hoffstein, Pipher & Silverman** — The core: discrete logs and Diffie–Hellman, RSA, signatures, elliptic curves.

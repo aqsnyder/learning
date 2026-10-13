@@ -33,23 +33,27 @@ After this section you can:
 | | Book (Free) | Abstract Algebra: Theory and Applications | Thomas Judson | — | [Link](http://abstract.ups.edu/) | Free, comprehensive textbook covering groups, rings, fields, and applications (coding theory, crystallography). Good alternative to Pinter. |
 | | Video Series | Visual Group Theory | Matthew Macauley | — | [Link](https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv) | University lecture series built on Nathan Carter's *Visual Group Theory* book. Cayley diagrams, symmetry groups, and group actions made visual. Excellent supplement. |
 | | Course (Free) | Harvard Abstract Algebra | Benedict Gross | — | [Link](https://www.youtube.com/playlist?list=PLelIK3uylPMGzHBuR3hLMHrYfMqWWsmx5) | Excellent lecture series covering groups, rings, and fields with emphasis on examples and applications. |
-| | Book | Topics in Algebra | I.N. Herstein | 1975 | — | Classic graduate text with notoriously good exercises. Known for building algebraic maturity through challenging problems. |
+| | Book | Topics in Algebra | I.N. Herstein | 1975 | — | Classic undergraduate text (2nd edition; first published 1964), demanding and with notoriously good exercises. Known for building algebraic maturity through challenging problems. |
 | | Paper | Group Equivariant Convolutional Networks | Taco Cohen, Max Welling | 2016 | [Link](https://arxiv.org/abs/1602.07576) | The paper that brought group theory into deep learning: generalizes convolution from translations to rotations and reflections so the network is equivariant by construction. Later equivariant architectures (E(n)-GNNs, SE(3)-Transformers) are in [Section 13 of the ML curriculum](../../ml/13-graphs-geometry-and-science/README.md). |
 | | Book | Algebra | Serge Lang | 2002 | — | Comprehensive graduate reference covering everything from basic group theory to commutative algebra and homological algebra. The encyclopedic reference. |
 | | Book | Visual Group Theory | Nathan Carter | 2009 | — | Companion to the video series. Uses visual diagrams and concrete examples to make group theory intuitive before formalism. |
+| | Tool (Free) | Group Explorer 3 | Nathan Carter, Ray Ellis | — | [Link](https://nathancarter.github.io/group-explorer/) | Free, open-source (LGPL-3.0) web app, nothing to install, for exploring finite groups visually: a library of all groups up to order 20 plus notable larger ones, Cayley diagrams, multiplication tables, cycle graphs, and "sheets" for homomorphisms. The software companion to Carter's *Visual Group Theory*; use it to check the diagrams and tables you build by hand (Practice 1). |
 
 ---
 
 ## Suggested Order
 
+**Core path (🔑):** Pinter, *A Book of Abstract Algebra*
+
 1. **Visual Group Theory (videos + Carter's book)** — Start here for intuitive, visual introduction to groups and symmetry.
-2. **Pinter — A Book of Abstract Algebra** — The core text for self-study. Work through groups, then rings, then fields.
-3. **Judson — Abstract Algebra: Theory and Applications** — Free supplement with additional exercises and applications.
-4. **Gross — Harvard lectures** — Watch for a different perspective and deeper examples.
-5. **Number theory and cryptography → [Section 13](../13-number-theory-and-cryptography/README.md)** — Once you have groups and finite fields, continue there (Hoffstein, Pipher & Silverman) for the algebra behind Bitcoin's keys and signatures.
-6. **Cohen & Welling — G-CNNs** — See group theory as an architectural principle in deep learning.
-7. **Aluffi — Algebra: Chapter 0** — Read for the modern, category-theoretic perspective when ready.
-8. **Herstein or Lang** — Advanced references for deeper study.
+2. **Group Explorer** — Keep it open alongside the videos and Carter's book: build each Cayley diagram and multiplication table by hand first, then compare.
+3. **Pinter — A Book of Abstract Algebra** — The core text for self-study. Work through groups, then rings, then fields.
+4. **Judson — Abstract Algebra: Theory and Applications** — Free supplement with additional exercises and applications.
+5. **Gross — Harvard lectures** — Watch for a different perspective and deeper examples.
+6. **Number theory and cryptography → [Section 13](../13-number-theory-and-cryptography/README.md)** — Once you have groups and finite fields, continue there (Hoffstein, Pipher & Silverman) for the algebra behind Bitcoin's keys and signatures.
+7. **Cohen & Welling — G-CNNs** — See group theory as an architectural principle in deep learning.
+8. **Aluffi — Algebra: Chapter 0** — Read for the modern, category-theoretic perspective when ready.
+9. **Herstein or Lang** — For deeper study: Herstein for harder undergraduate exercises, Lang as the graduate reference.
 
 ---
 

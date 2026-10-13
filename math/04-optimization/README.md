@@ -33,15 +33,17 @@ After this section you can:
 | | Book | Numerical Optimization | Jorge Nocedal, Stephen Wright | 2006 | — | Comprehensive treatment of numerical methods: line search, trust region, conjugate gradient, quasi-Newton methods. Essential reference for algorithm design. |
 | | Book (Free) | Mathematics for Machine Learning (Ch. 7) | Deisenroth, Faisal, Ong | 2020 | [Link](https://mml-book.github.io/) | Chapter 7 covers continuous optimization with ML focus: gradient descent, momentum, constrained optimization. Good bridge from theory to practice. |
 | | Blog Post | An Overview of Gradient Descent Optimization Algorithms | Sebastian Ruder | 2016 | [Link](https://www.ruder.io/optimizing-gradient-descent/) | Excellent survey of SGD variants: momentum, Nesterov, Adagrad, RMSprop, Adam. Essential reading for understanding modern training. |
-| | Course (Free) | Stanford Engineering Everywhere — EE364A Convex Optimization I (video lectures) | Stephen Boyd | 2008 | [Link](https://see.stanford.edu/course/ee364a) | Boyd's complete set of 19 recorded lectures with transcripts and handouts, free and self-paced. These are the videos to watch alongside the textbook. (MIT's 6.079 by Boyd & Parrilo covers the same material in notes only.) |
-| | Book | Introductory Lectures on Stochastic Optimization | John Duchi | — | [Link](https://web.stanford.edu/~jduchi/PCMIConvex.pdf) | Lecture notes covering stochastic gradient methods with convergence analysis. Bridges theory and practice. |
+| | Course (Free) | Stanford Engineering Everywhere — EE364A Convex Optimization I (video lectures) | Stephen Boyd | 2008 | [Link](https://see.stanford.edu/Course/EE364A) | Boyd's complete set of 19 recorded lectures with transcripts and handouts, free and self-paced. These are the videos to watch alongside the textbook. (MIT's 6.079 by Boyd & Parrilo covers the same material in notes only.) |
+| | Book (Free) | Introductory Lectures on Stochastic Optimization | John C. Duchi | 2018 | [Link](https://web.stanford.edu/~jduchi/pcmi.html) | Lecture notes covering stochastic gradient methods with convergence analysis. Bridges theory and practice. Published in *The Mathematics of Data* (IAS/Park City Mathematics Series, AMS, 2018); the author's page has the free manuscript PDF plus the exercise data and MATLAB/Julia starter code. |
 | | Paper | Adam: A Method for Stochastic Optimization | Diederik Kingma, Jimmy Ba | 2014 | [Link](https://arxiv.org/abs/1412.6980) | The Adam optimizer paper — the most widely used optimizer in deep learning. Understanding its design illuminates optimization in practice. |
 | | Book | First-Order Methods in Optimization | Amir Beck | 2017 | — | Rigorous treatment of proximal methods, ADMM, and first-order algorithms. Advanced but essential for optimization research. |
-| | Book (Free) | Algorithms for Optimization | Mykel Kochenderfer, Tim Wheeler | 2019 | [Link](https://algorithmsbook.com/optimization/) | Broad, code-first survey (Julia) of the methods engineers reach for when problems aren't convex or differentiable: derivative-free and stochastic search, population methods, surrogate models, multi-objective optimization, and optimization under uncertainty. Free PDF (CC BY-NC-ND); a 2nd edition is due in 2027. |
+| | Book (Free) | Algorithms for Optimization | Mykel Kochenderfer, Tim Wheeler | 2019 | [Link](https://algorithmsbook.com/optimization/) | Broad, code-first survey (Julia) of the methods engineers reach for when problems aren't convex or differentiable: derivative-free and stochastic search, population methods, surrogate models, multi-objective optimization, and optimization under uncertainty. Free PDF (CC BY-NC-ND). The book site also links a PDF of the 2nd edition, whose print release it lists for 5 January 2027 (checked October 2026). |
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Boyd & Vandenberghe, *Convex Optimization* → Stanford EE364a course site (slides and homework)
 
 1. **MML Book (Ch. 7)** — Start here for ML-oriented optimization overview.
 2. **Ruder — Gradient Descent Survey** — Read for practical understanding of SGD variants.

@@ -35,11 +35,13 @@ After this section you can:
 | | Course (Free) | MIT 6.441: Information Theory | Yury Polyanskiy | 2016 | [Link](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/) | MIT's graduate course on information theory with problem sets and lecture notes (no videos). |
 | | Paper | An Introduction to Variational Methods for Graphical Models | Michael Jordan et al. | 1999 | [Link](https://people.eecs.berkeley.edu/~jordan/papers/variational-intro.pdf) | Connects information theory (KL divergence, variational bounds) to probabilistic graphical models. Bridge to modern variational inference. |
 | | Blog Post | Visual Information Theory | Chris Olah | 2015 | [Link](https://colah.github.io/posts/2015-09-Visual-Information/) | Gorgeous visual explanations of entropy, cross-entropy, and KL divergence. The best intuitive introduction to these concepts. |
-| | Book (Free) | Information Theory: From Coding to Learning | Yury Polyanskiy, Yihong Wu | 2024 | [Link](https://people.lids.mit.edu/yp/homepage/data/itbook-export.pdf) | The modern graduate text (Cambridge University Press) by the MIT 6.441 instructor and Yihong Wu (Yale): classical coding theorems plus the information-theoretic tools now used in statistics and machine learning. The up-to-date successor to Cover & Thomas; the authors' free draft PDF is for personal use. |
+| | Book (Free) | Information Theory: From Coding to Learning | Yury Polyanskiy, Yihong Wu | 2025 | [Link](https://people.lids.mit.edu/yp/homepage/data/itbook-export.pdf) | The modern graduate text (Cambridge University Press, 2025) by the MIT 6.441 instructor and Yihong Wu (Yale): classical coding theorems plus the information-theoretic tools now used in statistics and machine learning. A graduate-level alternative to Cover & Thomas, not a replacement for it as a first text; the authors' free draft PDF is for personal use. |
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Shannon's 1948 paper → Cover & Thomas, *Elements of Information Theory*
 
 1. **Olah — Visual Information Theory** — Start here for visual intuition about entropy, cross-entropy, and KL divergence.
 2. **Shannon — A Mathematical Theory of Communication** — Read the original. It's accessible and historic.

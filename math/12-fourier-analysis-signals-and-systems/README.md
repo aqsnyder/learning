@@ -44,12 +44,14 @@ After this section you can:
 | | Course (Free) | Stanford EE261 The Fourier Transform and its Applications | Brad Osgood | 2007 | [Link](https://see.stanford.edu/Course/EE261) | 30 recorded lectures plus a free course reader. Covers Fourier series and transforms, convolution, distributions (δ and friends), sampling, and the DFT, taught to engineers with real mathematical care. The bridge between using Fourier analysis and understanding it. |
 | | Course (Free) | MIT 6.341 Discrete-Time Signal Processing | Alan V. Oppenheim | 2005 | [Link](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/) | Graduate DSP with lecture notes, problem sets and exams (no videos), built on Oppenheim, Schafer & Buck's *Discrete-Time Signal Processing*. Covers filter design, multirate systems, and spectral analysis in depth. Go here when Smith is no longer enough. |
 | | Course (Free) | MIT 6.011 Signals, Systems and Inference | George Verghese, Alan V. Oppenheim, Peter Hagelstein | 2018 | [Link](https://ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/) | Where signals meet probability: state-space models, random processes, correlation functions and power spectra, Wiener filtering, LMMSE estimation, hypothesis testing, and matched filters (notes and problem sets, no videos). The mathematics of noise and detection in instruments. |
-| | Book (Free) | Signal Processing for Communications | Paolo Prandoni, Martin Vetterli | — | [Link](https://www.sp4comm.org/) | Free textbook that teaches signal processing with a communications focus. A well-written second text and a good reference for modulation and receivers. |
+| | Book (Free) | Signal Processing for Communications | Paolo Prandoni, Martin Vetterli | 2008 | [Link](https://www.sp4comm.org/) | Free textbook (EPFL Press, 2008; the book site offers the PDF free) that teaches signal processing with a communications focus. A well-written second text and a good reference for modulation and receivers. |
 | | Book | Fourier Analysis: An Introduction | Elias M. Stein, Rami Shakarchi | 2003 | [Link](https://press.princeton.edu/books/hardcover/9780691113845/fourier-analysis) | Volume 1 of the Princeton Lectures in Analysis: rigorous Fourier series and transforms, finite Fourier analysis, and Dirichlet's theorem on primes. Optional; for when the engineering treatments leave you wanting proofs. Needs Section 02's analysis. |
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** MIT RES.6-007 lectures (Oppenheim) → Smith, *The Scientist and Engineer's Guide to Digital Signal Processing*
 
 1. **3Blue1Brown's Fourier videos** (listed in the physics curriculum's [Waves and Optics section](../../physics/01-waves-and-optics/README.md)) — Visual intuition first, if Fourier is new.
 2. **MIT RES.6-007 (Oppenheim)** — The core. LTI systems, convolution, Fourier series and transforms, sampling, Laplace and z.
