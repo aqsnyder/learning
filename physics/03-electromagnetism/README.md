@@ -38,8 +38,10 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Shankar's Yale PHYS 201 lectures → Griffiths, *Introduction to Electrodynamics* → *Feynman Lectures* Vol. 2
+
 1. **3Blue1Brown — Divergence and Curl** — Build geometric intuition for the vector calculus underlying Maxwell's equations.
-2. **Shankar — Yale PHYS 201** — A complete, free lecture course (video, audio, transcripts) on electrostatics, circuits, magnetism, Maxwell's equations, and EM waves, ending with optics and a first look at quantum mechanics. (Walter Lewin's MIT 8.02 lectures, long the standard recommendation here, are no longer hosted by MIT, which removed them in December 2014 after finding he had sexually harassed an online learner; MIT OCW has no other video version of 8.02.)
+2. **Shankar — Yale PHYS 201** — A complete, free lecture course (video, audio, transcripts) on electrostatics, circuits, magnetism, Maxwell's equations, and EM waves, ending with optics and a first look at quantum mechanics. (Walter Lewin's MIT 8.02 lectures, long the standard recommendation here, are no longer hosted by MIT, which removed them in December 2014 after finding he had sexually harassed an online learner. MIT OCW's Spring 2007 8.02 offers lecture notes and problem sets but no lecture videos.)
 3. **Griffiths — Introduction to Electrodynamics** — The gold-standard undergraduate textbook. Work through systematically — every chapter matters.
 4. **Feynman Lectures, Vol. 2** — Read alongside Griffiths for deeper physical insight and Feynman's unique perspective on fields and waves. Ch. 22–24 (AC circuits, cavity resonators, waveguides) are especially good for an electrical engineer.
 5. **Purcell & Morin — Electricity and Magnetism** — Excellent alternative that derives magnetism from electrostatics plus special relativity.

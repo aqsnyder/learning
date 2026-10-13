@@ -36,6 +36,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** *Feynman Lectures* Vol. 1 mechanics chapters → MIT 8.01SC lectures → Taylor, *Classical Mechanics*
+
 1. **3Blue1Brown — Essence of Calculus** — Refresh your calculus foundations before diving into mechanics.
 2. **Feynman Lectures, Vol. 1** — Read the mechanics chapters (Ch. 1–14 and 18–25) for unmatched physical intuition. Ch. 21–25 (harmonic oscillator, resonance, transients, linear systems) map directly onto circuit intuition; Ch. 15–17 are special relativity, so save them for Section 05.
 3. **MIT 8.01SC (MIT OCW)** — Watch alongside Feynman for problem-solving technique; the course has full lecture videos, problem sets, and exams. (Walter Lewin's well-known 8.01 lectures are no longer hosted by MIT, which removed them from its online platforms in December 2014 after an investigation found he had sexually harassed an online learner.)

@@ -38,6 +38,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** *Feynman Lectures* Vol. 1 thermodynamics chapters → Schroeder, *An Introduction to Thermal Physics*
+
 1. **Feynman Lectures — Thermo chapters** — Get Feynman's intuitive introduction to kinetic theory, entropy, and the laws of thermodynamics.
 2. **Schroeder — An Introduction to Thermal Physics** — Your primary textbook. Covers both thermodynamics and statistical mechanics with clarity and excellent problems. Work through this cover-to-cover; its blackbody-radiation section (Planck spectrum, Stefan–Boltzmann law) is the physics behind every thermal-infrared sensor.
 3. **Johnson (1928) + Nyquist (1928)** — Johnson's measurement of voltage noise in resistors and Nyquist's four-page derivation of its spectrum (4kTR per unit bandwidth) from equipartition. A founding example of the fluctuation–dissipation theorem (with Einstein's Brownian-motion relation, Feynman Vol. 1 Ch. 41), and the origin of the noise floor in every analog front end. Read once you have met equipartition and the Boltzmann factor in Schroeder.

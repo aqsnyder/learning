@@ -42,6 +42,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Watrous's IBM Quantum Learning course → Shor's 1994 paper → Nielsen & Chuang
+
 1. **3Blue1Brown — Some light quantum mechanics** — If you haven't already, build visual intuition for quantum states.
 2. **Watrous — Understanding Quantum Information & Computation** — The core course: four free units (basics of quantum information, quantum algorithms, the general formulation of quantum information, and quantum error correction) with Qiskit examples. IBM retired the old Qiskit Textbook in favour of IBM Quantum Learning; its GitHub repository was archived in January 2024.
 3. **IBM Quantum Learning** — The rest of IBM's courses and tutorials, including running circuits on real hardware.

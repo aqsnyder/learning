@@ -353,3 +353,63 @@ The original proposal follows for reference.
 3. **Re-sequence for an engineer:** run Python/computation (§06 Kinder & Nelson → Newman → FEniCSx) alongside §00, take optics after E&M, and treat relativity and quantum computing as optional detours.
 4. **Read §11 critically:** go PINNs → neural operators (FNO/DeepONet) → reality checks (add McGreivy & Hakim 2024 after verification). Treat Wolfram as optional, with the Aaronson review alongside.
 5. **Clean up the tracker:** make PROGRESS the single source of truth by removing the duplicated "supplementary" lists, and track the cross-curriculum duplicates once (Strogatz, Neural ODE, AlphaFold, EGNN).
+
+## Follow-up pass (2026-10-13)
+- **New sections created:** none
+- **Added:** 17 resources, each with a table row, a Suggested Order step and a PROGRESS line; no new 🔑 (§12 already has two)
+  - An Introduction to Error Analysis (2nd ed.) — John R. Taylor — 1997 — §12
+  - About Lock-In Amplifiers (Application Note #3) — Stanford Research Systems — undated — §12
+  - Handbook of Frequency Stability Analysis (NIST SP 1065) — W. J. Riley — 2008 — §12 (the Allan-deviation reference)
+  - Mathematical Analysis of Random Noise — S. O. Rice — 1944–45 — §12 (the source of Rice's formula: Part III, §3.3)
+  - Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results (NIST TN 1297, 1994 ed.) — Barry N. Taylor & Chris E. Kuyatt — 1994 — §12
+  - Evaluation of Measurement Data — Guide to the Expression of Uncertainty in Measurement (JCGM 100:2008, the GUM) — JCGM — 2008 — §12
+  - The International System of Units (SI Brochure, 9th ed.; English text updated 2026) — BIPM — 2019 — §12
+  - Handbook of Modern Sensors (5th ed.) — Jacob Fraden — 2016 — §12
+  - Pyroelectric Devices and Materials — R. W. Whatmore — 1986 — §12 (also pointed to from §08 Practice 4)
+  - The Art of Radiometry — James M. Palmer & Barbara G. Grant — 2009 — §12
+  - Building Scientific Apparatus (4th ed.) — John H. Moore, Christopher C. Davis & Michael A. Coplan — 2009 — §12
+  - Quantum Sensing — C. L. Degen, F. Reinhard & P. Cappellaro — 2017 — §12 (optional)
+  - MIT 2.71 Optics (Spring 2009) — George Barbastathis, Colin Sheppard & Se Baek Oh — 2009 — §01
+  - Fundamentals of Photonics (3rd ed.) — Bahaa E. A. Saleh & Malvin Carl Teich — 2019 — §01
+  - Optical Engineering Specialization (Coursera; paid, financial aid available) — Robert McLeod (University of Colorado Boulder) — §01 (optional)
+  - Weak Baselines and Reporting Biases Lead to Overoptimism in Machine Learning for Fluid-Related Partial Differential Equations — Nick McGreivy & Ammar Hakim — 2024 — §11
+  - Neural General Circulation Models for Weather and Climate (NeuralGCM) — Kochkov et al. — 2024 — §11
+
+  Exercise notes were extended minimally so that the practice uses the new items: §12 Practice 3–5 and the mini-project, §11 Practice 1 and the mini-project, the §01 mini-project, and §08 Practice 4.
+
+  Evidence URLs: https://uscibooks.directfrompublisher.com/9780935702422 · https://www.thinksrs.com/downloads/pdfs/applicationnotes/AboutLIAs.pdf · https://api.crossref.org/works/10.6028/NIST.SP.1065 and https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1065.pdf (TOC) · https://api.crossref.org/works/10.1002/j.1538-7305.1944.tb00874.x, https://api.crossref.org/works/10.1002/j.1538-7305.1945.tb00453.x and https://archive.org/details/bstj24-1-46 (OCR text: Part III, §3.3 "Expected Number of Zeros per Second") · https://www.nist.gov/pml/nist-technical-note-1297 · https://www.bipm.org/en/committees/jc/jcgm/publications · https://www.bipm.org/en/publications/si-brochure · https://link.springer.com/book/10.1007/978-3-319-19303-8 · https://api.crossref.org/works/10.1088/0034-4885/49/12/002 · https://api.crossref.org/works/10.1117/3.798237 · https://assets.cambridge.org/97805218/78586/copyright/9780521878586_copyright_info.pdf · https://arxiv.org/abs/1611.02427 · https://ocw.mit.edu/courses/2-71-optics-spring-2009/ · https://www.wiley-vch.de/en/areas-interest/natural-sciences/fundamentals-of-photonics-2-volume-set-978-1-119-50687-4 · https://www.coursera.org/specializations/optical-engineering · https://arxiv.org/abs/2407.07218 and https://api.crossref.org/works/10.1038/s42256-024-00897-5 · https://arxiv.org/abs/2311.07222 and https://www.nature.com/articles/s41586-024-07744-y
+- **Removed (confirmed nonexistent):** none
+- **Flags resolved:**
+  - physics/12-measurement-noise-and-sensor-physics/README.md:34–35 — the Allan-deviation and Rice-formula objectives had no supporting resource — added Riley, NIST SP 1065 (§3.2 power-law noise; §5 Allan, overlapping and modified Allan variances, confidence intervals and noise identification) and Rice (Part III, §3.3); both are wired into Practice 4 and 5. Rice counts zeros in both directions (1.155 f_b for an ideal low-pass), which is 2ν₀ in Practice 5's notation; recomputed in Python. Evidence as above.
+  - physics/10-nonlinear-dynamics-and-chaos/README.md:41 (and the Practice § numbers at :54–57) — Strogatz 3rd edition — the publisher's table of contents shows a new Chapter 13, "Kuramoto Model", in Part IV, "Collective Behavior". Every cited section matches the 3rd edition: §3.3 Laser Threshold, §3.5 Overdamped Bead on a Rotating Hoop, §3.6 Imperfect Bifurcations and Catastrophes, §7.5 Relaxation Oscillations, §7.6 Weakly Nonlinear Oscillators, §8.2 Hopf Bifurcations, §9.4 Lorenz Map, §10.2–10.6, §11.5 Pointwise and Correlation Dimensions, and §12.4 Chemical Chaos and Attractor Reconstruction. The wording now names Chapter 13 and states that the § numbers follow the 3rd edition. https://www.routledge.com/Nonlinear-Dynamics-and-Chaos-With-Applications-to-Physics-Biology-Chemistry-and-Engineering/Strogatz/p/book/9780367026509
+  - physics/10-nonlinear-dynamics-and-chaos/README.md:59 — Chua circuit values — Kennedy's Berkeley memo UCB/ERL M91/95 (28 Oct 1991) lists L = 18 mH, C₁ = 10 nF, C₂ = 100 nF, R = 2 kΩ pot, an AD712 or TL082 dual op-amp, and two 9 V batteries; the 1992 paper is *Frequenz* 46(3–4):66–80. The values were correct. Added the paper's title, a link to the free memo, and the op-amp and supply. https://www2.eecs.berkeley.edu/Pubs/TechRpts/1991/ERL-91-95.pdf · https://digitalcommons.memphis.edu/facpubs/17653
+  - physics/05-special-and-general-relativity/README.md:26, :42 and physics/books/README.md:22 — *Spacetime Physics* licence — the site states that the entire book "is licensed under a Creative Commons Attribution 4.0 International License". Correct; no change. https://www.eftaylor.com/spacetimephysics/
+  - physics/07-quantum-computing/README.md:46 — Qiskit Textbook archive date — the GitHub banner reads "archived by the owner on Jan 18, 2024", and the README says the textbook "has been superseded by IBM Quantum Learning". Correct; no change. https://github.com/Qiskit/textbook
+  - physics/09-fluid-dynamics-and-continuum/README.md:35 — Lienhard "6th ed., 2024" — confirmed: 6th edition, Version 6.00 (19 April 2024), 810 pp, Phlogiston Press, free for personal use. The authors' own BibTeX lists the authors as "Lienhard, V, J. H. and Lienhard, IV, J. H.", so the row now reads "John H. Lienhard V & John H. Lienhard IV". The "IV & V" order in this review's earlier text is superseded. https://ahtt.mit.edu/ · https://ahtt.mit.edu/bibtex-entry/
+  - physics/09-fluid-dynamics-and-continuum/README.md:61 — the Brunton & Kutz DATA.zip cylinder-wake file.
+    - databookuw.com offers DATA.zip (MATLAB) and DATA_PYTHON.zip.
+    - The book's Chapter 7 DMD code loads `DATA/VORTALL.mat`: MATLAB `CH07_SEC02_DMD_Cylinder.m` and the Python notebook of the same name. The Python repo's DATA folder holds `VORTALL.mat` (103 MB).
+    - Snapshots are 449 × 199 grid points. `plotCylinder.m` labels the axes in cylinder diameters and draws D = 50 grid points.
+    - Neither the code nor the file states a time step, so "the dataset's documented time step" was not accurate. The exercise now names the file, gives the length scale, tells the learner to take the snapshot interval and the Reynolds number from the book's text, and offers a fallback (frequency per snapshot).
+    - Evidence: https://databookuw.com/ · https://raw.githubusercontent.com/dynamicslab/databook_matlab/master/CH07/CH07_SEC02_DMD_Cylinder.m · https://raw.githubusercontent.com/dynamicslab/databook_matlab/master/CH07/plotCylinder.m · https://api.github.com/repos/dylewsky/Data_Driven_Science_Python_Demos/contents/DATA
+  - physics/03-electromagnetism/README.md:42 — "MIT OCW has no other video version of 8.02" (a negative claim) — narrowed to what was checked: OCW's 8.02 (Spring 2007) lists Lecture Notes and Problem Sets and has no lecture videos. https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/
+- **Still unverified:**
+  - The Reynolds number (Re = 100) and the snapshot interval of the Brunton & Kutz cylinder dataset. The code and data files don't state them, and the book text couldn't be read. The exercise now asks the learner to take both from the book.
+  - The descriptions of Whatmore (1986) and Palmer & Grant (2009). Their bibliographic data is confirmed via Crossref, but the publisher pages (IOP, SPIE) blocked automated reading and Crossref has no abstracts. "Figures of merit" (Whatmore) and "radiance, étendue" (Palmer & Grant) are general knowledge, not checked against the text.
+  - Not checked this pass (not in this backlog): GenCast (Price et al., *Nature* 2025) and Krishnapriyan et al. (2021) on PINN failure modes, both named under §11 "Missing"; and the NIST CODATA and units pages suggested for blogs-and-references.
+
+## Tier lists (2026-10-13)
+No physics section had more than 3 🔑 resource rows (33 in all; §06 has 1, §02, §09, §10 and §12 have 2, the rest 3), so no 🔑 was removed and the index files are unchanged; each Suggested Order (§00–§12) now opens with a "Core path (🔑)" line naming the section's 🔑 items in reading order.
+
+- books/README.md #7 Newman, *Computational Physics*: 🔑 added (core in 06)
+- books/README.md #8 Kittel, *Introduction to Solid State Physics*: 🔑 added (core in 08)
+- books/README.md #9 Nielsen & Chuang, *Quantum Computation and Quantum Information*: 🔑 added (core in 07)
+- books/README.md #10 Taylor & Wheeler, *Spacetime Physics* (2nd ed., 1992): 🔑 added (core in 05)
+- books/README.md #11 Kundu et al., *Fluid Mechanics* (7th ed., 2024): 🔑 added (core in 09)
+- books/README.md #12 Brunton & Kutz, *Data-Driven Science and Engineering*: 🔑 added (core in 09)
+- books/README.md #13 Carroll, *Spacetime and Geometry*: 🔑 added (core in 05)
+- courses/README.md #4 MIT 8.04 Quantum Physics I (Zwiebach): 🔑 added (core in 04)
+- courses/README.md #11 3Blue1Brown, "But what is the Fourier Transform?": 🔑 added (core in 01)
+- physics/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
+- Not changed: courses/README.md #10 3Blue1Brown, Essence of Calculus stays unmarked. It is core only in math/02 and ml/01, and unmarked in physics 00.
+- Second check (2026-10-13): `courses/README.md` #9 3Blue1Brown *Essence of Linear Algebra*: 🔑 removed (core in ml/01, not in any physics section).

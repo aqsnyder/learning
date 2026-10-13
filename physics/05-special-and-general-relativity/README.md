@@ -39,6 +39,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Taylor & Wheeler, *Spacetime Physics* → Einstein's 1905 paper → Carroll, *Spacetime and Geometry*
+
 1. **Taylor & Wheeler — Spacetime Physics** — The best introduction to special relativity. Builds intuition through invariant intervals and spacetime diagrams. The full 2nd edition is now free to download under a Creative Commons (CC BY 4.0) licence.
 2. **Einstein — "On the Electrodynamics of Moving Bodies"** — Read the original 1905 paper. Surprisingly accessible and beautifully reasoned.
 3. **Susskind — Special Relativity** — Lectures that connect SR to the Lagrangian formalism you learned in classical mechanics.

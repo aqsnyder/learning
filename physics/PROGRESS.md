@@ -25,6 +25,9 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Hecht — *Optics*
 - [ ] MIT 8.03SC — Vibrations and Waves (Yen-Jie Lee)
 - [ ] Pain — *The Physics of Vibrations and Waves*
+- [ ] MIT 2.71 — Optics (OCW, Spring 2009)
+- [ ] Saleh & Teich — *Fundamentals of Photonics* (3rd ed., 2019)
+- [ ] CU Boulder — Optical Engineering Specialization (Coursera, McLeod) (optional, paid)
 - [ ] 🛠️ Practice exercises 1–4
 - [ ] 🏗️ Mini-project: Optics Model of a Lens-Based IR Motion Sensor
 - [ ] ✅ Check Yourself — answered from memory
@@ -166,6 +169,8 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Satorras et al. — E(n) Equivariant Graph Neural Networks (2021)
 - [ ] Lu et al. — DeepONet (2019/2021)
 - [ ] Li et al. — Fourier Neural Operator (2020)
+- [ ] McGreivy & Hakim — "Weak Baselines and Reporting Biases Lead to Overoptimism in ML for Fluid-Related PDEs" (2024)
+- [ ] Kochkov et al. — NeuralGCM: "Neural General Circulation Models for Weather and Climate" (2024)
 - [ ] Wolfram — *A New Kind of Science* (2002) (optional, speculative)
 - [ ] Aaronson — Review of *A New Kind of Science* (2002)
 - [ ] Wolfram Physics Project (2020+) (optional, speculative)
@@ -177,6 +182,18 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Keithley — *Low Level Measurements Handbook* (7th ed., 2014)
 - [ ] Sarpeshkar, Delbrück & Mead — "White Noise in MOS Transistors and Resistors" (1993)
 - [ ] Dutta & Horn — "Low-Frequency Fluctuations in Solids: 1/f Noise" (1981)
+- [ ] Taylor — *An Introduction to Error Analysis* (2nd ed., 1997)
+- [ ] Stanford Research Systems — "About Lock-In Amplifiers" (Application Note #3)
+- [ ] Riley — *Handbook of Frequency Stability Analysis* (NIST SP 1065, 2008)
+- [ ] Rice — "Mathematical Analysis of Random Noise" (1944–45)
+- [ ] Taylor & Kuyatt — NIST Technical Note 1297 (1994 ed.)
+- [ ] JCGM 100:2008 — *Guide to the Expression of Uncertainty in Measurement* (GUM)
+- [ ] BIPM — *The International System of Units (SI)* (SI Brochure, 9th ed.)
+- [ ] Fraden — *Handbook of Modern Sensors* (5th ed., 2016)
+- [ ] Whatmore — "Pyroelectric Devices and Materials" (1986)
+- [ ] Palmer & Grant — *The Art of Radiometry* (2009)
+- [ ] Moore, Davis & Coplan — *Building Scientific Apparatus* (4th ed., 2009)
+- [ ] Degen, Reinhard & Cappellaro — "Quantum Sensing" (2017)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Chopped Thermopile Radiometer
 - [ ] ✅ Check Yourself — answered from memory

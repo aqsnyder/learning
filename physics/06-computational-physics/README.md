@@ -38,6 +38,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Newman, *Computational Physics*
+
 1. **Kinder & Nelson — Python for Physical Modeling** — Get comfortable with Python, NumPy, and matplotlib for physics computations.
 2. **Newman — Computational Physics** — Your primary textbook. Covers integration, ODEs, PDEs, Monte Carlo methods, and molecular dynamics with Python.
 3. **Giordano & Nakanishi — Computational Physics** — Alternative textbook with good coverage of chaos, fractals, and computational fluid dynamics.

@@ -16,13 +16,13 @@ These are the textbooks that form the backbone of a serious physics education. E
 | 4 | An Introduction to Thermal Physics | Daniel V. Schroeder | 02 | 🔑 |
 | 5 | Nonlinear Dynamics and Chaos (3rd ed., 2024) | Steven H. Strogatz | 10 | 🔑 |
 | 6 | Classical Mechanics | John R. Taylor | 00 | 🔑 |
-| 7 | Computational Physics | Mark Newman | 06 | |
-| 8 | Introduction to Solid State Physics | Charles Kittel | 08 | |
-| 9 | Quantum Computation and Quantum Information | Nielsen & Chuang | 07 | |
-| 10 | Spacetime Physics (2nd ed., 1992; free, CC BY) | Taylor & Wheeler | 05 | |
-| 11 | Fluid Mechanics (7th ed., 2024) | Kundu, Cohen, Dowling & Capecelatro | 09 | |
-| 12 | Data-Driven Science and Engineering | Brunton & Kutz | 09, 11 | |
-| 13 | Spacetime and Geometry | Sean Carroll | 05 | |
+| 7 | Computational Physics | Mark Newman | 06 | 🔑 |
+| 8 | Introduction to Solid State Physics | Charles Kittel | 08 | 🔑 |
+| 9 | Quantum Computation and Quantum Information | Nielsen & Chuang | 07 | 🔑 |
+| 10 | Spacetime Physics (2nd ed., 1992; free, CC BY) | Taylor & Wheeler | 05 | 🔑 |
+| 11 | Fluid Mechanics (7th ed., 2024) | Kundu, Cohen, Dowling & Capecelatro | 09 | 🔑 |
+| 12 | Data-Driven Science and Engineering | Brunton & Kutz | 09, 11 | 🔑 |
+| 13 | Spacetime and Geometry | Sean Carroll | 05 | 🔑 |
 | 14 | Mechanics | Landau & Lifshitz | 00 | |
 | 15 | Classical Electrodynamics | J.D. Jackson | 03 | |
 | 16 | Electromagnetics, Vol. 1–2 (2018, 2020; free, CC BY-SA) | Steven W. Ellingson | 03 | |

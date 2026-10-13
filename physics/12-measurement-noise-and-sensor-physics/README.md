@@ -43,6 +43,18 @@ After this section you can:
 | 1 | Low Level Measurements Handbook (7th ed., 2014) — Keithley (Tektronix) | Book | 🔑 | [tek.com (free PDF)](https://download.tek.com/document/LowLevelHandbook_7Ed.pdf) |
 | 2 | White Noise in MOS Transistors and Resistors — R. Sarpeshkar, T. Delbrück & C. A. Mead (1993) | Paper | 🔑 | [DOI](https://doi.org/10.1109/101.261888) |
 | 3 | Low-Frequency Fluctuations in Solids: 1/f Noise — P. Dutta & P. M. Horn (1981) | Paper | | [DOI](https://doi.org/10.1103/RevModPhys.53.497) |
+| 4 | An Introduction to Error Analysis: The Study of Uncertainties in Physical Measurements (2nd ed., 1997) — John R. Taylor | Book | | [University Science Books](https://uscibooks.directfrompublisher.com/9780935702422) |
+| 5 | About Lock-In Amplifiers (Application Note #3) — Stanford Research Systems | App note | | [thinksrs.com (free PDF)](https://www.thinksrs.com/downloads/pdfs/applicationnotes/AboutLIAs.pdf) |
+| 6 | Handbook of Frequency Stability Analysis (NIST Special Publication 1065, 2008) — W. J. Riley | Book | | [DOI (free PDF)](https://doi.org/10.6028/NIST.SP.1065) |
+| 7 | Mathematical Analysis of Random Noise — S. O. Rice (Bell System Technical Journal, 1944–45) | Paper | | [DOI (1944)](https://doi.org/10.1002/j.1538-7305.1944.tb00874.x) · [DOI (1945, Part III)](https://doi.org/10.1002/j.1538-7305.1945.tb00453.x) · [free scan (1945)](https://archive.org/details/bstj24-1-46) |
+| 8 | Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results (NIST Technical Note 1297, 1994 ed.) — Barry N. Taylor & Chris E. Kuyatt | Guide | | [DOI (free PDF)](https://doi.org/10.6028/NIST.TN.1297) |
+| 9 | Evaluation of Measurement Data — Guide to the Expression of Uncertainty in Measurement (GUM, JCGM 100:2008) — Joint Committee for Guides in Metrology | Guide | | [BIPM (free PDF)](https://www.bipm.org/en/committees/jc/jcgm/publications) |
+| 10 | The International System of Units (SI): the SI Brochure (9th ed., 2019; English text updated 2026) — BIPM | Reference | | [bipm.org (free, CC BY 4.0)](https://www.bipm.org/en/publications/si-brochure) |
+| 11 | Handbook of Modern Sensors: Physics, Designs, and Applications (5th ed., 2016) — Jacob Fraden | Book | | [Springer](https://link.springer.com/book/10.1007/978-3-319-19303-8) |
+| 12 | Pyroelectric Devices and Materials — R. W. Whatmore (Reports on Progress in Physics, 1986) | Paper | | [DOI](https://doi.org/10.1088/0034-4885/49/12/002) |
+| 13 | The Art of Radiometry — James M. Palmer & Barbara G. Grant (SPIE Press, 2009) | Book | | [DOI](https://doi.org/10.1117/3.798237) |
+| 14 | Building Scientific Apparatus (4th ed., 2009) — John H. Moore, Christopher C. Davis & Michael A. Coplan | Book | | [Cambridge](https://www.cambridge.org/9780521878586) |
+| 15 | Quantum Sensing — C. L. Degen, F. Reinhard & P. Cappellaro (Reviews of Modern Physics, 2017) | Paper | | [DOI](https://doi.org/10.1103/RevModPhys.89.035002) · [arXiv](https://arxiv.org/abs/1611.02427) |
 
 > 🔑 = must-read
 
@@ -59,23 +71,39 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Sarpeshkar et al. white-noise paper → Keithley, *Low Level Measurements Handbook*
+
 1. **Review Johnson (1928) + Nyquist (1928) and Feynman Vol. 1 Ch. 41 (Section 02)** — The physical origin of thermal noise and the fluctuation–dissipation theorem. Everything below builds on it.
-2. **Sarpeshkar, Delbrück & Mead — White Noise in MOS Transistors and Resistors** — A short paper by analog-VLSI researchers showing that thermal noise and shot noise are one phenomenon: thermal noise is the shot noise of equal and opposite diffusion currents. It also gives one consistent way to think about noise in resistors and transistors. Practice 1 reproduces its central argument.
-3. **Dutta & Horn — 1/f noise** — The classic review of the physical origins of low-frequency 1/f ("flicker") noise in metals and semiconductors. This is the noise that dominates resistors, amplifier inputs, references, and sensors at low frequencies, and the reason modulation (Practice 3) and Allan deviation (Practice 4) matter. Read the overview and the experimental sections closely; skim the theory.
-4. **Keithley — Low Level Measurements Handbook** — The bench reference for every error source that is not intrinsic noise. Read two parts:
+2. **Taylor — An Introduction to Error Analysis** — The standard first book on experimental uncertainty, and the language every result in this section is reported in. Read Ch. 1–5 (reporting and propagating uncertainties, the statistics of random uncertainties, the normal distribution) before Practice 2, and Ch. 7–9 (weighted averages, least-squares fitting, covariance and correlation) before the mini-project's calibration fit. Ch. 11, on the Poisson distribution, is the counting statistics behind shot noise.
+3. **Sarpeshkar, Delbrück & Mead — White Noise in MOS Transistors and Resistors** — A short paper by analog-VLSI researchers showing that thermal noise and shot noise are one phenomenon: thermal noise is the shot noise of equal and opposite diffusion currents. It also gives one consistent way to think about noise in resistors and transistors. Practice 1 reproduces its central argument.
+4. **Dutta & Horn — 1/f noise** — The classic review of the physical origins of low-frequency 1/f ("flicker") noise in metals and semiconductors. This is the noise that dominates resistors, amplifier inputs, references, and sensors at low frequencies, and the reason modulation (Practice 3) and Allan deviation (Practice 4) matter. Read the overview and the experimental sections closely; skim the theory.
+5. **Keithley — Low Level Measurements Handbook** — The bench reference for every error source that is not intrinsic noise. Read two parts:
    - the material on measurements from high-resistance sources: leakage and guarding, noise and source resistance, triboelectric and piezoelectric currents, dielectric absorption
    - the material on low-resistance sources: thermoelectric EMFs, four-wire measurement, current reversal
 
    For each error source, write down the physics behind it. PCB Section 12 uses the same handbook for board-level practice.
-5. **Sensor physics cross-references** — Revisit these before the mini-project:
-   - Schroeder's blackbody section and the Section 02 Planck exercise (radiometry)
-   - Kittel's dielectrics and ferroelectrics chapter and Section 08 Practice 4 (pyroelectric detectors)
-   - Hu's pn-junction chapter (photodiodes)
-   - the thermal-radiation chapter of Lienhard & Lienhard (radiative exchange)
-6. **Case studies (Section 05)** — Two cases push the same noise-budget thinking to its extreme:
-   - Ashby's GPS review: a net relativistic clock correction of about 4.5 parts in 10¹⁰, worth ~11 km of ranging error per day if ignored
-   - the LIGO GW150914 letter: a signal of peak strain 1.0×10⁻²¹ — about 4 attometres of change in a 4 km arm — dug out of the detector noise
-7. **PCB Sections 00, 07, and 12** — The board-level counterpart: high-impedance error and noise budgets, Ott on intrinsic noise and shielding, and a full precision measurement channel.
+6. **Stanford Research Systems — About Lock-In Amplifiers (Application Note #3)** — A short vendor note on phase-sensitive detection: time constants and filter roll-off, the equivalent noise bandwidth of the output filter (1/(4τ) for a single RC stage, as Practice 3 derives), dynamic reserve, and the noise and pickup sources a real lock-in meets. Read it before Practice 3, then check its numbers against your simulation.
+7. **Riley — Handbook of Frequency Stability Analysis (NIST SP 1065)** — The practical reference for Allan deviation. It was written for clocks and oscillators, but the method applies to any sensor log. Read §3.2 (power-law noise) and §5 (time-domain stability: the Allan, overlapping Allan and modified Allan variances, confidence intervals, degrees of freedom, and noise identification) before Practice 4; §8 (noise simulation) helps with Practice 4(a).
+8. **Rice — Mathematical Analysis of Random Noise** — The source of the threshold formula in Practice 5. Part III (the 1945 instalment), §3.3, derives from the noise spectrum the expected number of zeros per second and the rate at which the noise crosses a given level. Rice counts zeros in both directions, so his rate is 2ν₀ in Practice 5's notation — 1.155 f_b for an ideal low-pass of cutoff f_b. A free scan of the 1945 instalment is on the Internet Archive.
+9. **Uncertainty and units — NIST TN 1297, the GUM, and the SI Brochure** — How to turn a noise measurement into a reported result:
+   - **Taylor & Kuyatt — NIST Technical Note 1297** — NIST's short guidelines: Type A and Type B evaluations, combined standard uncertainty, coverage factor, and expanded uncertainty. Read it first.
+   - **JCGM 100:2008 — the GUM** — The international guide those rules come from. Use its main text and worked examples for Practice 4's Type-A statement and the mini-project's uncertainty budget. The same BIPM page has JCGM 101:2008 (Supplement 1, propagation of distributions by Monte Carlo), which matches your Section 06 Monte Carlo tools, and a 2026 amendment on nonlinear measurement models.
+   - **BIPM — The SI Brochure (9th ed.)** — What the units mean since the 2019 revision: the SI is now defined by seven constants with exact values, among them h, e and k. The Boltzmann constant in 4kTR is therefore exact by definition.
+10. **Sensor physics references — Fraden, Whatmore, and Palmer & Grant** — Read before the mini-project:
+    - **Fraden — Handbook of Modern Sensors** — A broad reference on how sensors work. Read "Physical Principles of Sensing" (Ch. 4) and "Interface Electronic Circuits" (Ch. 6), then "Light Detectors" (Ch. 15) and "Temperature Sensors" (Ch. 17) for the mini-project's detectors, and "Detectors of Humans" (Ch. 7) for the motion-sensing context of Practice 5.
+    - **Whatmore — Pyroelectric Devices and Materials** — The classic review of pyroelectric materials and detectors, including the figures of merit used to compare materials. Read it with Section 08 Practice 4, before the mini-project's pyroelectric stretch goal.
+    - **Palmer & Grant — The Art of Radiometry** — Radiometric quantities and the geometry of radiation transfer (radiance, étendue): the basis for the mini-project's power estimate and for the étendue budget in the Section 02 mini-project.
+11. **Sensor physics cross-references** — Revisit these before the mini-project:
+    - Schroeder's blackbody section and the Section 02 Planck exercise (radiometry)
+    - Kittel's dielectrics and ferroelectrics chapter and Section 08 Practice 4 (pyroelectric detectors)
+    - Hu's pn-junction chapter (photodiodes)
+    - the thermal-radiation chapter of Lienhard & Lienhard (radiative exchange)
+12. **Moore, Davis & Coplan — Building Scientific Apparatus** — The bench-craft companion for the mini-project. Read the chapters on optical systems (Ch. 4), electronics (Ch. 6), detectors (Ch. 7), and measurement and control of temperature (Ch. 8); the glassworking, vacuum and charged-particle-optics chapters can wait until you need them.
+13. **Case studies (Section 05)** — Two cases push the same noise-budget thinking to its extreme:
+    - Ashby's GPS review: a net relativistic clock correction of about 4.5 parts in 10¹⁰, worth ~11 km of ranging error per day if ignored
+    - the LIGO GW150914 letter: a signal of peak strain 1.0×10⁻²¹ — about 4 attometres of change in a 4 km arm — dug out of the detector noise
+14. **Degen, Reinhard & Cappellaro — Quantum Sensing** — Optional: where this section's classical noise floors give way to quantum ones. A review written to introduce experimentalists to the principles, methods and concepts of using quantum systems as sensors, from SQUID and atomic-vapour magnetometers and atomic clocks to today's spin qubits, trapped ions and flux qubits.
+15. **PCB Sections 00, 07, and 12** — The board-level counterpart: high-impedance error and noise budgets, Ott on intrinsic noise and shielding, and a full precision measurement channel.
 
 ---
 
@@ -116,7 +144,7 @@ After this section you can:
      - Read the Section 02 photodiode transimpedance amplifier (TIA) with ADC conversions triggered by the same timer.
      - Demodulate in firmware or Python, and recover an LED signal 100× smaller than the room-light flicker.
 
-   Success: lock-in amplitude within 5% of a reference measurement taken in the dark, and noise on X within 20% of e_n·√ENBW computed from your measured PSD. *(~5 h · Dutta & Horn; Section 06 Practice 3; Section 02 Practice 4)*
+   Success: lock-in amplitude within 5% of a reference measurement taken in the dark, and noise on X within 20% of e_n·√ENBW computed from your measured PSD. *(~5 h · Dutta & Horn; SRS, "About Lock-In Amplifiers"; Section 06 Practice 3; Section 02 Practice 4)*
 4. **How long should you average? Allan deviation** — Validate a tool, then use it on real data.
    - **(a) Synthetic test.** Write an overlapping Allan-deviation function (cumulative-sum trick) and test it on 10⁶-sample series:
      - white noise of σ per sample → σ/√τ, slope −½
@@ -127,14 +155,14 @@ After this section you can:
      - Regress the drift against temperature to get a tempco.
      - Compare your reference's fractional stability with the clock-stability numbers in Section 05's GPS exercise.
 
-   Deliverable: a notebook plus one paragraph stating the optimum averaging time and the Type-A uncertainty you would quote for a reading taken with it. Success: synthetic slopes and levels within 5% of theory, and every region of the measured plot attributed to a mechanism (front-end white noise, 1/f in the reference or resistors, thermal drift). *(~3 h + an overnight log · Dutta & Horn; Keithley handbook (offsets and drift); Ashby (Section 05))*
+   Deliverable: a notebook plus one paragraph stating the optimum averaging time and the Type-A uncertainty you would quote for a reading taken with it. Success: synthetic slopes and levels within 5% of theory, and every region of the measured plot attributed to a mechanism (front-end white noise, 1/f in the reference or resistors, thermal drift). *(~3 h + an overnight log · Riley, NIST SP 1065 (§5); Dutta & Horn; Keithley handbook (offsets and drift); NIST TN 1297 or the GUM (Type A); Ashby (Section 05))*
 5. **Thresholds and false alarms** — Rice's formula gives the rate at which stationary Gaussian noise crosses level u upward: ν_u = ν₀·exp(−u²/2σ²), with ν₀ = √(∫f²S df / ∫S df).
    - **(a) Set the threshold.** For noise flat over 0.3–7 Hz (a motion-sensor passband), show ν₀ ≈ 4.13 s⁻¹, about 3.6×10⁵ zero up-crossings per day. Find the threshold for one false alarm per day: 5.06σ for one polarity, 5.19σ for a window comparator. One per year needs ≈ 6.1σ.
    - **(b) Verify.** Generate band-limited Gaussian noise by FFT filtering, check Rice's formula at 2–3.5σ, and extrapolate.
    - **(c) Pulse counting.** Show that requiring two crossings within 5 s allows a ≈ 4.0σ threshold at the same Gaussian false-alarm rate (Poisson approximation first, then simulation). Use Section 02's SNR-vs-range model to say what that buys in detection range.
    - **(d) Real false alarms.** Write half a page on why false alarms in a passive-IR detector are rarely Gaussian noise: wind-moved vegetation at a different temperature from its background, sun-heated surfaces, RF pickup. These need discrimination by spectrum, waveform shape, or agreement between sensors, not a higher threshold.
 
-   *(~3 h · Section 06 Practice 3; the Section 02 mini-project; Section 01's lens and footprint model)*
+   *(~3 h · Rice, Part III §3.3; Section 06 Practice 3; the Section 02 mini-project; Section 01's lens and footprint model)*
 
 **🏗️ Mini-project — Chopped Thermopile Radiometer:** Build an instrument that measures a target's temperature from its thermal radiation, and verify the physics end to end.
 - **Hardware:**
@@ -159,7 +187,7 @@ Deliverable: schematic (KiCad or breadboard photos), firmware/Python, notebook, 
 - an explanation of where each reading's Allan deviation stops falling (the chopped reading should keep improving after the DC reading hits its drift floor)
 - a budget that names its dominant term
 
-Stretch: swap in a pyroelectric detector behind a small Fresnel lens and compare its chopped response vs range with your Section 02 budget. *(~14 h)*
+Stretch: swap in a pyroelectric detector behind a small Fresnel lens and compare its chopped response vs range with your Section 02 budget. *(~14 h · Palmer & Grant (radiometry); Fraden (light detectors; temperature sensors); NIST TN 1297 or the GUM (uncertainty budget); Moore, Davis & Coplan (bench craft); Whatmore (stretch))*
 
 ## ✅ Check Yourself
 

@@ -39,6 +39,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** *Feynman Lectures* Vol. 3 → MIT 8.04 (Zwiebach) → Griffiths & Schroeter, *Introduction to Quantum Mechanics*
+
 1. **3Blue1Brown — Some light quantum mechanics** — Build visual intuition for quantum states, superposition, and measurement.
 2. **Feynman Lectures, Vol. 3** — Feynman's unique approach to quantum mechanics. Start here for physical intuition before formalism.
 3. **MIT 8.04 (Zwiebach)** — Rigorous undergraduate course with excellent problem sets.
