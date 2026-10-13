@@ -445,3 +445,61 @@ Both were appended without renumbering. `pcb/README.md`'s learning path lists th
    - Verify or cut the suspect entries ("Practical PCB Design", Tech Explorations course, Dr. EMC).
    - Replace channel-home and YouTube-search links with specific talks.
    - Resolve the copyright exposure of the bundled IPC-2221A PDF if the repo is public.
+
+## Follow-up pass (2026-10-13)
+- **New sections created:** none (Sections 12 and 13 already exist).
+- **Added:**
+  - Temperature and Voltage Variation of Ceramic Capacitors, or Why Your 4.7µF Capacitor Becomes a 0.33µF Capacitor (Maxim AN5527) — Maxim Integrated, now hosted by Analog Devices (no author named on the page) — 2012 — Section 03
+  - J-STD-048A Notification Standard for Product Discontinuance · J-STD-046A Customer Notification Standard for Product/Process Changes by Electronic Product Suppliers — JEDEC/ECIA/IPC joint standards — 2025 — Section 03 (also blogs-and-references Standards)
+  - FastHenry2 — Mattan Kamon (MIT, original FastHenry); FastFieldSolvers S.R.L. (Windows port) — ongoing — Section 05 (also blogs-and-references Tools)
+  - J-SMU (DIY source-measure unit) — GitHub user jaromir-sukuba — 2020–2021 — Section 11, cross-referenced from Section 12 (Also used here, Suggested Order 6, Practice 4)
+  - *ABCs of Probes* primer (60W-6053-17) — Tektronix — year not shown on the page — Section 13
+  - JTAG Boundary Scanner — Viveris — ongoing (no releases listed) — Section 13 (also blogs-and-references Tools)
+  - Design Guidelines for In-Circuit Testability (technical paper) — JJS Manufacturing — undated — Section 13
+  - KiCad Advanced: Design a smart USB thumb drive — Tech Explorations — 2026 — courses/ row 16 (the Section 10 row already existed; now verified)
+  - Cross-references only, no duplicate rows: PyVISA and SCPI → `software/13` from pcb/12 (mini-project) and pcb/13 (Also used here, mini-project); *Op Amp Applications Handbook* Section 7 (precision passives) → Section 03 "Also used here"
+- **Removed (confirmed nonexistent):** none. All three suspect entries exist.
+- **Flags resolved:**
+  - pcb/books/README.md:8, PROGRESS.md:220 — "Practical PCB Design" (Mike D. Smith) — real: *Practical PCB Design: From Breadboard to Production*, No Starch Press, October 2026, 272 pp., ISBN 9781718504042 (examples in Altium CircuitMaker) — row completed, "(unverified…)" note removed — https://nostarch.com/practical-PCB-design
+  - pcb/10-advanced-topics/README.md:27, :50 — "Tech Explorations KiCad Advanced (BGA, SI, High-Speed)" — real: the course at that URL slug is headed "KiCad Advanced: Design a smart USB thumb drive" (KiCad 10; 9 sections, 94 lectures; BGA and via-in-pad, USB 2.0 SI, eMMC length matching, stackup/impedance; no instructor named) — row and step rewritten, note removed, courses/ row added — https://app.techexplorations.com/courses/kicad-advanced-bga-signal-integrity-and-high-speed-layout/
+  - pcb/06:39, :52; pcb/07:35, :50; pcb/README.md:88; pcb/courses/README.md:13 — Dr. EMC — the linked `@DrEMC` handle belongs to an unrelated personal channel ("Andre Mclean"); the real "Dr. EMC" channel is `@DrEMC-sf8rx`, presented by Anton Tichenko (About page: principal electronics design engineer, PhD research at the University of Surrey's 6G Innovation Centre; electromagnetics and EM compliance) — links fixed, presenter named, unverifiable content claims ("excellent visual explanations", "simulation") replaced with the About-page description, notes removed — https://www.youtube.com/@DrEMC-sf8rx ; https://www.youtube.com/@DrEMC
+  - independent-check pcb/05:66 (FastHenry not listed) — FastHenry2 tool row added (05:44) and Suggested Order step 11; Practice 3 (05:68) points to it and stays optional — https://www.fastfieldsolvers.com/software.htm
+  - independent-check pcb/05:34, books:14, PROGRESS:73 (now :75) — *Fast Circuit Boards* year — Wiley hardcover is 2018 (ISBN 9781119413905); the e-book is dated 15.12.2017 (ISBN 9781119413929) — 2017 → 2018 in all three, with the e-book date noted in books/ — https://www.abebooks.com/9781119413905/Fast-Circuit-Boards-Energy-Management-1119413907/plp ; https://wiley-vch.e-bookshelf.de/fast-circuit-boards-10620117.html
+  - independent-check pcb/02:25 and the other KiCad-version claims — checked against the release notes: 10.0 (2026-03-20) adds design variants, the graphical rule editor, PCB design blocks ("extended the Design Blocks feature to the PCB editor", so pcb/04:64 is right) and time-domain tuning constraints (pcb/06:71 right); 9.0 (2025-02-20) added schematic design blocks, multichannel, creepage DRC, jobsets and the IPC API; the SWIG bindings are deprecated as of 9.0 and "the current plan is to remove the SWIG bindings in KiCad 11.0" (pcb/10:36 right) — no change needed — https://www.kicad.org/blog/2026/03/Version-10.0.0-Released/ ; https://www.kicad.org/blog/2025/02/Version-9.0.0-Released/ ; https://dev-docs.kicad.org/en/apis-and-binding/pcbnew/
+  - independent-check pcb/04:60 — "Rev C (2023) updated the clearance guidance" — what 2221C changed in Table 6-1 can't be checked without buying the standard — reworded to "check them against the current revision, IPC-2221C (2023), before relying on them"
+  - independent-check pcb/04:61 — place-only study budget ~5 h → ~10 h ("three placements plus one full route"), within the checker's 8–12 h
+  - independent-check pcb/05:5 — superlatives softened: "the #1 cause" → "one of the most common causes"; "has saved more PCB designs than any other single resource" → "is the best single place to start"
+  - independent-check "several (pcb 04, 09)", more than 3 🔑 — trimmed to 3 each: 🔑 removed from the KiCad PCB Editor Guide (04:34, a tool manual) and from the link-less "Gerber file generation and review" concept (09:25)
+  - independent-check "various (pcb/00:23–24, pcb/04:36)" — spot-checked, all correct, no change: x-Chapters "NEW EXPANDED 2nd EDITION summer 2026! … new 100+ page chapter 'Sensors'" (https://x.artofelectronics.net/); LAoE 2nd ed. (Cambridge link slug on https://artofelectronics.net/); AN2867 Rev 24, February 2026, §7.1 "PCB design guidelines" (https://www.st.com/resource/en/application_note/an2867-guidelines-for-oscillator-design-on-stm8afals-and-stm32-mcusmpus-stmicroelectronics.pdf)
+  - independent-check STUDY-GUIDE.md:121 (inconsistent "(unverified…)" markers, pcb only) — pcb no longer carries any such marker; STUDY-GUIDE itself was out of scope
+  - pcb/07:43, pcb/blogs-and-references/README.md:65 — IEC 61326/61010 statements — confirmed at the IEC webstore: IEC 61326-1 "Electrical equipment for measurement, control and laboratory use – EMC requirements – Part 1" (2012 ed. withdrawn 2020-10-26 for the 2020 ed.); IEC 61010-1:2010 ed. 3.0 (+AMD1:2016) "Safety requirements for electrical equipment for measurement, control, and laboratory use – Part 1" — statements correct; Wikipedia link replaced with the IEC page and editions added — https://webstore.iec.ch/en/publication/5275 ; https://webstore.iec.ch/en/publication/4279
+  - This file's "To verify" lists (Proposed new sections A and B, and the Section 03 note) — ABCs of Probes, a production-fixture reference (JJS), a boundary-scan tool (Viveris) and PyVISA (cross-reference) went to 13; the ADI/Maxim MLCC article went to 03, the home for derating, which 12 already lists as a prerequisite; an open SMU design (J-SMU) went to 11, the home for open designs, with cross-references from 12
+  - pcb/02:29, pcb/blogs-and-references/README.md:24 — KiCAD_Template_Snyder returns 404 publicly — "(private repo — link works when signed in)" added; this session couldn't query the GitHub API for it
+- **Still unverified:**
+  - J-STD-048A's current notice windows — only the superseded JESD48C (6 months to final order, 12 months to final shipment) was readable; 048A needs JEDEC registration. The row says so.
+  - Author of Maxim AN5527 — not named on the ADI page.
+  - Presenter of the PDN video WnLRHuvl6Eg (Section 05) — oEmbed gives "Power Distribution Network" on NineDotConnects; the watch page returned HTTP 429, so Rick Hartley as presenter is still unconfirmed.
+  - KiCAD_Template_Snyder — private vs renamed is for Aaron to confirm.
+  - Considered, not added: UrJTAG (urjtag.org and SourceForge code pages block automated fetches, so BSDL and cable support couldn't be confirmed); ADALM1000 (verified at analog.com as an open-source-hardware SMU-style learning module, 0–5 V / ±200 mA, but J-SMU is closer to precision SMU work); OpenFixture (exists, but its README cites OpenSCAD ≥ 2015.03 and Ubuntu 14.04 and drives KiCad's old Python scripting interface).
+  - Not attempted (outside this pass's backlog): ST BSDL availability for the STM32 families in use; Brooks & Adam; Bogatin's *Practical Guide to Prototype Breadboard and PCB Design*; Wyatt & André; Ossmann's RF talk; Coombs; Holden; InteractiveHtmlBom; IPC-7352 status; USB-C layout notes; ST Nucleo design files; the GreatScott! handle.
+  - Rate limits: the Crossref works query for *Fast Circuit Boards* and the YouTube watch page above returned HTTP 429 and were not refetched.
+
+## Link-audit fixes (2026-10-13)
+| File:line | Was | Now | Evidence URL |
+|---|---|---|---|
+| pcb/00-electronics-fundamentals/README.md:26 ; pcb/courses/README.md:15 | GreatScott! at `youtube.com/@greatscaboratory` (no such channel) | `youtube.com/@greatscottlab` (link text and URL) | https://www.youtube.com/@greatscottlab |
+| pcb/02-schematic-capture/README.md:28 ; pcb/blogs-and-references/README.md:44 | SamacSys at `samacsys.com` (302 redirect; SamacSys is now part of Supplyframe) | `supplyframe.com/samacsys` (link text and URL) | https://supplyframe.com/samacsys |
+| pcb/11-reference-projects/README.md:30 | Raspberry Pi Hardware → `datasheets.raspberrypi.com` (302 redirect) | `pip.raspberrypi.com` (Raspberry Pi Product Information Portal); link text "Datasheets" kept | https://pip.raspberrypi.com/ |
+- Already fixed in the follow-up pass above: Dr. EMC (`@DrEMC` → `@DrEMC-sf8rx`, presenter Anton Tichenko) in 06, 07, README and courses/.
+- Left unchanged because the auditor could not load the page: the two 🔑 Rick Hartley YouTube *search* links (07:33 EMC lectures, 08:26 stackup lectures; replacing them with specific talks is still the ✱ above), NotebookLM (README:9, sign-in app), and Arduino reference designs (11:29), whose old URL now redirects to a "retired / older boards" docs page.
+
+## Tier lists (2026-10-13)
+No pcb section had more than 3 🔑 resource rows (36 in all; 04 and 09 were trimmed in the follow-up pass above; 10 has 1, 01, 03, 12 and 13 have 2, the rest 3), so no 🔑 was removed and the index files are unchanged; each Suggested Order (00–13) now opens with a "Core path (🔑)" line naming the section's 🔑 items in reading order.
+
+- books/README.md #20 Keithley, *Low Level Measurements Handbook* (7th ed): 🔑 added (core in 12)
+- pcb/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
+- pcb/README.md legend: 🔑⭐ row now says "a core-path item" instead of "a must-read"
+- pcb/README.md Key Educators: Dr. EMC removed (not core in any section; unmarked in 06 and 07)
+- pcb/README.md Key Educators: Altium Academy removed (not core in any section; unmarked in 01, 04 and 07)
+- Not changed, for Aaron: courses/README.md #8 KiCad Official Documentation stays unmarked. No section lists the docs as a whole, but one part, the KiCad Getting Started Guide, is core in 02. Add 🔑 if a part counts.
+- Second check (2026-10-13): `books/README.md` #12 Rick Hartley's Reading Recommendations: 🔑 removed (index-only; the ⭐ marks on the 12 books carry his list).

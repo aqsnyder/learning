@@ -33,6 +33,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Dave Jones's *PCB Design Tutorial* (2004) → Nine Dot Connects
+
 1. **PCB Design Tutorial Rev A** — Read end-to-end for a solid mental model of PCB structure (layers, vias, plating). Treat it as a 2004 snapshot: later sections correct its grounding and output-file advice.
 2. **Nine Dot Connects** — Explore their free articles and courses for professional-grade stackup and materials education.
 3. **Altium Academy Basics** — Watch the introductory videos on layers, stackups, and manufacturing.

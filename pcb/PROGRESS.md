@@ -48,6 +48,8 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Octopart cross-distributor search
 - [ ] JLCPCB parts library
 - [ ] Phil's Lab component selection guides
+- [ ] Maxim AN5527 — MLCC DC-bias and temperature derating (2012)
+- [ ] J-STD-048A / J-STD-046A — EOL and change-notification standards (2025)
 - [ ] 🛠️ Practice exercises 1–4
 - [ ] 🏗️ Mini-project: Release BOM with Locked and Flexible Lines
 - [ ] ✅ Check Yourself — answered from memory
@@ -70,7 +72,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Rick Hartley — Grounding lecture
 - [ ] Power Distribution Networks lecture
 - [ ] Phil's Lab power design tutorials
-- [ ] ⭐ *Fast Circuit Boards* — Morrison (2017)
+- [ ] ⭐ *Fast Circuit Boards* — Morrison (2018)
 - [ ] ⭐ *PDN Design Simplified* — Smith & Bogatin (2017)
 - [ ] Saturn PCB Toolkit practice
 - [ ] Decoupling strategy concepts
@@ -80,6 +82,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] ADI MT-101 — Decoupling Techniques (2009)
 - [ ] ADI MT-031 — Grounding Data Converters (AGND/DGND) (2008)
 - [ ] ADI AN-136 — Switching-regulator PCB layout (Henry Zhang)
+- [ ] FastHenry2 — 3D inductance cross-check (optional)
 - [ ] 🛠️ Practice exercises 1–4
 - [ ] 🏗️ Mini-project: PDN and Grounding Plan for a Mixed-Signal Board
 - [ ] ✅ Check Yourself — answered from memory
@@ -177,6 +180,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Antmicro Open Hardware Portal — study a high-speed KiCad board
 - [ ] ThunderScope — study the instrument front end
 - [ ] Glasgow Interface Explorer — study the I/O protection
+- [ ] J-SMU — study a complete source-measure unit
 - [ ] 🛠️ Practice exercises 1–4
 - [ ] 🏗️ Mini-project: Review One, Rebuild a Piece
 - [ ] ✅ Check Yourself — answered from memory
@@ -199,18 +203,21 @@ Track your progress through the PCB design curriculum. Check off items as you co
 ## Section 13 — Bring-up, Test and Debug
 - [ ] Staged bring-up plan and bring-up log
 - [ ] Probing and measurement technique
+- [ ] Tektronix — *ABCs of Probes* primer
 - [ ] *Debugging* — Dave Agans
 - [ ] Fault localization: shorts, opens and intermittents
 - [ ] XJTAG — What is JTAG? (boundary-scan primer)
 - [ ] XJTAG — Design for Test (DFT) Guidelines
+- [ ] Viveris JTAG Boundary Scanner — BSDL interconnect test
 - [ ] Production test: fixtures, sequencing, limits and traceability
+- [ ] JJS Manufacturing — Design Guidelines for In-Circuit Testability
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Pilot-Run Test Station
 - [ ] ✅ Check Yourself — answered from memory
 
 ## Books (supplementary)
 - [ ] *The Art of Electronics* — Horowitz & Hill
-- [ ] *Practical PCB Design* — Smith
+- [ ] *Practical PCB Design* — Smith (2026)
 - [ ] ⭐ *Signal and Power Integrity Simplified* — Bogatin
 - [ ] ⭐ *High-Speed Digital Design* — Johnson & Graham
 - [ ] ⭐ *EMC Engineering* — Ott

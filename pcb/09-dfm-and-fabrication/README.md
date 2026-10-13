@@ -22,7 +22,7 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
-| 🔑 | Concept | Gerber file generation and review | — | — | Output files, drill files, pick-and-place |
+| | Concept | Gerber file generation and review | — | — | Output files, drill files, pick-and-place |
 | 🔑 | Concept | DFM rules | — | — | Minimum trace/space, annular rings, solder mask dams |
 | 🔑 | Concept | DFA (Design for Assembly) | — | — | Solder paste stencil, component orientation, panelization, fiducials |
 | | Reference | IPC-2221 manufacturing guidelines | IPC | [Included](../documents/IPC-2221A(L).pdf) | The design-side rules fabrication depends on (annular rings, hole/land sizes, clearances, test coupons). IPC-2221 is a design standard; fabricated-board acceptance is covered by IPC-6012 / IPC-A-600. The included copy is Rev A (2003; current is IPC-2221C, 2023) |
@@ -40,6 +40,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** DFM rules → DFA (Design for Assembly) → JLCPCB capabilities page
 
 1. **Gerber file generation and review** — Understand the output files your fab house needs; skim the Ucamco spec's X2 attribute section.
 2. **DFM rules** — Learn the manufacturing constraints that drive your design decisions.

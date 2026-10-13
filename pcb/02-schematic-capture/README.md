@@ -25,8 +25,8 @@ After this section you can:
 | 🔑 | Course | KiCad Getting Started Guide (KiCad 10) | KiCad Project | [docs.kicad.org/10.0](https://docs.kicad.org/10.0/en/getting_started_in_kicad/getting_started_in_kicad.html) | Official documentation. KiCad 10.0 (March 2026) is the current release; it adds design variants (one schematic, several BOM variants) and a graphical DRC rule editor; reusable design blocks arrived in 9.0 |
 | | Tool | SnapEDA component library | — | [snapeda.com](https://www.snapeda.com/) | Verified symbols and footprints |
 | | Tool | Ultra Librarian | — | [ultralibrarian.com](https://www.ultralibrarian.com/) | CAD model downloads |
-| | Tool | SamacSys | — | [samacsys.com](https://www.samacsys.com/) | Free component libraries |
-| 🔑 | Reference | KiCad Template with Altium Theme | aqsnyder | [github.com/aqsnyder/KiCAD_Template_Snyder](https://github.com/aqsnyder/KiCAD_Template_Snyder) | Personal design starting point |
+| | Tool | SamacSys | — | [supplyframe.com/samacsys](https://supplyframe.com/samacsys) | Free component libraries |
+| 🔑 | Reference | KiCad Template with Altium Theme | aqsnyder | [github.com/aqsnyder/KiCAD_Template_Snyder](https://github.com/aqsnyder/KiCAD_Template_Snyder) | Personal design starting point (private repo — link works when signed in) |
 | | Video | Robert Feranec schematic review series | Robert Feranec | [youtube.com/@RobertFeranec](https://www.youtube.com/@RobertFeranec) | Learn from real design reviews |
 | | Reference | KiCad Library Conventions (KLC) | KiCad Library Team | [klc.kicad.org](https://klc.kicad.org/) | The official rules for symbols, footprints and 3D models: naming, pin and pad conventions, layers, courtyards. Adopt them in your own libraries so they stay consistent with the stock KiCad libraries |
 | | App Note | AN4488 — Getting started with STM32F4xxxx MCU hardware development (Rev 7, 2018) | STMicroelectronics | [PDF](https://www.st.com/resource/en/application_note/an4488-getting-started-with-stm32f4xxxx-mcu-hardware-development-stmicroelectronics.pdf) | Schematic checklist for an STM32 board: supplies and decoupling, VDDA/VREF+, reset, clocks, boot pins, SWD/JTAG, plus a reference schematic and layout notes. ST publishes an equivalent "Getting started with … hardware development" note for each family, so use the one for yours |
@@ -36,6 +36,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** KiCad 10 Getting Started Guide → KiCad template (Altium theme) → Phil's Lab schematic tutorials
 
 1. **KiCad Getting Started Guide** — Walk through the official tutorial to learn the EDA environment.
 2. **KiCad Template with Altium Theme** — Set up your personal template so every new project starts consistently.

@@ -24,7 +24,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
 | 🔑 | Video Series | Robert Feranec BGA routing and escape | Robert Feranec | [YouTube](https://www.youtube.com/@RobertFeranec) | BGA fanout strategies |
-| | Course | Tech Explorations KiCad Advanced (BGA, SI, High-Speed) | Tech Explorations | — | Advanced KiCad techniques. (Unverified: no matching course was found during review; verify it exists before paying.) |
+| | Course | KiCad Advanced: Design a smart USB thumb drive (KiCad 10, 2026) | Tech Explorations | [techexplorations.com](https://app.techexplorations.com/courses/kicad-advanced-bga-signal-integrity-and-high-speed-layout/) | Project course (9 sections, 94 lectures; enrollment required) built around one two-layer USB thumb drive: BGA routing and via-in-pad, USB 2.0 differential pairs and signal integrity, eMMC length matching, stackup and impedance control, and manufacturing outputs. The course page names no instructor. |
 | | Video Series | Phil's Lab advanced designs (STM32, FPGA boards) | Phil's Lab | [YouTube](https://www.youtube.com/@PhilsLab) | Real complex project walkthroughs |
 | | Concept | BGA escape routing and via-in-pad | — | — | Advanced package routing strategies |
 | | Concept | Thermal management | — | — | Thermal vias, copper pours, heatsink integration |
@@ -41,13 +41,15 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Robert Feranec BGA routing series
+
 1. **BGA escape routing and via-in-pad** — Understand the concept before watching the tutorials.
 2. **Robert Feranec BGA routing series** — Watch expert BGA fanout strategies in action.
 3. **Thermal management** — Learn thermal vias, copper pours, and heatsink integration techniques, with TI AN-2020 as the worked reference.
 4. **Open Source Thermal Simulation** — Simulate DC current density and Joule heating in your own high-current copper (KiCad → Salome → ElmerFEM).
 5. **Phil's Lab advanced designs** — Study complete complex project walkthroughs (STM32, FPGA).
 6. **openEMS + gerber2ems** — Check a critical trace or transition with a field solver instead of trusting a closed-form calculator.
-7. **Tech Explorations KiCad Advanced** — Deepen your EDA tool skills for advanced designs (unverified course; confirm it exists first).
+7. **Tech Explorations — KiCad Advanced (USB thumb drive)** — A guided KiCad 10 project: BGA fanout with via-in-pad, USB 2.0 pairs and eMMC length matching. Compare its BGA approach with Feranec's after Practice 2.
 8. **KiCad IPC API + kicad-python** — Automate repetitive editor tasks with the supported API.
 9. **RF PCB design basics** — Explore microstrip, stripline, and antenna matching fundamentals.
 10. **Flex and rigid-flex PCB design** — Learn when and how to use flexible circuits.

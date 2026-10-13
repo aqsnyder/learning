@@ -53,16 +53,18 @@ After this section you can:
 | | 💡 Concept | Source-measure (force/sense) architecture | — | — | A force amplifier with Kelvin sense at the DUT, current measured across range resistors or with a transimpedance stage, compliance limits, and glitch-free range changes. Loop stability depends on the load, so capacitive DUTs and cables matter. |
 | | 💡 Concept | High-gain sensor front ends: dynamic range and overload recovery | — | — | AC coupling, gain distribution and filter time constants set how long one large event blinds the channel, and dielectric absorption in the coupling capacitors stretches the tail. Design for recovery as deliberately as for noise. |
 
-**Also used here (tracked in their home sections):** TI Precision Labs — Op Amps and LTspice ([Section 00](../00-electronics-fundamentals/README.md)); your STM32 family's hardware getting-started note, for VDDA/VREF+ ([Section 02](../02-schematic-capture/README.md)); MT-031 and ⭐ Morrison, *Grounding and Shielding* ([Section 05](../05-power-and-grounding/README.md)); ThunderScope, an open instrument front end to study ([Section 11](../11-reference-projects/README.md)).
+**Also used here (tracked in their home sections):** TI Precision Labs — Op Amps and LTspice ([Section 00](../00-electronics-fundamentals/README.md)); your STM32 family's hardware getting-started note, for VDDA/VREF+ ([Section 02](../02-schematic-capture/README.md)); MT-031 and ⭐ Morrison, *Grounding and Shielding* ([Section 05](../05-power-and-grounding/README.md)); ThunderScope, an open instrument front end to study, and J-SMU, an open DIY source-measure unit with published schematics and KiCad files ([Section 11](../11-reference-projects/README.md)); PyVISA for instrument control in the mini-project ([Software Section 13](../../software/13-hil-testing-and-lab-automation/README.md)).
 
 ## Suggested Order
+
+**Core path (🔑):** *Op Amp Applications Handbook* Section 7 → Keithley *Low Level Measurements Handbook*
 
 1. **Precision analog & mixed-signal layout + *Op Amp Applications Handbook* Section 7** — Read the hardware-and-housekeeping chapter end to end (passive-component errors, Kelvin feedback, grounding, leakage and guarding). It is the map for everything below.
 2. **Signal-chain error budgets and calibration** — Extend your Section 00 high-impedance budget to a full calibrated chain (Practice 1).
 3. ***Low Level Measurements Handbook*** — Read the guarding, leakage, noise and 4-wire material, then the SMU material before designing any source/measure channel.
 4. **TI Precision Labs — ADCs** — Work through SAR vs delta-sigma, ADC noise, SAR input-driver design and driving the reference input; re-read MT-031 (Section 05) for converter grounding.
 5. **ADC drive, references and mixed-signal partitioning** — Apply it in Practice 2–3.
-6. **Source-measure (force/sense) architecture** — Then Practice 4.
+6. **Source-measure (force/sense) architecture** — Skim J-SMU's schematics (Section 11) to see a whole instrument, then Practice 4.
 7. **High-gain sensor front ends** — Then Practice 5.
 8. ***Basic Linear Design* / *Linear Circuit Design Handbook*** — Use Chapter 12 and the amplifier and converter chapters as the second reference.
 9. **Mixed-Signal Hardware Design with KiCad (Phil's Lab)** — See a whole mixed-signal board designed and laid out before the mini-project.
@@ -96,8 +98,9 @@ After this section you can:
    - Measure loop gain and phase margin with an injection probe (Middlebrook or Tian method) for every load × range combination.
    - Add compensation until stable: an isolation resistor inside the sense loop with a feedback capacitor, or per-range switched compensation.
    - Simulate a 10 mA → 100 µA range change with make-before-break switching while the DUT draws 50 µA.
+   - Compare your compensation and range-switching scheme with J-SMU's published schematics (Section 11): note one choice you would copy and one you would not, with the reason.
 
-   Deliverable: LTspice files + phase-margin matrix + range-change transient. Done when phase margin is ≥ 45° in every cell and the range-change glitch at the DUT stays below 1 % of the forced voltage. *(~5 h · Low Level Measurements Handbook (SMU architecture), TI Precision Labs — Op Amps (stability) and LTspice (Section 00))*
+   Deliverable: LTspice files + phase-margin matrix + range-change transient + the J-SMU comparison note. Done when phase margin is ≥ 45° in every cell and the range-change glitch at the DUT stays below 1 % of the forced voltage. *(~5.5 h · Low Level Measurements Handbook (SMU architecture), TI Precision Labs — Op Amps (stability) and LTspice (Section 00), J-SMU (Section 11))*
 5. **Overload recovery in a high-gain AC-coupled front end** — Take the ~70 dB, ~0.5–10 Hz two-stage band-pass from Section 00 Practice 4, or your own sensor amplifier.
    - In LTspice, rail both stages for 200 ms, then measure the time until the output is back inside the noise floor and a second, small event is detectable. Identify which coupling capacitor and time constant dominate.
    - Compare three fixes: (a) redistribute gain (less analog gain, more ADC resolution or oversampling, digital filtering); (b) a DC-servo integrator loop instead of a large coupling capacitor; (c) a fast-settle switch or MCU-driven blanking that discharges the coupling node after an overload.
@@ -107,7 +110,7 @@ After this section you can:
 
 **🏗️ Mini-project — Precision Current-Measurement Channel:** Build the channel from Practice 1 on a 4-layer board, or populate the precision-channel block from Section 04.
 - **Board:** Kelvin shunts per range, a guarded path for the lowest range, the ADC driver and reference from Practice 2, an STM32U5 controller with USB, and a guard-ring leakage test structure.
-- **Automation:** Python (PyVISA if you have bench instruments) steps currents with a source or SMU against a precision DMM as reference, logs readings and board temperature, and fits gain and offset.
+- **Automation:** Python (PyVISA if you have bench instruments; see Software Section 13) steps currents with a source or SMU against a precision DMM as reference, logs readings and board temperature, and fits gain and offset.
 - **Characterization:**
   - accuracy on every range before and after two-point calibration, against the Practice 1 budget
   - 0.1–10 Hz noise per range

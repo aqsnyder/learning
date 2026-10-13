@@ -14,9 +14,9 @@ This repository is a structured curriculum for self-studying PCB (Printed Circui
 
 | Symbol | Meaning |
 |--------|---------|
-| 🔑 | **Must-read / must-watch** — absolute priority items |
+| 🔑 | **Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first |
 | ⭐ | **Rick Hartley's recommended reading** — from his curated list for PCB designers (books only; his own talks are not on the list) |
-| 🔑⭐ | Both — a must-read that's also on Rick's list |
+| 🔑⭐ | Both — a core-path item that's also on Rick's list |
 
 ---
 
@@ -85,8 +85,6 @@ Source: [documents/Ricks-Reading-Recommendation.pdf](documents/Ricks-Reading-Rec
 | **Robert Feranec** | [YouTube](https://www.youtube.com/@RobertFeranec) | High-speed design, layout reviews, industry interviews |
 | **Rick Hartley** | Various (Altium, Sierra Circuits) | Signal integrity, EMC, grounding, stackup |
 | **EEVblog** | [YouTube](https://www.youtube.com/@EEVblog) | Electronics fundamentals, teardowns |
-| **Dr. EMC** | [YouTube](https://www.youtube.com/@DrEMC) | EMC simulation and practical design (unverified channel; see the note in [Section 06](06-signal-integrity/)) |
-| **Altium Academy** | [YouTube](https://www.youtube.com/@AltiumAcademy) | Broad PCB education, expert interviews |
 
 ---
 

@@ -27,11 +27,12 @@ After this section you can:
 | | Open Source | Adafruit open-source boards | [GitHub](https://github.com/adafruit) | Massive library of beginner-friendly reference designs |
 | | Open Source | SparkFun open-source boards | [GitHub](https://github.com/sparkfun) | Well-documented hobby/pro designs |
 | | Open Source | Arduino reference designs | [Link](https://www.arduino.cc/en/Main/Boards) | Simple but well-documented |
-| 🔑 | Open Source | Raspberry Pi Hardware | [Datasheets](https://datasheets.raspberrypi.com/) | Production-quality reference designs |
+| 🔑 | Open Source | Raspberry Pi Hardware | [Datasheets](https://pip.raspberrypi.com/) | Production-quality reference designs |
 | | Open Source | OLIMEX open-source hardware | [GitHub](https://github.com/OLIMEX) | European OSHW designs |
 | 🔑 | Open Source | Antmicro Open Hardware Portal | [openhardware.antmicro.com](https://openhardware.antmicro.com/) | Professional open boards designed in KiCad, including DDR4/DDR5 RDIMM testers, an LPDDR4 test board, Thunderbolt-to-PCIe and 10GbE adapters, and a USB-C PD adapter. Schematics, BOMs, stackup views and 3D models are browsable. The closest thing to studying a high-speed consultancy's production KiCad work |
 | | Open Source | ThunderScope | [GitHub](https://github.com/EEVengers/ThunderScope) | Open-source 4-channel, 1 GS/s oscilloscope streaming over Thunderbolt/USB4 (MIT licence). The baseboard is in Altium (KiCad can import it), and the FPGA module is in both Altium and KiCad. A rare open look at a real instrument's front end and high-speed data path |
 | | Open Source | Glasgow Interface Explorer | [GitHub](https://github.com/GlasgowEmbedded/glasgow) | OSHWA-certified, FPGA-based tool for exploring digital interfaces, designed to survive operator error. Study its I/O protection and how a small USB instrument is partitioned |
+| | Open Source | J-SMU (DIY source-measure unit) | [GitHub](https://github.com/jaromir-sukuba/J-SMU) | A complete hobbyist SMU by GitHub user jaromir-sukuba (designed 2020–2021), inspired by the Keithley 236: 12 V and 120 V bipolar voltage ranges, six bipolar current ranges from 1 µA to 100 mA full scale, and a claimed 100 µV / 1 pA resolution. KiCad 5.1 sources, schematic PDFs, Gerbers and interactive BOMs are published. A rare open design that shows a whole source-measure instrument, from the output stage and current ranging down to its control electronics. The repo has no licence file, so study it but don't copy it into a product; its 120 V range is hazardous if you build one |
 | | Concept | Design reviews | — | Watch Robert Feranec's schematic and layout review videos to learn critical thinking |
 
 **Also used here (tracked in their home sections):** IPC-2221A §3.5 test guidance ([Section 09](../09-dfm-and-fabrication/README.md)) for Practice 1; the IPC-2221A §6.4 equations ([Section 08](../08-multi-layer-and-stackup/README.md)) and Saturn PCB Toolkit ([Section 05](../05-power-and-grounding/README.md)) for Practice 2.
@@ -40,6 +41,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** HackRF One → Raspberry Pi hardware docs → Antmicro Open Hardware Portal
+
 1. **Adafruit / SparkFun / Arduino boards** — Start with simpler, well-documented designs to build your reading skills.
 2. **OLIMEX open-source hardware** — Explore European OSHW designs for different perspectives.
 3. **HackRF One** — Study a complex RF/mixed-signal design and its layout strategies.
@@ -47,8 +50,9 @@ After this section you can:
 5. **Raspberry Pi Hardware** — Analyze production-quality designs with professional stackups.
 6. **Antmicro Open Hardware Portal** — Read professional high-speed KiCad boards (DDR, PCIe, 10GbE, USB-C PD) layer by layer.
 7. **ThunderScope** — Examine an open instrument's analog front end and high-speed data path.
-8. **CommaAI hardware** — Examine how small, older vehicle-interface boards (CAN interface, harness) handle power-input protection and CAN robustness.
-9. **Robert Feranec design reviews** — Watch critical reviews of real designs to sharpen your eye.
+8. **J-SMU** — Trace a complete source-measure channel (output stage, current-range resistors and switching, the low-current input path) before you design your own in Section 12.
+9. **CommaAI hardware** — Examine how small, older vehicle-interface boards (CAN interface, harness) handle power-input protection and CAN robustness.
+10. **Robert Feranec design reviews** — Watch critical reviews of real designs to sharpen your eye.
 
 ---
 

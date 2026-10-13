@@ -38,6 +38,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Rick Hartley stackup lectures → Saturn PCB Toolkit → Feranec multi-layer series
+
 1. **Rick Hartley Stackup lectures** — Understand why stackup is the single most important design decision.
 2. **Saturn PCB Toolkit** — Install and experiment with impedance calculations for different stackups.
 3. **4-layer vs 6-layer vs 8-layer tradeoffs** — Learn when each layer count is appropriate.

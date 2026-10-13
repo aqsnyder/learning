@@ -36,7 +36,7 @@ After this section you can:
 | ⭐ | 📕 Book | High-Speed Digital System Design: A Handbook of Interconnect Theory and Design Practices (2000) | Stephen H. Hall, Garrett W. Hall, James A. McCall | [Wiley](https://gov.wiley.com/WileyCDA/WileyTitle/productCd-0471360902,descCd-description.html) | Interconnect theory and design practice from three Intel engineers. A compact, practical complement to Johnson & Graham. |
 | ⭐ | 📕 Book | Right the First Time, Vols I and II (2003, 2007) | Lee Ritchey | [Speeding Edge](https://speedingedge.com/product-category/handbook/) | Physics-first approach to high-speed PCB design. Practical rules derived from electromagnetic fundamentals. |
 | 🔑 | 🎥 Video Series | Robert Feranec — Signal Integrity and High-Speed Design | Robert Feranec | [YouTube](https://www.youtube.com/@RobertFeranec) | DDR routing, differential pairs, impedance control, and real-world high-speed design walkthroughs. |
-| | 🎥 YouTube Channel | Dr. EMC | Dr. EMC | [YouTube](https://www.youtube.com/@DrEMC) | Transmission lines, simulation, and EMC theory. Excellent visual explanations of field behavior. (Unverified: no presenter is named, and the only channel titled "Dr. EMC" found in search uses the handle `@DrEMC-sf8rx`. Check it before investing time.) |
+| | 🎥 YouTube Channel | Dr. EMC | Anton Tichenko | [YouTube](https://www.youtube.com/@DrEMC-sf8rx) | Electromagnetics and EM-compliance videos by a practising electronics design engineer (per the channel's About page: a principal electronics design engineer doing PhD research at the University of Surrey's 6G Innovation Centre). Use the videos that match this section's topics as field-intuition companions to Bogatin. |
 | | 🔧 Tool | UltraCAD Calculators | — | [Website](https://www.ultracad.com/calc.htm) | Impedance, trace width, and via calculations. Useful for quick design verification. For trace width vs. current, prefer an IPC-2152-based calculator such as Saturn (Section 05). |
 | | 💡 Concept | Controlled Impedance | — | — | What it means, how to specify it to your fab house, and why your stackup determines your trace geometry. |
 | | 💡 Concept | Differential Pairs | — | — | Routing rules, coupling, and when to use differential signaling (USB, LVDS, Ethernet, DDR). |
@@ -48,8 +48,10 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Bogatin's *Signal and Power Integrity — Simplified* → Feranec SI and high-speed videos → Johnson & Graham's *Black Magic*
+
 1. **Signal and Power Integrity — Simplified** — Start with Bogatin; read at least the first half for core concepts
-2. **Dr. EMC** — Watch transmission line and field visualization videos to build intuition (unverified channel; check it first, otherwise go straight on)
+2. **Dr. EMC** — Optional: electromagnetics videos for field intuition alongside Bogatin
 3. **Robert Feranec SI and high-speed design** — See practical application: DDR routing, differential pairs
 4. **Controlled impedance** — Understand how to specify impedance to your fab house
 5. **Return paths and reference planes** — Internalize where current actually flows (ties back to Rick Hartley's grounding lecture)

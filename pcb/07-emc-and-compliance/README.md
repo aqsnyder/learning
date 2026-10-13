@@ -32,7 +32,7 @@ After this section you can:
 | 🔑⭐ | 📕 Book | Electromagnetic Compatibility Engineering (2009) | Henry W. Ott | [DOI](https://doi.org/10.1002/9780470508510) | The definitive EMC reference. Comprehensive, rigorous, and practical. Every serious PCB designer should own this. |
 | 🔑 | 🎥 Video Series | Rick Hartley — EMC Lectures | Rick Hartley | [Search YouTube](https://www.youtube.com/results?search_query=Rick+Hartley+EMC) | Foundational EMC thinking from Altium Academy, Sierra Circuits, and conference talks. Rick connects grounding, SI, and EMC into one coherent framework. |
 | 🔑 | 🎓 Course | LearnEMC | Todd Hubing | [learnemc.com](https://learnemc.com/) | Free, structured EMC curriculum (levels K–12) by Todd Hubing covering coupling mechanisms, grounding, filtering, shielding, crosstalk and PCB layout, plus a weekly EMC question. The best free self-study path through this section. |
-| | 🎥 YouTube Channel | Dr. EMC | Dr. EMC | [YouTube](https://www.youtube.com/@DrEMC) | Practical EMC design and simulation. Clear explanations of radiation mechanisms and mitigation. (Unverified: no presenter is named, and the only channel titled "Dr. EMC" found in search uses the handle `@DrEMC-sf8rx`.) |
+| | 🎥 YouTube Channel | Dr. EMC | Anton Tichenko | [YouTube](https://www.youtube.com/@DrEMC-sf8rx) | Electromagnetics and EM-compliance videos by a practising electronics design engineer (see the Section 06 row). An optional companion to LearnEMC. |
 | | 📕 Book | Noise Reduction Techniques in Electronic Systems | Henry Ott | — | Classic predecessor to EMC Engineering. Foundational noise and interference concepts that remain relevant decades later. Not on Rick's list: his list names Ott's *EMC Engineering*, which grew out of this book. |
 | ⭐ | 📕 Book | PCB Design for Real-World EMI Control (2002) | Bruce R. Archambeault | [Springer](https://link.springer.com/978-1-4020-7130-0) | Board-level EMI from an IBM EMC engineer: what actually drives emissions from real PCBs and which common design "rules" hold up. |
 | ⭐ | 📕 Book | Digital Design for Interference Specifications: A Practical Handbook for EMI Suppression (2nd ed., 1999) | David L. Terrell, R. Kenneth Keenan | [Elsevier](https://shop.elsevier.com/books/digital-design-for-interference-specifications/terrell/978-0-08-057379-3) | Practical handbook for designing digital products that meet emissions limits the first time. |
@@ -40,14 +40,16 @@ After this section you can:
 | | 🎥 Video | Altium Academy — EMC Design Guidelines | Altium Academy | [YouTube](https://www.youtube.com/@AltiumAcademy) | EMC-focused design guidelines and best practices in Altium Designer. |
 | | 💡 Concept | Common Mode vs Differential Mode Noise | — | — | Understanding the two fundamental noise modes is essential for diagnosing and solving EMC problems. |
 | | 💡 Concept | Shielding, Filtering, and Ferrite Bead Selection | — | — | Practical mitigation techniques: when to shield, how to filter, and choosing the right ferrite bead for your frequency range. |
-| | 💡 Concept | FCC/CE Compliance Testing Overview | — | — | What the test process looks like, what standards apply, and how to design for compliance from the start. Test-and-measurement and lab equipment has its own product standards: IEC 61326 (EMC for measurement, control and laboratory equipment) and [IEC 61010](https://en.wikipedia.org/wiki/IEC_61010) (safety, including spacing requirements). Identify which ones apply before the first layout, not after. |
+| | 💡 Concept | FCC/CE Compliance Testing Overview | — | — | What the test process looks like, what standards apply, and how to design for compliance from the start. Test-and-measurement and lab equipment has its own product standards: IEC 61326-1 (EMC for measurement, control and laboratory equipment; current edition 2020) and [IEC 61010-1](https://webstore.iec.ch/en/publication/4279) (safety, including spacing requirements; edition 3.0, 2010, with Amendment 1, 2016). Identify which ones apply before the first layout, not after. |
 
 ## Suggested Order
+
+**Core path (🔑):** Rick Hartley EMC lectures → LearnEMC → Ott's *Electromagnetic Compatibility Engineering*
 
 1. **Rick Hartley EMC lectures** — Start here to see how grounding and SI principles connect to EMC
 2. **LearnEMC** — Work through the structured levels alongside the books
 3. **Electromagnetic Compatibility Engineering (Ott)** — Read the key chapters on coupling mechanisms, shielding, and filtering
-4. **Dr. EMC** — Watch practical EMC design and simulation videos (unverified channel; check it first, otherwise rely on LearnEMC)
+4. **Dr. EMC** — Optional: EM-compliance videos alongside LearnEMC
 5. **Common mode vs differential mode noise** — Understand the two noise modes before trying to fix EMC problems
 6. **Shielding, filtering, and ferrite bead selection** — Learn the practical mitigation toolkit
 7. **PCB Design for Real-World EMI Control (Archambeault)** — Board-level EMI, once Ott's fundamentals are in place
