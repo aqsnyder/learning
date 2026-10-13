@@ -2,7 +2,7 @@
 
 We fetched each arXiv link that was in the repo before this review (**116 unique URLs**) and checked its title, authors, and date against the citation text in its row.
 
-**Result:** 108 OK · 8 mismatches · 0 broken. All mismatches are fixed on this branch.
+**Result:** 108 OK · 8 mismatches · 0 broken. All mismatches are fixed.
 
 ## Mismatches (all fixed)
 

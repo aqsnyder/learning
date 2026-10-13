@@ -2,9 +2,10 @@
 
 **Scope:** all nine curricula: 110 sections, plus every README, PROGRESS, books, courses, and blogs file. Every file was read in full. Each curriculum was evaluated section by section and then repaired.
 
-Everything is on branch `review/2026-10-deep-dive`, in two passes, both committed on 2026-10-13. Each pass has one commit per curriculum plus one for the repo-level changes:
-- **First pass:** corrections, additions, the learning layer and 10 new sections.
-- **Follow-up pass:** the backlog the first pass ran out of web budget for, plus the tier lists you chose. See [Follow-up pass](#follow-up-pass-2026-10-13-backlog-finished).
+The work was done on branch `review/2026-10-deep-dive` and merged into master on 2026-10-13. It came in three passes:
+- **First pass:** corrections, additions, the learning layer and 10 new sections, in one commit per curriculum plus one for the repo-level changes.
+- **Follow-up pass:** the backlog the first pass ran out of web budget for, plus the tier lists you chose, in the same commit layout. See [Follow-up pass](#follow-up-pass-2026-10-13-backlog-finished).
+- **Final pass:** your decisions on the open questions, plus a main page and learning paths built for someone starting out, in one commit. See [Decisions made](#decisions-made-final-pass).
 
 Detailed section-by-section reviews: [ml](ml.md) · [math](math.md) · [physics](physics.md) · [bio](bio.md) · [econ](econ.md) · [philosophy](philosophy.md) · [pcb](pcb.md) · [btc](btc.md) · [software](software.md) · [link audit](link-audit.md) ([arXiv](link-audit-arxiv.md)) · [independent checks](independent-check.md)
 
@@ -177,15 +178,14 @@ You asked for my best calls on the open questions. Here is what was done:
 
 ---
 
-## Reviewing the branch
+## Reviewing the changes
+
+The review branch was merged into master on 2026-10-13 as a fast-forward, so its 21 commits sit unchanged in master's history. One small commit after them records the merge in these notes.
 
 ```bash
-git log --oneline master..review/2026-10-deep-dive     # 21 commits: two passes × (9 curricula + repo-level), then one final pass
-git diff --stat master...review/2026-10-deep-dive
-git switch review/2026-10-deep-dive
-python tools/check_repo.py              # expect: 0 problems
+git log --oneline 4c43272..6452b24     # the 21 review commits: two passes × (9 curricula + repo-level), then one final pass
+git diff --stat 4c43272 6452b24        # everything the review changed
+python tools/check_repo.py             # expect: 0 problems
 ```
 
-The branch exists only on your machine; nothing was pushed. When you're happy with it, merge it (`git switch master && git merge review/2026-10-deep-dive`) or cherry-pick the per-curriculum commits.
-
-When the branch was created, `ml/PROGRESS.md` and `ml/12-interpretability-and-alignment/README.md` showed as modified on master. `git diff -w` showed the only difference was line endings (CRLF vs LF). If `git switch` refuses because of those two files, run `git stash` first. You can drop the stash afterwards.
+`4c43272` is master as it was before the review.
