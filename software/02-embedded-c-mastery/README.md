@@ -21,13 +21,13 @@ After this section you can:
 
 | # | Type | Resource | Notes |
 |---|------|----------|-------|
-| 1 | 🔑 Book | *The C Programming Language* (K&R, 2nd ed) — Kernighan and Ritchie (1988) | The classic: short, precise, still worth reading. It covers ANSI C (C89) only, so pair it with *Modern C* or *Effective C* for C99 through C23 |
-| 2 | 🔑 Book | *Expert C Programming: Deep Secrets* — Peter van der Linden (1994) | Linking, memory, and advanced C |
+| 1 | Book | *The C Programming Language* (K&R, 2nd ed) — Kernighan and Ritchie (1988) | The classic: short, precise, still worth reading. It covers ANSI C (C89) only, so pair it with *Modern C* or *Effective C* for C99 through C23 |
+| 2 | Book | *Expert C Programming: Deep Secrets* — Peter van der Linden (1994) | Linking, memory, and advanced C |
 | 3 | 🔑 Book | *Making Embedded Systems* (2nd ed) — Elecia White (2024) | Best intro to embedded architecture and design patterns |
 | 4 | Book | *Embedded Software Design* — Jacob Beningo | Modern firmware architecture and maintainability |
 | 5 | Book | [*Embedded C Coding Standard*](https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard) — Barr Group | Minimizing bugs and improving portability |
 | 6 | 🔑 YouTube | [Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)](https://www.youtube.com/@StateMachineCOM) | Gold standard for embedded concepts and state machines |
-| 7 | 🔑 Blog | [Embedded Artistry](https://embeddedartistry.com/) | Modular, testable firmware architecture articles |
+| 7 | Blog | [Embedded Artistry](https://embeddedartistry.com/) | Modular, testable firmware architecture articles |
 | 8 | Blog | [Jacob Beningo](https://beningo.com/) | Firmware architecture best practices |
 | 9 | Course | FastBit Embedded Brain Academy (Udemy) | ARM Cortex-M, bare-metal, RTOS |
 | 10 | 🔑 Book | [*Modern C* (3rd ed)](https://gustedt.gitlabpages.inria.fr/modern-c/) — Jens Gustedt (2025) | C as it is written today, updated for C23 (ISO/IEC 9899:2024). The modern counterpart to K&R; the author also offers a free CC-licensed edition |
@@ -47,6 +47,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Modern C* → *Making Embedded Systems* → Quantum Leaps videos
 
 ```
 1. K&R (read cover-to-cover, it's short, but remember it stops at C89)

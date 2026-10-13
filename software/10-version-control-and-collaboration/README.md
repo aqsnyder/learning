@@ -45,6 +45,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Learn Git Branching → *Pro Git* ch. 1–3
+
 1. **Learn Git Branching (interactive)** — Start here. Build visual intuition for Git operations.
 2. **Pro Git (chapters 1–3)** — Read for a solid conceptual foundation. Reference later chapters as needed.
 3. **Branching strategies** — Understand Git Flow vs GitHub Flow vs trunk-based development.

@@ -30,7 +30,7 @@ After this section you can:
 |----------|------|----------|------------|------|-------------|
 | 🔑 | Web Resource | OWASP Top 10 | OWASP Foundation | [Link](https://owasp.org/www-project-top-ten/) | THE web vulnerability reference. Understand these ten categories and you'll catch the majority of web security issues in review. The 2025 edition adds Software Supply Chain Failures (A03) and Mishandling of Exceptional Conditions (A10). |
 | | Book | The Web Application Hacker's Handbook (2nd ed, 2011) | Dafydd Stuttard, Marcus Pinto | — | Practical web security from the attacker's perspective. Teaches you to think like an adversary when reviewing code. Dated: lead author Stuttard's company, PortSwigger, chose to build the free, continuously updated [Web Security Academy](https://portswigger.net/web-security) instead of a 3rd edition, so use that for hands-on labs. |
-| 🔑🤖 | Concept | Reviewing AI-generated code for security | — | — | AI often introduces: hardcoded secrets, SQL injection, improper input validation, unsafe deserialization. Build a mental checklist for every AI-generated PR. |
+| 🤖 | Concept | Reviewing AI-generated code for security | — | — | AI often introduces: hardcoded secrets, SQL injection, improper input validation, unsafe deserialization. Build a mental checklist for every AI-generated PR. |
 | | Concept | Secure C programming | — | — | Buffer overflows, format string vulnerabilities, integer overflow. The classic low-level attack surface — critical for embedded work. |
 | | Concept | Python security pitfalls | — | — | `eval()`, `pickle`, SSRF, path traversal. Python's dynamic nature makes it easy to write insecure code that *looks* clean. |
 | | Tool | Bandit | PyCQA | [Link](https://bandit.readthedocs.io/) | Python security linter. Run it on every AI-generated Python file before review. |
@@ -41,11 +41,13 @@ After this section you can:
 | 🔑 | Standard (Free) | SEI CERT C Coding Standard | Carnegie Mellon SEI (CERT) | [Link](https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard) | Rules and recommendations, each with noncompliant and compliant code, for the C vulnerabilities listed under "Secure C programming" above. Static analyzers commonly report findings against CERT rule IDs. |
 | 🤖 | Paper | We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs | Joseph Spracklen et al. (USENIX Security 2025) | [Link](https://arxiv.org/abs/2406.10279) | 576,000 samples from 16 code LLMs: at least 5.2% (commercial models) and 21.7% (open-source models) of suggested packages did not exist, names an attacker can register. Verify every dependency an agent adds. |
 | | Regulation | EU Cyber Resilience Act | European Commission | [Link](https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act) | Mandatory cybersecurity requirements for hardware and software "products with digital elements" sold in the EU. In force since 10 Dec 2024; vulnerability-reporting obligations apply from 11 Sep 2026, main obligations from 11 Dec 2027. Required reading for anyone shipping connected devices. |
-| | Framework (Free) | Threat Modeling Manifesto | Zoe Braiterman, Adam Shostack, et al. | [Link](https://www.threatmodelingmanifesto.org/) | The four questions (What are we working on? What can go wrong? What are we going to do about it? Did we do a good enough job?) plus values and anti-patterns. A methodology-agnostic frame to use before reaching for STRIDE. |
+| 🔑 | Framework (Free) | Threat Modeling Manifesto | Zoe Braiterman, Adam Shostack, et al. | [Link](https://www.threatmodelingmanifesto.org/) | The four questions (What are we working on? What can go wrong? What are we going to do about it? Did we do a good enough job?) plus values and anti-patterns. A methodology-agnostic frame to use before reaching for STRIDE. |
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** OWASP Top 10 → SEI CERT C Coding Standard → Threat Modeling Manifesto
 
 1. **OWASP Top 10** — Start here. Memorize the ten categories — they're the vocabulary of web security.
 2. **Reviewing AI-generated code for security** — Build your security review checklist specifically for AI output.

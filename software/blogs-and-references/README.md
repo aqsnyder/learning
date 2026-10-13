@@ -23,7 +23,7 @@
 
 | Priority | Resource | Link |
 |----------|----------|------|
-| 🔑 | Embedded Artistry | [embeddedartistry.com](https://embeddedartistry.com/) |
+| | Embedded Artistry | [embeddedartistry.com](https://embeddedartistry.com/) |
 | 🔑 | Interrupt (Memfault) | [interrupt.memfault.com](https://interrupt.memfault.com/) |
 | | Jacob Beningo | [beningo.com](https://beningo.com/) |
 | | Quantum Leaps (Miro Samek) | [state-machine.com](https://www.state-machine.com/) |

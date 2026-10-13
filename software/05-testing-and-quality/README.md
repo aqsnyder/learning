@@ -28,10 +28,10 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Book | Python Testing with pytest (2nd ed) | Brian Okken | 2022 | — | THE Python testing reference. Covers fixtures, parametrize, plugins, and real-world testing patterns. |
-| 🔑 | Concept | Testing pyramid | — | — | — | Unit, integration, end-to-end — know the right ratio and why most projects get it wrong. |
+| | Concept | Testing pyramid | — | — | — | Unit, integration, end-to-end — know the right ratio and why most projects get it wrong. |
 | | Book | Test Driven Development: By Example | Kent Beck | 2002 | — | TDD philosophy and practice. The red-green-refactor cycle and thinking through tests first. |
 | | Book | Working Effectively with Legacy Code | Michael Feathers | 2004 | — | Adding tests to untested code — a skill that's increasingly relevant when reviewing and integrating AI-generated output. |
-| 🔑🤖 | Practice | Review AI-generated tests | — | — | — | Critical skill: Do they test behavior or implementation? Do they cover edge cases? Are assertions meaningful? Or are they just making the coverage number go up? |
+| 🤖 | Practice | Review AI-generated tests | — | — | — | Critical skill: Do they test behavior or implementation? Do they cover edge cases? Are assertions meaningful? Or are they just making the coverage number go up? |
 | | Tool | pytest | — | — | [Link](https://docs.pytest.org/) | Python testing framework — the standard for Python projects. |
 | | Tool | pytest-cov | — | — | — | Code coverage analysis for pytest. Useful, but remember: coverage ≠ correctness. |
 | | Tool | Unity Test Framework | ThrowTheSwitch | — | [Link](http://www.throwtheswitch.org/unity) | Unit testing for embedded C. Lightweight, no stdlib dependency, works on bare-metal targets. |
@@ -42,11 +42,13 @@ After this section you can:
 | | Concept | Static analysis (mypy, pylint, cppcheck, clang-tidy) | — | — | — | Automated quality gates that catch type errors, style violations, and potential bugs before runtime. |
 | | Concept | CI/CD pipelines | — | — | — | Automated testing on every commit. Tests only matter if they run automatically and block broken code. |
 | 🔑 | Book | Test-Driven Development for Embedded C | James W. Grenning | 2011 | [Link](https://pragprog.com/titles/jgade/test-driven-development-for-embedded-c/) | The embedded TDD book, with Unity and CppUTest: test doubles, spies, and mocks for hardware-facing code, testing "right next to the hardware," and adding tests to legacy C. Read it before or while setting up Unity/CMock. |
-| | Book | Unit Testing Principles, Practices, and Patterns | Vladimir Khorikov | 2020 | [Link](https://www.manning.com/books/unit-testing) | Universal guidelines for judging whether a test is worth keeping, spotting test anti-patterns, and when mocks help or hurt (the classical vs. London schools). The best rubric for the "review AI-generated tests" practice above. |
+| 🔑 | Book | Unit Testing Principles, Practices, and Patterns | Vladimir Khorikov | 2020 | [Link](https://www.manning.com/books/unit-testing) | Universal guidelines for judging whether a test is worth keeping, spotting test anti-patterns, and when mocks help or hurt (the classical vs. London schools). The best rubric for the "review AI-generated tests" practice above. |
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Python Testing with pytest* → *Unit Testing Principles, Practices, and Patterns* → *Test-Driven Development for Embedded C*
 
 1. **Testing pyramid (concept)** — Understand the testing strategy landscape before writing any tests.
 2. **Python Testing with pytest** — Learn the primary Python testing tool hands-on.
@@ -85,7 +87,7 @@ After this section you can:
    - raw-to-°C conversion is exact at +25 °C, at −40 °C and for raw 0x8000;
    - an I²C NACK returns an error instead of hanging.
 
-   Enable the gcov plugin. Done when `ceedling gcov:all` shows at least 90% line coverage on the driver, and deleting any single guard turns a test red. *(~4 h · Unity, CMock and Ceedling (ThrowTheSwitch); Beck, Test Driven Development: By Example; Feathers on link seams)*
+   Enable the gcov plugin. Done when `ceedling gcov:all` shows at least 90% line coverage on the driver, and deleting any single guard turns a test red. *(~4 h · Unity, CMock and Ceedling (ThrowTheSwitch); Grenning, Test-Driven Development for Embedded C; Beck, Test Driven Development: By Example; Feathers on link seams)*
 4. **Characterize before you change** — Take an untested legacy script or C module: one of yours, or an AI-generated one from an earlier section. Before touching any logic:
    - pin its current behavior with characterization tests (golden files via `tmp_path`, captured output via `capsys`);
    - find a seam: an object seam in Python (inject the dependency), or a link seam in C (substitute a test double at link time).

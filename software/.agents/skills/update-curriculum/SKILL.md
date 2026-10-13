@@ -79,6 +79,8 @@ For each approved resource:
 
 3. **Update `software/README.md`** (its Key Resources table) if the new resource is a foundational addition
 
+4. **Update the cross-cutting pages** — add a book to `books/README.md` (and fix the title count in `software/README.md`), a tool, blog or newsletter to `blogs-and-references/README.md`, and a course or channel to `courses/README.md`
+
 ### 4. Summary
 
 After updating, provide a summary of:
@@ -117,7 +119,7 @@ Earlier AI-generated updates to this repo introduced fabricated authors, resourc
 3. **When in doubt, leave it out.** List doubtful or unverifiable candidates in your summary instead of adding them.
 4. **Correct, don't just append.** Fix wrong metadata in place. If a resource is superseded or dead, say so in its description and in your summary. (Append-only means don't silently delete — it does not mean leave errors.)
 5. **Keep the learning layer whole.** A new resource goes into the section table, its Suggested Order, and `PROGRESS.md`. A new section must ship with the full anatomy — Why · Prerequisites · 🎯 Learning Objectives · Resources · Suggested Order · 🛠️ Practice (+ 🏗️ mini-project) · ✅ Check Yourself — plus a PROGRESS block (see the root `.agents/skills/audit-curriculum/SKILL.md`). Append new sections at the next number and state where to take them; don't renumber.
-6. **Markers are closed lists.** ⭐ only for items on this curriculum's named list. Use 🔑 sparingly — aim for ~3 core items per section (many sections still exceed this; trim when you touch them rather than adding more).
+6. **Markers are closed lists.** ⭐ only for items on this curriculum's named list. Use 🔑 sparingly — at most 3 core items per section (trimmed to this on 2026-10-13). Each section's Suggested Order opens with a "**Core path (🔑):**" line naming its 🔑 items; if you add or remove a 🔑, update that line too.
 7. **Label speculation and advocacy as such** (e.g. unconfirmed theories, price models, vendor claims), and prefer measured evidence.
 8. **Run `python tools/check_repo.py`** from the repo root before finishing — it must report 0 problems.
 9. **One home per topic.** Check the overlap table in `STUDY-GUIDE.md`. If a resource's topic lives in another curriculum, cross-link to it there instead of adding a duplicate row.

@@ -30,9 +30,9 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
-| 🔑 | Book | Professional CMake: A Practical Guide (22nd ed) | Craig Scott | — | [Link](https://crascit.com/professional-cmake/) | Written by a CMake co-maintainer and revised continually; the 22nd edition covers CMake 4.2. For firmware, read the "Toolchains And Cross Compiling" chapter first and use the rest as a reference. Digital only (PDF/EPUB). |
+| 🔑 | Book | Professional CMake: A Practical Guide (22nd ed) | Craig Scott | — | [Link](https://crascit.com/professional-cmake/) | Written by a CMake co-maintainer and revised continually; the 22nd edition covers CMake 4.2. For firmware, read Ch. 24 "Toolchains And Cross Compiling" first and use the rest as a reference. Digital only (PDF/EPUB). |
 | 🔑 | Tool | OpenOCD (Open On-Chip Debugger) | OpenOCD project | 2023 (0.12.0) | [Link](https://openocd.org/) | Open-source debug server: drives ST-LINK, J-Link and CMSIS-DAP probes over SWD/JTAG, programs flash, and serves GDB. Release 0.12.0 added flash support for STM32U57x/U58x; check that your exact part is supported. Many IDE debug configurations run OpenOCD or a vendor GDB server underneath. |
-| | Tool | SEGGER RTT (Real Time Transfer) | SEGGER | — | [Link](https://kb.segger.com/RTT) | Bidirectional I/O through ring buffers in target RAM, read by a J-Link over SWD while the core runs. It needs no extra pins, is far faster than semihosting, and works on parts with no SWO pin. In non-blocking mode the firmware keeps its real-time behavior with no host attached. SEGGER documents it for J-Link probes; if you use another probe, check whether your debug server supports RTT. |
+| | Tool | SEGGER RTT (Real Time Transfer) | SEGGER | — | [Link](https://kb.segger.com/RTT) | Bidirectional I/O through ring buffers in target RAM, read by a J-Link over SWD while the core runs. It needs no extra pins, is far faster than semihosting, and works on parts with no SWO pin. In non-blocking mode the firmware keeps its real-time behavior with no host attached. SEGGER documents it for J-Link probes. OpenOCD also implements RTT for any target whose memory it can read in the background (`rtt setup`, `rtt start`, and `rtt server start` to expose a channel on a TCP port; see its [General Commands](https://openocd.org/doc-release/html/General-Commands.html) chapter), so you don't need a J-Link to use it. |
 | | Tool | sigrok / PulseView | sigrok project | — | [Link](https://sigrok.org/) | Open-source (GPL) signal-analysis suite for logic analyzers, scopes, multimeters and other bench gear, with stackable protocol decoders written in Python. PulseView is the GUI; the command-line frontend lets test scripts capture and decode. |
 | | Tool | MCUboot | MCUboot project (mcu-tools) | — | [Link](https://docs.mcuboot.com/) | Open-governance secure bootloader for 32-bit MCUs: a common flash layout for updates, image signing and key management with `imgtool`, optional encrypted images, and serial recovery via MCUmgr. Runs under Zephyr, NuttX, Mynewt and others. Worth reading even if you keep your own bootloader. |
 | | Concept | Linker scripts, map files, and memory budgets | — | — | [Sec 07](../07-embedded-systems-and-rtos/README.md) | Memory regions and output sections, how `.data` is copied and `.bss` zeroed, `.noinit` RAM, bootloader and application slots, code in RAM, and reading a map file to see what is eating flash. Start from the linker-script and newlib parts of *From Zero to main()* in Section 07. |
@@ -44,6 +44,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Professional CMake* Ch. 24 → OpenOCD
 
 1. **Linker scripts, map files, and memory budgets** — Re-read the linker-script and newlib parts of *From Zero to main()* (Section 07) with your own project's linker script and map file open.
 2. **Professional CMake** — Read "Toolchains And Cross Compiling", then write a toolchain file and presets for your board.
@@ -83,7 +85,7 @@ After this section you can:
    - semihosting `printf`;
    - UART `printf`;
    - SWO/ITM;
-   - RTT (needs a J-Link, or a debug server that supports RTT);
+   - RTT (through a J-Link, or through OpenOCD's `rtt` commands with another probe);
    - a GPIO toggle captured with sigrok/PulseView.
 
    For each, measure the extra ISR time with the DWT cycle counter, and the highest message rate you can sustain before you lose data or miss interrupts. Deliverable: a one-page table and a rule of thumb for which channel to use when. Semihosting should come out orders of magnitude worse than RTT; explain why from how each one works. *(~4 h · SEGGER RTT; sigrok/PulseView; Yiu's guide on debug and trace (Section 07))*
@@ -93,16 +95,16 @@ After this section you can:
    - protect the record with a CRC.
 
    Emit the record as one machine-readable line over RTT or UART. Then write a Python decoder that classifies it and turns addresses into `file:line` from the ELF (`arm-none-eabi-addr2line`). Soak test: a host script uses the Section 02 command shell to trigger a random fault, watchdog hang or clean reset, 500 times. Done when the decoder's classification matches the injected cause every time. *(~6 h · HardFault article and Interrupt blog (Section 07); OpenOCD + GDB to check individual cases)*
-5. **Updates that can't brick the device** — Bring up MCUboot on a dev board with two image slots and `imgtool`-signed images; a Zephyr sample is the shortest path. Demonstrate that:
-   - an unsigned or corrupted image is rejected;
-   - a test upgrade that never confirms itself is reverted on the next reset;
-   - cutting power at random moments during 20 upgrades never leaves the board unbootable.
+5. **Updates that can't brick the device** — Bring up MCUboot on a dev board with two image slots, a swap-based upgrade mode and `imgtool`-signed images; a Zephyr sample is the shortest path. Demonstrate that:
+   - with signature checking enabled in the bootloader build, an unsigned or corrupted upgrade image is rejected and the old image keeps booting (MCUboot checks an image's integrity before copying it into the primary slot);
+   - a test upgrade that never marks itself OK is reverted on the next reset;
+   - cutting power at random moments during 20 upgrades never leaves the board unbootable. MCUboot's design relies on a swap-status region to resume a swap that a reset interrupted; this is where you find out whether that holds on your flash.
 
    Then map MCUboot's mechanisms onto your threat model from the Section 08 mini-project ("Hardened Firmware Update Path"): which threats does it cover, and which remain yours? *(~6 h · MCUboot docs; Section 08 mini-project)*
 
 **🏗️ Mini-project — Agent-Ready Firmware Harness:** Extract the build, debug and observability infrastructure from your Section 07 data logger into a reusable template for STM32U5-class boards. A person or a coding agent must be able to drive it from the command line. Include:
 - the CMake/presets build from exercise 2, with the flash and RAM budgets from exercise 1 enforced in CI;
-- `flash`, `debug` and `run-tests` scripts around OpenOCD (plus RTT if you have a J-Link);
+- `flash`, `debug` and `run-tests` scripts around OpenOCD, with RTT through OpenOCD's RTT server or a J-Link;
 - structured, timestamped logging over RTT or UART;
 - the reset telemetry and host decoder from exercise 4;
 - an AGENTS.md that documents every command and what "done" means.

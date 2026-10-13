@@ -24,14 +24,15 @@ After this section you can:
 | 1 | 🔑 Book | *Fluent Python* (2nd ed) — Luciano Ramalho (2022) | THE Python mastery book. Understand the data model, generators, async, and metaprogramming |
 | 2 | 🔑 Book | *Effective Python* (3rd ed) — Brett Slatkin (2024) | 125 specific ways to write better Python |
 | 3 | 🔑 Book | *Robust Python* — Patrick Viafore (2021) | Type hints, boundaries, and disciplined design |
-| 4 | 🔑 Book | [*Architecture Patterns with Python*](https://www.cosmicpython.com/) — Percival and Gregory | DDD, repository pattern, event-driven architecture in Python (free online) |
+| 4 | Book | [*Architecture Patterns with Python*](https://www.cosmicpython.com/) — Percival and Gregory | DDD, repository pattern, event-driven architecture in Python (free online) |
 | 5 | Book | *Hypermodern Python Tooling* — Claudio Jolowicz (2024) | Modern project setup: uv, Hatch, Poetry, Nox, pytest, Ruff, mypy, pre-commit |
-| 6 | 🔑 Docs | [Python Type Hints (`typing` module)](https://docs.python.org/3/library/typing.html) | Essential for reading modern Python |
+| 6 | Docs | [Python Type Hints (`typing` module)](https://docs.python.org/3/library/typing.html) | Essential for reading modern Python |
 | 7 | Tool | mypy / pyright | Static type checkers — catch bugs before running code |
 | 8 | Tool | [uv](https://github.com/astral-sh/uv) | Modern Python package management |
 | 9 | Tool | [ruff](https://github.com/astral-sh/ruff) | Fast linter and formatter |
 | 10 | Website | [Real Python](https://realpython.com/) | High-quality Python tutorials |
-| 11 | Docs | [What's New in Python](https://docs.python.org/3/whatsnew/index.html) (3.13 → 3.15) | Read the notes for every version you ship on. 3.13 (2024) added an experimental free-threaded (no-GIL) build and a basic JIT; 3.14 (2025) made free-threading officially supported (PEP 779) and annotations lazily evaluated (PEP 649/749); 3.15 (Oct 2026) adds explicit lazy imports (PEP 810) and a built-in sampling profiler (PEP 799). Pair with the [free-threading HOWTO](https://docs.python.org/3/howto/free-threading-python.html) before trusting C extensions under threads |
+| 11 | Docs | [What's New in Python](https://docs.python.org/3/whatsnew/index.html) (3.13 → 3.15) | Read the notes for every version you ship on. 3.13 (Oct 2024) added an experimental free-threaded (no-GIL) build and a basic JIT, off by default; 3.14 (Oct 2025) made free-threading officially supported (PEP 779) and annotations lazily evaluated (PEP 649/749); 3.15 (9 Oct 2026) adds explicit lazy imports (PEP 810), a `profiling` package with a sampling profiler (PEP 799) and a stable ABI for free-threaded builds (PEP 803). The JIT is still labelled experimental in 3.15. Pair with the [free-threading HOWTO](https://docs.python.org/3/howto/free-threading-python.html) before trusting C extensions under threads |
+| 12 | Book | [*High Performance Python* (3rd ed)](https://www.oreilly.com/library/view/high-performance-python/9781098165956/) — Micha Gorelick and Ian Ozsvald (2025) | Profile before you optimize: read ch. 2 "Profiling to Find Bottlenecks" first, then only the chapters your bottleneck needs (NumPy, pandas/Polars, compiling to C, asyncio, multiprocessing, using less RAM). Ch. 1 covers where the GIL and the JIT are heading |
 
 ### Key Concepts
 
@@ -45,6 +46,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** *Effective Python* → *Fluent Python* → *Robust Python*
+
 ```
 1. Effective Python (quick wins, immediately applicable)
 2. Fluent Python (deep mastery of the language)
@@ -52,6 +55,7 @@ After this section you can:
 4. Architecture Patterns with Python (scaling to real systems)
 5. Hypermodern Python Tooling (polish your dev environment)
 6. What's New in Python 3.13 → 3.15 (skim each release; re-read before upgrading a tool or test rig)
+7. High Performance Python (when something is slow: profile first, then optimize)
 ```
 
 ---
@@ -71,7 +75,7 @@ After this section you can:
    - `+ - *` with scalars and with same-`dt` Traces, raising on mismatched `dt` or units.
 
    Done when a ~15-case pytest suite passes, `3 * t` works and `sum([t1, t2, t3])` works. Then explain why the last one needed `__radd__`. *(~3 h · Fluent Python ch. 1 "The Python Data Model", ch. 12 "Special Methods for Sequences", ch. 16 "Operator Overloading")*
-3. **Constant-memory capture pipeline** — Generate a ~2 GB CSV of synthetic ADC samples (`timestamp, channel, counts`). Compute per-channel RMS over 1-second windows in two ways: list-based, and as a generator pipeline (`read → parse → window → reduce` with `itertools`). For 0.2, 1 and 2 GB inputs, measure runtime and peak memory with `tracemalloc.get_traced_memory()`. (Parsed Python rows take several times the file size in RAM, so run the list-based version only at the sizes your machine can hold.) Done when both outputs agree to floating-point tolerance and the generator version's peak memory stays flat as the input grows 10×. *(~3 h · Fluent Python ch. 17 "Iterators, Generators, and Classic Coroutines"; Effective Python's comprehensions-and-generators items)*
+3. **Constant-memory capture pipeline** — Generate a ~2 GB CSV of synthetic ADC samples (`timestamp, channel, counts`). Compute per-channel RMS over 1-second windows in two ways: list-based, and as a generator pipeline (`read → parse → window → reduce` with `itertools`). For 0.2, 1 and 2 GB inputs, measure runtime and peak memory with `tracemalloc.get_traced_memory()`. (Parsed Python rows take several times the file size in RAM, so run the list-based version only at the sizes your machine can hold.) Before optimizing anything, profile the list-based version with `cProfile` (on 3.15, also try the `profiling.sampling` profiler) and name the hottest function. Done when both outputs agree to floating-point tolerance and the generator version's peak memory stays flat as the input grows 10×. *(~3 h · Fluent Python ch. 17 "Iterators, Generators, and Classic Coroutines"; Effective Python's comprehensions-and-generators items; High Performance Python ch. 2 "Profiling to Find Bottlenecks")*
 4. **Read `contextlib`, then write your own** — Read `_GeneratorContextManager` in CPython's `Lib/contextlib.py` and `update_wrapper` in `Lib/functools.py`. Write a 10-line annotation covering two things: how an exception raised inside a `with` block gets thrown into the generator, and what happens if the generator swallows it. Then write:
    - (a) `@retry(times=3, on=(TimeoutError,), backoff_s=0.1)`, preserving `__name__`, `__doc__`, `__wrapped__` and `inspect.signature`;
    - (b) an `instrument_session()` context manager (via `@contextmanager`) that always sends "output off".

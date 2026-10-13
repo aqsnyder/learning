@@ -31,6 +31,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] uv and ruff tooling setup
 - [ ] Real Python tutorials
 - [ ] What's New in Python 3.13 → 3.15 (+ free-threading HOWTO)
+- [ ] *High Performance Python* (3rd ed) — Gorelick & Ozsvald
 - [ ] Data model (__dunder__ methods)
 - [ ] Generators and lazy evaluation
 - [ ] Decorators and context managers
@@ -192,7 +193,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Building effective agents — Schluntz & Zhang (Anthropic)
 - [ ] METR developer-productivity study (2025) + Feb 2026 update
 - [ ] DORA State of AI-assisted Software Development 2025
-- [ ] Effective context engineering for AI agents — Anthropic
+- [ ] Effective context engineering for AI agents — Rajasekaran et al. (Anthropic)
 - [ ] Claude Code best practices — Anthropic
 - [ ] AGENTS.md
 - [ ] Model Context Protocol (MCP)
@@ -230,6 +231,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Technical documentation writing
 - [ ] Diátaxis documentation framework — Procida
 - [ ] Estimating and planning
+- [ ] *Software Estimation: Demystifying the Black Art* — McConnell
 - [ ] Mentoring and code review culture
 - [ ] 🤖 Leading in the AI era
 - [ ] *The Manager's Path* — Fournier
@@ -258,6 +260,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] PyMeasure
 - [ ] labgrid
 - [ ] Renode — Antmicro
+- [ ] HiSLIP 2.0 specification (IVI-6.1) — IVI Foundation
 - [ ] Instrument transports: USBTMC, raw sockets, VXI-11, HiSLIP
 - [ ] IEEE 488.2 status reporting and the SCPI error queue
 - [ ] The firmware test pyramid

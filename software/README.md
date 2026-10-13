@@ -20,9 +20,9 @@ The future of software development is **agentic**: AI agents write most of the c
 
 | Symbol | Meaning |
 |--------|---------|
-| 🔑 | **Must-read / must-watch** — absolute priority items |
+| 🔑 | **Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first |
 | 🤖 | **AI-workflow specific** — resources about working with AI coding tools |
-| 🔑🤖 | Both — a must-read that's specifically about AI-assisted development |
+| 🔑🤖 | Both — a core-path item that's specifically about AI-assisted development |
 
 ---
 
@@ -51,7 +51,7 @@ Sections 12 and 13 were added later and are numbered at the end so existing link
 
 | Directory | Contents |
 |-----------|----------|
-| [books/](books/) | Curated book list (24 titles) with level and notes |
+| [books/](books/) | Curated book list (26 titles) with level and notes |
 | [courses/](courses/) | Video courses, channels, newsletters, and podcasts |
 | [blogs-and-references/](blogs-and-references/) | Essential blogs, tools, and community resources |
 
@@ -79,7 +79,6 @@ This curriculum emphasizes:
 | Resource | Type | Focus |
 |----------|------|-------|
 | **Fluent Python** (Ramalho) | Book | Python mastery |
-| **K&R C** (Kernighan & Ritchie) | Book | C fundamentals |
 | **Making Embedded Systems** (White) | Book | Embedded architecture |
 | **Designing Data-Intensive Applications** (Kleppmann) | Book | Distributed systems |
 | **A Philosophy of Software Design** (Ousterhout) | Book | Complexity management |
@@ -88,7 +87,6 @@ This curriculum emphasizes:
 | **Quantum Leaps** (Samek) | YouTube | [Embedded programming](https://www.youtube.com/@StateMachineCOM) |
 | **ByteByteGo** (Alex Xu) | Newsletter | [System design](https://bytebytego.com/) |
 | **Simon Willison** | Blog | [AI-assisted dev](https://simonwillison.net/) |
-| **Embedded Artistry** | Blog | [Firmware architecture](https://embeddedartistry.com/) |
 
 ---
 

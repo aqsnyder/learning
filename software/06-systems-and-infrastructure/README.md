@@ -28,7 +28,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Book | Designing Data-Intensive Applications (2nd ed) | Martin Kleppmann, Chris Riccomini | 2026 | — | Replication, partitioning, consistency, batch and stream processing. If not read in Section 04, start here. |
-| 🔑 | Book | The Software Engineer's Guidebook | Gergely Orosz | 2023 | — | Practical senior engineer field guide covering career growth, code reviews, technical strategy, and team dynamics. |
+| | Book | The Software Engineer's Guidebook | Gergely Orosz | 2023 | — | Practical senior engineer field guide covering career growth, code reviews, technical strategy, and team dynamics. |
 | 🔑 | Newsletter | ByteByteGo | Alex Xu | — | [Link](https://bytebytego.com/) | System design visualized. Weekly breakdowns of how real-world systems — payment processing, rate limiting, CDNs — actually work. |
 | | Tool | Docker | — | — | [Link](https://docs.docker.com/) | Containerization fundamentals. Understand images, containers, volumes, networks, and Docker Compose for local development. |
 | | Tool | Git advanced workflows | — | — | — | Branching strategies (trunk-based, GitFlow), interactive rebasing, bisecting to find bugs, worktrees. |
@@ -44,6 +44,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** DDIA → *System Design Interview* Vol 1–2 → ByteByteGo newsletter
 
 1. **Designing Data-Intensive Applications** — The foundational text. Read first if you skipped it in Section 04.
 2. **System Design Interview (Vol 1 and 2)** — Practice structured system design thinking with concrete examples.

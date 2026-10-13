@@ -38,18 +38,21 @@ After this section you can:
 | 🤖 | Concept | Leading in the AI era | — | — | Setting team AI policies, reviewing AI adoption, maintaining code quality standards. Define when and how your team uses AI tools. |
 | | Book | The Manager's Path | Camille Fournier | — | Even for ICs, understanding management helps you work with managers effectively and decide if leadership is your path. |
 | | Article | Documenting Architecture Decisions | Michael Nygard | [Link](https://www.cognitect.com/blog/2011/11/15/documenting-architecture-decisions) | 2011. The post that introduced ADRs: one short record per decision with Title, Context, Decision, Status, Consequences. Start here for the "Technical decision-making" row. |
-| 🔑 | Framework (Free) | Diátaxis | Daniele Procida | [Link](https://diataxis.fr/) | Organize documentation by what the reader needs: tutorials, how-to guides, reference, explanation. The fix for docs that blur all four, and clearly typed docs make better context for coding agents too. |
+| | Framework (Free) | Diátaxis | Daniele Procida | [Link](https://diataxis.fr/) | Organize documentation by what the reader needs: tutorials, how-to guides, reference, explanation. The fix for docs that blur all four, and clearly typed docs make better context for coding agents too. |
+| | Book | Software Estimation: Demystifying the Black Art | Steve McConnell | [Link](https://www.oreilly.com/library/view/software-estimation-demystifying/0735605351/) | 2006. The source for the "Estimating and planning" row: what an estimate is (and isn't), where estimation error comes from, and how to count, compute and judge before you guess. Ch. 2 "How Good an Estimator Are You?" and Ch. 8 "Calibration and Historical Data" pair directly with Practice 2's calibration log. |
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *The Software Engineer's Guidebook* → The Pragmatic Engineer newsletter → *Staff Engineer*
 
 1. **The Software Engineer's Guidebook** — Start here for a comprehensive map of the senior→staff engineer journey.
 2. **The Pragmatic Engineer newsletter** — Subscribe and read regularly. Stay current on industry practices.
 3. **Staff Engineer** — Read to understand what staff-level impact looks like in practice.
 4. **Technical decision-making (ADRs) + Documenting Architecture Decisions** — Read Nygard's post, then start writing Architecture Decision Records for your projects.
 5. **Writing technical documentation + Diátaxis** — Practice writing RFCs and design docs, and structure user docs by reader need. Clear writing = clear thinking.
-6. **Estimating and planning** — Learn to break work down and communicate realistic timelines.
+6. **Estimating and planning + Software Estimation** — Read McConnell's Ch. 1–2 and 8 (what an estimate is, how good you are at it, historical data), then learn to break work down and communicate realistic timelines.
 7. **Mentoring and code review culture** — Build the habit of teaching through code review.
 8. **Leading in the AI era** — Define your team's AI policies and quality standards.
 9. **An Elegant Puzzle** — Read to understand engineering organizations as systems.
@@ -65,7 +68,7 @@ After this section you can:
    - the median ratio of actual to estimate;
    - whether agent-assisted tasks are more or less predictable than hand-done ones.
 
-   Done when you've changed one thing about how you estimate, based on the data. *(~1 h setup + 2–3 weeks of logging · estimating and planning; the tech-lead material in Orosz's The Software Engineer's Guidebook)*
+   Done when you've changed one thing about how you estimate, based on the data. *(~1 h setup + 2–3 weeks of logging · estimating and planning; McConnell, Software Estimation, Ch. 2 and Ch. 8; the tech-lead material in Orosz's The Software Engineer's Guidebook)*
 3. **Team AI policy** — Draft a one-to-two-page AI-use policy for a small hardware/firmware team. Cover:
    - approved tools;
    - data that must never be pasted: secrets, customer data, unreleased designs;

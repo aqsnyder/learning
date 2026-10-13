@@ -28,14 +28,14 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Book | Fundamentals of Software Architecture (2nd ed) | Mark Richards, Neal Ford | 2025 | — | THE architecture primer for transitioning from developer to architect. Covers architecture styles, component design, and the soft skills of architecture. |
-| 🔑 | Book | Software Architecture: The Hard Parts | Neal Ford, Mark Richards et al. | 2021 | — | Trade-offs when there's no right answer — service granularity, data decomposition, contracts, and distributed workflows. |
+| | Book | Software Architecture: The Hard Parts | Neal Ford, Mark Richards et al. | 2021 | — | Trade-offs when there's no right answer — service granularity, data decomposition, contracts, and distributed workflows. |
 | 🔑 | Book | Clean Architecture | Robert C. Martin | 2017 | — | SOLID principles, dependency inversion, and separating business logic from frameworks. The architectural counterpart to Clean Code. |
-| 🔑 | Book | A Philosophy of Software Design (2nd ed) | John Ousterhout | 2021 | — | Complexity management through deep modules and strategic programming. Complements and challenges some Clean Code dogma. |
+| | Book | A Philosophy of Software Design (2nd ed) | John Ousterhout | 2021 | — | Complexity management through deep modules and strategic programming. Complements and challenges some Clean Code dogma. |
 | 🔑 | Book | Design Patterns: Elements of Reusable Object-Oriented Software | Gamma, Helm, Johnson, Vlissides (Gang of Four) | 1994 | — | The classic patterns vocabulary — Strategy, Observer, Factory, Decorator, etc. Read for recognition, not memorization. |
 | | Book | Head First Design Patterns (2nd ed) | Eric Freeman, Elisabeth Robson | 2020 | — | A more accessible, visual introduction to design patterns. Good if GoF feels too dense. |
-| 🔑 | Book | Designing Data-Intensive Applications (DDIA, 2nd ed) | Martin Kleppmann, Chris Riccomini | 2026 | — | THE distributed systems bible — replication, partitioning, consistency, batch/stream processing. The 2nd edition (March 2026) revises the 2017 original with newer technologies and trends. Essential for any systems architect. |
+| | Book | Designing Data-Intensive Applications (DDIA, 2nd ed) | Martin Kleppmann, Chris Riccomini | 2026 | — | THE distributed systems bible — replication, partitioning, consistency, batch/stream processing. The 2nd edition (March 2026) revises the 2017 original with newer technologies and trends. Essential for any systems architect. |
 | | Newsletter | ByteByteGo | Alex Xu | — | [Link](https://bytebytego.com/) | Visual system design explanations. Excellent for building intuition about how real-world systems are built. |
-| 🔑 | Video | System Design Interview channel | Mikhail Smarshchok | — | [Link](https://www.youtube.com/@SystemDesignInterview) | Seven long-form walkthroughs of classic distributed-system design problems. High quality, but the channel is no longer active. |
+| | Video | System Design Interview channel | Mikhail Smarshchok | — | [Link](https://www.youtube.com/@SystemDesignInterview) | Seven long-form walkthroughs of classic distributed-system design problems. High quality, but the channel is no longer active. |
 | | Book | The Pragmatic Programmer (20th Anniversary) | Andrew Hunt, David Thomas | 2019 | — | Engineering mindset — DRY, orthogonality, tracer bullets, and pragmatic thinking about software craft. |
 | | Book | Domain-Driven Design | Eric Evans | 2003 | — | Aligning code structure with business domains. Essential vocabulary: bounded contexts, aggregates, ubiquitous language. |
 | | Concept | SOLID principles | — | — | — | Recognize violations in code review: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion. |
@@ -46,6 +46,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Clean Architecture* → GoF *Design Patterns* → *Fundamentals of Software Architecture*
 
 1. **A Philosophy of Software Design** — Start with complexity management fundamentals. Short, opinionated, and immediately applicable.
 2. **Clean Architecture** — Build on that with SOLID principles and dependency boundaries.
@@ -105,7 +107,7 @@ Deliverable: `projects/software/04-lab-skeleton/`. Success: import contracts pas
 
 Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
 
-1. State Richards & Ford's First and Second Laws of Software Architecture.
+1. State Richards & Ford's Laws of Software Architecture. (The first edition had two; the second edition, listed here, adds a third.)
 2. What does Clean Architecture's Dependency Rule say? How does dependency inversion let a use case save data without depending on the database?
 3. Ousterhout pushes back on "many small classes and short methods". What's his argument, and when does it matter most?
 4. You find this hierarchy: `Instrument → DMM → VendorDmm → VendorDmmWithLogging`. Which GoF principle does it violate, and which pattern should handle the logging instead?

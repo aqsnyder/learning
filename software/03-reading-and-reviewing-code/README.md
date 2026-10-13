@@ -21,12 +21,12 @@ After this section you can:
 
 | # | Type | Resource | Notes |
 |---|------|----------|-------|
-| 1 | 🔑 Book | *The Art of Readable Code* — Boswell and Foucher | How to evaluate whether code is clear and maintainable |
+| 1 | Book | *The Art of Readable Code* — Boswell and Foucher | How to evaluate whether code is clear and maintainable |
 | 2 | 🔑 Book | *Code Reading: The Open Source Perspective* — Diomidis Spinellis | The only book dedicated to reading (not writing) code |
 | 3 | 🔑 Book | *Refactoring: Improving the Design of Existing Code* (2nd ed) — Martin Fowler (2018) | Recognize code smells and know the fix |
 | 4 | 🔑 Book | *A Philosophy of Software Design* (2nd ed) — John Ousterhout (2021) | Managing complexity, the #1 code review skill |
 | 5 | Guide | [Google's Engineering Practices: Code Review Guidelines](https://google.github.io/eng-practices/review/) | How Google does code reviews |
-| 6 | 🔑🤖 Practice | Review AI-generated code critically | Treat every AI output as a PR from a junior developer |
+| 6 | 🤖 Practice | Review AI-generated code critically | Treat every AI output as a PR from a junior developer |
 | 7 | Book | [*The Programmer's Brain*](https://www.manning.com/books/the-programmers-brain) — Felienne Hermans (2021) | The cognitive science of reading code: why unfamiliar code overloads working memory, and concrete techniques (state tables, dependency graphs, mental models) to read it faster. Trains this section's core skill directly |
 | 8 | Book | [*Your Code as a Crime Scene* (2nd ed)](https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/) — Adam Tornhill (2024) | Read a codebase through its git history: hotspots (complexity × churn), change coupling, knowledge distribution. Tells you where to spend review effort in a large or agent-generated codebase |
 
@@ -42,6 +42,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *A Philosophy of Software Design* → *Code Reading* → *Refactoring*
 
 ```
 1. The Art of Readable Code (quick read, sets the standard)
@@ -106,4 +108,4 @@ Answer from memory first, then check against the sources — or paste this secti
 5. Why start reading an unfamiliar codebase from its tests and entry points, instead of browsing files in order?
 6. Misconception check: "CI is green and coverage is 95%, so this AI-generated PR is safe to approve." List three things you still must check yourself.
 7. Name two Python and two C vulnerability classes you scan for in every review, and the code pattern that signals each.
-8. Explain to a smart friend in three sentences why reading code becomes the scarcer skill once AI writes most of it.
+8. Explain to a smart friend in three sentences why reading code becomes the scarcer skill as AI writes more of it.

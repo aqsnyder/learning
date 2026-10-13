@@ -21,7 +21,7 @@ After this section you can:
 
 | # | Type | Resource | Notes |
 |---|------|----------|-------|
-| 1 | 🔑 Guide (Free) | [Teach Yourself Computer Science](https://teachyourselfcs.com/) | The best curated CS self-study guide |
+| 1 | Guide (Free) | [Teach Yourself Computer Science](https://teachyourselfcs.com/) | The best curated CS self-study guide |
 | 2 | 🔑 Course | [MIT 6.006 Introduction to Algorithms (OCW)](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) | Foundational algorithms and data structures |
 | 3 | 🔑 Book | *Grokking Algorithms* (2nd ed) — Aditya Bhargava (2024) | Visual, accessible intro to algorithms |
 | 4 | Course | [CS50 (Harvard)](https://cs50.harvard.edu/) — David Malan | Harvard's widely used intro CS course, free online |
@@ -41,6 +41,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Grokking Algorithms* → CS:APP → MIT 6.006
 
 ```
 1. Teach Yourself CS (read the roadmap, use it to guide everything)
