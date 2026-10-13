@@ -8,19 +8,29 @@ Biochemistry bridges the gap between the abstract information flow of molecular 
 
 - [Section 00 — Molecular Biology Fundamentals](../00-molecular-biology-fundamentals/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Derive the Michaelis-Menten equation from the steady-state assumption, state exactly where that assumption fails, and explain what *k*cat/*K*m means physically and why it has a diffusion-limited ceiling.
+- Compute ΔG for a reaction at real cellular concentrations rather than standard state, and use it to decide whether a coupled reaction can run.
+- Explain protein folding as a balance of the hydrophobic effect, hydrogen bonding and conformational entropy — and explain why the hydrophobic effect is entropic rather than energetic.
+- Predict the protonation state of any ionizable side chain at a given pH, and explain why histidine is the catalytic residue of choice near pH 7.
+- Resolve Levinthal's paradox numerically: compute the absurd search time, then explain what the folding-funnel picture replaces it with.
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
 | 🔑 | 📚 Textbook | Lehninger Principles of Biochemistry (8th Edition) | David L. Nelson, Michael M. Cox | 2021 | [Book](https://www.macmillanlearning.com/college/us/product/Lehninger-Principles-of-Biochemistry/p/1319228003) | The gold-standard biochemistry textbook — clear writing, excellent figures, and comprehensive coverage of metabolism, protein structure, and enzyme kinetics |
 | 🔑 | 🎓 Course | MIT 5.07SC Biological Chemistry I | JoAnne Stubbe, John Essigmann | 2013 | [MIT OCW](https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/) | MIT's Scholar Course version with complete problem sets, solutions, and lecture notes — rigorous and well-structured |
-| | 📚 Textbook | Biochemistry (9th Edition) | Jeremy M. Berg, John L. Tymoczko, Gregory J. Gatto Jr., Lubert Stryer | 2019 | [Book](https://www.macmillanlearning.com/college/us/product/Biochemistry/p/1319114679) | Stryer's classic — known for clarity on enzyme mechanisms and metabolic regulation with excellent pathway diagrams |
+| | 📚 Textbook | Biochemistry (10th Edition) | Jeremy M. Berg, Gregory J. Gatto Jr., Justin Hines, John L. Tymoczko, Lubert Stryer | 2023 | [Book](https://www.macmillanlearning.com/college/us/product/Biochemistry/p/1319333621) | Stryer's classic — known for clarity on enzyme mechanisms and metabolic regulation with excellent pathway diagrams |
 | | 📚 Textbook | Biochemistry (4th Edition) | Donald Voet, Judith G. Voet | 2010 | [Book](https://www.wiley.com/en-us/Biochemistry%2C+4th+Edition-p-9780470570951) | The most detailed and rigorous of the major biochemistry textbooks — best for deep dives into enzyme mechanisms and thermodynamics |
 | | 🌐 Resource | PDB-101: Structural Biology Educational Resources | RCSB PDB | 2024 | [PDB-101](https://pdb101.rcsb.org/) | Beautifully illustrated guides to protein structure, molecular machines, and drug design from the Protein Data Bank |
 | | 🎥 Videos | HHMI BioInteractive: Enzyme Catalysis & Protein Structure | HHMI | 2020 | [BioInteractive](https://www.biointeractive.org/classroom-resources?topic%5B%5D=36) | High-quality interactive visualizations and short films on enzyme function and protein biology |
 | | 🎥 Videos | AK Lectures — Biochemistry | AK Lectures | 2022 | [YouTube](https://www.youtube.com/c/AKLECTURES) | Comprehensive YouTube lecture series covering amino acids, enzyme kinetics, metabolism, and protein structure with clear whiteboard explanations |
 | | 🎓 Course | MIT 7.05 General Biochemistry | Matthew Vander Heiden | 2020 | [MIT OCW](https://ocw.mit.edu/courses/7-05-general-biochemistry-spring-2020/) | MIT's biochemistry course for biology majors — strong coverage of metabolic pathways and bioenergetics |
-| | 📄 Review | The Protein Folding Problem: A Major Conundrum of Science | Ken Dill, Justin MacCallum | 2012 | [Paper](https://doi.org/10.1002/pro.2096) | Accessible overview of the protein folding problem — essential context before studying structural biology and computational approaches |
+| | 📄 Review | The Protein-Folding Problem, 50 Years On | Ken A. Dill, Justin L. MacCallum | 2012 | [Science](https://doi.org/10.1126/science.1219021) | Accessible overview of the protein folding problem — essential context before studying structural biology and computational approaches |
 
 ## Suggested Order
 
@@ -32,3 +42,34 @@ Biochemistry bridges the gap between the abstract information flow of molecular 
 6. **Stryer "Biochemistry"** — Cross-reference for metabolic pathways and enzyme regulation
 7. **Dill & MacCallum Review** — Read for an overview of the protein folding problem and its significance
 8. **Voet & Voet "Biochemistry"** — Consult for the deepest treatment of thermodynamics and enzyme mechanisms
+
+---
+
+## 🛠️ Practice
+
+1. **Derive Michaelis-Menten twice** — Derive *v* = *V*max[S]/(*K*m+[S]) first under the rapid-equilibrium assumption, then under the steady-state assumption, and show what *K*m equals in each case. State the three conditions the steady-state derivation requires and give a concrete enzyme/substrate situation that violates each. Then: show algebraically that *k*cat/*K*m is the apparent second-order rate constant at low [S], and look up the diffusion-limited ceiling (~10⁸–10⁹ M⁻¹s⁻¹) and name two enzymes that approach it. *(~3 h · Lehninger; MIT 5.07SC; Voet & Voet for the rigorous treatment)*
+
+2. **MIT 5.07SC problem sets, solutions sealed** — Work two complete problem sets from the Scholar course — one on enzyme kinetics and inhibition, one on bioenergetics — without looking at the posted solutions. Time yourself. Then grade against the solutions and keep a one-line error log for each miss, classified as "concept", "algebra", or "units". Deliverable: the error log. If more than a third are "concept", re-read the corresponding Lehninger chapter before moving on. *(~5 h · MIT 5.07SC problem sets and solutions)*
+
+3. **ATP's real ΔG, and what it can pay for** — ΔG°′ for ATP hydrolysis is about −30.5 kJ/mol. Using cellular concentrations ([ATP] ≈ 3 mM, [ADP] ≈ 0.5 mM, [Pi] ≈ 5 mM, pH 7, 37 °C), compute the actual ΔG. Then: (a) how many orders of magnitude from equilibrium is the cell holding this reaction? (b) a biosynthetic step has ΔG°′ = +25 kJ/mol — how many ATP equivalents must be coupled to make it proceed at 10:1 product:reactant? (c) the proton-motive force is ~180 mV — how many protons per ATP does that imply the ATP synthase needs, and does your answer match the measured stoichiometry? *(~3 h · Lehninger thermodynamics chapters; MIT 7.05)*
+
+4. **Titration curves and the histidine argument** — Plot (in Python) the titration curve and net-charge-versus-pH curve for free histidine, glutamate and lysine from their p*K*a values. Then compute the net charge of a short peptide of your choice at pH 5.0, 7.4 and 9.0. Finally, compute buffer capacity dβ/dpH for a histidine-imidazole buffer and show it peaks at the p*K*a — and write two sentences on why that makes His both the best physiological buffer side chain and the best general acid-base catalyst. *(~2.5 h · Lehninger; AK Lectures for the kinetics/pH review)*
+
+5. **Mechanism write-up from the structure itself** — Pick one enzyme covered by PDB-101's Molecule of the Month (serine proteases, carbonic anhydrase and lysozyme are all good choices). Open the actual PDB entry, find the catalytic residues *by their real residue numbers in a specific chain*, measure the key distances in a viewer (ChimeraX or PyMOL), and then write 300 words describing the mechanism with every residue named by number. Deliverable: the write-up plus a figure with the active site labelled. Check: your residue numbers must match the primary literature's, and if they don't, work out whether it's a numbering-convention difference or your error. *(~3 h · PDB-101; HHMI BioInteractive; Lehninger's protein-structure chapters for structural vocabulary)*
+
+6. **Levinthal, then the funnel** — Compute the Levinthal estimate: a 100-residue chain with 3 accessible conformations per residue, sampled at 10⁻¹³ s per conformation — how long to search exhaustively, in units of the age of the universe? Then read Dill & MacCallum and write 400 words explaining what is wrong with the premise, not the arithmetic: how do funnel topography, local structure formation and hydrophobic collapse reduce the search? End with the one thing Dill and MacCallum say is still unsolved. *(~2.5 h · Dill & MacCallum, "The Protein-Folding Problem, 50 Years On")*
+
+**🏗️ Mini-project — Enzyme assay, simulated end to end:** Build the full measurement chain for a spectrophotometric enzyme assay in one notebook, then use it to find out what your instrument actually limits. Simulate absorbance-versus-time traces for an enzyme with known *k*cat and *K*m at eight substrate concentrations, with realistic non-idealities: detector read noise, 1/f drift in the lamp, a small baseline offset, finite sampling rate, and substrate depletion over the measurement window. Then run the analysis you would actually run: extract initial rates by linear fit over a chosen window, fit Michaelis-Menten by nonlinear least squares, and bootstrap the residuals to get confidence intervals on *k*cat and *K*m. Finally, sweep the non-idealities one at a time and report which one corrupts *K*m most and which corrupts *V*max most. Also fit the same data by Lineweaver-Burk and show numerically why the double-reciprocal transform biases the estimate. Deliverable: a notebook in `projects/bio/01-enzyme-assay/` plus a one-page memo written as an instrument spec — the minimum detector noise, sampling rate and measurement window needed to get *K*m to ±10%. Success criterion: your bootstrap confidence intervals cover the true values at the nominal rate, and your memo correctly identifies baseline drift versus read noise as dominating different parameters. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the Michaelis-Menten equation and define every symbol, including the units.
+2. Is *K*m a binding constant? Answer carefully — under what condition is it, and under what condition is it not?
+3. Why is the hydrophobic effect entropically driven? What exactly is becoming more ordered or less ordered?
+4. A reaction has ΔG°′ = +15 kJ/mol. Can it run in a cell? What do you need to know to answer?
+5. Roughly what fraction of a typical globular protein's residues are buried, and why does that number matter for predicting the effect of a mutation?
+6. A competitive inhibitor raises apparent *K*m but leaves *V*max alone; an uncompetitive one does the opposite. Explain both from the mechanism, not the plot.
+7. Explain to a smart friend in three sentences why enzymes speed reactions up without changing the equilibrium.
+8. Levinthal's paradox is sometimes stated as "proteins can't possibly fold." What's the actual logical structure of the argument, and which premise is false?

@@ -9,6 +9,16 @@ Genetics and genomics connect the molecular machinery of the cell to inheritance
 - [Section 00 — Molecular Biology Fundamentals](../00-molecular-biology-fundamentals/README.md)
 - [Section 01 — Biochemistry](../01-biochemistry/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Map three linked genes from a three-point testcross: determine gene order, map distances in centimorgans, and the coefficient of coincidence.
+- Apply Hardy-Weinberg and detect departures from it, and explain what genetic drift does to allele frequencies as a function of effective population size.
+- Read a GWAS result correctly: distinguish lead SNP from causal variant, explain linkage disequilibrium blocks, and say why the "nearest gene" is usually the wrong gene.
+- Pull real allele frequencies from 1000 Genomes or gnomAD for a named variant, compute F_ST between two populations, and interpret the number.
+- Audit the 2001 Human Genome Project paper's quantitative claims against current references and explain why each estimate moved.
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -16,13 +26,16 @@ Genetics and genomics connect the molecular machinery of the cell to inheritance
 | 🔑 | 📚 Textbook | Molecular Biology of the Gene (7th Edition) | James D. Watson, Tania A. Baker, Stephen P. Bell, Alexander Gann, Michael Levine, Richard Losick | 2013 | [Book](https://www.pearson.com/en-us/subject-catalog/p/molecular-biology-of-the-gene/P200000006876) | Watson's classic — authoritative treatment of molecular genetics from DNA structure to gene regulation by the co-discoverer of the double helix |
 | 🔑 | 📖 Book | The Gene: An Intimate History | Siddhartha Mukherjee | 2016 | [Book](https://www.simonandschuster.com/books/The-Gene/Siddhartha-Mukherjee/9781476733524) | Pulitzer Prize-winning author traces the history of genetics from Mendel through CRISPR — essential for conceptual understanding and context |
 | 🔑 | 🎓 Course | MIT 7.03 Genetics | Chris Kaiser | 2004 | [MIT OCW](https://ocw.mit.edu/courses/7-03-genetics-fall-2004/) | MIT's core genetics course covering Mendelian genetics, gene mapping, molecular genetics, and population genetics |
-| | 📚 Textbook | Introduction to Genetic Analysis (12th Edition) | Anthony J.F. Griffiths, Susan R. Wessler, Sean B. Carroll, John Doebley | 2020 | [Book](https://www.macmillanlearning.com/college/us/product/Introduction-to-Genetic-Analysis/p/1319114784) | Comprehensive genetics textbook known for excellent problem sets and clear explanations of genetic analysis methods |
+| | 📚 Textbook | Introduction to Genetic Analysis (12th Edition) | Anthony J.F. Griffiths, John Doebley, Catherine Peichel, David A. Wassarman | 2020 | [Book](https://www.macmillanlearning.com/college/us/product/Introduction-to-Genetic-Analysis/p/1319114784) | Comprehensive genetics textbook known for excellent problem sets and clear explanations of genetic analysis methods |
 | | 📄 Paper | Initial Sequencing and Analysis of the Human Genome | Eric S. Lander et al. (International Human Genome Sequencing Consortium) | 2001 | [Paper](https://doi.org/10.1038/35057062) | The landmark Human Genome Project paper — one of the most important scientific publications of the 21st century |
 | | 🌐 Resource | NHGRI Genomics Education Resources | National Human Genome Research Institute | 2024 | [NHGRI](https://www.genome.gov/about-genomics) | Authoritative educational resources on genomics, genetic testing, and the ethical implications of genomic research |
 | | 🌐 Resource | 1000 Genomes Project | The 1000 Genomes Project Consortium | 2015 | [Resource](https://www.internationalgenome.org/) | The foundational catalog of human genetic variation across populations — essential reference for understanding human diversity |
 | | 📝 Primer | A Brief Guide to Genomics | Broad Institute | 2024 | [Broad Institute](https://www.broadinstitute.org/education/what-broad/areas-focus/what-genomics) | Clear introduction to genomics concepts from one of the world's leading genomics research centers |
 | | 📝 Primer | GWAS Primer | Broad Institute | 2024 | [Blog](https://www.broadinstitute.org/stories/what-genome-wide-association-study) | Accessible overview of genome-wide association studies (GWAS) — how they work and what they've revealed about disease |
 | | 📄 Paper | An Integrated Map of Genetic Variation from 1,092 Human Genomes | The 1000 Genomes Project Consortium | 2012 | [Paper](https://doi.org/10.1038/nature11632) | Key 1000 Genomes paper mapping genetic variation across human populations — foundational for population genomics |
+| | 📄 Review | Coming of Age: Ten Years of Next-Generation Sequencing Technologies | Sara Goodwin, John D. McPherson, W. Richard McCombie | 2016 | [Nat. Rev. Genet.](https://doi.org/10.1038/nrg.2016.49) | How the instruments actually work — Illumina short reads versus PacBio and Nanopore long reads — and why each platform's error profile decides what downstream analysis is even possible |
+| | 📄 Paper | The Complete Sequence of a Human Genome | Sergey Nurk et al. (Telomere-to-Telomere Consortium) | 2022 | [Science](https://doi.org/10.1126/science.abj6987) | T2T-CHM13 finished what the 2001 draft left out — centromeres, rDNA arrays and segmental duplications — using long-read sequencing; read it alongside Lander et al. to see what "the human genome" now means |
+| | 📄 Paper | The Mutational Constraint Spectrum Quantified from Variation in 141,456 Humans (gnomAD) | Konrad J. Karczewski et al. | 2020 | [Nature](https://doi.org/10.1038/s41586-020-2308-7) | The gnomAD flagship paper — population allele frequencies from 125,748 exomes and 15,708 genomes, plus per-gene loss-of-function constraint; the first filter any variant interpretation applies |
 
 ## Suggested Order
 
@@ -31,6 +44,40 @@ Genetics and genomics connect the molecular machinery of the cell to inheritance
 3. **Watson "Molecular Biology of the Gene"** — Read selected chapters alongside the course for molecular depth
 4. **NHGRI Resources** — Explore genomics fundamentals and ethical dimensions of genetic research
 5. **Lander et al. Human Genome Paper** — Read the landmark paper to understand the scope and impact of the Human Genome Project
-6. **Broad Institute GWAS Primer** — Understand how genome-wide studies connect genotype to phenotype
-7. **1000 Genomes Project** — Explore human genetic variation data and population genetics concepts
-8. **Griffiths "Introduction to Genetic Analysis"** — Use for additional problems and deeper treatment of genetic analysis methods
+6. **Nurk et al. (2022) — Complete human genome** — See what the draft genome missed and why long reads finally closed it
+7. **Goodwin et al. (2016) — Sequencing technologies** — Learn how the data is actually produced before you analyze it
+8. **Broad Institute GWAS Primer** — Understand how genome-wide studies connect genotype to phenotype
+9. **1000 Genomes Project** — Explore human genetic variation data and population genetics concepts
+10. **Karczewski et al. (2020) — gnomAD** — Learn how population allele frequency and constraint data are used to judge a variant
+11. **Griffiths "Introduction to Genetic Analysis"** — Use for additional problems and deeper treatment of genetic analysis methods
+
+---
+
+## 🛠️ Practice
+
+1. **Three-point cross, by hand** — Work the linkage-mapping problems from MIT 7.03 or Griffiths: given progeny counts from a three-point testcross, determine gene order, compute the two map distances, compute the double-crossover frequency, and compare it to the product of the single-crossover frequencies to get interference. Do three of these until the procedure is automatic. Then answer: why does map distance underestimate physical distance for widely separated loci, and what is the upper bound on observed recombination frequency? *(~3 h · MIT 7.03; Griffiths, *Introduction to Genetic Analysis*)*
+
+2. **Wright-Fisher drift simulation** — Implement a Wright-Fisher model in NumPy: *N* = 1000 diploid individuals, starting allele frequency *p*₀ = 0.5, pure drift, 1000 independent replicates. Plot the frequency trajectories and the distribution of fixation times. Then verify two analytic results against your simulation: heterozygosity decays as (1 − 1/2N) per generation, and the mean time to fixation of a neutral allele starting at *p*₀ = 0.5 is about 2.8N generations. Finally, add weak selection (*s* = 0.001, 0.01) and find the *s* at which selection reliably beats drift for your *N* — compare to the 1/(2N) rule of thumb. Deliverable: notebook with the theory curves overlaid on the simulation. *(~4 h · MIT 7.03 population-genetics lectures; Griffiths)*
+
+3. **Allele frequencies of a real variant, across populations** — Pick one of: rs4988235 (*MCM6*/lactase persistence), rs334 (*HBB* sickle), rs671 (*ALDH2*), rs3827760 (*EDAR*). From 1000 Genomes (via Ensembl's variant page or the project's own data portal) extract allele frequencies for each of the five superpopulations. Compute F_ST between the two most divergent populations with Hudson's estimator, and compute it again for a handful of random control SNPs to establish a background distribution. Deliverable: a bar chart of frequencies by population plus the F_ST value and where it sits in the background distribution. Check: your frequencies should match gnomAD's for the same populations to within rounding — if they don't, find out whether it's an ancestry-label difference or a strand/reference-allele mix-up. *(~4 h · 1000 Genomes Project; the 2012 1000 Genomes paper; Ensembl)*
+
+4. **Follow one GWAS hit down to the ground** — Read the Broad GWAS primer, then pick a single genome-wide-significant association from the GWAS Catalog (ebi.ac.uk/gwas) for a trait you find interesting. Report: the lead SNP and its *p*-value and effect size, the size of its LD block, every gene within that block, whether the lead SNP is coding (almost certainly not), the odds ratio, and the variance explained. Then write 300 words on why assigning that signal to the nearest gene is a trap, and name two kinds of evidence (eQTL, chromatin contact, fine-mapping) that would actually implicate a gene. *(~3 h · Broad GWAS primer; NHGRI resources; GWAS Catalog)*
+
+5. **Lander 2001 scorecard** — From the Human Genome Project paper, extract six quantitative claims: the protein-coding gene count estimate, the fraction of the genome in repeats, SNP density, the fraction that is transcribed, GC-content variation, and segmental-duplication content. For each, find the current figure (GENCODE/Ensembl release statistics, gnomAD, or the T2T-CHM13 papers), and write one sentence on *why* the number moved — better assembly, better annotation, a definitional change, or a genuine error. Deliverable: a six-row table with claimed / current / reason. *(~3 h · Lander et al. 2001; NHGRI; current Ensembl/GENCODE statistics)*
+
+6. **Sequencing-cost scaling, as a hardware engineer would do it** — The public HGP cost roughly $2.7B over 13 years for one composite genome. A 30× human whole genome today is a few hundred dollars in a day. Compute: cost per base then and now, the overall ratio, and the implied doubling time of cost-performance. Plot it against Moore's law over the same interval on a log axis. Then answer: which step actually got cheap (chemistry, optics, compute, or labour), and what is the current cost floor made of? Deliverable: one plot and a 200-word answer. *(~2 h · NHGRI sequencing-cost data; Lander et al. 2001)*
+
+**🏗️ Mini-project — Population history of one variant:** Pick a single variant with a contested or interesting selective history — rs4988235 (lactase persistence), rs334 (sickle/malaria balancing selection), rs671 (*ALDH2*), or rs1426654 (*SLC24A5* pigmentation). Build a notebook that: pulls allele frequencies across all available 1000 Genomes populations programmatically; computes F_ST matrices between populations; computes at least one haplotype-based selection statistic or extracts the published one; and plots frequency geographically or by population. Then write the case: what selective story is proposed, what evidence supports it (frequency cline, haplotype length, archaeological or dietary correlate, functional assay), and — required — at least one alternative explanation you cannot rule out with the data you have, plus the observation that would discriminate. Deliverable: notebook in `projects/bio/02-variant-history/` plus a 2-page memo. Success criterion: every frequency in your memo matches a public database to the stated precision, every claim about selection is labelled as inference or measurement, and your alternative explanation is specific enough that someone could go test it. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the Hardy-Weinberg conditions. Which one is violated most often in real human populations, and what does the violation look like in the data?
+2. One centimorgan is roughly how many base pairs in the human genome, and why is that conversion only an average?
+3. Why do GWAS hits cluster in non-coding regions? Give the mechanistic reason and the statistical reason.
+4. A colleague says "this GWAS explains 3% of the variance, so the trait is barely genetic." What is wrong with that inference?
+5. Roughly how many single-nucleotide variants does any one human genome carry relative to the reference, and roughly how many are rare enough to be private to their family? Estimate, then check against gnomAD.
+6. What is linkage disequilibrium, and what two processes set the size of an LD block?
+7. Lander et al. estimated 30,000–40,000 human genes; the current count is around 20,000 protein-coding. Was the original estimate an error, a definitional difference, or both?
+8. Explain to a smart friend in three sentences how a GWAS can find a disease-associated region without finding the gene or the mutation that causes it.

@@ -6,8 +6,18 @@ Genomic medicine is the convergence of decades of molecular biology, sequencing 
 
 ## Prerequisites
 
-- [Section 02 — Molecular Biology & Genetics](../02-molecular-biology-genetics/README.md)
-- [Section 04 — Genomics & Bioinformatics](../04-genomics-bioinformatics/README.md)
+- [Section 02 — Genetics and Genomics](../02-genetics-and-genomics/README.md)
+- [Section 04 — Bioinformatics and Sequence Analysis](../04-bioinformatics-and-sequence-analysis/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Classify a real variant using the ACMG/AMP framework: assemble evidence by criterion code, combine them per the published rules, and defend the call against an expert panel's.
+- Compute the positive predictive value of a genetic test from prevalence, penetrance, sensitivity and specificity — and explain why population screening behaves so differently from diagnostic testing.
+- Derive a maximum credible population allele frequency from disease prevalence, inheritance mode and penetrance, and use it to exclude variants on frequency alone.
+- Design a CRISPR edit for a specific variant, choose between nuclease, base and prime editing on mechanistic grounds, and assess off-target risk.
+- Read a pharmacogenomic guideline and express it as a genotype → phenotype → dosing decision table, and state what the table cannot capture.
 
 ## Resources
 
@@ -19,18 +29,56 @@ Genomic medicine is the convergence of decades of molecular biology, sequencing 
 | | 📄 Paper | A New Initiative on Precision Medicine | Collins & Varmus | 2015 | [Paper](https://doi.org/10.1056/NEJMp1500523) | NEJM perspective from NIH and NCI directors laying out the vision for the U.S. Precision Medicine Initiative |
 | | 📄 Paper | Finding the Missing Heritability of Complex Diseases | Manolio, Collins, Cox et al. | 2009 | [Paper](https://doi.org/10.1038/nature08494) | Landmark review on bridging the gap between GWAS discoveries and clinical implementation |
 | | 🗃️ Database | ClinVar | NCBI | 2013– | [Database](https://www.ncbi.nlm.nih.gov/clinvar/) | Public archive of clinically interpreted genetic variants and their relationships to human health |
-| | 🗃️ Database | PharmGKB — Pharmacogenomics Knowledgebase | Stanford University | 2000– | [Database](https://www.pharmgkb.org/) | Curated resource linking genetic variation to drug response, essential for pharmacogenomics |
+| | 🗃️ Database | PharmGKB — Pharmacogenomics Knowledgebase (now served at ClinPGx) | Stanford University | 2000– | [Database](https://www.clinpgx.org/) | Curated resource linking genetic variation to drug response, essential for pharmacogenomics; pharmgkb.org now redirects to the ClinPGx platform |
 | | 🎥 Talk | How CRISPR Lets Us Edit Our DNA | Jennifer Doudna | 2015 | [TED Talk](https://www.ted.com/talks/jennifer_doudna_how_crispr_lets_us_edit_our_dna) | Accessible overview of CRISPR technology and its implications from one of its co-discoverers |
 | | 🌐 Program | NIH All of Us Research Program | National Institutes of Health | 2018– | [Program](https://allofus.nih.gov/) | Million-person cohort building a diverse genomic and health dataset to accelerate precision medicine research |
+| 🔑 | 📄 Review | Genome Editing with CRISPR–Cas Nucleases, Base Editors, Transposases and Prime Editors | Anzalone, A. V., Koblan, L. W. & Liu, D. R. | 2020 | [Nat. Biotechnol.](https://doi.org/10.1038/s41587-020-0561-9) | The map of the editing toolbox beyond Cas9 cutting — base editors, prime editors, transposases — with the trade-offs in precision, cargo size, and delivery that decide which one a therapy can actually use |
+| | 🌐 Announcement | FDA Approves First Gene Therapies to Treat Patients with Sickle Cell Disease | U.S. Food and Drug Administration | 2023 | [FDA](https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease) | The 8 December 2023 approval of Casgevy and Lyfgenia — Casgevy being "the first FDA-approved therapy utilizing CRISPR/Cas9" — and a short lesson in how a regulator frames evidence, indication, and risk |
+| | 📄 Paper | Exagamglogene Autotemcel for Severe Sickle Cell Disease | Frangoul, H., Locatelli, F., Sharma, A. et al. (… Grupp, S. A.) | 2024 | [NEJM](https://doi.org/10.1056/NEJMoa2309676) | The pivotal trial behind Casgevy: *ex vivo* CRISPR editing of a patient's own haematopoietic stem cells to switch fetal haemoglobin back on, which eliminated vaso-occlusive crises in most recipients |
+| | 📄 Paper | Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease | Musunuru, K. et al. (CHOP & Penn) | 2025 | [NEJM](https://doi.org/10.1056/NEJMoa2504747) | "Baby KJ": a bespoke base-editing therapy for one infant's CPS1 deficiency, designed, manufactured, and dosed by lipid nanoparticle within about six months — the first personalized *in vivo* CRISPR therapy |
 
 ## Suggested Order
 
-1. **Doudna & Charpentier CRISPR paper** — Understand the molecular mechanism that makes genome editing possible
+1. **Jinek et al. CRISPR paper** — Understand the molecular mechanism that makes genome editing possible
 2. **Jennifer Doudna TED Talk** — Get an accessible, big-picture view of CRISPR's clinical potential
-3. **Collins & Varmus precision medicine perspective** — Frame the policy and scientific vision for clinical genomics
-4. **ACMG/AMP variant interpretation guidelines** — Learn the standard clinical framework for classifying variants
-5. **ClinVar database** — Explore real clinically interpreted variants hands-on
-6. **Manolio et al. missing heritability review** — Understand the challenges of translating GWAS to the clinic
-7. **PharmGKB** — Explore gene-drug interactions and pharmacogenomic annotations
-8. **Topol — Deep Medicine** — Synthesize the broader vision of AI-augmented genomic medicine
-9. **NIH All of Us** — See how large-scale precision medicine research is being operationalized
+3. **Anzalone, Koblan & Liu (2020)** — Learn the rest of the toolbox: base editing, prime editing, and why cutting is often the wrong tool
+4. **Collins & Varmus precision medicine perspective** — Frame the policy and scientific vision for clinical genomics
+5. **ACMG/AMP variant interpretation guidelines** — Learn the standard clinical framework for classifying variants
+6. **ClinVar database** — Explore real clinically interpreted variants hands-on
+7. **Manolio et al. missing heritability review** — Understand the challenges of translating GWAS to the clinic
+8. **PharmGKB / ClinPGx** — Explore gene-drug interactions and pharmacogenomic annotations
+9. **FDA approval + Frangoul et al. (2024)** — Follow one therapy from trial evidence to label: the first approved CRISPR medicine
+10. **Musunuru et al. (2025)** — See where this is heading: a therapy designed for a single patient's variant
+11. **Topol — Deep Medicine** — Synthesize the broader vision of AI-augmented genomic medicine
+12. **NIH All of Us** — See how large-scale precision medicine research is being operationalized
+
+---
+
+## 🛠️ Practice
+
+1. **Three variants, three ACMG classifications** — Pick one gene with a ClinGen expert panel (*BRCA1*, *MYH7*, *CFTR*, *PTEN* and *TP53* all qualify) and choose three variants from ClinVar with different assertions: one Pathogenic, one Benign, one VUS. For each, build the evidence table criterion by criterion — population frequency (BA1/BS1/PM2) from gnomAD, computational prediction (PP3/BP4), functional data (PS3/BS3), segregation, de novo status, and null-variant logic (PVS1) where it applies. Combine per the Richards et al. rules and state your call. Then compare to the expert panel's and account for every disagreement. Deliverable: three completed evidence tables plus the reconciliation. *(~5 h · Richards et al. 2015 (ACMG/AMP); ClinVar; gnomAD)*
+
+2. **The PPV arithmetic everyone gets wrong** — Work this fully, with numbers. A variant has carrier frequency 1% in the population; the associated disease has prevalence 1/10,000; the assay has 99% sensitivity and 99.9% specificity. Compute the PPV of a positive result in (a) a symptomatic patient with a 10% pre-test probability and (b) an asymptomatic person screened at random. Now redo both with penetrance 50% rather than complete. Then redo with 100 variants tested at once. Deliverable: a one-page worked solution and three sentences on why incidental findings from population-scale sequencing are a clinical problem rather than a bonus. *(~2.5 h · Richards et al. 2015; Collins & Varmus 2015)*
+
+3. **Implement the frequency filter yourself** — The ACMG frequency criteria (BA1, BS1) require a threshold, and the threshold depends on the disease. Implement the maximum-credible-population-allele-frequency calculation: from disease prevalence, inheritance mode, maximum allelic contribution of a single variant, and penetrance, compute the highest allele frequency a genuinely causal variant could have, including a confidence bound for the finite size of the reference population. Apply it to a list of 20 candidate variants in a gene of your choice with their gnomAD popmax frequencies, and report which are excluded on frequency alone. Deliverable: a small script and the exclusion table. *(~4 h · Richards et al. 2015; gnomAD; the maximum-credible-AF framework from the clinical genetics literature)*
+
+4. **Design the edit, then count the off-targets** — For a specific pathogenic variant in a specific gene, design three candidate CRISPR strategies: a Cas9 nuclease with HDR template, a base editor, and prime editing. For the nuclease approach, write out three 20-nt protospacers with their PAMs by hand from the reference sequence, then search the genome for near-matches allowing 1–3 mismatches with PAM-proximal weighting (a public design tool or your own script against a reference index). Rank off-target risk and identify any off-target in a coding exon or a tumour suppressor. Then write 400 words choosing one of the three strategies for *this* variant on mechanistic grounds — whether the substitution is a transition the base editor can make, whether HDR is feasible in the relevant cell type, and the delivery problem. Deliverable: the guide table plus the risk memo. *(~5 h · Jinek/Doudna & Charpentier 2012; Doudna TED talk; a public guide-design tool)*
+
+5. **A pharmacogenomic guideline as a decision table** — Choose a drug-gene pair with a CPIC guideline: *CYP2C19*-clopidogrel, *TPMT*/*NUDT15*-thiopurines, *DPYD*-fluoropyrimidines, or *HLA-B\*57:01*-abacavir. From PharmGKB/ClinPGx and the CPIC guideline, build the full table: diplotype → metabolizer phenotype → activity score → recommendation → strength of recommendation. Include the star-allele definitions you relied on. Then write 300 words on what the table cannot capture — ancestry-specific allele coverage gaps on common genotyping arrays, phenoconversion from co-medications, copy-number variants the assay misses, and the difference between a guideline and an outcomes trial. *(~3.5 h · PharmGKB; CPIC guidelines; Collins & Varmus 2015)*
+
+6. **Score the missing-heritability predictions** — Read Manolio et al. (2009). Extract the candidate explanations they proposed for missing heritability: rare variants of large effect, structural variation, epigenetics, gene-gene interaction, overestimated pedigree heritability, and incomplete LD tagging. For each, find where the field landed — for height, SNP-based heritability from common variants now accounts for a substantial fraction of the pedigree estimate; for others the story differs. Deliverable: a six-row table with proposed explanation / current verdict / key evidence, plus 300 words on which explanation turned out to matter most. *(~3 h · Manolio et al. 2009; Broad GWAS primer from Section 02)*
+
+**🏗️ Mini-project — Trace one disease variant end to end:** Pick a single well-characterised pathogenic variant and follow it from coordinate to clinic in one document. Good choices: *HBB* c.20A>T p.Glu7Val (sickle), *CFTR* c.1521_1523del p.Phe508del, a specific *LDLR* familial hypercholesterolaemia variant, or a specific *MYH7* HCM variant. The document must cover, in order: genomic coordinate in both GRCh37 and GRCh38; the transcript (with version) and full HGVS at genomic, coding and protein level, plus any legacy naming and why it differs; population allele frequency by ancestry from gnomAD with allele counts, not just frequencies; the molecular consequence at protein-structure level, reusing the structural memo from Section 03 if you chose the same protein; the ClinVar/ClinGen classification with the full ACMG evidence chain as you would assemble it yourself; the clinical phenotype and a penetrance estimate with a cited source and uncertainty; current therapeutic options including any approved gene or cell therapy; and finally, what assay you would run to confirm a therapeutic edit actually worked, with the detection limit that assay needs. Deliverable: a 3–4 page memo in `projects/bio/08-variant-trace/` plus a notebook that pulls the public data programmatically. Success criterion: every identifier — rsID, HGVS string, transcript version, PDB ID, ClinVar accession — is exact and resolves when pasted into the relevant database, and your penetrance figure carries a source and a stated range rather than a single number. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What does "variant of uncertain significance" actually mean, and what is the single most common type of evidence that resolves one?
+2. Name the ACMG criterion codes for: too common in the population to be pathogenic; a null variant in a gene where loss of function causes disease; absent from population databases. What weight does each carry?
+3. Why does the same variant get a different PPV in a symptomatic patient than in a population screen? Give the Bayesian structure, not just the word "prevalence".
+4. Roughly how many pathogenic/likely-pathogenic variants would you expect an average healthy person to carry in ACMG's secondary-findings gene list? Estimate, then check.
+5. A colleague says "the variant is in a conserved residue and three predictors call it damaging, so it's pathogenic." List everything wrong with that chain of reasoning.
+6. Mechanistically, what can base editing do that Cas9 nuclease cannot, and what can prime editing do that base editing cannot?
+7. What is phenoconversion in pharmacogenomics, and why does it undermine genotype-only dosing?
+8. Explain to a smart friend in three sentences why having your genome sequenced tells you much less about your future health than most people expect.

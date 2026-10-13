@@ -2,106 +2,219 @@
 
 Track your progress through the curriculum. Check off items as you complete them.
 
+Each section below lists every resource in that section's README, in roughly the order the section's **Suggested Order** recommends.
+
 ---
 
 ## Section 00 — Molecular Biology Fundamentals
-- [ ] Alberts — *Molecular Biology of the Cell* (selected chapters)
-- [ ] MIT 7.01x — Introduction to Biology: The Secret of Life (edX)
-- [ ] MIT 7.016 — Introductory Biology (MIT OCW)
 - [ ] Khan Academy — Molecular Biology
+- [ ] MITx 7.00x — Introduction to Biology: The Secret of Life (edX)
 - [ ] Drew Berry — Molecular animations (TED)
-- [ ] Schrödinger — *What Is Life?*
+- [ ] Alberts — *Molecular Biology of the Cell* (selected chapters)
+- [ ] Milo & Phillips — *Cell Biology by the Numbers* (2015)
+- [ ] MIT 7.012 — Introductory Biology lectures (Lander & Weinberg)
+- [ ] MIT 7.016 — Introductory Biology (MIT OCW)
 - [ ] iBiology — Cell biology talks
+- [ ] Lodish et al. — *Molecular Cell Biology* (2021)
+- [ ] Schrödinger — *What Is Life?*
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Gene datasheet
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 01 — Biochemistry
 - [ ] Lehninger — *Principles of Biochemistry* (selected chapters)
 - [ ] MIT 5.07SC — Biological Chemistry I
-- [ ] Stryer — *Biochemistry*
 - [ ] PDB-101 — Molecule of the Month series
 - [ ] AK Lectures — Biochemistry (YouTube)
 - [ ] HHMI BioInteractive — Enzyme visualizations
+- [ ] Berg, Gatto, Hines, Tymoczko & Stryer — *Biochemistry* (10th ed., 2023)
+- [ ] MIT 7.05 — General Biochemistry
+- [ ] Dill & MacCallum — "The Protein-Folding Problem, 50 Years On" (2012)
+- [ ] Voet & Voet — *Biochemistry*
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: Enzyme assay, simulated end to end
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 02 — Genetics and Genomics
-- [ ] Watson et al. — *Molecular Biology of the Gene*
 - [ ] Mukherjee — *The Gene: An Intimate History*
 - [ ] MIT 7.03 — Genetics (MIT OCW)
+- [ ] Watson et al. — *Molecular Biology of the Gene*
+- [ ] NHGRI — Genomics education resources
 - [ ] Lander et al. — Initial sequencing of the human genome (2001)
-- [ ] Griffiths et al. — *Introduction to Genetic Analysis*
+- [ ] Nurk et al. — The complete sequence of a human genome (2022)
+- [ ] Goodwin, McPherson & McCombie — Ten years of next-generation sequencing (2016)
+- [ ] Broad Institute — GWAS primer
+- [ ] Broad Institute — A Brief Guide to Genomics
 - [ ] 1000 Genomes Project — Population genetics
-- [ ] Broad Institute — GWAS primers
+- [ ] 1000 Genomes Project Consortium — Integrated map of genetic variation (2012)
+- [ ] Karczewski et al. — gnomAD mutational constraint spectrum (2020)
+- [ ] Griffiths et al. — *Introduction to Genetic Analysis*
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: Population history of one variant
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 03 — Structural Biology
-- [ ] Branden & Tooze — *Introduction to Protein Structure*
-- [ ] Petsko & Ringe — *Protein Structure and Function*
 - [ ] PDB-101 — Educational resources
-- [ ] Anfinsen — Nobel lecture on protein folding
+- [ ] Branden & Tooze — *Introduction to Protein Structure*
+- [ ] Anfinsen — Nobel lecture on protein folding (1972)
 - [ ] iBiology — Structural biology series
-- [ ] Callaway — Nature features on cryo-EM revolution
+- [ ] RCSB PDB — Search, visualize, and download structures
+- [ ] RCSB PDB — Training resources
+- [ ] UCSF ChimeraX — Hands-on structure visualization
+- [ ] Dubochet, Frank & Henderson — Cryo-EM Nobel lectures (2017)
+- [ ] Callaway — "The revolution will not be crystallized" (2015)
+- [ ] Petsko & Ringe — *Protein Structure and Function*
+- [ ] Jumper et al. — AlphaFold 2 (Nature 2021)
+- [ ] Varadi et al. — AlphaFold Protein Structure Database (2022)
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: Structure review memo for one disease variant
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 04 — Bioinformatics and Sequence Analysis
-- [ ] Durbin et al. — *Biological Sequence Analysis*
+- [ ] Durbin et al. — *Biological Sequence Analysis* (Ch. 1–4)
+- [ ] NCBI BLAST — Tutorial and practice
 - [ ] Altschul et al. — BLAST paper (1990)
 - [ ] Eddy — "What is a Hidden Markov Model?" (2004)
-- [ ] NCBI BLAST — Tutorial and practice
+- [ ] Durbin et al. — *Biological Sequence Analysis* (Ch. 5–6)
 - [ ] Rosalind — Bioinformatics problem set
+- [ ] Compeau & Pevzner — *Bioinformatics Algorithms* (2024)
 - [ ] UCSC Genome Browser — Guides and tutorials
+- [ ] Altschul et al. — Gapped BLAST and PSI-BLAST (1997)
+- [ ] Holmes & Huber — *Modern Statistics for Modern Biology* (2019)
 - [ ] EMBL-EBI — Bioinformatics training
+- [ ] Heumos, Schaar et al. — Single-Cell Best Practices (2023)
+- [ ] Durbin et al. — *Biological Sequence Analysis* (Ch. 7–9)
+- [ ] Mount — *Bioinformatics: Sequence and Genome Analysis*
+- [ ] Higgins & Taylor — *Bioinformatics: Sequence, Structure, and Databanks*
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: A small, honest sequence-search engine
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 05 — Systems Biology
-- [ ] Alon — *An Introduction to Systems Biology*
-- [ ] Alon — "Network Motifs" (Science 2002)
-- [ ] Barabási & Oltvai — Network biology review (2004)
+- [ ] Alon — *An Introduction to Systems Biology* (Ch. 1–4)
+- [ ] Milo et al. — "Network Motifs" (Science 2002)
+- [ ] Shen-Orr et al. — Network motifs in the *E. coli* transcription network (2002)
 - [ ] Kitano — "Systems Biology: A Brief Overview" (2002)
+- [ ] Barabási & Oltvai — Network biology review (2004)
+- [ ] Elowitz & Leibler — A synthetic oscillatory network / repressilator (Nature 2000)
+- [ ] Gardner, Cantor & Collins — Genetic toggle switch (Nature 2000)
+- [ ] Alon — *An Introduction to Systems Biology* (Ch. 5–8)
+- [ ] Elowitz & Bois — *Biological Circuit Design*
+- [ ] MIT 8.591J — Systems Biology (Jeff Gore, MIT OCW)
 - [ ] KEGG — Pathway database exploration
+- [ ] Ideker, Galitski & Hood — A new approach to decoding life (2001)
+- [ ] CellDesigner — Build and simulate a network model
 - [ ] Klipp et al. — *Systems Biology: A Textbook*
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: A gene circuit analysed as a control system
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 06 — Computational Chemistry and Drug Discovery
-- [ ] Leach — *Molecular Modelling*
+- [ ] Leach — *Molecular Modelling* (Ch. 1–4)
 - [ ] Lipinski et al. — Rule of Five (1997)
-- [ ] AutoDock / Vina — Docking tutorials
 - [ ] RDKit — Cheminformatics tutorials
-- [ ] Kitchen et al. — Docking review (2004)
+- [ ] AutoDock / Vina — Docking tutorials
+- [ ] Kitchen et al. — Docking and scoring review (2004)
+- [ ] Shoichet — Virtual screening of chemical libraries (2004)
+- [ ] Lyu et al. — Ultra-large library docking (2019)
 - [ ] ZINC database — Virtual screening
+- [ ] TeachOpenCADD — CADD notebooks
+- [ ] Schneider — Automating drug discovery (2018)
+- [ ] Leach — *Molecular Modelling* (Ch. 9–12) + Klebe — *Drug Design*
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: One honest virtual screen, end to end
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 07 — Protein Engineering and Design
+- [ ] Arnold — Nobel lecture on directed evolution (2018)
+- [ ] Huang, Boyken & Baker — The coming of age of de novo protein design (2016)
+- [ ] Rives et al. — ESM (PNAS 2021)
+- [ ] Lin et al. — ESM-2 / ESMFold (Science 2023)
 - [ ] Watson et al. — RFdiffusion (Nature 2023)
-- [ ] Lin et al. — ESM-2 (Science 2023)
-- [ ] Arnold — Nobel lecture on directed evolution
 - [ ] Dauparas et al. — ProteinMPNN (Science 2022)
+- [ ] Wicky et al. — Hallucinating symmetric protein assemblies (2022)
 - [ ] Madani et al. — ProGen (Nature Biotechnology 2023)
-- [ ] Baker — De novo protein design (Rosetta)
+- [ ] Hayes et al. — ESM3 (Science 2025)
+- [ ] Baker — Nobel lecture: De novo protein design (2024)
+- [ ] Nobel Committee for Chemistry — Scientific background, Chemistry 2024
+- [ ] Rosetta Commons — Install and run the tutorials
+- [ ] Baker Lab — Protein design resources
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: Design and triage a small binder
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 08 — Genomic Medicine
-- [ ] Doudna & Charpentier — CRISPR (Science 2014)
-- [ ] Richards et al. — ACMG variant interpretation (2015)
-- [ ] Topol — *Deep Medicine*
-- [ ] ClinVar — Database exploration
-- [ ] PharmGKB — Pharmacogenomics resources
+- [ ] Jinek et al. — A programmable dual-RNA-guided DNA endonuclease (Science 2012)
+- [ ] Doudna — How CRISPR lets us edit our DNA (TED)
+- [ ] Anzalone, Koblan & Liu — Nucleases, base editors, transposases, prime editors (2020)
 - [ ] Collins & Varmus — Precision Medicine (NEJM 2015)
+- [ ] Richards et al. — ACMG/AMP variant interpretation (2015)
+- [ ] ClinVar — Database exploration
+- [ ] Manolio et al. — Finding the missing heritability (2009)
+- [ ] PharmGKB / ClinPGx — Pharmacogenomics resources
+- [ ] FDA — First gene therapies approved for sickle cell disease (2023)
+- [ ] Frangoul et al. — Exagamglogene autotemcel for severe sickle cell disease (NEJM 2024)
+- [ ] Musunuru et al. — Patient-specific in vivo gene editing (NEJM 2025)
+- [ ] Topol — *Deep Medicine*
+- [ ] NIH All of Us — Research program
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: Trace one disease variant end to end
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 09 — Neuroscience
-- [ ] Dayan & Abbott — *Theoretical Neuroscience*
-- [ ] Kandel — *Principles of Neural Science*
 - [ ] MIT 9.40 — Introduction to Neural Computation
+- [ ] Rao & Fairhall — Computational Neuroscience (Coursera)
+- [ ] Hodgkin & Huxley — Membrane current and the action potential (1952)
 - [ ] Gerstner et al. — *Neuronal Dynamics*
-- [ ] Hubel & Wiesel — Visual cortex Nobel work
+- [ ] Neuromatch Academy — Computational Neuroscience
+- [ ] Dayan & Abbott — *Theoretical Neuroscience*
+- [ ] Hubel & Wiesel — Receptive fields in the cat's visual cortex (1962)
+- [ ] Jun et al. — Neuropixels silicon probes (Nature 2017)
+- [ ] Kandel — *Principles of Neural Science*
 - [ ] Allen Brain Atlas — Exploration
+- [ ] Dorkenwald et al. — FlyWire adult brain connectome (Nature 2024)
+- [ ] Human Connectome Project — Exploration
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: Spike sorting from first principles, and where it breaks
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 10 — AI for Biology
+- [ ] Senior et al. — AlphaFold 1 (Nature 2020)
 - [ ] Jumper et al. — AlphaFold 2 (Nature 2021)
 - [ ] Abramson et al. — AlphaFold 3 (Nature 2024)
+- [ ] Jumper — Nobel lecture: Chemical and biological intuition in structure prediction (2024)
+- [ ] AlphaFold 3 — Run the open-source inference code
+- [ ] Boltz-1 / Boltz-2 — Run the open AF3-class models
+- [ ] Bronstein et al. — Geometric Deep Learning (2021)
+- [ ] Stärk et al. — 3D Infomax for molecular GNNs (2022)
 - [ ] Corso et al. — DiffDock (2023)
 - [ ] Lee et al. — BioBERT (2020)
-- [ ] scGPT — Single-cell foundation model
-- [ ] Jumper & Hassabis — Nobel lecture (2024)
+- [ ] Cui et al. — scGPT (Nature Methods 2024)
+- [ ] Urbina et al. — Dual use of AI-powered drug discovery (2022)
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: Audited replication of one AI-for-biology claim
+- [ ] ✅ Check Yourself — answered from memory
 
 ## Section 11 — Frontiers
-- [ ] Voigt et al. — Synthetic genetic circuits review
-- [ ] Willett et al. — Speech BCI (Nature 2023)
+- [ ] Nielsen, Voigt et al. — Genetic circuit design automation (Science 2016)
+- [ ] Galanie et al. — Complete biosynthesis of opioids in yeast (Science 2015)
+- [ ] iGEM — Explore the competition and parts registry
+- [ ] Willett et al. — Speech neuroprosthesis (Nature 2023)
+- [ ] Hochberg et al. — Neuronal ensemble control of prosthetic devices (Nature 2006)
+- [ ] Neuralink — Brain-computer interface hardware
 - [ ] Karr et al. — Whole-cell model (Cell 2012)
+- [ ] Thornburg et al. — Simulations of a living minimal cell (Cell 2022)
+- [ ] Bunne et al. — How to build the virtual cell with AI (Cell 2024)
 - [ ] López-Otín et al. — Hallmarks of aging (Cell 2023)
-- [ ] Nguyen et al. — Evo genomic model (2024)
+- [ ] Takahashi & Yamanaka — Induction of pluripotent stem cells (Cell 2006)
+- [ ] Sinclair — *Lifespan*
+- [ ] Nguyen et al. — Evo genomic model (Science 2024)
+- [ ] Brixi et al. — Evo 2 (Nature 2026)
 - [ ] Theodoris et al. — Geneformer (Nature 2023)
+- [ ] Cui et al. — scGPT (Nature Methods 2024)
+- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🏗️ Mini-project: One frontier — one build and one memo
+- [ ] ✅ Check Yourself — answered from memory
 
 ---
 
@@ -110,9 +223,13 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] *Lehninger Principles of Biochemistry* — Nelson & Cox
 - [ ] *The Gene: An Intimate History* — Mukherjee
 - [ ] *What Is Life?* — Schrödinger
+- [ ] *Cell Biology by the Numbers* — Milo & Phillips
 - [ ] *Biological Sequence Analysis* — Durbin et al.
+- [ ] *Bioinformatics Algorithms* — Compeau & Pevzner
+- [ ] *Modern Statistics for Modern Biology* — Holmes & Huber
 - [ ] *Introduction to Protein Structure* — Branden & Tooze
 - [ ] *An Introduction to Systems Biology* — Alon
+- [ ] *Biological Circuit Design* — Elowitz & Bois
 - [ ] *Theoretical Neuroscience* — Dayan & Abbott
 - [ ] *Principles of Neural Science* — Kandel
 - [ ] *Deep Medicine* — Topol

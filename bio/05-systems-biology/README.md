@@ -9,20 +9,33 @@ Biology is not a collection of isolated parts — it is a network of interacting
 - [Section 00 — Molecular Biology Fundamentals](../00-molecular-biology-fundamentals/README.md)
 - [Section 02 — Genetics and Genomics](../02-genetics-and-genomics/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Derive the response time of simple gene regulation (*T*½ = ln2/α, independent of production rate) and prove that negative autoregulation shortens it at matched steady state.
+- Explain what each network motif computes: negative and positive autoregulation, the coherent and incoherent feed-forward loops, and the single-input module.
+- Count motifs in a real transcription network against a degree-preserving randomized null model, and compute Z-scores the way Milo et al. did.
+- Do a phase-plane and linear-stability analysis of a two-gene circuit: find nullclines, the Jacobian, eigenvalues, and the bifurcation that creates bistability or oscillation.
+- State where deterministic ODE models of gene circuits break down, and estimate the molecule-number regime in which you must go stochastic.
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
 | 🔑 | 📘 Textbook | An Introduction to Systems Biology: Design Principles of Biological Circuits | Alon, U. | 2019 | [Chapman & Hall/CRC](https://www.routledge.com/An-Introduction-to-Systems-Biology-Design-Principles-of-Biological-Circuits/Alon/p/book/9781439837177) | The gold-standard textbook — beautifully explains network motifs, robustness, feedback loops, and the engineering principles underlying biological circuits with elegant simplicity |
 | 🔑 | 📄 Paper | Network Motifs: Simple Building Blocks of Complex Networks | Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., Alon, U. | 2002 | [Science](https://doi.org/10.1126/science.298.5594.824) | Landmark paper that identified recurring circuit patterns (feed-forward loops, bi-fans) in biological and engineered networks — foundational concept for understanding network architecture |
-| | 📘 Textbook | Systems Biology: A Textbook | Klipp, E., Liebermeister, W., Herwig, R., Kowald, A., Lehrach, H., Wierling, C. | 2016 | [Wiley-VCH](https://www.wiley.com/en-us/Systems+Biology%3A+A+Textbook%2C+2nd+Edition-p-9783527336364) | Comprehensive graduate-level textbook covering metabolic networks, signaling pathways, gene regulation, and computational modeling with MATLAB/Python examples |
+| | 📘 Textbook | Systems Biology: A Textbook (2nd Edition) | Klipp, E., Liebermeister, W., Wierling, C., Kowald, A. | 2016 | [Wiley-VCH](https://www.wiley.com/en-us/Systems+Biology%3A+A+Textbook%2C+2nd+Edition-p-9783527336364) | Comprehensive graduate-level textbook covering metabolic networks, signaling pathways, gene regulation, and computational modeling, with modeling software on the companion site |
 | | 📄 Paper | Network Biology: Understanding the Cell's Functional Organization | Barabási, A.-L. & Oltvai, Z. N. | 2004 | [Nature Reviews Genetics](https://doi.org/10.1038/nrg1272) | Authoritative review connecting network science to cell biology — covers scale-free networks, network hubs, modularity, and how network topology shapes cellular function |
 | | 🌐 Database | KEGG: Kyoto Encyclopedia of Genes and Genomes | Kanehisa, M. & Goto, S. | 2024 | [KEGG](https://www.genome.jp/kegg/) | Curated database of metabolic pathways, signaling networks, and disease pathways — essential reference for exploring pathway maps and understanding cross-talk between biological systems |
 | | 📄 Paper | Systems Biology: A Brief Overview | Kitano, H. | 2002 | [Science](https://doi.org/10.1126/science.1069492) | Early and influential articulation of the systems biology vision — argues for integrating computational modeling with high-throughput experiments to understand biological robustness |
-| | 📄 Paper | A New Approach to Decoding Life: Systems Biology | Ideker, T., Galitski, T., Hood, L. | 2001 | [Annu. Rev. Genomics Hum. Genet.](https://doi.org/10.1146/annurev.genom.2.1.343) | Foundational review laying out the systems biology roadm — integrating genomics, proteomics, and computational models to understand cellular behavior holistically |
+| | 📄 Paper | A New Approach to Decoding Life: Systems Biology | Ideker, T., Galitski, T., Hood, L. | 2001 | [Annu. Rev. Genomics Hum. Genet.](https://doi.org/10.1146/annurev.genom.2.1.343) | Foundational review laying out the systems biology roadmap — integrating genomics, proteomics, and computational models to understand cellular behavior holistically |
 | | 📄 Paper | Network Motifs in the Transcriptional Regulation Network of *Escherichia coli* | Shen-Orr, S. S., Milo, R., Mangan, S., Alon, U. | 2002 | [Nature Genetics](https://doi.org/10.1038/ng881) | Companion to the Science motifs paper — maps the complete *E. coli* transcriptional network and identifies the specific motifs (including feed-forward loops) that dominate gene regulation |
-| | 🎓 Course | MIT 8.591J / 7.81J — Systems Biology (OCW) | Bhatt, D. & Bhatt, J. | 2014 | [MIT OCW](https://ocw.mit.edu/courses/8-591j-systems-biology-fall-2014/) | Full MIT lecture videos and problem sets covering gene circuits, stochastic gene expression, evolution, and ecological dynamics — pairs perfectly with the Alon textbook |
+| | 🎓 Course | MIT 8.591J — Systems Biology (OCW) | Gore, J. | 2014 | [MIT OCW](https://ocw.mit.edu/courses/8-591j-systems-biology-fall-2014/) | Full MIT lecture videos and problem sets covering gene circuits, stochastic gene expression, evolution, and ecological dynamics — pairs perfectly with the Alon textbook |
 | | 🌐 Software | CellDesigner — Modeling Biological Networks | Systems Biology Institute | 2024 | [CellDesigner](https://www.celldesigner.org/) | Free graphical tool for building and simulating gene regulatory and signaling network models using SBML — excellent for translating network diagrams into quantitative simulations |
+| | 📄 Paper | A Synthetic Oscillatory Network of Transcriptional Regulators (the Repressilator) | Elowitz, M. B. & Leibler, S. | 2000 | [Nature](https://doi.org/10.1038/35002125) | Three repressors wired into a ring produced a working oscillator in *E. coli* — the proof that these design principles run in reverse, and still the canonical worked example of a biological oscillator |
+| | 📄 Paper | Construction of a Genetic Toggle Switch in *Escherichia coli* | Gardner, T. S., Cantor, C. R. & Collins, J. J. | 2000 | [Nature](https://doi.org/10.1038/35002131) | Published back-to-back with the repressilator — a bistable two-repressor switch with the stability analysis spelled out; the clearest entry point to bistability and hysteresis in gene circuits |
+| | 📘 Textbook | Biological Circuit Design | Elowitz, M. & Bois, J. | 2026 | [Free online](https://biocircuits.github.io/) | Caltech's free, continuously updated circuit-design text with Python throughout — the same motifs as Alon but with simulations you run, plus noise, oscillators, excitability, and patterning |
 
 ## Suggested Order
 
@@ -31,8 +44,41 @@ Biology is not a collection of isolated parts — it is a network of interacting
 3. **Shen-Orr et al. (2002)** — Deepens understanding of motifs with the full *E. coli* transcription network analysis
 4. **Kitano (2002)** — Short, visionary paper that frames why systems-level thinking matters
 5. **Barabási & Oltvai (2004)** — Broadens perspective from circuits to network topology — hubs, scale-free properties, and robustness
-6. **Alon textbook (Chapters 5–8)** — Robustness, kinetic proofreading, and optimal gene circuit design
-7. **MIT 8.591J lectures** — Video lectures reinforce and extend the textbook material with worked problems
-8. **KEGG pathway database** — Explore real metabolic and signaling pathways to connect theory to actual biology
-9. **Ideker et al. (2001)** — Read for historical context on how systems biology emerged as a discipline
-10. **Klipp et al. textbook** — Use as a graduate-level reference for deeper dives into metabolic modeling and computational methods
+6. **Elowitz & Leibler (2000) + Gardner et al. (2000)** — The repressilator and the toggle switch: two short papers where the theory was first built in cells
+7. **Alon textbook (Chapters 5–8)** — Robustness, kinetic proofreading, and optimal gene circuit design
+8. **Elowitz & Bois "Biological Circuit Design"** — Re-derive the motifs in Python; simulate noise, bistability, and oscillation yourself
+9. **MIT 8.591J lectures** — Video lectures reinforce and extend the textbook material with worked problems
+10. **KEGG pathway database** — Explore real metabolic and signaling pathways to connect theory to actual biology
+11. **Ideker et al. (2001)** — Read for historical context on how systems biology emerged as a discipline
+12. **Klipp et al. textbook** — Use as a graduate-level reference for deeper dives into metabolic modeling and computational methods
+
+---
+
+## 🛠️ Practice
+
+1. **Response time, derived and simulated** — For d*X*/d*t* = β − α*X*, derive *X*(*t*) for a step-on and a step-off, and show *T*½ = ln2/α for both, independent of β. Then set up negative autoregulation with a Hill repression term, tune β so the steady state matches the unregulated circuit exactly, integrate both with `scipy.integrate.solve_ivp`, and plot the two step responses on the same axes. Measure *T*½ for each. Finally, write the hardware translation explicitly: identify what plays the role of the RC time constant, what plays the role of loop gain, and in what sense NAR is bandwidth extension by feedback — including the price you pay for it. *(~3.5 h · Alon, the chapters on autoregulation; MIT 8.591J lectures)*
+
+2. **The coherent FFL as a pulse-rejection filter** — Simulate the C1 feed-forward loop with AND logic at the output. Drive the input with square pulses of varying width and show the circuit rejects short pulses while passing sustained ones. Extract the threshold pulse width as a function of the intermediate node's production and degradation rates, and plot that filtering curve. Then simulate the I1-FFL and show the two behaviours it is famous for: pulse generation and accelerated response. Deliverable: notebook with the filtering curve and a one-paragraph statement of what each FFL type is *for*. *(~4 h · Alon, feed-forward loop chapters; Milo et al. 2002; Shen-Orr et al. 2002)*
+
+3. **Motif counting with a proper null model** — Get the *E. coli* transcriptional regulatory network (RegulonDB, or the network from Shen-Orr et al.). Count feed-forward loops and bi-fans. Then build the null model correctly: generate randomized networks by edge switching that preserves every node's in-degree and out-degree, 1000 replicates, and compute Z-scores for each motif. Reproduce the qualitative conclusion of Milo et al. Then do the instructive part: compute Z-scores against a naive Erdős-Rényi null that does *not* preserve degree, and show how much the apparent significance inflates. Deliverable: notebook plus a Z-score table under both nulls. *(~5 h · Milo et al. 2002; Shen-Orr et al. 2002; RegulonDB)*
+
+4. **Toggle switch: phase plane, bifurcation, hysteresis** — Build the symmetric two-gene mutual-repression circuit with Hill coefficient *n*. Plot nullclines and vector field; find the fixed points and classify them from the Jacobian eigenvalues. Sweep *n* and locate the bifurcation at which the single stable state becomes two (confirm the *n* > 1 requirement, and find where it actually happens for your parameters). Then demonstrate hysteresis: ramp an inducer up and back down and plot the loop. Deliverable: phase portraits at three values of *n*, the bifurcation point, and the hysteresis loop. *(~4 h · Alon, chapters on bistability and robustness; Klipp et al. for the mathematical machinery)*
+
+5. **A pathway as a matrix** — Choose a pathway from KEGG (glycolysis is the canonical choice). Transcribe its reactions into a stoichiometric matrix **S** by hand, then in NumPy compute: the null space of **S** (the steady-state flux modes), the left null space (conserved moieties — you should recover the obvious conservation relations), and the rank. Interpret each basis vector of the null space biologically. Deliverable: the matrix, the computed subspaces, and one paragraph interpreting them. Check: your conserved-moiety vectors should correspond to things you can name. *(~3.5 h · KEGG; Klipp et al., *Systems Biology: A Textbook*)*
+
+6. **Steelman then break the scale-free claim** — Read Barabási & Oltvai. Write a 300-word steelman of the scale-free-biological-network thesis: what the evidence is and what it would explain (hub robustness, attack tolerance, preferential attachment as a growth mechanism). Then write a 300-word critique: sampling bias in interactome data, the statistical difficulty of distinguishing a power law from a lognormal on a few hundred points, and the Broido & Clauset (2019) finding that strict scale-free structure is rare. End with one falsifiable prediction that would settle it for a specific network. *(~3 h · Barabási & Oltvai 2004; Kitano 2002; Ideker et al. 2001 for context)*
+
+**🏗️ Mini-project — A gene circuit analysed as a control system:** Take one oscillator or cascade — the repressilator (three-gene ring of repressors) is the best choice — and analyse it the way you would analyse a feedback loop on the bench. Steps: write the ODEs with Hill kinetics and explicit protein and mRNA species; nondimensionalize and identify the handful of dimensionless parameters that actually govern behaviour; find the symmetric fixed point and compute the Jacobian; get the eigenvalues as a function of Hill coefficient and the dimensionless production rate, and locate the Hopf bifurcation analytically where you can and numerically where you can't; map the oscillatory region in parameter space. Then compute the loop gain and phase at the oscillation frequency and state the Barkhausen-style condition in biological terms. Finally, implement a Gillespie stochastic simulation of the same circuit and compare: at what mean molecule number does the deterministic model stop predicting the period and amplitude, and what does the stochastic version do instead (phase diffusion, amplitude noise, occasional skipped cycles)? Deliverable: a notebook in `projects/bio/05-gene-circuit/` plus a one-page memo mapping loop gain, phase margin and dominant pole onto the biological parameters — written so an analog designer would recognise every term. Success criterion: your linear-stability prediction of the oscillation boundary agrees with the full nonlinear integration to within a few percent in parameter space, and you state a specific molecule-number threshold below which the deterministic model is no longer usable. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Why is the response time of simple gene regulation independent of the production rate? State the result and the one-line reason.
+2. What does negative autoregulation buy you, and what does it cost? Name at least two costs.
+3. Distinguish the coherent and incoherent feed-forward loops by their input-output behaviour, not their wiring diagrams.
+4. Why must a motif null model preserve the degree sequence? What goes wrong if it doesn't?
+5. Roughly how many transcription factors does *E. coli* have, and roughly what fraction of its genes do they regulate? Estimate, then check.
+6. A colleague says "biological networks are scale-free, so they're robust." Identify both the empirical and the logical weakness in that sentence.
+7. For a bistable mutual-repression switch, what is the minimum Hill coefficient and why does cooperativity matter at all?
+8. Explain to a smart friend in three sentences why a cell needs feedback loops rather than just making the right amount of each protein.

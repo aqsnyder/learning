@@ -72,10 +72,10 @@ Section 11  →  Frontiers (2023–2026+)
 |---|------------------|---------| 
 | 1 | Jumper et al. — AlphaFold 2 (Nature 2021) | [10 — AI for Biology](10-ai-for-biology/) |
 | 2 | Watson et al. — RFdiffusion (Nature 2023) | [07 — Protein Engineering](07-protein-engineering-and-design/) |
-| 3 | Doudna & Charpentier — CRISPR-Cas9 (Science 2014) | [08 — Genomic Medicine](08-genomic-medicine/) |
+| 3 | Jinek et al. (Doudna & Charpentier) — CRISPR-Cas9 (Science 2012) | [08 — Genomic Medicine](08-genomic-medicine/) |
 | 4 | Lin et al. — ESM-2 (Science 2023) | [07 — Protein Engineering](07-protein-engineering-and-design/) |
 | 5 | Lander et al. — Human Genome (Nature 2001) | [02 — Genetics](02-genetics-and-genomics/) |
-| 6 | Alon — Network Motifs (Science 2002) | [05 — Systems Biology](05-systems-biology/) |
+| 6 | Milo et al. (Alon lab) — Network Motifs (Science 2002) | [05 — Systems Biology](05-systems-biology/) |
 | 7 | Lipinski et al. — Rule of Five (1997) | [06 — Drug Discovery](06-computational-chemistry-and-drug-discovery/) |
 | 8 | Abramson et al. — AlphaFold 3 (Nature 2024) | [10 — AI for Biology](10-ai-for-biology/) |
 | 9 | López-Otín et al. — Hallmarks of Aging (Cell 2023) | [11 — Frontiers](11-frontiers/) |

@@ -10,6 +10,16 @@ Proteins are the molecular machines of life — enzymes that catalyze reactions,
 - [Section 03 — Structural Biology](../03-structural-biology/README.md)
 - [Section 04 — Bioinformatics and Sequence Analysis](../04-bioinformatics-and-sequence-analysis/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Distinguish the four problems this field solves — structure prediction, inverse folding, generative design, and sequence-space generation — and say which tool addresses which.
+- Run a protein language model to produce zero-shot variant-effect scores, and calibrate them against a published deep mutational scan rather than trusting them.
+- Execute the standard design-evaluation loop (backbone → ProteinMPNN sequences → structure prediction → self-consistency RMSD and pLDDT filtering) and interpret each metric's blind spots.
+- Explain why directed evolution works at all, in terms of library size, mutation neutrality and the local structure of a fitness landscape.
+- Compare the in-silico pass rates reported in design papers against their experimental hit rates, and state what the filters actually buy.
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -23,6 +33,9 @@ Proteins are the molecular machines of life — enzymes that catalyze reactions,
 | | 📄 Paper | Biological Structure and Function Emerge from Scaling Unsupervised Learning to 250 Million Protein Sequences | Rives, A., Meier, J., Sercu, T., Goyal, S., Lin, Z., ... Fergus, R. | 2021 | [PNAS](https://doi.org/10.1073/pnas.2016239118) | The original ESM paper — demonstrated that transformer language models trained on protein sequences learn biologically meaningful representations of structure, function, and evolution |
 | | 🌐 Software | Rosetta Commons — Macromolecular Modeling Suite | Baker Lab & Rosetta Commons | 2024 | [Rosetta Commons](https://www.rosettacommons.org/) | The foundational software for computational protein design — includes tools for structure prediction, protein-protein docking, enzyme design, and de novo structure generation |
 | | 📄 Paper | Hallucinating Symmetric Protein Assemblies | Wicky, B. I. M., Milles, L. F., Courbet, A., Ragotte, R. J., Dauparas, J., ... Baker, D. | 2022 | [Science](https://doi.org/10.1126/science.add1964) | Demonstrates "hallucination" — using neural networks to generate symmetric protein oligomers by optimizing sequences to have confident predicted structures, bridging prediction and design |
+| 🔑 | 🎓 Lecture | Nobel Lecture: De Novo Protein Design | Baker, D. | 2024 | [Nobel Prize](https://www.nobelprize.org/prizes/chemistry/2024/baker/lecture/) | David Baker's Nobel lecture — the arc from Rosetta energy functions to diffusion-based design, told by the person who built the field; half of the 2024 chemistry prize was awarded to him "for computational protein design" |
+| | 📄 Background | Scientific Background to the Nobel Prize in Chemistry 2024: Computational Protein Design and Protein Structure Prediction | The Nobel Committee for Chemistry | 2024 | [Nobel Prize](https://www.nobelprize.org/prizes/chemistry/2024/advanced-information/) | The committee's technical companion to the prize — the best free survey of how physics-based design, structure prediction, and generative design connect, and what evidence earned the award |
+| | 📄 Paper | Simulating 500 Million Years of Evolution with a Language Model (ESM3) | Hayes, T., Rao, R., Akin, H., Sofroniew, N. J., Oktay, D., Lin, Z. et al. (EvolutionaryScale) | 2025 | [Science](https://doi.org/10.1126/science.ads0018) | ESM-2's successor reasons jointly over sequence, structure, and function, and was prompted to generate esmGFP — a working fluorescent protein carrying 96 mutations relative to its closest known natural relative |
 | | 🎓 Course | Baker Lab — Protein Design Lectures and Resources | Baker, D. & Baker Lab | 2024 | [Baker Lab](https://www.bakerlab.org/) | Hub for the world's leading protein design group — links to lectures, software (RFdiffusion, ProteinMPNN, RoseTTAFold), publications, and tutorials for getting started with AI protein design |
 
 ## Suggested Order
@@ -35,5 +48,38 @@ Proteins are the molecular machines of life — enzymes that catalyze reactions,
 6. **Dauparas et al. (2022) — ProteinMPNN** — Understand the inverse folding problem: given a structure, design the sequence that folds into it
 7. **Wicky et al. (2022)** — "Hallucination" as a design paradigm — connects structure prediction networks to generative design
 8. **Madani et al. (2023) — ProGen** — Autoregressive generation of functional proteins — a different paradigm from diffusion-based design
-9. **Rosetta Commons** — Install and explore the tools; try the introductory tutorials for protein design
-10. **Baker Lab resources** — Explore the latest tools (RFdiffusion, ProteinMPNN) with their GitHub repos and tutorials
+9. **Hayes et al. (2025) — ESM3** — Generative design from a single model over sequence, structure, and function
+10. **Baker Nobel Lecture + Nobel scientific background (2024)** — Step back and see how prediction and design converged into a Nobel-winning field
+11. **Rosetta Commons** — Install and explore the tools; try the introductory tutorials for protein design
+12. **Baker Lab resources** — Explore the latest tools (RFdiffusion, ProteinMPNN) with their GitHub repos and tutorials
+
+---
+
+## 🛠️ Practice
+
+1. **Calibrate ESM against a real DMS** — Pick a protein with a public deep mutational scan (ProteinGym aggregates many; TEM-1 β-lactamase, GFP and PTEN are all well-studied). Run ESM-2 (the 650M checkpoint is enough on free Colab) and compute masked-marginal log-ratio scores for every single-point mutant. Correlate against the measured fitness with Spearman ρ. Then build two baselines: a PSSM from a jackhmmer MSA of the same protein, and a simple hydrophobicity/burial heuristic. Report all three correlations in one table. Deliverable: notebook plus the table, plus 200 words on where ESM beats the MSA baseline and where it does not — and what that implies about what the model learned. *(~5 h · Lin et al. 2023 (ESM-2); Rives et al. 2021; ProteinGym)*
+
+2. **The arithmetic of directed evolution** — From Arnold's Nobel lecture, work the numbers. For a 300-residue protein: how many distinct single mutants exist? Double mutants? What fraction of all doubles does a 10⁷-member library cover? Given that roughly a third of random missense mutations are substantially destabilising, what is the expected fraction of a library that is still folded after 1, 3 and 5 rounds of mutagenesis at 2 mutations per gene? Then simulate: build a toy fitness landscape with tunable epistasis, and compare greedy single-step hill climbing, recombination between two hill-climbed variants, and random search at matched library size. Show the regime where recombination wins. Deliverable: the worked numbers plus the simulation notebook. *(~4 h · Arnold Nobel lecture 2018; Huang, Boyken & Baker 2016 for the contrast with computational design)*
+
+3. **Inverse folding self-consistency loop** — Take a native backbone from the PDB. Run ProteinMPNN at two or three sampling temperatures to generate ~50 sequences each. Measure native sequence recovery per temperature. Then fold every designed sequence with ESMFold or ColabFold and compute self-consistency RMSD to the original backbone plus mean pLDDT. Report the fraction passing scRMSD < 2 Å at each temperature, and plot recovery against pass rate to expose the trade-off. Deliverable: notebook and the trade-off plot. Then answer in writing: why is sequence recovery a bad primary metric for design quality? *(~5 h · Dauparas et al. 2022 (ProteinMPNN); Lin et al. 2023 (ESMFold); Baker Lab resources)*
+
+4. **Run RFdiffusion and account for every design** — Using the public Colab notebook, run RFdiffusion to scaffold a small functional motif (a short helical binding motif or a two-residue metal site is tractable). Generate ~50 backbones, pass each through ProteinMPNN, fold the sequences, and apply the standard in-silico filters (scRMSD < 2 Å, pLDDT > 80, motif RMSD to the target geometry). Record the pass rate at each stage as a funnel. Then find the experimental success rates reported in Watson et al. and write 300 words comparing your in-silico funnel to their wet-lab hit rate: what fraction of in-silico passers are expected to work experimentally, and what is the filter therefore buying — enrichment, or false confidence? *(~6 h · Watson et al. 2023 (RFdiffusion); Dauparas et al. 2022; Baker Lab)*
+
+5. **Two paradigms, one page** — Write a one-page comparison of ProGen (autoregressive sequence generation) against RFdiffusion (structure-space diffusion). Cover: what each can express that the other cannot; what each needs as conditioning input; the evidence each paper offers and the strength of that evidence (how many designs, which assay, what success rate); and the failure modes you would predict for each. End with one concrete experiment that would discriminate between the two approaches on a task they both claim. *(~3 h · Madani et al. 2023 (ProGen); Watson et al. 2023 (RFdiffusion); Huang, Boyken & Baker 2016)*
+
+6. **Hallucination in miniature** — Reproduce the core mechanism of Wicky et al. at toy scale. Starting from a random 60-residue sequence, run Metropolis Monte Carlo over point mutations with an objective that maximises predicted confidence (mean pLDDT from ESMFold, which is fast enough to iterate). Run a few hundred steps and plot the pLDDT trajectory and the predicted structure at several checkpoints. Then the critical part: write 200 words on why a high-confidence prediction is not evidence of a foldable protein, and what the published method adds to stop you from fooling yourself. *(~5 h · Wicky et al. 2022 (hallucinating symmetric assemblies); Lin et al. 2023)*
+
+**🏗️ Mini-project — Design and triage a small binder:** Pick a published target with a small, well-defined epitope (a viral receptor-binding domain or a cytokine with known binder work gives you literature to check yourself against). Run the full modern stack: RFdiffusion to generate binder backbones against the epitope → ProteinMPNN for sequences → ColabFold or ESMFold validation of the monomer and the complex → filtering on scRMSD, pLDDT, interface PAE, predicted interface contacts and buried surface area. Generate enough designs that the funnel is meaningful (aim for 200+ backbones). Deliverable: a notebook in `projects/bio/07-binder-design/` plus a one-page design review that lists your top 5 designs with every metric value, states explicitly what you believe and do not believe about each, names the dominant failure mode among the designs that did not pass, and — the real test — says which 10 constructs you would order first and why, given a fixed budget. Success criterion: at least one design clears scRMSD < 2 Å, pLDDT > 80 and interface PAE < 10; your review correctly diagnoses the main failure mode in the rejects; and your memo states at least one way your own filtering could be systematically fooling you. *(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the inverse folding problem and say how it differs from structure prediction. Which is better solved today, and why?
+2. What is self-consistency RMSD, what does a good value prove, and what does it conspicuously fail to prove?
+3. Why does a protein language model trained only on sequences contain structural information at all? Name the mechanism.
+4. Roughly what experimental success rate do de novo binder campaigns report after in-silico filtering? Give an order of magnitude and say what that implies about how many designs you must order.
+5. A colleague says "ESM gave this mutation a very negative score, so it breaks the protein." What are two ways that inference can fail?
+6. Why did directed evolution dominate protein engineering for thirty years despite requiring no structural understanding at all?
+7. What does ProteinMPNN's sampling temperature control, and what is the trade-off as you raise it?
+8. Explain to a smart friend in three sentences how a computer can design a protein that has never existed.

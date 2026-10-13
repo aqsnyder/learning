@@ -6,7 +6,18 @@ The brain is the most complex biological system we know of, and understanding it
 
 ## Prerequisites
 
-- [Section 00 — Mathematical Foundations](../00-mathematical-foundations/README.md)
+- [Section 00 — Molecular Biology Fundamentals](../00-molecular-biology-fundamentals/README.md)
+- Calculus, linear algebra, and probability — see [math/01 — Linear Algebra](../../math/01-linear-algebra/README.md), [math/02 — Calculus and Analysis](../../math/02-calculus-and-analysis/README.md), [math/03 — Probability and Statistics](../../math/03-probability-and-statistics/README.md), and [math/07 — Differential Equations](../../math/07-differential-equations/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Implement the Hodgkin-Huxley model from the original parameters, reproduce an action potential and an f-I curve, and draw the equivalent circuit identifying every term.
+- Derive the passive cable equation and compute the membrane time constant and electrotonic length constant from real membrane parameters.
+- Reduce a four-variable spiking model to two dimensions and do the phase-plane analysis, stating which behaviours survive the reduction.
+- Compute a tuning curve, a Fano factor and a simple decoder from real or simulated spike data, and explain what rate coding does and does not capture.
+- Specify the analog front end for an extracellular recording — noise budget, bandwidth, input impedance, ADC resolution — from the physics of the signal and the electrode.
 
 ## Resources
 
@@ -21,14 +32,51 @@ The brain is the most complex biological system we know of, and understanding it
 | | 🗃️ Database | Allen Brain Atlas | Allen Institute for Brain Science | 2006– | [Atlas](https://portal.brain-map.org/) | Comprehensive, publicly available atlas of gene expression, connectivity, and cell types across the mouse and human brain |
 | | 🌐 Project | Human Connectome Project | NIH / Washington University / University of Minnesota | 2010– | [Project](https://www.humanconnectome.org/) | Large-scale effort to map the structural and functional connectivity of the human brain using advanced MRI |
 | | 📄 Paper | A Quantitative Description of Membrane Current and Its Application to Conduction and Excitation in Nerve | Alan Hodgkin & Andrew Huxley | 1952 | [Paper](https://doi.org/10.1113/jphysiol.1952.sp004764) | The foundational biophysical model of the action potential — one of the most important papers in all of neuroscience |
+| 🔑 | 🎓 Course | Neuromatch Academy — Computational Neuroscience | Neuromatch | 2025 | [Course book](https://compneuro.neuromatch.io/) | Free, CC-BY course of Colab notebooks and short videos: model fitting, dimensionality reduction, dynamical systems, Bayesian decoding, and deep learning for neural data — the most hands-on way into the field |
+| | 📄 Paper | Fully Integrated Silicon Probes for High-Density Recording of Neural Activity (Neuropixels) | James J. Jun, Nicholas A. Steinmetz, Joshua H. Siegle et al. (… Timothy D. Harris) | 2017 | [Nature](https://doi.org/10.1038/nature24636) | The CMOS probe that reshaped experimental neuroscience: 384 channels addressing 960 sites on a single 10 mm shank — read it for how electrode design, multiplexing, and noise budgets determine which neural data can exist at all |
+| | 📄 Paper | Neuronal Wiring Diagram of an Adult Brain (FlyWire) | Sven Dorkenwald, Arie Matsliah, Amy R. Sterling et al. (… Mala Murthy & the FlyWire Consortium) | 2024 | [Nature](https://doi.org/10.1038/s41586-024-07558-y) | The first synapse-resolution connectome of a complete adult brain — about 139,000 neurons and 54.5 million synapses in *Drosophila*, with the proofread dataset publicly browsable |
 
 ## Suggested Order
 
 1. **MIT 9.40 or Coursera Computational Neuroscience** — Build intuition for neural computation with a structured course
 2. **Hodgkin & Huxley (1952)** — Study the original biophysical model of the action potential
 3. **Gerstner et al. — Neuronal Dynamics** — Deepen understanding with the free interactive textbook
-4. **Dayan & Abbott — Theoretical Neuroscience** — Work through the definitive graduate-level treatment
-5. **Hubel & Wiesel (1962)** — See how experimental neuroscience revealed cortical computation
-6. **Kandel — Principles of Neural Science** — Use as a comprehensive reference across all neuroscience topics
-7. **Allen Brain Atlas** — Explore real brain data: gene expression, connectivity, and cell types
-8. **Human Connectome Project** — Understand large-scale brain network organization and modern imaging approaches
+4. **Neuromatch Academy** — Do the tutorials: fit the models, decode the spikes, break them, and fix them
+5. **Dayan & Abbott — Theoretical Neuroscience** — Work through the definitive graduate-level treatment
+6. **Hubel & Wiesel (1962)** — See how experimental neuroscience revealed cortical computation
+7. **Jun et al. (2017) — Neuropixels** — Understand the instrument: what a modern recording device can and cannot measure
+8. **Kandel — Principles of Neural Science** — Use as a comprehensive reference across all neuroscience topics
+9. **Allen Brain Atlas** — Explore real brain data: gene expression, connectivity, and cell types
+10. **Dorkenwald et al. (2024) — FlyWire** — Explore a complete brain's wiring diagram and ask what a connectome does and does not explain
+11. **Human Connectome Project** — Understand large-scale brain network organization and modern imaging approaches
+
+---
+
+## 🛠️ Practice
+
+1. **Hodgkin-Huxley, from the 1952 parameters** — Implement the full four-variable HH model (V, m, h, n) in SciPy using the rate functions and conductances from the original paper. Reproduce: a single action potential with the correct shape and duration, the absolute and relative refractory periods, the f-I curve, and the rheobase current. Then show the two classic behaviours: anode-break excitation, and failure to fire for a slowly ramped current (accommodation). Validate your waveforms against the figures in Gerstner's *Neuronal Dynamics*. Deliverable: notebook with the plots. Then draw the equivalent circuit — membrane capacitance, three conductance branches with their batteries — and label which differential equation term each component contributes. *(~5 h · Hodgkin & Huxley 1952; Gerstner et al., *Neuronal Dynamics*; MIT 9.40)*
+
+2. **Reduce to two dimensions** — Derive a two-variable reduction of HH (FitzHugh-Nagumo, or Morris-Lecar if you prefer biophysical parameters), stating each approximation: m is fast and can be set to its steady state, h and n are slow and anticorrelated so they collapse to one recovery variable. Do the phase-plane analysis: nullclines, fixed points, stability from the Jacobian, and the bifurcation that produces spiking. Then compare the reduced model to full HH on spike shape, threshold behaviour and f-I curve, and state in writing which HH features the reduction preserves and which it destroys. *(~4 h · Gerstner et al., *Neuronal Dynamics*; Dayan & Abbott, the neuron-models chapters)*
+
+3. **Cable numbers that you can defend** — With specific membrane capacitance ≈ 1 µF/cm², specific membrane resistance giving τ in the 10–30 ms range, and axial resistivity ≈ 100–200 Ω·cm, compute for a dendrite of 1 µm diameter: the membrane time constant, the electrotonic length constant λ, and the steady-state attenuation of a synaptic current injected 200 µm from the soma. Then compute conduction velocity for an unmyelinated 1 µm axon and a myelinated 10 µm axon, and explain the speed-up in terms of both terms that change. Deliverable: a worked numbers page with units checked at every step and one sentence on which input parameter dominates the uncertainty. *(~3 h · Dayan & Abbott, cable theory; Kandel; Gerstner et al.)*
+
+4. **Encode, then decode** — Get a public dataset with spikes and a known stimulus (the Allen Brain Observatory via AllenSDK, or a CRCNS dataset). Compute: tuning curves for the stimulus variable; the spike-count variance against the mean across conditions, to get Fano factors; and the noise correlations between pairs of neurons. Then build a decoder — maximum-likelihood or a linear decoder — and plot decoding accuracy against the number of neurons included. Compare the observed scaling to the independent-neuron prediction and explain the gap in terms of noise correlations. Deliverable: notebook with tuning curves, Fano-factor distribution, and the accuracy-versus-N curve. *(~6 h · Dayan & Abbott, the neural encoding and decoding chapters; Allen Brain Atlas / Brain Observatory)*
+
+5. **Build a simple cell the way Hubel and Wiesel proposed** — Read the 1962 paper, then implement its central hypothesis: construct a simple-cell receptive field by summing LGN center-surround subfields arranged along a line, and show that the result is orientation selective. Present drifting gratings at a range of orientations and spatial frequencies, compute the orientation tuning curve and its half-width, and compare to a Gabor fit. Then test the model's limits: show what it predicts for a stimulus that real simple cells respond to differently (contrast invariance of orientation tuning is the classic failure of the pure linear model). Deliverable: notebook with the tuning curves and 200 words on where the linear model fails. *(~4 h · Hubel & Wiesel 1962; Dayan & Abbott on receptive fields)*
+
+6. **Front-end noise budget for an extracellular recording** — Specify the amplifier. Given: an extracellular spike of 100 µV peak, a recording site with ~150 kΩ impedance at 1 kHz (Neuropixels-class; treat it as resistive for this estimate), a 300 Hz–6 kHz passband, and a target input-referred noise under 5 µV rms. Compute: the electrode's thermal noise contribution over that band (≈ 3.8 µV rms at 310 K), then repeat for a 1 MΩ tungsten microelectrode and explain why that budget is infeasible before the amplifier contributes anything; the maximum tolerable amplifier input voltage noise density; the input impedance needed to avoid attenuating the signal and to keep current-noise contribution negligible; the required ADC resolution and sample rate given the DC offset range you must accommodate; and the total channel count you could run within a stated power budget. Then state which term dominates and what you would change first to improve SNR. Deliverable: a one-page budget with every term in V/√Hz or V rms. *(~3 h · Hodgkin & Huxley 1952 for signal magnitudes; Kandel for electrophysiology background; the Willett BCI paper in Section 11 for real system numbers)*
+
+**🏗️ Mini-project — Spike sorting from first principles, and where it breaks:** Build the complete chain from electrode to sorted units, with ground truth you control. First the forward model: generate a synthetic extracellular recording containing three neurons with distinct, physically plausible waveforms at known firing rates (include a refractory period and some bursting), superimposed on realistic noise — thermal plus 1/f plus a background of unsortable distant units — sampled at 30 kHz through the band-pass from exercise 6. Then the pipeline: filter, threshold detection with an adaptive threshold, waveform extraction and alignment, dimensionality reduction by PCA, clustering, and template matching for overlapping spikes. Then the evaluation against ground truth: hit rate, false-positive rate, and the unit-to-unit confusion matrix. Finally, the part that makes it an engineering result: sweep SNR, sample rate and passband, and produce the breakdown curves — the minimum SNR for 95% accuracy, the sample rate below which waveform alignment fails, and the high-pass corner above which units become indistinguishable. Deliverable: notebook in `projects/bio/09-spike-sorting/` plus a one-page instrument specification stating the minimum front-end requirements for reliable sorting, derived from your own curves. Success criterion: above 95% sorting accuracy in the high-SNR regime, a documented and explained breakdown threshold for each swept parameter, and a stated reason why real recordings are harder than your synthetic ones — name at least three. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the Hodgkin-Huxley current-balance equation and say what each of m, h and n gates.
+2. What sets the membrane time constant, and roughly what is it for a cortical neuron? What sets the length constant?
+3. Why does myelination increase conduction velocity? Give both contributing effects.
+4. Roughly how many synapses does a cortical pyramidal neuron receive, and roughly how many must fire together to bring it to threshold? Estimate, then check against Kandel.
+5. A colleague says "the action potential is an all-or-nothing digital signal, so the neuron is a binary device." Give two reasons that is misleading.
+6. What is a Fano factor, what value would Poisson spiking give, and what do real cortical neurons typically show?
+7. What is the difference between rate coding and temporal coding, and name one experimental result that argues timing carries information rate codes miss.
+8. Explain to a smart friend in three sentences how an electrode outside a cell can tell you when that cell fires.

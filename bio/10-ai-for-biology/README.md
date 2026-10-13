@@ -6,32 +6,78 @@ The application of modern AI to biology is arguably the most consequential devel
 
 ## Prerequisites
 
-- [Section 03 — Machine Learning & Deep Learning](../03-machine-learning-deep-learning/README.md)
-- [Section 04 — Genomics & Bioinformatics](../04-genomics-bioinformatics/README.md)
-- [Section 07 — Structural Biology & Drug Discovery](../07-structural-biology-drug-discovery/README.md)
+- [Section 04 — Bioinformatics and Sequence Analysis](../04-bioinformatics-and-sequence-analysis/README.md)
+- [Section 03 — Structural Biology](../03-structural-biology/README.md) and [Section 06 — Computational Chemistry and Drug Discovery](../06-computational-chemistry-and-drug-discovery/README.md)
+- Deep learning foundations — see [ml/03 — Neural Network Fundamentals](../../ml/03-neural-network-fundamentals/README.md), [ml/06 — Transformers and Attention](../../ml/06-transformers-and-attention/README.md), and [ml/13 — Graphs, Geometry, and Science](../../ml/13-graphs-geometry-and-science/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Describe the AlphaFold 2 forward pass block by block — MSA and pair representations, triangle attention, the structure module and invariant point attention, recycling — and say what inductive bias each block contributes.
+- Explain equivariance and invariance precisely, and demonstrate empirically that a network has or lacks them.
+- Evaluate a structure prediction with the right metric (lDDT, TM-score, GDT-TS) and explain why CASP's blind format is what made AlphaFold's claim credible.
+- Audit a bio-ML benchmark for train/test leakage by sequence or scaffold similarity, and restate the headline number after the audit.
+- Run a standard single-cell pipeline and judge whether a foundation-model embedding beats a simple baseline on a task you define.
 
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
 | 🔑 | 📄 Paper | Highly Accurate Protein Structure Prediction with AlphaFold | Jumper, Evans, Pritzel, Green et al. | 2021 | [Paper](https://doi.org/10.1038/s41586-021-03819-2) | The AlphaFold 2 paper that solved the protein structure prediction problem, achieving experimental-level accuracy at CASP14 |
-| 🔑 | 📄 Paper | Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3 | Abramson, Adler, Dunber, Evans et al. | 2024 | [Paper](https://doi.org/10.1038/s41586-024-07487-w) | AlphaFold 3 extends structure prediction to protein–ligand, protein–DNA/RNA, and multi-chain complexes using diffusion-based architecture |
+| 🔑 | 📄 Paper | Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3 | Abramson, Adler, Dunger, Evans et al. | 2024 | [Paper](https://doi.org/10.1038/s41586-024-07487-w) | AlphaFold 3 extends structure prediction to protein–ligand, protein–DNA/RNA, and multi-chain complexes using diffusion-based architecture |
 | | 📄 Paper | Improved Protein Structure Prediction Using Potentials from Deep Learning | Senior, Evans, Jumper, Kirkpatrick et al. | 2020 | [Paper](https://doi.org/10.1038/s41586-019-1923-7) | AlphaFold 1 — the initial deep learning approach to protein structure prediction that placed first at CASP13 |
 | | 📄 Paper | DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking | Corso, Stärk, Jing, Barzilay & Jaakkola | 2023 | [Paper](https://doi.org/10.48550/arXiv.2210.01776) | Generative diffusion model for blind molecular docking that treats docking as a generative problem over poses |
 | | 📄 Paper | BioBERT: A Pre-trained Biomedical Language Representation Model | Lee, Yoon, Kim, Kim, Kim, So & Kang | 2020 | [Paper](https://doi.org/10.1093/bioinformatics/btz682) | Domain-specific BERT model pre-trained on biomedical literature, achieving state-of-the-art on biomedical NLP benchmarks |
-| | 📄 Paper | scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics Using Generative AI | Cui, Wang, Zhong, Wang, Wang & Bo | 2024 | [Paper](https://doi.org/10.1038/s41592-024-02201-0) | Foundation model for single-cell biology using generative pre-training, enabling cell type annotation, perturbation prediction, and gene network inference |
+| | 📄 Paper | scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics Using Generative AI | Cui, Wang, Maan, Pang, Luo, Duan & Wang | 2024 | [Paper](https://doi.org/10.1038/s41592-024-02201-0) | Foundation model for single-cell biology using generative pre-training, enabling cell type annotation, perturbation prediction, and gene network inference |
 | | 📄 Paper | 3D Infomax Improves GNNs for Molecular Property Prediction | Stärk, Beaini, Corso, Tossou, Dallago, Günnemann & Liò | 2022 | [Paper](https://doi.org/10.48550/arXiv.2110.04126) | Explores how to incorporate 3D geometric information into GNNs for molecular learning and equivariant representations |
-| | 🎥 Talk | AlphaFold and the Future of Biology — Nobel Lecture | John Jumper & Demis Hassabis | 2024 | [Lecture](https://www.nobelprize.org/prizes/chemistry/2024/jumper/lecture/) | Nobel Prize lecture on AlphaFold's development, from CASP competitions to solving the protein folding problem |
+| | 🎥 Talk | Nobel Lecture: Building Chemical and Biological Intuition into Protein Structure Prediction | John Jumper | 2024 | [Lecture](https://www.nobelprize.org/prizes/chemistry/2024/jumper/lecture/) | Jumper's Nobel lecture on AlphaFold's development, from CASP to the architecture choices that made it work; Demis Hassabis's companion lecture, "Accelerating scientific discovery with AI," is on the same prize site |
 | | 📄 Paper | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein, Bruna, Cohen, Veličković | 2021 | [Paper](https://doi.org/10.48550/arXiv.2104.13478) | Comprehensive blueprint for geometric deep learning, unifying CNNs, GNNs, and equivariant networks under a common mathematical framework |
+| | 💻 Code | AlphaFold 3 — Open-Source Inference Implementation | Google DeepMind | 2024 | [GitHub](https://github.com/google-deepmind/alphafold3) | The AF3 inference pipeline released in November 2024 under a non-commercial licence (unlike AlphaFold 2's Apache-2.0), with model parameters available from Google on request under separate terms of use. Check both before any commercial use — the difference between reading the paper and running the model |
+| | 💻 Code | Boltz-1 / Boltz-2 — Open Biomolecular Interaction Models | Wohlwend, Corso, Passaro et al. (MIT) | 2025 | [GitHub](https://github.com/jwohlwend/boltz) | MIT-licensed open models — code *and* weights — that the authors report approach AlphaFold 3 on structure, with Boltz-2 adding binding-affinity prediction; the practical way to run AF3-class predictions without access restrictions |
+| | 📄 Paper | Dual Use of Artificial-Intelligence-Powered Drug Discovery | Urbina, Lentzos, Invernizzi & Ekins | 2022 | [Nat. Mach. Intell.](https://doi.org/10.1038/s42256-022-00465-9) | The field's wake-up call: the same generative models that design drug candidates can be inverted to design toxins — read before you build anything in this space, not after |
 
 ## Suggested Order
 
 1. **Senior et al. — AlphaFold 1** — Understand the deep learning approach that launched the protein structure prediction revolution
 2. **Jumper et al. — AlphaFold 2** — Study the breakthrough that solved the protein structure prediction problem
 3. **Abramson et al. — AlphaFold 3** — See how the framework extends to full biomolecular complexes with diffusion models
-4. **Jumper & Hassabis Nobel Lecture** — Hear the story and vision directly from the creators
-5. **Bronstein et al. — Geometric Deep Learning** — Build the mathematical foundation for understanding molecular ML architectures
-6. **Stärk et al. — 3D Infomax for GNNs** — Learn how geometric information improves molecular property prediction
-7. **DiffDock — Corso et al.** — See generative diffusion applied to molecular docking
-8. **BioBERT — Lee et al.** — Understand how language models are adapted for biomedical text
-9. **scGPT — Cui et al.** — Explore foundation models for single-cell biology
+4. **Jumper Nobel Lecture** — Hear the story and the design decisions directly from one of the creators
+5. **Run a model: AlphaFold 3 code or Boltz** — Predict a complex yourself; nothing else teaches you what the confidence metrics mean
+6. **Bronstein et al. — Geometric Deep Learning** — Build the mathematical foundation for understanding molecular ML architectures
+7. **Stärk et al. — 3D Infomax for GNNs** — Learn how geometric information improves molecular property prediction
+8. **DiffDock — Corso et al.** — See generative diffusion applied to molecular docking
+9. **BioBERT — Lee et al.** — Understand how language models are adapted for biomedical text
+10. **scGPT — Cui et al.** — Explore foundation models for single-cell biology
+11. **Urbina et al. — Dual use** — Close the section on what these capabilities also enable, and what that obliges you to do
+
+---
+
+## 🛠️ Practice
+
+1. **ColabFold across three difficulty regimes** — Predict three proteins: one with a deep MSA and a known experimental structure; one orphan or near-orphan with a shallow MSA; one with a substantial intrinsically disordered region. For each, record pLDDT per residue, the PAE matrix, and TM-score and lDDT against experiment where available (use US-align or TM-align). Then run the first protein again in single-sequence mode with MSAs disabled, and quantify the accuracy drop. Deliverable: a table of all three in both modes, plus 200 words on what the single-sequence experiment tells you about how much of AlphaFold's accuracy is coevolutionary signal rather than learned physics. *(~5 h · Jumper et al. 2021; ColabFold; AlphaFold DB; RCSB PDB)*
+
+2. **Test equivariance empirically** — Build a tiny E(3)-equivariant layer on point clouds (by hand, or with `e3nn`), and a naive MLP that takes raw flattened coordinates. For both: apply a random rotation and translation to the input, and measure the deviation between (output of transformed input) and (transformed output of original input). Report the error as a function of rotation angle for both networks. The equivariant one should be at numerical noise; the MLP should not be. Then do the data-augmentation comparison: train the MLP with random-rotation augmentation and show how close it gets, and at what cost in sample efficiency. Deliverable: notebook with the error table and the training curves. *(~5 h · Bronstein et al. 2021 (Geometric Deep Learning); Stärk et al. 2022 (3D Infomax); `e3nn`)*
+
+3. **Leakage audit of a published benchmark** — Pick a bio-ML benchmark with a public split: a protein property-prediction task, or DiffDock's PDBBind split. Measure train/test overlap properly: cluster all sequences with MMseqs2 at 30% identity and report how many test entries share a cluster with a training entry; for ligand tasks, compute Bemis-Murcko scaffold overlap between splits. Report the fraction of the test set that is a near-duplicate of training data, then recompute the headline metric on the leakage-free subset only. Deliverable: notebook plus 300 words on what the published number means after your audit — and whether the paper's own split protocol disclosed this. *(~6 h · Corso et al. 2023 (DiffDock); Stärk et al. 2022; MMseqs2; RDKit)*
+
+4. **DiffDock against Vina, holo and apo** — Take 15–20 complexes from PDBBind not in DiffDock's training split (use the audit from exercise 3 to be sure). Run DiffDock and AutoDock Vina on each. Report the fraction with top-1 ligand RMSD under 2 Å for both. Then check calibration: bin DiffDock's confidence score and plot observed success rate per bin — is the confidence meaningful? Finally, redo the comparison using apo receptor structures instead of the holo ones, and report how far both methods fall. Deliverable: the success-rate table, the calibration plot, and a sentence on which method degrades more and why. *(~6 h · Corso et al. 2023 (DiffDock); AutoDock Vina from Section 06; PDBBind)*
+
+5. **Single cell: scanpy baseline, then the foundation model** — Load a public dataset (scanpy's built-in PBMC 3k is the standard starting point, or pull something larger from CELLxGENE). Run the full standard pipeline: QC filtering, normalization, highly-variable gene selection, PCA, neighbour graph, Leiden clustering, UMAP, and marker-gene-based cell-type annotation. Record your annotations as the reference labels. Then obtain scGPT or Geneformer embeddings for the same cells, cluster those, and compare against your marker-based labels with adjusted Rand index and normalized mutual information. Also compare both to a trivial baseline: clustering on the top 50 principal components. Deliverable: notebook, the three-way ARI/NMI table, side-by-side UMAPs, and 200 words answering plainly whether the foundation model earned its compute on this task. *(~7 h · Cui et al. 2024 (scGPT); scanpy; Theodoris et al. 2023 (Geneformer))*
+
+6. **Draw the architectures, with shapes** — From the AlphaFold 2 paper and its supplementary information, draw the full forward pass as a block diagram with tensor shapes annotated at every stage: MSA representation, pair representation, single representation, the Evoformer block internals including both triangle-multiplicative and triangle-attention updates, the structure module with invariant point attention, and the recycling path. Mark where each loss term attaches. Then overlay AlphaFold 3: mark which blocks were kept, which were replaced by the diffusion module, and what the change bought (ligands, nucleic acids, no explicit residue frames) and cost (the hallucination problem and the cross-distillation fix). Deliverable: one figure plus 400 words comparing the two designs as architectural choices. *(~5 h · Jumper et al. 2021; Abramson et al. 2024 (AlphaFold 3); Jumper's 2024 Nobel lecture)*
+
+**🏗️ Mini-project — Audited replication of one AI-for-biology claim:** Choose one specific, bounded, quantitative claim from a paper in this section and try to reproduce it honestly. Good candidates: the accuracy degradation of structure prediction in single-sequence mode on low-MSA targets; DiffDock's reported top-1 under-2 Å rate on PDBBind; scGPT's or Geneformer's improvement over a PCA baseline for cell-type annotation; the sample-efficiency gain Stärk et al. report from 3D pretraining. Then do the work properly: state the claim verbatim with its reported uncertainty; construct your own evaluation set with a documented leakage audit; define and run at least one simple baseline the paper did not report; run the method; and report your number with error bars. Deliverable: a notebook in `projects/bio/10-replication/` plus a 2-page report containing the claim, your setup, your result, the gap, and a ranked list of the three most likely causes of any gap — data split, hyperparameters, preprocessing, evaluation metric definition, or compute. Success criterion: you either land inside the paper's stated error bars, or you identify the specific methodological difference that accounts for the discrepancy. "It didn't reproduce" without a diagnosis does not pass. *(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What does the MSA provide to AlphaFold that the single sequence does not, and what is the mechanism by which coevolution signals contact?
+2. Define equivariance and invariance, and say which one you want for predicting atomic coordinates and which for predicting a scalar property.
+3. What is pLDDT measuring? It is a prediction of what quantity, and against what reference?
+4. Why was CASP, rather than a benchmark leaderboard, what made AlphaFold's result credible? Be specific about what blind assessment rules out.
+5. Roughly how many structures are in the PDB, and roughly how many predictions are in AlphaFold DB? What does that ratio imply about how predictions should be used?
+6. A colleague says "this model got 0.9 AUC on the held-out set, so it generalizes." What is the first thing you check?
+7. AlphaFold 3 replaced the structure module with a diffusion head. Name one capability that gained and one problem it introduced.
+8. Explain to a smart friend in three sentences how a program can predict a protein's shape without simulating any physics.

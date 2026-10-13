@@ -4,27 +4,68 @@
 
 Molecular biology is the foundation upon which all modern life sciences are built. Understanding the central dogma — how genetic information flows from DNA to RNA to protein — is essential for grasping everything from how diseases arise to how drugs work to how evolution operates at the molecular level. This section covers cell structure, gene expression, DNA replication, transcription, and translation — the core machinery of life. Without a firm grasp of these concepts, later topics like genomics, structural biology, and computational biology will remain opaque. Whether your goal is drug design, protein engineering, or understanding the latest AlphaFold predictions, it all starts here.
 
+## 🎯 Learning Objectives
+
+After this section you can:
+
+- Trace the central dogma quantitatively for one organism — state replication, transcription and translation rates and error rates with units, and use them to predict how long a given process takes.
+- Given an NCBI gene record, identify the promoter region, exons, introns, 5′/3′ UTRs, start and stop codons, and translate the CDS yourself to recover the UniProt protein sequence.
+- Explain why replication fidelity is ~10⁵× tighter than translation fidelity, in terms of what each error costs the cell.
+- Estimate cellular molecular budgets — protein copy numbers, ribosome counts, diffusion times — to within an order of magnitude, and say which number you are least sure of.
+- Critique a molecular animation or a popular account (Drew Berry, Schrödinger) by naming the specific physics it omits.
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
-| 🔑 | 📚 Textbook | Molecular Biology of the Cell (7th Edition) | Bruce Alberts, Rebecca Heald, Alexander Johnson, David Morgan, Martin Raff, Keith Roberts, Peter Walter | 2022 | [Book](https://www.garlandscience.com/product/isbn/9780393884821) | The definitive molecular biology textbook — comprehensive, beautifully illustrated, and the gold standard for the field |
-| 🔑 | 🎓 Course | MIT 7.01x Introduction to Biology — The Secret of Life | Eric Lander | 2023 | [edX](https://www.edx.org/learn/biology/massachusetts-institute-of-technology-introduction-to-biology-the-secret-of-life) | Excellent introductory biology course from one of the leaders of the Human Genome Project |
+| 🔑 | 📚 Textbook | Molecular Biology of the Cell (7th Edition) | Bruce Alberts, Rebecca Heald, Alexander Johnson, David Morgan, Martin Raff, Keith Roberts, Peter Walter | 2022 | [Book](https://wwnorton.com/books/9780393884821) | The definitive molecular biology textbook — comprehensive, beautifully illustrated, and the gold standard for the field |
+| 🔑 | 🎓 Course | MITx 7.00x Introduction to Biology — The Secret of Life | Eric Lander | 2023 | [edX](https://www.edx.org/learn/biology/massachusetts-institute-of-technology-introduction-to-biology-the-secret-of-life) | Excellent introductory biology course from one of the leaders of the Human Genome Project |
 | 🔑 | 🎥 Lectures | MIT 7.012 Introductory Biology | Eric Lander, Robert Weinberg | 2004 | [MIT OCW](https://ocw.mit.edu/courses/7-012-introduction-to-biology-fall-2004/) | Legendary MIT lectures covering molecular biology fundamentals with two world-class scientists |
-| | 📚 Textbook | Molecular Cell Biology (9th Edition) | Harvey Lodish, Arnold Berk, Chris Kaiser, Monty Krieger, Anthony Bretscher, Hidde Ploegh, Angelika Amon, Kelsey Martin | 2021 | [Book](https://www.macmillanlearning.com/college/us/product/Molecular-Cell-Biology/p/1319208525) | Rigorous alternative to Alberts with strong emphasis on experimental approaches and signaling pathways |
+| | 📚 Textbook | Molecular Cell Biology (9th Edition) | Harvey Lodish, Arnold Berk, Chris A. Kaiser, Monty Krieger, Anthony Bretscher, Hidde Ploegh, Kelsey C. Martin, Michael Yaffe, Angelika Amon | 2021 | [Book](https://www.macmillanlearning.com/college/us/product/Molecular-Cell-Biology/p/1319208525) | Rigorous alternative to Alberts with strong emphasis on experimental approaches and signaling pathways |
 | | 📖 Book | What Is Life? | Erwin Schrödinger | 1944 | [Book](https://www.cambridge.org/core/books/what-is-life/A7E1DCFB0E4CDD82C7F8AC85B4D19B96) | Prescient classic where a physicist anticipated the molecular basis of heredity before DNA's structure was known |
 | | 🎥 Animations | Molecular Animations | Drew Berry | 2012 | [TED Talk](https://www.ted.com/talks/drew_berry_animations_of_unseeable_biology) | Stunning, scientifically accurate 3D animations of molecular processes including DNA replication and mitosis |
 | | 🎥 Videos | iBiology Cell Biology Collection | Various (Ron Vale, et al.) | 2015 | [iBiology](https://www.ibiology.org/cell-biology/) | Free expert-led video lectures on cell biology topics from leading researchers |
 | | 🎥 Course | Khan Academy — Molecular Biology | Sal Khan | 2020 | [Khan Academy](https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation) | Clear, accessible explanations of gene expression, the central dogma, and regulation — great for filling knowledge gaps |
 | | 🎓 Course | MIT 7.016 Introductory Biology | Barbara Imperiali, Adam Martin | 2018 | [MIT OCW](https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/) | More recent MIT introductory biology with updated content on CRISPR, synthetic biology, and modern techniques |
+| | 📖 Book | Cell Biology by the Numbers | Ron Milo, Rob Phillips | 2015 | [Free online](http://book.bionumbers.org/) | Short quantitative vignettes — how big is a cell, how many proteins does it hold, how fast does an enzyme turn over — that give you order-of-magnitude intuition instead of vocabulary; full draft free online |
 
 ## Suggested Order
 
 1. **Khan Academy Molecular Biology** — Build intuition with accessible explanations before diving into depth
-2. **MIT 7.01x (edX)** — Eric Lander's structured course provides a rigorous but engaging foundation
+2. **MITx 7.00x (edX)** — Eric Lander's structured course provides a rigorous but engaging foundation
 3. **Drew Berry Animations** — Visualize molecular machinery to cement conceptual understanding
 4. **Alberts "Molecular Biology of the Cell"** — Read selected chapters as the authoritative reference alongside coursework
-5. **MIT 7.012 Lectures** — Watch Lander & Weinberg lectures for deeper perspective and real-world connections
-6. **iBiology Cell Biology** — Supplement with expert talks on specific topics of interest
-7. **Lodish "Molecular Cell Biology"** — Use as an alternative reference for topics where you want a second perspective
-8. **Schrödinger "What Is Life?"** — Read for historical and philosophical context on the molecular basis of life
+5. **Milo & Phillips "Cell Biology by the Numbers"** — Attach numbers to the pictures: sizes, concentrations, rates, and energy budgets
+6. **MIT 7.012 Lectures** — Watch Lander & Weinberg lectures for deeper perspective and real-world connections
+7. **iBiology Cell Biology** — Supplement with expert talks on specific topics of interest
+8. **Lodish "Molecular Cell Biology"** — Use as an alternative reference for topics where you want a second perspective
+9. **Schrödinger "What Is Life?"** — Read for historical and philosophical context on the molecular basis of life
+
+---
+
+## 🛠️ Practice
+
+1. **Central-dogma number sheet** — Build a one-page table of rates for *E. coli* and for a human cell: replication fork speed (nt/s), transcription elongation rate, translation rate (aa/s), mRNA and protein half-lives, ribosomes per cell, genome size. Use each to compute: time to replicate the 4.6 Mb *E. coli* genome with two forks, time to synthesize a 300-aa protein, and the minimum doubling time those numbers imply. Cross-check every entry against BioNumbers (bionumbers.hms.harvard.edu). Deliverable: the table with units and a source per row, plus a note on which two numbers your doubling-time estimate is most sensitive to. *(~3 h · Alberts; Milo & Phillips, *Cell Biology by the Numbers*; MITx 7.00x)*
+
+2. **Translate a real gene by hand (then by code)** — Take human *HBB* (NCBI Gene 3043, RefSeq transcript `NM_000518`). Pull the GenBank record, and from the annotation alone mark the three exons, two introns, the UTR boundaries, and the CDS. Then use Biopython (`SeqIO`, `Seq.translate`) to splice the exons, translate the CDS, and compare the result character-by-character against UniProt P68871. Deliverable: a script that asserts equality, plus a short note on the initiator-methionine offset that makes the same residue "Glu6" in the literature and "Glu7" in HGVS notation. *(~3 h · NCBI; UniProt; Biopython; Alberts chapter on transcription and translation)*
+
+3. **Error-rate ladder** — Tabulate per-nucleotide (or per-residue) error rates for: DNA polymerase before proofreading, after proofreading, after mismatch repair; transcription; translation. From those, compute (a) expected mutations per *E. coli* genome per division, (b) the fraction of 300-aa protein molecules carrying at least one mistranslated residue, (c) how many of a protein's 10⁴ copies per cell are therefore defective. Then answer in writing: why is it economically rational for the cell to be sloppy at translation and obsessive at replication? *(~2 h · Alberts; MIT 7.012 Lander/Weinberg lectures)*
+
+4. **Animation audit** — Watch Drew Berry's TED animations and one iBiology cell-biology talk on the same machinery. Write a 400-word audit listing (i) three things the animation gets geometrically or mechanistically right, and (ii) five things it must distort to be watchable — candidates: no molecular crowding, no Brownian motion, no water, time dilation, implied purposeful motion, empty cytoplasm. For the time dilation, actually estimate the speed-up factor from the real rate in exercise 1 versus the apparent rate on screen. *(~2 h · Drew Berry; iBiology)*
+
+5. **Schrödinger scorecard** — Read *What Is Life?* and extract six specific, checkable predictions or claims (the aperiodic crystal, the size of the hereditary unit, order from order, the role of quantum stability, negative entropy, mutation as a quantum jump). For each: state what he claimed, what is now known, and whether he was right, right-for-the-wrong-reason, or wrong. Deliverable: a six-row table, one sentence per cell. *(~3 h · Schrödinger, *What Is Life?*)*
+
+**🏗️ Mini-project — Gene datasheet:** Write a datasheet for one gene the way you would write one for a component. Pick either the *lac* operon or human *HBB*. Include: a block diagram of information flow from DNA to folded protein; a timing section (latency from induction/transcription start to functional protein, with each stage's contribution); "electrical characteristics" (copy numbers of mRNA and protein, transcript and protein half-life, promoter strength if known); an error budget (expected defective copies per cell from exercise 3); and an absolute-maximum/failure section (what breaks it — one real loss-of-function mutation with its consequence). Every number gets units and a citation. Deliverable: a 2-page markdown or PDF datasheet plus the Biopython notebook that generated the sequence-derived figures. Success criterion: a reader could use your timing section to predict, within 2×, how long after induction a measurable protein signal appears — and you state which assumption would break that prediction first. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the central dogma, then state three well-established exceptions or extensions to it.
+2. Roughly how long does *E. coli* take to replicate its genome, and why can it divide faster than that?
+3. Why does the cell spend ATP on proofreading during replication but tolerate a ~10⁻⁴ error rate in translation? Give the cost argument, not just the rates.
+4. A colleague says "introns are junk DNA." Name three things that is wrong about — be specific about what introns do.
+5. Roughly how many ribosomes are in an *E. coli* cell, and what fraction of the cell's dry mass is that? Estimate, then check.
+6. What is the difference between the template strand, the coding strand, and the sense strand — and which one does a GenBank record show you?
+7. Explain to a smart friend in three sentences why a mutation that changes one DNA base can be either completely silent or lethal.
+8. Schrödinger predicted heredity would rest on an "aperiodic crystal." What did he get right, and what did he not anticipate?
