@@ -39,6 +39,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Alon, *An Introduction to Systems Biology* Ch. 1–4 → Milo et al., network motifs (2002)
+
 1. **Alon textbook (Chapters 1–4)** — Start with the design principles: autoregulation, feed-forward loops, and the logic of transcription networks
 2. **Milo et al. (2002)** — Read the original network motifs paper while studying the corresponding textbook chapters to see the data behind the theory
 3. **Shen-Orr et al. (2002)** — Deepens understanding of motifs with the full *E. coli* transcription network analysis

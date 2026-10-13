@@ -23,9 +23,9 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
-| 🔑 | 📘 Textbook | Molecular Modelling: Principles and Applications | Leach, A. R. | 2001 | [Pearson](https://www.pearson.com/en-gb/subject-catalog/p/molecular-modelling-principles-and-applications/P200000003563) | The standard textbook for computational chemistry — covers force fields, energy minimization, molecular dynamics, Monte Carlo methods, docking, and QSAR with clear mathematical exposition |
+| 🔑 | 📘 Textbook | Molecular Modelling: Principles and Applications (2nd Edition) | Leach, A. R. | 2001 | [Open Library](https://openlibrary.org/books/OL7880866M/Molecular_Modelling) | The standard textbook for computational chemistry — covers force fields, energy minimization, molecular dynamics, Monte Carlo methods, docking, and QSAR with clear mathematical exposition. Prentice Hall/Pearson, ISBN 9780582382107; Pearson's old product page now serves an unrelated book, so this links the catalogue record |
 | 🔑 | 📄 Paper | Experimental and Computational Approaches to Estimate Solubility and Permeability in Drug Discovery and Development Settings | Lipinski, C. A., Lombardo, F., Dominy, B. W., Feeney, P. J. | 1997 | [Adv. Drug Deliv. Rev.](https://doi.org/10.1016/S0169-409X(96)00423-1) | The "Rule of Five" paper — established the physicochemical guidelines (MW ≤ 500, logP ≤ 5, HBD ≤ 5, HBA ≤ 10) that still anchor oral drug design and ADMET screening |
-| | 🌐 Tutorial | AutoDock Vina Documentation and Tutorials | Trott, O. & Olson, A. J. | 2024 | [AutoDock Vina](https://autodock-vina.readthedocs.io/) | Official documentation for the widely-used open-source docking program — includes step-by-step tutorials for preparing receptor/ligand files, running docking, and analyzing results |
+| | 🌐 Tutorial | AutoDock Vina Documentation (v1.2.0) | Forli Lab / CCSB, Scripps Research (original program by Oleg Trott) | 2021 | [AutoDock Vina](https://autodock-vina.readthedocs.io/) | Official documentation for the widely-used open-source docking program, with tutorials on basic docking, flexible docking, docking multiple ligands, and Python scripting |
 | | 💻 Tutorial | RDKit: Open-Source Cheminformatics | Landrum, G. | 2024 | [RDKit](https://www.rdkit.org/docs/GettingStartedInPython.html) | The standard Python toolkit for cheminformatics — tutorials cover molecular representation (SMILES, fingerprints), substructure searching, property calculation, and chemical similarity |
 | | 🌐 Database | ZINC Database — Free Library of Commercially Available Compounds | Irwin, J. J. & Shoichet, B. K. | 2024 | [ZINC](https://zinc.docking.org/) | Curated database of over 230 million purchasable compounds in ready-to-dock 3D formats — the go-to resource for virtual screening campaigns |
 | | 📄 Paper | Docking and Scoring in Virtual Screening for Drug Discovery: Methods and Applications | Kitchen, D. B., Decornez, H., Furr, J. R., Bajorath, J. | 2004 | [Nat. Rev. Drug Discov.](https://doi.org/10.1038/nrd1549) | Comprehensive review of molecular docking algorithms, scoring functions, and their real-world application in pharmaceutical virtual screening pipelines |
@@ -36,6 +36,8 @@ After this section you can:
 | | 📘 Textbook | Drug Design: Methodology, Concepts, and Mode-of-Action | Klebe, G. | 2013 | [Springer](https://link.springer.com/book/10.1007/978-3-642-17907-5) | Detailed textbook on structure-based drug design — covers thermodynamics of binding, pharmacophore models, fragment-based design, and lead optimization with case studies from real drug programs |
 
 ## Suggested Order
+
+**Core path (🔑):** Leach, *Molecular Modelling* Ch. 1–4 → Lipinski et al., Rule of Five (1997)
 
 1. **Leach textbook (Chapters 1–4)** — Build foundations in force fields, energy landscapes, and molecular mechanics before touching docking
 2. **Lipinski et al. (1997)** — The Rule of Five is the first filter every medicinal chemist applies; understand why these properties matter for oral bioavailability

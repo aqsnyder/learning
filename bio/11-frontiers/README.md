@@ -10,7 +10,7 @@ Biology is moving faster than any curriculum can keep up with. This section coll
 
 After this section you can:
 
-- For each of the five frontiers here, state the load-bearing experimental result, the weakest link in the argument, and the gap between the demonstration and a deployed system.
+- For each of the six frontiers here, state the load-bearing experimental result, the weakest link in the argument, and the gap between the demonstration and a deployed system.
 - Convert a frontier claim into a dated, falsifiable prediction with a probability and a named resolving observation.
 - Analyse a genetic logic circuit with the transfer-function formalism — noise margins, fan-out, loading — and say precisely where the electronics analogy fails.
 - Compute the information rate of a brain-computer interface in bits/s and derive the implant's channel-count, bandwidth, power and thermal requirements from it.
@@ -38,7 +38,7 @@ Synthetic biology treats biological systems as programmable — designing geneti
 | 2 | Neuronal Ensemble Control of Prosthetic Devices by a Human with Tetraplegia | 📄 Paper | | [Hochberg, Serruya, Friehs, Mukand et al. (Nature, 2006)](https://doi.org/10.1038/nature04970) |
 | 3 | Neuralink — Brain-Computer Interface Technology | 🌐 Company | | [Neuralink](https://neuralink.com/) |
 
-Brain-computer interfaces are transitioning from laboratory demonstrations to clinical reality. Hochberg's BrainGate trial first showed that a paralyzed human could control a computer cursor with thought alone. Willett et al. achieved a stunning leap in 2023 — decoding attempted speech from neural activity at over 60 words per minute, approaching natural conversational speed. Neuralink is scaling the hardware side with high-density implantable electrode arrays.
+Brain-computer interfaces are transitioning from laboratory demonstrations to clinical reality. Hochberg's BrainGate trial first showed that a paralyzed human could control a computer cursor with thought alone. Willett et al. achieved a stunning leap in 2023 — decoding attempted speech from neural activity at 62 words per minute, 3.4 times the previous record, with a 9.1% word error rate on a 50-word vocabulary and 23.8% on a 125,000-word one. The paper's own framing is the honest one: that rate *begins to approach* natural conversation, which it puts at 160 words per minute. Neuralink is scaling the hardware side with high-density implantable electrode arrays.
 
 ---
 
@@ -46,7 +46,7 @@ Brain-computer interfaces are transitioning from laboratory demonstrations to cl
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | A Whole-Cell Computational Model Predicts Phenotype from Genotype | 📄 Paper | 🔑 | [Karr, Sanghvi, Macklin, Gutschow et al. (Cell, 2012)](https://doi.org/10.1016/j.cell.2012.05.044) |
+| 1 | A Whole-Cell Computational Model Predicts Phenotype from Genotype | 📄 Paper | | [Karr, Sanghvi, Macklin, Gutschow et al. (Cell, 2012)](https://doi.org/10.1016/j.cell.2012.05.044) |
 | 2 | Fundamental Behaviors Emerge from Simulations of a Living Minimal Cell | 📄 Paper | | [Thornburg, Bianchi, Brier, Gilbert et al. (Cell, 2022)](https://doi.org/10.1016/j.cell.2021.12.025) |
 | 3 | How to Build the Virtual Cell with Artificial Intelligence: Priorities and Opportunities | 📄 Perspective | | [Bunne, Roohani, Rosen et al. (Cell, 2024)](https://arxiv.org/abs/2409.11654) |
 
@@ -58,11 +58,11 @@ Whole-cell models aim to simulate every molecular process in a living cell simul
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | Hallmarks of Aging: An Expanding Universe | 📄 Paper | 🔑 | [López-Otín, Blasco, Partridge, Serrano & Kroemer (Cell, 2023)](https://doi.org/10.1016/j.cell.2022.11.001) |
+| 1 | Hallmarks of Aging: An Expanding Universe | 📄 Paper | | [López-Otín, Blasco, Partridge, Serrano & Kroemer (Cell, 2023)](https://doi.org/10.1016/j.cell.2022.11.001) |
 | 2 | Induction of Pluripotent Stem Cells from Mouse Embryonic and Adult Fibroblast Cultures by Defined Factors | 📄 Paper | | [Takahashi & Yamanaka (Cell, 2006)](https://doi.org/10.1016/j.cell.2006.07.024) |
-| 3 | Lifespan: Why We Age — and Why We Don't Have To | 📖 Book | | [David Sinclair (Atria Books, 2019)](https://lifespanbook.com/) |
+| 3 | Lifespan: Why We Age — and Why We Don't Have To | 📖 Book | | [David Sinclair (Atria Books, 2019)](https://lifespanbook.com/) · *(popular book advocating one contested hypothesis — read against the hallmarks review, not instead of it)* |
 
-The biology of aging has been transformed from a descriptive field into a mechanistic one. López-Otín's updated hallmarks framework (2023) provides the canonical taxonomy of aging processes — from genomic instability to altered intercellular communication. Yamanaka's discovery of iPSC reprogramming factors opened the door to cellular rejuvenation, and Sinclair's work has brought the science of longevity to a broad audience while advancing the information theory of aging.
+The biology of aging has been transformed from a descriptive field into a mechanistic one. López-Otín's updated hallmarks framework (2023) provides the canonical taxonomy of aging processes — from genomic instability to altered intercellular communication. Yamanaka's discovery of iPSC reprogramming factors opened the door to cellular rejuvenation. Sinclair's *Lifespan* is included as the field's most influential popular account and as an argument to push against: its central claim — that aging is driven by a loss of epigenetic information, the "information theory of aging" — is Sinclair's own hypothesis, not a settled finding, and several of the book's intervention claims run well ahead of the evidence in the hallmarks review. Practice 4 asks you to find three of those places specifically.
 
 ---
 
@@ -70,16 +70,32 @@ The biology of aging has been transformed from a descriptive field into a mechan
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | Sequence Modeling and Design from Molecular to Genome Scale with Evo | 📄 Paper | 🔑 | [Nguyen, Poli, Durrant, Thomas et al. (Science, 2024)](https://doi.org/10.1126/science.ado9336) |
+| 1 | Sequence Modeling and Design from Molecular to Genome Scale with Evo | 📄 Paper | 🔑 | [Nguyen, Poli, Durrant, Kang et al. (Science, 2024)](https://doi.org/10.1126/science.ado9336) |
 | 2 | Transfer Learning Enables Predictions in Network Biology | 📄 Paper | | [Theodoris, Xiao, Chopra, Chaffin et al. (Nature, 2023)](https://doi.org/10.1038/s41586-023-06139-9) |
 | 3 | scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics | 📄 Paper | | [Cui, Wang, Maan et al. (Nature Methods, 2024)](https://doi.org/10.1038/s41592-024-02201-0) |
 | 4 | Genome Modelling and Design Across All Domains of Life with Evo 2 | 📄 Paper | | [Brixi, Durrant, Ku, Naghipourfar, Poli et al. (Nature, 2026)](https://doi.org/10.1038/s41586-026-10176-5) |
 
-Foundation models — large-scale pre-trained models fine-tuned for downstream tasks — are arriving in biology. Evo is a genomic foundation model trained on 2.7 million prokaryotic and phage genomes that can generate functional DNA sequences and predict fitness effects across scales from single nucleotides to entire genomes. Its successor Evo 2 (7B and 40B parameters, ~9 trillion bases spanning all domains of life, released openly) predicts the functional effects of genetic variation and generates genome-scale sequence. Geneformer learns gene network biology from 30 million single-cell transcriptomes, enabling predictions about disease mechanisms. scGPT applies generative pre-training to single-cell multi-omics. Together, these models represent a paradigm shift: learning biology's language directly from data.
+Foundation models — large-scale pre-trained models fine-tuned for downstream tasks — are arriving in biology (the dual-use consequences of exactly this capability are the next subsection). Evo is a genomic foundation model trained on 2.7 million prokaryotic and phage genomes that can generate functional DNA sequences and predict fitness effects across scales from single nucleotides to entire genomes. Its successor Evo 2 (7B and 40B parameters, ~9 trillion bases spanning all domains of life, released openly) predicts the functional effects of genetic variation and generates genome-scale sequence. Geneformer learns gene network biology from 30 million single-cell transcriptomes, enabling predictions about disease mechanisms. scGPT applies generative pre-training to single-cell multi-omics. Together, these models represent a paradigm shift: learning biology's language directly from data.
+
+---
+
+## Biosecurity and Dual Use
+
+| # | Resource | Type | Marking | Link |
+|---|----------|------|---------|------|
+| 1 | Biodefense in the Age of Synthetic Biology | 📄 Report | | [National Academies of Sciences, Engineering, and Medicine (2018)](https://doi.org/10.17226/24890) |
+| 2 | Artificial Intelligence and Biological Misuse: Differentiating Risks of Language Models and Biological Design Tools | 📄 Preprint | | [Jonas B. Sandbrink (arXiv, 2023)](https://arxiv.org/abs/2306.13952) |
+| 3 | Strengthening Nucleic Acid Biosecurity Screening against Generative Protein Design Tools | 📄 Paper | | [Wittmann, Alexanian, Bartling, Beal et al. (Science, 2025)](https://doi.org/10.1126/science.adu8578) |
+
+Every other subsection here is about new capability. This one is about the fact that capability is symmetric. The National Academies report is the baseline framework: it rates synthetic-biology capabilities by level of concern and asks what a defence posture should attend to first — useful precisely because it predates the current generation of models and so reads as an assessment method rather than a reaction. Sandbrink then draws the distinction that most of the debate blurs, between large language models, which mainly lower the *skill* barrier by making dual-use knowledge and protocols easier to obtain, and biological design tools, which raise the capability *ceiling* for people who already have the skills; the two call for different mitigations. Wittmann et al. is the concrete one, and the most interesting for an engineer: nucleic-acid synthesis screening is the real control point between a sequence on a screen and a molecule in a vial, so they tested that pipeline against variants generated by open protein-design models, found the gaps, and patched the screening software — an adversarial evaluation of a biosecurity control, with a fix and a coordinated disclosure.
+
+Read these with Urbina et al. (2022), listed in [Section 10](../10-ai-for-biology/README.md), which is where the Suggested Order there puts it: before you build in this space, not after. The practical reasons for an instrument or tool engineer: screening sits in software you might one day write or integrate; "open weights" decisions are made by people who can be persuaded either way; and the gap between a design that passes *in-silico* filters and a design that works at the bench — [Section 07](../07-protein-engineering-and-design/README.md)'s whole subject — is also the gap that governs how much any of this currently matters. Treat the risk estimates here as contested: Sandbrink's own framing is about differentiating risks rather than asserting one number, and the evidence base is thin enough that confident claims in either direction should be distrusted.
 
 ---
 
 > 🔑 = must-read
+
+**Core path (🔑):** Nielsen, Voigt et al., Cello genetic-circuit design automation (2016) → Willett et al., speech neuroprosthesis (2023) → Nguyen et al., Evo (2024)
 
 ---
 
@@ -95,7 +111,7 @@ Foundation models — large-scale pre-trained models fine-tuned for downstream t
 
 5. **Probe a genomic foundation model** — Run Evo (or a smaller genomic language model if compute is tight) on a short prokaryotic gene. Compute per-base log-likelihoods along the sequence and plot the trace. Then run the diagnostics that distinguish learning from memorizing base composition: does the likelihood distinguish synonymous from nonsynonymous positions in the coding region? Does it drop sharply when you insert a single base to cause a frameshift? Does it recognise a start codon moved out of frame? Does it score a reverse-complemented gene differently from a shuffled one of identical composition? Deliverable: notebook with the likelihood trace and the four diagnostics, plus 300 words on which of them the model passes and what that bounds its claim of having "learned the genetic code". *(~6 h · Nguyen et al. 2024 (Evo); Theodoris et al. 2023 (Geneformer) for the single-cell analogue)*
 
-6. **Prediction register** — Across all five frontiers, write ten predictions that will resolve by a specific date you choose (2–3 years out is the useful horizon). Each entry needs: the claim stated precisely enough to adjudicate, a probability, the single observation that resolves it, and the paper or program whose trajectory you are extrapolating. Spread them across the five areas and deliberately include at least two you expect to be wrong. Date and file it; revisit it when you revisit this section. Deliverable: the register, in `projects/bio/11-predictions.md`. *(~3 h · all five subsections)*
+6. **Prediction register** — Across all six frontiers, write twelve predictions that will resolve by a specific date you choose (2–3 years out is the useful horizon). Each entry needs: the claim stated precisely enough to adjudicate, a probability, the single observation that resolves it, and the paper or program whose trajectory you are extrapolating. Spread them across the six areas — including biosecurity, where the resolvable claims are about screening coverage, policy and evaluation results rather than about misuse itself — and deliberately include at least two you expect to be wrong. Date and file it; revisit it when you revisit this section. Deliverable: the register, in `projects/bio/11-predictions.md`. *(~3 h · all six subsections)*
 
 **🏗️ Mini-project — One frontier: one build and one memo:** Pick the frontier closest to your interests and do a bounded build plus a critical memo. Three concrete options:
 

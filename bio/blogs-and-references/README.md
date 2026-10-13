@@ -10,7 +10,7 @@
 | 🔑 | [RCSB PDB News](https://www.rcsb.org/news) | Structural biology news and Molecule of the Month features |
 | 🔑 | [NIH Director's Blog](https://directorsblog.nih.gov/) | Biomedical research highlights from the National Institutes of Health |
 | | [Bits of DNA — Lior Pachter](https://liorpachter.wordpress.com/) | Sharp computational biology and genomics commentary |
-| | [PLOS Biology Community](https://biologue.plos.org/) | Open-access biology research and community discussions |
+| | [PLOS Biologue](https://biologue.plos.org/) | The blog for *PLOS Biology*, *PLOS Genetics* and *PLOS Computational Biology* — open-access research and community discussions |
 
 ---
 

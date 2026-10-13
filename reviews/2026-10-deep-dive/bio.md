@@ -233,3 +233,120 @@ The curriculum has a genuinely good spine: the arc molecular biology → biochem
 3. **Follow one gene-editing therapy end to end.** Jinek 2012 → Anzalone/Koblan/Liu 2020 → the FDA approval → Frangoul 2024 → Musunuru 2025 (baby KJ) is now a continuous path in Section 08. It is the clearest example in all of biology of mechanism → tool → product → regulation, which is the same arc your own hardware has to travel.
 4. **Use the instrumentation entry points as your way in.** Neuropixels (Section 09) and the NGS-technologies review (Section 02) are written in your language — transducers, channel counts, multiplexing, error profiles. Reading biology through the instruments will get you further, faster, than reading it through the textbooks, and it is the gap the proposed Section B would formalize.
 5. **Treat Section 11 and the AI sections as the part that rots.** Evo 2 (2026), ESM3 (2025), and the virtual-cell roadmap are in now, but this curriculum will be stale again in a year. Add the `update-curriculum` agent skill to `bio/` with an explicit rule — no entry without a fetched URL confirming title, authors, and year — because the generated citations in this curriculum failed exactly that test about once per section.
+
+---
+
+## Follow-up pass (2026-10-13)
+
+The three proposed sections (A, B, C above) are now created, with every resource verified by fetching its page; the biosecurity subsection (D) is created inside Section 11. Every URL and citation below was confirmed in this pass, and nothing unverified was added.
+
+- **New sections created:**
+  - `bio/12-statistics-and-experimental-design/` · take alongside or before Section 04, and before 05/08/10 · 7 resources, 5 exercises, mini-project, 8 Check Yourself questions
+  - `bio/13-bioinstrumentation-imaging-and-lab-automation/` · take after Section 03 · 9 resources, 5 exercises, mini-project, 8 Check Yourself questions
+  - `bio/14-evolution-and-population-genetics/` · take after Section 02 · 7 resources, 5 exercises, mini-project, 8 Check Yourself questions
+
+- **Added:**
+  - Modern Statistics for Modern Biology — Susan Holmes & Wolfgang Huber — 2019 — Section 12 (🔑; free, CC BY-NC-SA; also CUP ISBN 9781108705295. Section 12 is now this book's home; the Section 04 row points to it)
+  - Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing — Yoav Benjamini & Yosef Hochberg — 1995 — Section 12 (🔑; J. R. Stat. Soc. B 57(1):289–300)
+  - Why Most Published Research Findings Are False — John P. A. Ioannidis — 2005 — Section 12 (PLoS Med. 2(8):e124)
+  - Tackling the Widespread and Critical Impact of Batch Effects in High-Throughput Data — Leek, Scharpf, Corrada Bravo, Simcha, Langmead, Johnson, Geman, Baggerly & Irizarry — 2010 — Section 12 (Nat. Rev. Genet. 11:733–739; full nine-author list verified)
+  - Moderated Estimation of Fold Change and Dispersion for RNA-seq Data with DESeq2 — Michael I. Love, Wolfgang Huber & Simon Anders — 2014 — Section 12 (Genome Biol. 15:550)
+  - The ASA Statement on *p*-Values: Context, Process, and Purpose — Ronald L. Wasserstein & Nicole A. Lazar — 2016 — Section 12 (Am. Stat. 70(2):129–133)
+  - Statistics for Biologists / *Points of Significance* — Martin Krzywinski, Naomi Altman et al. (*Nature Methods*) — 2013– — Section 12 (the Nature collection, free to read; eight named columns cited individually by DOI)
+  - Nikon's MicroscopyU — Nikon Instruments — Section 13 (🔑; plus its CCD noise-sources and CCD SNR tutorials)
+  - The Axon Guide — Electrophysiology and Biophysics Laboratory Techniques (5th ed.) — Molecular Devices — Section 13 (🔑; free with registration; chapter list verified)
+  - Super-Resolution Microscopy Demystified — Schermelleh, Ferrand, Huser et al. (… Drummen) — 2019 — Section 13 (Nat. Cell Biol. 21:72–84; subscription, noted)
+  - The Nobel Prize in Chemistry 2014, "for the development of super-resolved fluorescence microscopy" — Betzig, Hell & Moerner — Section 13
+  - Three Decades of Nanopore Sequencing — David Deamer, Mark Akeson & Daniel Branton — 2016 — Section 13 (Nat. Biotechnol. 34:518–524)
+  - Flow Cytometry: Retrospective, Fundamentals and Recent Instrumentation — Picot, Guerin, Le Van Kim & Boulanger — 2012 — Section 13 (Cytotechnology 64(2):109–130; subscription, noted)
+  - Assay Guidance Manual — Sarine Markossian (ed.-in-chief), Abigail Grossman, Hannah Baskir et al. — 2004– — Section 13 (NCBI Bookshelf; free, CC BY-NC-SA 3.0; Eli Lilly & NCATS)
+  - PyLabRobot — Rick P. Wierenga, Stefan M. Golas, Wilson Ho, Connor W. Coley & Kevin M. Esvelt — 2023 — Section 13 (Device 1(4):100111)
+  - Self-Driving Laboratories to Autonomously Navigate the Protein Fitness Landscape — Jacob T. Rapp, Bennett J. Bremer & Philip A. Romero — 2024 — Section 13 (Nat. Chem. Eng. 1:97–107)
+  - Population Genetics & Quantitative Genetics Notes — Graham Coop — Section 14 (🔑; free, CC BY 3.0)
+  - An Introduction to Population Genetics: Theory and Applications — Rasmus Nielsen & Montgomery Slatkin — 2013 — Section 14 (287 pp, ISBN 9781605351537)
+  - Evolutionary Rate at the Molecular Level — Motoo Kimura — 1968 — Section 14 (🔑; Nature 217:624–626)
+  - Genealogical Trees, Coalescent Theory and the Analysis of Genetic Polymorphisms — Noah A. Rosenberg & Magnus Nordborg — 2002 — Section 14 (Nat. Rev. Genet. 3:380–390)
+  - msprime — tskit-dev — Section 14 (GPL-3.0; the ground truth for every coalescent exercise there)
+  - The Dynamics of Molecular Evolution over 60,000 Generations — Good, McDonald, Barrick, Lenski & Desai — 2017 — Section 14 (Nature 551:45–50; Crossref confirms exactly these five authors)
+  - IQ-TREE — L.-T. Nguyen, H. A. Schmidt, A. von Haeseler & B. Q. Minh — 2015 — Section 14 (Mol. Biol. Evol. 32:268–274)
+  - Biodefense in the Age of Synthetic Biology — National Academies of Sciences, Engineering, and Medicine — 2018 — Section 11, new "Biosecurity and Dual Use" subsection
+  - Artificial Intelligence and Biological Misuse: Differentiating Risks of Language Models and Biological Design Tools — Jonas B. Sandbrink — 2023 — Section 11, same subsection (arXiv:2306.13952)
+  - Strengthening Nucleic Acid Biosecurity Screening against Generative Protein Design Tools — Wittmann, Alexanian, Bartling, Beal et al. (… Horvitz) — 2025 — Section 11, same subsection (Science 390(6768):82–87)
+  - Genome-Wide Association Studies — Uffelmann, Huang, Munung, de Vries, Okada, A. R. Martin, H. C. Martin, Lappalainen et al. (… Posthuma) — 2021 — Section 02, replacing the dead Broad GWAS primer (Nat. Rev. Methods Primers 1:59; NHGRI's free fact sheet given as the open alternative)
+  - Also added to `books/`: Coop's notes (🔑) and Nielsen & Slatkin. No new 🔑 was added to any pre-existing section, and each new section carries exactly two.
+
+- **Removed (confirmed nonexistent):** none. Both suspect Broad Institute rows were mis-attributions rather than fabrications, so they were corrected in place rather than cut — no row, Suggested Order step or PROGRESS line was deleted in this pass.
+
+- **Flags resolved:**
+  - `bio/11-frontiers/README.md:76` (independent check, Evo 2 DOI) — Crossref confirms *Genome modelling and design across all domains of life with Evo 2*, Nature **652**(8112):1349–1361, published online 4 Mar 2026, DOI as given, first authors Brixi, Durrant, Ku, Naghipourfar, Poli (62 authors; Hsu and Hie last). No change needed. https://api.crossref.org/works/10.1038/s41586-026-10176-5
+  - `bio/02/README.md:26` (review ✱, Watson edition) — the 7th edition is still the latest; no 8th exists. The Pearson URL in the repo now serves a *different* book (*Biology: The Core*), so the row was repointed to a catalogue record and the year corrected to 2014 (Pearson). `books/` row 8 aligned. https://archive.org/details/molecularbiology0000unse_n0v9 · https://nhbs.com/molecular-biology-of-the-gene-international-edition-book
+  - `bio/02/README.md:33` (review ✱, Broad "A Brief Guide to Genomics") — confirmed: the title is NHGRI's, and the Broad URL no longer resolves while broadinstitute.org itself does. Row re-attributed to NHGRI with the live fact-sheet URL (last updated 16 Aug 2022). https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics
+  - `bio/02/README.md:34` (review ✱, Broad GWAS primer) — URL confirmed dead; replaced with Uffelmann et al. (2021) plus NHGRI's free GWAS fact sheet. Practice 4 and the Suggested Order updated to match. https://doi.org/10.1038/s43586-021-00056-9 · https://www.genome.gov/about-genomics/fact-sheets/Genome-Wide-Association-Studies-Fact-Sheet
+  - `bio/03/README.md:26` (review ✱, Branden & Tooze dead link) — Routledge now carries the 2nd edition (424 pp, ISBN 9780815323051, Garland Science imprint, © 1999); row repointed and the author's name corrected to Carl Ivar Branden. https://www.routledge.com/Introduction-to-Protein-Structure/Branden-Tooze/p/book/9780815323051
+  - `bio/04/README.md:32` (review ✱, Rosalind attribution) — Rosalind's own About page: a joint project of UC San Diego and Saint Petersburg Academic University, team led by Nikolay Vyahhi with Phillip Compeau; Compeau & Pevzner wrote the book behind the Textbook Track, not the platform. Row re-credited. https://rosalind.info/about/
+  - `bio/courses/README.md:9` vs `bio/01:26` (independent check, MIT 5.07SC instructors) — OCW credits Prof. John Essigmann, Prof. Joanne Stubbe and Dr. Bogdan Fedeles; the section was right and the course index was short. Index aligned. https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/
+  - `bio/11-frontiers/README.md:41` (independent check, the one remaining overclaim) — the paper reports 62 wpm, 3.4× the previous record, 9.1% WER on 50 words and 23.8% on 125,000, and says it "begins to approach the speed of natural conversation (160 words per minute)". Prose rewritten to the paper's own framing with the numbers. https://www.nature.com/articles/s41586-023-06377-x
+  - `bio/11-frontiers/README.md:65` (independent check, Sinclair) — the "information theory of aging" is now labelled as Sinclair's own contested hypothesis rather than an achievement, and the row carries a caveat pointing at the hallmarks review.
+  - `bio/10/README.md:66` (independent check, Geneformer cited without its section) — Practice 5 now names Section 11, matching the convention in `bio/09:67`.
+  - `bio/00:29`, `bio/01:32`, `bio/02:33,35`, `bio/03` (independent check, table rows absent from Suggested Order) — MIT 7.016, MIT 7.05, the NHGRI brief guide, the 2012 1000 Genomes paper and the RCSB PDB database row now all appear in their sections' Suggested Order.
+  - `bio/00-molecular-biology-fundamentals/README.md:58` (independent check, V5 cross-curriculum row) — the mini-project now names a deliverable path, `projects/bio/00-gene-datasheet/`.
+  - §07/§11 dual-use pointer (independent check, safety note) — Section 07's Suggested Order gains a step pointing at Urbina et al. (Section 10) and the new biosecurity subsection before any bench-intended design, and its mini-project asks for the screening controls that apply to a synthesis order. Section 11's foundation-model paragraph now hands off to the same subsection.
+  - Cross-references added so the new sections are reachable from the old ones: 02 → 13 and 14, 03 → 13, 04 → 12 and 14, 07 → 11 and 14, 09 → 13, 10 → 11 and 12.
+
+- **Still unverified:**
+  - **The Z′-factor paper's DOI.** Zhang, Chung & Oldenburg, *J. Biomol. Screen.* 4(2):67–73 (1999) is confirmed by two independent pages (Harvard ICCB's publication list and GraphPad's knowledge base), but SAGE returned a server error and PubMed and Crossref were unreachable, so no DOI was confirmed. The paper is therefore cited inline in Section 13's Practice 5 with its journal, volume and pages, and the formula is written out in the exercise rather than linked — it is not a resource row.
+  - **A dedicated free flow-cytometry primer.** Picot et al. (2012) is verified but behind a subscription; the obvious free alternative on PubMed Central could not be read (the PMC article page served a reCAPTCHA challenge rather than content), so nothing free was added for that topic.
+  - **Chapter numbers for *Modern Statistics for Modern Biology*.** The book's landing page does not list its contents and the chapter pages were not fetched, so Section 12's Suggested Order names chapters by topic rather than by number.
+  - **msprime's documentation URL** (`tskit.dev/msprime/docs/latest/`) is given in prose because the project's own GitHub page states it; the docs site itself returned empty content when fetched, and the row links the verified repository instead.
+  - **IQ-TREE's current version.** iqtree.org's front page still advertises v1.5.5 (2017) and does not mention IQ-TREE 2 or 3, so the row makes no version claim and cites the 2015 paper.
+
+- **Out of scope for this pass (for the orchestrator):** `STUDY-GUIDE.md`'s "One home per topic" table should gain rows for statistics (home `bio/12`, also touches `bio/04`, `math/03`), bioinstrumentation (home `bio/13`, also touches `physics/12`, `pcb/12`, `bio/09`) and population genetics (home `bio/14`, also touches `bio/02`, `bio/04`); its Track D could name the three new sections. `bio/` still has no `update-curriculum` skill, so no section map needed updating here.
+
+## Link-audit fixes (2026-10-13)
+| File:line | Was | Now | Evidence URL |
+|---|---|---|---|
+| bio/00-molecular-biology-fundamentals/README.md:22 (+ Suggested Order step 2, Practice 1; courses/README.md:7; PROGRESS.md:11) | MITx 7.00x "The Secret of Life" (Lander, 2023); the edX URL is now a generic biology listing and the course has left the catalogue (L2-062) | The auditor's stand-in, MIT 7.01SC Fundamentals of Biology (OCW, Fall 2011; Lander, Weinberg, Jacks, Sive, Walker, Chisholm, Mischke), confirmed by fetch; it keeps the row's 🔑 | https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/ |
+| bio/00-molecular-biology-fundamentals/README.md:27 | iBiology "Cell Biology Collection", "Ron Vale, et al.", 2015, at `ibiology.org/cell-biology/` (now a single Janet Iwasa talk) (L3-075) | `ibiology.org/research-talks/cell-biology/`; "Various (iBiology)"; year "—" | https://www.ibiology.org/research-talks/cell-biology/ |
+| bio/01-biochemistry/README.md:25 (+ books/README.md:8, README.md:62, PROGRESS.md:264) | Lehninger 8th ed. credited to Nelson & Cox (L3-097) | Nelson, Cox & Hoskins | https://www.macmillanlearning.com/college/us/product/Lehninger-Principles-of-Biochemistry/p/1319228003 |
+| bio/01-biochemistry/README.md:30 (+ Suggested Order step 5) | "HHMI BioInteractive: Enzyme Catalysis & Protein Structure" at a `topic[]=36` URL that returns the generic 623-item listing (L2-012) | BioInteractive's own search for "enzyme" within its Biochemistry & Molecular Biology topic (40 results: enzyme animations, Cech's ribozyme video, activities); title and description rewritten to match | https://www.biointeractive.org/search?keyword=enzyme&type_page=1&topics%5B23%5D=23&sort_bef_combine=search_api_relevance_DESC |
+| bio/03-structural-biology/README.md:30 (+ Suggested Order step 4, Practice 6, PROGRESS.md:60) | iBiology "Structural Biology Collection" at a dead URL (L1-076) | iBiology's Techniques collection, which holds the structural-methods talks (Yifan Cheng, single-particle cryo-EM; David J. Haas, macromolecular cryocrystallography). iBiology has no NMR talk, and the row says so | https://www.ibiology.org/research-talks/techniques/ ; https://www.ibiology.org/research-talks/biophysics/ |
+| bio/03-structural-biology/README.md:34 | RCSB PDB Training Resources at `rcsb.org/training` (4xx) (L1-142) | PDB-101 "Train: All Training Courses" (RCSB.org search, Mol*, validation, APIs) | https://pdb101.rcsb.org/train/training-events |
+| bio/04-bioinformatics-and-sequence-analysis/README.md:27 | NCBI BLAST "Tutorials and Documentation" linked to the search page (L3-016) | BLAST Help (`/doc/blast-help/`); the search page stays as a second link | https://blast.ncbi.nlm.nih.gov/doc/blast-help/ |
+| bio/04-bioinformatics-and-sequence-analysis/README.md:29 | Mount at a CSHL Press cart URL that lands on the store home (L2-030) | CSHL Press product page | https://cshlpress.com/link/bioinf2p.htm |
+| bio/06-computational-chemistry-and-drug-discovery/README.md:26 | Leach, *Molecular Modelling*, at a Pearson page that now serves an unrelated book (L3-127) | Open Library record (2nd ed., Prentice Hall, 2001) | https://openlibrary.org/books/OL7880866M/Molecular_Modelling |
+| bio/06-computational-chemistry-and-drug-discovery/README.md:28 | AutoDock Vina docs credited to "Trott, O. & Olson, A. J.", 2024, with receptor/ligand-preparation tutorials claimed (L1-009) | "AutoDock Vina Documentation (v1.2.0)", Forli Lab / CCSB, Scripps Research (original program by Oleg Trott), 2021; tutorials named as the docs list them | https://autodock-vina.readthedocs.io/ |
+| bio/07-protein-engineering-and-design/README.md:32 | ProGen author list ending "... Fraser, J. S." (L2-049) | "... Fraser, J. S., Naik, N." (Naik is the last author) | https://api.crossref.org/works/10.1038/s41587-022-01618-2 |
+| bio/08-genomic-medicine/README.md:28 | *Deep Medicine* at `basicbooks.com` (302 to Hachette) (L2-010) | Hachette Book Group page | https://www.hachettebookgroup.com/titles/eric-topol/deep-medicine/9781541644649/?lens=basic-books |
+| bio/08-genomic-medicine/README.md:30 (+ Suggested Order step 7) | Manolio et al. described as bridging GWAS and the clinic (L3-044) | Described as the missing-heritability review it is | https://api.crossref.org/works/10.1038/nature08494 |
+| bio/08-genomic-medicine/README.md:71 (Practice 6) | "Broad GWAS primer from Section 02", a row the follow-up pass replaced (L1-019) | "Uffelmann et al. 2021 GWAS primer from Section 02" | internal consistency |
+| bio/09-neuroscience/README.md:27 | Kandel 6th ed. at `mhprofessional.com` (302 to a generic page) (L1-102) | McGraw Hill higher-ed product page | https://www.mheducation.com/highered/mhp/product/principles-neural-science-sixth-edition.html |
+| bio/09-neuroscience/README.md:32 | Allen Brain Atlas at `portal.brain-map.org` (302) (L2-136) | `brain-map.org` | https://brain-map.org/ |
+| bio/11-frontiers/README.md:73 | Evo credited to "Nguyen, Poli, Durrant, Thomas et al." (the preprint's order) (L1-057) | "Nguyen, Poli, Durrant, Kang et al." (the *Science* order) | https://api.crossref.org/works/10.1126/science.ado9336 |
+| bio/blogs-and-references/README.md:13 | "PLOS Biology Community" (L3-012) | "PLOS Biologue", the blog for *PLOS Biology*, *PLOS Genetics* and *PLOS Computational Biology* | https://biologue.plos.org/ |
+| bio/courses/README.md:13 | Uri Alon lectures: a YouTube playlist that no longer loads (L1-176) | Lecture 1 of the 2018 course on the Alon Lab channel, plus the Weizmann course page that lists all twelve lectures | https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=N6VZeWuME_A&format=json ; https://www.weizmann.ac.il/mcb/alon/courses/systems-biology-2018 |
+| bio/courses/README.md:17 | UCSD "Drug Discovery Specialization" (4xx) (L3-027) | UCSD's single "Drug Discovery" course (Ettouati & Ma), now part of its Drug Development Product Management Specialization | https://www.coursera.org/learn/drug-discovery |
+| bio/courses/README.md:19 | "David Baker on Protein Design", YouTube `LHVm4nMAyBQ` (L2-180; unverifiable at audit, but YouTube's oEmbed now answers 404 Not Found) | Baker's 2024 Nobel lecture, "De Novo Protein Design" (also in Section 07); 🔑 removed (see Tier lists) | https://noembed.com/embed?url=https://www.youtube.com/watch?v=LHVm4nMAyBQ ; https://www.nobelprize.org/prizes/chemistry/2024/baker/lecture/ |
+- Already fixed in the follow-up pass above: the Broad GWAS primer (L1-019), Watson's Pearson page (L1-128), Branden & Tooze's Garland URL (L2-067) and the Broad "Brief Guide to Genomics" (L3-018).
+- Left unchanged because the auditor could not load the page, with no sign the resource is gone: Schrödinger at Cambridge Core (00:25; L1-020), the Takahashi & Yamanaka and Milo et al. DOIs (11:62, 05:27; L1-041, L1-055), Petsko & Ringe at OUP (03:29; L1-070), Khan Academy AP Biology and its gene-expression unit (courses:11, 00:28; L1-090, L2-090), NotebookLM (README:9; L2-114), In the Pipeline (blogs-and-references:9; L2-146), Voet & Voet and Klipp et al. at Wiley (01:28, 05:28; L2-165, L3-165), the PSI-BLAST DOI (04:35; L3-052), Klebe at Springer (06:36; L3-095), Dayan & Abbott at MIT Press (09:26, books:15; L3-103), ZINC (06:30; L3-185; its "230 million compounds" figure is still unconfirmed and may be older ZINC wording) and Durbin et al. at Cambridge Core (04:26; L3-019).
+
+## Tier lists (2026-10-13)
+🔑 trimmed to ≤3 per section; each Suggested Order now opens with a "Core path" line. Reverse any call by re-adding 🔑 to the row and the Core path line.
+| Section | 🔑 kept | 🔑 removed (why, ≤8 words) |
+|---|---|---|
+| 07 | Arnold Nobel lecture (2018); Lin et al., ESM-2 (2023); Watson et al., RFdiffusion (2023) | Baker Nobel lecture (survey; no objective or exercise needs it) |
+| 08 | Jinek et al. (2012); Anzalone, Koblan & Liu (2020); Richards et al., ACMG/AMP (2015) | Topol, *Deep Medicine* (popular vision book; no exercise uses it) |
+| 11 | Nielsen, Voigt et al., Cello (2016); Willett et al. (2023); Nguyen et al., Evo (2024) | Karr et al., whole-cell model (no specific objective; Practice 3 still uses it); López-Otín et al., hallmarks of aging (no specific objective; Practice 4 still uses it) |
+- Totals: 42 → 38 🔑 resource rows across Sections 00–14; no section has more than 3. Section 11's three are the ones its objectives and mini-project options name. Section 11 has no Suggested Order, so its Core path line sits under its 🔑 legend, just before Practice.
+- `bio/README.md` Key Textbooks: removed *What Is Life?* (never 🔑 in Section 00, which already has three) and *Deep Medicine* (demoted in 08), marked *Molecular Biology of the Gene* 🔑 to match Section 02, and renumbered 1–8. Both removed books stay in their sections and in `books/`.
+- `bio/courses/README.md` row 13: 🔑 removed. The row now points to Baker's Nobel lecture, which lost its 🔑 in Section 07, its only section.
+- No other index row changed: *Deep Medicine* was already unmarked in `books/`, and Karr and López-Otín are in no index.
+- The older index mismatches noted at first (MIT 7.016 and *Neuronal Dynamics* marked 🔑; Kandel and *Molecular Biology of the Gene* unmarked) are resolved by the index alignment below.
+- books/README.md #8 Watson et al., *Molecular Biology of the Gene* (7th ed.): 🔑 added (core in 02)
+- books/README.md #10 Kandel et al., *Principles of Neural Science*: 🔑 added (core in 09)
+- books/README.md #13 Gerstner et al., *Neuronal Dynamics*: 🔑 removed (not core in any section; unmarked in 09)
+- courses/README.md #2 MIT 7.016 Introductory Biology: 🔑 removed (not core in any section; unmarked in 00)
+- courses/README.md #3 MIT 5.07SC Biological Chemistry I: 🔑 added (core in 01)
+- courses/README.md #4 MIT 7.03 Genetics: 🔑 added (core in 02)
+- bio/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
+- Independent check: courses/README.md #5 Khan Academy AP Biology, #7 Uri Alon lecture videos, #9 iBiology Talks and #10 HHMI BioInteractive: 🔑 removed. None is 🔑 in any section; Section 05's 🔑 is Alon's textbook, and the other sections link only unmarked sub-pages of those sites.
+- Independent check: Section 00 MIT 7.012 lectures (Lander & Weinberg): 🔑 removed. It overlapped 7.01SC, the same Lander-led intro course. Core path is now 7.01SC → Alberts. 7.012 stays as the "deeper perspective" step 6.

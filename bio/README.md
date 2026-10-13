@@ -14,13 +14,13 @@ This repository is a structured curriculum for self-studying biology and computa
 
 | Symbol | Meaning |
 |--------|---------|
-| 🔑 | **Must-read / must-watch** — absolute priority items |
+| 🔑 | **Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first |
 
 ---
 
 ## Learning Path
 
-Work through the numbered sections in order. Each section's README contains curated resources with direct links, descriptions, and a suggested reading order within that section.
+Work through the numbered sections in order. Sections 12–14 were added later and keep their numbers so nothing else is renumbered; take them at the positions shown. Each section's README contains curated resources with direct links, descriptions, and a suggested reading order within that section.
 
 ```
 Section 00  →  Molecular Biology Fundamentals
@@ -35,7 +35,12 @@ Section 08  →  Genomic Medicine
 Section 09  →  Neuroscience
 Section 10  →  AI for Biology
 Section 11  →  Frontiers (2023–2026+)
+Section 12  →  Statistics and Experimental Design            (take alongside or before 04 — before any section that produces numbers)
+Section 13  →  Bioinstrumentation, Imaging and Lab Automation (take after 03)
+Section 14  →  Evolution and Population Genetics             (take after 02)
 ```
+
+Section 12 is the one to move first: it comes before Sections 04, 05, 08 and 10, because every one of them produces numbers that need judging. Section 13 is the "how the data is made" counterpart to Section 04's "what to do with the data", and Section 14 supplies the evolutionary reasoning that alignment, conservation, constraint and GWAS all quietly depend on.
 
 ### Cross-Cutting References
 
@@ -54,15 +59,13 @@ Section 11  →  Frontiers (2023–2026+)
 | # | Book | Author(s) | Section |
 |---|------|-----------|---------|
 | 1 | 🔑 Molecular Biology of the Cell | Alberts et al. | [00 — Molecular Biology](00-molecular-biology-fundamentals/) |
-| 2 | 🔑 Lehninger Principles of Biochemistry | Nelson & Cox | [01 — Biochemistry](01-biochemistry/) |
+| 2 | 🔑 Lehninger Principles of Biochemistry | Nelson, Cox & Hoskins | [01 — Biochemistry](01-biochemistry/) |
 | 3 | 🔑 The Gene: An Intimate History | Siddhartha Mukherjee | [02 — Genetics](02-genetics-and-genomics/) |
-| 4 | What Is Life? | Erwin Schrödinger | [00 — Molecular Biology](00-molecular-biology-fundamentals/) |
-| 5 | 🔑 Biological Sequence Analysis | Durbin, Eddy, Krogh, Mitchison | [04 — Bioinformatics](04-bioinformatics-and-sequence-analysis/) |
-| 6 | 🔑 Introduction to Protein Structure | Branden & Tooze | [03 — Structural Biology](03-structural-biology/) |
-| 7 | 🔑 An Introduction to Systems Biology | Uri Alon | [05 — Systems Biology](05-systems-biology/) |
-| 8 | Molecular Biology of the Gene | Watson et al. | [02 — Genetics](02-genetics-and-genomics/) |
-| 9 | 🔑 Theoretical Neuroscience | Dayan & Abbott | [09 — Neuroscience](09-neuroscience/) |
-| 10 | Deep Medicine | Eric Topol | [08 — Genomic Medicine](08-genomic-medicine/) |
+| 4 | 🔑 Biological Sequence Analysis | Durbin, Eddy, Krogh, Mitchison | [04 — Bioinformatics](04-bioinformatics-and-sequence-analysis/) |
+| 5 | 🔑 Introduction to Protein Structure | Branden & Tooze | [03 — Structural Biology](03-structural-biology/) |
+| 6 | 🔑 An Introduction to Systems Biology | Uri Alon | [05 — Systems Biology](05-systems-biology/) |
+| 7 | 🔑 Molecular Biology of the Gene | Watson et al. | [02 — Genetics](02-genetics-and-genomics/) |
+| 8 | 🔑 Theoretical Neuroscience | Dayan & Abbott | [09 — Neuroscience](09-neuroscience/) |
 
 ---
 

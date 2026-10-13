@@ -8,7 +8,7 @@ Each section below lists every resource in that section's README, in roughly the
 
 ## Section 00 — Molecular Biology Fundamentals
 - [ ] Khan Academy — Molecular Biology
-- [ ] MITx 7.00x — Introduction to Biology: The Secret of Life (edX)
+- [ ] MIT 7.01SC — Fundamentals of Biology (MIT OCW)
 - [ ] Drew Berry — Molecular animations (TED)
 - [ ] Alberts — *Molecular Biology of the Cell* (selected chapters)
 - [ ] Milo & Phillips — *Cell Biology by the Numbers* (2015)
@@ -43,8 +43,8 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Lander et al. — Initial sequencing of the human genome (2001)
 - [ ] Nurk et al. — The complete sequence of a human genome (2022)
 - [ ] Goodwin, McPherson & McCombie — Ten years of next-generation sequencing (2016)
-- [ ] Broad Institute — GWAS primer
-- [ ] Broad Institute — A Brief Guide to Genomics
+- [ ] Uffelmann et al. — Genome-wide association studies primer (2021)
+- [ ] NHGRI — A Brief Guide to Genomics
 - [ ] 1000 Genomes Project — Population genetics
 - [ ] 1000 Genomes Project Consortium — Integrated map of genetic variation (2012)
 - [ ] Karczewski et al. — gnomAD mutational constraint spectrum (2020)
@@ -57,7 +57,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] PDB-101 — Educational resources
 - [ ] Branden & Tooze — *Introduction to Protein Structure*
 - [ ] Anfinsen — Nobel lecture on protein folding (1972)
-- [ ] iBiology — Structural biology series
+- [ ] iBiology — Cryo-EM and cryocrystallography talks (Techniques collection)
 - [ ] RCSB PDB — Search, visualize, and download structures
 - [ ] RCSB PDB — Training resources
 - [ ] UCSF ChimeraX — Hands-on structure visualization
@@ -212,21 +212,64 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Brixi et al. — Evo 2 (Nature 2026)
 - [ ] Theodoris et al. — Geneformer (Nature 2023)
 - [ ] Cui et al. — scGPT (Nature Methods 2024)
+- [ ] NASEM — Biodefense in the Age of Synthetic Biology (2018)
+- [ ] Sandbrink — AI and biological misuse: language models vs biological design tools (2023)
+- [ ] Wittmann et al. — Strengthening nucleic acid biosecurity screening (Science 2025)
 - [ ] 🛠️ Practice exercises 1–6
 - [ ] 🏗️ Mini-project: One frontier — one build and one memo
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 12 — Statistics and Experimental Design
+- [ ] Krzywinski, Altman et al. — Statistics for Biologists / *Points of Significance* (Nature collection)
+- [ ] Wasserstein & Lazar — The ASA Statement on *p*-Values (2016)
+- [ ] Holmes & Huber — *Modern Statistics for Modern Biology* (2019)
+- [ ] Benjamini & Hochberg — Controlling the false discovery rate (1995)
+- [ ] Ioannidis — Why most published research findings are false (2005)
+- [ ] Leek et al. — Batch effects in high-throughput data (2010)
+- [ ] Love, Huber & Anders — DESeq2 (2014)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Pre-register, then re-analyse
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 13 — Bioinstrumentation, Imaging and Lab Automation
+- [ ] Nikon MicroscopyU — resolution, fluorescence and digital-imaging tutorials
+- [ ] Nobel Prize in Chemistry 2014 — super-resolved fluorescence microscopy (Betzig, Hell & Moerner)
+- [ ] Schermelleh et al. — Super-resolution microscopy demystified (2019)
+- [ ] The Axon Guide (5th ed.) — Molecular Devices
+- [ ] Deamer, Akeson & Branton — Three decades of nanopore sequencing (2016)
+- [ ] Picot et al. — Flow cytometry: fundamentals and instrumentation (2012)
+- [ ] Assay Guidance Manual — Markossian et al. (NCBI Bookshelf)
+- [ ] Wierenga et al. — PyLabRobot (2023)
+- [ ] Rapp, Bremer & Romero — Self-driving laboratories (2024)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: One instrument, specified from the physics up
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 14 — Evolution and Population Genetics
+- [ ] Coop — Population Genetics & Quantitative Genetics Notes
+- [ ] Kimura — Evolutionary rate at the molecular level (1968)
+- [ ] Rosenberg & Nordborg — Genealogical trees and coalescent theory (2002)
+- [ ] msprime — coalescent simulation
+- [ ] Nielsen & Slatkin — *An Introduction to Population Genetics* (2013)
+- [ ] Nguyen et al. — IQ-TREE (2015)
+- [ ] Good et al. — The dynamics of molecular evolution over 60,000 generations (2017)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Is this locus under selection? A falsifiable answer
 - [ ] ✅ Check Yourself — answered from memory
 
 ---
 
 ## Books (supplementary)
 - [ ] *Molecular Biology of the Cell* — Alberts et al.
-- [ ] *Lehninger Principles of Biochemistry* — Nelson & Cox
+- [ ] *Lehninger Principles of Biochemistry* — Nelson, Cox & Hoskins
 - [ ] *The Gene: An Intimate History* — Mukherjee
 - [ ] *What Is Life?* — Schrödinger
 - [ ] *Cell Biology by the Numbers* — Milo & Phillips
 - [ ] *Biological Sequence Analysis* — Durbin et al.
 - [ ] *Bioinformatics Algorithms* — Compeau & Pevzner
 - [ ] *Modern Statistics for Modern Biology* — Holmes & Huber
+- [ ] *Population Genetics & Quantitative Genetics Notes* — Coop
+- [ ] *An Introduction to Population Genetics* — Nielsen & Slatkin
 - [ ] *Introduction to Protein Structure* — Branden & Tooze
 - [ ] *An Introduction to Systems Biology* — Alon
 - [ ] *Biological Circuit Design* — Elowitz & Bois
