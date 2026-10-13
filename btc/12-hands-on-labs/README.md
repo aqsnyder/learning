@@ -65,6 +65,8 @@ These are the bench resources. Each lab also uses on-ramps listed in other secti
 
 ## Suggested Order
 
+**Core path (🔑):** *Learning Bitcoin from the Command Line*
+
 Each lab has a "done when" criterion. Don't move on until it holds.
 
 0. **Lab 0 — The bench** *(alongside Section 02 · ~4 h)*

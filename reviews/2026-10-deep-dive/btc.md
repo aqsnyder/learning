@@ -485,3 +485,76 @@ I made 34 minimal edits so every exercise points to resources listed in its own 
 - **New-resource citations:** 09's fee-sniping exercise now cites the Optech Fee sniping row; 11's covenant scorecard cites the Optech Covenants topic.
 - **Pointers to Lab 7:** added from the hardware mini-projects in 05 and 08.
 - **Checked, no changes needed:** no merged block referenced "Learn Me A Bitcoin: Lightning", "Bitcoin and Money", a wrong Mastering Bitcoin chapter title, "official" bitcoin.org docs, or an activation claim. 09's objectives and Check Yourself already treat Stock-to-Flow critically.
+
+## Follow-up pass (2026-10-13)
+- **New sections created:** none (12 and 13 already exist).
+- **Added:**
+  - The Economic Limits of Bitcoin and the Blockchain (NBER WP 24717; revised 2022 as "Trust at Scale: The Economic Limits of Cryptocurrencies and Blockchains", *QJE* 140(1):1–62, online Oct 2024) — Eric Budish — 2018; 2022 — btc/09 (🔑)
+  - On the Instability of Bitcoin Without the Block Reward (ACM CCS 2016, pp. 154–167) — Miles Carlsten, Harry Kalodner, S. Matthew Weinberg, Arvind Narayanan — 2016 — btc/09 (🔑)
+  - Cryptocurrency Engineering and Design (MIT MAS.S62, Spring 2018) — Neha Narula, Tadge Dryja — 2018 — btc/10 (row, Suggested Order step 12, PROGRESS) and courses/ #12
+  - Bitcoin Wiki: Privacy — Bitcoin Wiki contributors — 2019 — btc/08 (row, Suggested Order step 10, PROGRESS)
+- **Removed (confirmed nonexistent):** none.
+- **Flags resolved:**
+  - btc/06-network-and-p2p/README.md:43 and btc/13-governance-and-protocol-change/README.md:57 — BIP 110 status (independent check V4) — confirmed: "Reduced Data Temporary Softfork", Dathon Ohm, Status: Closed, assigned 2025-12-03; 06 now says "marked Closed in the BIPs repository (checked October 2026)"; 13 unchanged — https://github.com/bitcoin/bips/blob/master/bip-0110.mediawiki
+  - btc/06:42, btc/12:64, btc/13:75 — cluster mempool shipped in Core 31.0 (April 2026) (V4) — confirmed: published April 19, 2026; clusters ≤ 64 tx and 101 kB vsize, chunk-feerate ordering, ancestor/descendant limits and CPFP carve-out removed, feerate-diagram RBF rule — no change — https://bitcoincore.org/en/releases/31.0/ ; https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-31.0.md
+  - btc/06:68 (Practice 4b) — RPC names the consistency pass had removed as unverifiable — now verified, so the exercise names `getmempoolcluster`, the new chunk fields in `getmempoolentry`, and `getmempoolfeeratediagram` — same release notes
+  - btc/10:31 — "latest: 31.x" — confirmed (31.1 is the newest release listed) — https://bitcoincore.org/en/releases/
+  - btc/12:62 — "Testnet 5 (BIP 95) is in draft" (V4) — confirmed: BIP 95 "Testnet 5", Pol Espinasa and Fabian Jahr, Draft, assigned 2026-06-22 — https://github.com/bitcoin/bips/blob/master/bip-0095.md
+  - btc/11:68 — Arkade "launched late 2025", Bark "on mainnet since mid-2026" (V4) — confirmed: Optech newsletters 2025-11-21 ("Ark Labs launches Arkade") and 2026-06-19 ("Bark … now live on Bitcoin mainnet") — https://bitcoinops.org/en/topics/ark/
+  - btc/11:88 — Sparrow 2.5 receiving, libsecp256k1 0.8 module, Core support being merged (V4) — confirmed: Sparrow 2.5.0 (Optech 2026-06-19), libsecp256k1 0.8.0 (Optech 2026-08-07), Bitcoin Core #35301 merged (Optech 2026-10-02) — https://bitcoinops.org/en/topics/silent-payments/
+  - btc/11:37–38, 46–49, 57–58, 89; btc/05:42; btc/13:40–41; blogs-and-references:23 — every BIP status claim — all match the index as of 2026-10-13 (3 Deployed; 8 Complete; 9 Deployed; 54 Complete; 77 Draft; 94 Deployed; 119 Draft; 327 Deployed; 330 Draft; 345 Closed; 347 Complete; 352 Complete; 360 Draft; 361 Draft, assigned 2026-02-11; 379 Draft; 388 Complete; 390 Draft; 443, 446, 448 Draft; no FROST or ChillDKG BIP) — https://github.com/bitcoin/bips/blob/master/README.mediawiki
+  - btc/11:38 — FROST BIP proposed 2024, ChillDKG in draft, Frostsnap k-of-n devices in 2025 — confirmed (Optech 2024-08-09, 2024-07-19 and 2025-01-03, 2025-07-18) — https://bitcoinops.org/en/topics/threshold-signature/
+  - btc/11:37 — Bitcoin Core parses `musig()` descriptors (BIP 390) — confirmed — https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md
+  - btc/12:60; courses:17 — LBTCftCL "v2.2.2; 3.0 in progress … targets late 2026", written for Core 22 — confirmed: 2.2.2 dated January 22, 2026, "focused on Bitcoin Core 22.0", v3.0 "for release toward the end of 2026" — https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line
+  - btc/09:24, 25, 31, 41–58 — tone and ordering (V4: 🔑 on advocacy, Suggested Order opened with *The Bitcoin Standard* and *Bullish Case*) — Suggested Order rewritten with a framing note: incentive economics (steps 1–4: game theory of mining → Budish → Optech fee sniping → Carlsten et al.), then market structure and monetary theory (5–7), then the advocacy case as claims to test for the Claims Ledger (8–14). 🔑 moved from the three advocacy rows (*The Bitcoin Standard*, *The Internet of Money*, *The Bullish Case*) to Budish and Carlsten et al.; *The Bitcoin Standard* keeps its 🔑 in Section 00 and books/ — judgement, per this review's priority 5
+  - btc/09:31 — *Bullish Case* year blank (✱ above) — 2018 (dateline "Mar 2, 2018") — https://vijayboyapati.medium.com/the-bullish-case-for-bitcoin-6ecc8bdecc1
+  - btc/09:67, 69 (Practice 2, 4) — exercises now use the new rows: Practice 2 reads its attack cost through Budish's flow-vs-stock condition (~2 h → ~2.5 h); Practice 4's "optional depth" on Carlsten et al. became a concrete undercutting question (~2.5 h → ~3 h) — https://www.nber.org/papers/w24717 ; https://api.crossref.org/works/10.1145/2976749.2978408
+  - btc/08:62 (Practice 5) — change-detection heuristics now drawn from the Bitcoin Wiki privacy article — https://en.bitcoin.it/wiki/Privacy
+  - btc/03:34 — pointer from "Energy and incentive structure" to 09's security-budget papers (cross-link only)
+  - Review "Structural observations": Budish and Carlsten et al. now have their home in btc/09, per STUDY-GUIDE's one-home table ("Bitcoin economics → btc/09"); the Budish row links econ/10's exercise 3, which derives the inequality. Crossref confirms the Budish versions: https://doi.org/10.3386/w24717 (2018), https://doi.org/10.2139/ssrn.4148014 (2022), https://doi.org/10.1093/qje/qjae033 (*QJE*)
+  - MAS.S62 metadata — title, number, term, instructors in OCW order (Narula, Dryja), three problem sets, lecture list (no video for 9, 19–21) — https://ocw.mit.edu/courses/mas-s62-cryptocurrency-engineering-and-design-spring-2018/ (plus its assignments and lecture-video pages)
+  - V5 rows on btc's update-curriculum SKILL (one-home rule, ⭐ list, books/courses/blogs, append-only) — already addressed in the current text (rule 9; ⭐ = README canon table; rule 4 "append-only … does not mean leave errors"; the section map routes cross-cutting items to books/, courses/, blogs/). The file was not edited in this pass.
+- **Still unverified:**
+  - Whether the ACM DOI landing page for Carlsten et al. is free to read (not fetched); the row also links the authors' free PDF, which was fetched.
+  - The Bitcoin Wiki privacy page's last-edited date (the footer wasn't retrievable); the row says only that it was written in 2019.
+  - The *QJE* print-issue year for Budish (Crossref gives volume 140, issue 1 and an online date of 2024-10-16); the row says "online October 2024".
+  - The language of MAS.S62's problem sets (not stated on OCW); not claimed.
+  - Review ✱ items outside this backlog, not re-checked: OXT.me status, Bitcoin.page and Advancing Bitcoin currency, the *Internet of Money* and *Little Bitcoin Book* years, the unlinked Saylor row, and the channel-only Antonopoulos rows.
+  - 🔑 above ~3 per section (V4) — not changed; a curation call: 00 (5), 01 (5), 02 (5), 05 (4), 07 (4), 10 (6). Suggestion for 10: keep Mastering Bitcoin Ch. 3, *Programming Bitcoin* and PR Review Club; demote the Chaincode curriculum (a 2016–19 link syllabus), Btrust and "Bitcoin Core" (the subject itself).
+
+## Link-audit fixes (2026-10-13)
+Eight audit entries in btc/ were not `ok`. Applied 2, already fixed 0, annotated dead 0, left unverifiable 6.
+- **L2-016 Bitnodes → BTC Nodes** (btc/06 resource row, Suggested Order step 10 and Practice 1; PROGRESS): bitnodes.io is now a "Bitnodes is coming back" holding page, and it lists btcnodes.io under "Keep an eye on the network". BTC Nodes ("Reachable Bitcoin Nodes") publishes a snapshot about every 10 minutes, with counts by country, a live map, and a keyless API (10 requests a day per IP) whose snapshot rows include each node's user agent, which Practice 1 needs — https://bitnodes.io/ ; https://btcnodes.io/ ; https://btcnodes.io/api/
+- **L3-091 Saylor CS120** (btc/10:28, courses:10): the link now goes to the course page rather than the Saylor home page; found through the site's own course search. Title, 18 hours, free certificate, audience ("some coding experience") and topics are confirmed; "self-paced" was dropped because the page doesn't state it — https://learn.saylor.org/course/search.php?search=CS120 ; https://learn.saylor.org/course/cs120
+- **Left unverifiable (no change):** L1-072 Hashcash PDF and L1-165 b-money (robots.txt; ⭐ rows), L2-014 Bitcoin Stack Exchange, L2-088 Khan Academy: Cryptography, L2-114 NotebookLM (btc/README.md:9), L2-125 OXT.me. The auditor suspects OXT.me is dead, but it is a non-🔑 bookmark in blogs-and-references, so per the brief it was not re-checked.
+
+## Tier lists (2026-10-13)
+🔑 trimmed to ≤3 per section; each Suggested Order now opens with a "Core path" line. Reverse any call by re-adding 🔑 to the row and the Core path line.
+| Section | 🔑 kept | 🔑 removed (why, ≤8 words) |
+|---|---|---|
+| 00 | Bitcoin whitepaper; A Cypherpunk's Manifesto; Bitcoin's Academic Pedigree | *The Bitcoin Standard* (advocacy; never on the core path); *Digital Gold* (narrative; Pedigree serves objective 2 better) |
+| 01 | *Mastering Bitcoin* Chs. 4 and 8; *Programming Bitcoin* Chs. 1–3 | 3Blue1Brown video (intuition; MB chapters cover the objectives); Learn Me A Bitcoin: Keys and Addresses (companion to MB Ch. 4) |
+| 02 | *Grokking Bitcoin*; *Mastering Bitcoin*; *Programming Bitcoin* | 3Blue1Brown video (overview; no exercise uses it); Learn Me A Bitcoin (one exercise; Grokking and MB cover it) |
+| 05 | *Mastering Bitcoin* Ch. 5; BIP 32; Output descriptors (BIPs 380–387) | Learn Me A Bitcoin: HD Wallets (visual companion to BIP 32) |
+| 07 | *Mastering Bitcoin* Ch. 14; Poon–Dryja whitepaper; *Mastering the Lightning Network* | "Set up a Lightning node" (same as Practice 1 and Lab 5) |
+| 10 | *Mastering Bitcoin* Ch. 3; Bitcoin Core source; PR Review Club | *Programming Bitcoin* (core in 01, 02, 04; no exercise here); Chaincode curriculum (2016–19 link syllabus; core in 03, 06); Btrust pathway (structured MB course; no exercise uses it) |
+
+- Section totals: 🔑 50 → 39. Sections 03, 04, 06, 08, 09, 11, 12 and 13 were already at ≤3 and only gained the Core path line. This resolves the "🔑 above ~3 per section (V4)" item above.
+- Section 10 departs from the earlier suggestion (keep *Programming Bitcoin*, demote Bitcoin Core). Reason: the Bitcoin Core source is the section's primary source, and Practice 1, 3 and 4 and the mini-project work in it. *Programming Bitcoin* stays 🔑 in 01, 02 and 04.
+- books/: *The Bitcoin Standard*: 🔑 removed (now unmarked in 00 and 09, the only sections that list it). This supersedes the "keeps its 🔑 in Section 00 and books/" note in the follow-up pass.
+- courses/: 3Blue1Brown, "But how does bitcoin actually work?": 🔑 removed (now unmarked in 01 and 02).
+- courses/: Btrust Builders Mastering Bitcoin Pathway: 🔑 removed (now unmarked in 10, its only section).
+- Index rows left unchanged: every other index 🔑 is either still core in some section (*Mastering Bitcoin*, *Programming Bitcoin*, *Grokking Bitcoin*, *Mastering the Lightning Network*, the Antonopoulos channel, the Chaincode curriculum, *Learning Bitcoin from the Command Line*, Learn Me A Bitcoin, Bitcoin Optech, Bitcoin Core) or index-only (MIT 15.S12, the Lopp.net hub). Three more keep their blogs-and-references 🔑 although no section marks them 🔑: Mempool.space, the Satoshi Nakamoto Institute and Bitcoin Developer Documentation. They never had a section 🔑, so the index rule doesn't remove them; Aaron to decide.
+- PROGRESS.md has no 🔑 markers, so it needed no sync.
+- btc/.agents/skills/update-curriculum/SKILL.md was not edited in this pass. Rule 6's "(many sections still exceed this; trim when you touch them rather than adding more)" is now stale. Suggested wording: "🔑 marks the core path: at most 3 per section, listed in the **Core path (🔑)** line that opens Suggested Order. When you add or remove a 🔑, update that line and the books/courses/blogs index 🔑 (index 🔑 = core in some section)."
+- courses/README.md #10 Bitcoin Core PR Review Club: 🔑 added (core in 10)
+- btc/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
+- btc/README.md legend: 🔑⭐ row now says "a core-path item" instead of "a must-read"
+- btc/README.md Key Resources: Mempool.space removed (not core in any section; unmarked in 03 and 06)
+- btc/README.md Key Resources: 3Blue1Brown: Bitcoin removed (not core in any section; unmarked in 01 and 02)
+- Not changed, for Aaron: btc/README.md Key Resources keeps Learn Me A Bitcoin and Lopp.net. Neither site is 🔑 as a whole (Learn Me A Bitcoin is unmarked in 02 and 07), but a page of each is core: Learn Me A Bitcoin: Transactions (04) and the Lopp.net Bitcoin Security Guide (08). If only the listed page counts, remove both.
+- Second check (2026-10-13), from `independent-check.md` "Second check":
+  - 03: 🔑 removed from the Antonopoulos channel row. The Chaincode row is renamed "Mining section" (the curriculum has no "Proof of Work" section). Core path is now *Mastering Bitcoin* Ch. 12 → Chaincode Mining.
+  - 06: 🔑 moved from "Run your own full node" (a sourceless practice row) to *Mastering Bitcoin* Ch. 9.
+  - 08: 🔑 moved from the Cold storage and Multisig concept rows to *Mastering Bitcoin* Ch. 13 and BIP 174.
+  - `courses/README.md`: 🔑 removed from #2 Antonopoulos (now core in no section) and #7 Blockchain and Money (index-only). `btc/README.md` Key Resources: the Antonopoulos row removed.

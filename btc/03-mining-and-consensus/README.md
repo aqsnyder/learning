@@ -24,14 +24,14 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
 | 🔑 | Book (Free) | Mastering Bitcoin, Chapter 12: Mining and Consensus | Andreas Antonopoulos and David Harding | [ch12_mining.adoc](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc) | Coinbase and subsidy, proof-of-work and difficulty retargeting, chain selection, mining pools, hashrate attacks, and how consensus rules change (hard vs. soft forks) |
-| 🔑 | Video | Andreas Antonopoulos: Bitcoin Q&A on Mining | Andreas Antonopoulos | [@aantonop](https://www.youtube.com/@aantonop) | Clear explanations of mining mechanics |
+| | Video | Andreas Antonopoulos: Bitcoin Q&A on Mining | Andreas Antonopoulos | [@aantonop](https://www.youtube.com/@aantonop) | Clear explanations of mining mechanics |
 | | Website | Learn Me A Bitcoin: Mining | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/mining/) | Interactive mining visualizations |
-| 🔑 | Curriculum | Chaincode Labs: Proof of Work section | | [bitcoin-curriculum](https://github.com/chaincodelabs/bitcoin-curriculum) | Protocol-level deep dive |
+| 🔑 | Curriculum | Chaincode Labs: Mining section | | [bitcoin-curriculum](https://github.com/chaincodelabs/bitcoin-curriculum) | Protocol-level deep dive |
 | | Tool | Mempool.space | | [mempool.space](https://mempool.space/) | Live blockchain explorer, fee estimation, mining pool stats |
 | | Concept | Difficulty adjustment algorithm | | | How Bitcoin self-regulates every 2016 blocks |
 | | Concept | Selfish mining and mining game theory | | [Optech topic](https://bitcoinops.org/en/topics/selfish-mining/) | Block withholding and selfish mining: under minimal assumptions a miner with about 1/3 of the hashrate can earn more than its fair share, so the honest-majority "51%" framing is too optimistic. The Optech page links the original "Majority is not Enough" paper (Eyal & Sirer, 2013) and 2025–26 follow-ups |
 | | Concept | Mining pools and hashrate distribution | | | Pool payout schemes, hashrate concentration, and who chooses the transactions in a block (see Stratum V2 in Section 11) |
-| | Concept | Energy and incentive structure | | | Block rewards, halving schedule, fee market |
+| | Concept | Energy and incentive structure | | | Block rewards, halving schedule, fee market. What happens to security as fees replace the subsidy is covered in [Section 09](../09-economics-and-game-theory/README.md) (Budish; Carlsten et al.) |
 | | Book (Free) | Bitcoin and Cryptocurrency Technologies, Ch. 2 and 5 | Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, Steven Goldfeder | [bitcoinbook.cs.princeton.edu](https://bitcoinbook.cs.princeton.edu/) | Princeton's textbook (2016): "How Bitcoin Achieves Decentralization" and "Bitcoin Mining", including mining incentives and strategies. Pre-SegWit, but the most rigorous textbook treatment of Nakamoto consensus; free pre-publication PDF and lectures on the site |
 | | Website | Learn Me A Bitcoin: Block Reward | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/mining/block-reward/) | The subsidy schedule in detail: halving every 210,000 blocks (3.125 BTC since the 2024 halving at block 840,000), bit-shift rounding, and why total supply ends just under 21 million |
 
@@ -39,10 +39,12 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** *Mastering Bitcoin* Ch. 12 → Chaincode curriculum: Mining
+
 1. **Mastering Bitcoin, Ch. 12** — Start with the definitive technical explanation of mining and consensus.
 2. **Andreas Antonopoulos Q&A** — Watch his mining explanations to build intuition.
 3. **Learn Me A Bitcoin: Mining** — Interact with mining visualizations.
-4. **Chaincode Labs curriculum** — Deep dive into proof-of-work at the protocol level.
+4. **Chaincode Labs curriculum (Mining section)** — Deep dive into mining and proof-of-work at the protocol level.
 5. **Bitcoin and Cryptocurrency Technologies, Ch. 2 and 5** — The rigorous academic treatment of decentralization and mining incentives.
 6. **Concepts** — Study difficulty adjustment, selfish mining, pool mechanics, and the incentive structure.
 7. **Learn Me A Bitcoin: Block Reward** — Work through the subsidy schedule and the 21M cap yourself.

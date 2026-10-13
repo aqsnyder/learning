@@ -38,13 +38,15 @@ After this section you can:
 | | 💡 Concept | HTLCs (Hash Time-Locked Contracts) | — | — | — | Multi-hop payment routing |
 | | 💡 Concept | Channel capacity, liquidity, and routing | — | — | — | Managing inbound/outbound liquidity and pathfinding |
 | | 💡 Concept | Lightning implementations | — | — | — | LND, CLN (Core Lightning), Eclair, LDK |
-| 🔑 | 🛠️ Practice | Set up a Lightning node and open channels | — | — | — | Hands-on experience with real Lightning infrastructure — start with a throwaway regtest network in Polar (Section 12, Lab 5), then signet |
+| | 🛠️ Practice | Set up a Lightning node and open channels | — | — | — | Hands-on experience with real Lightning infrastructure — start with a throwaway regtest network in Polar (Section 12, Lab 5), then signet |
 | 🔑 | 📖 Book (Free) | Mastering Bitcoin, Chapter 14: Second-Layer Applications | Antonopoulos & Harding | 2023 | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc) | Builds payment channels from primitives you already know (multisig, timelocks, hash locks) through asymmetric revocable commitments and HTLCs to routed Lightning payments — the on-ramp before Mastering the Lightning Network |
 | | 📜 Standard | BOLT specifications (Basis of Lightning Technology) | Lightning protocol contributors | — | [GitHub](https://github.com/lightning/bolts) | The interoperability spec every implementation follows; now includes BOLT 12 offers (merged in 2024) and splicing (in BOLT 2) |
 | | 📚 Curriculum | Chaincode Labs: Lightning Protocol Development seminar | Chaincode Labs | — | [Seminar](https://chaincode.gitbook.io/seminars/lightning-protocol-development) | Five-session reading list with discussion questions: payment channels and HTLCs, how the layers fit together, routing, limitations, and the future of Lightning |
 | | 🌐 Website | Bitcoin Optech topics: Offers (BOLT 12) and Splicing | Bitcoin Optech | — | [Offers](https://bitcoinops.org/en/topics/offers/) · [Splicing](https://bitcoinops.org/en/topics/splicing/) | What changed after the book: reusable offers (in the spec since 2024, on by default in Core Lightning, implemented in LDK and Eclair, LND support in progress) and splicing (resize a channel without closing it; implemented in Eclair, Core Lightning and LDK) |
 
 ## Suggested Order
+
+**Core path (🔑):** *Mastering Bitcoin* Ch. 14 → Poon–Dryja Lightning whitepaper → *Mastering the Lightning Network*
 
 1. **Mastering Bitcoin Ch. 14** — Build up payment channels and HTLCs from the on-chain primitives you already know
 2. **Lightning whitepaper** — Read the original Poon & Dryja paper for the foundational design

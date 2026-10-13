@@ -47,6 +47,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** *Mastering Bitcoin* Ch. 12 § "Changing the Consensus Rules" → Optech: Soft fork activation → BIP 3
+
 1. **Mastering Bitcoin Ch. 12 § Changing the Consensus Rules** — Vocabulary: hard vs. soft forks, signaling, lock-in, activation.
 2. **Optech: Soft fork activation** — What actually happened, from 2009 to SegWit. Then read *The Blocksize War* (books/) for the human story of 2015–17.
 3. **BIP 9 and BIP 8** — The mechanisms in their own words; sketch BIP 9's state machine before Practice exercise 2.

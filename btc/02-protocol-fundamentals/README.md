@@ -25,9 +25,9 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
 | 🔑 | Book (Free) | Mastering Bitcoin (full book) | Andreas Antonopoulos and David Harding | [bitcoinbook](https://github.com/bitcoinbook/bitcoinbook) | THE technical Bitcoin reference (3rd edition, Dec 2023; covers Taproot) |
-| 🔑 | Website | Learn Me A Bitcoin | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/) | Interactive exploration of blocks, transactions, Merkle trees |
+| | Website | Learn Me A Bitcoin | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/) | Interactive exploration of blocks, transactions, Merkle trees |
 | 🔑 | Book (Free) | Grokking Bitcoin | Kalle Rosenbaum | [rosenbaum.se](https://rosenbaum.se/book/) | Best visual explanations of the protocol (Manning, 2019; free to read online under CC BY-NC-SA) |
-| 🔑 | Video | But how does bitcoin actually work? | 3Blue1Brown | [YouTube](https://www.youtube.com/watch?v=bBC-nXj3Ng4) | High-level protocol overview |
+| | Video | But how does bitcoin actually work? | 3Blue1Brown | [YouTube](https://www.youtube.com/watch?v=bBC-nXj3Ng4) | High-level protocol overview |
 | | Documentation | Bitcoin Developer Guide | | [developer.bitcoin.org](https://developer.bitcoin.org/devguide/) | Community-written guide from bitcoin.org — not an official spec, and no longer maintained (© 2009–2020; its RPC reference stops at Bitcoin Core 0.21). Clear conceptual reference, but check BIPs for SegWit/Taproot details |
 | 🔑 | Book (Free) | Programming Bitcoin | Jimmy Song | [GitHub](https://github.com/jimmysong/programmingbitcoin) | Build a Bitcoin library from scratch in Python (O'Reilly, 2019; pre-Taproot) |
 | | Concept | UTXO model | | | How Bitcoin tracks ownership (vs account model) |
@@ -37,6 +37,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Grokking Bitcoin* → *Mastering Bitcoin* → *Programming Bitcoin*
 
 1. **3Blue1Brown video** — Re-watch with protocol-level focus if needed.
 2. **Grokking Bitcoin** — Best starting point for visual learners; builds up the protocol step by step.

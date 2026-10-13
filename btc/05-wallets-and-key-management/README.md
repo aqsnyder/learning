@@ -30,7 +30,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|-----------|------|-------------|
 | 🔑 | 📖 Book (Free) | Mastering Bitcoin, Chapter 5: Wallet Recovery | Antonopoulos & Harding | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc) | HD key derivation (BIP 32), BIP 39 recovery codes and passphrases, and what else a backup must capture (derivation paths, output script descriptors) |
-| 🔑 | 🌐 Website | Learn Me A Bitcoin: HD Wallets | Greg Walker | [Website](https://learnmeabitcoin.com/technical/keys/hd-wallets/) | Visual HD wallet derivation |
+| | 🌐 Website | Learn Me A Bitcoin: HD Wallets | Greg Walker | [Website](https://learnmeabitcoin.com/technical/keys/hd-wallets/) | Visual HD wallet derivation |
 | 🔑 | 📜 Standard | BIP 32: Hierarchical Deterministic Wallets | — | [BIP 32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) | The HD wallet standard |
 | | 📜 Standard | BIP 39: Mnemonic Seed Phrases | — | [BIP 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) | How 12/24 word seeds work |
 | | 📜 Standard | BIP 44: Multi-Account Hierarchy | — | [BIP 44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) | Derivation path conventions |
@@ -42,6 +42,8 @@ After this section you can:
 | | 📜 Standard | BIP 379: Miniscript (with BIP 388 Wallet Policies) | Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow; Salvatore Ingala | [BIP 379](https://github.com/bitcoin/bips/blob/master/bip-0379.md) | A composable, analyzable subset of Script for spending policies (multisig, timelocked recovery, inheritance); BIP 388 adapts descriptors and miniscript for hardware signers. Specs are Draft (379) and Complete (388) — check wallet support before relying on them |
 
 ## Suggested Order
+
+**Core path (🔑):** *Mastering Bitcoin* Ch. 5 → BIP 32 → Output descriptors (BIPs 380–387)
 
 1. **Mastering Bitcoin Ch. 5** — Start with Antonopoulos for the complete wallet architecture overview
 2. **Learn Me A Bitcoin: HD Wallets** — Visualize how master keys derive child keys

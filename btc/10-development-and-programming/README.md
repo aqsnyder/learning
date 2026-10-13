@@ -21,11 +21,11 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
-| 🔑 | Book (Free) | Programming Bitcoin | Jimmy Song | 2019 | [GitHub](https://github.com/jimmysong/programmingbitcoin) | Build a Bitcoin library from scratch in Python (full text and exercises free on GitHub; pre-Taproot) |
-| 🔑 | Curriculum | Chaincode Labs Bitcoin Curriculum | Chaincode Labs | | [GitHub](https://github.com/chaincodelabs/bitcoin-curriculum) | Syllabus of curated readings by subject, from Chaincode's developer residency; many links date from 2016–2019, so pair with Optech for anything recent |
-| 🔑 | Curriculum | Btrust Builders: Mastering Bitcoin Pathway | Btrust | | [pathways.btrust.tech](https://pathways.btrust.tech/) | 8-week study pathway built on Mastering Bitcoin; live cohorts are application-based (aimed at developers in Africa) but the self-paced track is open to anyone. Sibling pathways: Learn Bitcoin from the Command Line (7 weeks), Rust for Bitcoiners (6 weeks) |
+| | Book (Free) | Programming Bitcoin | Jimmy Song | 2019 | [GitHub](https://github.com/jimmysong/programmingbitcoin) | Build a Bitcoin library from scratch in Python (full text and exercises free on GitHub; pre-Taproot) |
+| | Curriculum | Chaincode Labs Bitcoin Curriculum | Chaincode Labs | | [GitHub](https://github.com/chaincodelabs/bitcoin-curriculum) | Syllabus of curated readings by subject, from Chaincode's developer residency; many links date from 2016–2019, so pair with Optech for anything recent |
+| | Curriculum | Btrust Builders: Mastering Bitcoin Pathway | Btrust | | [pathways.btrust.tech](https://pathways.btrust.tech/) | 8-week study pathway built on Mastering Bitcoin; live cohorts are application-based (aimed at developers in Africa) but the self-paced track is open to anyone. Sibling pathways: Learn Bitcoin from the Command Line (7 weeks), Rust for Bitcoiners (6 weeks) |
 | 🔑 | Source Code | Bitcoin Core | | | [GitHub](https://github.com/bitcoin/bitcoin) | The reference implementation |
-| | Course | Saylor University CS120: Bitcoin for Developers I | Saylor University | | [learn.saylor.org](https://learn.saylor.org/) | Self-paced developer course (~18 hours, free certificate): cryptography, keys, hashing and proof-of-work, wallets, nodes |
+| | Course | Saylor University CS120: Bitcoin for Developers I | Saylor University | | [learn.saylor.org](https://learn.saylor.org/course/cs120) | Developer course for learners with some coding experience (~18 hours, free certificate): cryptography, keys, hashing and proof-of-work, wallets, nodes |
 | | Documentation | Bitcoin Developer Documentation | | | [developer.bitcoin.org](https://developer.bitcoin.org/) | bitcoin.org's community docs — not official Bitcoin Core documentation, and unmaintained since about 2021 (its RPC reference stops at Bitcoin Core 0.21) |
 | 🔑 | Practice | Bitcoin Core PR Review Club | | | [bitcoincore.reviews](https://bitcoincore.reviews/) | Learn by reviewing real code changes |
 | | Tool | Bitcoin Core RPC API | Bitcoin Core | | [RPC reference](https://bitcoincore.org/en/doc/) | Programmatic interaction with a node. Use the versioned official reference (latest: 31.x) or `bitcoin-cli help` — the developer.bitcoin.org copy is frozen at 0.21 and lacks years of RPC changes |
@@ -35,10 +35,13 @@ After this section you can:
 | | Curriculum | Chaincode Labs: Bitcoin Protocol Development seminar | Chaincode Labs | | [Seminar](https://chaincode.gitbook.io/seminars/bitcoin-protocol-development) | Five-session reading list with discussion questions (SegWit, mining and propagation, P2P, Script and wallets) — the bridge from Mastering Bitcoin to Bitcoin Core development |
 | | Tool | embit | Stepan Snigirev | 2020– | [GitHub](https://github.com/diybitcoinhardware/embit) | Minimal Bitcoin library for Python 3 and MicroPython, built for embedded signers (used by SeedSigner): keys, BIP 32/39, scripts, PSBTs, descriptors. A natural fit for firmware/hardware-wallet experiments |
 | | Tool | Bitcoin Dev Kit (Book of BDK) | Bitcoin Dev Kit Foundation | 2026 | [bookofbdk.com](https://bookofbdk.com/) | Rust libraries for descriptor-based wallets (built on rust-bitcoin and rust-miniscript), with Kotlin/Swift bindings and a separately maintained Python package. For lower-level transaction building in Rust see the [Rust Bitcoin Cookbook](https://rust-bitcoin.org/book/) |
+| | Course | Cryptocurrency Engineering and Design (MIT MAS.S62, Spring 2018) | Neha Narula, Tadge Dryja | 2018 | [MIT OCW](https://ocw.mit.edu/courses/mas-s62-cryptocurrency-engineering-and-design-spring-2018/) | University course on how Bitcoin is engineered: lecture videos, notes and three problem sets ("Hash-based Signature Schemes", "Mine Your Name", "UTXOhunt"). The lectures run from signatures, proof of work and the UTXO model through sync and pruning, SPV and wallets, forks, fees, SegWit, Lightning, discreet log contracts, MAST/Taproot/Graftroot, CoinJoin and confidential transactions; four lectures (9, 19–21) have no video. Recorded in 2018, before Taproot activated: watch it for the design reasoning, and check current behavior against Mastering Bitcoin and the BIPs |
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Mastering Bitcoin* Ch. 3 → Bitcoin Core source → Bitcoin Core PR Review Club
 
 > 🛠️ **The hands-on lab track now lives in [Section 12 — Hands-on Labs](../12-hands-on-labs/README.md)** — run it in parallel with Sections 02–10 (Lab 0 alongside Section 02). Items 1–4 below overlap with Labs 0–2; if you've done those, start at item 5.
 
@@ -53,9 +56,10 @@ After this section you can:
 9. **Chaincode Labs Bitcoin Curriculum** — Dip into subject-by-subject readings as needed.
 10. **Btrust Builders pathway** — Follow the structured 8-week program (self-paced or cohort).
 11. **Saylor University CS120** — Supplement with a formal developer course.
-12. **Bitcoin Developer Documentation** — Background reference only (unmaintained).
-13. **Bitcoin Core PR Review Club** — Learn by reviewing real pull requests.
-14. **Bitcoin Development Mailing List** — Follow protocol discussions and engage with the community.
+12. **Cryptocurrency Engineering and Design (MIT MAS.S62)** — A university-level supplement: watch the lectures that match the sections you're studying (01–08, 11), and do the three problem sets.
+13. **Bitcoin Developer Documentation** — Background reference only (unmaintained).
+14. **Bitcoin Core PR Review Club** — Learn by reviewing real pull requests.
+15. **Bitcoin Development Mailing List** — Follow protocol discussions and engage with the community.
 
 ---
 

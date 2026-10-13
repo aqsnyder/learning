@@ -42,6 +42,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** *Mastering Bitcoin* Chs. 6–7 → Learn Me A Bitcoin: Transactions → *Programming Bitcoin* Chs. 5–8 and 13
+
 1. **Mastering Bitcoin Ch. 6–7** — Start with Antonopoulos for the conceptual framework of transactions and Script
 2. **Learn Me A Bitcoin: Transactions** — Visualize and dissect real transactions interactively
 3. **UTXO model deep dive** — Internalize inputs, outputs, change, and coin selection

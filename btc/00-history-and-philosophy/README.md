@@ -21,11 +21,11 @@ After this section you can:
 |----------|------|----------|------------|------|------|-------------|
 | 🔑⭐ | Paper | Bitcoin: A Peer-to-Peer Electronic Cash System | Satoshi Nakamoto | 2008 | [bitcoin.pdf](https://bitcoin.org/bitcoin.pdf) | THE whitepaper. Read it first, re-read it last. |
 | 🔑⭐ | Manifesto | A Cypherpunk's Manifesto | Eric Hughes | 1993 | [activism.net](https://www.activism.net/cypherpunk/manifesto.html) | The ideological roots of Bitcoin |
-| 🔑 | Book | Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money | Nathaniel Popper | 2015 | | Best historical narrative of Bitcoin's early days |
+| | Book | Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money | Nathaniel Popper | 2015 | | Best historical narrative of Bitcoin's early days |
 | ⭐ | Paper | b-money | Wei Dai | 1998 | [weidai.com](http://www.weidai.com/bmoney.txt) | Precursor to Bitcoin, cited in the whitepaper |
 | ⭐ | Paper | Hashcash | Adam Back | 2002 | [hashcash.org](http://www.hashcash.org/papers/hashcash.pdf) | Proof-of-work concept used by Bitcoin |
 | ⭐ | Paper | Bitcoin: A Peer-to-Peer Electronic Cash System (annotated) | Satoshi Nakamoto / Fermat's Library | | [fermatslibrary.com](https://fermatslibrary.com/s/bitcoin) | Annotated version with community explanations |
-| 🔑 | Book | The Bitcoin Standard: The Decentralized Alternative to Central Banking | Saifedean Ammous | 2018 | | History of money leading to Bitcoin. A polemical, Austrian-school argument rather than neutral history — read it critically alongside Section 09 |
+| | Book | The Bitcoin Standard: The Decentralized Alternative to Central Banking | Saifedean Ammous | 2018 | | History of money leading to Bitcoin. A polemical, Austrian-school argument rather than neutral history — read it critically alongside Section 09 |
 | | Book | The Internet of Money (Vols 1-3) | Andreas Antonopoulos | | | Accessible talks on why Bitcoin matters |
 | ⭐ | Email | Satoshi Nakamoto's emails and forum posts | Satoshi Nakamoto (compiled by the Satoshi Nakamoto Institute) | 2008–2010 | [satoshi.nakamotoinstitute.org](https://satoshi.nakamotoinstitute.org/) | Primary source material from Bitcoin's creator |
 | | Book | The Sovereign Individual | Davidson and Rees-Mogg | 1997 | | Predicted digital currency and decentralization |
@@ -35,6 +35,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Bitcoin whitepaper → A Cypherpunk's Manifesto → Narayanan & Clark, "Bitcoin's Academic Pedigree"
 
 1. **Start with the whitepaper** — Read Satoshi's original paper, even if much goes over your head. You'll return to it.
 2. **A Cypherpunk's Manifesto** — Understand the philosophical motivation.

@@ -100,6 +100,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Optech Topics index → BIP 340 (Schnorr) → BIP 341 (Taproot)
+
 1. **Optech Topics index** — Bookmark it; check each item below against its topic page for the latest status.
 2. **BIP 340, 341, 342** — Start with Taproot since it's the most recent activated upgrade.
 3. **Learn Me A Bitcoin: Taproot** — Reinforce with visual explanations.

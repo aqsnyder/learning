@@ -53,7 +53,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 ## Section 03 — Mining and Consensus
 - [ ] Mastering Bitcoin, Ch. 12: Mining
 - [ ] Andreas Antonopoulos mining Q&A
-- [ ] Chaincode Labs: Proof of Work section
+- [ ] Chaincode Labs: Mining section
 - [ ] Mempool.space exploration
 - [ ] Difficulty adjustment algorithm
 - [ ] Mining game theory
@@ -102,7 +102,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Mastering Bitcoin, Ch. 10: The Bitcoin Network
 - [ ] Chaincode Labs: P2P section
 - [ ] Bitcoin Developer Guide: P2P Network
-- [ ] Bitnodes exploration
+- [ ] BTC Nodes exploration
 - [ ] Mempool.space real-time monitoring
 - [ ] Node types
 - [ ] Transaction and block propagation
@@ -147,6 +147,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Bitcoin Core multisig & offline-signing tutorials (signet)
 - [ ] Bitcoin Privacy Guide (bitcoiner.guide)
 - [ ] Andreas Antonopoulos on privacy
+- [ ] Bitcoin Wiki: Privacy
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Air-Gapped 2-of-3 on Signet
 - [ ] ✅ Check Yourself — answered from memory
@@ -164,6 +165,8 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Statement on the Approval of Spot Bitcoin ETPs — Gary Gensler (2024)
 - [ ] Michael Saylor Bitcoin talks (advocacy)
 - [ ] *The Sovereign Individual* — Davidson & Rees-Mogg
+- [ ] The Economic Limits of Bitcoin and the Blockchain — Eric Budish (2018; revised 2022 as "Trust at Scale")
+- [ ] On the Instability of Bitcoin Without the Block Reward — Carlsten, Kalodner, Weinberg & Narayanan (2016)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Claims Ledger for the Bitcoin Economic Thesis
 - [ ] ✅ Check Yourself — answered from memory
@@ -183,6 +186,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Bitcoin Dev Kit (Book of BDK)
 - [ ] Bitcoin Developer Documentation (background; unmaintained)
 - [ ] Bitcoin Development Mailing List
+- [ ] Cryptocurrency Engineering and Design (MIT MAS.S62) — Narula & Dryja (2018)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Differential Test Harness
 - [ ] ✅ Check Yourself — answered from memory

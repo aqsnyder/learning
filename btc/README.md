@@ -14,9 +14,9 @@ This repository is a structured curriculum for self-studying Bitcoin at a techni
 
 | Symbol | Meaning |
 |--------|---------|
-| 🔑 | **Must-read / must-watch** — absolute priority items |
+| 🔑 | **Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first |
 | ⭐ | **Satoshi / Cypherpunk canon** — foundational texts from Bitcoin's intellectual lineage |
-| 🔑⭐ | Both — a must-read that's also part of the canon |
+| 🔑⭐ | Both — a core-path item that's also part of the canon |
 
 ---
 
@@ -79,9 +79,6 @@ Sections 12 and 13 were added after the others and numbered last so nothing was 
 | **Learn Me A Bitcoin** | Website | [learnmeabitcoin.com](https://learnmeabitcoin.com/) |
 | **Lopp.net** | Resource Hub | [lopp.net](https://www.lopp.net/bitcoin-information.html) |
 | **Chaincode Labs Curriculum** | Curriculum | [GitHub](https://github.com/chaincodelabs/bitcoin-curriculum) |
-| **Mempool.space** | Explorer | [mempool.space](https://mempool.space/) |
-| **3Blue1Brown: Bitcoin** | Video | [YouTube](https://www.youtube.com/watch?v=bBC-nXj3Ng4) |
-| **Andreas Antonopoulos** | YouTube | [aantonop](https://www.youtube.com/@aantonop) |
 
 ---
 

@@ -24,8 +24,8 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
 | 🔑 | Book (Free) | Mastering Bitcoin, Chapter 4: Keys and Addresses | Andreas Antonopoulos and David Harding | [ch04_keys.adoc](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc) | Private and public keys on secp256k1 and how they become addresses (Base58Check, P2PKH/P2SH, bech32/bech32m) — 3rd edition (2023) |
-| 🔑 | Website | Learn Me A Bitcoin: Keys and Addresses | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/keys/) | Visual, interactive explanations |
-| 🔑 | Video | 3Blue1Brown: But how does bitcoin actually work? | 3Blue1Brown | [YouTube](https://www.youtube.com/watch?v=bBC-nXj3Ng4) | Beautiful visual explanation of hashing and digital signatures in Bitcoin |
+| | Website | Learn Me A Bitcoin: Keys and Addresses | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/keys/) | Visual, interactive explanations |
+| | Video | 3Blue1Brown: But how does bitcoin actually work? | 3Blue1Brown | [YouTube](https://www.youtube.com/watch?v=bBC-nXj3Ng4) | Beautiful visual explanation of hashing and digital signatures in Bitcoin |
 | | Course | Khan Academy: Cryptography | | [khanacademy.org](https://www.khanacademy.org/computing/computer-science/cryptography) | Free fundamentals of crypto |
 | | Concept | SHA-256 hashing | | | One-way functions, collision resistance, mining |
 | | Concept | Elliptic Curve Cryptography (secp256k1) | | | How Bitcoin generates keys |
@@ -37,6 +37,8 @@ After this section you can:
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** *Mastering Bitcoin* Ch. 4 → *Mastering Bitcoin* Ch. 8 → *Programming Bitcoin* Chs. 1–3
 
 1. **3Blue1Brown video** — Get the visual intuition for hashing and digital signatures.
 2. **Mastering Bitcoin, Ch. 4** — Deep dive into keys, addresses, and how they relate.
