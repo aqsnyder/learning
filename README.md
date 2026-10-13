@@ -20,14 +20,14 @@
 
 ## What Is This?
 
-A personal knowledge repository containing **nine structured learning curricula (120 sections)**. Each section pairs curated resources with the work that turns reading into skill: learning objectives, practice exercises, a mini-project, and self-test questions. Built for deep, self-directed study paired with [NotebookLM](https://notebooklm.google.com/).
+A personal knowledge repository containing **nine structured learning curricula (129 sections)**. Each section pairs curated resources with the work that turns reading into skill: learning objectives, practice exercises, a mini-project, and self-test questions. Built for deep, self-directed study paired with [NotebookLM](https://notebooklm.google.com/).
 
 **Start with the [Study Guide](STUDY-GUIDE.md).** It covers the study loop, tracks across curricula, how the curricula connect, and where your notes and projects go.
 
 Every curriculum follows the same structure:
-- **12–15 numbered sections**, progressing from foundations to frontiers. Sections added later are appended and say where to take them.
+- **13–16 numbered sections**, progressing from foundations to frontiers. Sections added later are appended and say where to take them.
 - **Each section has:** Why it matters · Prerequisites · 🎯 Learning Objectives · Resources · Suggested Order · 🛠️ Practice + 🏗️ Mini-project · ✅ Check Yourself
-- **Must-read markers** (🔑) for the core path, plus curriculum-specific ⭐ lists
+- **Core-path markers** (🔑): at most 3 per section, listed in a *Core path* line at the top of each Suggested Order; plus curriculum-specific ⭐ lists
 - **Cross-cutting references** (books, courses, blogs/tools)
 - **Progress tracker** (`PROGRESS.md`) for resources *and* practice
 - **Maintenance:** `update-curriculum` agent skills (ml, pcb, btc, software), a repo-wide [`audit-curriculum`](.agents/skills/audit-curriculum/SKILL.md) skill, and [`tools/check_repo.py`](tools/check_repo.py)
@@ -41,7 +41,7 @@ Every curriculum follows the same structure:
 
 | Highlights | |
 |---|---|
-| **Sections** | Historical foundations → Math → Classical ML → Neural nets → CNNs/ViTs → RNNs → Transformers → Generative models → Scaling/Efficiency → LLMs → RL → Frontiers → **Interpretability & Alignment** → **Graphs, Geometry & Science** |
+| **Sections** | Historical foundations → Math → Classical ML → Neural nets → CNNs/ViTs → RNNs → Transformers → Generative models → Scaling/Efficiency → LLMs → RL → Frontiers → **Interpretability & Alignment** → **Graphs, Geometry & Science** · **added:** Edge & embedded ML (TinyML) |
 | **Special marker** | ⭐ = Ilya Sutskever's reading list (the 27-item reconstruction; "*If you really learn all of these, you'll know 90% of what matters today*") |
 | **Key resources** | Karpathy, 3Blue1Brown, Andrew Ng, Stanford CS courses, Goodfellow, Sutton & Barto, Anthropic (mechanistic interpretability) |
 
@@ -74,7 +74,7 @@ Every curriculum follows the same structure:
 
 | Highlights | |
 |---|---|
-| **Sections** | Molecular biology → Biochemistry → Genetics/genomics → Structural biology → Bioinformatics → Systems biology → Drug discovery → Protein design → Genomic medicine → Neuroscience → AI for biology → Frontiers |
+| **Sections** | Molecular biology → Biochemistry → Genetics/genomics → Structural biology → Bioinformatics → Systems biology → Drug discovery → Protein design → Genomic medicine → Neuroscience → AI for biology → Frontiers · **added:** Statistics & experimental design · Bioinstrumentation, imaging & lab automation · Evolution & population genetics |
 | **Key resources** | Alberts, Lehninger, Durbin, Dayan & Abbott, AlphaFold, RFdiffusion, ESM-2 |
 | **Focus** | The conceptual foundation for AI × life sciences innovation |
 
@@ -85,7 +85,7 @@ Every curriculum follows the same structure:
 
 | Highlights | |
 |---|---|
-| **Sections** | Economic thinking → Microeconomics → Game theory → Decision theory → Mechanism design → Information economics → Behavioral economics → Network economics → Computational economics → Social choice → Monetary/crypto → AI alignment economics |
+| **Sections** | Economic thinking → Microeconomics → Game theory → Decision theory → Mechanism design → Information economics → Behavioral economics → Network economics → Computational economics → Social choice → Monetary/crypto → AI alignment through an economic lens · **added:** Economics of AI · Empirical economics & causal inference · Macro, money & financial markets · Industrial organization |
 | **Key resources** | Varian, Tadelis, Kahneman, Börgers, Easley & Kleinberg, Nisan et al., Roughgarden |
 | **Focus** | Foundations for AI alignment, multi-agent systems, and incentive design |
 
@@ -96,7 +96,7 @@ Every curriculum follows the same structure:
 
 | Highlights | |
 |---|---|
-| **Sections** | Foundations → Philosophy of mind → Consciousness → Computation & mind → Intelligence → Philosophy of AI → Ethics of AI → Existential risk → Language & meaning → Free will → Eastern philosophy → Frontiers |
+| **Sections** | Foundations → Philosophy of mind → Consciousness → Computation & mind → Intelligence → Philosophy of AI → Ethics of AI → Existential risk → Language & meaning → Free will → Eastern philosophy → Frontiers · **added:** Philosophy of science |
 | **Key resources** | Hofstadter (GEB), Chalmers, Dennett, Bostrom, Russell, Kim, Searle, Turing |
 | **Focus** | What intelligence actually *is* — the questions that shape how you build AI |
 
@@ -132,7 +132,7 @@ Every curriculum follows the same structure:
 |---|---|
 | **Sections** | CS foundations → Python → Embedded C → Code reading/review → Architecture → Testing → Systems → RTOS → Security → **Agentic AI workflows** → Version control → Professional practice · **added:** Firmware toolchain, debug & observability · HIL testing & lab automation |
 | **Special marker** | 🤖 = AI-workflow specific resources |
-| **Key resources** | Fluent Python, K&R C, DDIA, Refactoring, Code Reading, Quantum Leaps, Simon Willison, Embedded Artistry |
+| **Key resources** | Fluent Python, *Modern C*, DDIA, Refactoring, Code Reading, Quantum Leaps, Simon Willison, Embedded Artistry |
 | **Focus** | Python + Embedded C · Senior architect mindset · Human-in-the-loop AI development |
 
 ---
@@ -149,14 +149,14 @@ learning/
 │   ├── README.md          ←   overview, legend, learning path
 │   ├── PROGRESS.md        ←   tracker for resources + practice
 │   ├── 00-historical-foundations/README.md
-│   ├── ...                ←   numbered sections (ml: 00–13)
+│   ├── ...                ←   numbered sections (ml: 00–14)
 │   ├── books/  courses/  blogs-and-references/
 │   └── .agents/skills/update-curriculum/   (ml, pcb, btc, software)
 ├── math/                  ← 00–14
 ├── physics/               ← 00–12
-├── bio/                   ← 00–11
-├── econ/                  ← 00–11
-├── philosophy/            ← 00–11
+├── bio/                   ← 00–14
+├── econ/                  ← 00–15
+├── philosophy/            ← 00–12
 ├── pcb/                   ← 00–13, plus documents/ (IPC-2221A, tutorials, Rick's reading list)
 ├── btc/                   ← 00–13
 ├── software/              ← 00–13

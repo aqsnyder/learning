@@ -16,11 +16,11 @@ A repo-wide quality pass. The per-curriculum `update-curriculum` skills (ml, pcb
 ## Section anatomy (every numbered section README)
 
 1. `# Title`
-2. `## Why This Section Matters`
-3. `## Prerequisites`: relative links to directories that exist; link other curricula as `../../<curriculum>/<section>/`
+2. Why this section matters: a `## Why This Section Matters` heading (older sections use an opening paragraph under the title)
+3. Prerequisites: a `## Prerequisites` heading (older sections use a bold **Prerequisites:** line), with relative links to directories that exist; link other curricula as `../../<curriculum>/<section>/`
 4. `## 🎯 Learning Objectives`: 3–5 observable, verb-led outcomes (derive, implement, design, estimate, debug, critique)
-5. Resource table(s) in the curriculum's schema; 🔑 on about 3 core items (many sections still have more; trim when you touch them); ⭐ only for the curriculum's named list
-6. `## Suggested Order`, which should cover every resource
+5. Resource table(s) in the curriculum's schema, with 🔑 on at most 3 core items and ⭐ only for the curriculum's named list
+6. `## Suggested Order`, which should cover every resource. It opens with a `**Core path (🔑):** A → B → C` line that names the section's 🔑 items in the order the list uses them.
 7. `---` then `## 🛠️ Practice`: 3–5 exercises, each with inputs → deliverable → how you know it's right, plus an honest time estimate and the resources it uses. Then `**🏗️ Mini-project — <Name>:**` with a deliverable under `projects/<curriculum>/…` and a success criterion.
 8. `## ✅ Check Yourself`: 5–8 retrieval questions without answers. Mix recall, explanation, estimation, a misconception probe, and "explain it to a smart friend".
 
@@ -42,6 +42,11 @@ New sections are appended at the next free number. The curriculum README's learn
    - Anything else: fetch the page itself
 
    Record each result as ok / mismatch / broken / moved / unverifiable. Batch the work, and stop when web budgets run out rather than guessing.
+   - Pace page fetches, about 10–20 s apart per worker.
+   - After an HTTP 429, wait a few minutes, and don't refetch that page in the same run.
+   - A YouTube oEmbed 4xx is inconclusive, because live playlists return it too.
+   - Check GitHub links from a machine that has GitHub access.
+   - Write the results to `reviews/<run>/link-audit.md`. The 2026-10 run is the template.
 3. **Content.** Score each section 1–5 on coverage, accuracy, currency, sequencing, and focus. Check that every 🛠️ exercise and ✅ question uses a resource listed in its own section, or names the section that lists it. Label speculative or advocacy material honestly.
 4. **Repair.** Fix verified errors in place, and add only verified resources (see the rules below). When a resource changes, update its Suggested Order entry, its PROGRESS line, and any exercise that cites it.
 5. **Report.** Write `reviews/<YYYY-MM>-<name>/<curriculum>.md` containing: verdict, scorecard, section-by-section notes, a corrections table with evidence URLs, additions, proposals, cut candidates, and the top 5 priorities.
@@ -53,6 +58,8 @@ New sections are appended at the next free number. The curriculum README's learn
 2. **Cite people, not organizations,** whenever a work lists authors.
 3. **When in doubt, leave it out.** Put doubtful candidates in the report, not in the curriculum.
 4. **Correct, don't just append.** Fix errors in place. Mark superseded or dead resources as such in their descriptions; don't delete them silently.
-5. **Markers are closed lists.** ⭐ marks named external lists only (ml: Ilya Sutskever's 27 items; pcb: Rick Hartley's 12 books; btc: the Bitcoin Canon table in `btc/README.md`). 🔑 marks the core path.
+5. **Markers are closed lists.** ⭐ marks named external lists only (ml: Ilya Sutskever's 27 items; pcb: Rick Hartley's 12 books; btc: the Bitcoin Canon table in `btc/README.md`).
+   - 🔑 marks the core path: at most 3 per section, chosen by what the 🎯 objectives and 🛠️ exercises use. Never give it to advocacy, speculation or sourceless concept rows.
+   - When you add, remove or rename a 🔑 item, update the section's Core path line in the same edit, and its 🔑 in the `books/` and `courses/` indexes (which mark 🔑 only on items that are core in some section).
 6. **Label speculation and advocacy.** Examples: unconfirmed theories, price models, vendor productivity claims, findings that failed to replicate.
 7. **One home per topic.** Use the overlap table in `STUDY-GUIDE.md`, and cross-link instead of duplicating rows across curricula.

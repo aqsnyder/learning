@@ -1,8 +1,12 @@
 # Deep-Dive Review: October 2026
 
-**Scope:** all nine curricula: 110 sections, plus every README, PROGRESS, books, courses, and blogs file. Every file was read in full. Each curriculum was evaluated section by section and then repaired. Fixes and additions are on branch `review/2026-10-deep-dive`, one commit per curriculum plus one for the repo-level changes.
+**Scope:** all nine curricula: 110 sections, plus every README, PROGRESS, books, courses, and blogs file. Every file was read in full. Each curriculum was evaluated section by section and then repaired.
 
-Detailed section-by-section reviews: [ml](ml.md) · [math](math.md) · [physics](physics.md) · [bio](bio.md) · [econ](econ.md) · [philosophy](philosophy.md) · [pcb](pcb.md) · [btc](btc.md) · [software](software.md) · [arXiv link audit](link-audit-arxiv.md) · [independent check](independent-check.md)
+Everything is on branch `review/2026-10-deep-dive`, in two passes, both committed on 2026-10-13. Each pass has one commit per curriculum plus one for the repo-level changes:
+- **First pass:** corrections, additions, the learning layer and 10 new sections.
+- **Follow-up pass:** the backlog the first pass ran out of web budget for, plus the tier lists you chose. See [Follow-up pass](#follow-up-pass-2026-10-13-backlog-finished).
+
+Detailed section-by-section reviews: [ml](ml.md) · [math](math.md) · [physics](physics.md) · [bio](bio.md) · [econ](econ.md) · [philosophy](philosophy.md) · [pcb](pcb.md) · [btc](btc.md) · [software](software.md) · [link audit](link-audit.md) ([arXiv](link-audit-arxiv.md)) · [independent checks](independent-check.md)
 
 ---
 
@@ -15,16 +19,20 @@ The skeleton was good. The arcs make sense, the anchors are mostly canonical, an
 3. **Your actual work was barely covered.** Precision analog design, measurement physics, bring-up and test, firmware debugging, and signals & systems were thin or absent.
 4. **There was no active learning.** No section had objectives, exercises, projects, or self-tests, and PROGRESS counted pages read.
 
-After this review, every section has a learning layer, the citations have been corrected, and the missing engineering core exists as ten new sections.
+After this review:
+- every section has a learning layer;
+- the citations and pre-existing links have been checked and corrected;
+- every section's must-read path is at most three items;
+- the gaps exist as 19 new sections: the missing engineering core in the first pass, and edge ML, philosophy of science, three bio sections and four econ sections in the follow-up.
 
 | Curriculum | Grade as found | After | Biggest problem found | Biggest fix |
 |---|---|---|---|---|
-| 🧠 ml | C+ | B | Section 12 had invented or misattributed citations. The ⭐ Ilya list was wrong in both directions. LLMs and RL stopped in 2023. | Citations corrected; ⭐ rebuilt as the 27-item list; ~65 additions (tokenization → RLVR, interpretability 2022–26) |
+| 🧠 ml | C+ | B | Section 12 had invented or misattributed citations. The ⭐ Ilya list was wrong in both directions. LLMs and RL stopped in 2023. | Citations corrected; ⭐ rebuilt as the 27-item list; ~65 + 18 additions (tokenization → RLVR, interpretability 2022–26); new 14 Edge & Embedded ML; description column in 07–13 |
 | 🔢 math | B− | B | No engineering-math spine: no complex analysis, signals, numerics, or number theory | New 12 Signals & Systems, 13 Number Theory & Cryptography, 14 Numerical Methods; core/elective route |
 | ⚛️ physics | C+ | B | Dead and misattributed Lewin lectures; Wolfram presented as established physics (🔑); no measurement physics | New 12 Measurement, Noise & Sensor Physics; engineering bridge resources; Wolfram labeled speculative |
-| 🧬 bio | B− | B | About one invented citation per section; 2024–26 absent (protein-design Nobel, Evo 2, base/prime editing); PROGRESS tracked ~6 items per section | 34 additions; PROGRESS rebuilt (87 → 166 lines plus practice); broken prerequisite links fixed |
-| 📈 econ | C+ | B− | Priming, ego depletion, and Ariely presented as solid; no macro, econometrics, or IO; "economics of AI" with no economics | Replication caveats and evidence-check sources; 22 additions; 4 section proposals |
-| 🧠 philosophy | C+ | B | Misattributed and nonexistent resources; one-sided LLM-understanding debate; consciousness science stopped at 2021 | 32 additions that balance each debate; Wolfram labeled; PROGRESS synced (~30 missing items) |
+| 🧬 bio | B− | B+ | About one invented citation per section; 2024–26 absent (protein-design Nobel, Evo 2, base/prime editing); PROGRESS tracked ~6 items per section | 34 + 26 additions; PROGRESS rebuilt; new 12 Statistics & Experimental Design, 13 Bioinstrumentation & Lab Automation, 14 Evolution & Population Genetics; a biosecurity subsection |
+| 📈 econ | C+ | B | Priming, ego depletion, and Ariely presented as solid; no macro, econometrics, or IO; "economics of AI" with no economics | Replication caveats and evidence-check sources; 22 + 50 additions; new 12 Economics of AI, 13 Empirical Economics & Causal Inference, 14 Macro, Money & Financial Markets, 15 Industrial Organization |
+| 🧠 philosophy | C+ | B | Misattributed and nonexistent resources; one-sided LLM-understanding debate; consciousness science stopped at 2021 | 32 + 26 additions that balance each debate; Wolfram labeled; PROGRESS synced; new 12 Philosophy of Science |
 | 🔌 pcb | C | B− | Rick Hartley ⭐ list half wrong; KiCad 8 and IPC-2221A out of date; no analog, precision, bring-up, or test coverage | ⭐ matched to his PDF (12 books); KiCad 10 and IPC-2152; new 12 Analog & Precision and 13 Bring-up, Test & Debug |
 | ₿ btc | C | B | Invented 🔑 first step in Lightning; nothing after 2023; hands-on work came last | 42 additions with October 2026 proposal statuses; new 12 Hands-on Labs (in parallel) and 13 Governance |
 | 🏗️ software | C+ | B | Section 09 (AI workflows) was nearly empty; flagship books an edition behind; no bench work | ~48 additions; new 12 Firmware Toolchain & Debug and 13 HIL & Lab Automation; skill mapping fixed |
@@ -37,17 +45,22 @@ After this review, every section has a learning layer, the citations have been c
 
 | | Before | After |
 |---|---|---|
-| Numbered sections | 110 | **120** (10 new) |
-| Resource rows in section tables | 1,076 | **1,458**. Each added item was opened and checked for title, authors, and year. |
-| Logged corrections | — | **~290**: wrong authors, IDs, links, titles, editions, misleading claims |
+| Numbered sections | 110 | **129** (19 new: 10 in the first pass, 9 in the follow-up) |
+| Resource rows in section tables* | 1,026 | **1,503**. Each added item was opened and checked for title, authors, and year. |
+| Logged corrections | — | **~480**: ~290 in the first pass; ~190 in the follow-up (110 flags resolved, 55 link-audit fixes, 25 second-check fixes) |
+| Pre-existing links audited | — | **704** (116 arXiv, 33 GitHub, 555 other): 63 fixed, 3 marked dead, 57 couldn't be checked ([link audit](link-audit.md)) |
 | Broken internal links | 36 | **0** |
-| Sections with learning objectives / exercises / self-tests | 0 | **120**: 594 objectives, 585 exercises, 120 mini-projects, 960 Check Yourself questions |
-| PROGRESS checkboxes | 990 (reading only) | **1,892** (resources + practice + mini-project + self-check) |
+| 🔑 core-path rows | 340, up to 11 per section | **311**, at most 3 per section, each section's listed in a *Core path* line |
+| Sections with learning objectives / exercises / self-tests | 0 | **129**: 639 objectives, 630 exercises, 129 mini-projects, 1,032 Check Yourself questions |
+| PROGRESS checkboxes | 990 (reading only) | **2,097** (resources + practice + mini-project + self-check) |
+
+\* Resource rows exclude marker legends, Key Concepts tables and btc/12's lab table. The first pass reported 1,076 → 1,458 by counting every table row.
 
 Repo-level additions:
 - [`STUDY-GUIDE.md`](../../STUDY-GUIDE.md): the study loop, five tracks, a map of how the curricula connect, and a one-home-per-topic table
 - `notes/` and `projects/`, with templates
 - `tools/check_repo.py`: offline structural checker
+- [`link-audit.md`](link-audit.md): every pre-existing link, checked
 - `.agents/skills/audit-curriculum`
 - Verification and curation rules in every `update-curriculum` skill
 - Corrected root README
@@ -80,13 +93,14 @@ Repo-level additions:
 - **Same anatomy in every section:** Why → Prerequisites → 🎯 Objectives → Resources → Suggested Order → 🛠️ Practice + 🏗️ Mini-project → ✅ Check Yourself. PROGRESS now tracks practice, not just reading.
 - **New sections appended**, with "take after NN" positions given in each learning path, so existing links and NotebookLM sources keep working.
 - **[Study Guide](../../STUDY-GUIDE.md):** the study loop, tracks (A, precision hardware and instruments, is your core), a cross-curriculum map, and a one-home-per-topic table. Your own output lives in `notes/` and `projects/`, beside the curated material.
+- **Tier lists (your choice, done in the follow-up):** at most 3 🔑 per section, chosen by what the 🎯 objectives and 🛠️ exercises actually use, never advocacy or vendor claims. Each Suggested Order opens with a `**Core path (🔑):**` line, and the books and courses indexes mark 🔑 only on items that are core in some section. ml/07–13 gained the Description column they lacked. Every 🔑 change is logged, with reasons, under "Tier lists" in each curriculum's review file, so you can reverse any call.
 - **Maintenance:** `tools/check_repo.py` (0 problems on this branch) and a repo-wide `audit-curriculum` skill. Every update skill now requires opening each link before adding it, citing people rather than organizations, "when in doubt, leave it out", closed ⭐ lists, and honest labels for speculation.
 
 ### Recommended next (your call; each is a contained follow-up)
 
-1. **Make resources data, not prose.** Give each section a `resources.yaml` with id, title, authors, year, url, type, priority, markers, and a `verified:` date. Generate the tables and PROGRESS from it. That yields one schema across 120 sections, cross-curriculum deduplication by id, "last verified" dates, and automated link checks. Markdown stays as the rendered view.
+1. **Make resources data, not prose.** Give each section a `resources.yaml` with id, title, authors, year, url, type, priority, markers, and a `verified:` date. Generate the tables and PROGRESS from it. That yields one schema across 129 sections, cross-curriculum deduplication by id, "last verified" dates, and automated link checks. Markdown stays as the rendered view.
 2. **Curate instead of append-only.** Correct in place, move superseded items into a collapsed "Archive" block, and let git keep the history. The append-only rule is how invented entries survived.
-3. **Tier every list.** Aim for about three 🔑 core items per section, then "go deeper", then "reference". Today 34 of 120 sections have more than three. In 7 of those, this review promoted a new essential item (e.g. *Modern C*, the METR study, *The Bitter Lesson*) without demoting an older one, because what to drop is your call. Start with ml/08, ml/09, ml/12 and software/09, and add the missing description column to ml/07–13.
+3. ~~**Tier every list.**~~ ✅ Done in the follow-up pass; see above.
 4. **Give each topic one home.** Apply the Study Guide table: turn duplicated rows into cross-links (ml/01 ↔ math, ml/12 ↔ philosophy/07 ↔ econ/11, bio/10 ↔ ml/13, econ/10 ↔ btc/09).
 5. **Track mastery, not completion.** Use three states per item (read → practiced → can explain) plus dated re-checks, and export flashcards from `notes/` to Anki.
 6. **Check links automatically.** Run a monthly GitHub Action with lychee over the markdown, excluding hosts that block bots, that opens an issue listing dead links.
@@ -97,25 +111,64 @@ Repo-level additions:
 
 ---
 
-## Backlog: what this run didn't finish
+## Follow-up pass (2026-10-13): backlog finished
 
-The web lookup budget ran out partway through: search hit its per-run cap, and page fetches were rate-limited. Nothing unverified was added. These items remain:
+The first pass ran out of web budget. The follow-up finished its backlog with paced fetches, and nothing was added without being opened first.
 
-1. **Link audit of pre-existing links.** All 116 arXiv links were checked: 8 citation mismatches were found and all are fixed. About 600 other links that were already in the repo (DOIs, YouTube, course pages, GitHub) were not checked one by one, although reviewers fixed many bad ones they hit while reading. Run step 2 of the `audit-curriculum` skill.
-2. **Proposed sections waiting for verified resources:**
-   - **ml/14 Edge & Embedded ML (TinyML):** quantization, CMSIS-NN, MCUNet, TFLite Micro, MLPerf Tiny, on-target measurement. *High value for you.*
-   - **philosophy: Philosophy of Science & Scientific Reasoning:** Popper, Kuhn, Lakatos, Bayesian epistemology.
-   - **bio:** Statistics & Experimental Design · Bioinstrumentation, Imaging & Lab Automation · Evolution & Population Genetics · a Biosecurity subsection.
-   - **econ:** Economics of AI (rebuild section 11) · Empirical Economics & Causal Inference · Macro, Money & Financial Markets · Industrial Organization.
-3. **"Verify, then add" lists** in each curriculum review. Examples: physics (Taylor's *Error Analysis*, the GUM, Fraden's sensors handbook); pcb (Tektronix *ABCs of Probes*, PyVISA, boundary-scan tooling); philosophy (Frege, Putnam, Strawson, Birch).
-4. **Suspect entries kept but flagged *(unverified)*:** pcb's "Practical PCB Design" (Smith; 🔑 removed), the Tech Explorations KiCad Advanced course, and the Dr. EMC channel.
+1. **Link audit of pre-existing links: done.** All 704 links were checked (see [link-audit.md](link-audit.md)):
+   - 63 fixed, counting the 8 arXiv mismatches fixed in the first pass
+   - 3 marked dead
+   - 57 couldn't be checked (bot walls, JavaScript-only pages, rate limits); four of those look dead and are worth a manual look
+2. **The nine proposed sections now exist,** with the full anatomy and every expected value recomputed:
+   - [ml/14 Edge & Embedded ML](../../ml/14-edge-and-embedded-ml/) (take after 08)
+   - [philosophy/12 Philosophy of Science](../../philosophy/12-philosophy-of-science/) (after 00)
+   - [bio/12 Statistics & Experimental Design](../../bio/12-statistics-and-experimental-design/)
+   - [bio/13 Bioinstrumentation, Imaging & Lab Automation](../../bio/13-bioinstrumentation-imaging-and-lab-automation/)
+   - [bio/14 Evolution & Population Genetics](../../bio/14-evolution-and-population-genetics/), plus a biosecurity subsection in bio/11
+   - [econ/12 Economics of AI](../../econ/12-economics-of-ai/) (econ/11 is now "AI Alignment through an Economic Lens")
+   - [econ/13 Empirical Economics & Causal Inference](../../econ/13-empirical-economics-and-causal-inference/)
+   - [econ/14 Macro, Money & Financial Markets](../../econ/14-macroeconomics-money-and-financial-markets/) (educational, not investment advice)
+   - [econ/15 Industrial Organization & Strategy](../../econ/15-industrial-organization-and-strategy/)
+3. **"Verify, then add" lists: done.** About 150 verified resources were added to existing sections:
+   - physics 17, among them Taylor, the GUM, NIST TN 1297, Fraden and Riley's Allan-deviation handbook
+   - pcb 7, among them Tektronix *ABCs of Probes*, J-STD-048, FastHenry2, J-SMU and boundary-scan tooling
+   - philosophy 12, plus a balanced fairness reading in 06
+   - btc 4 (Budish; Carlsten et al.; MIT MAS.S62; the Bitcoin Wiki privacy page)
+   - software 3, math 2, ml 2 outside the new sections
+   - Status claims (BIPs, Bitcoin Core 31.0, Python 3.15, Claude Code and `AGENTS.md`) were re-checked against primary sources.
+4. **Suspect entries: all three are real.** These are *Practical PCB Design* (Smith, No Starch, 2026), the Tech Explorations KiCad course, and Dr. EMC. Dr. EMC's old link pointed at an unrelated channel; it now points at `@DrEMC-sf8rx`.
+5. **Independent-check flags:** 67 of the first pass's 73 flagged rows are resolved. The other 6 are minor and marked **still open** in [independent-check.md](independent-check.md).
+6. **Tier lists:** done (see *Structure*).
+7. **Second independent check.** Four fresh checkers with web access checked 342 items of the follow-up work. 25 failed, mostly arithmetic in one bio exercise, a few citation details, and core-path picks that put sourceless concept rows on the must-read path. All 25 are fixed and listed at the end of [independent-check.md](independent-check.md).
+
+### Still open: your calls
+
+- **🔑 picks you may want to reverse.** Every change is logged with its reason. The closest calls:
+  - ml/08: Adam vs. FlashAttention
+  - ml/10: Silver's course vs. DPO
+  - ml/12: Scaling Monosemanticity vs. Constitutional AI
+  - btc/10: Bitcoin Core source vs. *Programming Bitcoin*
+  - philosophy/02: *The Conscious Mind* vs. "Facing Up"
+  - software/02: K&R demoted, because the exercises need C99
+- **Duplicates across curricula:**
+  - Budish's paper has a full row in both econ/10 and btc/09 (its home).
+  - Holmes & Huber has a full row in bio/04, although bio/12 is now its home.
+  
+  Turning each into a cross-link means deleting a row.
+- **econ/11's new title** ("AI Alignment through an Economic Lens"). Keep it, or revert.
+- **Dead or retired rows still in place:** two Coursera behavioral-economics courses (econ/03, econ/06) and Robert Wright's Coursera course (philosophy/10). Delete them or replace them.
+- **Your KiCad template repo** (`aqsnyder/KiCAD_Template_Snyder`) returns 404 to anonymous requests. Confirm it's private, not renamed.
+- **Vendor and tool notes worth knowing:**
+  - ST now marks X-CUBE-AI as not recommended for new designs (noted in ml/04 and ml/14).
+  - KiCad's SWIG Python bindings are deprecated in favour of the IPC API (pcb/11).
+- **Three update skills still need a one-line change:** ml, pcb and btc. Their rule 6 still says "many sections still exceed [~3 🔑]". The software skill and the root `audit-curriculum` skill already have the new wording. Suggested replacement: *"Use 🔑 sparingly — at most 3 core items per section. Each section's Suggested Order opens with a Core path line naming its 🔑 items; if you add or remove a 🔑, update that line too."*
 
 ---
 
 ## Reviewing the branch
 
 ```bash
-git log --oneline master..review/2026-10-deep-dive
+git log --oneline master..review/2026-10-deep-dive     # 20 commits: two passes × (9 curricula + repo-level)
 git diff --stat master...review/2026-10-deep-dive
 git switch review/2026-10-deep-dive
 python tools/check_repo.py              # expect: 0 problems

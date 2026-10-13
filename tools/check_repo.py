@@ -10,6 +10,8 @@ Checks:
   3. Every numbered section README has Learning Objectives, Practice and Check Yourself H2 headings and a mini-project.
   4. Every numbered section has a "## Section NN" block in PROGRESS.md with the three practice checkboxes.
   5. Every numbered section appears in its curriculum README's learning path.
+  6. Tier lists: at most 3 resource rows marked 🔑 per section (legend rows excluded), and a
+     "**Core path (🔑):**" line at the top of the section's Suggested Order.
 """
 import os, re, sys
 
@@ -94,6 +96,13 @@ for cur in CURRICULA:
                     problems.append(f"{cur}/{sec}/README.md: missing '{heading}'")
             if "**🏗️ Mini-project" not in text:
                 problems.append(f"{cur}/{sec}/README.md: missing '**🏗️ Mini-project' line")
+            body = text.split("## 🛠️ Practice")[0]
+            keyed = [l for l in body.splitlines() if l.startswith("|") and "🔑" in l
+                     and not re.match(r"^\|\s*🔑+\s*\|\s*\**(must|core|key|essential|foundational)", l, re.I)]
+            if len(keyed) > 3:
+                problems.append(f"{cur}/{sec}/README.md: {len(keyed)} rows marked 🔑 (tier lists allow at most 3)")
+            if "**Core path (🔑):**" not in text:
+                problems.append(f"{cur}/{sec}/README.md: missing '**Core path (🔑):**' line in Suggested Order")
         m = re.search(rf"^## Section {nn} .*?(?=^## |\Z)", progress, re.M | re.S)
         if not m:
             problems.append(f"{cur}/PROGRESS.md: no '## Section {nn}' block")

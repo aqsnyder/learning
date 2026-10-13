@@ -11,7 +11,7 @@ Every numbered section follows the same anatomy: **Why → Prerequisites → �
 | Step | What to do | Why it works |
 |------|-----------|--------------|
 | 1. **Preview** (5 min) | Read *Why This Section Matters* and the 🎯 objectives. Skim the ✅ questions. | You read with a purpose and notice what matters. |
-| 2. **Core path** | Follow *Suggested Order* through the 🔑 items. Treat everything else as "go deeper" or reference. | 🔑 marks the minimum route; long lists are menus, not obligations. |
+| 2. **Core path** | Start with the *Core path* line at the top of *Suggested Order*: the 🔑 items, at most three. Treat everything else as "go deeper" or reference. | 🔑 marks the minimum route; long lists are menus, not obligations. |
 | 3. **Practice** | Do at least two 🛠️ exercises. Do the 🏗️ mini-project when the section is on your track. | You learn by producing things: derivations, code, boards, essays. |
 | 4. **Check yourself** | Answer the ✅ questions *from memory*, in writing, before looking anything up. Then correct your answers against the sources. | Retrieval practice beats rereading. |
 | 5. **Write it down** | Write a one-page note in your own words in `notes/<curriculum>/` (template in [notes/README.md](notes/README.md)), plus a handful of flashcards. | If you can't explain it simply, you've found the gap. |
@@ -43,28 +43,29 @@ The physics, mathematics, layout, and firmware behind measurement hardware.
 3. **Physics underneath.** [physics/03 Electromagnetism](physics/03-electromagnetism/) (theory behind pcb/06–07) → [physics/12 Measurement, Noise & Sensor Physics](physics/12-measurement-noise-and-sensor-physics/) *(new; it also builds on physics/02, 06 and 08)*
 4. **Firmware and automation.** [software/01](software/01-python-mastery/) → [software/02](software/02-embedded-c-mastery/) → [software/07](software/07-embedded-systems-and-rtos/) → [software/12 Toolchain, Debug & Observability](software/12-firmware-toolchain-debug-and-observability/) *(new)* → [software/05](software/05-testing-and-quality/) → [software/13 HIL Testing & Lab Automation](software/13-hil-testing-and-lab-automation/) *(new)*
 5. **Run in parallel from day one:** [software/09 Agentic AI Workflows](software/09-agentic-ai-workflows/) and [software/10 Version Control](software/10-version-control-and-collaboration/).
+6. **On-device ML (optional):** [ml/14 Edge & Embedded ML](ml/14-edge-and-embedded-ml/) *(new)*. It covers quantization, CMSIS-NN and TFLM on a Cortex-M33, plus latency and energy measured on target. Take it after its prerequisites: ml/02, ml/04 and ml/08.
 
 ### Track B: AI and machine learning
 
 1. [math/01](math/01-linear-algebra/), [03](math/03-probability-and-statistics/), [04](math/04-optimization/), [05](math/05-information-theory/) (or the [ml/01](ml/01-math-foundations/) bridge if you want to move faster)
 2. [ml/00–06](ml/) → [ml/07–10](ml/) → [ml/12 Interpretability & Alignment](ml/12-interpretability-and-alignment/) → [ml/11 Frontiers](ml/11-frontiers/), which is the living section
-3. Reflective reading alongside: [philosophy/05–07](philosophy/), [econ/11](econ/11-ai-alignment-economics-and-frontiers/)
-4. Bridge to Track A: embedded ML (quantization in [ml/08](ml/08-scaling-and-training/)), and the proposed *Edge & Embedded ML* section (see the review backlog)
+3. Reflective reading alongside: [philosophy/05–07](philosophy/), [econ/11](econ/11-ai-alignment-economics-and-frontiers/) and [econ/12 Economics of AI](econ/12-economics-of-ai/) *(new)*
+4. Bridge to Track A: [ml/14 Edge & Embedded ML](ml/14-edge-and-embedded-ml/) *(new)*, after [ml/08](ml/08-scaling-and-training/)
 
 ### Track C: Bitcoin
 
 1. [math/08 Abstract Algebra](math/08-abstract-algebra/) → [math/13 Number Theory & Cryptography](math/13-number-theory-and-cryptography/) *(new)*
 2. [btc/00–10](btc/), with [btc/12 Hands-on Labs](btc/12-hands-on-labs/) *(new)* running in parallel from Section 02
 3. [btc/13 Governance & Protocol Change](btc/13-governance-and-protocol-change/) *(new)* → [btc/11 Frontiers](btc/11-advanced-and-frontiers/)
-4. Alongside [btc/09](btc/09-economics-and-game-theory/): [econ/02 Game Theory](econ/02-game-theory/) and [econ/10 Monetary Economics](econ/10-monetary-economics-and-crypto/)
+4. Alongside [btc/09](btc/09-economics-and-game-theory/): [econ/02 Game Theory](econ/02-game-theory/), [econ/10 Monetary Economics](econ/10-monetary-economics-and-crypto/) and [econ/14 Macro, Money & Financial Markets](econ/14-macroeconomics-money-and-financial-markets/) *(new)*
 
 ### Track D: AI for science (curiosity track)
 
-[physics/06](physics/06-computational-physics/) → [physics/11](physics/11-physics-informed-ml-and-frontiers/) · [ml/13](ml/13-graphs-geometry-and-science/) · [bio/00–04](bio/) → [bio/07](bio/07-protein-engineering-and-design/) → [bio/10](bio/10-ai-for-biology/) → [bio/11](bio/11-frontiers/)
+[physics/06](physics/06-computational-physics/) → [physics/11](physics/11-physics-informed-ml-and-frontiers/) · [ml/13](ml/13-graphs-geometry-and-science/) · [bio/00–04](bio/), with [bio/14 Evolution & Population Genetics](bio/14-evolution-and-population-genetics/) *(new)* after 02 and [bio/12 Statistics & Experimental Design](bio/12-statistics-and-experimental-design/) *(new)* alongside 04 → [bio/07](bio/07-protein-engineering-and-design/) → [bio/10](bio/10-ai-for-biology/) → [bio/11](bio/11-frontiers/). [bio/13 Bioinstrumentation, Imaging & Lab Automation](bio/13-bioinstrumentation-imaging-and-lab-automation/) *(new)* is the bridge to Track A.
 
 ### Track E: thinking tools (background reading)
 
-[philosophy/00](philosophy/00-foundations-of-philosophy/) (logic, arguments) → [econ/00](econ/00-economic-thinking/) and [econ/03](econ/03-decision-theory/) → [philosophy/01–02](philosophy/) → [philosophy/05](philosophy/05-philosophy-of-ai/). A *Philosophy of Science* section is proposed (see the review backlog).
+[philosophy/00](philosophy/00-foundations-of-philosophy/) (logic, arguments) → [philosophy/12 Philosophy of Science](philosophy/12-philosophy-of-science/) *(new)* → [econ/00](econ/00-economic-thinking/) and [econ/03](econ/03-decision-theory/) → [philosophy/01–02](philosophy/) → [philosophy/05](philosophy/05-philosophy-of-ai/). To see how empirical claims get tested in practice, add [bio/12](bio/12-statistics-and-experimental-design/) or [econ/13](econ/13-empirical-economics-and-causal-inference/) *(both new)*.
 
 ---
 
@@ -108,6 +109,14 @@ Several topics appear in more than one curriculum. Study each one in its **home*
 | Bitcoin economics | btc/09 | econ/10 |
 | Board bring-up vs. firmware debug | pcb/13 (board) | software/12 (firmware), software/13 (automation) |
 | Wolfram Physics Project | — (a speculative program, labeled as such) | physics/11, math/11, philosophy/03 |
+| Statistics for experiments (multiple testing, power, design) | bio/12 | math/03 (probability), econ/13 (econometrics) |
+| Causal inference | math/10 (graphical: DAGs, do-calculus) and econ/13 (design-based: RCTs, IV, DiD, RD) | bio/12 (experimental design) |
+| Philosophy of science, replication, benchmark validity | philosophy/12 | econ/06 (replication caveats), bio/12, ml/11 (benchmark claims) |
+| Bioinstrumentation, imaging, lab automation | bio/13 | physics/12 (noise), pcb/12 (front ends), software/13 (lab automation) |
+| Evolution, population genetics | bio/14 | bio/02 (genetics), bio/04 (sequence analysis) |
+| Economics of AI (labor, productivity, diffusion) | econ/12 | econ/11 (alignment through incentives), philosophy/07 |
+| Macroeconomics, money, financial markets | econ/14 | econ/10 (money and crypto), btc/09 |
+| Edge and on-device ML (quantization, TinyML) | ml/14 | ml/08 (quantization), software/07 and 12 (firmware) |
 
 ---
 
@@ -115,7 +124,7 @@ Several topics appear in more than one curriculum. Study each one in its **home*
 
 | Marker | Meaning |
 |--------|---------|
-| 🔑 | Core path: aim for no more than about 3 per section |
+| 🔑 | Core path: at most 3 per section, named in the *Core path* line at the top of each Suggested Order. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first. |
 | ⭐ | A named external list, closed and exact: **ml** = Ilya Sutskever's list · **pcb** = Rick Hartley's reading list · **btc** = Satoshi/cypherpunk canon |
 | 🤖 | (software) AI-workflow-specific resource |
 | *(unverified: …)* | Kept from the original list, but couldn't be confirmed during review; check it before relying on it |
@@ -137,6 +146,6 @@ See [notes/README.md](notes/README.md) and [projects/README.md](projects/README.
 
 ## Keeping it healthy
 
-- `python tools/check_repo.py` runs offline. It checks relative links, table shapes, the learning blocks, PROGRESS coverage, and learning-path listings. Run it after every edit session. `--urls` dumps every external link for a link checker.
+- `python tools/check_repo.py` runs offline. It checks relative links, table shapes, the learning blocks, PROGRESS coverage, learning-path listings, and the tier lists (at most 3 🔑 and a Core path line per section). Run it after every edit session. `--urls` dumps every external link for a link checker.
 - **Adding material:** each curriculum's `update-curriculum` skill (in `ml`, `pcb`, `btc`, `software`), or the root [`audit-curriculum`](.agents/skills/audit-curriculum/SKILL.md) skill for any curriculum. Both require opening every link before it's added. Unverified, AI-generated citations are how errors got into this repo.
 - **Periodic audit:** run the `audit-curriculum` skill quarterly. Dated reports live in [`reviews/`](reviews/).
