@@ -1,0 +1,146 @@
+# Number Theory and Cryptography
+
+## Why This Section Matters
+
+Bitcoin's security rests on a few mathematical facts. Arithmetic modulo a prime forms a field, and points on an elliptic curve over that field form a group. In a large group of prime order, computing k·G is fast while recovering k from k·G — the discrete logarithm — is infeasible.
+
+This section builds those facts from elementary number theory: gcd and Bézout, congruences, Fermat and Euler, the Chinese Remainder Theorem, and primality testing. It then goes up to the elliptic-curve group law, ECDSA and Schnorr signatures, and the attacks that break careless implementations, such as nonce reuse, small or smooth group orders, and weak curves. It turns the Bitcoin curriculum's "Concept: ECDSA" rows into mathematics you can implement and check. The same number theory also sits under RSA, TLS, and the CRCs and error-correcting codes of Section 08.
+
+**Where it fits:** this section is numbered 13 only because it was added after the original sections. Take it right after Section 08. It is core if you are doing the Bitcoin curriculum, and optional otherwise.
+
+---
+
+## Prerequisites
+
+- Section 08 (Abstract Algebra) — groups, Lagrange's theorem, rings, and finite fields, including the ℤ/2³²ℤ and GF(2⁸) exercises there
+- Section 00 (Mathematical Thinking) — proof by induction and contradiction; MIT 6.042J's number-theory lectures are an ideal warm-up
+- Comfortable Python (arbitrary-precision integers and built-in `pow(a, e, m)`)
+- Companion: the Bitcoin curriculum's [Cryptography Foundations section](../../btc/01-cryptography-foundations/README.md). It has Corbellini's elliptic-curve series, *Programming Bitcoin* Ch. 1–3, and *Mastering Bitcoin* Ch. 4 and 8 — the hands-on side of this section.
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Compute and prove the core tools of elementary number theory: the extended Euclidean algorithm and modular inverses, fast modular exponentiation, Fermat's and Euler's theorems, and the Chinese Remainder Theorem, including why RSA decryption works and why RSA-CRT is faster.
+- Explain and implement probabilistic primality testing, and show concretely why Carmichael numbers fool the Fermat test but not Miller–Rabin.
+- Implement elliptic-curve arithmetic over 𝔽ₚ for secp256k1 (group law, double-and-add, point compression), and validate it against the curve's published parameters and a BIP-340 test vector.
+- Derive ECDSA and Schnorr signing and verification from the group law, and show exactly how nonce reuse leaks the private key.
+- Estimate the security of discrete-log systems: baby-step giant-step and Pollard's rho both cost about √n, Pohlig–Hellman attacks smooth orders. Recognize weak parameters: singular, anomalous, and supersingular curves.
+
+---
+
+## Resources
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| 🔑 | Book | A Friendly Introduction to Number Theory | Joseph H. Silverman | 2012 | [Link](https://www.math.brown.edu/johsilve/frint.html) | The gentlest rigorous start (4th edition): divisibility, congruences, Euler's formula, primality testing, and public-key cryptography, with plenty of hands-on computation. |
+| | Book (Free) | Elementary Number Theory: Primes, Congruences, and Secrets | William Stein | 2008 | [Link](https://wstein.org/ent/) | Free legal PDF (Springer) of a computation-friendly number theory text built around public-key cryptography — the "secrets" of the subtitle. A free alternative or companion to Silverman. |
+| | Book (Free) | A Computational Introduction to Number Theory and Algebra | Victor Shoup | 2008 | [Link](https://shoup.net/ntb/) | Free 2nd-edition PDF covering number theory and algebra together with the algorithms and running-time analysis that implementations need: modular arithmetic, primality testing, finite fields, and polynomial arithmetic. The reference to keep open while coding. |
+| 🔑 | Book | An Introduction to Mathematical Cryptography | Jeffrey Hoffstein, Jill Pipher, Joseph H. Silverman | 2014 | [Link](https://link.springer.com/book/10.1007/978-1-4939-1711-2) | Algebra and number theory where they are used: discrete logarithms and Diffie–Hellman, RSA, digital signatures, elliptic-curve cryptography, and lattices (2nd edition). The mathematical backing for the btc curriculum's keys-and-signatures material and the core text of this section. |
+| | Book | Elliptic Curves: Number Theory and Cryptography | Lawrence C. Washington | 2008 | [Link](https://www.routledge.com/Elliptic-Curves-Number-Theory-and-Cryptography-Second-Edition/Washington/p/book/9781420071467) | The standard next step after Hoffstein–Pipher–Silverman (2nd edition): the group law proved properly, curves over finite fields, the discrete-log problem and its attacks, and pairings. |
+| | Book | Rational Points on Elliptic Curves | Joseph H. Silverman, John T. Tate | 2015 | [Link](https://link.springer.com/book/10.1007/978-3-319-18588-0) | Optional depth (2nd edition): the arithmetic of elliptic curves at an undergraduate level — the "why" behind the group law and point counting. |
+| | Book (Free) | A Graduate Course in Applied Cryptography | Dan Boneh, Victor Shoup | 2023 | [Link](https://toc.cryptobook.us/) | Free (v0.6) graduate text on provable security: what it means for a signature or key exchange to be secure, with chapters on digital signatures and on elliptic-curve cryptography and pairings. For when you want definitions and proofs, not recipes. |
+| | Book | Understanding Cryptography | Christof Paar, Jan Pelzl, Tim Güneysu | 2024 | [Link](https://link.springer.com/book/10.1007/978-3-662-69007-9) | Engineering-oriented textbook (2nd edition) spanning symmetric and asymmetric ciphers up to post-quantum algorithms. The practical, implementation-minded complement to Hoffstein–Pipher–Silverman. |
+
+---
+
+## Suggested Order
+
+1. **Silverman — A Friendly Introduction to Number Theory** (or **Stein's free ENT**) — gcd, congruences, Fermat and Euler, CRT, primality, RSA.
+2. **Shoup — A Computational Introduction** — Keep it beside you while implementing. Read the chapters on the algorithms you are coding.
+3. **Hoffstein, Pipher & Silverman** — The core: discrete logs and Diffie–Hellman, RSA, signatures, elliptic curves.
+4. **Corbellini's ECC series and *Programming Bitcoin* Ch. 1–3** (in [btc Section 01](../../btc/01-cryptography-foundations/README.md)) — Build finite-field and curve arithmetic by hand alongside HPS's elliptic-curve chapter.
+5. **Washington — Elliptic Curves** — Deeper theory and the attack landscape.
+6. **Paar, Pelzl & Güneysu** — Optional engineering perspective, including post-quantum.
+7. **Boneh & Shoup** — Optional: security definitions and proofs.
+8. **Silverman & Tate** — Optional depth on the arithmetic of elliptic curves.
+
+---
+
+## 🛠️ Practice
+
+1. **The Euclidean toolkit** *(~4 h · Silverman's Friendly Introduction — gcd, congruences, Euler's formula, and RSA; Stein's ENT on the integers mod n and public-key cryptography; MIT 6.042J's number-theory lectures)*
+   - (a) Implement the extended Euclidean algorithm and reproduce the classic toy RSA key: p = 61, q = 53, n = 3233, φ = 3120, e = 17 → d = 2753. Check that 65 encrypts to 2790 and decrypts back to 65.
+   - (b) Write a general CRT solver and solve Sunzi's system x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7). The answer is 23.
+   - (c) Implement RSA-CRT decryption for a 2048-bit key and measure the speedup over a single `pow(c, d, n)`. Expect roughly 3–4× in Python, and explain why (two half-size exponentiations).
+   - (d) Prove Fermat's little theorem from Lagrange's theorem (Section 08), then Euler's theorem for the units mod n, and use them to prove RSA decryption correct.
+
+2. **Primality: why Fermat isn't enough** *(~3 h · Shoup's chapters on probabilistic primality testing; Silverman's chapters on primality testing and Carmichael numbers; Hoffstein, Pipher & Silverman on primality)*
+   - (a) Show that 561 = 3·11·17 passes the Fermat test for all 320 bases coprime to it, yet only 10 bases fool Miller–Rabin: 1, 50, 101, 103, 256, 305, 458, 460, 511, 560. Base 2 already exposes it.
+   - (b) Prove Korselt's criterion for 561, then count the Carmichael numbers below 10⁵ (there are 16, starting 561, 1105, 1729).
+   - (c) Implement Miller–Rabin. Confirm that secp256k1's field prime p = 2²⁵⁶ − 2³² − 977 and its group order n pass 40 rounds.
+   - (d) Estimate from the prime number theorem how many random odd 1024-bit candidates you test, on average, before finding a prime (about 355). Then measure it.
+
+3. **secp256k1 from scratch** *(~5 h · *Programming Bitcoin* Ch. 1–3 and Corbellini's series (btc Section 01); Hoffstein, Pipher & Silverman's elliptic-curve chapter; Washington on the group law)*
+   - Implement 𝔽ₚ arithmetic and the affine group law (chord and tangent) for y² = x³ + 7, then check each of the following:
+     - (a) G lies on the curve.
+     - (b) n·G is the point at infinity and n is prime, so every point other than the identity generates the whole group.
+     - (c) 2G has x = C6047F94…5C709EE5 and 3G has x = F9308A01…BCE036F9.
+     - (d) Because p ≡ 3 (mod 4), a square root is a^((p+1)/4) mod p. Use this to implement point decompression, then recover G from its x-coordinate and the parity of y.
+     - (e) Associativity holds on 10⁴ random point triples, a property that is not obvious from the geometry.
+   - Time double-and-add against repeated addition for growing scalars, and explain the O(log k) cost.
+   - Never use this code for real keys: it is neither constant-time nor reviewed.
+
+4. **Signatures, and how they fail** *(~5 h · Hoffstein, Pipher & Silverman on digital signatures; Boneh & Shoup's chapters on signatures; *Mastering Bitcoin* Ch. 8 (btc Section 01))*
+   - (a) Implement ECDSA signing and verification on your curve code and test round trips and rejections (wrong message, wrong key, bit-flipped signature).
+   - (b) Recover a private key from nonce reuse. Given two signatures (r, s₁) and (r, s₂) on different messages that share a nonce, derive k = (z₁ − z₂)/(s₁ − s₂) and d = (s₁k − z₁)/r (mod n). Use them to recover a private key you generated yourself.
+   - (c) Implement BIP-340 Schnorr signing with tagged hashes. Reproduce the BIP's test vector 0 exactly:
+     - inputs: secret key 3, all-zero message, all-zero aux_rand;
+     - public key x = F9308A01…BCE036F9;
+     - signature begins E907831F80848D10 and ends 310536C0.
+   - (d) Show that Schnorr signatures are linear in the key and nonce while ECDSA's are not, and explain what that enables (key and signature aggregation).
+
+5. **What "128-bit security" means** *(~5 h · Hoffstein, Pipher & Silverman on discrete logarithms, collision algorithms, and Pohlig–Hellman; Washington's chapters on the discrete-log problem)*
+   - (a) Count the points of y² = x³ + 7 over small primes and check Hasse's bound |p + 1 − #E| ≤ 2√p. Then explain why each of these is invalid or weak:
+     - when p ≡ 2 (mod 3), #E = p + 1 (supersingular);
+     - p = 127 gives #E = p (an anomalous curve);
+     - over 𝔽₇ the equation isn't an elliptic curve at all (it is singular).
+   - (b) Implement baby-step giant-step and solve discrete logs on prime-order toy curves y² = x³ + 7:
+
+     | p | #E |
+     |---|---|
+     | 65,647 | 65,173 |
+     | 1,048,783 | 1,050,337 |
+     | 16,777,723 | 16,773,667 |
+
+     Confirm the run time grows about 4× per 4 bits, i.e. as √#E.
+   - (c) Extrapolate to secp256k1: about 2¹²⁸ ≈ 3.4 × 10³⁸ group operations, which at 10¹² per second is about 10¹⁹ years.
+   - (d) Pick a curve whose order is smooth (several p ≡ 2 (mod 3) give #E = p + 1 with only small factors). Run Pohlig–Hellman on it and explain why Bitcoin's n must be prime.
+
+**🏗️ Mini-project — A tested secp256k1 + BIP-340 library:** *(~15 h)*
+
+1. Build a small, readable Python library in layers:
+   - 𝔽ₚ arithmetic;
+   - Jacobian-coordinate point arithmetic (no inversion per addition);
+   - a Montgomery-ladder scalar multiplication;
+   - ECDSA with RFC 6979-style deterministic nonces;
+   - BIP-340 sign and verify;
+   - point (de)compression.
+2. Test it:
+   - curve-parameter checks (G on the curve, n·G = O, p and n prime);
+   - BIP-340 test vector 0;
+   - property tests on 10⁴ random keys and messages: sign/verify round trips, agreement between affine and Jacobian arithmetic and between ladder and double-and-add, and rejection of every bit-flipped signature;
+   - a known-answer test for the nonce-reuse attack.
+3. Optional: port field multiplication and the ladder to C on a Cortex-M MCU and compare cycle counts. Show whether the ladder's timing is independent of the scalar's Hamming weight while naive double-and-add's is not — the first lesson in side channels.
+
+Draws on Hoffstein, Pipher & Silverman, Washington, Shoup, and btc Section 01's *Programming Bitcoin*.
+
+- **Deliverable:** `projects/math/13-secp256k1/` — library, test suite, and a short README on what makes it unsafe for production.
+- **Success:**
+  - all known-answer and property tests pass;
+  - Jacobian and affine results agree on every test point;
+  - if ported, the C ladder's timing spread across scalars stays within measurement noise.
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State Fermat's little theorem and Euler's theorem, and use them to explain why RSA decryption recovers the message.
+2. Why does the extended Euclidean algorithm produce modular inverses, and when does an inverse modulo n fail to exist?
+3. What is a Carmichael number, and why doesn't Miller–Rabin share the Fermat test's blind spot?
+4. Estimate: on average, how many random odd 1024-bit numbers must you test to find a prime?
+5. What does Hasse's theorem say about #E(𝔽ₚ), and why must the group order used in Bitcoin be prime?
+6. Misconception: "the private key is safe because elliptic-curve multiplication can't be reversed." What exactly is believed hard, and name two implementation mistakes that make it easy.
+7. Why does reusing an ECDSA nonce reveal the private key? Write the two signature equations and solve them.
+8. Explain to a smart friend in 3 sentences how a digital signature proves you hold a private key without revealing it.

@@ -13,19 +13,31 @@ Optimization is the engine of machine learning — every model trained by gradie
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Prove or disprove convexity of sets and functions using the definitions, convexity-preserving operations, and first- and second-order conditions.
+- Derive Lagrange dual problems and KKT conditions by hand, and interpret optimal dual variables as sensitivities (shadow prices).
+- Formulate engineering problems (robust fitting, edge-preserving denoising, filter design) as LP/QP/SOCP and solve them with CVXPY.
+- Implement gradient descent, heavy-ball/Nesterov momentum, Newton, and Adam, and predict their convergence rates from smoothness and condition number before confirming them empirically.
+- Critique an optimizer paper (Adam): what its analysis assumes, what it guarantees, and where practice diverges.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Book (Free) | Convex Optimization | Stephen Boyd, Lieven Vandenberghe | 2004 | [Link](https://web.stanford.edu/~boyd/cvxbook/) | The definitive text on convex optimization. Covers convex sets, functions, duality, interior-point methods, and applications. Free PDF and lecture slides available. |
-| 🔑 | Course (Free) | Stanford EE364a: Convex Optimization | Stephen Boyd | — | [Link](https://web.stanford.edu/class/ee364a/) | Video lectures accompanying the textbook. Boyd is an exceptional teacher — these lectures bring the theory to life. |
+| 🔑 | Course (Free) | Stanford EE364a: Convex Optimization | Stephen Boyd | — | [Link](https://web.stanford.edu/class/ee364a/) | The current course site: lecture slides, homework, and exams that accompany the textbook. Its lecture recordings are for enrolled students only — for free videos use the Stanford Engineering Everywhere recordings below. |
 | | Book | Numerical Optimization | Jorge Nocedal, Stephen Wright | 2006 | — | Comprehensive treatment of numerical methods: line search, trust region, conjugate gradient, quasi-Newton methods. Essential reference for algorithm design. |
 | | Book (Free) | Mathematics for Machine Learning (Ch. 7) | Deisenroth, Faisal, Ong | 2020 | [Link](https://mml-book.github.io/) | Chapter 7 covers continuous optimization with ML focus: gradient descent, momentum, constrained optimization. Good bridge from theory to practice. |
 | | Blog Post | An Overview of Gradient Descent Optimization Algorithms | Sebastian Ruder | 2016 | [Link](https://www.ruder.io/optimizing-gradient-descent/) | Excellent survey of SGD variants: momentum, Nesterov, Adagrad, RMSprop, Adam. Essential reading for understanding modern training. |
-| | Course (Free) | MIT 6.079: Introduction to Convex Optimization | Lieven Vandenberghe | — | [Link](https://see.stanford.edu/course/ee364a) | Alternative entry point to the same material with different emphasis. |
+| | Course (Free) | Stanford Engineering Everywhere — EE364A Convex Optimization I (video lectures) | Stephen Boyd | 2008 | [Link](https://see.stanford.edu/course/ee364a) | Boyd's complete set of 19 recorded lectures with transcripts and handouts, free and self-paced. These are the videos to watch alongside the textbook. (MIT's 6.079 by Boyd & Parrilo covers the same material in notes only.) |
 | | Book | Introductory Lectures on Stochastic Optimization | John Duchi | — | [Link](https://web.stanford.edu/~jduchi/PCMIConvex.pdf) | Lecture notes covering stochastic gradient methods with convergence analysis. Bridges theory and practice. |
 | | Paper | Adam: A Method for Stochastic Optimization | Diederik Kingma, Jimmy Ba | 2014 | [Link](https://arxiv.org/abs/1412.6980) | The Adam optimizer paper — the most widely used optimizer in deep learning. Understanding its design illuminates optimization in practice. |
 | | Book | First-Order Methods in Optimization | Amir Beck | 2017 | — | Rigorous treatment of proximal methods, ADMM, and first-order algorithms. Advanced but essential for optimization research. |
+| | Book (Free) | Algorithms for Optimization | Mykel Kochenderfer, Tim Wheeler | 2019 | [Link](https://algorithmsbook.com/optimization/) | Broad, code-first survey (Julia) of the methods engineers reach for when problems aren't convex or differentiable: derivative-free and stochastic search, population methods, surrogate models, multi-objective optimization, and optimization under uncertainty. Free PDF (CC BY-NC-ND); a 2nd edition is due in 2027. |
 
 ---
 
@@ -33,7 +45,34 @@ Optimization is the engine of machine learning — every model trained by gradie
 
 1. **MML Book (Ch. 7)** — Start here for ML-oriented optimization overview.
 2. **Ruder — Gradient Descent Survey** — Read for practical understanding of SGD variants.
-3. **Boyd & Vandenberghe — Convex Optimization (book + Stanford lectures)** — The core. Work through the first 10 chapters and problem sets.
+3. **Boyd & Vandenberghe — Convex Optimization (book + SEE video lectures + EE364a homework)** — The core. Work through the first 10 chapters and problem sets.
 4. **Kingma & Ba — Adam paper** — Read to connect theory to the most-used optimizer.
-5. **Nocedal & Wright** — Use as a reference for numerical methods.
-6. **Duchi — Stochastic Optimization** — Advanced. Read for theoretical depth on SGD convergence.
+5. **Kochenderfer & Wheeler — Algorithms for Optimization** — The practical toolbox for non-convex, black-box, and multi-objective design problems.
+6. **Nocedal & Wright** — Use as a reference for numerical methods.
+7. **Duchi — Stochastic Optimization** — Advanced. Read for theoretical depth on SGD convergence.
+8. **Beck — First-Order Methods** — Advanced reference for proximal methods and ADMM.
+
+---
+
+## 🛠️ Practice
+
+1. **Convexity drills** — Do B&V Exercises 2.12 (which sets are convex: slab, rectangle, wedge, points closer to a point than to a set, …) and 3.16 (convex, concave, quasiconvex, or quasiconcave: eˣ − 1, x₁x₂, 1/(x₁x₂), x₁/x₂, x₁²/x₂, x₁^α x₂^(1−α)) — both have appeared on EE364a's first homework — and prove log-sum-exp is convex via its Hessian. Then write a numeric falsifier that samples random pairs and θ ∈ [0, 1] on each function's domain and searches for violations of convexity (f(θx + (1 − θ)y) ≤ θf(x) + (1 − θ)f(y)), concavity, quasiconvexity (f(θx + (1 − θ)y) ≤ max{f(x), f(y)}), and quasiconcavity. It must find counterexamples to every property you claimed fails, and none to the ones you proved — remembering that finding none proves nothing. *(~4 h · Boyd & Vandenberghe Ch. 2–3; EE364A lectures on convex sets and functions (Stanford Engineering Everywhere videos))*
+2. **Duality by hand, checked by a solver** — B&V Exercise 5.1: minimize x² + 1 subject to (x − 2)(x − 4) ≤ 0. Work out the feasible set, p⋆, the Lagrangian, the dual function and dual problem, λ⋆, whether strong duality holds, and the sensitivity dp⋆/du = −λ⋆ for the perturbed constraint (x − 2)(x − 4) ≤ u. Then solve the perturbed problem in CVXPY for u ∈ [−0.9, 2], read `constraint.dual_value`, and confirm by finite differences that the slope of p⋆(u) at u = 0 equals −λ⋆. *(~3 h · B&V Ch. 5; EE364A (SEE) lectures on duality)*
+3. **Convergence rates you can predict** — On f(x) = ½xᵀQx in ℝ¹⁰⁰ with eigenvalues log-spaced from 1 to κ (κ = 10, 10², 10³), run gradient descent with step 1/L, heavy-ball and Nesterov momentum with their textbook parameters, and Newton's method. Plot log‖x − x⋆‖ versus iteration, fit the per-iteration contraction, and compare it with 1 − 1/κ for GD and roughly 1 − 1/√κ for the accelerated methods. Then switch to the Rosenbrock function with backtracking line search and compare Newton and BFGS (`scipy.optimize`) on iterations, function evaluations, and wall-clock time. *(~4 h · B&V Ch. 9; MML Ch. 7; 18.065 Lectures 22–23 (gradient descent, momentum; Section 01); Nocedal & Wright on line search and quasi-Newton methods)*
+4. **Adam from the paper** — Implement Algorithm 1 of Kingma & Ba in NumPy (α = 10⁻³, β₁ = 0.9, β₂ = 0.999, ε = 10⁻⁸) and check it step-for-step against `torch.optim.Adam` fed the same gradients (agreement to ~10⁻⁷). Remove the bias correction and show what goes wrong in the first ~100 steps. Compare Adam, SGD with momentum, and plain SGD on noisy logistic regression with badly scaled features. Finish with a half-page critique: what the paper's convergence analysis assumes and what it doesn't guarantee (hint: find out what later work showed about that analysis). *(~4 h · Kingma & Ba, the Adam paper; Ruder's gradient-descent survey; Duchi's notes on stochastic gradient methods)*
+5. **Robust fits and edge-preserving denoising** — In CVXPY: (a) fit a calibration line to 50 points containing 5 gross outliers using ℓ₂, ℓ₁, and Huber penalties, and compare each slope with the truth; (b) denoise a piecewise-constant sensor trace (n = 1000, a few steps plus Gaussian noise) with quadratic smoothing and with total-variation regularization, sweep λ, and plot the trade-off curve ‖x − y‖₂ versus ‖Dx‖₁. TV should keep the steps sharp where quadratic smoothing blurs them; explain why using the sparsity that an ℓ₁ penalty induces in Dx. *(~4 h · B&V Ch. 6 — penalty-function approximation and the reconstruction/smoothing/de-noising examples; EE364A (SEE) lectures on approximation and fitting)*
+
+**🏗️ Mini-project — Optimal FIR filter design as a convex program:** Design a 101-tap linear-phase low-pass FIR (passband 0–0.10·f_s, stopband 0.15–0.5·f_s) by minimizing the maximum error over a dense frequency grid. Because a type-I filter's amplitude response is linear in its cosine coefficients, this is an LP. (1) Validate: your design must reproduce the equiripple error of `scipy.signal.remez` for the same specs (≈ −85 dB) within ~1%. (2) Add constraints remez can't express, predicting each one's cost before you solve: |H| ≤ −120 dB across a narrow band where a known interferer sits (say 0.24–0.26·f_s), and step-response overshoot ≤ 1% (linear constraints on the running sum of h). One is nearly free and the other is brutally expensive; explain why using the Gibbs phenomenon from section 02. (3) Use the LP's dual variables to locate the active frequencies and relate them to remez's extremal (alternation) frequencies via complementary slackness. Draws on B&V Ch. 4–6 and the EE364A (SEE) lectures. Deliverable: `projects/math/04-convex-fir/` notebook + a one-page design memo comparing remez, windowed (`firwin`), and convex designs. Success: (1) holds, every added constraint is met to solver tolerance, and the memo quantifies each constraint's cost in dB. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Define a convex set and a convex function, and state the first- and second-order conditions for convexity of a differentiable f.
+2. Prove in two lines that every local minimum of a convex function is a global minimum.
+3. Why is the Lagrange dual function always concave — even when the primal problem isn't convex?
+4. State the KKT conditions. What does complementary slackness say, in words, about a constraint that isn't tight at the optimum?
+5. Estimate: gradient descent on a quadratic with κ = 10⁴ — roughly how many iterations to shrink the error by a factor of 10⁶? And with acceleration?
+6. Why does an ℓ₁ penalty produce sparse solutions and robustness to outliers, while ℓ₂ does neither?
+7. Misconception: "Newton's method is always better than gradient descent because it converges quadratically." When is that false?
+8. Explain Lagrange duality to a smart friend in 3 sentences, using the idea of a shadow price.

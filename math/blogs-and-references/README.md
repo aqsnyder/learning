@@ -47,3 +47,4 @@
 | [MathOverflow](https://mathoverflow.net/) | Research-level mathematics Q&A. Useful for advanced questions |
 | [arXiv — Mathematics](https://arxiv.org/archive/math) | Preprint server for mathematics research |
 | [Art of Problem Solving](https://artofproblemsolving.com/) | Community and resources for mathematical problem-solving and competitions |
+| [Project Euler](https://projecteuler.net/) | Free, ever-growing series of problems that each need a mathematical insight *and* a program to solve. The best steady source of practice problems for an engineer who codes — number theory, combinatorics, and probability show up constantly |

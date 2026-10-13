@@ -1,0 +1,151 @@
+# Fourier Analysis, Signals and Systems
+
+## Why This Section Matters
+
+For an electrical engineer this is the most-used mathematics there is. Every analog front end, ADC, digital filter, and spectrum measurement rests on the same handful of ideas:
+- sinusoids are the eigenfunctions of linear time-invariant (LTI) systems;
+- convolution in time is multiplication in frequency;
+- sampling folds the spectrum, so anything above Nyquist aliases irreversibly;
+- noise is described by its power spectral density, and filters reshape it;
+- the best detector for a known waveform in white noise is a matched filter.
+
+Getting these right is the difference between a measurement you can trust and an FFT plot that lies. The same mathematics also runs through convolutional networks, state-space sequence models, and diffusion models in ML.
+
+**Where it fits:** this section is numbered 12 only because it was added after the original sections. Take it after Sections 07 and 03 (its random-signals half needs probability). It is part of the core path for an engineer.
+
+---
+
+## Prerequisites
+
+- Section 02 (Calculus and Analysis) — complex numbers and complex exponentials (Needham's *Visual Complex Analysis* and MIT 18.04, which covers Laplace and Fourier transforms), plus the Gibbs-phenomenon exercise
+- Section 07 (Differential Equations) — linear ODEs, the Laplace transform, state-space models, and the frequency-response chapters of Åström & Murray's *Feedback Systems*
+- Section 01 (Linear Algebra) — inner products and change of basis (the DFT is a change of basis; see the circulant exercise there)
+- Section 03 (Probability and Statistics) — variance and autocorrelation, needed for the random-signals half. Labbe's *Kalman and Bayesian Filters* there is the estimation companion to this section.
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive Fourier series and transforms of the standard signals (rect, triangle, Gaussian, exponential), and use the convolution, modulation, and Parseval theorems to predict a circuit's output and noise without solving its ODE.
+- Predict the alias of any input frequency, and size an anti-alias filter (order and corner) from an ADC's resolution and sample rate. Quantify how oversampling with digital decimation relaxes that filter, and how much a zero-order-hold DAC droops.
+- Measure spectra correctly with the FFT: choose N, the window, and coherent or non-coherent sampling, account for leakage, scalloping loss, equivalent noise bandwidth (ENBW) and processing gain, and estimate noise density in V/√Hz with Welch's method.
+- Design FIR filters (Parks–McClellan, Kaiser window) and IIR filters (elliptic or Butterworth via the bilinear transform with pre-warping) to a written spec, verify them with `scipy.signal`, and implement them robustly as second-order sections in limited-precision arithmetic.
+- Propagate noise through LTI systems (output PSD = |H|²·input PSD), derive the matched filter as the SNR-optimal detector, and trade detection probability against false-alarm rate with ROC curves.
+
+---
+
+## Resources
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| 🔑 | Course (Free) | MIT RES.6-007 Signals and Systems | Alan V. Oppenheim | 2011 | [Link](https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/) | The classic signals-and-systems lecture series: LTI systems and convolution, Fourier series and transforms, sampling, modulation, and the Laplace and z-transforms. Includes video lectures, notes, and problem sets with solutions; readings follow Oppenheim & Willsky's *Signals and Systems*. |
+| 🔑 | Book (Free) | The Scientist and Engineer's Guide to Digital Signal Processing | Steven W. Smith | 1997 | [Link](https://www.dspguide.com/) | A free, practical DSP book written for working engineers: sampling, the DFT and FFT, convolution, and FIR/IIR filter design, with a minimum of mathematics. The fastest route from theory to filters that work. |
+| | Course (Free) | Stanford EE261 The Fourier Transform and its Applications | Brad Osgood | 2007 | [Link](https://see.stanford.edu/Course/EE261) | 30 recorded lectures plus a free course reader. Covers Fourier series and transforms, convolution, distributions (δ and friends), sampling, and the DFT, taught to engineers with real mathematical care. The bridge between using Fourier analysis and understanding it. |
+| | Course (Free) | MIT 6.341 Discrete-Time Signal Processing | Alan V. Oppenheim | 2005 | [Link](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/) | Graduate DSP with lecture notes, problem sets and exams (no videos), built on Oppenheim, Schafer & Buck's *Discrete-Time Signal Processing*. Covers filter design, multirate systems, and spectral analysis in depth. Go here when Smith is no longer enough. |
+| | Course (Free) | MIT 6.011 Signals, Systems and Inference | George Verghese, Alan V. Oppenheim, Peter Hagelstein | 2018 | [Link](https://ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/) | Where signals meet probability: state-space models, random processes, correlation functions and power spectra, Wiener filtering, LMMSE estimation, hypothesis testing, and matched filters (notes and problem sets, no videos). The mathematics of noise and detection in instruments. |
+| | Book (Free) | Signal Processing for Communications | Paolo Prandoni, Martin Vetterli | — | [Link](https://www.sp4comm.org/) | Free textbook that teaches signal processing with a communications focus. A well-written second text and a good reference for modulation and receivers. |
+| | Book | Fourier Analysis: An Introduction | Elias M. Stein, Rami Shakarchi | 2003 | [Link](https://press.princeton.edu/books/hardcover/9780691113845/fourier-analysis) | Volume 1 of the Princeton Lectures in Analysis: rigorous Fourier series and transforms, finite Fourier analysis, and Dirichlet's theorem on primes. Optional; for when the engineering treatments leave you wanting proofs. Needs Section 02's analysis. |
+
+---
+
+## Suggested Order
+
+1. **3Blue1Brown's Fourier videos** (listed in the physics curriculum's [Waves and Optics section](../../physics/01-waves-and-optics/README.md)) — Visual intuition first, if Fourier is new.
+2. **MIT RES.6-007 (Oppenheim)** — The core. LTI systems, convolution, Fourier series and transforms, sampling, Laplace and z.
+3. **Smith — DSP Guide** — Read alongside the second half of 6.007: sampling, the DFT and FFT, filter design in practice.
+4. **Stanford EE261 (Osgood)** — Deeper Fourier theory: distributions, the sampling theorem done properly, the DFT.
+5. **MIT 6.011** — Random signals, PSD, Wiener filtering, and detection. Do the matched-filter material here before the mini-project.
+6. **MIT 6.341** — Graduate DSP when you need it: filter design, multirate, spectral estimation.
+7. **Prandoni & Vetterli** — Second text and communications perspective.
+8. **Stein & Shakarchi** — Optional rigor.
+
+---
+
+## 🛠️ Practice
+
+1. **Transforms that matter in hardware** *(~4 h · MIT RES.6-007 lectures on the Fourier transform and its properties; Osgood's EE261 reader on convolution; Section 07's kT/C exercise)*
+   - (a) Derive the Fourier transforms of a rectangular pulse, a triangular pulse (as rect ∗ rect), a Gaussian, and the RC impulse response (1/τ)e^(−t/τ)u(t).
+   - (b) Use them to predict:
+     - the spectrum of a 1 µs-wide pulse train at 10 kHz (lines every 10 kHz under a sinc envelope whose first null is at 1 MHz);
+     - for an RC low-pass with τ = 1 ms, the −3 dB frequency (159.2 Hz) and the equivalent noise bandwidth ENBW = ∫|H|² df = 1/(4τ) = 250 Hz, which is π/2 × f₋₃dB.
+   - (c) Recover kT/C from 4kTR × ENBW for R = 1 kΩ, C = 1 µF. You should get 64 nV rms at 300 K, independent of R — the frequency-domain twin of Section 07's Itô calculation.
+   - (d) Prove Parseval's theorem, then check it on a sampled Gaussian with `np.fft` (agreement to ~10⁻¹²).
+   - (e) Show the rect pulse has infinite RMS bandwidth (sinc² tails fall only as 1/f²) while the Gaussian attains the uncertainty bound Δt·Δf = 1/(4π).
+
+2. **Aliasing and anti-alias design** *(~3 h · RES.6-007 lectures on sampling; Smith's chapters on ADC/DAC and sampling)*
+   - (a) At f_s = 48 kS/s, predict then verify by FFT the apparent frequency of tones at 1, 47, 50, 95 and 1001 kHz. You should get 1, 1, 2, 1 and 7 kHz, and see that nothing digital can tell 1 kHz from 47 kHz afterwards.
+   - (b) A 12-bit ADC at 100 kS/s with a 0–10 kHz signal band needs aliases below ½ LSB of full scale (−78.3 dB) at 90 kHz. Show that a Butterworth filter with its −3 dB point at 10 kHz needs order 5 (order 4 gives only 76.3 dB).
+   - (c) Now oversample at 1 MS/s and decimate digitally. The first alias band moves to 990 kHz and a 2nd-order filter (79.8 dB) suffices. Explain why that trade is standard in modern converters.
+   - (d) Show that a zero-order-hold DAC droops by sinc(f/f_s), −3.92 dB at f_s/2, and design a mild inverse-sinc FIR to flatten it.
+
+3. **Measuring spectra without fooling yourself** *(~4 h · Smith's chapters on the DFT and spectral analysis; MIT 6.341 notes on spectral estimation; Section 02's Gibbs/window exercise)*
+   - (a) For N = 4096, compute ENBW (in bins), scalloping loss (half-bin offset), and highest sidelobe for the rectangular, Hann, 4-term Blackman–Harris and flat-top windows from `scipy.signal.get_window`. You should find:
+
+     | Window | ENBW (bins) | Scalloping loss | Highest sidelobe |
+     |---|---|---|---|
+     | Rectangular | 1.00 | 3.92 dB | −13 dB |
+     | Hann | 1.50 | 1.42 dB | −31 dB |
+     | Blackman–Harris (4-term) | 2.00 | 0.83 dB | −92 dB |
+     | Flat-top | 3.77 | 0.01 dB | −93 dB |
+
+   - (b) Synthesize a 1 V-peak 1 kHz tone plus white noise of 100 nV/√Hz at 48 kS/s (σ ≈ 15.5 µV rms). Recover the noise density with `scipy.signal.welch` (`scaling='density'`) to within a few percent.
+   - (c) Recover the tone power (0.5 V²) from a Hann-windowed spectrum. The peak bin alone reads low (scalloping), and the sum of the bins around the peak reads 1.5× high (ENBW). Explain both corrections.
+   - (d) Show that the per-bin "FFT noise floor" falls 3 dB per doubling of N while the noise density stays put. Write two sentences you could put in a lab report to stop a colleague claiming the ADC got quieter.
+
+4. **Filter design to a spec, then make it survive fixed point** *(~5 h · Smith's chapters on FIR and recursive filters; MIT 6.341 notes on filter design; RES.6-007 lectures on the z-transform)*
+   - The spec: f_s = 48 kHz, passband 0–4 kHz with ≤ 0.1 dB ripple, stopband ≥ 6 kHz with ≥ 60 dB attenuation.
+   - (a) FIR:
+     - Kaiser's formula (`kaiserord`) predicts about 89 taps.
+     - Parks–McClellan (`remez`) meets the spec with 68 taps.
+     - Confirm both against the spec with `freqz`, and give the FIR's constant group delay (33.5 samples ≈ 0.70 ms).
+   - (b) IIR:
+     - Required orders: Butterworth 21, Chebyshev I 10, elliptic 7 (`buttord`, `cheb1ord`, `ellipord`).
+     - Plot the elliptic filter's group delay. It climbs toward the band edge: ≈ 8 samples at DC, ≈ 42 at the 4 kHz passband edge, peaking at ≈ 51 just beyond it (≈ 4.1 kHz).
+     - Explain why the bilinear transform needs pre-warping: a 10 kHz analog corner at f_s = 100 kS/s lands at 9.69 kHz unless you design for 10.34 kHz.
+   - (c) Quantize the elliptic filter's coefficients:
+     - Quantize both the direct-form polynomial (`ba`) and the cascade of biquads (`sos`) to b fractional bits and find the smallest b that holds ripple ≤ 0.2 dB and attenuation ≥ 59 dB. Expect the direct form to need roughly twice the word length: about 24-bit against about 12-bit words.
+     - Explain why with pole sensitivity: the roots of a high-order polynomial are ill-conditioned functions of its coefficients.
+     - Implement the biquad cascade in Q15/Q31 or float32 C, and compare it with double precision on a swept sine.
+
+5. **Noise through filters and the matched filter** *(~4 h · MIT 6.011 notes on random processes, power spectra, and matched filters; Labbe's chapters on Gaussians (Section 03))*
+   - (a) Verify output variance = (N₀/2)·∫|H|² df by simulation for the RC filter of exercise 1 and the elliptic filter of exercise 4. For an RC with f₋₃dB = 1 kHz and 10 nV/√Hz input noise, the output is ≈ 0.40 µV rms.
+   - (b) Derive the matched filter h(t) = s(T − t) and its peak SNR, 2E/N₀, from the Cauchy–Schwarz inequality.
+   - (c) Quantify the losses of simpler filters:
+     - a boxcar integrator on a half-sine pulse loses 10·log₁₀(8/π²) = 0.91 dB;
+     - the best single-pole RC on a rectangular pulse (τ ≈ 0.80 T) loses 0.89 dB.
+     - Confirm both by simulation.
+   - (d) Plot ROC curves. To get P_d = 0.99 at P_fa = 10⁻⁶ you need d = Q⁻¹(10⁻⁶) − Q⁻¹(0.99) = 7.08, i.e. 2E/N₀ ≈ 17.0 dB. Check this against 10⁶-trial simulations.
+
+**🏗️ Mini-project — FFT-based ADC dynamic test (SINAD, ENOB, SFDR):** *(~12 h)* Write a Python tool that takes N samples of a sine captured from an ADC and reports SNR, SINAD, THD, SFDR, and ENOB = (SINAD − 1.76 dB)/6.02.
+
+1. Support both input modes:
+   - coherent sampling, with f_in = M·f_s/N, M odd and coprime with N;
+   - windowed non-coherent captures, using 4-term Blackman–Harris and guard bins around the fundamental, DC, and harmonics.
+2. Validate the tool on synthetic data from an ideal 12-bit quantizer with a full-scale sine, N = 8192, M = 127. You should get:
+   - SINAD 74.0 dB and ENOB 12.00;
+   - with 0.5 LSB rms extra Gaussian noise, total noise power quadruples from LSB²/12 to LSB²/3, so SINAD falls by exactly 6.02 dB to ≈ 68 dB and ENOB to ≈ 11.0;
+   - with an added −80 dBc third harmonic, THD ≈ −80 dB and SFDR ≈ 80 dB;
+   - a rectangular window on a non-coherent capture reports ENOB ≈ 2 for a perfect converter. Make that failure part of your write-up.
+3. Measure a real ADC — an STM32 internal ADC or a precision-ADC eval board — driven by a signal generator through a passive low-pass filter that removes the generator's harmonics. Compare with the datasheet.
+4. Bound clock jitter's contribution: SNR_jitter = −20·log₁₀(2π f_in σ_j) is 84 dB for 10 kHz and 1 ns.
+
+Draws on Smith's chapters on ADCs and the DFT, MIT 6.341's spectral-analysis material, and exercises 2–3. For the hardware side (driving the ADC, references, layout), see the PCB curriculum's analog, mixed-signal and precision-measurement section.
+
+- **Deliverable:** `projects/math/12-adc-dynamic-test/` — notebook, CLI script, and a one-page test report.
+- **Success:**
+  - every synthetic case lands within ±0.1 ENOB of theory;
+  - the real-ADC result is within the datasheet range, or the gap is explained (source distortion, jitter, layout).
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the sampling theorem precisely. A 12 kHz tone is sampled at 10 kS/s. What frequency appears, and why can no later digital processing remove it?
+2. Why does multiplying by a window in time smear a tone in frequency, and what do you trade when you move from a Hann to a flat-top window?
+3. Estimate: an RC low-pass with f₋₃dB = 1 kHz is fed white noise of 10 nV/√Hz. What is its equivalent noise bandwidth, and what rms noise comes out?
+4. Misconception: "my 64k-point FFT shows a lower noise floor than the 4k-point one, so the signal got cleaner." What changed, and what didn't?
+5. Why are FIR filters easy to make linear-phase and unconditionally stable, and when would you still choose an IIR?
+6. What does the bilinear transform do to the frequency axis, and why must you pre-warp the critical frequencies?
+7. What is the matched filter for a known pulse in white noise, and what peak SNR does it achieve for a pulse of energy E in noise of PSD N₀/2?
+8. Explain to a smart friend in 3 sentences why sinusoids are special for linear time-invariant systems.

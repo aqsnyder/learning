@@ -20,7 +20,12 @@ This repository is a structured curriculum for self-studying mathematics with ge
 
 ## Learning Path
 
-Work through the numbered sections in order. Each section's README contains curated resources with direct links, descriptions, and a suggested reading order within that section.
+Each section's README contains:
+- curated resources with direct links and descriptions;
+- a suggested reading order within that section;
+- learning objectives, practice exercises, a mini-project, and Check Yourself questions.
+
+Sections 12–14 were added later, so their numbers don't reflect where they belong. Take them at the positions shown.
 
 ```
 Section 00  →  Mathematical Thinking
@@ -35,7 +40,20 @@ Section 08  →  Abstract Algebra
 Section 09  →  Topology and Geometry
 Section 10  →  Causal Inference
 Section 11  →  Category Theory and Frontiers
+Section 12  →  Fourier Analysis, Signals and Systems        (take after 07 and 03 · core)
+Section 13  →  Number Theory and Cryptography               (take after 08 · core for the Bitcoin curriculum)
+Section 14  →  Numerical Methods and Scientific Computing   (take after 07 or 12)
 ```
+
+### Recommended Route (engineering focus)
+
+Not every section deserves equal time.
+
+| Track | Sections, in order | Notes |
+|-------|--------------------|-------|
+| **Core** | 00 → 01 → 02 → 07 → 03 → 12 → 14 → 04 → 05 | The engineering spine: complex analysis is in 02, control (*Feedback Systems*) in 07, Kalman filtering in 03 |
+| **Core for Bitcoin** | 08 → 13 | Groups and finite fields, then number theory, elliptic curves, and signatures |
+| **Electives** | 06, 09, 10, 11 | Graphs, topology and geometry, causal inference, category theory — follow your interests |
 
 ### Cross-Cutting References
 
@@ -54,9 +72,11 @@ This mathematics curriculum is designed to pair with a broader learning program:
 | Curriculum | Key Math Connections |
 |------------|---------------------|
 | Machine Learning | Linear algebra (01), Calculus (02), Probability (03), Optimization (04), Information Theory (05) |
-| Physics | Calculus & Analysis (02), Differential Equations (07), Topology & Geometry (09), Abstract Algebra (08) |
+| Physics | Calculus & Analysis (02), Differential Equations (07), Topology & Geometry (09), Abstract Algebra (08), Fourier Analysis (12), Numerical Methods (14) |
 | Biology | Probability & Statistics (03), Differential Equations (07), Graph Theory (06), Causal Inference (10) |
-| Software Engineering | Mathematical Thinking (00), Graph Theory (06), Abstract Algebra (08), Category Theory (11) |
+| Software Engineering | Mathematical Thinking (00), Graph Theory (06), Abstract Algebra (08), Category Theory (11), Numerical Methods (14) |
+| Bitcoin | Abstract Algebra (08), Number Theory and Cryptography (13), Probability (03) |
+| PCB Design | Complex analysis (02), Differential Equations (07), Signals and Systems (12), Numerical Methods (14) |
 
 ---
 

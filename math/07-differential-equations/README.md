@@ -13,20 +13,33 @@ Differential equations describe how systems evolve over time — they are the la
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Solve linear constant-coefficient ODEs and first-order systems by characteristic roots, Laplace transforms, and the matrix exponential, and connect each solution to a circuit's step and frequency response.
+- Discretize a continuous-time state-space model (forward Euler, zero-order hold, bilinear/Tustin), derive the stability limit of each, and recognize the same step inside S4-style state-space sequence models.
+- Draw and justify phase portraits of nonlinear 2-D systems — fixed points, linearization, trace–determinant classification, Lyapunov functions, limit cycles, Hopf bifurcations.
+- Diagnose chaos numerically with bifurcation diagrams and Lyapunov exponents, and explain what "accurate simulation" can and can't mean for a chaotic system.
+- Solve the heat equation by separation of variables and by finite differences (with the stability condition), and simulate an Ornstein–Uhlenbeck SDE with Euler–Maruyama.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
-| 🔑 | Book | Nonlinear Dynamics and Chaos | Steven Strogatz | 2015 | — | The best introduction to dynamical systems and chaos theory. Strogatz writes with exceptional clarity and intuition. Covers phase portraits, bifurcations, limit cycles, and chaos. Essential. |
+| 🔑 | Book | Nonlinear Dynamics and Chaos | Steven Strogatz | 2024 | — | The best introduction to dynamical systems and chaos theory (3rd edition; the 2015 2nd edition is equally usable). Strogatz writes with exceptional clarity and intuition. Covers phase portraits, bifurcations, limit cycles, and chaos. Essential. |
 | | Course (Free) | MIT 18.03 Differential Equations | Arthur Mattuck | — | [Link](https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/) | MIT's comprehensive ODE course. Covers first-order, second-order, Laplace transforms, and systems of ODEs with excellent problem sets. |
 | | Video Series | Differential Equations | 3Blue1Brown | — | [Link](https://www.youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6) | Beautiful visual explanations of differential equations, phase space, and dynamical systems. Classic 3Blue1Brown quality. |
-| | Book | Elementary Differential Equations and Boundary Value Problems | Boyce, DiPrima, Meade | 2017 | — | The standard undergraduate ODE textbook. Comprehensive coverage with applications. Good computational reference. |
+| | Book | Elementary Differential Equations and Boundary Value Problems | Boyce, DiPrima, Meade | 2021 | — | The standard undergraduate ODE textbook. Comprehensive coverage with applications. Good computational reference. |
 | | Book | Partial Differential Equations: An Introduction | Walter Strauss | 2007 | — | Accessible introduction to PDEs: wave equation, heat equation, Laplace equation, Fourier methods. Foundation for understanding physics simulations and neural PDE solvers. |
 | | Book | Ordinary Differential Equations | Vladimir Arnold | 1992 | — | A geometric approach to ODEs by one of the greatest mathematicians. Emphasis on qualitative behavior and phase space. Elegant and insightful. |
 | | Paper | Neural Ordinary Differential Equations | Ricky Chen et al. | 2018 | [Link](https://arxiv.org/abs/1806.07366) | The paper that introduced neural ODEs — treating neural networks as continuous dynamical systems. Seeing the math here connects this section directly to ML. |
 | | Course (Free) | Nonlinear Dynamics and Chaos | Steven Strogatz | — | [Link](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V) | Strogatz's own lectures on nonlinear dynamics. Watch alongside the textbook for the full experience. |
-| | Paper | Structured State Spaces for Sequence Modeling (S4) | Albert Gu et al. | 2021 | [Link](https://arxiv.org/abs/2111.00396) | State-space models for sequence processing — the mathematics of continuous-time dynamics applied to deep learning. Connects ODEs to modern architectures. |
+| | Paper | Efficiently Modeling Long Sequences with Structured State Spaces (S4) | Albert Gu, Karan Goel, Christopher Ré | 2021 | [Link](https://arxiv.org/abs/2111.00396) | State-space models for sequence processing — the mathematics of continuous-time dynamics applied to deep learning. Connects ODEs to modern architectures. |
 | | Book | Stochastic Differential Equations | Bernt Øksendal | 2003 | — | Introduction to SDEs, Itô calculus, and stochastic analysis. Foundation for diffusion models (DDPM, score-based generative models). Advanced but increasingly relevant. |
+| | Book (Free) | Feedback Systems: An Introduction for Scientists and Engineers | Karl J. Åström, Richard M. Murray | 2021 | [Link](https://fbswiki.org/wiki/index.php/Feedback_Systems:_An_Introduction_for_Scientists_and_Engineers) | Where linear ODEs become engineering: state-space models, stability, transfer functions, frequency response, PID, and robustness. Free 2nd-edition PDF from the authors; the bridge from 18.03 to control and to the state-space view behind S4-style models. |
+| | Book (Free) | Applied Stochastic Differential Equations | Simo Särkkä, Arno Solin | 2019 | [Link](https://users.aalto.fi/~asolin/sde-book/sde-book.pdf) | Accessible, applied introduction to SDEs and Itô calculus with numerical solution methods (Cambridge University Press). Much gentler than Øksendal and a better first book before diffusion models; free PDF and example code from the authors. |
 
 ---
 
@@ -36,7 +49,34 @@ Differential equations describe how systems evolve over time — they are the la
 2. **MIT 18.03** — Build computational fluency with ODEs.
 3. **Strogatz — Nonlinear Dynamics and Chaos** — The core text. Study phase portraits, bifurcations, and chaos.
 4. **Strogatz lectures** — Watch alongside the book.
-5. **Strauss — PDEs** — Study wave, heat, and Laplace equations for physics and scientific computing foundations.
-6. **Chen et al. — Neural ODE paper** — Connect to ML applications.
-7. **Gu et al. — S4 paper** — See differential equations powering modern sequence models.
-8. **Øksendal — SDEs** — Advanced. Study when tackling diffusion models mathematically.
+5. **Åström & Murray — Feedback Systems** — Linear systems, stability, and frequency response as engineers use them. High priority for hardware work.
+6. **Strauss — PDEs** — Study wave, heat, and Laplace equations for physics and scientific computing foundations.
+7. **Chen et al. — Neural ODE paper** — Connect to ML applications.
+8. **Gu et al. — S4 paper** — See differential equations powering modern sequence models.
+9. **Särkkä & Solin — Applied SDEs** — The accessible first book on SDEs.
+10. **Øksendal — SDEs** — Advanced. Study when tackling diffusion models mathematically.
+
+---
+
+## 🛠️ Practice
+
+1. **One RLC, four ways** — Series RLC with L = 10 mH and C = 1 µF (ω_n = 10⁴ rad/s), with R = 40 Ω, 200 Ω, and 600 Ω for ζ = 0.2, 1, 3. For the capacitor voltage under a unit step: (a) solve via characteristic roots; (b) solve via the Laplace transform; (c) write x′ = Ax + Bu and evaluate the response with `scipy.linalg.expm`; check that the ζ = 0.2 overshoot equals exp(−πζ/√(1 − ζ²)) ≈ 52.7%. Discretize at 50 kS/s with forward Euler, ZOH, and bilinear (Tustin), and compare their frequency responses with the continuous one; derive that forward Euler needs f_s > ω_n/(2ζ) = 25 kS/s here and watch it diverge at 20 kS/s. Then confirm that the S4 paper's discretized Ā and B̄ equal SciPy's bilinear `Ad` and `Bd`, implement S4's recurrence xₖ = Āxₖ₋₁ + B̄uₖ, yₖ = Cxₖ, and show that FFT convolution with the kernel K̄ = (CB̄, CĀB̄, CĀ²B̄, …) reproduces it to ~10⁻¹⁰. *(~5 h · MIT 18.03SC units on second-order constant-coefficient equations, Laplace transforms, and first-order systems; Boyce & DiPrima; 18.06 Lecture 23 (exp(At), Section 01); Gu et al., the S4 paper)*
+2. **Phase portraits** — For (a) the damped pendulum θ″ + bθ′ + sin θ = 0 and (b) Strogatz's rabbits-versus-sheep competition model: find every fixed point, linearize, classify each with the trace–determinant plane, and sketch the phase portrait by hand before confirming it with `matplotlib.streamplot` and integrated trajectories. For (a), show that the energy E = ½θ′² + 1 − cos θ is non-increasing; explain why that alone proves stability but not asymptotic stability, then close the gap with a strict Lyapunov function (add a small cross term εθθ′ and check the sign). *(~4 h · Strogatz's chapters on linear systems and the phase plane; 3Blue1Brown's differential-equations videos; Strogatz's lectures)*
+3. **Chaos, measured** — (a) Logistic map: plot the bifurcation diagram for r ∈ [2.8, 4], locate the first period-doubling points (r = 3, 1 + √6 ≈ 3.449, …), estimate Feigenbaum's δ ≈ 4.669 from successive ratios, and compute the Lyapunov exponent λ(r), checking λ(4) = ln 2. (b) Lorenz system (σ = 10, ρ = 28, β = 8/3): estimate the largest Lyapunov exponent by renormalized tangent-vector growth (≈ 0.9), reproduce Lorenz's map of successive z-maxima, and show that two integrations differing only in solver tolerance decorrelate after a time you predict from λ (from an error of 10⁻⁹ to attractor scale takes roughly 25 time units). *(~4 h · Strogatz's chapters on the Lorenz equations and one-dimensional maps; Strogatz's lectures)*
+4. **The heat equation is a distributed RC line** — A uniform RC line (resistance r and capacitance c per unit length; totals R and C; open far end) obeys v_t = v_xx/(rc) — the heat equation. (a) Solve it by separation of variables for a unit step at the near end (Dirichlet there, Neumann at the open end). (b) Implement explicit finite differences (FTCS) and show it is stable iff Δt ≤ rc·Δx²/2, by von Neumann analysis and by running just above and below the limit. (c) Find the 50% delay at the far end — about 0.38·RC, versus 0.69·RC for a single lumped RC — and compare with an N-section RC ladder (SPICE or `scipy.signal`) as N grows. *(~5 h · Strauss — the diffusion equation, separation of variables, and finite-difference stability)*
+5. **kT/C noise is an Ornstein–Uhlenbeck process** — Model an RC low-pass driven by its resistor's thermal noise as dV = −V/(RC)·dt + (√(2kT/R)/C)·dW. (a) Use Itô's formula to show the stationary variance is kT/C, independent of R. (b) Simulate it with Euler–Maruyama for R = 1 kΩ and 1 MΩ with C = 10 pF at 300 K: both should give σ ≈ 20 µV, with autocorrelation e^(−|τ|/RC). (c) Explain physically why R cancels (more noise density, less bandwidth). (d) Recognize the same equation, with time-varying coefficients, as the forward (variance-preserving) SDE of score-based diffusion models. *(~4 h · Øksendal — the Itô formula and linear SDEs such as the Ornstein–Uhlenbeck process)*
+
+**🏗️ Mini-project — A Wien-bridge oscillator is a Hopf bifurcation:** Model a Wien-bridge oscillator (non-inverting gain K, series and parallel RC arms with R = 10 kΩ and C = 10 nF, so f₀ = 1/(2πRC) ≈ 1.59 kHz) as a 2-D ODE in the two capacitor voltages, with a soft amplitude-limiting nonlinearity (a cubic term in the amplifier, or a diode-pair model). (1) Linearize: show the trace of the Jacobian is (K − 3)/RC, so the eigenvalues cross the imaginary axis at K = 3 with frequency 1/RC. (2) Show (by averaging, or numerically) that the bifurcation is supercritical: the steady amplitude grows ∝ √(K − 3) near threshold. (3) Simulate in Python and in SPICE; measure amplitude versus K and the start-up envelope growth rate, which should match the linearized real part (K − 3)/(2RC). (4) Optional bench build with an op-amp and two 1N4148s, measuring the same curves on a scope. Optional ML extension: fit a Neural ODE (`torchdiffeq`) to a start-up transient and compare its extrapolation with the physics model. Draws on Strogatz's chapters on limit cycles and Hopf bifurcations and on Chen et al., Neural ODEs. Deliverable: `projects/math/07-wien-hopf/` notebook + plots (+ bench log). Success: Hopf point within 1% of K = 3 in simulation, amplitude² linear in K − 3 near threshold (R² > 0.99), and start-up growth rate within 5% of the eigenvalue prediction. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the existence–uniqueness theorem for x′ = f(x), and give an ODE with two different solutions through the same initial point.
+2. Classify the fixed point of x′ = Ax from tr A and det A. Where are the boundaries between nodes, spirals, centers, and saddles?
+3. Why can't a 1-D autonomous ODE oscillate, and why can't a 2-D autonomous ODE be chaotic?
+4. Estimate: an RC low-pass with R = 10 kΩ and C = 100 nF drives a 12-bit ADC. How long after a full-scale step until it settles within ½ LSB?
+5. What is a Hopf bifurcation? How do supercritical and subcritical Hopf bifurcations look different on a scope as you slowly raise the gain?
+6. Misconception: "if the time step is small enough, explicit Euler is always fine." What goes wrong for stiff systems and for the explicit heat-equation scheme?
+7. Why doesn't the thermal noise voltage on a capacitor, √(kT/C), depend on the resistor that generates it?
+8. Explain to a smart friend in 3 sentences why the Laplace transform turns a linear ODE into algebra.

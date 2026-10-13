@@ -13,6 +13,17 @@ Abstract algebra studies the deep structure of symmetry through groups, rings, a
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Verify group axioms and compute subgroups, cosets, element orders, and normal subgroups for concrete groups (ℤₙ, D₄, A₄, Q₈), by hand with Cayley diagrams and by software.
+- Prove Lagrange's theorem and the First Isomorphism Theorem, and use homomorphisms and quotients to identify groups (ℤ/nℤ ≅ the n-th roots of unity, ℝ/ℤ ≅ the circle).
+- Reason rigorously about machine arithmetic as the ring ℤ/2ⁿℤ — units, inverses, and which wraparound and index-masking tricks are valid.
+- Compute in polynomial rings and finite fields (GF(2)[x], GF(2⁸)) and explain CRCs and Reed–Solomon codes in those terms, including the difference between irreducible and primitive polynomials.
+- Count objects up to symmetry with group actions (orbit–stabilizer, Burnside's lemma).
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -20,10 +31,10 @@ Abstract algebra studies the deep structure of symmetry through groups, rings, a
 | 🔑 | Book | A Book of Abstract Algebra | Charles Pinter | 2010 | — | The most accessible introduction to abstract algebra. Pinter builds from concrete examples to general theory with exceptional clarity. Covers groups, rings, fields, and Galois theory. Perfect for self-study. |
 | | Book | Algebra: Chapter 0 | Paolo Aluffi | 2009 | — | A modern, sophisticated introduction using category theory from the start. More demanding than Pinter but builds powerful mathematical perspective. Excellent for those heading toward advanced mathematics. |
 | | Book (Free) | Abstract Algebra: Theory and Applications | Thomas Judson | — | [Link](http://abstract.ups.edu/) | Free, comprehensive textbook covering groups, rings, fields, and applications (coding theory, crystallography). Good alternative to Pinter. |
-| | Video Series | Visual Group Theory | Nathan Carter | — | [Link](https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv) | Beautiful visual approach to group theory. Cayley diagrams, symmetry groups, and group actions made visual. Excellent supplement. |
+| | Video Series | Visual Group Theory | Matthew Macauley | — | [Link](https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv) | University lecture series built on Nathan Carter's *Visual Group Theory* book. Cayley diagrams, symmetry groups, and group actions made visual. Excellent supplement. |
 | | Course (Free) | Harvard Abstract Algebra | Benedict Gross | — | [Link](https://www.youtube.com/playlist?list=PLelIK3uylPMGzHBuR3hLMHrYfMqWWsmx5) | Excellent lecture series covering groups, rings, and fields with emphasis on examples and applications. |
 | | Book | Topics in Algebra | I.N. Herstein | 1975 | — | Classic graduate text with notoriously good exercises. Known for building algebraic maturity through challenging problems. |
-| | Paper | Equivariant Neural Networks | — | — | — | Collection of papers on equivariant architectures (E(n)-GNNs, SE(3)-Transformers) that directly apply group theory to deep learning. See Section 13 of the ML curriculum. |
+| | Paper | Group Equivariant Convolutional Networks | Taco Cohen, Max Welling | 2016 | [Link](https://arxiv.org/abs/1602.07576) | The paper that brought group theory into deep learning: generalizes convolution from translations to rotations and reflections so the network is equivariant by construction. Later equivariant architectures (E(n)-GNNs, SE(3)-Transformers) are in [Section 13 of the ML curriculum](../../ml/13-graphs-geometry-and-science/README.md). |
 | | Book | Algebra | Serge Lang | 2002 | — | Comprehensive graduate reference covering everything from basic group theory to commutative algebra and homological algebra. The encyclopedic reference. |
 | | Book | Visual Group Theory | Nathan Carter | 2009 | — | Companion to the video series. Uses visual diagrams and concrete examples to make group theory intuitive before formalism. |
 
@@ -31,9 +42,36 @@ Abstract algebra studies the deep structure of symmetry through groups, rings, a
 
 ## Suggested Order
 
-1. **Visual Group Theory (videos)** — Start here for intuitive, visual introduction to groups and symmetry.
+1. **Visual Group Theory (videos + Carter's book)** — Start here for intuitive, visual introduction to groups and symmetry.
 2. **Pinter — A Book of Abstract Algebra** — The core text for self-study. Work through groups, then rings, then fields.
 3. **Judson — Abstract Algebra: Theory and Applications** — Free supplement with additional exercises and applications.
 4. **Gross — Harvard lectures** — Watch for a different perspective and deeper examples.
-5. **Aluffi — Algebra: Chapter 0** — Read for the modern, category-theoretic perspective when ready.
-6. **Herstein or Lang** — Advanced references for deeper study.
+5. **Number theory and cryptography → [Section 13](../13-number-theory-and-cryptography/README.md)** — Once you have groups and finite fields, continue there (Hoffstein, Pipher & Silverman) for the algebra behind Bitcoin's keys and signatures.
+6. **Cohen & Welling — G-CNNs** — See group theory as an architectural principle in deep learning.
+7. **Aluffi — Algebra: Chapter 0** — Read for the modern, category-theoretic perspective when ready.
+8. **Herstein or Lang** — Advanced references for deeper study.
+
+---
+
+## 🛠️ Practice
+
+1. **D₄ by hand and by machine** — Draw the Cayley diagram of D₄ (the symmetries of a square) for generators r and s, build its Cayley table, find all of its subgroups (there are 10) and the normal ones (6), and draw the subgroup lattice. Verify everything with `sympy.combinatorics` or SageMath. Then prove Lagrange's theorem (cosets partition the group into equal-size pieces) and show its converse fails: A₄ has order 12 but no subgroup of order 6. *(~4 h · Visual Group Theory — Macauley's videos and Carter's book — and Group Explorer; Pinter's chapters on subgroups and counting cosets; Judson's chapter on cosets and Lagrange's theorem, with its Sage exercises)*
+2. **Homomorphisms, quotients, and a DDS phase accumulator** — Prove: the kernel of a homomorphism is a normal subgroup; the First Isomorphism Theorem; ℤ/nℤ is isomorphic to the group of n-th roots of unity; ℝ/ℤ is isomorphic to the unit circle under multiplication (via t ↦ e^(2πit)). Then apply it: an N-bit DDS phase accumulator computes k ↦ k·M mod 2ᴺ, a homomorphism ℤ → ℤ/2ᴺℤ followed by the embedding of ℤ/2ᴺℤ into the circle. Derive the output frequency f = M·f_clk/2ᴺ, say which frequencies are exactly representable, and explain why the accumulator's "overflow" is the whole point rather than a bug. *(~4 h · Pinter's chapters on homomorphisms, quotient groups, and the fundamental homomorphism theorem; Gross's Harvard lectures on homomorphisms)*
+3. **Firmware arithmetic is ℤ/2³²ℤ** — (a) Prove the units of ℤ/2³²ℤ are exactly the odd residues (2³¹ of them) and form a group. (b) Prove that if a·x ≡ 1 (mod 2ᵏ) then a·x(2 − a·x) ≡ 1 (mod 2²ᵏ); deduce that, starting from x₀ = a (already correct mod 8, since every odd square is ≡ 1 mod 8), four Newton steps give a⁻¹ mod 2³². Implement it in C and check all 2³¹ odd a exhaustively (seconds). (c) A ring buffer with free-running `uint32_t` head and tail: prove count = (head − tail) mod 2³² stays correct across wraparound whenever the true count is < 2³², and that `idx = head & (N − 1)` is valid because reduction ℤ/2³²ℤ → ℤ/Nℤ is a well-defined ring homomorphism exactly when N divides 2³². *(~4 h · Judson's chapters on the integers and cyclic groups; Pinter's chapters on rings, ideals, and quotient rings; Velleman Ch. 7 (Section 00) if modular arithmetic is rusty)*
+4. **CRCs are polynomial division over GF(2)** — Implement CRC-8 with generator g(x) = x⁸ + x² + x + 1 (0x07, the SMBus PEC polynomial), bitwise and table-driven; confirm the standard check value CRC("123456789") = 0xF4, and check your CRC-32 against `zlib.crc32` (0xCBF43926). Prove: (a) with zero initial value and no final XOR, the CRC is linear over GF(2); (b) it detects every single-bit error; (c) it detects every odd number of bit errors iff (x + 1) divides g(x) (check that it does here); (d) it detects every burst of length ≤ 8. Then find by brute force the minimum weight of an undetected error pattern for 64-bit payloads (you should find 4) and explain that answer without a computer — three facts suffice: the weight of g itself, part (c), and the order of x modulo g(x). *(~4 h · Judson's chapters on algebraic coding theory, polynomials, and finite fields)*
+5. **Counting up to symmetry** — Use Burnside's lemma to count: 2-colorings of a square's vertices up to D₄ (6); binary necklaces of length 8 up to rotation (36) and up to rotation and reflection (30); then 3 × 3 binary pixel patterns up to the 8 symmetries of the square (102). Confirm each count by brute-force canonicalization in Python. Optional Lean 4: Mathlib contains Lagrange's theorem — locate it with `exact?` and use it to prove that every element's order divides the order of a finite group. *(~3 h · Judson's chapter on group actions; Visual Group Theory on orbits and stabilizers)*
+
+**🏗️ Mini-project — Reed–Solomon erasure coding over GF(2⁸):** (1) Implement GF(2⁸) with the primitive polynomial x⁸ + x⁴ + x³ + x² + 1 (0x11D) using log/antilog tables; verify the field axioms exhaustively (all 2¹⁶ products and every inverse; distributivity on all 2²⁴ triples in C, or on 10⁶ random triples in Python). (2) Show that x generates the multiplicative group (order 255) for 0x11D but has order only 51 in the AES field (0x11B), where x + 1 is a generator instead: irreducible is not the same as primitive. (3) Implement a systematic RS(n, k) erasure code (e.g., k = 10 data shards, n = 14) by treating each byte position of the data shards as values of a polynomial of degree < k, evaluating it at n − k further points for parity, and decoding any k surviving shards by Lagrange interpolation over GF(2⁸). Prove the any-k-of-n property: a nonzero polynomial of degree < k has fewer than k roots. (4) Fuzz it: 10⁵ random patterns of ≤ n − k erasures must all recover; then show by counting dimensions why no decoder can recover from n − k + 1 erasures. Draws on Judson's finite-field chapters and Pinter's chapters on polynomial rings and field extensions. Deliverable: `projects/math/08-reed-solomon/` (Python first; an optional C port for an MCU logging to flash or SD). Success: all axiom checks pass, 100% recovery for ≤ n − k erasures, and a written proof of the any-k-of-n property. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State Lagrange's theorem. Must a group of order 12 contain a subgroup of order 6?
+2. What is a normal subgroup, and why is normality exactly the condition you need to form a quotient group?
+3. State the First Isomorphism Theorem and use it to show that ℝ/ℤ is isomorphic to the circle group.
+4. Why is ℤ/nℤ a field iff n is prime — and how, then, can a field with 256 elements exist when ℤ/256ℤ isn't one?
+5. Misconception: "any irreducible polynomial gives a field in which x generates every nonzero element." What is the counterexample in AES's field, and what is the correct notion?
+6. Estimate: how many elements of ℤ/2³²ℤ have multiplicative inverses, and which ones are they?
+7. Why does a CRC whose generator is divisible by (x + 1) catch every error that flips an odd number of bits?
+8. Explain to a smart friend in 3 sentences what a group is and why the symmetries of any object form one.

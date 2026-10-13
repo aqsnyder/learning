@@ -12,6 +12,17 @@ Linear algebra is the single most important mathematical subject for modern scie
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Compute bases for the four fundamental subspaces of a matrix and interpret them physically for a circuit's incidence matrix (node potentials, KCL, independent loops).
+- Prove the core structure theorems in Axler's style: the Fundamental Theorem of Linear Maps (rank–nullity), injective ⇔ surjective for operators on finite-dimensional spaces, and existence of eigenvalues over ℂ without determinants.
+- Solve least-squares problems via normal equations, QR, and SVD, and predict digit loss from condition numbers (κ(AᵀA) = κ(A)²), including why you scale before fitting.
+- Build and justify low-rank approximations with the SVD and the Eckart–Young theorem, choosing the rank from the singular-value spectrum relative to a noise floor.
+- Explain and verify that the DFT diagonalizes every circulant matrix, linking eigenvectors to circular convolution and FIR frequency response.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -26,6 +37,7 @@ Linear algebra is the single most important mathematical subject for modern scie
 | | Course (Free) | MIT 18.065 Matrix Methods in Data Analysis | Gilbert Strang | 2018 | [Link](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) | Strang's follow-up course connecting linear algebra to data science, deep learning, and signal processing. Bridge to ML applications. |
 | | Book (Free) | Mathematics for Machine Learning (Ch. 2–4) | Deisenroth, Faisal, Ong | 2020 | [Link](https://mml-book.github.io/) | Chapters 2–4 cover linear algebra, analytic geometry, and matrix decompositions specifically targeted at ML. Good for connecting theory to practice. |
 | | Paper | The Matrix Cookbook | Kaare Brandt Petersen, Michael Pedersen | 2012 | [Link](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf) | Essential reference sheet for matrix identities, derivatives, and decompositions. Keep this bookmarked. |
+| | Book (Free) | Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares | Stephen Boyd, Lieven Vandenberghe | 2018 | [Link](https://web.stanford.edu/~boyd/vmls/) | Linear algebra from an engineer's point of view: least squares, data fitting, regression, control, and state estimation, with a free PDF, slides, and lecture videos. The bridge from 18.06 to real applications and to *Convex Optimization* (Section 04). |
 
 ---
 
@@ -33,7 +45,33 @@ Linear algebra is the single most important mathematical subject for modern scie
 
 1. **3Blue1Brown — Essence of Linear Algebra** — Start here. Build geometric intuition before formalism.
 2. **MIT 18.06 (Strang)** — Work through the lectures and problem sets. This builds both computational skill and conceptual understanding.
-3. **Linear Algebra Done Right (Axler)** — Read for the proof-based, abstract perspective. This is where you learn to think about vector spaces as mathematical objects.
-4. **MIT 18.065** — Bridge to applications in data science and ML.
-5. **Matrix Cookbook** — Keep as a reference for matrix calculus and identities.
-6. **MML Book (Ch. 2–4)** — Review for ML-specific framing.
+3. **Boyd & Vandenberghe — Introduction to Applied Linear Algebra** — Read alongside or right after 18.06 for least squares, estimation, and control applications.
+4. **Linear Algebra Done Right (Axler)** — Read for the proof-based, abstract perspective. This is where you learn to think about vector spaces as mathematical objects.
+5. **MIT 18.065** — Bridge to applications in data science and ML.
+6. **Numerical linear algebra → [Section 14](../14-numerical-methods-and-scientific-computing/README.md)** — When you need to trust (or debug) computed results, continue with Trefethen & Bau there: conditioning, stability, and the algorithms behind solvers and the SVD.
+7. **Matrix Cookbook** — Keep as a reference for matrix calculus and identities.
+8. **MML Book (Ch. 2–4)** — Review for ML-specific framing.
+
+---
+
+## 🛠️ Practice
+
+1. **A circuit's four subspaces** — Model a Wheatstone bridge as a graph: 4 nodes (top, left, right, bottom) and 5 resistor edges — R₁ = 1 k top–left, R₂ = 2 k left–bottom, R₃ = 1.5 k top–right, R₄ = 3 k right–bottom, detector 10 k left–right. Write the 5 × 4 incidence matrix A by hand, find bases for C(A), N(A), C(Aᵀ), N(Aᵀ), and say what each means physically (N(A): constant potentials; N(Aᵀ): loop currents that satisfy KCL; expect dimensions 3, 1, 3, 2). Inject 1 mA at the top node, ground the bottom node, and solve AᵀCA·x = f for the node voltages (C = diag(1/R)). Check: these ratios balance the bridge, so the detector current is zero; then change R₄ to 3.3 k and match an LTspice/ngspice operating point to 4 significant figures. Finish with 18.06 Problem Set 5 (Strang §§4.1, 4.2, 8.2) against the posted solutions. *(~5 h · 18.06 Lectures 10 & 12; 18.06 Problem Set 5; 3Blue1Brown on column space and null space)*
+2. **Axler proof set** — Prove each from the definitions before reading Axler's version: (a) the Fundamental Theorem of Linear Maps, dim V = dim null T + dim range T; (b) for an operator T on a finite-dimensional V, injective ⇔ surjective ⇔ invertible — then show both directions fail on the polynomials 𝒫(ℝ) (multiplication by x is injective, not surjective; differentiation is surjective, not injective); (c) every operator on a nonzero finite-dimensional complex vector space has an eigenvalue, via Axler's determinant-free argument with the dependent list v, Tv, …, Tⁿv — and show where it breaks over ℝ (rotation by 90°); (d) eigenvectors for distinct eigenvalues are linearly independent. Optional Lean 4: state (b) for finite-dimensional spaces in Mathlib, prove it from rank–nullity, then compare with the library lemma you find via `exact?`. *(~6 h · Axler, Linear Algebra Done Right Ch. 2, 3, 5)*
+3. **Least squares three ways: a thermistor calibration** — Simulate 200 (ADC code, temperature) pairs for an NTC thermistor over 0–70 °C (β = 3950 K, R₂₅ = 10 kΩ, 10 kΩ divider, 12-bit ADC) with 0.05 °C noise; a degree-7 polynomial T(code) has model error ≈ 0.015 °C there, below the noise. Fit it by (a) normal equations, (b) QR, and (c) SVD (`np.linalg.lstsq`), first on raw codes and then on codes centered and scaled to [−1, 1]. Derive the normal equations twice: by differentiating ‖Ax − b‖² with Matrix Cookbook identities, and from orthogonality of the residual to C(A). Report κ(A), κ(AᵀA), the coefficients, and the max error of each fitted curve. On raw codes κ(A) ≈ 10²⁸, yet you'll likely find QR and even the normal equations still fit to ≈ 0.03 °C while `lstsq` is off by degrees — explain why (how much of that κ is mere column scaling, and what does `lstsq`'s default rank cutoff throw away?). Then show that scaling (κ(A) ≈ 250) makes all three agree, and use κ(AᵀA) = κ(A)² to predict how many digits each method keeps. *(~3 h · 18.06 Lectures 15–16; 18.065 Lecture 9 (four ways to solve least squares); The Matrix Cookbook; Meyer on conditioning)*
+4. **Circulants are diagonalized by the DFT** — Build the 8 × 8 circulant C whose first column is the FIR kernel h = [0.25, 0.5, 0.25, 0, 0, 0, 0, 0]. Show numerically that F C F⁻¹ is diagonal (F = `np.fft.fft(np.eye(8))`), that its diagonal is `np.fft.fft(h)` (the sampled frequency response), and that C x = ifft(fft(h) · fft(x)). Then prove it: every Fourier vector is an eigenvector of the cyclic shift P, and C is a polynomial in P. Finally, explain why linear (non-circular) convolution of lengths N and M needs zero-padding to at least N + M − 1. Check: largest off-diagonal magnitude < 10⁻¹². *(~3 h · 18.065 Lectures 30–31 (circulants, Fourier matrix); 18.06 Lecture 26 (complex matrices, FFT); 3Blue1Brown on change of basis and eigenvectors)*
+
+**🏗️ Mini-project — Low-rank denoising of multichannel sensor data:** Simulate a 16-channel × 10,000-sample recording: three latent sources (50 Hz mains pickup, a 7 Hz vibration, a slow thermal drift) mixed into the channels by a random 16 × 3 matrix, plus white noise of standard deviation σ — or record the real thing (several ADC channels on a dev board picking up a shared interference source). Compute the SVD; plot singular values on a log scale against the noise edge ≈ σ(√m + √n); reconstruct at rank k = 1…8 and plot SNR versus k. Verify Eckart–Young numerically: ‖A − A_k‖₂ = σ_(k+1) and ‖A − A_k‖²_F = Σ_(i>k) σᵢ² to ~10⁻¹⁰ relative. Then lower one source's amplitude until its singular value sinks into the noise, predicting the failure threshold before the sweep confirms it. Draws on 18.065 Lecture 7 (Eckart–Young), MML Ch. 4, and 18.06 Problem Set 10 (SVD). Deliverable: `projects/math/01-svd-denoise/` notebook + half-page write-up. Success: both identities hold, your chosen k equals the number of sources whenever they clear the noise edge, and the predicted failure threshold matches the sweep. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the Fundamental Theorem of Linear Maps and use it to show that no linear map ℝ⁵ → ℝ³ is injective.
+2. For an m × n matrix of rank r, give the dimension of each of the four fundamental subspaces and say which pairs are orthogonal complements.
+3. Why does solving least squares through the normal equations lose roughly twice as many digits as QR?
+4. Misconception check: "every square matrix has a basis of eigenvectors" and "eigenvectors are always orthogonal." Give a counterexample to each, and name the class of real matrices that always has an orthonormal basis of eigenvectors.
+5. What does the SVD say about the image of the unit sphere under A? What does the largest singular value measure?
+6. Estimate: roughly how many flops does LU factorization of a dense 1000 × 1000 matrix take, and how long is that on a laptop sustaining ~10 GFLOP/s?
+7. Why does the incidence matrix of a connected graph with n nodes have rank n − 1, and what physical fact does its nullspace encode?
+8. Explain to a smart friend in 3 sentences why the DFT diagonalizes every circulant matrix — that is, why sinusoids are eigenvectors of LTI filters.

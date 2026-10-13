@@ -13,6 +13,17 @@ Calculus is the mathematics of change, and real analysis is its rigorous foundat
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Write ε–δ and ε–N proofs about limits, continuity, and uniform continuity, and prove the main consequences of completeness (Monotone Convergence, Bolzano–Weierstrass, Extreme Value Theorem).
+- Distinguish pointwise from uniform convergence, and use the distinction to explain the Gibbs phenomenon and when limits, sums, and integrals can be interchanged.
+- Bound approximation error with Taylor's theorem (Lagrange remainder) and the Mean Value Theorem, and turn that bound into an implementation decision such as polynomial degree or fixed-point word length.
+- Compute gradients and Jacobians of multivariable functions and use them for linearized error propagation, checking the result against Monte Carlo.
+- Explain what Lebesgue integration fixes (the Dirichlet function, limits of integrals) and apply the Monotone and Dominated Convergence Theorems with their hypotheses checked.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -27,6 +38,8 @@ Calculus is the mathematics of change, and real analysis is its rigorous foundat
 | | Book | Principles of Mathematical Analysis (Baby Rudin) | Walter Rudin | 1976 | — | The classic graduate analysis text. Extremely concise and demanding. Not a first book, but a benchmark for mathematical maturity. |
 | | Book (Free) | Active Calculus | Matt Boelkins | — | [Link](https://activecalculus.org/) | Free, activity-based approach to calculus. Good supplement for hands-on practice with computational techniques. |
 | | Book | Vector Calculus, Linear Algebra, and Differential Forms | Hubbard & Hubbard | 2015 | — | Unified treatment connecting multivariable calculus with linear algebra and differential forms. Excellent for building a cohesive picture. |
+| | Book | Visual Complex Analysis | Tristan Needham | 2023 | — | Complex analysis made geometric (25th-anniversary edition of the 1997 classic): complex multiplication as rotation-and-scaling, conformal maps, and contour integration. This is the math under phasors, Laplace and z-transforms, and pole-zero plots — essential for an electrical engineer. |
+| | Course (Free) | MIT 18.04 Complex Variables with Applications | Jeremy Orloff | 2018 | [Link](https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/) | Engineering-oriented complex analysis with complete notes and solved problem sets: analytic and harmonic functions, techniques for hard integrals, Laplace and Fourier transforms, and 2D fluid flow. The structured companion to Needham. |
 
 ---
 
@@ -36,6 +49,32 @@ Calculus is the mathematics of change, and real analysis is its rigorous foundat
 2. **MIT 18.01 / Khan Academy** — Build computational fluency if needed. Skip if you're already comfortable with single-variable calculus.
 3. **Understanding Analysis (Abbott)** — The core text. Work through this to build rigorous understanding of limits, continuity, and convergence.
 4. **MIT 18.02** — Multivariable calculus: gradients, Jacobians, and multiple integrals. Essential for optimization.
-5. **Spivak** — Optional but rewarding. Use for deeper single-variable mastery and as a bridge to analysis.
-6. **Axler — Measure, Integration & Real Analysis** — Tackle when ready for measure theory, needed for rigorous probability.
-7. **Rudin** — Reference and challenge text. Don't start here, but aspire to read it eventually.
+5. **Needham — Visual Complex Analysis + MIT 18.04** — Complex analysis. Do this before Fourier/Laplace-heavy work (Section 07 and signal processing).
+6. **Spivak** — Optional but rewarding. Use for deeper single-variable mastery and as a bridge to analysis.
+7. **Axler — Measure, Integration & Real Analysis** — Tackle when ready for measure theory, needed for rigorous probability.
+8. **Rudin** — Reference and challenge text. Don't start here, but aspire to read it eventually.
+
+---
+
+## 🛠️ Practice
+
+1. **Completeness, proved** — Starting from the Axiom of Completeness, prove: (a) the Monotone Convergence Theorem; (b) (1 + 1/n)ⁿ is increasing and bounded above, hence converges; (c) Bolzano–Weierstrass; (d) a continuous function on [a, b] is bounded and attains its maximum; (e) every continuous function on [a, b] is uniformly continuous, while x² on ℝ and 1/x on (0, 1] are not. For each of (a)–(d), give a counterexample showing the statement fails over ℚ and mark the line of your proof that used completeness. *(~6 h · Abbott, Understanding Analysis — chapters on the real numbers, sequences and series, the topology of ℝ, and continuity; Spivak for extra problems)*
+2. **Rearranging a conditionally convergent series** — Implement the greedy rearrangement of the alternating harmonic series (take positive terms until the partial sum exceeds the target, then negative terms until it falls below) and drive it to π, to −2, and, with a target that keeps rising, to +∞; plot 10⁶ partial sums. Prove (a) the rearranged series converges to the target (after each switch the error is at most the last term used, and the terms → 0), and (b) every rearrangement of an absolutely convergent series has the same sum. *(~3 h · Abbott's discussion of rearrangements and the section on properties of infinite series)*
+3. **Gibbs, uniform convergence, and windows** — Compute Fourier partial sums S_N of a ±1 square wave for N = 10, 100, 1000 on a grid fine enough to resolve the first peak, and show the peak tends to (2/π)·Si(π) ≈ 1.179: an overshoot of about 9% of the jump that narrows but never shrinks. Prove the convergence can't be uniform on any interval containing the jump (a uniform limit of continuous functions is continuous). Then replace S_N by Fejér (Cesàro) means and show the overshoot disappears because the Fejér kernel is nonnegative, at the price of a wider transition — the same trade as rectangular versus triangular (Bartlett) windowing in FIR filter design. *(~3 h · Abbott — uniform convergence of sequences and series of functions, and the Fourier-series section; 3Blue1Brown for intuition)*
+4. **Gradients versus Monte Carlo** — For a divider feeding an ADC, V = V_ref·R₂/(R₁ + R₂) with R₁ = R₂ = 10 kΩ, compute ∇V with respect to (V_ref, R₁, R₂) by hand and the linearized σ_V for independent Gaussian errors of 0.1% on each resistor and 0.05% on the reference. Compare with a 10⁶-sample Monte Carlo (they should agree to about 1%). Inflate one tolerance to 10% and show where linearization breaks, using the second-order Taylor term to predict the bias you observe. Repeat for a Wheatstone bridge, writing the Jacobian of the map (R₁, …, R₄) ↦ (V_left, V_right). *(~3 h · MIT 18.02SC unit on partial derivatives; Hubbard & Hubbard on the derivative as a linear map; Khan Academy multivariable calculus for gaps)*
+5. **Why measure theory** — (a) Show the Dirichlet function 1_ℚ on [0, 1] is not Riemann integrable but has Lebesgue integral 0. (b) Show the Cantor set is uncountable yet has measure zero. (c) Let fₙ = n·1_(0, 1/n): fₙ → 0 pointwise but ∫fₙ = 1 for every n — identify which hypothesis of the Monotone and Dominated Convergence Theorems fails. (d) Use the DCT to justify lim ∫₀¹ xⁿ dx = 0, and to differentiate ∫₀^∞ e^(−tx²) dx under the integral sign for t > 0, naming your dominating function. *(~4 h · Axler, Measure, Integration & Real Analysis — chapters on measures and on integration; Abbott's Lebesgue-criterion section as a bridge)*
+
+**🏗️ Mini-project — Certified fixed-point sine:** Implement `int16_t sin_q15(uint16_t phase)` (phase covers one full turn) using range reduction to [−π/2, π/2] and an odd polynomial evaluated by Horner's rule in 32-bit integer arithmetic. (1) Choose the degree with a proof: the Lagrange remainder shows Taylor needs degree 9 for error below 2⁻¹⁵ and degree 7 is not enough; then fit a degree-7 Chebyshev/near-minimax polynomial (`numpy.polynomial.Chebyshev.interpolate`) and measure its error (~10⁻⁶). (2) Bound the rounding error: each truncating multiply adds at most one unit of the intermediate format; propagate those errors through Horner's scheme with the triangle inequality and the Mean Value Theorem. (3) Test all 65,536 inputs against double precision on the host, optionally rerun on an STM32, and plot the error histogram. Draws on Abbott's sections on Taylor series and the Weierstrass Approximation Theorem and MIT 18.01SC's Taylor-series material. Deliverable: `projects/math/02-fixed-point-sine/` with the derivation, C code, and test report. Success: measured max error ≤ your proven bound (approximation + rounding) and ≤ 2 LSB, and you can say which error source dominates and why. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the Axiom of Completeness, and name a theorem of calculus that is false over ℚ.
+2. Define uniform continuity. Why is every continuous function on [a, b] uniformly continuous, but 1/x on (0, 1] not?
+3. Why can't the Fourier partial sums of a square wave converge uniformly — and what does that have to do with ringing in a truncated-sinc FIR filter?
+4. Estimate: how many terms of the Taylor series of eˣ at 0 guarantee error below 10⁻⁶ on [0, 1]? Show the remainder bound.
+5. Misconception: "if fₙ → f pointwise, then ∫fₙ → ∫f." Give a counterexample and name the theorem, with its key hypothesis, that rescues the conclusion.
+6. Use the Mean Value Theorem to show |sin a − sin b| ≤ |a − b|.
+7. Can rearranging the terms of a convergent series change its sum? When — and why never for an absolutely convergent series?
+8. Explain to a smart friend in 3 sentences why mathematicians needed ε–δ at all, when Newton and Leibniz got along without it.

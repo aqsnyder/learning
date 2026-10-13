@@ -6,18 +6,32 @@ Before you can learn any advanced mathematics, you need to learn how mathematici
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Translate informal and engineering statements (the ε–δ definition of continuity, a datasheet spec) into quantified logic, and negate them correctly by pushing ¬ through every quantifier.
+- Choose and execute the right proof technique — direct, contrapositive, contradiction, cases, ordinary or strong induction — and write each step so it cites a definition, a prior result, or algebra.
+- Prove statements about sets, functions (injective, surjective, inverses), and equivalence relations, and compare infinite cardinalities using bijections, Cantor's diagonal argument, and Schröder–Bernstein.
+- Specify a small algorithm as a quantified statement, prove it correct with a loop invariant plus a well-ordering termination argument, and identify where machine arithmetic breaks the proof's assumptions.
+- Diagnose a flawed proof (e.g., "all horses are the same color") and use Pólya's four phases to get unstuck on an unfamiliar problem.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Book | How to Prove It: A Structured Approach | Daniel Velleman | 2019 | — | The definitive guide to learning mathematical proof. Covers logic, sets, relations, functions, and proof techniques (direct, contradiction, induction). Work through this cover-to-cover. |
 | | Book | How to Solve It | George Pólya | 1945 | — | The classic guide to mathematical problem-solving heuristics. Pólya's four-step method (understand, plan, execute, review) applies far beyond mathematics. |
-| 🔑 | Book (Free) | Book of Proof | Richard Hammack | 2013 | [Link](https://www.people.vcu.edu/~rhammack/BookOfProof/) | A free, accessible introduction to proof techniques. Excellent alternative or companion to Velleman — covers the same territory with different examples. |
-| | Book | An Introduction to Mathematical Reasoning | Peter Eccles | 2007 | — | Bridges the gap between computational math and proof-based math. Good for building confidence before tackling Velleman. |
+| 🔑 | Book (Free) | Book of Proof | Richard Hammack | 2018 | [Link](https://www.people.vcu.edu/~rhammack/BookOfProof/) | A free, accessible introduction to proof techniques (3rd edition). Excellent alternative or companion to Velleman — covers the same territory with different examples. |
+| | Book | An Introduction to Mathematical Reasoning | Peter Eccles | 1997 | — | Bridges the gap between computational math and proof-based math. Good for building confidence before tackling Velleman. |
 | | Course (Free) | Introduction to Mathematical Thinking | Keith Devlin | — | [Link](https://www.coursera.org/learn/mathematical-thinking) | Stanford professor's Coursera course focused on the transition from school math to university math. Emphasizes thinking over calculating. |
 | | Book | Discrete Mathematics with Applications | Susanna Epp | 2019 | — | Comprehensive coverage of logic, proof, sets, combinatorics, and graph theory. Excellent problem sets for building proof fluency. |
 | | Video Series | Discrete Math (Full Course) | Trefor Bazett | — | [Link](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS) | Clear, well-paced video lectures covering logic, proofs, sets, relations, and combinatorics. Good visual supplement. |
 | | Book | Naïve Set Theory | Paul Halmos | 1960 | — | A slim, elegant introduction to set theory that builds mathematical maturity. Teaches you to read and write mathematics precisely. |
+| | Course (Free) | Natural Number Game (Lean 4) | Kevin Buzzard, Jon Eugster | 2023 | [Link](https://adam.math.hhu.de/#/g/leanprover-community/nng4) | Browser-based puzzle game that builds addition, multiplication, and ≤ on the natural numbers from the axioms, one machine-checked proof at a time. The quickest way to try a proof assistant — instant feedback on whether your proof is actually correct. |
+| | Book (Free) | The Mechanics of Proof | Heather Macbeth | 2024 | [Link](https://hrmacbeth.github.io/math2001/) | An intro-to-proof textbook (Fordham Math 2001) written alongside Lean 4 code, so every exercise can be checked by the computer. Gentler than *Mathematics in Lean*; a good companion or alternative to Velleman for an engineer who likes tight feedback loops. |
+| | Course (Free) | MIT 6.042J Mathematics for Computer Science | Albert Meyer, Adam Chlipala (text: Lehman, Leighton & Meyer) | 2015 | [Link](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/) | MIT's discrete-math course for engineers, with lecture videos, problem sets, and a free open textbook: proofs and induction, number theory (modular arithmetic, RSA), graphs, counting, and discrete probability. A free, engineering-flavored alternative to Epp that also sets up the btc curriculum's cryptography. |
 
 ---
 
@@ -26,6 +40,34 @@ Before you can learn any advanced mathematics, you need to learn how mathematici
 1. **Devlin's Coursera course** — Start here if transitioning from computational/applied math. Builds the right mindset.
 2. **Book of Proof (Hammack)** — Read alongside or before Velleman. Free and accessible.
 3. **How to Prove It (Velleman)** — The core text. Work through the exercises — proofs are learned by doing, not reading.
-4. **How to Solve It (Pólya)** — Read for problem-solving strategy. Applicable to every section that follows.
-5. **Halmos — Naïve Set Theory** — Optional but valuable. Deepens set-theoretic foundations.
-6. **Epp — Discrete Mathematics** — Use as a reference and problem source throughout.
+4. **Natural Number Game (Lean 4)** — A few evenings alongside Velleman. Experiencing a proof assistant early makes "is this proof complete?" concrete.
+5. **How to Solve It (Pólya)** — Read for problem-solving strategy. Applicable to every section that follows.
+6. **Macbeth — The Mechanics of Proof** — Optional. If the Lean game clicked, work through this instead of (or after) the second half of Velleman.
+7. **Halmos — Naïve Set Theory** — Optional but valuable. Deepens set-theoretic foundations.
+8. **MIT 6.042J (Mathematics for Computer Science)** — Discrete math with lectures and a free text; its number-theory chapters are the on-ramp to cryptography.
+9. **Epp — Discrete Mathematics** — Use as a reference and problem source throughout.
+
+---
+
+## 🛠️ Practice
+
+1. **The logic of specs** — Write each statement in quantified logic, then negate it so every ¬ sits directly on an atomic formula: (a) f is continuous at a (ε–δ); (b) f is uniformly continuous on [0, 1], and name exactly which quantifier moved relative to (a); (c) the datasheet line "for every V_DD ∈ [1.8, 3.6] V and every T ∈ [−40, 85] °C, input offset < 50 µV" (its negation is precisely what one failing unit on the bench demonstrates); (d) "every bounded monotone sequence converges." Then write a ~30-line Python truth-table checker and use it to confirm P→Q ≡ ¬Q→¬P, P→Q ≢ Q→P, ¬(P∧Q) ≡ ¬P∨¬Q, and P→(Q→R) ≡ (P∧Q)→R. *(~2 h · Velleman Ch. 1–2; Hammack's chapter on logic; Bazett's logic videos)*
+2. **Proof-technique drill** — One clean proof each: (a) direct: the product of two odd integers is odd; (b) contrapositive: if n² is even then n is even; (c) contradiction: √2 is irrational, then √p for every prime p (mark the line where primality is used and say why the argument fails for √4); (d) Euclid: there are infinitely many primes; (e) Velleman's opening example: if 2ⁿ − 1 is prime then n is prime (factor 2^(ab) − 1); (f) disproof: find the smallest n ≥ 0 for which n² + n + 41 is composite, and explain why 40 successful checks proved nothing. Have NotebookLM (or a friend) hunt for any step not justified by a definition, a prior result, or algebra. *(~4 h · Hammack's chapters on direct proof, contrapositive, contradiction, and disproof; Velleman Introduction and Ch. 3)*
+3. **Induction and its failure modes** — Prove: (a) Σₖ₌₁ⁿ k³ = (n(n+1)/2)²; (b) every integer n ≥ 2 is a product of primes (strong induction); (c) every 2ⁿ × 2ⁿ board with one square removed can be tiled by L-trominoes; (d) the well-ordering principle implies induction. Then find the exact broken step in "all horses are the same color" (which n → n+1 fails, and why), and write a 5-line Python check of (a) up to n = 10⁴, stating precisely what that check does and doesn't establish. *(~3 h · Velleman Ch. 6; Hammack's induction chapter; Epp's induction sections; Bazett's induction videos)*
+4. **Functions and infinity** — Prove: (a) f: A → B (A ≠ ∅) has a left inverse iff it is injective, and a right inverse iff it is surjective (where does the right-inverse proof need the axiom of choice?); (b) ℚ is countable, via an explicit injection into ℕ; (c) Cantor's theorem — no map A → 𝒫(A) is onto — and deduce that ℝ is uncountable; (d) |[0, 1]| = |(0, 1)| twice: once by Schröder–Bernstein and once by an explicit bijection (0 ↦ ½, 1 ↦ ⅓, 1/n ↦ 1/(n+2) for n ≥ 2, every other point fixed); (e) x ~ y ⇔ x − y ∈ ℤ is an equivalence relation on ℝ — describe its classes and why the set of classes behaves like a circle. *(~4 h · Velleman Ch. 4, 5, 8; Halmos's sections on functions, the Schröder–Bernstein theorem, and countable sets; Hammack's cardinality chapter)*
+5. **Let the computer grade you (Lean 4, optional)** — Work Velleman's free companion *How To Prove It with Lean* (Lean 4, matched to the 3rd edition) through its Proofs and Mathematical Induction chapters, then formalize two of your own proofs from exercises 2–3 (e.g., "n² even ⇒ n even" and the sum of cubes). Done means the file compiles with no `sorry`. *(~5 h · Velleman, How To Prove It with Lean)*
+
+**🏗️ Mini-project — Verified integer square root:** Specify isqrt on unsigned 32-bit inputs as the quantified statement ∀n: r = isqrt(n) ⇒ r² ≤ n < (r+1)². Implement integer Newton iteration x ← ⌊(x + ⌊n/x⌋)/2⌋ from x₀ = n (handle n < 2 separately), returning x as soon as the next iterate is not smaller. Prove in prose: (i) every iterate is ≥ ⌊√n⌋ (AM–GM plus the identity ⌊⌊y⌋/2⌋ = ⌊y/2⌋); (ii) iterates strictly decrease while x > ⌊√n⌋; (iii) the loop terminates, by well-ordering; (iv) it returns exactly ⌊√n⌋. Implement it in C and test all 2³² inputs exhaustively (a few minutes on a laptop; do the spec check in 64-bit). Then compute (x + n/x)/2 in 32-bit arithmetic instead, find the single input out of 4.3 billion that now fails, and explain why your proof over ℤ didn't catch it and why random testing almost surely wouldn't. Deliverable: `projects/math/00-verified-isqrt/` with `PROOF.md`, `isqrt.c`, and the test log. Success: zero failures over all 2³² inputs, every proof line justified, and a paragraph on the gap between ℤ and `uint32_t` semantics. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Negate "∀ε > 0 ∃δ > 0 ∀x (|x − a| < δ → |f(x) − f(a)| < ε)" with no ¬ in front of any quantifier.
+2. Why is proving the contrapositive a valid proof of P → Q while proving the converse is not? Give a true statement whose converse is false.
+3. What exactly is wrong with the "all horses are the same color" induction — at which step does it fail, and why?
+4. When do you need strong induction rather than ordinary induction? Is it actually more powerful?
+5. Sketch Cantor's diagonal argument. Why doesn't the same argument "prove" that ℚ is uncountable?
+6. A relation is reflexive and symmetric. Must it be transitive? Give a counterexample, and say what an equivalence relation gives you that this one doesn't.
+7. Name Pólya's four phases and one question you'd ask yourself in each when stuck.
+8. Explain to a smart friend in 3 sentences why passing a million random tests isn't a proof — and when an exhaustive test is one.
