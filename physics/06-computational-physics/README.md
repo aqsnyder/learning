@@ -8,6 +8,17 @@ Modern physics is inseparable from computation. Most real-world physics problems
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Implement and compare ODE integrators (Euler, RK4, adaptive RK45, velocity Verlet), measure their convergence order from data, and choose between them by problem type: long-time Hamiltonian, stiff, or dissipative.
+- Assemble and solve sparse linear systems from networks and PDEs using Strang's AᵀCA framework — nodal analysis of a circuit, the Poisson and heat equations on a grid.
+- Discretize time-dependent PDEs (heat: FTCS and Crank–Nicolson; waves: leapfrog/Yee FDTD), derive their stability limits, and confirm them by deliberately breaking them.
+- Estimate power spectral densities from sampled data with correct V²/Hz normalization, windowing (ENBW, coherent gain), and Welch averaging, and validate against a known noise level.
+- Use Monte Carlo to integrate, sample, and propagate measurement uncertainty, with error bars that shrink as 1/√N.
+
+---
+
 ## Resources
 
 | # | Resource | Type | Marking | Link |
@@ -19,6 +30,7 @@ Modern physics is inseparable from computation. Most real-world physics problems
 | 5 | Computational Physics — Jos Thijssen | Book | | — |
 | 6 | A Survey of Computational Physics — Landau, Páez & Bordeianu | Book | | [compadre.org](https://www.compadre.org/PICUP/resources/Course-Materials.cfm) |
 | 7 | A Student's Guide to Python for Physical Modeling — Kinder & Nelson | Book | | — |
+| 8 | The FEniCSx Tutorial — Jørgen S. Dokken (online book, CC BY 4.0) | Book | | [jsdokken.com](https://jsdokken.com/dolfinx-tutorial/) |
 
 > 🔑 = must-read
 
@@ -30,6 +42,32 @@ Modern physics is inseparable from computation. Most real-world physics problems
 2. **Newman — Computational Physics** — Your primary textbook. Covers integration, ODEs, PDEs, Monte Carlo methods, and molecular dynamics with Python.
 3. **Giordano & Nakanishi — Computational Physics** — Alternative textbook with good coverage of chaos, fractals, and computational fluid dynamics.
 4. **MIT 18.085 (Strang)** — Lectures on the mathematical foundations: linear algebra, Fourier methods, and finite elements.
-5. **Press et al. — Numerical Recipes** — The classic reference for numerical algorithms. Use specific chapters as needed.
-6. **Thijssen — Computational Physics** — Advanced topics including quantum Monte Carlo and density functional theory.
-7. **Landau, Páez & Bordeianu** — Comprehensive survey with exercises spanning all areas of computational physics.
+5. **Dokken — The FEniCSx Tutorial** — Hands-on finite elements in Python (DOLFINx): Poisson, heat, linear elasticity, Navier–Stokes, Helmholtz, and an electromagnetics example. Turns 18.085's theory into working thermal, electrostatic, and structural simulations. It grew out of Langtangen & Logg's open-access *Solving PDEs in Python: The FEniCS Tutorial I* (Springer, 2016), which targets the older legacy FEniCS.
+6. **Press et al. — Numerical Recipes** — The classic reference for numerical algorithms. Use specific chapters as needed.
+7. **Thijssen — Computational Physics** — Advanced topics including quantum Monte Carlo and density functional theory.
+8. **Landau, Páez & Bordeianu** — Comprehensive survey with exercises spanning all areas of computational physics.
+
+---
+
+## 🛠️ Practice
+
+1. **Integrator shoot-out** — Integrate an e = 0.5 Kepler orbit for 1,000 periods with Euler, Euler–Cromer, RK4, scipy's RK45 (rtol 10⁻⁶ and 10⁻⁹), and velocity Verlet. Plot relative energy error vs time, and end-point error vs step size on log-log axes. Success: measured slopes ≈ 1 (Euler), 2 (Verlet), 4 (RK4); RK4's energy error drifts secularly while Verlet's stays bounded; you can justify which you'd use for a 10⁶-orbit run. *(~3 h · Newman Ch. 8; Giordano & Nakanishi (the solar-system chapter); Numerical Recipes (integration of ODEs))*
+2. **A DC SPICE in 100 lines** — Implement modified nodal analysis with resistors, current sources, voltage sources, and an ideal op-amp (high-gain VCVS), using `scipy.sparse`. Validate on a Wheatstone bridge and an R-2R ladder; then build an N×N grid of 1 Ω resistors and compute the resistance between adjacent and between diagonal neighbours at the center as N grows — expect 1/2 Ω and 2/π Ω. Add capacitors with backward Euler and check an RC step response. Success: grid values converge to 0.5 and 0.6366 Ω, and you can explain via AᵀCA why a resistor-only network's matrix is symmetric positive definite (and why adding voltage sources breaks definiteness). *(~4 h · Strang, MIT 18.085 (AᵀCA; networks); Newman Ch. 6)*
+3. **PSD done right** — Synthesize 10 s at 100 kS/s: white noise of known density (say 10 nV/√Hz), a 1/f component with a 100 Hz corner, and a 1 kHz sine. Implement a periodogram and a Welch estimator from scratch (Hann window, 50% overlap), normalized to V²/Hz with the window's ENBW (1.5 bins for Hann) and coherent gain (0.5) for the tone. Recover the white level within 5%, the 1/f corner, and the sine amplitude; check against `scipy.signal.welch`. Then run it on a real scope capture (e.g. your Section 02 noise data) and reconcile it with the scope's built-in FFT readout (dBV per bin → V/√Hz). *(~3 h · Numerical Recipes (power-spectrum estimation); Newman Ch. 7; Landau, Páez & Bordeianu (Fourier analysis))*
+4. **Monte Carlo uncertainty budget** — Model a PT1000 RTD in a bridge read by an instrumentation amp and a 16-bit ADC: 0.1% resistors (uniform), 25 ppm/K TCR, ±0.1% gain error, ADC noise, reference error. Propagate to temperature uncertainty two ways: first-order linear propagation with partial derivatives, and Monte Carlo with 10⁶ draws. Show the Monte Carlo standard error falling as 1/√N, rank the inputs by contribution, and widen the tolerances until linear propagation visibly fails (skewed output). Success: the two methods agree within ~5% at small tolerances, and you produce a ranked error-budget table. *(~3 h · Newman Ch. 10; Kinder & Nelson (random numbers and random walks in NumPy))*
+5. **FDTD and the CFL limit** — Implement 1D FDTD (Yee-staggered V and I) for the telegrapher's equations with a 50 Ω Thevenin source, an impedance step, and a resistive load. Show (a) exact, dispersion-free propagation at Courant number S = 1, (b) numerical dispersion on a sharp edge at S = 0.5, (c) exponential blow-up at S = 1.01. Compare reflection coefficients with Γ = (Z₂ − Z₁)/(Z₂ + Z₁), and if you built the Section 03 coupon, overlay a measured TDR trace. Success: Γ within 1% of theory and instability onset exactly above S = 1. *(~3 h · Newman Ch. 9 (PDE methods; stability analysis); Strang, MIT 18.085 (finite differences))*
+
+**🏗️ Mini-project — Thermal Model of a Real PCB:** Solve the 2D heat equation for a board treated as a thin sheet: in-plane conductance from its copper (k ≈ 390 W/m·K) and FR-4 (≈ 0.3 W/m·K) weighted by copper coverage per layer, heat sources at component footprints, and losses from both faces — natural convection h ≈ 5–10 W/m²K plus linearized radiation 4εσT³ ≈ 5.5 W/m²K. Use your sparse-matrix machinery for steady state and Crank–Nicolson for transients. Validate first against an analytic fin (a strip losing heat by convection, insulated tip: T − T_∞ ∝ cosh(m(L − x)), m = √(hP/kA)), then against a real board: dissipate 0.5–2 W in a resistor or LDO and log 3–5 thermocouples or NTCs (or use a thermal camera) to steady state. Deliverable: notebook and one-page memo in `projects/physics/06-pcb-thermal/` with predicted vs measured temperature rise and time constant, plus one design change (pour, thermal vias, or placement) quantified by the model. Success: hot-spot ΔT within 15% and time constant within 25% of measurement. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What is the global error order of Euler, RK4, and velocity Verlet, and how do you measure order from data?
+2. Why does RK4 drift in energy on a Kepler orbit while the lower-order Verlet method does not?
+3. State the stability limits for FTCS on the 1D heat equation (DΔt/Δx² ≤ ½) and for 1D FDTD (cΔt ≤ Δx). What happens just past each?
+4. If a quantity's standard deviation equals its mean, roughly how many Monte Carlo samples do you need to pin the mean to three significant figures?
+5. "A longer record — finer FFT bins — gives a less noisy PSD estimate." What actually happens to the variance per bin, and what fixes it?
+6. Why is the nodal-analysis matrix of a resistor network symmetric positive definite?
+7. A 100 × 100 mm board meshed at 0.5 mm has an effective in-plane diffusivity of ~10⁻⁵ m²/s. Estimate the number of unknowns and the explicit time-step limit, compare with a thermal time constant of minutes, and say why you'd go implicit.
+8. Explain to a smart friend in 3 sentences why a symplectic integrator suits a long planetary simulation but not a stiff circuit transient.

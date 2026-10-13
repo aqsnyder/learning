@@ -2,9 +2,20 @@
 
 ## Why This Section Matters
 
-Fluid dynamics governs phenomena from weather systems and ocean currents to blood flow and aerodynamics. The Navier-Stokes equations — one of the Clay Millennium Prize Problems — describe the motion of viscous fluids and remain one of the great challenges in mathematical physics. Computational fluid dynamics (CFD) is a massive application area for high-performance computing, and increasingly for physics-informed neural networks. Understanding continuum mechanics gives you the tools to model any system where matter behaves as a continuous medium.
+Fluid dynamics governs phenomena from weather systems and ocean currents to blood flow and aerodynamics. The Navier-Stokes equations — one of the Clay Millennium Prize Problems — describe the motion of viscous fluids and remain one of the great challenges in mathematical physics. Computational fluid dynamics (CFD) is a massive application area for high-performance computing, and increasingly for physics-informed neural networks. Understanding continuum mechanics gives you the tools to model any system where matter behaves as a continuous medium. Heat transfer — conduction, convection, and thermal radiation — is the same continuum physics applied to energy, and it governs the thermal design of electronics.
 
 **Prerequisites:** [Section 00 — Classical Mechanics](../00-classical-mechanics/README.md), [Section 06 — Computational Physics](../06-computational-physics/README.md)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive the incompressible Navier–Stokes equations from mass and momentum conservation with a Newtonian stress, interpret each term, and solve the exact Couette, Poiseuille, and Hagen–Poiseuille flows.
+- Use dimensional analysis (Buckingham Π) to identify Re, St, Ra, Pr, and Nu, and estimate regimes for engineering cases: fan-cooled boards, natural convection off a warm board, wind on a mast, dust settling on an optic.
+- Explain vorticity, boundary layers (δ ~ L/√Re), and why inviscid "dry water" theory gets drag wrong — d'Alembert's paradox and its resolution.
+- Implement a 2D incompressible solver (vorticity–streamfunction) and validate it against published benchmark data.
+- Extract coherent structures and frequencies from flow data with POD (SVD) and DMD, and tie them back to physics — the Strouhal number of a cylinder wake.
 
 ---
 
@@ -12,13 +23,16 @@ Fluid dynamics governs phenomena from weather systems and ocean currents to bloo
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | Fluid Mechanics — Kundu, Cohen & Dowling | Book | 🔑 | — |
-| 2 | The Feynman Lectures on Physics — Fluid Flow chapters (Vol. 2, Ch. 40–41) | Book | | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) |
+| 1 | Fluid Mechanics (7th ed., 2024) — Kundu, Cohen, Dowling & Capecelatro | Book | 🔑 | — |
+| 2 | The Feynman Lectures on Physics — Elasticity and Fluid Flow chapters (Vol. 2, Ch. 38–41) | Book | | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) |
 | 3 | An Introduction to Fluid Dynamics — G.K. Batchelor | Book | | — |
 | 4 | MIT 18.085 Computational Science and Engineering — Gilbert Strang | Course | | [MIT OCW](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) |
 | 5 | Elementary Fluid Dynamics — D.J. Acheson | Book | | — |
 | 6 | Fluid Mechanics — Landau & Lifshitz | Book | | — |
 | 7 | Data-Driven Science and Engineering — Brunton & Kutz | Book | 🔑 | [databookuw.com](https://databookuw.com/) |
+| 8 | National Committee for Fluid Mechanics Films — Ascher Shapiro et al. (1961–1969) | Video | | [MIT](http://web.mit.edu/hml/ncfmf.html) |
+| 9 | CFD Python: 12 Steps to Navier–Stokes — Lorena A. Barba & Gilbert F. Forsyth (2013; JOSE 2018) | Course | | [GitHub](https://github.com/barbagroup/CFDPython) |
+| 10 | A Heat Transfer Textbook (6th ed., 2024) — John H. Lienhard IV & John H. Lienhard V | Book | | [ahtt.mit.edu (free PDF)](https://ahtt.mit.edu/) |
 
 > 🔑 = must-read
 
@@ -26,10 +40,37 @@ Fluid dynamics governs phenomena from weather systems and ocean currents to bloo
 
 ## Suggested Order
 
-1. **Feynman Lectures — Fluid chapters** — Feynman's intuitive introduction to viscosity, flow, and the Navier-Stokes equations.
-2. **Acheson — Elementary Fluid Dynamics** — Gentle, well-written introduction covering the essentials without overwhelming mathematics.
-3. **Kundu, Cohen & Dowling — Fluid Mechanics** — Your primary textbook. Comprehensive coverage from basic principles to turbulence and geophysical flows.
-4. **MIT 18.085 (Strang)** — Mathematical tools (finite elements, Fourier methods) needed for computational fluid dynamics.
-5. **Batchelor — An Introduction to Fluid Dynamics** — The classic, mathematically rigorous treatment. Use for deeper theoretical understanding.
-6. **Brunton & Kutz — Data-Driven Science and Engineering** — Modern approach connecting fluid dynamics to machine learning, SVD, and dynamic mode decomposition.
-7. **Landau & Lifshitz — Fluid Mechanics** — The elegant, concise reference for advanced topics.
+1. **Feynman Lectures — Elasticity and Fluid chapters** — Feynman's intuitive introduction to viscosity, flow, and the Navier-Stokes equations (Ch. 40–41). Ch. 38–39 cover elasticity — stress, strain, and elastic materials — the solid half of continuum mechanics, which no other resource here covers.
+2. **NCFMF films** — The classic 1960s MIT/NSF film series (vorticity, boundary layers, turbulence, waves in fluids, and more), with real experiments filmed to show what the equations mean. Watch the relevant film before each textbook topic.
+3. **Acheson — Elementary Fluid Dynamics** — Gentle, well-written introduction covering the essentials without overwhelming mathematics.
+4. **Kundu, Cohen, Dowling & Capecelatro — Fluid Mechanics** — Your primary textbook. Comprehensive coverage from basic principles to turbulence and geophysical flows.
+5. **Lienhard & Lienhard — A Heat Transfer Textbook** — Free, 800-page engineering text on conduction, convection, and thermal radiation: the continuum transport physics behind thermal management of electronics and the radiative exchange that thermal-IR sensors detect. Read alongside Kundu once you reach boundary layers.
+6. **MIT 18.085 (Strang)** — Mathematical tools (finite elements, Fourier methods) needed for computational fluid dynamics.
+7. **Barba — CFD Python: 12 Steps to Navier–Stokes** — Twelve short Jupyter notebooks that build from 1D linear convection through Burgers' equation and the Poisson equation to 2D cavity and channel flow. The fastest way to make Navier–Stokes concrete in code.
+8. **Batchelor — An Introduction to Fluid Dynamics** — The classic, mathematically rigorous treatment. Use for deeper theoretical understanding.
+9. **Brunton & Kutz — Data-Driven Science and Engineering** — Modern approach connecting fluid dynamics to machine learning, SVD, and dynamic mode decomposition.
+10. **Landau & Lifshitz — Fluid Mechanics** — The elegant, concise reference for advanced topics.
+
+---
+
+## 🛠️ Practice
+
+1. **Dimensionless Fermi problems** — Compute Re (and the other relevant groups) and name the regime, with one line of physics each: (a) a 10 µm dust grain settling onto a lens (Stokes: v ≈ 6 mm/s, Re ~ 10⁻³); (b) a 40 mm fan pushing 1–2 m/s over a 100 mm board (Re ~ 10⁴: laminar boundary layer a few mm thick); (c) 5–15 m/s wind on a 30 mm pole (Re ~ 10⁴, vortex shedding at St ≈ 0.2 → 33–100 Hz — could it excite a sensor's mount?); (d) a vertical 100 mm board 30 K above ambient (Ra ≈ 3×10⁶, laminar; Nu ≈ 0.59·Ra^¼ ≈ 24; h ≈ 6 W/m²K) vs linearized radiation (≈ 5.5 W/m²K). Derive the Nu ~ Ra^¼ scaling yourself from a buoyancy–viscosity–conduction balance in the boundary layer. *(~2.5 h · Kundu, Cohen & Dowling (dimensional analysis; boundary layers); Acheson; Feynman Vol. 2 Ch. 41)*
+2. **Kitchen viscometer** — Derive Hagen–Poiseuille, Q = πR⁴ΔP/(8μL). Then measure water's viscosity: a wide reservoir with ~1 m of head draining through a 25 G needle (ID ≈ 0.26 mm, L ≈ 25 mm — measure yours) into a cup on a kitchen scale, logging mass vs time. Check laminarity (Re ≈ 200), the entrance length (≈ 3 mm), and the exit kinetic-energy correction (≈ 6–7% of ΔP: ρv̄² for the developed parabolic profile, twice the plug-flow ½ρv̄²). Repeat at a second water temperature. Deliverable: result with an uncertainty budget. Success: μ within 15% of 1.0 mPa·s at 20 °C with the right temperature trend, plus a sentence on why a 5% error in the needle radius becomes a 20% error in μ. *(~3 h · Batchelor (exact viscous-flow solutions); Kundu, Cohen & Dowling (laminar flow); Feynman Vol. 2 Ch. 41)*
+3. **Lid-driven cavity** — Write a vorticity–streamfunction solver on a uniform grid: a sparse direct Poisson solve for ψ (reuse Section 06), explicit vorticity transport within the diffusive and advective stability limits, and Thom's wall-vorticity boundary condition. Run to steady state at Re = 100 and 1000 on 65² and 129² grids; compare centerline velocity profiles and the primary-vortex center with the Ghia, Ghia & Shin (1982) benchmark tables. Success: centerline u within ~2% of the benchmark at Re = 100 on 129², and visible convergence under refinement at Re = 1000. *(~6 h · Strang, MIT 18.085 (finite differences; Poisson); Kundu, Cohen & Dowling (vorticity dynamics); Newman Ch. 9 from Section 06)*
+4. **POD and DMD of a cylinder wake** — Download the cylinder-wake vorticity snapshots (Re = 100) from Brunton & Kutz's DATA.zip at databookuw.com. Compute the SVD; plot the singular-value spectrum and the first six POD modes, and explain why they come in near-degenerate pairs. Run exact DMD: eigenvalues on the unit circle, frequencies at integer multiples of the shedding frequency. Convert to a Strouhal number using the dataset's documented time step and length scale, and compare with St ≈ 0.16–0.17 at Re = 100. Success: paired POD modes, a harmonic DMD spectrum, and St within 5%. *(~4 h · Brunton & Kutz (SVD; data-driven dynamical systems and DMD))*
+
+**🏗️ Mini-project — Natural Convection in a Sealed Enclosure:** Extend your cavity solver with a temperature equation in the Boussinesq approximation. Validate on the differentially heated square cavity (Pr = 0.71) against de Vahl Davis's (1983) benchmark average Nusselt numbers — 1.118, 2.243, 4.519 at Ra = 10³, 10⁴, 10⁵. Then model a 2D cross-section of a sealed plastic enclosure with a heated vertical board inside and cooler walls, add radiation as a linearized term, and predict the board's temperature rise per watt. Test it: put a power resistor on a scrap board inside a real enclosure and log board, internal-air, and wall temperatures with thermocouples at 0.5, 1, and 2 W. Deliverable: notebook and a one-page design memo in `projects/physics/09-enclosure-convection/` giving a °C-per-watt rule for that enclosure and stating what the 2D model leaves out. Success: benchmark Nu within 3% at Ra = 10⁴ and 10⁵, and predicted board ΔT within ~25% of measurement. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the incompressible Navier–Stokes equations and name each term.
+2. What does the Reynolds number compare physically? Give its order of magnitude for a fan-cooled board and for settling dust.
+3. What is d'Alembert's paradox, and how does a thin boundary layer resolve it?
+4. Why is a capillary viscometer so sensitive to the tube radius?
+5. For natural convection off a warm board in still air, is radiation negligible? Estimate both heat-transfer coefficients.
+6. "At high Reynolds number viscosity is negligible, so the inviscid solution is right everywhere." Where and why does this fail?
+7. What do DMD eigenvalues on the unit circle mean, and how do you convert them to frequencies?
+8. Explain to a smart friend in 3 sentences why turbulence is so expensive to simulate (hint: the smallest eddies shrink like Re^(−3/4)).

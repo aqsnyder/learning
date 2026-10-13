@@ -8,16 +8,27 @@ Wave phenomena are universal in physics — from sound and light to quantum wave
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive the wave equation as the continuum limit of a discrete chain (masses on a string, or an LC ladder) and compute the exact dispersion relation, cutoff frequency, and group velocity where the continuum approximation fails.
+- Predict the Fourier spectrum of common waveforms (square wave, pulse train, Gaussian packet), and explain the time–bandwidth trade-off, spectral leakage, and windowing when you take a DFT of real oscilloscope data.
+- Compute reflection and transmission at impedance discontinuities on a string, a coax, or an optical interface with one formula, Γ = (Z_L − Z₀)/(Z_L + Z₀), and predict what a scope at the source end will show.
+- Use interference and diffraction quantitatively (grating equation, single-slit and Babinet minima, Airy radius 1.22λf/D) and decide whether diffraction or detector size limits a given optic — e.g. a thermal-IR lens at 10 µm.
+- Explain how a Fresnel lens trades image quality for thinness, and how detector size and focal length set the field of view of each zone in a lens-based IR motion sensor.
+
+---
+
 ## Resources
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | The Feynman Lectures on Physics — Waves chapters (Vol. 1, Ch. 47–51) | Book | 🔑 | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) |
+| 1 | The Feynman Lectures on Physics — Optics and Waves chapters (Vol. 1, Ch. 26–36 and 47–51) | Book | 🔑 | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) |
 | 2 | But what is a Fourier series? — 3Blue1Brown | Video | 🔑 | [YouTube](https://www.youtube.com/watch?v=r6sGWTCMz2k) |
 | 3 | But what is the Fourier Transform? — 3Blue1Brown | Video | 🔑 | [YouTube](https://www.youtube.com/watch?v=spUNpyF58BY) |
 | 4 | Waves — Frank S. Crawford (Berkeley Physics Course, Vol. 3) | Book | | — |
 | 5 | Optics — Eugene Hecht | Book | | — |
-| 6 | MIT 8.03 Vibrations and Waves — Walter Lewin | Course | | [YouTube](https://www.youtube.com/playlist?list=PLUl4u3cNGP61R5sPDPKVfcFlu95wSs2Kx) |
+| 6 | MIT 8.03SC Vibrations and Waves (Fall 2016) — Yen-Jie Lee | Course | | [YouTube](https://www.youtube.com/playlist?list=PLUl4u3cNGP61R5sPDPKVfcFlu95wSs2Kx) |
 | 7 | The Physics of Vibrations and Waves — H.J. Pain | Book | | — |
 
 > 🔑 = must-read
@@ -27,8 +38,32 @@ Wave phenomena are universal in physics — from sound and light to quantum wave
 ## Suggested Order
 
 1. **3Blue1Brown — Fourier series and Fourier Transform** — Build visual intuition for Fourier analysis before encountering it in physics contexts.
-2. **Feynman Lectures — Waves chapters** — Read Feynman's treatment of wave motion, beats, interference, and diffraction.
-3. **MIT 8.03 (Lewin)** — Watch the vibrations and waves course for demonstrations and problem-solving.
+2. **Feynman Lectures — Optics and Waves chapters** — Ch. 47–51 cover the wave equation, beats, modes, and harmonics; Ch. 26–36 cover the principle of least time, geometrical optics, interference, diffraction, the refractive index, and polarization.
+3. **MIT 8.03SC (Yen-Jie Lee)** — Watch the vibrations and waves course for demonstrations and problem-solving. Note that 8.03 assumes first-year E&M: take the electromagnetic-wave lectures after (or alongside) Section 03.
 4. **Crawford — Waves** — Deep dive into wave mechanics with excellent experimental examples.
 5. **Pain — Physics of Vibrations and Waves** — Solid alternative textbook covering waves across all domains.
-6. **Hecht — Optics** — Comprehensive optics textbook when you need detailed coverage of light and optical systems.
+6. **Hecht — Optics** — Comprehensive optics textbook when you need detailed coverage of light and optical systems. It treats light as an electromagnetic wave, so it reads best after Section 03.
+
+---
+
+## 🛠️ Practice
+
+1. **From beads to waves** — Write the equations for N masses on a stretched string with fixed ends (or an N-section LC ladder), find the normal modes analytically, then numerically with `np.linalg.eigh` on the N×N tridiagonal matrix for N = 5 and 50. Plot ω(k) against the continuum line ω = vk and the exact ω = 2ω₀ sin(ka/2); mark the cutoff 2ω₀ (for the ladder, ω_c = 2/√(LC)) and compute the group velocity dω/dk across the band. Success: numerical eigenfrequencies match the sine formula to machine precision, and the lowest modes match the continuum within 1% at N = 50. *(~2.5 h · Crawford (many-degree-of-freedom systems → continuous string); Feynman Vol. 1 Ch. 49 "Modes"; MIT 8.03SC; Pain)*
+2. **Fourier on the bench** — Predict the line spectrum of a 1 kHz square wave (odd harmonics only: 3rd at −9.54 dBc, 5th at −13.98 dBc) and of a 20%-duty pulse train (sinc envelope: 2nd at −1.8 dBc, 5th and 10th missing). Capture both on the scope at ≥ 100 kS/s, export the samples, and compute spectra in NumPy with rectangular and Hann windows, normalized to dBc. Compare with prediction and with the scope's built-in FFT. Explain every discrepancy (finite rise time, leakage, a record that isn't an integer number of periods). Success: low harmonics within 0.5 dB of prediction with the Hann window, and a demo of leakage vanishing when the record holds an integer number of periods. *(~3 h · 3Blue1Brown, "But what is a Fourier series?" and "But what is the Fourier Transform?"; Feynman Vol. 1 Ch. 50 "Harmonics")*
+3. **Reflections you can see** — Drive 5–10 m of RG-58 with a fast edge (the generator's pulse mode, or a 74HC14 oscillator through 50 Ω) and watch at the source end. Terminate the far end open, shorted, 50 Ω, 100 Ω, and 25 Ω. Measure the round-trip delay → velocity factor, and the step heights → Γ. Deliverable: annotated scope captures plus a predicted-vs-measured table. Success: velocity factor within 5% of 0.66 (solid PE dielectric), and Γ within ±0.05 of +1, −1, 0, +⅓, −⅓. *(~2.5 h · Pain (waves on transmission lines); Crawford (reflection and impedance matching))*
+4. **Laser diffraction metrology** — With a laser pointer, a tape measure, and a wall. **Safety:** use a Class 2 (< 1 mW) pointer — cheap unbranded ones, especially green, often exceed their label — never look into the beam, and keep the beam path and the CD/DVD's reflected orders below eye level. (a) measure the track pitch of a CD and a DVD from the first-order reflection angle (nominal 1.6 µm and 0.74 µm); (b) measure a hair's diameter from its diffraction minima (Babinet: same pattern as a slit of equal width); (c) photograph a small rectangular or double-slit aperture, compute its 2D FFT — the predicted Fraunhofer pattern — and compare with what you project on the wall. Report each result with an uncertainty budget (distance, angle, laser wavelength). Success: CD and DVD pitch within 5% of nominal. *(~3 h · Hecht (interference; Fraunhofer diffraction; Fourier optics); Feynman Vol. 1 Ch. 29–30)*
+
+**🏗️ Mini-project — Optics Model of a Lens-Based IR Motion Sensor:** Model a dual-element pyroelectric detector (two 1 × 2 mm elements of opposite polarity, 1 mm apart) behind a single lens zone with a ~20 mm aperture and ~20 mm focal length — substitute your own lens's numbers if you have one. In Python: (1) project each element's footprint to range R; (2) walk a 0.5 × 1.7 m warm rectangle across the field at 1–3 m/s for R = 1–50 m and compute the element-difference signal vs time from the fraction of each footprint the target covers; (3) FFT each waveform for its dominant frequency; (4) plot dominant frequency and relative peak amplitude vs range; (5) check diffraction by comparing the Airy radius at 10 µm (≈ 12 µm at f/1) with the element size, and explain why thin HDPE Fresnel lenses replace glass in the 8–14 µm band. Deliverable: notebook in `projects/physics/01-ir-optics/` plus a one-page memo recommending an analog passband and stating the signal's amplitude dynamic range between near and far targets. Success: plots agree with hand estimates (footprint ≈ R·w/f; f_sig ≈ v/(2·footprint), i.e. ≈ 7 Hz at 2 m and ≈ 0.3 Hz at 45 m for a walker), and the memo states how much larger near-field signals are — the number that sets gain staging and saturation headroom. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write d'Alembert's general solution of the 1D wave equation. What sets the wave speed on a string, and on a transmission line?
+2. Why does a 50%-duty square wave contain only odd harmonics? Which harmonics vanish at 25% duty?
+3. What is spectral leakage, and what does a Hann window buy you and cost you?
+4. A 50 Ω line is terminated in 25 Ω. What fraction of an incident voltage step reflects, with what sign, and what does a scope at the source show after one round trip?
+5. Estimate the diffraction-limited angular resolution of a 20 mm aperture at 0.5 µm and at 10 µm. For a thermal-IR motion-sensor lens with a 1 mm element at f = 20 mm, which limits resolution: diffraction or the detector?
+6. Can phase velocity exceed c? In a dispersive medium, which velocity carries energy and information?
+7. What does a Fresnel lens keep, and what does it give up, compared with a solid lens of the same focal length?
+8. Explain to a smart friend in 3 sentences why the same Fourier transform describes both a far-field diffraction pattern and your scope's FFT display.

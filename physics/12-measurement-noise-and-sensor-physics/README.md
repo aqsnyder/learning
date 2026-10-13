@@ -1,0 +1,175 @@
+# Measurement, Noise, and Sensor Physics
+
+## Why This Section Matters
+
+Every measurement is a physics experiment with a noise floor. Four effects set the smallest signal a sensor front end can resolve, long before the ADC's bit count matters:
+
+- thermal agitation in every resistor (Johnson–Nyquist noise)
+- the graininess of charge (shot noise)
+- slow fluctuations in materials (1/f noise)
+- drift in references and temperature
+
+This section gathers the physics of measurement that the rest of the curriculum only touches in passing:
+
+- where each noise source comes from, and how to budget it and verify the budget on the bench
+- how modulation and synchronous (lock-in) detection pull a signal out from under 1/f noise, drift, and thermoelectric offsets
+- how Allan deviation tells you when more averaging stops helping
+- how to turn noise into an honest uncertainty
+- how to set a detection threshold for a sensor that must not false-trigger
+
+It is the physics layer under [PCB Section 12 — Analog, Mixed-Signal and Precision Measurement](../../pcb/12-analog-mixed-signal-and-precision-measurement/README.md), which covers the board-level practice: error budgets, ADC drive, and guard layout.
+
+**Recommended position:** take this section right after Section 08. It is numbered 12 only so that existing sections keep their numbers.
+
+**Prerequisites:** [Section 02 — Thermodynamics and Statistical Mechanics](../02-thermodynamics-and-statistical-mechanics/README.md) (Johnson–Nyquist noise, fluctuation–dissipation, blackbody radiation), [Section 03 — Electromagnetism](../03-electromagnetism/README.md), [Section 08 — Condensed Matter and Materials](../08-condensed-matter-and-materials/README.md) (junctions, pyroelectrics), the PSD and Monte Carlo tools from [Section 06 — Computational Physics](../06-computational-physics/README.md), and op-amp basics from [PCB Section 00 — Electronics Fundamentals](../../pcb/00-electronics-fundamentals/README.md)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive thermal noise two ways — Nyquist's equipartition argument and Sarpeshkar's picture of opposing shot-noisy diffusion currents — and use 4kTR, 2qI, and 1/f spectra to predict which source dominates a given sensor front end.
+- Build an amplifier noise model (e_n, i_n, resistor noise), find the optimum source resistance and noise figure, integrate to rms over a band, and verify the prediction against a calibrated PSD measurement.
+- Recover signals below the noise with synchronous (lock-in) detection: choose modulation frequency, time constant, and filter order from the equivalent noise bandwidth (ENBW), and show how chopping or modulating escapes 1/f noise, drift, and thermoelectric offsets.
+- Use Allan deviation to separate white, flicker, and random-walk noise, decide how long averaging helps, and turn the result into a Type-A uncertainty for a reported reading.
+- Set detection thresholds from noise statistics (Rice's up-crossing rate) for a target false-alarm rate, and explain why real-world false alarms usually come from interference or genuine-but-unwanted signals rather than Gaussian noise.
+
+---
+
+## Resources
+
+| # | Resource | Type | Marking | Link |
+|---|----------|------|---------|------|
+| 1 | Low Level Measurements Handbook (7th ed., 2014) — Keithley (Tektronix) | Book | 🔑 | [tek.com (free PDF)](https://download.tek.com/document/LowLevelHandbook_7Ed.pdf) |
+| 2 | White Noise in MOS Transistors and Resistors — R. Sarpeshkar, T. Delbrück & C. A. Mead (1993) | Paper | 🔑 | [DOI](https://doi.org/10.1109/101.261888) |
+| 3 | Low-Frequency Fluctuations in Solids: 1/f Noise — P. Dutta & P. M. Horn (1981) | Paper | | [DOI](https://doi.org/10.1103/RevModPhys.53.497) |
+
+> 🔑 = must-read
+
+**Also used here (tracked in their home sections):**
+- Johnson (1928) and Nyquist (1928), Feynman Vol. 1 Ch. 41, and Schroeder's blackbody-radiation section ([Section 02](../02-thermodynamics-and-statistical-mechanics/README.md))
+- Haus & Melcher for quasistatic coupling and guarding ([Section 03](../03-electromagnetism/README.md))
+- Ashby's GPS review and the LIGO GW150914 letter ([Section 05](../05-special-and-general-relativity/README.md))
+- Hu's pn-junction chapter and Kittel's dielectrics and ferroelectrics chapter ([Section 08](../08-condensed-matter-and-materials/README.md))
+- the thermal-radiation chapter of Lienhard & Lienhard ([Section 09](../09-fluid-dynamics-and-continuum/README.md))
+- *The Art of Electronics* low-noise chapter ([PCB Section 00](../../pcb/00-electronics-fundamentals/README.md))
+- Ott's chapters on intrinsic noise sources and active-device noise ([PCB Section 07](../../pcb/07-emc-and-compliance/README.md))
+
+---
+
+## Suggested Order
+
+1. **Review Johnson (1928) + Nyquist (1928) and Feynman Vol. 1 Ch. 41 (Section 02)** — The physical origin of thermal noise and the fluctuation–dissipation theorem. Everything below builds on it.
+2. **Sarpeshkar, Delbrück & Mead — White Noise in MOS Transistors and Resistors** — A short paper by analog-VLSI researchers showing that thermal noise and shot noise are one phenomenon: thermal noise is the shot noise of equal and opposite diffusion currents. It also gives one consistent way to think about noise in resistors and transistors. Practice 1 reproduces its central argument.
+3. **Dutta & Horn — 1/f noise** — The classic review of the physical origins of low-frequency 1/f ("flicker") noise in metals and semiconductors. This is the noise that dominates resistors, amplifier inputs, references, and sensors at low frequencies, and the reason modulation (Practice 3) and Allan deviation (Practice 4) matter. Read the overview and the experimental sections closely; skim the theory.
+4. **Keithley — Low Level Measurements Handbook** — The bench reference for every error source that is not intrinsic noise. Read two parts:
+   - the material on measurements from high-resistance sources: leakage and guarding, noise and source resistance, triboelectric and piezoelectric currents, dielectric absorption
+   - the material on low-resistance sources: thermoelectric EMFs, four-wire measurement, current reversal
+
+   For each error source, write down the physics behind it. PCB Section 12 uses the same handbook for board-level practice.
+5. **Sensor physics cross-references** — Revisit these before the mini-project:
+   - Schroeder's blackbody section and the Section 02 Planck exercise (radiometry)
+   - Kittel's dielectrics and ferroelectrics chapter and Section 08 Practice 4 (pyroelectric detectors)
+   - Hu's pn-junction chapter (photodiodes)
+   - the thermal-radiation chapter of Lienhard & Lienhard (radiative exchange)
+6. **Case studies (Section 05)** — Two cases push the same noise-budget thinking to its extreme:
+   - Ashby's GPS review: a net relativistic clock correction of about 4.5 parts in 10¹⁰, worth ~11 km of ranging error per day if ignored
+   - the LIGO GW150914 letter: a signal of peak strain 1.0×10⁻²¹ — about 4 attometres of change in a 4 km arm — dug out of the detector noise
+7. **PCB Sections 00, 07, and 12** — The board-level counterpart: high-impedance error and noise budgets, Ott on intrinsic noise and shielding, and a full precision measurement channel.
+
+---
+
+## 🛠️ Practice
+
+1. **Thermal noise is shot noise** — Follow Sarpeshkar, Delbrück & Mead's argument.
+   - **Zero bias:** a subthreshold MOSFET (or, by the same argument, a pn junction) carries equal forward and reverse diffusion currents I_s. Each has full shot noise 2qI_s, so the total is 4qI_s. The small-signal conductance is g = qI_s/kT, so 4qI_s = 4kTg — Nyquist's result without invoking equipartition.
+   - **Forward bias:** the reverse current vanishes, and the noise becomes 2qI = ½ × 4kT/r_d.
+   - **Check these numbers at 300 K** (U_T = kT/q = 25.85 mV):
+     - I_s = 1 nA gives g = 38.7 nS (25.9 MΩ) and 25.3 fA/√Hz either way.
+     - At 1 mA forward, r_d = 25.9 Ω and the shot noise is 17.9 pA/√Hz, against 25.3 pA/√Hz for a resistor of the same value.
+   - **Write-up:** one paragraph answering two questions. Where does a resistor's noise "come from" in each picture? Why does neither picture need a net current to flow?
+
+   *(~2 h · Sarpeshkar, Delbrück & Mead; Nyquist (1928) and Feynman Vol. 1 Ch. 41 from Section 02; Hu (pn junctions))*
+2. **Noise figure, the optimum source, and a calibrated measurement** — Three parts: a model, the matching trap, and a bench measurement.
+   - **(a) Model.** Take a gain-of-101 non-inverting stage (R_f = 10 kΩ, R_g = 100 Ω) built with a bipolar-input op-amp with e_n = 4 nV/√Hz and i_n = 0.5 pA/√Hz (white region; substitute your part's datasheet values). Write the input-referred density e_ni² = e_n² + 4kT(R_s + R_p) + i_n²(R_s² + R_p²), with R_p = R_f‖R_g. Tabulate it for source resistances of 0, 1 kΩ, 10 kΩ, 100 kΩ, and 1 MΩ; at 300 K expect ≈ 4.2, 5.9, 14.4, 64.6, and 516 nV/√Hz. Check three more numbers:
+     - The noise figure bottoms out near 1 dB around R_opt = e_n/i_n = 8 kΩ.
+     - The minimum noise temperature is e_n·i_n/2k ≈ 72 K.
+     - The noise figure climbs to 12 dB at 1 MΩ, where i_n·R_s dominates.
+   - **(b) The matching trap.** Show with numbers why adding 7.9 kΩ in series with a 100 Ω source to "match" R_opt lowers the noise figure but worsens SNR by ~9 dB.
+   - **(c) Bench measurement.**
+     - Build the stage on batteries in a closed metal box, with metal-film source resistors (alkaline cells; never short a battery, and avoid unprotected lithium cells).
+     - Record the output with a 24-bit audio interface or a scope.
+     - Calibrate the voltage scale with a known 1 kHz tone through a precision divider.
+     - Compute Welch PSDs with your Section 06 Practice 3 code, staying below the R_s·C_in corner at high R_s.
+
+   Success: measured white levels within ±1 dB of the model for every R_s whose output clears the recorder's floor, and the op-amp's 1/f corner located. *(~5 h · Sarpeshkar, Delbrück & Mead; Keithley handbook (noise and source resistance); Section 06 Practice 3; The Art of Electronics low-noise chapter (PCB Section 00))*
+3. **Lock-in from scratch** — First simulate it, then build it.
+   - **(a) Simulate at 20 kS/s.** Bury a 1 µV-amplitude sine at 1234.5 Hz in 50 nV/√Hz white noise, plus 1/f noise with a 100 Hz corner and 1 mV of 50/60 Hz pickup. Demodulate with √2·sin and √2·cos references and n-pole RC filters of time constant τ. Then check:
+     - ENBW = 1/(4τ), 1/(8τ), 3/(32τ), and 5/(64τ) for n = 1–4, by numerical integration.
+     - The noise on X is e_w·√ENBW: 25 nV rms for one pole at τ = 1 s and 14 nV for four poles, against a signal of 707 nV rms.
+     - The one-pole filter lets ~0.1 µV rms of mains ripple through, while four poles bury it.
+     - Four poles take ~10τ to settle to 99%, against 4.6τ for one pole.
+
+     Then try to measure the same signal at DC by plain averaging, and explain the failure using Dutta & Horn's 1/f spectrum.
+   - **(b) Build it.**
+     - Drive an LED from an MCU timer at a frequency well away from mains harmonics.
+     - Read the Section 02 photodiode transimpedance amplifier (TIA) with ADC conversions triggered by the same timer.
+     - Demodulate in firmware or Python, and recover an LED signal 100× smaller than the room-light flicker.
+
+   Success: lock-in amplitude within 5% of a reference measurement taken in the dark, and noise on X within 20% of e_n·√ENBW computed from your measured PSD. *(~5 h · Dutta & Horn; Section 06 Practice 3; Section 02 Practice 4)*
+4. **How long should you average? Allan deviation** — Validate a tool, then use it on real data.
+   - **(a) Synthetic test.** Write an overlapping Allan-deviation function (cumulative-sum trick) and test it on 10⁶-sample series:
+     - white noise of σ per sample → σ/√τ, slope −½
+     - 1/f noise with one-sided PSD h₋₁/f → a flat floor ≈ √(2 ln 2 · h₋₁) ≈ 1.18√h₋₁
+     - a random walk (cumulative sum of unit white noise) → √(τ/3), slope +½
+   - **(b) Overnight log.** Log a voltage reference (or your TIA's dark output, or a resistor-divider ratio) at 1 S/s for ≥ 12 h, using a 6½-digit DMM over SCPI or a 24-bit ADC, with an ambient thermometer alongside. Then:
+     - Plot Allan deviation from 1 s to ~1 h and mark the white, flicker, and drift regions.
+     - Regress the drift against temperature to get a tempco.
+     - Compare your reference's fractional stability with the clock-stability numbers in Section 05's GPS exercise.
+
+   Deliverable: a notebook plus one paragraph stating the optimum averaging time and the Type-A uncertainty you would quote for a reading taken with it. Success: synthetic slopes and levels within 5% of theory, and every region of the measured plot attributed to a mechanism (front-end white noise, 1/f in the reference or resistors, thermal drift). *(~3 h + an overnight log · Dutta & Horn; Keithley handbook (offsets and drift); Ashby (Section 05))*
+5. **Thresholds and false alarms** — Rice's formula gives the rate at which stationary Gaussian noise crosses level u upward: ν_u = ν₀·exp(−u²/2σ²), with ν₀ = √(∫f²S df / ∫S df).
+   - **(a) Set the threshold.** For noise flat over 0.3–7 Hz (a motion-sensor passband), show ν₀ ≈ 4.13 s⁻¹, about 3.6×10⁵ zero up-crossings per day. Find the threshold for one false alarm per day: 5.06σ for one polarity, 5.19σ for a window comparator. One per year needs ≈ 6.1σ.
+   - **(b) Verify.** Generate band-limited Gaussian noise by FFT filtering, check Rice's formula at 2–3.5σ, and extrapolate.
+   - **(c) Pulse counting.** Show that requiring two crossings within 5 s allows a ≈ 4.0σ threshold at the same Gaussian false-alarm rate (Poisson approximation first, then simulation). Use Section 02's SNR-vs-range model to say what that buys in detection range.
+   - **(d) Real false alarms.** Write half a page on why false alarms in a passive-IR detector are rarely Gaussian noise: wind-moved vegetation at a different temperature from its background, sun-heated surfaces, RF pickup. These need discrimination by spectrum, waveform shape, or agreement between sensors, not a higher threshold.
+
+   *(~3 h · Section 06 Practice 3; the Section 02 mini-project; Section 01's lens and footprint model)*
+
+**🏗️ Mini-project — Chopped Thermopile Radiometer:** Build an instrument that measures a target's temperature from its thermal radiation, and verify the physics end to end.
+- **Hardware:**
+  - a thermopile detector with a datasheet giving responsivity, time constant, filter passband, and an on-package thermistor
+  - a mechanical chopper: a blackened slotted disc or flag on a small motor, with a slot sensor providing the reference
+  - a low-noise gain stage, and an ADC read by an MCU or Python
+  - a target: a high-emissivity painted aluminium plate (ε ≈ 0.95) on a PID-controlled heater (reuse the Section 08 mini-project block), with a reference thermometer
+- **Model first:**
+  - **Broadband estimate.** The net power is P ≈ εσ(T_t⁴ − T_d⁴)·A_d·sin²θ for a target filling a cone of half-angle θ. For a 1 mm² detector at 25 °C and θ = 30°, that is ≈ 15, 40, and 155 µW at 35, 50, and 100 °C.
+  - **Filter refinement.** Integrate Planck's law over the detector's filter band. A 5.5–14 µm band passes ~49% of a 25 °C blackbody's emission but ~59% at 100 °C, so the response is not a pure T⁴ law.
+  - **Chopper reference.** The chopped signal measures target minus blade, so log the blade's temperature.
+- **Noise budget:** thermopile Johnson noise (28.8 nV/√Hz for 50 kΩ), amplifier e_n and its 1/f region, ADC noise, and the resulting noise-equivalent temperature difference (NETD).
+- **Measure:**
+  - signal vs target temperature at 6–8 points from ambient to ~100 °C, read both at DC and chopped through the lock-in
+  - the Allan deviation of both readings over 30 min with the target held at a fixed temperature
+  - NETD at 1 s and 10 s averaging
+  - an uncertainty budget: Type A from the Allan deviation; Type B from the reference thermometer, emissivity, geometry, responsivity tempco, and detector temperature
+
+Deliverable: schematic (KiCad or breadboard photos), firmware/Python, notebook, and a short report in `projects/physics/12-chopped-radiometer/`. Success means all four of these:
+- fit residuals under 2% of full scale
+- a fitted scale factor within ±30% of datasheet responsivity × your étendue estimate
+- an explanation of where each reading's Allan deviation stops falling (the chopped reading should keep improving after the DC reading hits its drift floor)
+- a budget that names its dominant term
+
+Stretch: swap in a pyroelectric detector behind a small Fresnel lens and compare its chopped response vs range with your Section 02 budget. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the noise densities of a resistor (as a voltage and as a current) and of shot noise. Evaluate them for 1 kΩ, for 1 GΩ, and for 1 µA at 300 K.
+2. A forward-biased diode has small-signal resistance r_d = kT/qI but current noise √(2qI) — half the noise power of a resistor of value r_d. Why half, and why does the same junction at zero bias show the full 4kTg?
+3. An op-amp has e_n = 4 nV/√Hz and i_n = 0.5 pA/√Hz. What source resistance minimizes its noise figure, and why is adding series resistance to a 100 Ω source to reach it a mistake?
+4. A lock-in uses a one-pole filter with τ = 1 s. What is its ENBW, how far does the noise on X fall at τ = 10 s, and what do you pay for it?
+5. Misconception probe: "Averaging four times longer always halves the noise." What does an Allan-deviation plot show about when this holds, and which physical processes break it?
+6. Why does chopping a thermopile (or modulating an LED) defeat 1/f noise, thermoelectric offsets, and drift, and what kinds of interference does it not remove?
+7. Roughly how many σ above Gaussian noise in a 0.3–7 Hz band must a threshold sit for one false alarm per day? Why won't raising the threshold fix false triggers from wind-blown vegetation in front of a passive-IR detector?
+8. Explain to a smart friend in 3 sentences why every measurement has a noise floor even with perfect electronics.

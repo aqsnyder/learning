@@ -8,17 +8,30 @@ Relativity revolutionized our understanding of space, time, and gravity. Special
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Resolve the standard paradoxes (twin, pole-in-barn) with spacetime diagrams and the invariant interval, and apply Lorentz transformations, velocity addition, and the relativistic Doppler factor correctly.
+- Solve collision and decay problems with four-momentum invariants (threshold energies, Compton scattering) instead of frame-by-frame bookkeeping.
+- Derive gravitational redshift from the equivalence principle, compute a GPS satellite's combined special- and general-relativistic clock offset (≈ +38 µs/day, 4.5×10⁻¹⁰), and compare it with real oscillator stabilities.
+- Compute Christoffel symbols and curvature for a given metric with computer algebra, and integrate Schwarzschild geodesics to reproduce Mercury's perihelion precession and the bending of light.
+- Explain what Einstein's 1905 paper actually argued — the magnet-and-conductor asymmetry, operationally defined simultaneity — and how it differs from the "Michelson–Morley first" textbook story.
+
+---
+
 ## Resources
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | Spacetime Physics — Taylor & Wheeler | Book | 🔑 | — |
-| 2 | Special Relativity (The Theoretical Minimum) — Leonard Susskind | Course | | [YouTube](https://www.youtube.com/playlist?list=PL6i60qoDQhQGaGbbg-4aSwXJvxOqO6o5e) |
+| 1 | Spacetime Physics (2nd ed., 1992) — Taylor & Wheeler | Book | 🔑 | [eftaylor.com (free, CC BY)](https://www.eftaylor.com/spacetimephysics/) |
+| 2 | Special Relativity (The Theoretical Minimum) — Leonard Susskind | Course | | [YouTube](https://www.youtube.com/playlist?list=PLD9DDFBDC338226CA) |
 | 3 | On the Electrodynamics of Moving Bodies — Albert Einstein (1905) | Paper | 🔑 | [Link](https://www.fourmilab.ch/etexts/einstein/specrel/specrel.pdf) |
-| 4 | Spacetime and Geometry — Sean Carroll | Book | 🔑 | — |
+| 4 | Spacetime and Geometry — Sean Carroll | Book | 🔑 | [free 1997 lecture notes (arXiv)](https://arxiv.org/abs/gr-qc/9712019) |
 | 5 | Gravity: An Introduction to Einstein's General Relativity — James Hartle | Book | | — |
 | 6 | A First Course in General Relativity — Bernard Schutz | Book | | — |
 | 7 | Gravitation — Misner, Thorne & Wheeler | Book | | — |
+| 8 | Relativity in the Global Positioning System — Neil Ashby (2003) | Paper | | [Living Reviews](https://doi.org/10.12942/lrr-2003-1) |
+| 9 | Observation of Gravitational Waves from a Binary Black Hole Merger — LIGO Scientific & Virgo Collaborations (2016) | Paper | | [DOI](https://doi.org/10.1103/PhysRevLett.116.061102) |
 
 > 🔑 = must-read
 
@@ -26,10 +39,36 @@ Relativity revolutionized our understanding of space, time, and gravity. Special
 
 ## Suggested Order
 
-1. **Taylor & Wheeler — Spacetime Physics** — The best introduction to special relativity. Builds intuition through invariant intervals and spacetime diagrams.
+1. **Taylor & Wheeler — Spacetime Physics** — The best introduction to special relativity. Builds intuition through invariant intervals and spacetime diagrams. The full 2nd edition is now free to download under a Creative Commons (CC BY 4.0) licence.
 2. **Einstein — "On the Electrodynamics of Moving Bodies"** — Read the original 1905 paper. Surprisingly accessible and beautifully reasoned.
 3. **Susskind — Special Relativity** — Lectures that connect SR to the Lagrangian formalism you learned in classical mechanics.
 4. **Hartle — Gravity** — Gentle, physics-first introduction to general relativity without heavy differential geometry.
-5. **Schutz — A First Course in General Relativity** — Slightly more mathematical; excellent bridge to Carroll.
-6. **Carroll — Spacetime and Geometry** — The modern standard for learning GR properly. Covers differential geometry, Einstein's equations, black holes, and cosmology.
-7. **Misner, Thorne & Wheeler — Gravitation** — The encyclopedic classic. Use as a reference for deep dives into specific topics.
+5. **Ashby — Relativity in the Global Positioning System** — Where special and general relativity become engineering: satellite clocks run fast by about 38 µs/day net, plus Sagnac and other corrections that every GNSS receiver and timing system must handle. Read once you know gravitational time dilation from Hartle.
+6. **Schutz — A First Course in General Relativity** — Slightly more mathematical; excellent bridge to Carroll.
+7. **Carroll — Spacetime and Geometry** — The modern standard for learning GR properly. Covers differential geometry, Einstein's equations, black holes, and cosmology. Carroll's free 1997 *Lecture Notes on General Relativity* (linked) cover much of the same ground if you want to start before buying the book.
+8. **LIGO/Virgo — Observation of Gravitational Waves (2016)** — The first direct detection (GW150914): a readable letter in which GR's prediction is confirmed by interferometers resolving a peak strain of about 10⁻²¹. Also a masterclass in noise budgets and precision measurement.
+9. **Misner, Thorne & Wheeler — Gravitation** — The encyclopedic classic. Use as a reference for deep dives into specific topics.
+
+---
+
+## 🛠️ Practice
+
+1. **Paradox clinic** — A twin travels 20 ly at 0.8c and returns. Draw the spacetime diagram (by hand, then in matplotlib); compute both proper times (50 y vs 30 y); add each leg's lines of simultaneity and show the "jump" at turnaround. Then use the Doppler factor (3 at 0.8c) to count the yearly birthday signals each twin receives on each leg, and show the tallies match the ages (the traveler receives 5 + 45; the stay-at-home twin receives 15 + 15). Repeat for the pole-in-barn paradox with γ = 5/3. Success: every observer's bookkeeping is consistent, and you can state the asymmetry without claiming acceleration "causes" the age difference. *(~2.5 h · Taylor & Wheeler; Susskind, "Special Relativity")*
+2. **Read Einstein (1905)** — Read the introduction and §§1–4 closely; skim §§6–10. Deliverables: (a) a one-page modern rederivation of the Lorentz transformation following his light-signal synchronization procedure; (b) a 300-word note on the problem the paper says it is solving (the magnet-and-conductor asymmetry), what it never cites by name (Michelson–Morley), and how §1 defines simultaneity operationally; (c) a paragraph mapping §6's transformation of the fields onto Purcell & Morin's derivation of magnetism from relativity (Section 03). *(~3 h · Einstein, "On the Electrodynamics of Moving Bodies"; Taylor & Wheeler)*
+3. **GPS clock budget** — For a GPS orbit (radius ≈ 26,560 km): compute the velocity time dilation (−v²/2c² → −7.2 µs/day), the gravitational shift relative to the ground (+45.7 µs/day), the net (+38.5 µs/day ≈ 4.46×10⁻¹⁰), and the ranging error if uncorrected (~11 km per day). Compare 4.5×10⁻¹⁰ with the fractional stability of a TCXO, an OCXO, a rubidium standard, and a cesium standard. Compute the redshift for 1 m of height at Earth's surface (1.1×10⁻¹⁶). Optional bench extension: timestamp a GNSS module's 1 PPS with an MCU timer clocked from its crystal, and express the crystal's offset and temperature drift in the same fractional units. Success: numbers within 2% of these. *(~2 h, +3 h optional bench · Hartle (gravitational redshift); Schutz ("Preface to curvature": the redshift argument); Taylor & Wheeler)*
+4. **Curvature by computer, orbits by integrator** — Write a sympy script: metric g_μν(x) → Christoffel symbols → Riemann → Ricci → scalar curvature. Validate on the 2-sphere (R = 2/a²) and show Schwarzschild is Ricci-flat. Then integrate the Schwarzschild orbit equation u″ + u = GM/h² + 3GMu²/c² (u = 1/r, h = specific angular momentum) for Mercury (a = 5.79×10¹⁰ m, e = 0.2056) and measure the perihelion advance per orbit; expect 6πGM/(c²a(1 − e²)) ≈ 5.0×10⁻⁷ rad, i.e. 43″ per century. Tip: first inflate GM/c² by 10³–10⁴ to verify the scaling, then return to the real value with tight tolerances. Success: precession within 1% of the formula. *(~5 h · Carroll Ch. 3 & 5; Hartle (geodesics; Schwarzschild orbits); Schutz)*
+
+**🏗️ Mini-project — A Schwarzschild Ray Tracer:** Integrate null geodesics in the equatorial plane to compute light deflection vs impact parameter (check 4GM/(c²b) → 1.75″ at the solar limb), find the photon sphere (r = 3GM/c²) and the critical impact parameter (b_c = 3√3·GM/c²), integrate timelike orbits to locate the innermost stable circular orbit (r = 6GM/c²), and render a black hole in front of a checkerboard background by backward ray tracing (spherical symmetry reduces each ray to a 2D problem). Deliverable: notebook and three figures — deflection vs b, effective potential with ISCO and photon sphere marked, rendered image — in `projects/physics/05-schwarzschild/`. Success: deflection within 1% of the weak-field formula at large b; photon sphere, b_c, and ISCO reproduced to three significant figures; the rendered shadow's apparent radius equals b_c. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the two postulates and define the invariant interval. Why must every inertial observer agree on it?
+2. During the coasting legs each twin sees the other's clock run slow. What breaks the symmetry?
+3. "You can't reach c because your mass increases." Why do Taylor & Wheeler reject relativistic mass, and what is the better explanation?
+4. Roughly how many microseconds per day would GPS satellite clocks gain without correction, and which effect dominates?
+5. State the equivalence principle and use it to get the sign of gravitational redshift in two sentences.
+6. In §4 Einstein predicts that a clock at the equator runs slower than one at a pole. Why is that wrong once gravity is included?
+7. Why can't a small freely falling laboratory detect gravity, while two separated test masses can?
+8. Explain to a smart friend in 3 sentences what "gravity is the curvature of spacetime" means operationally.

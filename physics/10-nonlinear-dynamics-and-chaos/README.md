@@ -8,12 +8,23 @@ Most of the physical world is nonlinear, yet much of physics training focuses on
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Classify fixed points and bifurcations (saddle-node, transcritical, pitchfork, Hopf) with linear stability analysis and phase portraits, and recognize their normal forms in physical systems.
+- Analyze limit cycles — weakly nonlinear (two-timing gives van der Pol amplitude 2) and relaxation (period → (3 − 2 ln 2)μ) — and connect them to electronic oscillators.
+- Compute orbit diagrams, Lyapunov exponents, and Feigenbaum's δ ≈ 4.669 for the logistic map, and reproduce Lorenz's 1963 results, including his successive-maxima map.
+- Reconstruct an attractor from a single measured variable by delay embedding, and estimate its correlation dimension.
+- Build a chaotic circuit, observe its route to chaos on an oscilloscope, and reconcile the bench with simulation.
+
+---
+
 ## Resources
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | Nonlinear Dynamics and Chaos — Steven Strogatz | Book | 🔑 | — |
-| 2 | Nonlinear Dynamics and Chaos — Strogatz (Yale lectures) | Course | 🔑 | [YouTube](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V) |
+| 1 | Nonlinear Dynamics and Chaos (3rd ed., 2024) — Steven Strogatz | Book | 🔑 | — |
+| 2 | Nonlinear Dynamics and Chaos — Strogatz (Cornell lectures) | Course | 🔑 | [YouTube](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V) |
 | 3 | Chaos: Making a New Science — James Gleick | Book | | — |
 | 4 | Deterministic Nonperiodic Flow — Edward Lorenz (1963) | Paper | | [DOI](https://doi.org/10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2) |
 | 5 | Simple Mathematical Models with Very Complicated Dynamics — Robert May (1976) | Paper | | [DOI](https://doi.org/10.1038/261459a0) |
@@ -27,11 +38,35 @@ Most of the physical world is nonlinear, yet much of physics training focuses on
 
 ## Suggested Order
 
-1. **Strogatz — Nonlinear Dynamics and Chaos (book)** — The definitive first textbook. Beautifully written with examples from biology, physics, and engineering. Work through the problems.
-2. **Strogatz — Yale Lectures** — Watch alongside the textbook for Strogatz's legendary teaching. These lectures track the book closely.
+1. **Strogatz — Nonlinear Dynamics and Chaos (book)** — The definitive first textbook. Beautifully written with examples from biology, physics, and engineering. Work through the problems. The 3rd edition (2024) adds a chapter on the Kuramoto model of synchronization — coupled oscillators, the nonlinear physics behind phase locking.
+2. **Strogatz — Cornell Lectures** — Watch alongside the textbook for Strogatz's legendary teaching. These lectures (recorded at Cornell, posted by Cornell MAE) track the book closely.
 3. **Gleick — Chaos: Making a New Science** — A popular-science masterpiece that gives you the history and culture of chaos theory. Great motivation.
 4. **Lorenz — "Deterministic Nonperiodic Flow" (1963)** — The paper that launched chaos theory. Read it after you understand the Lorenz system from Strogatz.
 5. **May — "Simple Mathematical Models" (1976)** — The logistic map paper. Elegant and short — shows how bifurcation cascades lead to chaos.
 6. **Baker & Gollub — Chaotic Dynamics** — A concise, physics-oriented supplement that bridges theory and experiment.
 7. **Lorenz — The Essence of Chaos** — Lorenz's own accessible account of chaos, written for a broad audience.
 8. **Peitgen, Jürgens & Saupe — Chaos and Fractals** — Deep dive into fractal geometry, iterated function systems, and the Mandelbrot set.
+
+---
+
+## 🛠️ Practice
+
+1. **Bifurcations and limit cycles** — Work Strogatz's laser-threshold (§3.3), bead-on-a-rotating-hoop (§3.5), and imperfect-pitchfork (§3.6) models by hand, then draw their bifurcation diagrams numerically with stable and unstable branches. For van der Pol, ẍ + μ(x² − 1)ẋ + x = 0: show the Hopf bifurcation at μ = 0 from the linearization's eigenvalues (§8.2); verify the two-timing amplitude 2 at μ = 0.1 (§7.6); measure the period for μ = 5–50 and show T/μ approaching 3 − 2 ln 2 ≈ 1.614 (§7.5) — slowly, because of an O(μ^(−1/3)) correction. Build the same oscillator in LTspice with behavioral sources and confirm one point. Success: amplitude within 1% of 2 at μ = 0.1; period within 3% of the asymptotic formula at μ = 50. *(~4 h · Strogatz Ch. 3, 7, 8; Strogatz's lectures)*
+2. **Logistic map and Feigenbaum** — Plot the orbit diagram of x_{n+1} = r·x_n(1 − x_n). Find the superstable parameters R_n (where x = ½ lies on the 2ⁿ-cycle) by Newton's method for n up to 8–10, and compute δ_n = (R_n − R_{n−1})/(R_{n+1} − R_n) → 4.669. Compute the Lyapunov exponent λ(r): show λ < 0 inside periodic windows (period 3 opens at 1 + √8 ≈ 3.8284) and λ = ln 2 at r = 4. Then reread May (1976) and list which of its claims you just reproduced. Success: δ to four significant figures. *(~3 h · May (1976); Strogatz §10.2–10.6; Peitgen, Jürgens & Saupe; Gleick)*
+3. **Reproduce Lorenz (1963)** — Integrate σ = 10, b = 8/3, r = 28 and reproduce (a) the Y(t) time series, (b) the attractor projections, (c) his plot of successive Z maxima (Strogatz §9.4) — single-humped with |slope| > 1 — and explain why that rules out stable limit cycles. Estimate the largest Lyapunov exponent by two-trajectory renormalization (expect ≈ 0.906) and show the separation growing like e^(0.9t) before saturating. Recreate the rounded-restart discovery Gleick describes by restarting from a 3-decimal printout of the state. Success: λ_max within 3% of 0.906. *(~4 h · Lorenz (1963); Strogatz Ch. 9; Gleick ("The Butterfly Effect"); Newman Ch. 8 from Section 06)*
+4. **Seeing a 3D attractor in one channel** — From the Lorenz x(t) alone, build delay vectors (x(t), x(t + τ), x(t + 2τ)), choosing τ at the first minimum of the mutual information (or where the autocorrelation falls to 1/e). Compute the Grassberger–Procaccia correlation integral C(ε) and the correlation dimension from its scaling region (expect ≈ 2.05). Show what a bad τ (too small or too large) and added measurement noise do to the estimate. Success: D₂ within 0.1 of 2.05 on clean data, and you can defend your scaling-region choice. *(~3 h · Strogatz §11.5 & §12.4; Baker & Gollub)*
+
+**🏗️ Mini-project — Chaos on the Bench with Chua's Circuit:** Build Chua's circuit using the widely reproduced two-op-amp realization (M. P. Kennedy, 1992; L ≈ 18 mH, C₁ = 10 nF, C₂ = 100 nF, R a 2 kΩ pot). View V_C1 vs V_C2 in XY mode and sweep R from a stable equilibrium through the Hopf bifurcation, period doubling, the single-scroll (Rössler-like) attractor, periodic windows, and the double scroll. Log R at each transition and capture high-rate single-channel records at several settings. Simulate the dimensionless Chua equations in Python and the real schematic in LTspice; compare transition points and attractor shapes; run your exercise-4 code on the captured data to estimate D₂. Deliverable: bench log with scope screenshots, notebook, and a one-page comparison in `projects/physics/10-chua/`. Success: at least two period doublings and the double scroll observed; transition resistances within ~10% of simulation (component tolerances); measured D₂ non-integer and close to your simulated value. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Why can't a 1D autonomous flow ẋ = f(x) oscillate, and why can't a 2D autonomous flow be chaotic?
+2. Write the normal forms of the saddle-node, transcritical, and pitchfork bifurcations.
+3. With λ_max ≈ 0.9 and an initial error of 10⁻⁶, roughly how long can you forecast the Lorenz system before the error reaches order 1? How much longer does a 1000× better measurement buy you?
+4. What is universal about Feigenbaum's δ, and which experiment confirmed it in a real fluid?
+5. "Chaotic means random." What separates deterministic chaos from noise, and how could you tell them apart in measured data?
+6. What did Lorenz's successive-maxima map reveal, and why was that reduction so clever?
+7. How does delay embedding let a single scope channel reveal a 3D attractor?
+8. Explain to a smart friend in 3 sentences how three coupled deterministic equations can produce behaviour that never repeats.

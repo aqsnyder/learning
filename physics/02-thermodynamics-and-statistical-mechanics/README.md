@@ -8,6 +8,17 @@ Thermodynamics and statistical mechanics bridge the microscopic and macroscopic 
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive the Boltzmann distribution from entropy maximization (system + reservoir counting), and obtain U, F, S, and C from the partition function for two-state systems, harmonic oscillators, and the ideal gas.
+- Integrate Planck's law to get σT⁴, Wien's peak, and band-limited radiance (e.g. 8–14 µm), and estimate the infrared power a warm body delivers to a detector through a lens.
+- Derive Johnson noise (kT/C, 4kTR) from equipartition and shot noise (2qI) from Poisson statistics; identify thermal, shot, and 1/f noise on a measured spectrum and predict which dominates in a given circuit.
+- Implement Metropolis Monte Carlo for the 2D Ising model, locate T_c ≈ 2.269 J/k_B from finite-size data, and explain critical slowing down.
+- Explain fluctuation–dissipation — every loss mechanism (resistance, mechanical damping, dielectric loss) is also a noise source — and apply it to electrical and mechanical sensors alike.
+
+---
+
 ## Resources
 
 | # | Resource | Type | Marking | Link |
@@ -19,6 +30,7 @@ Thermodynamics and statistical mechanics bridge the microscopic and macroscopic 
 | 5 | Introduction to Modern Statistical Mechanics — David Chandler | Book | | — |
 | 6 | Statistical Mechanics: Entropy, Order Parameters, and Complexity — James Sethna | Book | | [sethna.lassp.cornell.edu](http://sethna.lassp.cornell.edu/StatMech/) |
 | 7 | Fundamentals of Statistical and Thermal Physics — Frederick Reif | Book | | — |
+| 8 | Thermal Agitation of Electric Charge in Conductors — Harry Nyquist (1928), with J. B. Johnson's companion measurement paper | Paper | | [Nyquist](https://doi.org/10.1103/PhysRev.32.110) · [Johnson](https://doi.org/10.1103/PhysRev.32.97) |
 
 > 🔑 = must-read
 
@@ -27,9 +39,35 @@ Thermodynamics and statistical mechanics bridge the microscopic and macroscopic 
 ## Suggested Order
 
 1. **Feynman Lectures — Thermo chapters** — Get Feynman's intuitive introduction to kinetic theory, entropy, and the laws of thermodynamics.
-2. **Schroeder — An Introduction to Thermal Physics** — Your primary textbook. Covers both thermodynamics and statistical mechanics with clarity and excellent problems. Work through this cover-to-cover.
-3. **Blundell & Blundell — Concepts in Thermal Physics** — Good companion text with a slightly different perspective and additional topics.
-4. **Sethna — Statistical Mechanics** — Free textbook with a modern perspective connecting stat mech to information theory, computation, and complexity.
-5. **MIT 8.333 (Kardar)** — Graduate-level lectures for deeper understanding of the partition function, ensembles, and phase transitions.
-6. **Chandler — Introduction to Modern Statistical Mechanics** — Concise, elegant treatment for the mathematically mature student.
-7. **Reif — Fundamentals** — Classic reference text; use for specific topics as needed.
+2. **Schroeder — An Introduction to Thermal Physics** — Your primary textbook. Covers both thermodynamics and statistical mechanics with clarity and excellent problems. Work through this cover-to-cover; its blackbody-radiation section (Planck spectrum, Stefan–Boltzmann law) is the physics behind every thermal-infrared sensor.
+3. **Johnson (1928) + Nyquist (1928)** — Johnson's measurement of voltage noise in resistors and Nyquist's four-page derivation of its spectrum (4kTR per unit bandwidth) from equipartition. A founding example of the fluctuation–dissipation theorem (with Einstein's Brownian-motion relation, Feynman Vol. 1 Ch. 41), and the origin of the noise floor in every analog front end. Read once you have met equipartition and the Boltzmann factor in Schroeder.
+4. **Blundell & Blundell — Concepts in Thermal Physics** — Good companion text with a slightly different perspective and additional topics.
+5. **Sethna — Statistical Mechanics** — Free textbook with a modern perspective connecting stat mech to information theory, computation, and complexity.
+6. **MIT 8.333 (Kardar)** — Graduate-level lectures for deeper understanding of the partition function, ensembles, and phase transitions.
+7. **Chandler — Introduction to Modern Statistical Mechanics** — Concise, elegant treatment for the mathematically mature student.
+8. **Reif — Fundamentals** — Classic reference text; use for specific topics as needed.
+
+---
+
+## 🛠️ Practice
+
+1. **Entropy by counting** — Two Einstein solids with N_A = 300 and N_B = 200 oscillators share q = 100 energy units. Compute Ω_total(q_A) exactly (Python big integers or `scipy.special.gammaln`), find the most probable split and the peak's relative width, and show ∂S/∂U is equal on both sides at the peak. Scale N and q by 10× and 100× and verify the relative width shrinks as 1/√N. Success: most probable q_A = 60, relative width ≈ 0.09 at the base size, and a clean −½ slope on a log-log plot. *(~2 h · Schroeder Ch. 2–3; Feynman Vol. 1 Ch. 44)*
+2. **Planck in the thermal window** — Numerically integrate Planck's law to: reproduce σT⁴ to 10⁻⁶ relative; locate Wien's peak (≈ 9.35 µm at 310 K); find the fraction of blackbody emission inside 8–14 µm at 293 K and 310 K (both ≈ 0.37–0.38); compute the in-band radiance contrast between skin (≈ 306 K, ε ≈ 0.98) and a 293 K background, ε[L(306 K) − L(293 K)] ≈ 10.6 W·m⁻²·sr⁻¹ (explain why reflected background makes it ε·ΔL); and the in-band dL/dT at 300 K (≈ 0.84 W·m⁻²·sr⁻¹·K⁻¹). Then show how equipartition over cavity modes produces the Rayleigh–Jeans divergence that Planck's quantization cures. *(~2 h · Schroeder Ch. 7 (blackbody radiation); Feynman Vol. 1 Ch. 41; Blundell & Blundell (thermal radiation))*
+3. **Fluctuation–dissipation on paper** — (a) Apply equipartition to the capacitor of an RC circuit to get ⟨v²⟩ = kT/C (≈ 20 µV rms on 10 pF at 300 K), then show the resistor must have noise density 4kTR for this to hold for every R. (b) Do the same for a spring–mass–damper: force noise 4kT·b, so a MEMS accelerometer's noise-equivalent acceleration is a_n = √(4kTω₀/(mQ)); evaluate it for a 1 µg proof mass at f₀ = 5 kHz, Q = 1 (≈ 74 µg/√Hz), compare with a real accelerometer datasheet, and list which knobs lower it and what each costs. (c) Derive shot noise 2qI from Poisson electron arrivals. Deliverable: one page, units checked. *(~2 h · Feynman Vol. 1 Ch. 41 "The Brownian Movement"; Sethna (correlations, response, and dissipation); Reif (fluctuations and Nyquist's theorem))*
+4. **Johnson, shot, and 1/f on one board** — Build a photodiode transimpedance amplifier (R_f = 1 MΩ, small C_f for stability, low-noise JFET- or CMOS-input op-amp) on batteries inside a closed metal tin (alkaline cells such as a pair of 9 V for ±9 V; never short a battery, and avoid unprotected lithium cells). Record the output with the scope (or any ≥ 16-bit ADC) and compute Welch-averaged PSDs, staying below the noise-gain peaking region. (i) Dark: expect R_f's 128 nV/√Hz plus op-amp noise; locate the op-amp's 1/f corner. (ii) Illuminate with a battery-driven LED at photocurrents from 10 nA up to a few µA (R_f·I must stay inside the op-amp's output swing — 10 µA would need 10 V): the white level should rise as R_f·√(2qI) and cross the Johnson floor at I = 2kT/(qR_f) ≈ 52 nA. Extract q from S_v = 2qR_f·V_dc. Success: a slope of ½ on log(noise) vs log(I) above the crossover, and q within 10% of 1.602×10⁻¹⁹ C. *(~5 h · Feynman Vol. 1 Ch. 41; Sethna (fluctuation–dissipation); Reif (Nyquist's theorem))*
+5. **Ising Monte Carlo** — Implement Metropolis for an L×L Ising lattice with periodic boundaries (vectorized checkerboard updates or numba) for L = 16, 32, 64. Measure ⟨|m|⟩, susceptibility, and heat capacity from T = 1.5 to 3.5 with blocking error bars. Compare ⟨|m|⟩ with Onsager's exact result (0.986 at T = 1.5) and watch the susceptibility peak move toward 2.269 as L grows; measure the autocorrelation time near T_c. Success: Onsager agreement within error bars below T_c, and peak positions trending toward T_c with L. *(~5 h · Schroeder Ch. 8; Sethna (calculation and computation); Chandler (Monte Carlo); Kardar 8.333)*
+
+**🏗️ Mini-project — Signal and Noise Budget for a Pyroelectric IR Detector:** Combine exercises 2–4 into a model of a lens-based passive-IR detector. Inputs: lens aperture and in-band transmission (thin HDPE ≈ 0.5–0.7), element area, a 0.5 × 1.7 m target at ΔT = 2–13 K above background, range 2–50 m. (1) In-band differential power on one element by étendue: P = τ·ΔL·A_lens·Ω, with Ω the target's solid angle when it underfills the element's footprint and the element's when it overfills (sanity range: ~0.1–10 µW for a ~20 mm lens). (2) Element temperature swing from a one-pole thermal model (heat capacity H, conductance G), then current i = pA·dT/dt, taking p ≈ 2×10⁻⁴ C·m⁻²·K⁻¹ (LiTaO₃) as a placeholder until Section 08. (3) Input-referred noise over the Section 01 passband: the bias/gate resistor's Johnson noise, op-amp e_n and i_n, and 1/f. (4) SNR vs range. Deliverable: notebook in `projects/physics/02-pir-budget/` and a one-page memo with an SNR-vs-range plot and a stacked noise-contribution plot. Success: predicted signal within ~2× of a measured response (your own bench capture, or a sensor datasheet's responsivity), and the memo names the dominant noise term and the single design change that most extends range. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the Boltzmann factor and the partition function. How do you get ⟨E⟩ and F from Z?
+2. Why does maximizing total entropy force two systems in thermal contact to the same ∂S/∂U?
+3. Estimate the rms thermal-noise voltage on a 10 pF capacitor at room temperature. Why doesn't the resistor value matter?
+4. What is the noise density of a 1 MΩ resistor at 300 K? At 77 K?
+5. "Johnson noise is caused by current flowing through the resistor." What's wrong with this, and which noise mechanisms *do* depend on current?
+6. Why does the 2D Ising model order at finite temperature while the 1D model never does?
+7. Roughly what fraction of a 310 K blackbody's power lies in 8–14 µm, and why do thermal sensors use that band?
+8. Explain to a smart friend in 3 sentences why temperature is defined by 1/T = ∂S/∂U rather than as "average kinetic energy".

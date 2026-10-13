@@ -35,7 +35,10 @@ Section 08  →  Condensed Matter and Materials
 Section 09  →  Fluid Dynamics and Continuum Mechanics
 Section 10  →  Nonlinear Dynamics and Chaos
 Section 11  →  Physics-Informed ML and Frontiers
+Section 12  →  Measurement, Noise, and Sensor Physics   (take right after Section 08)
 ```
+
+Section 12 is numbered last only so that existing sections keep their numbers; its recommended place in the sequence is immediately after Section 08.
 
 ### Cross-Cutting References
 

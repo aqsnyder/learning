@@ -8,16 +8,29 @@ Electromagnetism is one of the great triumphs of classical physics. Maxwell's eq
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Move between the integral and differential forms of Maxwell's equations and apply Gauss, Ampère, and Faraday to symmetric geometries — e.g. derive a coax's C′, L′, Z₀ = √(L′/C′), and propagation speed from scratch.
+- Solve Laplace's equation numerically for a PCB cross-section and extract a microstrip's C′, Z₀, and ε_eff; explain why Z₀ falls as the trace widens and rises as the dielectric thickens.
+- Predict and measure induced EMF in real circuit loops (scope ground leads, ground loops), and explain why "the voltage between two nodes" becomes path-dependent when ∂B/∂t ≠ 0.
+- Compute energy flow with the Poynting vector in a coax and a resistive wire, and use field energy to explain why return current hugs a high-speed trace and why gaps in the reference plane hurt.
+- Derive the skin depth δ = √(2ρ/ωμ) and estimate the AC resistance of PCB traces (copper: ≈ 65 µm at 1 MHz, 6.5 µm at 100 MHz, 2 µm at 1 GHz).
+
+---
+
 ## Resources
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 1 | Introduction to Electrodynamics — David J. Griffiths | Book | 🔑 | — |
+| 1 | Introduction to Electrodynamics (5th ed., 2023) — David J. Griffiths | Book | 🔑 | — |
 | 2 | The Feynman Lectures on Physics, Vol. 2 — Feynman, Leighton, Sands | Book | 🔑 | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) |
-| 3 | MIT 8.02 Electricity and Magnetism — Walter Lewin | Course | 🔑 | [YouTube](https://www.youtube.com/playlist?list=PLUl4u3cNGP62FPGcyFJkzhqq9c5cUsQMi) |
+| 3 | Fundamentals of Physics II (Yale PHYS 201, 2010) — Ramamurti Shankar | Course | 🔑 | [Open Yale Courses](https://oyc.yale.edu/physics/phys-201) |
 | 4 | Electricity and Magnetism — Purcell & Morin | Book | | — |
 | 5 | Divergence and Curl — 3Blue1Brown | Video | | [YouTube](https://www.youtube.com/watch?v=rB83DpBJQsE) |
 | 6 | Classical Electrodynamics — J.D. Jackson | Book | | — |
+| 7 | Electromagnetics, Vol. 1 (2018) & Vol. 2 (2020) — Steven W. Ellingson (open textbook, CC BY-SA) | Book | | [Vol. 1](https://doi.org/10.21061/electromagnetics-vol-1) · [Vol. 2](https://doi.org/10.21061/electromagnetics-vol-2) |
+| 8 | Electromagnetic Fields and Energy — Hermann A. Haus & James R. Melcher (1989) | Book | | [MIT OCW](https://ocw.mit.edu/courses/res-6-001-electromagnetic-fields-and-energy-spring-2008/) |
 
 > 🔑 = must-read
 
@@ -26,8 +39,34 @@ Electromagnetism is one of the great triumphs of classical physics. Maxwell's eq
 ## Suggested Order
 
 1. **3Blue1Brown — Divergence and Curl** — Build geometric intuition for the vector calculus underlying Maxwell's equations.
-2. **MIT 8.02 (Lewin)** — Watch Lewin's legendary demonstrations of electrostatics, circuits, and magnetism.
+2. **Shankar — Yale PHYS 201** — A complete, free lecture course (video, audio, transcripts) on electrostatics, circuits, magnetism, Maxwell's equations, and EM waves, ending with optics and a first look at quantum mechanics. (Walter Lewin's MIT 8.02 lectures, long the standard recommendation here, are no longer hosted by MIT, which removed them in December 2014 after finding he had sexually harassed an online learner; MIT OCW has no other video version of 8.02.)
 3. **Griffiths — Introduction to Electrodynamics** — The gold-standard undergraduate textbook. Work through systematically — every chapter matters.
-4. **Feynman Lectures, Vol. 2** — Read alongside Griffiths for deeper physical insight and Feynman's unique perspective on fields and waves.
-5. **Purcell & Morin — Electricity and Magnetism** — Excellent alternative with a special-relativity-first approach to magnetism.
-6. **Jackson — Classical Electrodynamics** — Graduate-level reference. Tackle selected chapters (waveguides, radiation) when you're ready for advanced material.
+4. **Feynman Lectures, Vol. 2** — Read alongside Griffiths for deeper physical insight and Feynman's unique perspective on fields and waves. Ch. 22–24 (AC circuits, cavity resonators, waveguides) are especially good for an electrical engineer.
+5. **Purcell & Morin — Electricity and Magnetism** — Excellent alternative that derives magnetism from electrostatics plus special relativity.
+6. **Ellingson — Electromagnetics, Vol. 1–2** — The engineer's bridge from Maxwell to hardware: transmission lines (parallel-wire, microstrip, coax), skin depth, reflection at boundaries, waveguides, optical fiber, radiation, and antennas. Free and openly licensed; read it before the PCB curriculum's signal-integrity and EMC sections.
+7. **Haus & Melcher — Electromagnetic Fields and Energy** — MIT's classic electrical-engineering field theory text, free on OCW with demonstration videos. Its systematic treatment of quasistatic fields (capacitive and inductive coupling, shielding, eddy currents) is the physics behind capacitive and inductive sensors, guarding, and shielding.
+8. **Jackson — Classical Electrodynamics** — Graduate-level reference. Tackle selected chapters (waveguides, radiation) when you're ready for advanced material.
+
+---
+
+## 🛠️ Practice
+
+1. **Coax from first principles** — Use Gauss's law for C′ = 2πε/ln(b/a) and Ampère's law for L′ = (μ₀/2π)ln(b/a); combine them into Z₀ = (η₀/2π√ε_r)·ln(b/a) and v = c/√ε_r. Evaluate for RG-58 (inner Ø 0.8–0.9 mm, dielectric Ø 2.95 mm, ε_r = 2.25 → 48–52 Ω depending on the inner conductor, v = 0.667c) and compare with your Section 01 velocity-factor measurement. Then derive the skin depth for a good conductor from Maxwell's equations and estimate the center conductor's resistance per metre at DC, 1 MHz, and 100 MHz. *(~2 h · Griffiths Ch. 2, 5, 9 (EM waves in conductors; the coaxial transmission line); 3Blue1Brown "Divergence and curl")*
+2. **A microstrip field solver** — Write a 2D finite-difference Laplace solver (SOR, or assemble the sparse matrix and call `scipy.sparse.linalg.spsolve`) for a microstrip in a grounded box: w = 0.35 mm, h = 0.20 mm, ε_r = 4.3, zero-thickness trace, with the correct interface condition at the dielectric boundary. Get charge per unit length from Gauss's law on a contour around the trace; solve once with the dielectric (C′) and once all-air (C′₀); compute Z₀ = 1/(c√(C′C′₀)) and ε_eff = C′/C′₀. Run a grid-convergence study (halve the spacing until Z₀ moves < 0.5%) and push the box walls out until they stop mattering. Compare with KiCad's PCB Calculator (transmission-line tool). Success: within 3% of the Hammerstad–Jensen value (≈ 53 Ω, ε_eff ≈ 3.24). Then sweep w and h to make a 50 Ω design chart for your fab's stack-up. *(~4 h · Griffiths Ch. 3 (Laplace's equation; the averaging property); Purcell & Morin (conductors and capacitance); Feynman Vol. 2 Ch. 10 (dielectrics))*
+3. **Faraday on the bench** — (a) Probe a fast logic edge (74AC/74LVC output, ~1–2 ns) with a 10× probe using the 15 cm ground clip, then a short spring ground. Estimate the ground-loop inductance (order 1 nH/mm of lead) and predict the ringing frequency with the probe's input capacitance; compare with what you see. (b) Recreate the classic two-voltmeter demo (made famous by Walter Lewin's 8.02 lecture): a ferrite toroid driven through a primary winding by the function generator threads a single loop made of a 100 Ω and a 900 Ω resistor; probe "the same two nodes" with two scope channels whose leads run on opposite sides of the core. Predict V₁ = +0.1·EMF and V₂ = −0.9·EMF. Success: measured magnitude ratio within 10% of 1:9 with opposite signs, plus a paragraph explaining why both channels are right. *(~3 h · Shankar, Yale PHYS 201 (induction lectures); Griffiths Ch. 7; Feynman Vol. 2 Ch. 16–17)*
+4. **Where the energy flows** — For a coax delivering DC power to a resistive load, compute E and B between the conductors and integrate the Poynting vector over the annulus to get exactly VI. For a resistive wire, show S points radially inward and its surface integral is I²R. Then sketch the fields of a microstrip over a solid plane and over a plane with a slot cut beneath it, and write a 300-word explainer on why the slot raises loop inductance, crosstalk, and radiation. Success: both integrals done symbolically; the explainer places the energy in the dielectric between trace and plane. *(~2 h · Feynman Vol. 2 Ch. 27 "Field Energy and Field Momentum"; Griffiths Ch. 8; Jackson (fields at the surface of conductors) for depth)*
+
+**🏗️ Mini-project — Impedance Test Coupon (Solver → KiCad → TDR):** Design a coupon in KiCad with SMA launches and four meandered traces (each ≥ 20 cm, spacing ≥ 3× trace width) so that a ~1–2 ns system rise time resolves each section: a 50 Ω microstrip designed with your exercise-2 solver; a 50 Ω line containing a 30 Ω section and a 75 Ω section; a 50 Ω line crossing a 2 mm slot in the reference plane; and a 50 Ω line with a via or pad stub. Order it with a specified stack-up (budget 1–2 weeks of fab turnaround). Measure with a fast-edge source and the scope as a TDR (a sub-100 ps pulser lets you shorten sections), and convert reflection heights to impedance with Z = Z₀(1 + ρ)/(1 − ρ). Optionally predict the waveforms with the 1D FDTD from Section 06. Deliverable: KiCad project and bring-up log in `projects/physics/03-tdr-coupon/` with predicted-vs-measured impedance profiles. Success: each uniform section within ±10% of prediction (fab tolerance), and the slot identified as an inductive bump whose size you can explain from exercise 4. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write Maxwell's four equations in differential form and say in one line what each means physically.
+2. Why did Maxwell need the displacement current? Use a charging capacitor and Ampère's law to show the inconsistency it fixes.
+3. Estimate the inductance of a 15 cm scope ground lead and its ringing frequency with ~10 pF of probe capacitance. What changes with a spring ground?
+4. If you double a microstrip's dielectric height at fixed width, does Z₀ rise or fall? Explain via C′ and L′.
+5. In the two-voltmeter demo, which reading is "the" voltage between the two nodes?
+6. When a battery lights a bulb, through what region of space does the energy travel?
+7. How does copper's skin depth at 100 MHz compare with 1 oz (35 µm) copper, and what does that imply for trace loss at high frequency?
+8. Explain to a smart friend in 3 sentences why a fast signal's return current flows directly under its trace instead of taking the shortest path.

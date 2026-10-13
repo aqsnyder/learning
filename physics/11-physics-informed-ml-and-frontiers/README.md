@@ -4,11 +4,22 @@
 
 The intersection of physics and machine learning is one of the most exciting frontiers in science. Physics-informed neural networks (PINNs) embed conservation laws and differential equations directly into loss functions. Neural ODEs learn continuous dynamics from data. Hamiltonian and Lagrangian neural networks build physical structure into network architectures so that conservation laws are satisfied *by construction*. Equivariant networks respect symmetries — the language of physics — yielding models that generalize far better. These ideas are transforming molecular simulation, climate modeling, protein structure prediction, and the design of new materials.
 
-A complementary frontier asks whether physics itself *is* computation. Wolfram's Physics Project proposes that the universe emerges from simple hypergraph rewriting rules — deriving general relativity, quantum mechanics, and thermodynamics from discrete computational processes. Whether or not the specific formalism succeeds, the deep connection between computation and physical law is increasingly important.
+A separate and far more speculative thread asks whether physics itself *is* computation. Stephen Wolfram's Physics Project (2020–) proposes that space, time, and matter emerge from simple rules that repeatedly rewrite a hypergraph, and its authors argue that features of general relativity and quantum mechanics appear in the large-scale limit. Treat it as an unconfirmed research program outside mainstream physics, not as established science: it has produced no experimentally confirmed prediction that distinguishes it from existing theories, and its claims have not been accepted by the wider physics community. It is included here as a provocative idea to read critically (a published critique is listed with it). The well-established bridges between computation and physics are the rest of this section, numerical simulation (Section 06), and quantum computation (Section 07).
 
 This section bridges everything you've learned into the cutting edge.
 
 **Prerequisites:** [Section 06 — Computational Physics](../06-computational-physics/README.md), [Section 10 — Nonlinear Dynamics and Chaos](../10-nonlinear-dynamics-and-chaos/README.md), familiarity with deep learning fundamentals
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Map physics-informed ML onto the Karniadakis review's three routes — observational, inductive, and learning biases — placing each listed paper on that map with one characteristic failure mode.
+- Implement a PINN (Burgers' equation) and Hamiltonian/Lagrangian networks, diagnose their training pathologies, and benchmark accuracy and cost against a classical solver.
+- Identify dynamics from noisy measured data with SINDy and a neural ODE, and judge generalization with held-out drives, long rollouts, and conservation checks.
+- Explain how symmetry is built into architectures — conservation by construction (HNN/LNN), E(n)-equivariance (EGNN), SE(3)-invariant attention (AlphaFold's invariant point attention) — and verify equivariance numerically.
+- Evaluate a speculative program (the Wolfram Physics Project) by separating demonstrated results from conjecture and stating what a falsifiable prediction would look like.
 
 ---
 
@@ -17,8 +28,8 @@ This section bridges everything you've learned into the cutting edge.
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
 | 1 | Neural Ordinary Differential Equations — Chen et al. (2018) | Paper | 🔑 | [arXiv](https://arxiv.org/abs/1806.07366) |
-| 2 | Physics-Informed Neural Networks — Raissi, Perdikaris & Karniadakis (2019) | Paper | 🔑 | [arXiv](https://arxiv.org/abs/1711.10561) |
-| 3 | Hamiltonian Neural Networks — Greydanus, Dzamba & Schmidhuber (2019) | Paper | | [arXiv](https://arxiv.org/abs/1906.01563) |
+| 2 | Physics-Informed Neural Networks — Raissi, Perdikaris & Karniadakis (J. Comput. Phys., 2019) | Paper | 🔑 | [DOI](https://doi.org/10.1016/j.jcp.2018.10.045) · [arXiv preprint (2017)](https://arxiv.org/abs/1711.10561) |
+| 3 | Hamiltonian Neural Networks — Greydanus, Dzamba & Yosinski (2019) | Paper | | [arXiv](https://arxiv.org/abs/1906.01563) |
 | 4 | Lagrangian Neural Networks — Cranmer, Greydanus & others (2020) | Paper | | [arXiv](https://arxiv.org/abs/2003.04630) |
 | 5 | Physics-Informed Machine Learning (review) — Karniadakis et al. (2021) | Paper | 🔑 | [DOI](https://doi.org/10.1038/s42254-021-00314-5) |
 | 6 | Highly Accurate Protein Structure Prediction with AlphaFold — Jumper et al. (2021) | Paper | | [DOI](https://doi.org/10.1038/s41586-021-03819-2) |
@@ -27,7 +38,10 @@ This section bridges everything you've learned into the cutting edge.
 | 9 | E(n) Equivariant Graph Neural Networks — Satorras, Hoogeboom & Welling (2021) | Paper | | [arXiv](https://arxiv.org/abs/2102.09844) |
 | 10 | Data-Driven Science and Engineering — Brunton & Kutz | Book | | [databookuw.com](https://databookuw.com/) |
 | 11 | A New Kind of Science — Stephen Wolfram (2002) | Book | | [wolframscience.com](https://www.wolframscience.com/nks/) |
-| 12 | The Wolfram Physics Project — Stephen Wolfram (2020+) | Project | 🔑 | [wolframphysics.org](https://www.wolframphysics.org/) |
+| 12 | The Wolfram Physics Project — Stephen Wolfram (2020+; speculative, outside mainstream physics) | Project | | [wolframphysics.org](https://www.wolframphysics.org/) |
+| 13 | Fourier Neural Operator for Parametric Partial Differential Equations — Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya, Stuart & Anandkumar (2020) | Paper | | [arXiv](https://arxiv.org/abs/2010.08895) |
+| 14 | DeepONet: Learning Nonlinear Operators — Lu et al. (arXiv 2019; Nature Machine Intelligence 2021) | Paper | | [arXiv](https://arxiv.org/abs/1910.03193) |
+| 15 | Book Review: "A New Kind of Science" — Scott Aaronson (2002) | Paper | | [arXiv](https://arxiv.org/abs/quant-ph/0206089) |
 
 > 🔑 = must-read
 
@@ -37,13 +51,41 @@ This section bridges everything you've learned into the cutting edge.
 
 1. **Brunton & Kutz — Data-Driven Science and Engineering** — Start here if you haven't already covered it in Section 09. Builds the bridge from classical dynamical systems to data-driven methods (DMD, SINDy, sparse regression).
 2. **Chen et al. — Neural Ordinary Differential Equations (2018)** — The foundational paper. Learn how continuous-depth networks replace discrete layers with ODE solvers.
-3. **Raissi et al. — Physics-Informed Neural Networks (2019)** — The PINN framework: encoding PDEs into neural network loss functions. A paradigm shift for scientific computing.
+3. **Raissi et al. — Physics-Informed Neural Networks (2019)** — The PINN framework: encoding PDEs into neural network loss functions. A paradigm shift for scientific computing. (The linked 2017 arXiv preprint is Part I of the two preprints that became the journal paper.)
 4. **Greydanus et al. — Hamiltonian Neural Networks (2019)** — Learn how embedding Hamiltonian structure into networks guarantees energy conservation.
 5. **Cranmer et al. — Lagrangian Neural Networks (2020)** — The Lagrangian counterpart to HNNs, operating in generalized coordinates.
 6. **Karniadakis et al. — Physics-Informed ML review (2021)** — Comprehensive review paper that surveys the entire field. Read after the foundational papers for a unified perspective.
-7. **Sanchez-Gonzalez et al. — Graph Network Simulators (2020)** — Learning physics from particle interactions using graph neural networks.
-8. **Brandstetter et al. — Message Passing Neural PDE Solvers (2022)** — Modern architecture for solving PDEs on arbitrary meshes with message passing.
-9. **Satorras et al. — E(n) Equivariant GNNs (2021)** — Symmetry-preserving networks for molecular systems. Key idea: equivariance as an inductive bias.
-10. **Jumper et al. — AlphaFold (2021)** — The landmark application of geometric deep learning to protein structure. Understand how physics priors enabled this breakthrough.
-11. **Wolfram — A New Kind of Science (2002)** — Read selectively (Chapters 2, 9, 12). The argument that simple programs can generate complex physics. Controversial but thought-provoking.
-12. **Wolfram Physics Project (2020+)** — Explore the technical exposition and visualizations. Whether or not the framework succeeds, the idea that spacetime, gravity, and quantum mechanics emerge from hypergraph rewriting is a genuinely novel approach to fundamental physics.
+7. **Lu et al. — DeepONet (2019/2021)** — Neural operators, part 1: instead of solving one PDE instance like a PINN, learn the whole solution operator (input function → solution function), so new boundary conditions or forcings cost one forward pass.
+8. **Li et al. — Fourier Neural Operator (2020)** — Neural operators, part 2: learn the operator in Fourier space. One of the most widely used neural-operator architectures and the basis of many fast PDE surrogates, from turbulence to weather.
+9. **Sanchez-Gonzalez et al. — Graph Network Simulators (2020)** — Learning physics from particle interactions using graph neural networks.
+10. **Brandstetter et al. — Message Passing Neural PDE Solvers (2022)** — Modern architecture for solving PDEs on arbitrary meshes with message passing.
+11. **Satorras et al. — E(n) Equivariant GNNs (2021)** — Symmetry-preserving networks for molecular systems. Key idea: equivariance as an inductive bias.
+12. **Jumper et al. — AlphaFold (2021)** — The landmark application of geometric deep learning to protein structure. Note that its success came mainly from evolutionary (multiple-sequence-alignment) data plus a rotation- and translation-equivariant structure module rather than from explicit physical laws — a useful contrast with PINNs.
+13. **Wolfram — A New Kind of Science (2002)** — Optional and speculative. If you read it, read selectively (Chapters 2, 9, 12): the argument that simple programs can generate complex behavior, and Wolfram's sketch of a discrete fundamental physics. Its broad claims were widely criticized when it appeared.
+14. **Aaronson — Review of A New Kind of Science (2002)** — Read immediately after NKS. A quantum-computing theorist's review showing, among other things, that the book's proposed deterministic model of quantum mechanics cannot be reconciled with both special relativity and the observed violations of Bell inequalities.
+15. **Wolfram Physics Project (2020+)** — Optional and speculative. Explore the technical exposition and visualizations as an example of a computational approach to fundamental physics, keeping in mind that it is an unconfirmed program that has not made experimentally verified predictions and is not accepted mainstream physics.
+
+---
+
+## 🛠️ Practice
+
+1. **Reproduce the PINN Burgers result** — Set up Raissi et al.'s continuous-time Burgers problem: u_t + u·u_x − (0.01/π)u_xx = 0 on x ∈ [−1, 1], t ∈ [0, 1], u(0, x) = −sin πx, u(t, ±1) = 0, with N_u = 100 initial/boundary points, N_f = 10,000 collocation points, a 9-hidden-layer × 20-neuron tanh MLP, and L-BFGS (Adam warm-up optional), in PyTorch or JAX. Build a reference solution with your own spectral or finite-difference solver (Section 06). Report the relative L2 error (the paper reports 6.7×10⁻⁴), wall-clock time vs the classical solver, and how accuracy near the steep front changes if you cut N_f by 10× or skip L-BFGS. Extension: the inverse problem from the 2019 journal version — recover the viscosity from noisy interior samples. Success: relative L2 error ≲ 5×10⁻³ and an honest cost comparison. *(~6 h · Raissi, Perdikaris & Karniadakis; Karniadakis et al. review)*
+2. **Conservation by construction** — Train a baseline MLP (predicts time derivatives directly) and a Hamiltonian NN (learns H, then uses its symplectic gradient) on noisy trajectories of a mass–spring and an ideal pendulum; roll out 10× longer than the training trajectories and plot energy vs time, reproducing the qualitative result of Greydanus et al.'s energy-drift figures. Then implement a Lagrangian NN for the double pendulum, computing accelerations from the learned L through its Hessian (`torch.func` or JAX), and compare its energy behaviour with a baseline. Finally, add damping to the data and show what the HNN gets wrong. *(~6 h · Greydanus, Dzamba & Yosinski; Cranmer et al.; Section 00's Hamiltonian mechanics)*
+3. **System ID from the bench: SINDy vs neural ODE vs grey box** — Use scope captures of a nonlinear circuit — the Section 10 Chua circuit, or a high-gain AC-coupled op-amp stage driven into clipping, whose saturation and recovery make it nonlinear — or start from noisy simulated Lorenz data. Fit (a) SINDy with a polynomial library (pysindy), (b) a neural ODE (torchdiffeq), (c) a grey-box physical model with a handful of parameters fit by least squares. Compare on a held-out drive amplitude: one-step and long-rollout error, parameter count, training time, interpretability. Success: on Lorenz with 1% noise, SINDy recovers the true coefficients within 5%; on bench data, a ranked comparison table and a one-paragraph verdict. *(~6 h · Brunton & Kutz (SINDy); Chen et al. (Neural ODEs))*
+4. **Symmetry as an inductive bias** — Implement one EGNN layer (~40 lines of PyTorch). Apply a random rotation, translation, and node permutation to the inputs and verify the outputs transform correctly to ~10⁻⁶ (float32); show a plain MLP on concatenated coordinates fails the same test. Train both on a small charged-particle N-body prediction task (the EGNN paper's 5-particle setup is a good template) and plot test error vs training-set size. Then prove on paper that AlphaFold's invariant-point-attention logits are unchanged by a global rigid motion of all residue frames (one-page note). Success: equivariance error at float precision, and a sample-efficiency curve showing where the EGNN pulls ahead. *(~6 h · Satorras, Hoogeboom & Welling; Jumper et al.; Sanchez-Gonzalez et al. (encode–process–decode))*
+5. **Claim audit: the Wolfram Physics Project** — Implement elementary cellular automata (Rule 30, Rule 110) and one hypergraph rewriting rule such as {{x,y},{x,z}} → {{x,z},{x,w},{y,w},{z,w}} with a simple non-overlapping update order; grow it ~10 steps. Write a dimension estimator from geodesic-ball growth V(r) ~ r^d, validate it on 2D and 3D grid graphs (≈ 2 and 3), then apply it to your rewrite output. Write 500 words: pick one claimed result (emergent dimension, relativity from causal invariance, or quantum mechanics from multiway systems), list the assumptions it needs, describe a quantitative prediction that would distinguish it from standard physics, and say whether one exists yet. *(~5 h · Wolfram Physics Project; Wolfram, A New Kind of Science (Ch. 2, 9, 12); Karniadakis et al. as a contrast in validation standards)*
+
+**🏗️ Mini-project — PINN vs Solver on a Thermal Inverse Problem:** Use your Section 06 board-thermal model as ground truth and pose an inverse problem: given 3, 5, or 10 noisy temperature readings and the known heater power, infer the unknown convection coefficient h (optionally also a contact resistance). Solve it two ways: (a) a PINN with h as a trainable parameter; (b) the classical route — your finite-difference solver inside a least-squares fit (`scipy.optimize`). Then apply both to the real thermocouple data from your Section 06 bench run. Deliverable: notebook and a one-page memo, "PINN vs solver-in-the-loop", in `projects/physics/11-pinn-inverse/`, covering accuracy, wall-clock, and sensitivity to sensor count and noise. Success: on synthetic data both recover h within 10%, and the memo makes one falsifiable recommendation ("use a PINN only when …") backed by your numbers. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Name the three ways Karniadakis et al. say physics can be built into ML, with one listed paper as an example of each.
+2. What terms make up a PINN's loss, and how does it obtain u_xx without a mesh?
+3. Why does an HNN conserve its learned energy by construction, what does it get wrong for a damped system, and what does an LNN fix that an HNN can't?
+4. What does the adjoint method in Neural ODEs save, and what does it cost?
+5. "PINNs are a faster drop-in replacement for numerical PDE solvers." When is that false, and where do PINNs genuinely help?
+6. How do graph network simulators (training noise) and message-passing PDE solvers (the pushforward trick, temporal bundling) keep long autoregressive rollouts stable?
+7. What does E(n)-equivariance guarantee for an EGNN, and why does it improve data efficiency?
+8. Explain to a smart friend in 3 sentences why AlphaFold's success depended on geometric structure and not just more data — and name one thing it does not tell you about how proteins fold.
