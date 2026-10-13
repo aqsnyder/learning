@@ -12,6 +12,17 @@ This is where you go from understanding *what* machine learning is to understand
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Implement a scalar reverse-mode autodiff engine (micrograd-style) and explain how a topological sort plus the chain rule yields every gradient in one backward pass.
+- Derive the four backpropagation equations in matrix form, and hand-derive backward passes for softmax cross-entropy, tanh, linear and BatchNorm layers.
+- Diagnose training pathologies — saturated or dead units, vanishing/exploding gradients, bad initialization, a learning rate off by 10× — from activation and gradient statistics, and fix them.
+- Compare regularizers (weight decay, dropout, early stopping, data augmentation) empirically, and relate "simple weights" to minimum description length as Hinton & van Camp do.
+- Estimate parameters, FLOPs and memory for a network and judge whether it will train on a laptop or fit on a microcontroller.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -21,7 +32,11 @@ This is where you go from understanding *what* machine learning is to understand
 | 🔑 | Book (Free) | Neural Networks and Deep Learning | Michael Nielsen | 2015 | [Book](http://neuralnetworksanddeeplearning.com/) · [Code](https://github.com/mnielsen/neural-networks-and-deep-learning) | A beautifully written, free online book that builds understanding from first principles. Covers backpropagation, regularization, and universal approximation with clear prose and working code. |
 | 🔑 | Blog | Colah's Blog | Christopher Olah | — | [Link](https://colah.github.io/) | Legendary blog posts with exceptional visualizations. Key posts on backpropagation, LSTMs, attention, and neural network representations. A must-read for building intuition. |
 | 🔑⭐ | Paper | Keeping Neural Networks Simple by Minimizing the Description Length of the Weights | Geoffrey Hinton, Drew van Camp | 1993 | [Link](https://www.cs.toronto.edu/~hinton/absps/colt93.pdf) | From the Ilya Sutskever reading list. Connects MDL theory to neural network training — the idea that simpler weight configurations generalize better. Foundational for understanding regularization and compression in deep learning. |
-| ⭐ | Tutorial | A Tutorial Introduction to the Minimum Description Length Principle | Peter Grünwald | — | — | From the Ilya Sutskever reading list. Accessible introduction to MDL theory, which provides a principled framework for model selection and understanding generalization. |
+| ⭐ | Tutorial | A Tutorial Introduction to the Minimum Description Length Principle | Peter Grünwald | 2004 | [Link](https://arxiv.org/abs/math/0406077) | From the Ilya Sutskever reading list (also listed in Section 01's theory cluster — read it once). Accessible introduction to MDL theory, which provides a principled framework for model selection and understanding generalization. |
+| 🔑 | Book (Free) | Understanding Deep Learning | Simon J. D. Prince | 2023 | [Link](https://udlbook.github.io/udlbook/) | The best modern deep learning textbook: clear figures, consistent notation, and coverage from shallow networks, losses, initialization, and regularization through CNNs, transformers, GNNs, generative models, and deep RL, with accompanying Python notebooks. Free PDF; use it as the main text for Sections 03–07. |
+| | Online Course | Practical Deep Learning for Coders | Jeremy Howard (fast.ai) | 2022 | [Link](https://course.fast.ai/) | Free top-down course: you train a working model in lesson one, then peel back the layers (PyTorch, fastai, Hugging Face). The top-down complement to Karpathy's bottom-up build. |
+| | Blog | A Recipe for Training Neural Networks | Andrej Karpathy | 2019 | [Link](https://karpathy.github.io/2019/04/25/recipe/) | The practitioner's process: become one with the data, build an end-to-end skeleton with dumb baselines, overfit first, then regularize, tune, and squeeze. The best short guide to why training silently fails and how to debug it. |
+| | Tutorial | Deep Learning Tuning Playbook | Varun Godbole, George E. Dahl, Justin Gilmer, Christopher J. Shallue, Zachary Nado | 2023 | [Link](https://github.com/google-research/tuning_playbook) | Google's systematic process for choosing architecture, optimizer, batch size, and learning-rate schedule, and for running tuning experiments scientifically. The reference companion to Karpathy's recipe. |
 | | Video Series | MIT 6.S191: Introduction to Deep Learning | Alexander Amini, Ava Amini | — | [Link](https://www.youtube.com/@MITDeepLearning) | MIT's introductory deep learning course. Fast-paced lectures covering core architectures with TensorFlow labs. Good for a structured academic perspective. |
 | | Book (Free) | Deep Learning (Chapters 6–8) | Ian Goodfellow, Yoshua Bengio, Aaron Courville | 2016 | [Link](https://www.deeplearningbook.org/) | The "bible" of deep learning. Chapters 6–8 cover feedforward networks, regularization, and optimization — the theoretical backbone of this section. Dense but comprehensive. |
 
@@ -31,8 +46,36 @@ This is where you go from understanding *what* machine learning is to understand
 
 1. **3Blue1Brown — Neural Networks** — Start here to build visual intuition for what neural networks are doing.
 2. **Karpathy — Zero to Hero** — Code neural networks from scratch. This is where the real understanding happens.
-3. **Michael Nielsen — Neural Networks and Deep Learning** — Read alongside Karpathy for the theoretical "why" behind the code.
-4. **Colah's Blog** — Read key posts (especially on backpropagation and LSTMs) to deepen your visual understanding.
-5. **Hinton & van Camp (1993) + Grünwald MDL tutorial** — Explore the connection between compression and generalization.
-6. **MIT 6.S191** — Watch for a structured academic overview and additional perspectives.
-7. **Goodfellow et al. — Deep Learning (Ch. 6–8)** — Reference for rigorous treatment of optimization, regularization, and network design.
+3. **Prince — Understanding Deep Learning (Ch. 1–9)** — Read alongside Karpathy as your main text; Nielsen is the gentler alternative.
+4. **Michael Nielsen — Neural Networks and Deep Learning** — Read alongside Karpathy for the theoretical "why" behind the code.
+5. **fast.ai — Practical Deep Learning for Coders** — Optional top-down track if you'd rather start from working applications.
+6. **Karpathy — A Recipe for Training Neural Networks** → **Deep Learning Tuning Playbook** — Read before (and again after) your first real training project.
+7. **Colah's Blog** — Read key posts (especially on backpropagation and LSTMs) to deepen your visual understanding.
+8. **Hinton & van Camp (1993) + Grünwald MDL tutorial** — Explore the connection between compression and generalization.
+9. **MIT 6.S191** — Watch for a structured academic overview and additional perspectives.
+10. **Goodfellow et al. — Deep Learning (Ch. 6–8)** — Reference for rigorous treatment of optimization, regularization, and network design.
+
+---
+
+## 🛠️ Practice
+
+1. **micrograd from memory** — Watch Karpathy's micrograd video once, then close it and rebuild the `Value` class (+, ×, power, tanh, ReLU, and `backward()` via topological sort) from memory. Train a 2-16-16-1 MLP on `sklearn.datasets.make_moons(200, noise=0.1)`. Done when: training accuracy is ≥ 97% and a test harness agrees with PyTorch autograd on 100 random expressions to 1e-6. *(~4 h · Karpathy, Zero to Hero, micrograd video; 3Blue1Brown, Neural Networks, backpropagation calculus video)*
+2. **Backprop ninja** — On paper, derive the gradient of mean cross-entropy with respect to the logits, then through a BatchNorm layer (the compact closed form for ∂L/∂x), a tanh, and a linear layer. Implement the manual backward pass for Karpathy's makemore MLP and compare every intermediate gradient with autograd using `torch.allclose`. Done when: all gradients match, and you can write Nielsen's four backpropagation equations from memory and point to the line of your code that implements each. *(~5 h · Karpathy, Zero to Hero, "Becoming a Backprop Ninja"; Nielsen Ch. 2)*
+3. **Initialization and activation diagnostics** — Train a 6-layer, width-200 tanh MLP on the makemore names dataset with three weight initializations: N(0, 1), N(0, 0.01²), and Kaiming with the tanh gain of 5/3. For the first 1,000 steps, log per-layer activation histograms, the fraction of saturated units (|h| > 0.97), gradient histograms, and the update-to-data ratio. Done when: you can explain from variance propagation which initialization trains and why, and the healthy run's update-to-data ratios sit near Karpathy's ~1e-3 rule of thumb. *(~4 h · Karpathy, Zero to Hero, "Activations & Gradients, BatchNorm"; Goodfellow et al. Ch. 8)*
+4. **Regularization shoot-out on scarce data** — Repeat Nielsen's overfitting setup: train on only the first 1,000 MNIST images. Compare no regularization, L2 weight decay, dropout, early stopping, and augmentation (±2-pixel shifts, ±10° rotations) on test accuracy and train–test gap, 3 seeds each; then rerun the best two with 10,000 images. Done when: you have the table and can explain why the ranking changes (or doesn't) as data grows. *(~3 h · Nielsen Ch. 3; Goodfellow et al. Ch. 7)*
+5. **How many bits are your weights?** — After reading Hinton & van Camp and the Grünwald tutorial, take a trained MNIST MLP and estimate its description length two ways: (a) post-training uniform quantization to 8, 4, 3 and 2 bits per weight — total bits vs. test accuracy; (b) the paper's noisy-weights view — per layer, find the largest Gaussian weight noise σ that costs less than 1% accuracy and convert it to approximate bits per weight. Done when: you've written 300 words, with your own numbers, connecting "fewer bits needed" to generalization. *(~4 h · Hinton & van Camp 1993; Grünwald, MDL tutorial)*
+
+**🏗️ Mini-project — makemore MLP, Fully Instrumented:** Reimplement Karpathy's makemore MLP (the Bengio-style character model) in PyTorch without copying his code, then add (1) a training dashboard — loss curves, per-layer activation and gradient statistics, update-to-data ratios; (2) a learning-rate range test; (3) a fixed-compute sweep over embedding size, hidden width and context length. Deliverable: `projects/ml/03-nn/makemore-mlp/` with a README reporting your best validation loss, 20 samples, and one paragraph per dashboard panel on what "healthy" looks like. Done when: your validation loss is within ~0.05 nats of the value reached in the matching video, and you can diagnose a deliberately broken run (learning rate ×10, N(0, 1) init) from the dashboard alone. Stretch: export the weights as int8 C arrays, run inference on an STM32 board, and confirm it predicts the same next character as PyTorch for 100 test contexts. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. In reverse-mode autodiff, why do you need a topological ordering, and why do gradients accumulate (+=) instead of being overwritten?
+2. What is the gradient of softmax cross-entropy with respect to the logits, and why is it so simple?
+3. Why does initializing a deep tanh network with N(0, 1) weights stall training? What weight variance keeps activations healthy?
+4. What does an update-to-data ratio of 1e-1 tell you, and what would you change?
+5. How does BatchNorm behave differently in training and inference, and what bug appears if you forget to switch modes?
+6. Misconception probe: "The universal approximation theorem means one hidden layer is all you need." What does Nielsen's visual proof actually establish, and what doesn't it say?
+7. Roughly how many parameters and forward FLOPs does a 784-512-512-10 MLP have? Do its int8 weights fit in 512 KB of MCU flash?
+8. Explain to a smart friend in 3 sentences how a network "learns", without using the words "neuron" or "brain".

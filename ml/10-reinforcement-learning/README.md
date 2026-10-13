@@ -1,8 +1,19 @@
 # Reinforcement Learning
 
-Reinforcement learning teaches agents to make sequential decisions by maximizing cumulative reward. It powers game-playing agents, robotic control, and—via RLHF—the alignment of large language models. This section builds from tabular methods to deep RL, covering both value-based and policy-gradient approaches.
+Reinforcement learning teaches agents to make sequential decisions by maximizing cumulative reward. It powers game-playing agents, robotic control, and—via RLHF and RL with verifiable rewards—the alignment and reasoning abilities of large language models. This section builds from tabular methods to deep RL, covering both value-based and policy-gradient approaches.
 
-**Prerequisites:** [Section 03 – Neural Network Foundations](../03-neural-network-foundations/README.md), basic probability and statistics
+**Prerequisites:** [Section 03 – Neural Network Fundamentals](../03-neural-network-fundamentals/README.md), basic probability and statistics
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Formulate a problem as an MDP, derive the Bellman expectation and optimality equations, and implement policy evaluation, policy iteration and value iteration.
+- Implement and compare Monte Carlo, SARSA and Q-learning, and explain on-policy vs. off-policy behavior with the Cliff Walking example.
+- Implement DQN with experience replay and a target network, and explain why each stabilizes learning with function approximation (the "deadly triad").
+- Derive REINFORCE with a baseline from the policy-gradient theorem, and explain PPO's clipped surrogate objective and generalized advantage estimation.
+- Explain how RL is used with language models — reward models from pairwise preferences (Christiano et al.), RLHF with PPO, DPO's closed-form reparameterization, self-improvement loops (STaR, SPIN) — and how AlphaGo Zero uses MCTS as a policy-improvement operator.
 
 ---
 
@@ -19,6 +30,7 @@ Reinforcement learning teaches agents to make sequential decisions by maximizing
 | 7 | AlphaGo Zero – Silver et al. (2017) | Paper | | [nature.com](https://www.nature.com/articles/nature24270) |
 | 8 | PPO – Schulman et al. (2017) | Paper | 🔑 | [arxiv.org/abs/1707.06347](https://arxiv.org/abs/1707.06347) |
 | 9 | Stanford CS234 – Reinforcement Learning (YouTube) | Course | | [YouTube Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u) |
+| 10 | Spinning Up in Deep RL – Josh Achiam, OpenAI (2018) | Course | | [spinningup.openai.com](https://spinningup.openai.com/) |
 
 > 🔑 = must-read &nbsp;&nbsp; ⭐ = Ilya Sutskever reading list
 
@@ -26,14 +38,18 @@ Reinforcement learning teaches agents to make sequential decisions by maximizing
 
 ## RL for Language Models
 
-Reinforcement learning has become central to aligning large language models with human preferences. RLHF (via PPO) was the key technique behind ChatGPT's behavior, while DPO simplifies the pipeline by eliminating the reward model entirely. Self-play and self-taught reasoning push the boundaries further.
+Reinforcement learning has become central to aligning large language models with human preferences — and, since 2024, to teaching them to reason. RLHF (via PPO) was the key technique behind ChatGPT's behavior, while DPO simplifies the pipeline by eliminating the separate reward model. RL with verifiable rewards (checking answers to math and code problems automatically, often optimized with GRPO) is the recipe behind reasoning models such as DeepSeek-R1 ([Section 11](../11-frontiers/README.md)); process supervision (rewarding each reasoning step) is the main alternative studied, though the R1 report lists process reward models among its unsuccessful attempts. Self-play and self-taught reasoning push the boundaries further.
 
 | # | Resource | Type | Marking | Link |
 |---|----------|------|---------|------|
-| 10 | Deep RL from Human Preferences – Christiano et al. (2017) | Paper | 🔑 | [arxiv.org/abs/1706.03741](https://arxiv.org/abs/1706.03741) |
-| 11 | Direct Preference Optimization (DPO) – Rafailov et al. (2023) | Paper | 🔑 | [arxiv.org/abs/2305.18290](https://arxiv.org/abs/2305.18290) |
-| 12 | Self-Play Fine-Tuning (SPIN) – Chen et al. (2024) | Paper | | [arxiv.org/abs/2401.01335](https://arxiv.org/abs/2401.01335) |
-| 13 | STaR – Self-Taught Reasoner – Zelikman et al. (2022) | Paper | | [arxiv.org/abs/2203.14465](https://arxiv.org/abs/2203.14465) |
+| 11 | Deep RL from Human Preferences – Christiano et al. (2017) | Paper | 🔑 | [arxiv.org/abs/1706.03741](https://arxiv.org/abs/1706.03741) |
+| 12 | Direct Preference Optimization (DPO) – Rafailov et al. (2023) | Paper | 🔑 | [arxiv.org/abs/2305.18290](https://arxiv.org/abs/2305.18290) |
+| 13 | Self-Play Fine-Tuning (SPIN) – Chen et al. (2024) | Paper | | [arxiv.org/abs/2401.01335](https://arxiv.org/abs/2401.01335) |
+| 14 | STaR – Self-Taught Reasoner – Zelikman et al. (2022) | Paper | | [arxiv.org/abs/2203.14465](https://arxiv.org/abs/2203.14465) |
+| 15 | Let's Verify Step by Step (process reward models) – Lightman et al. (2023) | Paper | | [arxiv.org/abs/2305.20050](https://arxiv.org/abs/2305.20050) |
+| 16 | DeepSeekMath (introduces GRPO) – Shao et al. (2024) | Paper | | [arxiv.org/abs/2402.03300](https://arxiv.org/abs/2402.03300) |
+| 17 | Tülu 3: Pushing Frontiers in Open LM Post-Training (introduces RLVR) – Lambert et al. (2024) | Paper | | [arxiv.org/abs/2411.15124](https://arxiv.org/abs/2411.15124) |
+| 18 | Reinforcement Learning from Human Feedback (RLHF Book) – Nathan Lambert (2025) | Book (free) | | [rlhfbook.com](https://rlhfbook.com/) |
 
 ---
 
@@ -42,10 +58,38 @@ Reinforcement learning has become central to aligning large language models with
 1. **Foundations** – Work through Sutton & Barto chapters 1–6 (bandits, MDPs, dynamic programming, MC, TD learning).
 2. **Lectures** – Watch David Silver's RL Course alongside the textbook for complementary explanations.
 3. **Value-based deep RL** – Read the DQN paper (2013), then the Nature DQN (2015) for experience replay and target networks.
-4. **Continuous control** – Read DDPG for actor-critic methods in continuous action spaces.
-5. **Policy gradients** – Read PPO to understand clipped surrogate objectives and why PPO became the default algorithm.
-6. **Game-playing agents** – Read AlphaGo, then AlphaGo Zero to see how self-play and MCTS combine with deep RL.
-7. **Deeper study** – Optionally follow Stanford CS234 for a more rigorous mathematical treatment.
-8. **RLHF origins** – Read Christiano et al. to understand learning reward models from human comparisons.
-9. **DPO** – Read Rafailov et al. to see how preference optimization can replace RL entirely.
-10. **Self-play** – Read SPIN and STaR for self-improvement without human feedback.
+4. **Hands-on deep RL** – Work through Spinning Up's "Introduction to RL" and implement vanilla policy gradient yourself before reading the algorithm papers below.
+5. **Continuous control** – Read DDPG for actor-critic methods in continuous action spaces.
+6. **Policy gradients** – Read PPO to understand clipped surrogate objectives and why PPO became the default algorithm.
+7. **Game-playing agents** – Read AlphaGo, then AlphaGo Zero to see how self-play and MCTS combine with deep RL.
+8. **Deeper study** – Optionally follow Stanford CS234 for a more rigorous mathematical treatment.
+9. **RLHF origins** – Read Christiano et al. to understand learning reward models from human comparisons.
+10. **DPO** – Read Rafailov et al. to see how preference optimization can replace RL entirely.
+11. **Self-play** – Read SPIN and STaR for self-improvement without human feedback.
+12. **RL for reasoning** – Read Let's Verify Step by Step (process vs. outcome rewards), then DeepSeekMath for GRPO, then Tülu 3 for RL with verifiable rewards; continue to DeepSeek-R1 in Section 11.
+13. **Reference** – Keep Lambert's RLHF Book open as the up-to-date map of LLM post-training (reward models, rejection sampling, PPO/GRPO, DPO, RLVR).
+
+---
+
+## 🛠️ Practice
+
+1. **Reproduce the 10-armed testbed** — Reproduce Sutton & Barto's ε-greedy comparison from Ch. 2: 2,000 random 10-armed bandits × 1,000 steps, ε ∈ {0, 0.01, 0.1}, plotting average reward and % optimal action. Add optimistic initial values (Q₁ = 5, ε = 0) and UCB (c = 2). Done when: your curves match the book's figures qualitatively and you can explain the early spike in the optimistic method's % optimal action. *(~2 h · Sutton & Barto Ch. 2; Silver, Lecture 9 on exploration and exploitation)*
+2. **Dynamic programming and TD control** — (a) Implement iterative policy evaluation, policy iteration and value iteration on the 4×4 gridworld example in Ch. 4, and check your random-policy values against the book's figure. (b) Implement SARSA and Q-learning on Cliff Walking (Ch. 6) with ε = 0.1, averaging 500-episode runs over 50 seeds. Done when: you reproduce the book's result — Q-learning learns the cliff-edge path yet earns *less* reward per episode online than SARSA's safer path — and can explain it in terms of on- vs. off-policy targets. *(~3 h · Sutton & Barto Ch. 4 and Ch. 6; Silver, Lectures 3–5)*
+3. **DQN from scratch, with ablations** — Implement DQN with experience replay and a target network on Gymnasium `CartPole-v1` (then `LunarLander-v3` if time allows). Ablate: no replay, no target network, neither; 5 seeds each; plot mean ± std return. Done when: the full agent reliably reaches CartPole's 500-step cap, the ablations are visibly less stable, and you can relate the result to the Nature DQN paper's replay/target-network ablation table and to the "deadly triad" in Sutton & Barto's off-policy-approximation chapter. *(~5 h · DQN 2013; Nature DQN 2015; Silver, Lecture 6 on value function approximation)*
+4. **PPO vs. PID on a plant you understand** — Implement PPO-clip with GAE (γ = 0.99, λ = 0.95, ε = 0.2) and get it working on `Pendulum-v1`. Then write a custom Gymnasium environment for a heater block modeled as first-order-plus-dead-time (τ ≈ 60 s, 5 s dead time, actuator saturation, sensor noise) and compare PPO with a tuned PID on setpoint tracking: integrated absolute error, overshoot, settling time, and robustness when τ changes by ±30%. Done when: you can say which controller you'd ship and why, with numbers. *(~8 h · PPO; Silver, Lecture 7 on policy gradients; Stanford CS234)*
+5. **Preferences → policy, two ways** — Build a toy where you know the answer: 50 prompts × 10 candidate responses, a hidden true reward, and a reference policy. Sample pairwise preferences from a Bradley–Terry model of the true reward. (a) Christiano-style: fit a reward model, then optimize the KL-regularized objective. (b) Optimize the DPO loss directly. On paper, derive the DPO loss from the KL-constrained objective via π* ∝ π_ref · exp(r/β). Done when: both methods converge to the analytic π*, and DPO's implicit reward β log(π/π_ref) recovers the true reward up to a per-prompt constant. *(~4 h · Christiano et al. 2017; DPO)*
+
+**🏗️ Mini-project — AlphaZero-lite for Connect Four:** Implement AlphaGo Zero's recipe at toy scale: a small residual policy/value network, MCTS with PUCT that uses the network's priors and values (no rollouts), self-play producing visit-count policy targets and game-outcome value targets, and a training loop with periodic evaluation against the previous best network. Deliverable: `projects/ml/10-rl/alphazero-c4/` with a ladder plot of checkpoints vs. a pure-MCTS baseline (random rollouts), plus agreement with a perfect Connect Four solver on a fixed set of positions. Done when: your network at 200 simulations per move beats pure MCTS at 2,000 rollouts per move in ≥ 70% of games, and ablations show how much strength comes from the network vs. the search. *(~15 h incl. self-play compute)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the Bellman optimality equation for Q*. Why can't you solve it as a linear system the way you can the Bellman expectation equation?
+2. On Cliff Walking, why does Q-learning take the edge path while SARSA takes the safe one?
+3. Your DQN learns, then its returns collapse. Using the deadly triad, name two likely causes and what you'd check for each.
+4. Why does subtracting a baseline from the return reduce REINFORCE's variance without adding bias?
+5. What does PPO's clipped objective prevent? Sketch one term of L^CLIP against the probability ratio r for a positive and a negative advantage.
+6. How does AlphaGo Zero use MCTS to produce its training targets, and what replaced AlphaGo's rollouts and separate policy and value networks?
+7. Misconception probe: "DPO has no reward model, so it can't over-optimize a reward." What does DPO implicitly optimize, and how can it still overfit?
+8. Explain to a smart friend in 3 sentences how STaR and SPIN let a model improve from its own outputs, and what each still needs as ground truth.

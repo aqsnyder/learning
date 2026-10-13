@@ -12,14 +12,29 @@ Before deep learning dominated the field, classical machine learning algorithms 
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Implement linear, ridge, lasso and logistic regression from scratch and reproduce scikit-learn's coefficients, including its regularization-scaling conventions.
+- Demonstrate the bias–variance tradeoff by simulation, and select hyperparameters with leakage-free (nested, grouped) cross-validation.
+- Compare k-NN, kernel SVMs, decision trees, random forests and gradient boosting on tabular data, explaining each model's inductive bias and when it wins.
+- Derive and implement EM for a Gaussian mixture model, and explain k-means as its hard-assignment limit.
+- Design a feature-engineering pipeline for sensor time-series classification and evaluate it with metrics that survive class imbalance (precision/recall, PR curves, a cost-based operating point).
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Online Course | Machine Learning Specialization | Andrew Ng | 2022 | [Link](https://www.coursera.org/specializations/machine-learning-introduction) | The most popular ML course ever made, now updated. Covers supervised learning, unsupervised learning, and recommender systems with hands-on labs. The ideal starting point. |
 | 🔑 | Video Lectures | Stanford CS229: Machine Learning | Andrew Ng | — | [Link](https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU) | The full Stanford graduate-level course. More mathematically rigorous than the Coursera specialization — great for deepening understanding. |
-| 🔑 | Book (Free) | An Introduction to Statistical Learning (ISLR) | Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani | 2013 | [Link](https://www.statlearning.com/) | The most accessible statistics/ML textbook. Covers regression, classification, resampling, regularization, tree methods, SVMs, and unsupervised learning with R/Python labs. |
-| | Book | Pattern Recognition and Machine Learning (PRML) | Christopher Bishop | 2006 | — | A comprehensive, mathematically rigorous treatment of probabilistic ML. Excellent reference for Bayesian methods, graphical models, and EM. More advanced than ISLR. |
+| 🔑 | Book (Free) | An Introduction to Statistical Learning (ISLR 2nd ed. / ISLP Python ed.) | Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani (+ Jonathan Taylor for ISLP) | 2021 / 2023 | [Link](https://www.statlearning.com/) | The most accessible statistics/ML textbook. Covers regression, classification, resampling, regularization, tree methods, SVMs, and unsupervised learning. Free PDFs of both the R edition (2nd ed., 2021) and the Python edition (ISLP, 2023) — use ISLP's Python labs. |
+| | Book (Free) | Pattern Recognition and Machine Learning (PRML) | Christopher Bishop | 2006 | [Link](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) | A comprehensive, mathematically rigorous treatment of probabilistic ML. Excellent reference for Bayesian methods, graphical models, and EM. More advanced than ISLR. Now a free PDF from Microsoft Research. |
+| | Book (Free) | Gaussian Processes for Machine Learning | Carl Edward Rasmussen, Christopher K. I. Williams | 2006 | [Link](https://gaussianprocess.org/gpml/) | The standard text on Gaussian processes — Bayesian non-parametric regression and classification with calibrated uncertainty, and the clearest route into kernel methods. Full PDF free from the authors. |
+| | Paper | A Few Useful Things to Know About Machine Learning | Pedro Domingos | 2012 | [Link](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) | Twelve hard-won lessons in one short article: generalization is what counts, overfitting has many faces, intuition fails in high dimensions, feature engineering is key, more data beats a cleverer algorithm. Practical wisdom no textbook chapter gives you. |
+| | Paper | XGBoost: A Scalable Tree Boosting System | Tianqi Chen, Carlos Guestrin | 2016 | [Link](https://arxiv.org/abs/1603.02754) | Gradient-boosted decision trees made fast and scalable. Boosted trees are still the default winner on tabular data; read after the ISLR chapter on tree-based methods. |
+| | Paper | Why Do Tree-Based Models Still Outperform Deep Learning on Tabular Data? | Léo Grinsztajn, Edouard Oyallon, Gaël Varoquaux | 2022 | [Link](https://arxiv.org/abs/2207.08815) | A careful benchmark showing tree ensembles beat neural nets on medium-sized tabular datasets, and explaining why. Read before reaching for a neural net on sensor logs or spreadsheet-style data. |
 | | Book (Free) | The Elements of Statistical Learning (ESL) | Trevor Hastie, Robert Tibshirani, Jerome Friedman | 2009 | [Link](https://hastie.su.domains/ElemStatLearn/) | The graduate-level companion to ISLR. Covers the same topics in much greater mathematical depth. Best used as a reference once you've worked through ISLR. |
 | | Documentation | Scikit-learn User Guide | Scikit-learn developers | — | [Link](https://scikit-learn.org/) | The go-to Python library for classical ML. The documentation doubles as an excellent learning resource with clear explanations, examples, and algorithm guides. |
 | | Online Course | Google Machine Learning Crash Course | Google | — | [Link](https://developers.google.com/machine-learning/crash-course) | A fast-paced, practical introduction to ML concepts with TensorFlow exercises. Good for a quick overview or as a supplement. |
@@ -29,8 +44,35 @@ Before deep learning dominated the field, classical machine learning algorithms 
 ## Suggested Order
 
 1. **Andrew Ng — ML Specialization (Coursera)** — Start here for the best-structured introduction with hands-on coding.
-2. **ISLR (book)** — Read alongside or after the course for a more statistical perspective and additional practice.
-3. **Scikit-learn User Guide** — Build projects and solidify concepts by implementing algorithms in Python.
-4. **CS229 (Stanford lectures)** — Watch these to deepen your mathematical understanding of the algorithms.
-5. **Google ML Crash Course** — Use as a quick refresher or supplement for any gaps.
-6. **Bishop PRML / ESL** — Reference these for advanced topics or when you need deeper theoretical grounding.
+2. **ISLR / ISLP (book)** — Read alongside or after the course for a more statistical perspective and additional practice.
+3. **Domingos — A Few Useful Things** — Short; read once you've trained a few models, then reread later.
+4. **Scikit-learn User Guide** — Build projects and solidify concepts by implementing algorithms in Python.
+5. **XGBoost → Grinsztajn et al.** — Learn the tabular-data workhorse and why it still beats deep learning there.
+6. **CS229 (Stanford lectures)** — Watch these to deepen your mathematical understanding of the algorithms.
+7. **Google ML Crash Course** — Use as a quick refresher or supplement for any gaps.
+8. **Bishop PRML / ESL / Rasmussen & Williams (GPs)** — Reference these for advanced topics, Bayesian methods, and kernels when you need deeper theoretical grounding.
+
+---
+
+## 🛠️ Practice
+
+1. **Regularized regression vs. scikit-learn** — Implement ridge (closed form) and lasso (coordinate descent with soft-thresholding) in NumPy. On an ISLR dataset such as `Hitters` or `Credit` (shipped with the book's R and Python packages), standardize the features, sweep λ over 50 log-spaced values, and plot the coefficient paths. Done when: your coefficients match `sklearn.linear_model.Ridge` and `Lasso` to 1e-4 once you account for scikit-learn's conventions (its lasso divides the squared error by 2n; its ridge doesn't). *(~3 h · ISLR chapter on linear model selection and regularization; scikit-learn User Guide on linear models)*
+2. **Bias–variance by simulation** — Use Bishop's curve-fitting target f(x) = sin(2πx) on [0, 1] with Gaussian noise (take σ = 0.3). Draw 200 training sets of n = 25, fit polynomials of degree 1–12 (plus ridge-regularized degree 12 over a λ sweep), and estimate bias², variance and noise at 100 test points. Done when: you have the U-shaped test-error curve and bias² + variance + σ² matches the measured expected test MSE within Monte Carlo error. *(~2.5 h · Bishop, PRML Ch. 1 and Ch. 3; CS229 lecture on bias–variance)*
+3. **Tabular bake-off with nested CV** — On a real tabular dataset — UCI "Steel Plates Faults" (industrial surface-defect classes) or a 50k-row sample of scikit-learn's `fetch_covtype` (subsample to ~10k rows for the RBF-SVM — its fit time grows roughly quadratically, and nested 5×5 CV on 50k rows runs to many CPU-hours) — compare logistic regression, k-NN, RBF-SVM, random forest and `HistGradientBoostingClassifier` with nested 5×5 cross-validation and all preprocessing inside a `Pipeline`. Report macro-F1 (mean ± std) and fit time, plus one sentence per model on why it won or lost given its inductive bias. Then reproduce ESL's "wrong way to do cross-validation" in its p ≫ n setting (a few dozen features, as in these datasets, show almost no effect): generate 50 samples × 5,000 pure-noise features with *random* binary labels, select the 100 features most correlated with the labels on the full dataset, then cross-validate a 1-NN classifier; repeat with the selection inside each fold. Done when: you have the table, and the wrong-way experiment reports well-above-chance accuracy on pure noise while the right way reports chance. *(~4 h · scikit-learn User Guide on model selection and ensembles; ISLR chapters on trees and SVMs; ESL chapters on model assessment and boosting)*
+4. **EM for a Gaussian mixture** — Derive the E-step (responsibilities) and M-step (weights, means, covariances) for a K-component GMM. Implement it in NumPy with log-sum-exp for stability and fit 2-D data drawn from three overlapping Gaussians, asserting that the log-likelihood never decreases. Compare against `sklearn.mixture.GaussianMixture` from the same initialization, then shrink a shared isotropic covariance toward zero and show the updates become k-means. Done when: means and final log-likelihood match scikit-learn to 1e-3. *(~3.5 h · Bishop, PRML Ch. 9; CS229 lecture on EM)*
+5. **Margins and kernels** — By hand, solve the hard-margin SVM for four 2-D points of your choosing: identify the support vectors, w, b and the margin 2/‖w‖; confirm with `SVC(kernel="linear", C=1e6)`. On concentric-circles data, show that a linear SVM fails, the explicit feature map φ(x) = (x₁, x₂, x₁² + x₂²) separates the classes, and an RBF kernel does the same implicitly. Plot decision boundaries and support vectors for γ ∈ {0.1, 1, 10}. Done when: your hand solution matches scikit-learn and you can explain the under- and overfitting across γ. *(~2.5 h · CS229 lectures on SVMs and kernels; ISLR chapter on SVMs)*
+
+**🏗️ Mini-project — Event Classifier for a Sensor Stream:** Build a classical-ML detector that tells real events from nuisance triggers in a 1-D sensor stream — e.g. a PIR motion sensor's analog output (person vs. wind-blown foliage vs. quiet), a current-sense trace (normal vs. faulty load — capture it on a low-voltage, current-limited bench supply, not a mains-powered load), or the UCI HAR accelerometer data if you have none of your own yet. Window the signal, engineer ~20 features (RMS, peak-to-peak, zero-crossing rate, spectral centroid, FFT band powers, autocorrelation peaks), and train logistic regression and gradient boosting with grouped cross-validation (group by capture session so windows from one recording never straddle train and test). Deliverable: `projects/ml/02-classical/sensor-events/` with the notebook and a one-page memo — confusion matrix, PR curve, the operating point you'd ship and its false-trigger rate, and the top five features by permutation importance. Done when: the model beats a single tuned amplitude threshold on false-trigger rate at equal recall under grouped CV. Stretch: export it to C with `emlearn` and report flash, RAM and per-window inference time on a Cortex-M board. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the bias–variance decomposition of expected squared error. Which term can no model reduce?
+2. Why does lasso produce exact zeros while ridge doesn't? Give the geometric picture.
+3. You pick the 100 features most correlated with the label using the full dataset, then run 5-fold CV. What goes wrong, and how large can the effect be?
+4. What is a support vector, and why does the SVM solution depend only on the support vectors?
+5. What does each new tree fit in gradient boosting, and how does that differ from what each tree fits in a random forest?
+6. Misconception probe: "EM increases the likelihood every iteration, so it finds the maximum-likelihood mixture." True?
+7. A fault detector scores 99% accuracy on a dataset where 1% of units are faulty. What trivial model also scores 99%, and which numbers would you report instead?
+8. Explain to a smart friend in 3 sentences when you'd reach for gradient-boosted trees instead of a neural network.

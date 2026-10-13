@@ -1,8 +1,19 @@
 # Generative Models
 
-Generative models learn the underlying distribution of data and can synthesize new, realistic samples. This section traces the arc from variational autoencoders and GANs through normalizing flows to the diffusion models that now power state-of-the-art image and video generation. Understanding these architectures is essential for grasping modern creative AI, drug discovery pipelines, and data augmentation techniques.
+Generative models learn the underlying distribution of data and can synthesize new, realistic samples. This section traces the arc from variational autoencoders and GANs through normalizing flows to the diffusion and flow-matching models that now power state-of-the-art image and video generation, including the shift from U-Net to transformer (DiT) backbones. Understanding these architectures is essential for grasping modern creative AI, drug discovery pipelines, and data augmentation techniques.
 
-**Prerequisites:** [Section 03 – Neural Network Foundations](../03-neural-network-foundations/README.md), [Section 06 – Attention and Transformers](../06-attention-and-transformers/README.md)
+**Prerequisites:** [Section 03 – Neural Network Fundamentals](../03-neural-network-fundamentals/README.md), [Section 06 – Transformers and Attention](../06-transformers-and-attention/README.md)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive the ELBO and the reparameterization trick, and implement a VAE whose latent space you can visualize and interpret.
+- Derive the optimal GAN discriminator and the global optimum (where the Jensen–Shannon divergence is zero), and diagnose mode collapse and training instability in practice.
+- Derive the change-of-variables formula behind normalizing flows and compute the planar-flow log-determinant in O(D).
+- Derive DDPM's closed-form forward process and simplified noise-prediction loss, implement training and sampling, and explain how flow matching and consistency models trade training choices for fewer sampling steps.
+- Explain classifier-free guidance and latent diffusion, and how text conditioning enters DALL·E 2 (a prior over CLIP image embeddings) and Imagen (a frozen T5 text encoder) — both pixel-space diffusion cascades that rely on classifier-free guidance, unlike latent diffusion.
 
 ---
 
@@ -13,7 +24,7 @@ Generative models learn the underlying distribution of data and can synthesize n
 | 1 | VAE – Kingma & Welling (2013) | Paper | 🔑 | [arxiv.org/abs/1312.6114](https://arxiv.org/abs/1312.6114) |
 | 2 | GAN – Goodfellow et al. (2014) | Paper | 🔑 | [arxiv.org/abs/1406.2661](https://arxiv.org/abs/1406.2661) |
 | 3 | DCGAN – Radford et al. (2015) | Paper | | [arxiv.org/abs/1511.06434](https://arxiv.org/abs/1511.06434) |
-| 4 | Normalizing Flows – Rezende & Mohamed (2015) | Paper | ⭐ | [arxiv.org/abs/1505.05770](https://arxiv.org/abs/1505.05770) |
+| 4 | Normalizing Flows – Rezende & Mohamed (2015) | Paper | | [arxiv.org/abs/1505.05770](https://arxiv.org/abs/1505.05770) |
 | 5 | DDPM – Ho, Jain & Abbeel (2020) | Paper | 🔑 | [arxiv.org/abs/2006.11239](https://arxiv.org/abs/2006.11239) |
 | 6 | Latent Diffusion – Rombach et al. (2022) | Paper | | [arxiv.org/abs/2112.10752](https://arxiv.org/abs/2112.10752) |
 | 7 | What are Diffusion Models? – Lilian Weng | Blog | | [lilianweng.github.io](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) |
@@ -23,6 +34,11 @@ Generative models learn the underlying distribution of data and can synthesize n
 | 11 | Consistency Models – Song et al. (2023) | Paper | | [arxiv.org/abs/2303.01469](https://arxiv.org/abs/2303.01469) |
 | 12 | DALL·E 2 – Ramesh et al. (2022) | Paper | | [arxiv.org/abs/2204.06125](https://arxiv.org/abs/2204.06125) |
 | 13 | Imagen – Saharia et al. (2022) | Paper | | [arxiv.org/abs/2205.11487](https://arxiv.org/abs/2205.11487) |
+| 14 | Variational Lossy Autoencoder – Chen et al. (2016) | Paper | ⭐ | [arxiv.org/abs/1611.02731](https://arxiv.org/abs/1611.02731) |
+| 15 | VQ-VAE: Neural Discrete Representation Learning – van den Oord, Vinyals & Kavukcuoglu (2017) | Paper | | [arxiv.org/abs/1711.00937](https://arxiv.org/abs/1711.00937) |
+| 16 | Score-Based Generative Modeling through Stochastic Differential Equations – Song et al. (2020) | Paper | | [arxiv.org/abs/2011.13456](https://arxiv.org/abs/2011.13456) |
+| 17 | DiT: Scalable Diffusion Models with Transformers – Peebles & Xie (2022) | Paper | | [arxiv.org/abs/2212.09748](https://arxiv.org/abs/2212.09748) |
+| 18 | MIT 6.S184: Introduction to Flow Matching and Diffusion Models – Holderrieth & Erives (2025) | Course | | [diffusion.csail.mit.edu](https://diffusion.csail.mit.edu/2025/index.html) · [Notes](https://arxiv.org/abs/2506.02070) |
 
 > 🔑 = must-read &nbsp;&nbsp; ⭐ = Ilya Sutskever reading list
 
@@ -33,10 +49,39 @@ Generative models learn the underlying distribution of data and can synthesize n
 1. **Start with VAEs** – Read the Kingma & Welling paper to understand latent variable models and the reparameterization trick.
 2. **Move to GANs** – Read the original GAN paper, then DCGAN for practical architectural patterns.
 3. **Explore Normalizing Flows** – Rezende & Mohamed introduces invertible transformations and exact likelihood computation.
-4. **Dive into Diffusion** – Read Lilian Weng's blog for intuition, then the DDPM paper for the full derivation.
-5. **Scale up** – Study Latent Diffusion to see how diffusion meets autoencoders for efficient high-resolution generation.
-6. **Flow Matching** – Read Lipman et al. to understand the framework behind Stable Diffusion 3 and Flux.
-7. **Guidance** – Read Classifier-Free Guidance to understand the core inference trick used by all modern diffusion models.
-8. **Text-to-image** – Read DALL·E 2 and Imagen to see diffusion applied to text-conditioned image generation at scale.
-9. **Fast generation** – Read Consistency Models for single-step generation without iterative denoising.
-10. **Browse Distill.pub** – Explore interactive articles for visual intuition on generative concepts.
+4. **Variational Lossy Autoencoder** (Ilya list) – See what happens when a VAE gets a powerful autoregressive decoder, and how to control what the latent code keeps — a compression view of representation learning.
+5. **VQ-VAE** – Learn discrete latent codes; this is how images and audio get "tokenized" for autoregressive and multimodal models.
+6. **Dive into Diffusion** – Work through the MIT 6.S184 lecture notes (or Lilian Weng's blog for a lighter intuition pass), then the DDPM paper for the full derivation.
+7. **Score SDEs** – Read Song et al. to see diffusion and score matching unified as continuous-time stochastic processes.
+8. **Scale up** – Study Latent Diffusion to see how diffusion meets autoencoders for efficient high-resolution generation.
+9. **Flow Matching** – Read Lipman et al. to understand the framework behind Stable Diffusion 3 and Flux.
+10. **Guidance** – Read Classifier-Free Guidance to understand the core inference trick used by all modern diffusion models.
+11. **DiT** – See the U-Net backbone replaced by a transformer, the architecture family behind most current image and video generators.
+12. **Text-to-image** – Read DALL·E 2 and Imagen to see diffusion applied to text-conditioned image generation at scale.
+13. **Fast generation** – Read Consistency Models for single-step generation without iterative denoising.
+14. **Browse Distill.pub** – Explore interactive articles for visual intuition on generative concepts.
+
+---
+
+## 🛠️ Practice
+
+1. **VAE with a 2-D latent** — Derive the ELBO, log p(x) ≥ E_q[log p(x|z)] − KL(q(z|x) ‖ p(z)), and the closed-form KL between diagonal Gaussians. Implement a VAE on MNIST with a 2-D latent and plot (a) test-set latent means colored by digit and (b) a 20×20 grid of decodings over z ∈ [−3, 3]² — the learned-manifold figure in Kingma & Welling. Then weight the KL term by β ∈ {0.1, 1, 5} and describe the reconstruction-vs-regularity tradeoff. Done when: at β = 1 the decoded grid morphs smoothly between digits and you can explain what β = 0.1 and β = 5 do to the latent plot. *(~4 h · Kingma & Welling 2013)*
+2. **GANs on a toy, then DCGAN** — Prove that for a fixed generator the optimal discriminator is p_data/(p_data + p_g), and that the minimax value at the global optimum is −log 4. Train an MLP GAN on a ring of 8 Gaussians, snapshotting samples every 1,000 steps, once with the saturating generator loss and once with the non-saturating loss the paper recommends; document any mode collapse. Then train a DCGAN on MNIST or 64×64 CelebA following the paper's architecture guidelines. Done when: you have snapshot grids showing collapse (or its absence) for both losses and a DCGAN sample grid free of checkerboard artifacts — Distill's "Deconvolution and Checkerboard Artifacts" explains them if you get them. *(~5 h · Goodfellow et al. 2014; DCGAN; Distill.pub)*
+3. **Planar flows on 2-D energies** — Implement Rezende & Mohamed's planar flow, derive its O(D) log-determinant with the matrix determinant lemma, and check it against `torch.logdet` of the autograd Jacobian. Fit flows of length K = 2, 8 and 32 to the paper's 2-D test energy functions by minimizing the reverse KL. Done when: your density plots reproduce the paper's qualitative result — longer flows capture the multimodal and ring-shaped targets that short ones miss. *(~4 h · Rezende & Mohamed 2015)*
+4. **DDPM vs. flow matching on the same data** — On 2-D data (two moons or a checkerboard), then MNIST, implement DDPM (linear β schedule from 10⁻⁴ to 0.02, T = 1000, ε-prediction; the paper's Algorithms 1 and 2) and conditional flow matching with the optimal-transport path and Euler sampling. Derive q(x_t | x_0) and verify it by simulating the forward chain. Compare sample quality vs. number of network evaluations: DDPM with 1,000-step ancestral sampling and DDIM-style deterministic sampling at 10, 50 and 250 steps (covered in Weng's post), flow matching at 1–100 Euler steps. Done when: you can show and explain why flow matching's straighter paths survive fewer steps. *(~6 h · DDPM; Flow Matching; Weng, "What are Diffusion Models?")*
+5. **Classifier-free guidance, measured** — Add class conditioning with 10–20% label dropout to your MNIST diffusion or flow-matching model, as in Ho & Salimans. Sample with guidance weights w ∈ {0, 0.5, 1, 3, 7}; measure fidelity (accuracy of a pretrained MNIST classifier on the samples) and diversity (mean pairwise distance in that classifier's feature space). Done when: you've plotted the fidelity–diversity tradeoff, related it to the paper's FID-vs-IS tradeoff, and can say why the same knob is the "guidance scale" in latent-diffusion text-to-image models. *(~4 h · Classifier-Free Guidance; Latent Diffusion)*
+
+**🏗️ Mini-project — One Dataset, Four Generators:** Pick a dataset you can train on one GPU in ≤ 2 h per model — Fashion-MNIST, CIFAR-10 at 32×32, or something from your own work (e.g. 1-D waveform snippets of a few event types captured from a scope or ADC). Train a VAE, a DCGAN, a DDPM and a flow-matching model of comparable parameter count, and add classifier-free guidance to the best one. Deliverable: `projects/ml/07-generative/four-generators/` with sample grids and a table — parameters, training time, sampling time per sample, FID (or, for waveforms, a classifier-accuracy and spectral-distance score), and NLL/ELBO where defined. Done when: a 600-word write-up explains the tradeoffs you observed — sharpness, diversity, likelihood, speed — each tied to a claim in one of the papers. Stretch: distill your diffusion model into a consistency model and get usable 1–2-step samples. *(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What are the two terms of the ELBO, what does each push the model toward, and why does training a VAE need the reparameterization trick?
+2. Latent diffusion with downsampling factor f = 8 on a 512×512 RGB image: what is the spatial size of the latent, and roughly how much cheaper is each denoising step than in pixel space?
+3. At the GAN global optimum, what is D(x) everywhere, and which divergence has been minimized?
+4. Why must a normalizing flow be invertible with a cheap Jacobian determinant?
+5. Write q(x_t | x_0) for DDPM. Why does having it in closed form make training efficient?
+6. Write the classifier-free guidance combination of conditional and unconditional predictions. What do you lose at very high guidance?
+7. Misconception probe: "Diffusion models need ~1,000 sampling steps because they were trained with T = 1,000." What do flow matching, DDIM-style samplers and consistency models show?
+8. Explain to a smart friend in 3 sentences how a latent-diffusion model like Stable Diffusion turns a text prompt into an image.

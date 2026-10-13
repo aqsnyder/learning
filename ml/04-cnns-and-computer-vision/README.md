@@ -8,7 +8,16 @@ But the story doesn't end with CNNs. Starting with ViT (2020), Vision Transforme
 
 ## Prerequisites
 
-- [Section 03 — Deep Learning Fundamentals](../03-deep-learning-fundamentals/README.md)
+- [Section 03 — Neural Network Fundamentals](../03-neural-network-fundamentals/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Compute output shapes, parameter counts, multiply-accumulates (MACs) and receptive fields for any stack of convolution, pooling and dilated layers, and explain why stacked 3×3 convolutions (VGG) and 1×1 bottlenecks (Network In Network, Inception) are efficient.
+- Implement 2-D convolution forward and backward from scratch and verify it against PyTorch.
+- Explain the degradation problem and why residual connections solve it, and reproduce both at small scale on CIFAR-10.
+- Explain ViT's patch-embedding pipeline and the inductive-bias-versus-data tradeoff between CNNs and ViTs, citing the evidence in ViT and DeiT, and state what Swin and DETR change.
+- Generate feature visualizations and saliency maps for a trained CNN, and critique what they can and cannot show.
 
 ## Marking Convention
 
@@ -21,13 +30,16 @@ But the story doesn't end with CNNs. Starting with ViT (2020), Vision Transforme
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
+| | 📄 Paper | Gradient-Based Learning Applied to Document Recognition (LeNet-5) | LeCun, Bottou, Bengio, Haffner | 1998 | [Paper](https://doi.org/10.1109/5.726791) | The canonical early CNN: stacked convolution and subsampling layers trained end-to-end with backprop, deployed commercially to read bank cheques. Almost every idea in AlexNet is already recognizable here. |
 | 🔑⭐ | 📄 Paper | ImageNet Classification with Deep Convolutional Neural Networks (AlexNet) | Krizhevsky, Sutskever, Hinton | 2012 | [Paper](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks) | The paper that launched the deep learning revolution. Won ImageNet 2012 by a massive margin using ReLU, dropout, GPU training, and data augmentation. |
 | 🔑⭐ | 📄 Paper | Deep Residual Learning for Image Recognition (ResNet) | He, Zhang, Ren, Sun | 2015 | [Paper](https://arxiv.org/abs/1512.03385) | Introduced skip connections enabling training of 100+ layer networks. Residual learning is now a universal design pattern across all of deep learning. |
-| 🔑 | 🎥 Course | Stanford CS231n: CNNs for Visual Recognition | Fei-Fei Li, Karpathy, Johnson | 2017 | [YouTube](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) | The gold-standard course on CNNs. Covers backprop, convolutions, architectures, detection, segmentation, and generative models. |
+| ⭐ | 📄 Paper | Identity Mappings in Deep Residual Networks | He, Zhang, Ren, Sun | 2016 | [Paper](https://arxiv.org/abs/1603.05027) | The ResNet follow-up: analyzes why clean identity shortcuts let signals propagate through 1000-layer networks and introduces the "pre-activation" residual block — the same idea as the pre-norm blocks in modern transformers. |
+| 🔑⭐ | 🎥 Course | Stanford CS231n: CNNs for Visual Recognition | Fei-Fei Li, Justin Johnson, Serena Yeung | 2017 | [YouTube](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) | The gold-standard course on CNNs (Spring 2017 lectures; also on the Ilya Sutskever reading list). Covers backprop, convolutions, architectures, detection, segmentation, and generative models. |
 | | 📄 Paper | Very Deep Convolutional Networks for Large-Scale Image Recognition (VGGNet) | Simonyan, Zisserman | 2014 | [Paper](https://arxiv.org/abs/1409.1556) | Showed that network depth with small 3×3 filters is critical for good performance. Simple, elegant architecture still used as a feature extractor. |
 | | 📄 Paper | Going Deeper with Convolutions (GoogLeNet / Inception) | Szegedy et al. | 2014 | [Paper](https://arxiv.org/abs/1409.4842) | Introduced the Inception module with parallel convolutions at multiple scales and 1×1 convolutions for dimensionality reduction. |
 | | 📄 Paper | Network In Network | Lin, Chen, Yan | 2013 | [Paper](https://arxiv.org/abs/1312.4400) | Pioneered 1×1 convolutions and global average pooling — ideas adopted by nearly every subsequent architecture. |
 | ⭐ | 📄 Paper | Multi-Scale Context Aggregation by Dilated Convolutions | Yu, Koltun | 2015 | [Paper](https://arxiv.org/abs/1511.07122) | Introduced dilated (atrous) convolutions to systematically aggregate multi-scale context without losing resolution. Key for dense prediction tasks. |
+| | 📄 Paper | U-Net: Convolutional Networks for Biomedical Image Segmentation | Ronneberger, Fischer, Brox | 2015 | [Paper](https://arxiv.org/abs/1505.04597) | Encoder–decoder CNN with skip connections between matching resolutions, producing per-pixel segmentations from few training images. Still the default segmentation architecture, and the denoising backbone of DDPM and Stable Diffusion (Section 07). |
 | | 📝 Article | Feature Visualization | Olah et al. | 2017 | [Distill](https://distill.pub/2017/feature-visualization/) | Beautiful interactive exploration of what neural network neurons learn to detect. Makes CNN internals tangible and intuitive. |
 | | 📝 Article | The Building Blocks of Interpretability | Olah et al. | 2018 | [Distill](https://distill.pub/2018/building-blocks/) | Builds on feature visualization to show how network components combine into interpretable explanations of model behavior. |
 
@@ -39,18 +51,46 @@ But the story doesn't end with CNNs. Starting with ViT (2020), Vision Transforme
 | | 📄 Paper | Training Data-Efficient Image Transformers (DeiT) | Touvron et al. | 2021 | [Paper](https://arxiv.org/abs/2012.12877) | Showed how to train ViTs without massive datasets using knowledge distillation and strong data augmentation. |
 | | 📄 Paper | Swin Transformer: Hierarchical Vision Transformer using Shifted Windows | Liu et al. | 2021 | [Paper](https://arxiv.org/abs/2103.14030) | Hierarchical vision transformer with shifted windows — efficient multi-scale feature extraction for dense prediction. |
 | | 📄 Paper | End-to-End Object Detection with Transformers (DETR) | Carion et al. | 2020 | [Paper](https://arxiv.org/abs/2005.12872) | Eliminated hand-designed components (anchors, NMS) in object detection by framing it as a set prediction problem. |
+| | 📄 Paper | A ConvNet for the 2020s (ConvNeXt) | Liu, Mao, Wu, Feichtenhofer, Darrell, Xie | 2022 | [Paper](https://arxiv.org/abs/2201.03545) | Modernizes a plain ResNet step by step with transformer-era design and training choices until it matches Swin. The counterpoint to ViT: much of the gap was recipe, not attention — and CNNs remain the practical choice on constrained hardware. |
 
 ## Suggested Order
 
 1. **CS231n lectures** — Watch lectures 1–9 for the full foundation (convolutions, architectures, training)
-2. **AlexNet** — Read the paper that started it all; appreciate the engineering and the vision
-3. **Network In Network** — Short paper, introduces 1×1 convolutions you'll see everywhere
-4. **VGGNet** — Simple depth scaling, easy to follow after AlexNet
-5. **GoogLeNet / Inception** — Multi-scale thinking and efficient architecture design
-6. **ResNet** — The most important architecture paper; understand skip connections deeply
-7. **Dilated Convolutions** — Expanding receptive fields without downsampling
-8. **Distill: Feature Visualization** → **Building Blocks** — End with interpretability to understand what your networks actually learn
-9. **ViT** — Read the paper that proved transformers could rival CNNs; understand patch embeddings and positional encodings
-10. **DeiT** — See how to train ViTs efficiently without JFT-scale data
-11. **Swin Transformer** — Learn hierarchical multi-scale attention with shifted windows
-12. **DETR** — Understand how transformers replace hand-designed detection pipelines
+2. **LeNet-5** — Skim the 1998 paper to see the original CNN design (focus on the architecture sections)
+3. **AlexNet** — Read the paper that started it all; appreciate the engineering and the vision
+4. **Network In Network** — Short paper, introduces 1×1 convolutions you'll see everywhere
+5. **VGGNet** — Simple depth scaling, easy to follow after AlexNet
+6. **GoogLeNet / Inception** — Multi-scale thinking and efficient architecture design
+7. **ResNet** → **Identity Mappings** — The most important architecture paper and its follow-up; understand skip connections deeply
+8. **Dilated Convolutions** → **U-Net** — Dense prediction: expanding receptive fields, then the encoder–decoder pattern you'll meet again in diffusion models
+9. **Distill: Feature Visualization** → **Building Blocks** — End with interpretability to understand what your networks actually learn
+10. **ViT** — Read the paper that proved transformers could rival CNNs; understand patch embeddings and positional encodings
+11. **DeiT** — See how to train ViTs efficiently without JFT-scale data
+12. **Swin Transformer** — Learn hierarchical multi-scale attention with shifted windows
+13. **DETR** — Understand how transformers replace hand-designed detection pipelines
+14. **ConvNeXt** — Close the loop: a modernized CNN that matches vision transformers
+
+---
+
+## 🛠️ Practice
+
+1. **The architecture worksheet** — By hand, for AlexNet's five conv layers, VGG-16, and a stack of 3×3 convolutions with dilations 1, 2, 4, 8 (Yu & Koltun's context module), compute output shapes, parameters, MACs and receptive field; check with `torchinfo` on models you define to the papers' specs (torchvision's AlexNet is a later single-GPU variant with different widths — not a valid reference). Along the way: verify VGG's claim that three 3×3 layers need 27C² weights vs. 49C² for one 7×7 with the same receptive field; confirm the dilated stack reaches a 31×31 receptive field; note which AlexNet layers are split across its two GPUs and how that changes the parameter count; and explain why the paper's stated 224×224 input can't produce its 55×55 first-layer maps (227 can). Done when: your hand numbers match `torchinfo` for every layer. *(~3 h · AlexNet; VGGNet; Dilated Convolutions; CS231n lecture on CNN architectures)*
+2. **Convolution from scratch** — Implement `conv2d_forward` and `conv2d_backward` (with respect to input, weights and bias) in NumPy with stride and padding — first with loops, then with im2col plus one matrix multiply. Gradient-check against `torch.nn.functional.conv2d` with autograd on random tensors, then time loops vs. im2col vs. PyTorch on a 32-channel 64×64 input. Done when: gradients match to 1e-6 in float64 and you can explain the speed gap in terms of GEMM and memory layout. *(~4 h · CS231n lecture on convolutional networks)*
+3. **Reproduce ResNet's degradation result** — Train plain and residual CIFAR-10 networks at depths 20 and 56 (the 6n+2 family from the paper's CIFAR-10 experiments) with the same schedule, ~40 epochs each on one GPU (a free Colab GPU is enough). Plot training and test error vs. epoch for all four and log first-layer gradient norms. Done when: plain-56 has *higher training error* than plain-20 (the paper's Figure 1) while ResNet-56 beats ResNet-20. *(~6 h incl. GPU time · ResNet)*
+4. **ViT vs. CNN when data is scarce** — Implement a small ViT yourself — patch size 4 on 32×32 images, a [CLS] token, learned position embeddings, 6 layers, width 256 — and train it and a ResNet-18-style CNN on CIFAR-10 subsets of 5k, 20k and 50k images with the same epoch budget. Plot accuracy vs. training-set size. Then add DeiT's help — strong augmentation (RandAugment, Mixup/CutMix) and distillation from your CNN as teacher — and re-measure the ViT. Done when: you can explain your curves with ViT's discussion of inductive bias and DeiT's training recipe. *(~6 h incl. GPU time · ViT; DeiT)*
+5. **What does the network see?** — With torchvision's pretrained GoogLeNet (the InceptionV1 family the Distill articles study), maximize five mid-layer channels with (a) plain gradient ascent on pixels and (b) the regularizers *Feature Visualization* recommends (jitter and transformation robustness, a frequency penalty or decorrelated parameterization). Then compute gradient saliency maps for three images of your own. Done when: (b) produces recognizable patterns where (a) produces high-frequency noise, and you've written 200 words on what these pictures can and can't tell you about the model. *(~4 h · Distill, "Feature Visualization"; "The Building Blocks of Interpretability"; CS231n lecture on visualizing and understanding)*
+
+**🏗️ Mini-project — A CNN That Fits a Microcontroller:** Train an image or spectrogram classifier for a Cortex-M budget — ≤ 256 KB of int8 weights and ≤ 128 KB peak activation memory — on CIFAR-10 at 32×32, a person/no-person subset, or spectrograms of your own sensor captures. Choose the architecture with this section's parameter arithmetic (depthwise-separable or 1×1-bottleneck blocks; global average pooling instead of fully connected layers, as in Network In Network), then apply post-training int8 quantization (how it works: Jacob et al. in [Section 08](../08-scaling-and-training/README.md)) and deploy with TFLite Micro (LiteRT) or ST's X-CUBE-AI (STM32Cube.AI). Deliverable: `projects/ml/04-cnn/tinyvision/` with a table of float vs. int8 accuracy, parameters, MACs, peak RAM, and latency measured on a dev board (or the vendor tool's estimate if you have no board). Done when: int8 accuracy is within 2 points of float and the model meets the memory budget on the target. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What do local connectivity, weight sharing and pooling each contribute to a CNN's inductive bias?
+2. What is the output size of a 3×3, stride-2, padding-1 convolution on a 32×32 input? Of a 3×3, dilation-2, padding-2, stride-1 convolution?
+3. Why does a deeper plain network get higher *training* error than a shallower one, and why can't that be overfitting?
+4. What does a 1×1 convolution compute, and why does putting one before a 5×5 convolution save compute?
+5. ViT-B/16 on a 224×224 image: how many tokens enter the transformer, and what is the [CLS] token for?
+6. How does DETR match its fixed set of predictions to ground-truth objects, and why does that remove the need for non-maximum suppression?
+7. Misconception probe: "Vision Transformers are strictly better than CNNs." What did ViT and DeiT actually show about data scale and training recipe?
+8. Explain to a smart friend in 3 sentences why skip connections made 100-plus-layer networks trainable.

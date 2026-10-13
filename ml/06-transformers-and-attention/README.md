@@ -8,6 +8,15 @@ The transformer architecture is the single most important development in modern 
 
 - [Section 05 — RNNs, Sequences, and Memory](../05-rnns-sequences-and-memory/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive scaled dot-product attention, explain the 1/√d_k factor from the variance of q·k, and implement multi-head causal self-attention that matches PyTorch's reference implementation.
+- Trace every tensor shape through a decoder-only transformer block and count its parameters and FLOPs, including the sequence length at which the n² attention term starts to dominate.
+- Explain how Bahdanau attention removed seq2seq's fixed-length bottleneck, and how the transformer then removed recurrence (per-layer cost, parallelism and path length, as compared in Vaswani et al.'s Table 1).
+- Compare GPT-1's causal language modeling with BERT's masked language modeling (80/10/10 masking, next-sentence prediction), and say which downstream tasks each suits.
+- Train a small GPT from scratch and use ablations (positional encoding, number of heads, LayerNorm placement, residual connections) to explain what each component contributes.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -24,7 +33,9 @@ The transformer architecture is the single most important development in modern 
 | 🔑 | 📝 Blog | The Illustrated Transformer | Alammar | 2018 | [Blog](https://jalammar.github.io/illustrated-transformer/) | Outstanding visual walkthrough of the transformer architecture. Makes self-attention, multi-head attention, and positional encoding intuitive through step-by-step diagrams. |
 | 🔑 | 🎥 Video | Let's build GPT: from scratch, in code, spelled out | Karpathy | 2023 | [YouTube](https://www.youtube.com/watch?v=kCc8FmEb1nY) | Karpathy builds a GPT from scratch in ~2 hours. The best way to deeply internalize the transformer architecture through hands-on coding. |
 | 🔑 | 📄 Paper | BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding | Devlin et al. | 2018 | [Paper](https://arxiv.org/abs/1810.04805) | Introduced bidirectional pre-training with masked language modeling and next-sentence prediction. Dominated NLP benchmarks and established the pre-train → fine-tune paradigm. |
-| | 📄 Paper | Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention) | Bahdanau, Cho, Bengio | 2014 | [Paper](https://arxiv.org/abs/1409.0473) | The paper that introduced attention to sequence-to-sequence models, allowing the decoder to focus on relevant parts of the input. Direct precursor to the transformer. |
+| ⭐ | 📄 Paper | Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention) | Bahdanau, Cho, Bengio | 2014 | [Paper](https://arxiv.org/abs/1409.0473) | The paper that introduced attention to sequence-to-sequence models, allowing the decoder to focus on relevant parts of the input. Direct precursor to the transformer. |
+| | 📄 Paper | Formal Algorithms for Transformers | Phuong, Hutter | 2022 | [Paper](https://arxiv.org/abs/2207.09238) | Precise, self-contained pseudocode for the main transformer variants (encoder–decoder, BERT-style, GPT-style) and their training and sampling procedures. The spec sheet to check your mental model and your code against. |
+| | 📄 Paper | RoFormer: Enhanced Transformer with Rotary Position Embedding (RoPE) | Su et al. | 2021 | [Paper](https://arxiv.org/abs/2104.09864) | Encodes position by rotating query and key vectors so attention scores depend on relative distance. RoPE replaced the original sinusoidal encodings in most modern open LLMs (LLaMA and its descendants), so read it to understand today's transformers, not 2017's. |
 | | 📄 Paper | Improving Language Understanding by Generative Pre-Training (GPT-1) | Radford et al. | 2018 | [Paper](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf) | The first GPT. Showed that generative pre-training of a transformer on unlabeled text followed by discriminative fine-tuning achieves strong results across diverse NLP tasks. |
 | | 🎥 Course | Stanford CS224n: NLP with Deep Learning | Manning et al. | 2021 | [YouTube](https://www.youtube.com/playlist?list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4) | Comprehensive NLP course covering word vectors, RNNs, attention, transformers, pre-training, and modern NLP applications. |
 | | 📝 Blog | The Illustrated BERT, ELMo, and co. | Alammar | 2018 | [Blog](https://jalammar.github.io/illustrated-bert/) | Visual guide to BERT and contextual embeddings. Excellent companion to the BERT paper, explaining masked LM and next-sentence prediction with clear diagrams. |
@@ -36,7 +47,34 @@ The transformer architecture is the single most important development in modern 
 3. **Vaswani et al. — Attention Is All You Need** — Read the transformer paper carefully; refer back to Alammar's diagrams
 4. **Harvard NLP — The Annotated Transformer** — Walk through the implementation line by line; run the code
 5. **Karpathy — Let's build GPT from scratch** — Code a transformer yourself; solidify understanding through building
-6. **Radford et al. — GPT-1** — Understand the generative pre-training approach
-7. **Devlin et al. — BERT** — Understand bidirectional pre-training and the masked LM objective
-8. **Alammar — The Illustrated BERT** — Visual companion to reinforce BERT concepts
-9. **CS224n** — Fill in gaps and get broader NLP context as needed
+6. **Phuong & Hutter — Formal Algorithms for Transformers** — Check your understanding against precise pseudocode
+7. **Su et al. — RoPE** — Learn the positional encoding modern LLMs actually use
+8. **Radford et al. — GPT-1** — Understand the generative pre-training approach
+9. **Devlin et al. — BERT** — Understand bidirectional pre-training and the masked LM objective
+10. **Alammar — The Illustrated BERT** — Visual companion to reinforce BERT concepts
+11. **CS224n** — Fill in gaps and get broader NLP context as needed
+
+---
+
+## 🛠️ Practice
+
+1. **Attention by hand** — For three tokens with d_k = 2, choose small integer Q, K and V and compute softmax(QKᵀ/√d_k)V by hand, then again with a causal mask. Then show numerically that for q and k with independent unit-variance components Var(q·k) = d_k (10⁵ samples for d_k ∈ {16, 64, 256}), and plot the entropy of a softmax over 64 such logits with and without the 1/√d_k scaling. Done when: your hand result matches NumPy and the plot shows why the unscaled softmax saturates. *(~1.5 h · Vaswani et al. §3.2.1; Alammar, "The Illustrated Transformer")*
+2. **Multi-head attention, verified** — Implement `MultiHeadSelfAttention` with a fused QKV projection, head split/merge by reshape and transpose, a causal mask, and the output projection. Assert agreement (atol 1e-5) with `torch.nn.functional.scaled_dot_product_attention`, and with `nn.MultiheadAttention` given copied weights. Then count parameters and FLOPs for d = 768, h = 12, and find the sequence length at which attention-score FLOPs (∝ n²d) overtake projection FLOPs (∝ nd²). Done when: the tests pass and your crossover (n ≈ 2d) is derived on paper, not just measured. *(~3 h · The Annotated Transformer; Karpathy, "Let's build GPT")*
+3. **Annotated Transformer ablations** — Run the Annotated Transformer's synthetic copy task end to end, then ablate one thing at a time: no positional encoding; learned instead of sinusoidal positions; no 1/√d_k scaling; no learning-rate warmup; and the reverse for label smoothing (the copy-task example trains without it, so add smoothing = 0.1 and compare). Record steps to 100% copy accuracy, or failure, for each. Done when: you can explain every failure mechanistically — e.g. why an encoder without positions sees only a bag of tokens. *(~4 h · The Annotated Transformer; Vaswani et al.)*
+4. **Build GPT, then break it** — Follow Karpathy's "Let's build GPT" to a character-level model on tiny Shakespeare, typing every line yourself. Then, at fixed compute, ablate: 1 vs. 4 vs. 8 heads at the same width; post-LN vs. pre-LN; residual connections removed; positional embedding removed. Done when: your baseline lands near the validation loss reached at the end of the video (nanoGPT's README reports 1.4697 for the same-size model on one A100) and you can explain the ordering of the ablation results. *(~6 h · Karpathy, "Let's build GPT"; Alammar, "The Illustrated Transformer")*
+5. **BERT vs. GPT objectives** — With Hugging Face `bert-base-uncased` and `openai-gpt` (GPT-1): (a) compare BERT's top-5 fills for "The capital of France is [MASK]." with GPT-1's top-5 next tokens after the same prefix; (b) implement BERT's masking procedure (choose 15% of tokens; of those, 80% become [MASK], 10% a random token, 10% unchanged) and verify the proportions over 10⁶ tokens; (c) fit logistic-regression probes on [CLS] / mean-pooled features from both models for 2,000 SST-2 sentences. Done when: you can explain the probe gap in terms of bidirectional vs. causal context, and why BERT doesn't replace every chosen token with [MASK]. *(~3 h · BERT; GPT-1; Alammar, "The Illustrated BERT, ELMo, and co.")*
+
+**🏗️ Mini-project — A GPT Trained on Your Own Corpus:** Using nanoGPT (marked deprecated by its author in Nov 2025 in favor of nanochat, but still the clearest small codebase) or your own implementation, train a 10–30M-parameter GPT with the GPT-2 BPE tokenizer (`tiktoken`) on a corpus you care about — e.g. a few hundred MB of open-source embedded C (Zephyr, FreeRTOS, vendor HALs), or datasheets and app notes converted to text. Add a KV cache to your sampler (the idea is covered in Section 08 under PagedAttention/vLLM) and measure tokens per second with and without it for 512-token generations. Deliverable: `projects/ml/06-transformers/gpt-<corpus>/` with training curves, samples from three checkpoints, attention-pattern plots on a code snippet, and a short write-up. Done when: validation loss is clearly below a bigram baseline on the same tokens, you can explain your measured KV-cache speedup, and you've documented at least one head with a nameable behavior (previous-token, bracket-matching, …) backed by evidence. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the scaled dot-product attention formula. Why divide by √d_k?
+2. What seq2seq problem did Bahdanau attention solve, and what does the decoder attend over at each step?
+3. Why does self-attention need positional information? What happens to an encoder's outputs if you permute its input tokens and there's no positional encoding?
+4. What does the causal mask prevent in a decoder-only model, and how is it implemented?
+5. For d_model = 768 with a 4× MLP, roughly how many parameters are in one transformer block, and in 12 blocks excluding embeddings?
+6. BERT chooses 15% of tokens to predict but replaces only 80% of those with [MASK]. Why?
+7. Misconception probe: "Attention weights tell you which input tokens the model used for its prediction." What's missing from that claim?
+8. Explain to a smart friend in 3 sentences why transformers displaced RNNs.

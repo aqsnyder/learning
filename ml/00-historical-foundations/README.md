@@ -6,16 +6,30 @@ Understanding the history of artificial intelligence helps you appreciate *why* 
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Build McCulloch–Pitts threshold networks for AND, OR, NOT and XOR by hand, and explain why the 1943 model could compute any finite logical function but had no way to learn.
+- Implement Rosenblatt's perceptron learning rule, state when it is guaranteed to converge (linearly separable data, margin bound), and demonstrate how it fails on XOR and parity.
+- Separate what Minsky & Papert actually proved (limits of order- and diameter-limited perceptrons on predicates such as parity and connectedness) from the folk story "neural nets can't do XOR", and explain the book's role in the first AI winter.
+- Derive backpropagation for a small sigmoid network and reproduce one of Rumelhart, Hinton & Williams' 1986 demonstrations from scratch.
+- Critique Turing's imitation game, his replies to the nine objections, and his concrete prediction for the year 2000, using today's models as evidence.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Paper | Computing Machinery and Intelligence | Alan Turing | 1950 | [Link](https://academic.oup.com/mind/article/LIX/236/433/986238) | The foundational paper that posed "Can machines think?" and introduced the Turing Test. Essential for understanding where the entire field began. |
 | | Paper | A Logical Calculus of Ideas Immanent in Nervous Activity | Warren McCulloch, Walter Pitts | 1943 | — | The first mathematical model of an artificial neuron. Established the idea that neural activity could be described in logical terms. |
+| | Paper | A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence | John McCarthy, Marvin Minsky, Nathaniel Rochester, Claude Shannon | 1955 | [Link](http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf) | The short funding proposal that coined the term "artificial intelligence" and set the field's agenda (language, abstraction, neural nets, self-improvement). Striking to read how many of its goals are still the goals. |
 | 🔑 | Paper | The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain | Frank Rosenblatt | 1958 | — | Introduced the perceptron — the first trainable neural network. Understanding its capabilities and limitations is key to appreciating later advances. |
 | | Book | Perceptrons: An Introduction to Computational Geometry | Marvin Minsky, Seymour Papert | 1969 | — | Demonstrated the limitations of single-layer perceptrons (e.g., inability to learn XOR), contributing to the first "AI winter." A cautionary tale about premature conclusions. |
 | 🔑 | Paper | Learning Representations by Back-Propagating Errors | David Rumelhart, Geoffrey Hinton, Ronald Williams | 1986 | [Link](https://www.nature.com/articles/323533a0) | The paper that popularized backpropagation for training multi-layer networks. This is the algorithmic backbone of modern deep learning. |
 | | Blog | A Brief History of Neural Nets and Deep Learning | Andrey Kurenkov | — | [Link](http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning/) | An accessible, well-written multi-part blog series covering the full arc from McCulloch–Pitts to deep learning. Great narrative overview. |
+| | Paper | Deep Learning (Nature review) | Yann LeCun, Yoshua Bengio, Geoffrey Hinton | 2015 | [Link](https://www.nature.com/articles/nature14539) | The three pioneers' own summary of how representation learning, backprop, CNNs, and RNNs came together into the deep learning revolution. The best single bridge from this history section to the rest of the curriculum. |
+| 🔑 | Essay | The Bitter Lesson | Rich Sutton | 2019 | [Link](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) | A two-page argument, drawn from 70 years of AI history, that general methods which scale with computation (search and learning) beat hand-built human knowledge. A widely cited, and debated, lens on modern AI's trajectory. |
 
 ---
 
@@ -24,6 +38,34 @@ Understanding the history of artificial intelligence helps you appreciate *why* 
 1. **Start with the blog** — Read Kurenkov's history series to get the full narrative arc before diving into primary sources.
 2. **McCulloch & Pitts (1943)** — See where the idea of a mathematical neuron began.
 3. **Turing (1950)** — Understand the philosophical framing that launched AI as a discipline.
-4. **Rosenblatt (1958)** — Learn about the first trainable neural network.
-5. **Minsky & Papert (1969)** — Understand why progress stalled (the "AI winter").
-6. **Rumelhart, Hinton & Williams (1986)** — See how backpropagation broke the deadlock and made deep networks trainable.
+4. **Dartmouth proposal (1955)** — Skim the document that named the field and set its agenda.
+5. **Rosenblatt (1958)** — Learn about the first trainable neural network.
+6. **Minsky & Papert (1969)** — Understand why progress stalled (the "AI winter").
+7. **Rumelhart, Hinton & Williams (1986)** — See how backpropagation broke the deadlock and made deep networks trainable.
+8. **LeCun, Bengio & Hinton (2015)** — Read the pioneers' review of how deep learning finally worked.
+9. **Sutton — The Bitter Lesson (2019)** — End with the meta-lesson of the whole history; keep it in mind for every later section.
+
+---
+
+## 🛠️ Practice
+
+1. **Threshold logic by hand** — With McCulloch–Pitts units (binary inputs, fixed weights, a threshold), design AND, OR, NOT and NAND on paper, then a two-layer network for XOR. Prove in one paragraph that every Boolean function of n inputs has a two-layer threshold network (one hidden unit per true row of the truth table — disjunctive normal form), and count the hidden units that construction needs for n-bit parity. Verify every truth table with a 30-line Python script. Done when: the script passes and you can say why the parity count grows as 2^(n−1). *(~1.5 h · McCulloch & Pitts 1943; Kurenkov)*
+2. **Perceptron from scratch, with its convergence bound** — Implement Rosenblatt's learning rule in NumPy (bias folded into the weights). Generate 200 linearly separable 2-D points with a known margin γ and radius R; over 20 random seeds, count weight updates until convergence and compare with the classic (R/γ)² mistake bound (Novikoff's theorem — it postdates the 1958 paper; look it up). Then run the rule on XOR and on label-noised data and plot mistakes per epoch. Done when: every measured update count sits below the bound and the XOR curve never reaches zero. *(~2 h · Rosenblatt 1958; Kurenkov)*
+3. **Reproduce the 1986 symmetry detector** — Build a 6-input, 2-hidden-unit, 1-output sigmoid network and train it on all 64 binary input vectors, target 1 if the vector is a mirror-image palindrome. Derive the backward pass on paper and code it without autograd (full-batch gradient descent with a momentum term, as the paper does). Done when: accuracy is 100% and the learned input weights show the paper's solution — mirror-position weights equal in magnitude and opposite in sign, magnitudes within each half roughly in the ratio 1:2:4. Also record how many of 20 random seeds get stuck in a local minimum. *(~3 h · Rumelhart, Hinton & Williams 1986)*
+4. **Steelman *Perceptrons*** — Write 300 words that steelman Minsky & Papert: what they proved about parity and connectedness for order-limited and diameter-limited perceptrons, why those results looked damning in 1969, and which of their doubts about multi-layer networks were reasonable at the time. Then 150 words on what was actually missing until 1986 — a learning rule for hidden units, compute, data — checked against Kurenkov's account of the first AI winter. Done when: your argument never leans on "XOR" as the main point. *(~2 h · Minsky & Papert 1969; Kurenkov)*
+5. **Score Turing's prediction** — Turing predicted that in about fifty years, machines with a storage capacity of about 10⁹ (binary digits) would play the imitation game well enough that an average interrogator has no more than a 70% chance of a correct identification after five minutes. (a) Convert 10⁹ bits to bytes and compare with the weights of a 7B-parameter model at 4 bits per parameter. (b) Tabulate his nine objections (Theological … Lady Lovelace's … Extra-Sensory Perception): his reply in one line each, and whether a 2026 LLM strengthens or weakens that reply. (c) From his "Learning Machines" section, list three ideas that map onto modern practice. Done when: (a) has a ratio with units and every row of (b) cites the paper. *(~2 h · Turing 1950)*
+
+**🏗️ Mini-project — 1943→1986 in One Notebook:** Build `projects/ml/00-history/lineage.ipynb` that retells the section in runnable code: (1) a McCulloch–Pitts network computing a logic function; (2) the perceptron learning a separable task; (3) the perceptron failing on n-bit parity for n = 2…6; (4) a backprop MLP solving parity and the symmetry task, with training curves; (5) a Fermi estimate of the floating-point operations in your 1986-style run vs. one AlexNet training run vs. one GPT-3 training run, assumptions stated. Close with a 400-word memo answering "which bottleneck — theory, compute or data — held back each era?", citing a section source for each claim. Done when: the notebook runs top to bottom in under 5 minutes on a laptop and each era in the memo has one concrete number attached. *(~6 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What could a McCulloch–Pitts network compute, and what could Rosenblatt's perceptron do that it couldn't?
+2. State the condition under which the perceptron learning rule is guaranteed to converge. What happens when the condition fails?
+3. Give the one-sentence geometric argument for why a single threshold unit cannot compute XOR.
+4. Misconception probe: "Minsky & Papert proved that neural networks can't learn XOR." What's wrong with this sentence?
+5. In backpropagation, what quantity is passed backward through each layer, and why does computing every gradient cost only a small constant multiple of one forward pass?
+6. What is Lady Lovelace's objection, and how did Turing answer it? Does a 2026 LLM change the answer?
+7. Roughly how did Turing's 10⁹-bit storage estimate compare with the weights of a 7B-parameter model quantized to 4 bits?
+8. Explain to a smart friend in 3 sentences why backpropagation existed by 1986 but deep learning didn't take off until about 2012.

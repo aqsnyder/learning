@@ -6,7 +6,16 @@ Recurrent Neural Networks introduced the idea that neural networks can process s
 
 ## Prerequisites
 
-- [Section 03 — Deep Learning Fundamentals](../03-deep-learning-fundamentals/README.md)
+- [Section 03 — Neural Network Fundamentals](../03-neural-network-fundamentals/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive backpropagation through time for a vanilla RNN, show why gradients vanish or explode as products of Jacobians, and explain how the LSTM's additive cell state (the constant error carousel) fixes it.
+- Implement LSTM and GRU cells from their equations, train a character-level language model, sample with temperature, and find interpretable hidden units.
+- Build an encoder–decoder (seq2seq) model and demonstrate the fixed-length bottleneck that motivated attention and pointer networks.
+- Apply dropout to recurrent networks the way Zaremba et al. prescribe, and explain why naive dropout on the recurrent connections hurts.
+- Explain how Neural Turing Machines and Pointer Networks use attention as differentiable addressing, and which tasks each was built to solve.
 
 ## Marking Convention
 
@@ -24,10 +33,13 @@ Recurrent Neural Networks introduced the idea that neural networks can process s
 | 🔑⭐ | 📝 Blog | Understanding LSTM Networks | Olah | 2015 | [Blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) | The clearest visual explanation of LSTM internals. Walks through forget, input, and output gates with excellent diagrams. Read this before or alongside the original paper. |
 | 🔑⭐ | 📄 Paper | Recurrent Neural Network Regularization | Zaremba, Sutskever, Vinyals | 2014 | [Paper](https://arxiv.org/abs/1409.2329) | Showed how to correctly apply dropout to RNNs (only on non-recurrent connections). Essential for training RNNs that generalize. |
 | 🔑⭐ | 📄 Paper | Neural Turing Machines | Graves, Wayne, Danihelka | 2014 | [Paper](https://arxiv.org/abs/1410.5401) | Extended neural networks with external memory and attention-based read/write heads. A landmark paper bridging neural networks and classical computation. |
-| ⭐ | 📄 Paper | Pointer Networks | Vinyals, Fortunato, Jaitly | 2015 | [Paper](https://arxiv.org/abs/1506.03134) | Used attention as a pointer to input elements, solving combinatorial problems where output size depends on input. Key precursor to modern attention mechanisms. |
-| ⭐ | 📄 Paper | Generating Sequences With Recurrent Neural Networks | Graves | 2013 | [Paper](https://arxiv.org/abs/1308.0850) | Deep dive into sequence generation with RNNs, including handwriting generation and synthesis. Demonstrates the power of recurrent models for complex sequential outputs. |
+| ⭐ | 📄 Paper | Relational Recurrent Neural Networks | Santoro et al. | 2018 | [Paper](https://arxiv.org/abs/1806.01822) | Adds multi-head self-attention between memory slots (the "Relational Memory Core") so a recurrent model can reason about relationships between the things it has stored. A bridge from NTM-style memory to transformer-style attention. |
+| ⭐ | 📄 Paper | Pointer Networks | Vinyals, Fortunato, Jaitly | 2015 | [Paper](https://arxiv.org/abs/1506.03134) | Used attention as a pointer to input elements, solving combinatorial problems where output size depends on input. An influential repurposing of (Bahdanau-style) attention as a selection mechanism, and the basis of later copy/pointer mechanisms. |
+| ⭐ | 📄 Paper | Order Matters: Sequence to Sequence for Sets | Vinyals, Bengio, Kudlur | 2015 | [Paper](https://arxiv.org/abs/1511.06391) | Shows that the order in which inputs and outputs are presented significantly changes what seq2seq models learn, and extends seq2seq to handle unordered input and output sets. |
+| | 📄 Paper | Generating Sequences With Recurrent Neural Networks | Graves | 2013 | [Paper](https://arxiv.org/abs/1308.0850) | Deep dive into sequence generation with RNNs, including handwriting generation and synthesis. Demonstrates the power of recurrent models for complex sequential outputs. (Often listed with Ilya's papers, but not on the list itself.) |
 | | 📄 Paper | Learning Phrase Representations using RNN Encoder–Decoder (GRU) | Cho et al. | 2014 | [Paper](https://arxiv.org/abs/1406.1078) | Introduced the GRU — a simpler alternative to LSTM with comparable performance. Also introduced the encoder-decoder framework for sequence-to-sequence tasks. |
 | | 📄 Paper | Sequence to Sequence Learning with Neural Networks | Sutskever, Vinyals, Le | 2014 | [Paper](https://arxiv.org/abs/1409.3215) | The foundational seq2seq paper. Showed an LSTM encoder-decoder could learn to translate between languages end-to-end, sparking the neural machine translation revolution. |
+| ⭐ | 📄 Paper | Deep Speech 2: End-to-End Speech Recognition in English and Mandarin | Amodei et al. | 2015 | [Paper](https://arxiv.org/abs/1512.02595) | One end-to-end recurrent network trained with CTC loss replaces hand-engineered speech pipelines in two very different languages. Also an early lesson in how much scale and high-performance-computing engineering matter. |
 
 ## Suggested Order
 
@@ -37,6 +49,33 @@ Recurrent Neural Networks introduced the idea that neural networks can process s
 4. **Cho et al. — GRU** — Understand the simplified gating variant and the encoder-decoder framework
 5. **Zaremba et al. — RNN Regularization** — Learn how to train RNNs that don't overfit
 6. **Sutskever et al. — Seq2Seq** — The architecture that made neural machine translation work
-7. **Graves — Generating Sequences** — Deep generative modeling with RNNs
-8. **Graves — Neural Turing Machines** — Stretch your thinking about what neural networks can become
-9. **Vinyals — Pointer Networks** — Attention as a computational primitive; bridge to transformers
+7. **Amodei et al. — Deep Speech 2** — End-to-end RNNs at scale on a real-world task (speech)
+8. **Graves — Generating Sequences** — Deep generative modeling with RNNs
+9. **Graves — Neural Turing Machines** — Stretch your thinking about what neural networks can become
+10. **Vinyals — Pointer Networks** → **Order Matters** — Attention as a computational primitive, then seq2seq beyond sequences (sets); bridge to transformers
+11. **Santoro et al. — Relational RNNs** — Self-attention inside recurrent memory; read just before Section 06
+
+---
+
+## 🛠️ Practice
+
+1. **Measure vanishing gradients** — Implement a vanilla tanh RNN (hidden size 128) in PyTorch, run it over 200 steps of random input, and plot ‖∂h_T/∂h_t‖ against T − t on a log scale for recurrent matrices rescaled to spectral radius 0.5, 1.0 and 1.5. Repeat with an LSTM, forget-gate bias 0 vs. 1. Done when: you can relate each slope to the spectral radius and the tanh derivative, and explain the LSTM curve with the original paper's constant-error-carousel argument. *(~3 h · Hochreiter & Schmidhuber 1997; Olah, "Understanding LSTM Networks")*
+2. **LSTM and GRU cells from the equations** — Using only `nn.Linear` and elementwise ops, implement an LSTM cell (following Olah's diagrams) and a GRU cell (from Cho et al.'s equations). Copy the weights out of `nn.LSTMCell` / `nn.GRUCell` and verify that outputs and gradients match — mind PyTorch's gate ordering, its two bias vectors, and its GRU variant, which applies the reset gate *after* the recurrent matrix multiply, r ⊙ (W_hn·h + b_hn), where Cho et al. compute U(r ⊙ h) — the two differ, so implement PyTorch's form for the match, then try Cho's. Count parameters for input size 128, hidden size 512. Done when: outputs match to 1e-6 and you can explain the 4:3 LSTM-to-GRU parameter ratio. *(~2.5 h · Olah; Cho et al. 2014)*
+3. **char-rnn, then open the hood** — Train a 2-layer LSTM character model (hidden ~512) on tiny Shakespeare, or on a corpus you know cold — e.g. a few MB of embedded C source (Karpathy did this with the Linux kernel). Report validation bits per character (the metric Graves 2013 uses) and samples at temperature 0.5, 1.0 and 1.5. Then hunt for interpretable cells the way the blog post does: find one that tracks "inside a comment or string", bracket depth, or position in the line, and plot its activation over a code snippet. Done when: you have one cell with a clearly plotted behavior plus a falsification test — inputs where it should and shouldn't fire. *(~5 h · Karpathy, "The Unreasonable Effectiveness of RNNs" + char-rnn; Graves 2013)*
+4. **Dropout the Zaremba way** — On word-level Penn Treebank (Mikolov's standard split), train a 2-layer LSTM (scale the paper's "medium" configuration down if you're GPU-limited) three ways: no dropout; dropout only on the non-recurrent connections (the paper's method); and naive dropout on the recurrent connections too, with a fresh mask every time step. Plot validation perplexity vs. epoch. Done when: the paper's method clearly beats no dropout, and you can explain what the naive version does to the information the cell is trying to carry across time. *(~5 h incl. GPU time · Zaremba et al. 2014)*
+5. **The bottleneck, then the pointer** — (a) Train an LSTM encoder–decoder (Sutskever et al.) to *copy* digit sequences of length 5–40 and plot exact-match accuracy vs. length; then feed the source reversed, as the paper did, re-plot, and explain the gain. (b) Replace the decoder's output softmax with attention over the encoder states used as a pointer (Vinyals et al.) and train it on the paper's planar convex-hull task with 5–10 points — or, simpler, on sorting 5–10 random numbers. Done when: (a) shows accuracy falling with length and improving with reversal, and for (b) you report exact-match at lengths 5, 10, 15 and 20 and can explain why a fixed output vocabulary couldn't do this task. *(~6 h · Sutskever et al. 2014; Pointer Networks)*
+
+**🏗️ Mini-project — Recurrent Anomaly Detector for Sensor Data:** Build a forecasting-based anomaly detector for real time series — your own bench captures (supply current, temperature, vibration, a PIR or photodiode channel) or the labeled streams in the Numenta Anomaly Benchmark (NAB). Train a small LSTM and a GRU (hidden ≤ 64) to predict the next k samples, score anomalies by prediction error normalized by a rolling estimate of its spread, and compare against an EWMA z-score baseline and a seasonal-naive forecaster. Use Zaremba-style dropout and truncated backpropagation through time. Deliverable: `projects/ml/05-rnn/anomaly/` with precision/recall per stream, detection latency, and a parameter and MAC count for running the cell on a Cortex-M at your sample rate. Done when: the recurrent model beats both baselines on at least two streams, and your write-up explains one stream where it doesn't. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Why do gradients in a vanilla RNN vanish or explode? Phrase it as a product of Jacobians.
+2. What are the LSTM's forget, input and output gates for, and why does the additive cell-state update help gradients flow?
+3. Roughly how many parameters does an LSTM layer with input size 128 and hidden size 512 have, and why is a GRU of the same size about three-quarters of that?
+4. Where does Zaremba et al.'s dropout go, and why not on the recurrent connections?
+5. Why did reversing the source sentence help Sutskever et al.'s seq2seq model?
+6. What problem do Pointer Networks solve that a fixed output vocabulary can't? Name one task from the paper.
+7. Misconception probe: "An RNN's hidden state can remember arbitrarily long contexts — it's just a vector you keep updating." What limits it in practice?
+8. Explain to a smart friend in 3 sentences what a Neural Turing Machine adds to an RNN and why its read and write heads have to be "soft".

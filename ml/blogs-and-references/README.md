@@ -7,8 +7,10 @@
 | Priority | Blog | Description |
 |----------|------|-------------|
 | 🔑 | [Colah's Blog](https://colah.github.io/) | Beautiful visual explanations of neural network concepts (LSTMs, convnets, manifolds) |
-| 🔑 | [Distill.pub](https://distill.pub/) | Interactive, peer-reviewed articles with best-in-class visualizations of ML research |
+| 🔑 | [Distill.pub](https://distill.pub/) | Interactive, peer-reviewed articles with best-in-class visualizations of ML research. On indefinite hiatus since July 2021 — no new articles, but the archive remains essential |
 | 🔑 | [Anthropic Research](https://www.anthropic.com/research) | Frontier research on AI safety, interpretability, and large language models |
+| | [Transformer Circuits Thread](https://transformer-circuits.pub/) | Anthropic interpretability team's research site — where the papers in Section 12 (superposition, monosemanticity, attribution graphs) and monthly "Circuits Updates" appear first |
+| | [Interconnects](https://www.interconnects.ai/) | Nathan Lambert's newsletter on post-training, RLHF/RLVR, and open models — technical, insider, low-hype |
 | 🔑 | [Lilian Weng](https://lilianweng.github.io/) | In-depth survey-style posts covering transformers, RL, diffusion models, and more |
 | 🔑 | [Jay Alammar](https://jalammar.github.io/) | Step-by-step illustrated guides to transformers, BERT, GPT, and NLP concepts |
 | | [Andrej Karpathy's Blog](https://karpathy.github.io/) | Practical deep learning insights from one of the field's most influential practitioners |
@@ -45,6 +47,7 @@
 | Resource | Description |
 |----------|-------------|
 | [arXiv](https://arxiv.org/) | Open-access preprint server — the primary venue for ML research before peer review |
-| [Papers With Code](https://paperswithcode.com/) | ML papers paired with code implementations, datasets, and benchmark leaderboards |
+| [Papers With Code](https://paperswithcode.com/) | Formerly ML papers paired with code, datasets, and leaderboards — sunset by Meta in July 2025. Use Hugging Face's [Trending Papers](https://huggingface.co/papers/trending) instead |
+| [Epoch AI](https://epoch.ai/) | Open datasets and trend analyses on training compute, models, hardware, and benchmarks — the best source for calibrated "how fast is this moving?" numbers |
 | [Hugging Face](https://huggingface.co/) | Open-source hub for models, datasets, and spaces — the GitHub of ML |
 | [Weights & Biases](https://wandb.ai/) | Experiment tracking platform with excellent free tutorials and community reports |

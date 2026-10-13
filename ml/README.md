@@ -60,25 +60,35 @@ Source: [dzyim/ilya-sutskever-recommended-reading](https://github.com/dzyim/ilya
 
 | # | Paper / Resource | Section |
 |---|------------------|---------|
-| 1 | The Annotated Transformer (Harvard NLP) | [06 — Transformers](06-transformers-and-attention/) |
+| 1 | The Annotated Transformer (Rush, Harvard NLP) | [06 — Transformers](06-transformers-and-attention/) |
 | 2 | The First Law of Complexodynamics (Aaronson) | [01 — Math Foundations](01-math-foundations/) |
 | 3 | The Unreasonable Effectiveness of RNNs (Karpathy) | [05 — RNNs](05-rnns-sequences-and-memory/) |
 | 4 | Understanding LSTM Networks (Olah) | [05 — RNNs](05-rnns-sequences-and-memory/) |
 | 5 | Recurrent Neural Network Regularization (Zaremba et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
-| 6 | Keeping Neural Networks Simple by Minimizing Description Length (Hinton & van Camp) | [03 — NN Fundamentals](03-neural-network-fundamentals/) |
+| 6 | Keeping Neural Networks Simple by Minimizing the Description Length of the Weights (Hinton & van Camp) | [03 — NN Fundamentals](03-neural-network-fundamentals/) |
 | 7 | Pointer Networks (Vinyals et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
 | 8 | ImageNet Classification with Deep CNNs — AlexNet (Krizhevsky et al.) | [04 — CNNs](04-cnns-and-computer-vision/) |
-| 9 | Deep Residual Learning — ResNet (He et al.) | [04 — CNNs](04-cnns-and-computer-vision/) |
-| 10 | Multi-Scale Context Aggregation by Dilated Convolutions (Yu & Koltun) | [04 — CNNs](04-cnns-and-computer-vision/) |
-| 11 | Neural Turing Machines (Graves et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
-| 12 | Attention Is All You Need (Vaswani et al.) | [06 — Transformers](06-transformers-and-attention/) |
-| 13 | Generating Sequences with RNNs (Graves) | [05 — RNNs](05-rnns-sequences-and-memory/) |
-| 14 | Scaling Laws for Neural Language Models (Kaplan et al.) | [08 — Scaling](08-scaling-and-training/) |
-| 15 | GPipe (Huang et al.) | [08 — Scaling](08-scaling-and-training/) |
-| 16 | A Tutorial Introduction to MDL (Grünwald) | [01 — Math](01-math-foundations/) / [03 — NN Fundamentals](03-neural-network-fundamentals/) |
-| 17 | Kolmogorov Complexity and Algorithmic Randomness | [01 — Math Foundations](01-math-foundations/) |
-| 18 | Variational Inference with Normalizing Flows (Rezende & Mohamed) | [07 — Generative](07-generative-models/) |
-| 19 | Sequence to Sequence Learning (Sutskever et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
+| 9 | Order Matters: Sequence to Sequence for Sets (Vinyals et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
+| 10 | GPipe (Huang et al.) | [08 — Scaling](08-scaling-and-training/) |
+| 11 | Deep Residual Learning — ResNet (He et al.) | [04 — CNNs](04-cnns-and-computer-vision/) |
+| 12 | Multi-Scale Context Aggregation by Dilated Convolutions (Yu & Koltun) | [04 — CNNs](04-cnns-and-computer-vision/) |
+| 13 | Neural Message Passing for Quantum Chemistry (Gilmer et al.) | [13 — Graphs & Science](13-graphs-geometry-and-science/) |
+| 14 | Attention Is All You Need (Vaswani et al.) | [06 — Transformers](06-transformers-and-attention/) |
+| 15 | Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau et al.) | [06 — Transformers](06-transformers-and-attention/) |
+| 16 | Identity Mappings in Deep Residual Networks (He et al.) | [04 — CNNs](04-cnns-and-computer-vision/) |
+| 17 | A Simple Neural Network Module for Relational Reasoning (Santoro et al.) | [13 — Graphs & Science](13-graphs-geometry-and-science/) |
+| 18 | Variational Lossy Autoencoder (Chen et al.) | [07 — Generative](07-generative-models/) |
+| 19 | Relational Recurrent Neural Networks (Santoro et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
+| 20 | Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton (Aaronson et al.) | [01 — Math Foundations](01-math-foundations/) |
+| 21 | Neural Turing Machines (Graves et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
+| 22 | Deep Speech 2: End-to-End Speech Recognition in English and Mandarin (Amodei et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
+| 23 | Scaling Laws for Neural Language Models (Kaplan et al.) | [08 — Scaling](08-scaling-and-training/) |
+| 24 | A Tutorial Introduction to the Minimum Description Length Principle (Grünwald) | [01 — Math](01-math-foundations/) / [03 — NN Fundamentals](03-neural-network-fundamentals/) |
+| 25 | Machine Super Intelligence (Legg, PhD thesis) | [01 — Math Foundations](01-math-foundations/) |
+| 26 | Kolmogorov Complexity and Algorithmic Randomness (Shen, Uspensky & Vereshchagin) | [01 — Math Foundations](01-math-foundations/) |
+| 27 | Stanford CS231n: Convolutional Neural Networks for Visual Recognition | [04 — CNNs](04-cnns-and-computer-vision/) |
+
+> Numbering follows the source list (27 items). Three papers that were previously cross-listed here are **not** on the list, though they remain in the curriculum without ⭐: *Generating Sequences with RNNs* (Graves) and *Sequence to Sequence Learning* (Sutskever et al.) in Section 05, and *Variational Inference with Normalizing Flows* (Rezende & Mohamed) in Section 07.
 
 ---
 

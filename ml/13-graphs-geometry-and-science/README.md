@@ -6,16 +6,29 @@ Not all data lives on grids or in sequences. Molecules, social networks, physica
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Implement GCN and GAT layers from their equations, and express both as message passing (Gilmer et al.) and as instances of the geometric-deep-learning blueprint (equivariant layers, local pooling, invariant readout).
+- Define invariance and equivariance, prove that a layer is permutation- or E(n)-equivariant, and verify it numerically.
+- Diagnose over-smoothing and homophily assumptions in GNNs, and choose between fixed-normalization (GCN), attention (GAT) and edge-feature (MPNN) aggregation for a given problem.
+- Explain how AlphaFold 2 (Evoformer, invariant point attention, recycling), AlphaFold 3 (Pairformer, diffusion over atom coordinates), GraphCast (encoder–processor–decoder on a multi-mesh) and RFdiffusion exploit structure and symmetry.
+- Audit an AI-for-science claim by separating what the model produced from how it was independently validated (DFT, wet-lab experiment, formal proof checker, held-out years).
+
+---
+
 ## Graph Neural Networks
 
-Message passing on graphs is the foundation for reasoning about relational data. GCNs introduced spectral graph convolutions in a scalable form, Gilmer et al. unified prior work under the message passing framework, GATs added attention to graph edges, and Bronstein et al.'s monograph provides the geometric deep learning perspective that ties it all together.
+Message passing on graphs is the foundation for reasoning about relational data. GCNs introduced spectral graph convolutions in a scalable form, Gilmer et al. unified prior work under the message passing framework, GATs added attention to graph edges, Relation Networks showed a tiny module that reasons over all pairs of objects, and Bronstein et al.'s monograph provides the geometric deep learning perspective that ties it all together. Start with the Distill article for intuition.
 
 | # | Priority | Type | Resource | Author(s) | Year | Link |
 |---|----------|------|----------|-----------|------|------|
-| 1 | 🔑 | Paper | Semi-Supervised Classification with Graph Convolutional Networks (GCN) | Kipf & Welling | 2016 | [arxiv.org/abs/1609.02907](https://arxiv.org/abs/1609.02907) |
-| 2 | | Paper | Graph Attention Networks (GAT) | Veličković et al. | 2018 | [arxiv.org/abs/1710.10903](https://arxiv.org/abs/1710.10903) |
-| 3 | | Paper | Neural Message Passing for Quantum Chemistry | Gilmer et al. | 2017 | [arxiv.org/abs/1704.01212](https://arxiv.org/abs/1704.01212) |
-| 4 | 🔑 | Monograph | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein et al. | 2021 | [arxiv.org/abs/2104.13478](https://arxiv.org/abs/2104.13478) |
+| 1 | | Article | A Gentle Introduction to Graph Neural Networks | Sanchez-Lengeling, Reif, Pearce, Wiltschko | 2021 | [distill.pub](https://distill.pub/2021/gnn-intro/) |
+| 2 | 🔑 | Paper | Semi-Supervised Classification with Graph Convolutional Networks (GCN) | Kipf & Welling | 2016 | [arxiv.org/abs/1609.02907](https://arxiv.org/abs/1609.02907) |
+| 3 | | Paper | Graph Attention Networks (GAT) | Veličković et al. | 2018 | [arxiv.org/abs/1710.10903](https://arxiv.org/abs/1710.10903) |
+| 4 | ⭐ | Paper | Neural Message Passing for Quantum Chemistry | Gilmer et al. | 2017 | [arxiv.org/abs/1704.01212](https://arxiv.org/abs/1704.01212) |
+| 5 | ⭐ | Paper | A Simple Neural Network Module for Relational Reasoning (Relation Networks) | Santoro et al. | 2017 | [arxiv.org/abs/1706.01427](https://arxiv.org/abs/1706.01427) |
+| 6 | 🔑 | Monograph | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein et al. | 2021 | [arxiv.org/abs/2104.13478](https://arxiv.org/abs/2104.13478) |
 
 ---
 
@@ -25,23 +38,24 @@ Standard neural networks ignore the symmetries of physical systems. Equivariant 
 
 | # | Priority | Type | Resource | Author(s) | Year | Link |
 |---|----------|------|----------|-----------|------|------|
-| 5 | | Paper | E(n) Equivariant Graph Neural Networks | Satorras et al. | 2021 | [arxiv.org/abs/2102.09844](https://arxiv.org/abs/2102.09844) |
-| 6 | | Paper | SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks | Fuchs et al. | 2020 | [arxiv.org/abs/2006.10503](https://arxiv.org/abs/2006.10503) |
+| 7 | | Paper | E(n) Equivariant Graph Neural Networks | Satorras et al. | 2021 | [arxiv.org/abs/2102.09844](https://arxiv.org/abs/2102.09844) |
+| 8 | | Paper | SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks | Fuchs et al. | 2020 | [arxiv.org/abs/2006.10503](https://arxiv.org/abs/2006.10503) |
 
 ---
 
 ## AI for Science
 
-Deep learning is accelerating scientific discovery at an unprecedented pace. AlphaFold 2 solved protein structure prediction — a 50-year grand challenge in biology. AlphaFold 3 extends to general biomolecular complexes. GraphCast produces 10-day weather forecasts in seconds, GNoME discovered millions of new stable materials, RFdiffusion generates novel proteins, and AlphaProof/AlphaGeometry push toward mathematical reasoning.
+Deep learning is accelerating scientific discovery at an unprecedented pace. AlphaFold 2 solved protein structure prediction — a 50-year grand challenge in biology. AlphaFold 3 extends to general biomolecular complexes. GraphCast produces 10-day global weather forecasts in under a minute, GNoME identified 2.2 million crystal structures below the known stability convex hull (381,000 of them new stable entries; 736 already independently synthesized), RFdiffusion generates novel proteins, AlphaGeometry and AlphaProof reached olympiad-level mathematical reasoning, and AlphaEvolve turns an LLM coding agent plus evolutionary search into a tool for discovering new algorithms.
 
 | # | Priority | Type | Resource | Author(s) | Year | Link |
 |---|----------|------|----------|-----------|------|------|
-| 7 | 🔑 | Paper | Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2) | Jumper et al. | 2021 | [nature.com](https://www.nature.com/articles/s41586-021-03819-2) |
-| 8 | | Paper | Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3 | Abramson et al. | 2024 | [nature.com](https://www.nature.com/articles/s41586-024-07487-w) |
-| 9 | | Paper | GraphCast: Learning Skillful Medium-Range Global Weather Forecasting | Lam et al. | 2023 | [arxiv.org/abs/2212.12794](https://arxiv.org/abs/2212.12794) |
-| 10 | | Paper | Scaling Deep Learning for Materials Discovery (GNoME) | Merchant et al. | 2023 | [nature.com](https://www.nature.com/articles/s41586-023-06735-9) |
-| 11 | | Paper | De Novo Design of Protein Structure and Function with RFdiffusion | Watson et al. | 2023 | [nature.com](https://www.nature.com/articles/s41586-023-06415-8) |
-| 12 | 🔑 | Paper | AlphaProof & AlphaGeometry | Google DeepMind | 2024 | — |
+| 9 | 🔑 | Paper | Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2) | Jumper et al. | 2021 | [nature.com](https://www.nature.com/articles/s41586-021-03819-2) |
+| 10 | | Paper | Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3 | Abramson et al. | 2024 | [nature.com](https://www.nature.com/articles/s41586-024-07487-w) |
+| 11 | | Paper | GraphCast: Learning Skillful Medium-Range Global Weather Forecasting | Lam et al. | 2023 | [arxiv.org/abs/2212.12794](https://arxiv.org/abs/2212.12794) |
+| 12 | | Paper | Scaling Deep Learning for Materials Discovery (GNoME) | Merchant et al. | 2023 | [nature.com](https://www.nature.com/articles/s41586-023-06735-9) |
+| 13 | | Paper | De Novo Design of Protein Structure and Function with RFdiffusion | Watson et al. | 2023 | [nature.com](https://www.nature.com/articles/s41586-023-06415-8) |
+| 14 | 🔑 | Paper | AlphaGeometry (Solving Olympiad Geometry without Human Demonstrations) & AlphaProof (Olympiad-Level Formal Mathematical Reasoning with Reinforcement Learning) | Trinh et al. (AlphaGeometry); Hubert et al. (AlphaProof) — Google DeepMind | 2024 / 2025 | [AlphaGeometry](https://www.nature.com/articles/s41586-023-06747-5) · [AlphaProof](https://www.nature.com/articles/s41586-025-09833-y) |
+| 15 | | Paper | AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery | Novikov et al. | 2025 | [arxiv.org/abs/2506.13131](https://arxiv.org/abs/2506.13131) |
 
 ---
 
@@ -51,11 +65,38 @@ Deep learning is accelerating scientific discovery at an unprecedented pace. Alp
 
 ## Suggested Order
 
-1. **GCN** — Start with Kipf & Welling for the simplest spectral graph convolution
-2. **Neural Message Passing** — Read Gilmer et al. to see the unified framework behind all GNN variants
-3. **GAT** — Understand how attention mechanisms extend to graph-structured data
-4. **Geometric Deep Learning monograph** — Read Bronstein et al. for the "big picture" unifying grids, groups, and graphs
-5. **Equivariant networks** — Read E(n) EGNN and SE(3)-Transformers for symmetry-aware architectures
-6. **AlphaFold 2** — The landmark application of geometric deep learning to protein folding
-7. **AlphaFold 3** — Extension to general biomolecular complexes
-8. **AI for Science survey** — Read GraphCast, GNoME, RFdiffusion, and AlphaProof/AlphaGeometry in any order to see the breadth of scientific applications
+1. **A Gentle Introduction to GNNs** — Start with the interactive Distill article for intuition
+2. **GCN** — Kipf & Welling for the simplest spectral graph convolution
+3. **Neural Message Passing** — Read Gilmer et al. to see the unified framework behind all GNN variants
+4. **GAT** — Understand how attention mechanisms extend to graph-structured data
+5. **Relation Networks** — A minimal module for pairwise relational reasoning (Ilya list); compare it with message passing on a fully connected graph
+6. **Geometric Deep Learning monograph** — Read Bronstein et al. for the "big picture" unifying grids, groups, and graphs
+7. **Equivariant networks** — Read E(n) EGNN and SE(3)-Transformers for symmetry-aware architectures
+8. **AlphaFold 2** — The landmark application of geometric deep learning to protein folding
+9. **AlphaFold 3** — Extension to general biomolecular complexes
+10. **AI for Science survey** — Read GraphCast, GNoME, RFdiffusion, AlphaGeometry/AlphaProof, and AlphaEvolve in any order to see the breadth of scientific applications
+
+---
+
+## 🛠️ Practice
+
+1. **GCN from the equation** — Implement H′ = σ(D̃^(−1/2) Ã D̃^(−1/2) H W) with Ã = A + I in plain PyTorch (dense, then sparse) — no PyG layers. Train a 2-layer GCN on Cora with the paper's public split (140 labeled nodes) and hyperparameters, then stack 2, 4, 8 and 16 layers and plot test accuracy and the mean pairwise cosine similarity of the final node embeddings. Done when: the 2-layer model is within ~1 point of the paper's 81.5% and your deep-stack plot shows over-smoothing. *(~4 h · Kipf & Welling; Gilmer et al.)*
+2. **GAT, and when neighbors mislead** — Implement a GAT layer from the paper (LeakyReLU(aᵀ[Wh_i ‖ Wh_j]), softmax over neighbors, 8 heads) on a sparse edge list and compare it with your GCN on Cora (the paper reports 83.0%). Then generate a synthetic graph whose edges mostly connect *different* classes (heterophily) and compare GCN, GAT and a features-only MLP. Done when: you can explain the heterophily result from the message-passing assumptions and say what the GDL monograph's blueprint suggests for fixing it. *(~4 h · GAT; Geometric Deep Learning monograph)*
+3. **Equivariance, verified, then used** — Implement an EGNN layer from Satorras et al.'s equations (messages from h_i, h_j and ‖x_i − x_j‖²; coordinate update x_i ← x_i + C Σ_j (x_i − x_j) φ_x(m_ij)). Check numerically that for a random rotation (via QR), translation and node permutation the outputs transform exactly as the inputs do (to 1e-5), and show that an MLP on raw coordinates fails the same test. Then simulate a 5-particle charged system with your own integrator and train EGNN, a non-equivariant GNN and an MLP to predict positions 1,000 steps ahead from 100, 1,000 and 3,000 training trajectories. Done when: you've plotted test MSE vs. training-set size and can explain EGNN's sample efficiency. *(~6 h · E(n) Equivariant GNNs; SE(3)-Transformers; Geometric Deep Learning monograph)*
+4. **Read a structure prediction like a scientist** — From the AlphaFold Protein Structure Database, download predictions and PAE files for three proteins: a well-folded enzyme, one with a long disordered region, and one with an experimental PDB structure. Plot pLDDT along the sequence and the PAE matrix; superimpose the prediction on the experimental structure and compute RMSD (Biopython) or TM-score. Done when: you've written 300 words on where to trust each prediction and how that maps to AlphaFold 2's confidence outputs, plus one paragraph on what AlphaFold 3's diffusion module and cross-distillation change for disordered regions. *(~4 h · AlphaFold 2; AlphaFold 3)*
+5. **AI-for-science claim audit** — For GNoME (2.2M new crystals, ~381k on the updated convex hull), GraphCast (beats ECMWF's HRES on 90% of 1,380 verification targets), RFdiffusion (experimentally characterized designs) and AlphaProof/AlphaGeometry (IMO 2024 silver-medal standard), fill a table: headline claim · what the model computed · how it was validated (DFT, wet lab, held-out years, Lean proof checker) · the strongest published critique you can find · one falsifiable prediction for the next two years. Done when: every validation cell names a specific procedure rather than "experiments", and every critique cell has a citation. *(~3 h · GNoME; GraphCast; RFdiffusion; AlphaProof & AlphaGeometry)*
+
+**🏗️ Mini-project — A GNN That Reads Schematics:** Export netlists (`kicad-cli sch export netlist`) from 20+ KiCad projects — yours plus open-source hardware repos — and build one graph per design: component nodes (reference prefix, footprint, pin count, value class) and net nodes (pin count, connected component types), linked by pin connections. Label each net as power / ground / clock / analog signal / digital signal / differential pair, weakly from net names, then hide the names from the model. Train a features-only MLP, a GCN, a GAT and a heterogeneous GNN (PyG `HeteroData`) to classify nets, with cross-validation grouped by project. Deliverable: `projects/ml/13-graphs/netlist-gnn/` with the dataset builder, a results table (macro-F1 per model) and a one-page failure analysis. Done when: message passing beats the MLP by ≥ 5 points macro-F1 on held-out projects. Stretch: flag nets whose predicted class disagrees with their name as a design-review check, and see whether it catches anything real. *(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the GCN propagation rule. What do the added self-loops and the symmetric normalization each do?
+2. Write GCN and GAT in Gilmer et al.'s message / update / readout form.
+3. Define invariance and equivariance. Under a rotation, is a molecule's energy invariant or equivariant? What about the forces on its atoms?
+4. What is over-smoothing, and why does it limit how deep a GNN can usefully be?
+5. How does EGNN get E(n) equivariance without spherical harmonics, and what does it give up relative to SE(3)-Transformers?
+6. In AlphaFold 2, what do the MSA and pair representations hold, and why is invariant point attention unaffected by a global rotation or translation of the structure?
+7. Misconception probe: "AlphaFold solved the protein problem." What does it predict well, and what doesn't it tell you?
+8. Explain to a smart friend in 3 sentences how GraphCast makes a 10-day weather forecast.
