@@ -14,8 +14,8 @@ This repository is a structured curriculum for self-studying the philosophy of m
 
 | Symbol | Meaning |
 |--------|----------|
-| 🔑 | **Must-read / must-watch** — absolute priority items |
-| 🔑🔑 | **Foundational masterwork** — defines the field, read carefully |
+| 🔑 | **Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first |
+| 🔑🔑 | **Foundational masterwork** — a core-path item that defines the field; read carefully |
 
 ---
 
@@ -36,6 +36,7 @@ Section 08  →  Language and Meaning
 Section 09  →  Free Will and Agency
 Section 10  →  Eastern Philosophy and Mind
 Section 11  →  Frontiers
+Section 12  →  Philosophy of Science and Scientific Reasoning   (take after Section 00)
 ```
 
 ### Cross-Cutting References

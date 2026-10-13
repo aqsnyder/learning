@@ -365,3 +365,85 @@ Scores are 1–5 for the curriculum as found. The grade column gives the grade a
 - Thompson, *Why I Am Not a Buddhist* (10)
 - Adamson & Ganeri, *Classical Indian Philosophy* (10)
 - *The Splintered Mind* blog; *History of Philosophy without any gaps* podcast (blogs)
+
+## Follow-up pass (2026-10-13)
+- **New sections created:** `philosophy/12-philosophy-of-science/` · "Philosophy of Science and Scientific Reasoning", take after Section 00 (README learning path updated) · 14 resources (🔑: Godfrey-Smith; SEP Science and Pseudo-Science) · 5 exercises, a mini-project ("Referee Report on a Contested Claim", `projects/philosophy/12-referee-report/`) and 8 Check Yourself questions · PROGRESS block added · "see Section 12" pointers added to 00, 02, 03, 04, 05 and 11 · cross-listed in books/ (#18) and courses/ (#12). Every "you should get X" value (optional-stopping false-positive rate ≈ 28% / ≈ 19%; BF₁₀ ≈ 1.7 at n = 10 and ≈ 0.67 at n = 100; BF₁₀ > 3 reached under H₀ in ≈ 11% of peeking runs vs. < 1% at fixed n; Ioannidis PPV 0.80 / 0.64 / 0.29, best-of-5 α ≈ 0.23 → PPV ≈ 0.28, inverted OSC PPV ≈ 0.36 / ≈ 0.56; Check Yourself Q6 = 0.50) was computed in Python (200,000-run Monte Carlo for the stopping figures). The four demarcation cases (IIT, Wolfram, an ML benchmark claim, a behavioral-econ finding) are framed as "apply the criteria and show where they disagree", with steelmen on both sides; no verdict is given.
+- **Added:**
+  - Theory and Reality: An Introduction to the Philosophy of Science (2nd ed.) — Peter Godfrey-Smith — 2021 — 12 (also books/ #18)
+  - Karl Popper (SEP) — Stephen Thornton — 1997, rev. 2026 — 12
+  - The Logic of Scientific Discovery — Karl Popper — 1959 (trans. of *Logik der Forschung*, 1935) — 12
+  - The Structure of Scientific Revolutions, 50th Anniversary Edition (intro. Ian Hacking) — Thomas S. Kuhn — 1962 / 4th ed. 2012 — 12
+  - Falsification and the Methodology of Scientific Research Programmes (in Lakatos & Musgrave, eds., *Criticism and the Growth of Knowledge*, pp. 91–196) — Imre Lakatos — 1970 — 12
+  - Science and Pseudo-Science (SEP) — Sven Ove Hansson — 2008, rev. 2025 — 12
+  - Bayesian Epistemology (SEP) — Hanti Lin — 2022 — 12
+  - Philosophy of Statistics (SEP) — Jan-Willem Romeijn — 2014, rev. 2025 — 12
+  - Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars — Deborah G. Mayo — 2018 — 12
+  - Why Most Published Research Findings Are False — John P. A. Ioannidis — 2005 — 12
+  - Estimating the reproducibility of psychological science — Open Science Collaboration — 2015 — 12
+  - AI and the Everything in the Whole Wide World Benchmark — Raji, Bender, Paullada, Denton, Hanna — 2021 — 12
+  - Do ImageNet Classifiers Generalize to ImageNet? — Recht, Roelofs, Schmidt, Shankar — 2019 — 12
+  - Philosophy and the Sciences: Introduction to the Philosophy of Physical Sciences (Coursera) — University of Edinburgh (Massimi, Richmond, Lavelle et al.) — n.d. — 12 (also courses/ #12)
+  - Sense and Reference ("Über Sinn und Bedeutung"; trans. Max Black, *Phil. Review* 57(3), 1948) — Gottlob Frege — 1892 — 08
+  - The Meaning of "Meaning" — Hilary Putnam — 1975 — 08
+  - Freedom and Resentment — P. F. Strawson — 1962 — 09
+  - Just Deserts: Debating Free Will — Daniel C. Dennett, Gregg D. Caruso — 2021 — 09
+  - The Intentional Stance — Daniel C. Dennett — 1987 — 05 (05 rather than 01: Practice 2 there tests exactly when intentional vocabulary earns its keep)
+  - Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness — Peter Godfrey-Smith — 2016 — 04
+  - The Edge of Sentience: Risk and Precaution in Humans, Other Animals, and AI — Jonathan Birch — 2024 — 11
+  - Why I Am Not a Buddhist — Evan Thompson — 2020 — 10
+  - Classical Indian Philosophy (A History of Philosophy without any gaps, Vol. 5) — Peter Adamson, Jonardon Ganeri — 2020 — 10
+  - Discrimination in the Age of Algorithms — Jon Kleinberg, Jens Ludwig, Sendhil Mullainathan, Cass R. Sunstein — 2018 — 06 (the counterweight; see Flags)
+  - The Splintered Mind (blog) — Eric Schwitzgebel — ongoing — blogs-and-references
+  - History of Philosophy without any gaps (podcast) — Peter Adamson — ongoing — blogs-and-references (new "Podcasts" table)
+  - Each addition to an existing section has a table row, a Suggested Order step and a PROGRESS line (blogs/ has no PROGRESS block); exercises adjusted minimally where they now use the item (05 Practice 2; 06 Practice 3 and mini-project; 08 Practice 5; 09 Practice 5 and mini-project; 10 Practice 1 and 3; 11 mini-project).
+- **Removed (confirmed nonexistent):** none.
+- **Flags resolved:**
+  - `06-ethics-of-ai/README.md:67` (COMPAS check values) — recomputed from ProPublica's `compas-scores-two-years.csv` (Medium/High = high risk, outcome `two_year_recid`). On all 7,214 rows: FPR 44.85% vs. 23.45%, FNR 27.99% vs. 47.72% (Black vs. white), identical counts (990/805/532/1369 and 1139/349/461/505) to the truth tables in ProPublica's notebook, which report "Total: 7214". With the 6,172-row filters used for ProPublica's regression: FPR 42.34% vs. 22.01%, FNR 28.48% vs. 49.64%. So the independent check's premise (headline figures come from the filtered set) was wrong, and the original "full file" wording was right; the exercise now states both sets precisely. The FPR identity holds exactly on both. Evidence: https://github.com/propublica/compas-analysis (`Compas Analysis.ipynb`, "All/Black/White defendants" cells).
+  - `06-ethics-of-ai/README.md` (one-directional reading list and steelman prompts) — added Kleinberg, Ludwig, Mullainathan & Sunstein (row :41, Suggested Order step 12), a balance note (:44), a both-directions clause in objective 4, and a two-sided steelman requirement in the mini-project item (5) and its success criterion (:71). Evidence: https://academic.oup.com/jla/article/doi/10.1093/jla/laz001/5476086 (*JLA* 10:113–174, CC BY-NC).
+  - `04-intelligence-and-understanding/README.md:37,55` (SEP title and §§5–7) — the entry at `/entries/content-externalism/` is titled **"Externalism About the Mind"** (Rowlands, Lau, Deutsch; first published 10 Dec 2020); §5 "Extended Mind" (#ExteMind), §6 "The Scope of Extended Mind", §7 "Extended Mind and the 4E Mind". The repo was right; the checker's "Externalism About Mental Content" is the title of the older entry. No change. Evidence: https://plato.stanford.edu/entries/content-externalism/
+  - `02-consciousness/README.md:72`, `11-frontiers/README.md:64` (PyPhi details) — PyPI lists stable 1.2.0 (2019) and 2.0.0rc1–rc3 (Sep–Oct 2026) with Requires-Python ≥ 3.13. `pip install --pre pyphi` installed 2.0.0rc3 on Python 3.13; its docstrings define `analyze(...).phi` = φ_s and `.big_phi` = Φ, and the "gotchas" reference is bundled. PyPhi 1.2.0 fails to import on Python 3.13 (`from collections import Iterable`). Running the exercise's three noisy 3-unit networks gave φ_s = 0.456 for the ring and φ_s = 0 for the self-loop "camera" and the feedforward chain (whose Φ is nonzero — the reason the exercise warns about `.phi` vs `.big_phi`). No change. Evidence: https://pypi.org/project/pyphi/
+  - `07-existential-risk-and-alignment/README.md:43` (International AI Safety Report 2026) — published 3 February 2026, described on the site as "the second International AI Safety Report", led by Yoshua Bengio with over 100 authors; no arXiv/DOI listed. Row correct; no change. Evidence: https://internationalaisafetyreport.org/
+  - `08-language-and-meaning/README.md:70` (Lewis signaling split) — simulated the 4-state Roth–Erev game (unit initial weights, +1 on success, 50,000 rounds): 1,000 seeds gave 69–72% of runs ≥ 0.95, 24–26% at partial-pooling ≈ 0.74–0.75, ~5% in between (two RNG seeds); 40 seeds gave 67.5% / 30%. The claim is right; the measured split is now stated. Evidence: local simulation (no web source).
+  - `10-eastern-philosophy-and-mind/README.md:36` (*The Embodied Mind* has no §10 checkbox) — deliberate; the row now says it is tracked once under Section 04.
+  - `09-free-will-and-agency/README.md:32` (✱ Libet co-authors) — now "Benjamin Libet, C. A. Gleason, E. W. Wright, D. K. Pearl"; PROGRESS line → "Libet et al.". Evidence: Europe PMC record PMID 6640273 (*Brain* 106(3):623–642), https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1093/brain/106.3.623&format=json
+  - `courses/README.md:13` (✱ #7 Singer, "check that it is still offered") — still enrollable on Coursera (Princeton), but its six modules contain nothing on AI risk; the note no longer says "and AI risk". Evidence: https://www.coursera.org/learn/altruism
+  - ✱ Schema: table items missing from Suggested Order — added steps for the Edinburgh course (00:52), *The Mind's I* (03:56), Coeckelbergh (06:52), 80,000 Hours (07:59) and SEP Wittgenstein (08:49).
+  - ✱ `blogs-and-references/README.md:53` — the "Philosophy of Science" journal now points to Section 12.
+- **Still unverified:**
+  - Strawson, "Freedom and Resentment" — page range left out because the sources conflict: SEP "Peter Frederick Strawson" (Snowdon & Gomes) gives 1962, *Proceedings of the British Academy* 48: 1–25; PhilPapers gives PBA 48: 187–211 (1963). No link was added: the free full text on Ted Honderich's UCL site (https://www.homepages.ucl.ac.uk/~uctytho/dfwstrawson1.htm) states no licence, so linking it is Aaron's call.
+  - Pages not readable this run: one Crossref query for the Lakatos chapter (HTTP 429; verified instead on the Cambridge Core chapter page), MIT Press for *The Intentional Stance* (robots-disallowed; verified via the CiNii library catalog, so no link), JSTOR (bot challenge) and PubMed (reCAPTCHA) — both replaced by Crossref and Europe PMC.
+  - Not attempted (not in this backlog): SEP "Zhuangzi" for Section 10; the README "debates map"; the cut candidates and 🔑 questions above, which remain Aaron's decisions.
+  - Outside this curriculum's edit scope: `STUDY-GUIDE.md:67` (Track E) still calls the philosophy-of-science section "proposed"; it should now link `philosophy/12-philosophy-of-science/`. The one-home table could add a row for "Philosophy of science, replication, benchmark validity → philosophy/12 (also econ/06, ml/12)".
+
+## Link-audit fixes (2026-10-13)
+- `blogs-and-references/README.md:53` (L3-082, moved): the *Philosophy of Science* journal moved from U. Chicago Press to Cambridge Core; the link now uses the auditor's fix_url, https://www.cambridge.org/core/journals/philosophy-of-science.
+- `blogs-and-references/README.md:43` (L3-001, broken): the old 80,000 Hours priority-path page is gone. The row now cites the auditor's substitute, the "Loss of control" problem profile (Cody Fenwick, Zershaaneh Qureshi; first published July 2025, updated 13 Aug 2026). It has a "How you can help" section, so it still serves the row's career angle. Evidence: https://80000hours.org/problem-profiles/loss-of-control/
+- `08-language-and-meaning/README.md:36` (L3-134, broken, no fix): SEP has no `/entries/philosophy-language/` entry. The row, Suggested Order step 1 and the PROGRESS line now cite SEP "Theories of Meaning" (Jeff Speaks; first published 26 Jan 2010, substantive revision 31 Jul 2024), SEP's broadest survey of semantic and metasemantic theories. SEP's search is robots-blocked and its contents page was truncated for the fetcher, so the entry was checked directly. Evidence: https://plato.stanford.edu/entries/meaning/
+- `09-free-will-and-agency/README.md:32` (L2-052, mismatch): the four authors had already been fixed earlier today. The title is now complete, "… (Readiness-Potential): The Unconscious Initiation of a Freely Voluntary Act", and the co-authors' given names are written out. Evidence: https://api.crossref.org/works/10.1093/brain/106.3.623
+- `10-eastern-philosophy-and-mind/README.md:39` and `courses/README.md:16` (L3-026, broken, no fix): no Coursera page was found for Wright's course. Coursera search is robots-blocked, Princeton's partner page shows only 3 of its courses, and `/learn/buddhism` returns an error. Both rows are kept with "⚠️ Link dead (checked Oct 2026)", and Suggested Order step 11 is marked "(optional; link dead)". Neither row was 🔑.
+- Left unverifiable, no change: L1-141 Quanta philosophy tag page (the auditor suspects a 404, but the row is not 🔑, so it was not rechecked), L1-151 Springer *Minds and Machines* (429), L2-114 NotebookLM (robots), L2-147 ScienceDirect *Artificial Intelligence* (robots), L3-085 Nagel on JSTOR (bot challenge; the Crossref metadata matches).
+
+## Tier lists (2026-10-13)
+🔑 trimmed to ≤3 per section; each Suggested Order now opens with a "Core path" line. Reverse any call by re-adding 🔑 to the row and the Core path line.
+| Section | 🔑 kept | 🔑 removed (why, ≤8 words) |
+|---|---|---|
+| 01 | Kim, *Philosophy of Mind*; Putnam, "The Nature of Mental States"; Nagel, "What Is It Like to Be a Bat?" | SEP "Functionalism" (encyclopedia companion to Putnam; Kim covers it) |
+| 02 | Chalmers, *The Conscious Mind*; Dennett, *Consciousness Explained*; Seth & Bayne, "Theories of Consciousness" | Chalmers, "Facing Up" (shorter version of the README-listed book) |
+| 05 | Turing, "Computing Machinery and Intelligence"; Bender & Koller, "Climbing towards NLU"; Mitchell & Krakauer, "The Debate Over Understanding" | Searle, "Minds, Brains, and Programs" (already 🔑 in prerequisite Section 03) |
+- 🔑 resource rows across Sections 00–12: 30 → 27. The three demoted PROGRESS lines lost their 🔑.
+- README "🔑 Core Reading List — Cross-Reference": no change. All 12 items are still 🔑 in the sections they point to.
+- Index files (books/, courses/, blogs-and-references/): no change. None of the three demoted items is listed there.
+- For Aaron, 02: "Facing Up" is free, short and Suggested Order step 1, so it would make the shorter core path. The book kept its 🔑 because README core item #2 is *The Conscious Mind*, and dropping it would leave Dennett without Chalmers in the README list. To swap, move the 🔑 to "Facing Up" in 02 and in PROGRESS, replace README item #2, and drop *The Conscious Mind*'s 🔑 in `books/README.md` (#4) and in PROGRESS "Books (supplementary)".
+- books/README.md #9 Varela, Thompson & Rosch, *The Embodied Mind*: 🔑 added (core in 04)
+- books/README.md #10 O'Neil, *Weapons of Math Destruction*: 🔑 added (core in 06)
+- books/README.md #11 Rahula, *What the Buddha Taught*: 🔑 added (core in 10)
+- books/README.md #12 Wittgenstein, *Philosophical Investigations*: 🔑 added (core in 08)
+- books/README.md #13 Dennett, *Elbow Room*: 🔑 added (core in 09)
+- books/README.md #18 Godfrey-Smith, *Theory and Reality* (2nd ed.): 🔑 added (core in 12)
+- courses/README.md #1 Edinburgh, Philosophy and the Sciences: Introduction to the Philosophy of Cognitive Sciences: 🔑 removed (not core in any section; unmarked in 01)
+- courses/README.md #2 Sandel, Justice: 🔑 removed (not core in any section; unmarked in 06)
+- courses/README.md #8 Sapolsky, Human Behavioral Biology: 🔑 removed (not core in any section; unmarked in 09)
+- philosophy/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
+- philosophy/README.md legend: 🔑🔑 row now reads "**Foundational masterwork** — a core-path item that defines the field; read carefully"
+- Second check (2026-10-13): `courses/README.md` #3 Dehaene, "What Is Consciousness, and What Are Its Brain Mechanisms?": 🔑 removed (index-only; Section 02 lists his book, unmarked).
+- Second check (2026-10-13): 06: *Fairness and Machine Learning* (Barocas, Hardt & Narayanan) made 🔑 (third slot), because objective 2 and Practice 3 rest on it. PROGRESS and the Core path line were updated.

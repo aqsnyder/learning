@@ -35,7 +35,11 @@ After this section you can:
 | | 📕 Book | An Enquiry Concerning Human Understanding | David Hume | 1748 | [Free](https://www.gutenberg.org/ebooks/9662) | Empiricism, causation, the problem of induction. Read at least Sections 2-5 and 7 for foundations. |
 | | 🎓 Course | Introduction to Philosophy | University of Edinburgh | — | [Coursera](https://www.coursera.org/learn/philosophy) | Broad intro covering epistemology, metaphysics, philosophy of mind, and ethics. Good video companion. |
 
+> **Next:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md) is meant to be taken right after this section. It picks up Hume's problem of induction and the Hume-vs-Bayes notebook (Practice 5) and asks what makes a claim scientific.
+
 ## Suggested Order
+
+**Core path (🔑):** Blackburn, *Think* → SEP "Epistemology"
 
 1. **Nagel — What Does It All Mean?** — Quick warmup to the major philosophical questions
 2. **Blackburn — Think** — Comprehensive grounding in epistemology, logic, mind, and ethics
@@ -47,6 +51,7 @@ After this section you can:
 8. **forall x: Calgary** — Formalize your reasoning tools: truth-functional and first-order logic (can run in parallel with later sections)
 9. **1000-Word Philosophy — Ethics essays** — Consequentialism, Kantian deontology, virtue ethics, social contract: the vocabulary for Sections 06–07
 10. **SEP — Logic and Ontology** — Optional, advanced: how logic relates to what exists
+11. **University of Edinburgh — Introduction to Philosophy (Coursera)** — Optional video companion to Blackburn
 
 ---
 

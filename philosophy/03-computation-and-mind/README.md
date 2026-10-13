@@ -44,21 +44,26 @@ After this section you can:
 | | 📄 Paper | Book Review: 'A New Kind of Science' | Scott Aaronson | 2002 | [Link](https://arxiv.org/abs/quant-ph/0206089) | A complexity theorist's critical review of NKS, focused on its claims about computation and fundamental physics — including an argument that Wolfram's deterministic model of quantum mechanics cannot be reconciled with both special relativity and Bell-inequality violations. The essential counterweight to the Wolfram entries. |
 | | 🌐 Project | The Concept of the Ruliad (Wolfram Physics Project) | Stephen Wolfram | 2021 | [Link](https://writings.stephenwolfram.com/2021/11/the-concept-of-the-ruliad/) | Wolfram's essay defining the "ruliad" — the entangled limit of all possible computations — and arguing that bounded observers embedded in it perceive coherent physical laws. **A speculative research program, not established physics:** the Physics Project (2020–) has no experimentally confirmed predictions and is not accepted by mainstream physics (Wolfram himself writes that "we're still only at the very beginning of nailing down those technical details"), and the step from "physics is computation" to claims about mind is philosophical speculation. Optional; read as a provocation about computationalism. |
 
+> **See also:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md). Whether Wolfram's programme is science is a demarcation question, and Section 12's casebook exercise applies Popper's, Kuhn's and Lakatos's criteria to it.
+
 ## Suggested Order
+
+**Core path (🔑):** Hofstadter, *Gödel, Escher, Bach* → Searle, "Minds, Brains, and Programs"
 
 1. **SEP — Church-Turing Thesis** — Understand what computation is before asking if minds are computers
 2. **Turing — On Computable Numbers (1936)** — The paper that started it all (read overview if the full paper is too technical)
 3. **SEP — Gödel's Incompleteness Theorems** — What the theorems say (and don't) before GEB and Penrose lean on them
 4. **Hofstadter — Gödel, Escher, Bach** — The masterwork. Take your time — this is a book to live with for weeks
 5. **Searle — Minds, Brains, and Programs** — The most famous challenge to computational theories of mind
-6. **SEP — The Computational Theory of Mind** — Systematic overview of computational theories of mind
-7. **Fodor & Pylyshyn — Connectionism and Cognitive Architecture** — Symbols vs. neural networks: the debate LLMs reopened
-8. **Penrose — The Emperor's New Mind** — A physicist's argument that consciousness transcends computation (compare SEP Gödel §6)
-9. **Hofstadter — I Am a Strange Loop** — Deepens the GEB thesis with a focus on self and consciousness
-10. **Aaronson — Why Philosophers Should Care About Computational Complexity** — Why efficiency, not just computability, matters for minds
-11. **Wolfram — A New Kind of Science (Ch. 12)** — Optional, speculative: if almost everything computes at the same level, what makes a mind special?
-12. **Aaronson — Review of A New Kind of Science** — The critical counterweight; read right after NKS
-13. **Wolfram — The Concept of the Ruliad** — Optional, speculative: computation as the basis of physics, and what (if anything) it implies for mind
+6. **Hofstadter & Dennett (eds.) — The Mind's I** — Thought experiments on minds and selves, including the reflection on Searle used in Practice 3
+7. **SEP — The Computational Theory of Mind** — Systematic overview of computational theories of mind
+8. **Fodor & Pylyshyn — Connectionism and Cognitive Architecture** — Symbols vs. neural networks: the debate LLMs reopened
+9. **Penrose — The Emperor's New Mind** — A physicist's argument that consciousness transcends computation (compare SEP Gödel §6)
+10. **Hofstadter — I Am a Strange Loop** — Deepens the GEB thesis with a focus on self and consciousness
+11. **Aaronson — Why Philosophers Should Care About Computational Complexity** — Why efficiency, not just computability, matters for minds
+12. **Wolfram — A New Kind of Science (Ch. 12)** — Optional, speculative: if almost everything computes at the same level, what makes a mind special?
+13. **Aaronson — Review of A New Kind of Science** — The critical counterweight; read right after NKS
+14. **Wolfram — The Concept of the Ruliad** — Optional, speculative: computation as the basis of physics, and what (if anything) it implies for mind
 
 ---
 

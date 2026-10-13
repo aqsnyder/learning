@@ -22,6 +22,15 @@
 | | [The Brains Blog](https://philosophyofbrains.com/) | Group blog by philosophy of mind and neuroscience researchers |
 | | [Quanta Magazine — Philosophy](https://www.quantamagazine.org/tag/philosophy/) | Accessible, well-researched articles on the intersection of science and philosophy |
 | | [Nautilus](https://nautil.us/) | Science and philosophy magazine with deep, narrative-driven pieces |
+| | [The Splintered Mind](https://schwitzsplinters.blogspot.com/) | Eric Schwitzgebel's blog, "reflections in philosophy of psychology, broadly construed"; active, with frequent posts on AI consciousness and the moral status and rights of AI. Pairs with his *The Weirdness of the World* (Section 11) |
+
+---
+
+## Podcasts
+
+| Priority | Podcast | Description |
+|----------|---------|-------------|
+| | [History of Philosophy without any gaps](https://historyofphilosophy.net/) | Peter Adamson's long-running podcast, with series on Indian philosophy and on Africana philosophy beyond the European history. The India series is the audio companion to Adamson & Ganeri's *Classical Indian Philosophy* (Section 10) |
 
 ---
 
@@ -31,7 +40,7 @@
 |----------|-------------|
 | [Alignment Forum](https://www.alignmentforum.org/) | Technical AI alignment research community (companion to LessWrong) |
 | [BlueDot Impact (formerly AI Safety Fundamentals)](https://bluedot.org/) | Courses covering the core arguments and open problems in AI alignment and governance; the old aisafetyfundamentals.com address redirects here |
-| [80,000 Hours — AI Risk](https://80000hours.org/topic/priority-paths/ai-safety/) | Career-oriented resource on AI existential risk and what to do about it |
+| [80,000 Hours — "Loss of control" (AI risk problem profile)](https://80000hours.org/problem-profiles/loss-of-control/) | Cody Fenwick and Zershaaneh Qureshi's problem profile (first published July 2025, updated August 2026) on the risk that humans lose control of advanced AI systems that seek power and undermine oversight: the core claims, objections, technical-safety and governance approaches, and a "How you can help" section on careers working on it |
 | [MIRI](https://intelligence.org/) | Machine Intelligence Research Institute — foundational AI alignment research |
 
 ---
@@ -41,7 +50,7 @@
 | Journal | Focus |
 |---------|-------|
 | [Mind](https://academic.oup.com/mind) | Leading philosophy journal — Turing's 1950 paper was published here |
-| [Philosophy of Science](https://www.journals.uchicago.edu/toc/phos/current) | Broad philosophy of science |
+| [Philosophy of Science](https://www.cambridge.org/core/journals/philosophy-of-science) | Broad philosophy of science (see Section 12) |
 | [Minds and Machines](https://www.springer.com/journal/11023) | AI, cognitive science, and philosophy of mind |
 | [Ethics](https://www.journals.uchicago.edu/toc/et/current) | Moral and political philosophy |
 | [Artificial Intelligence](https://www.sciencedirect.com/journal/artificial-intelligence) | Technical AI with philosophical implications |

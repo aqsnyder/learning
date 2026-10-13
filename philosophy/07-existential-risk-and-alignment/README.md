@@ -44,6 +44,8 @@ After this section you can:
 
 ## Suggested Order
 
+**Core path (🔑):** Bostrom, *Superintelligence* → Russell, *Human Compatible*
+
 1. **BlueDot Impact course (formerly AI Safety Fundamentals)** — Build foundational understanding of the alignment problem
 2. **Bostrom — Superintelligence** — The comprehensive strategic analysis of AI risk
 3. **Russell — Human Compatible** — A constructive framework for beneficial AI
@@ -56,6 +58,7 @@ After this section you can:
 10. **Narayanan & Kapoor — AI as Normal Technology** — The strongest skeptical counterpoint
 11. **International AI Safety Report 2026** — Where the evidence stands now
 12. **Ord — The Precipice** — Broader existential risk context
+13. **80,000 Hours — AI risk problem profile** — Optional: a career-oriented overview of the case for working on AI risk
 
 ---
 

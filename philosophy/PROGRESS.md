@@ -27,7 +27,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Ryle — *The Concept of Mind* (selections)
 - [ ] Putnam — "The Nature of Mental States" (functionalism) 🔑
 - [ ] Jackson — "Epiphenomenal Qualia" (Mary's Room)
-- [ ] SEP — "Functionalism" entry 🔑
+- [ ] SEP — "Functionalism" entry
 - [ ] SEP — "Qualia" entry
 - [ ] University of Edinburgh — Philosophy and the Sciences: Introduction to the Philosophy of Cognitive Sciences (Coursera)
 - [ ] SEP — "Personal Identity" entry
@@ -39,7 +39,7 @@ Track your progress through the curriculum. Check off items as you complete them
 ## Section 02 — Consciousness
 - [ ] Chalmers — *The Conscious Mind* 🔑
 - [ ] Dennett — *Consciousness Explained* 🔑
-- [ ] Chalmers — "Facing Up to the Problem of Consciousness" 🔑
+- [ ] Chalmers — "Facing Up to the Problem of Consciousness"
 - [ ] Tononi — "Integrated Information Theory" (IIT)
 - [ ] Block — "On a Confusion about a Function of Consciousness"
 - [ ] Koch — *The Feeling of Life Itself*
@@ -86,13 +86,14 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Legg & Hutter — "Universal Intelligence: A Definition of Machine Intelligence" (2007)
 - [ ] Chollet — "On the Measure of Intelligence" (2019)
 - [ ] Clark — "Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science" (2013)
+- [ ] Godfrey-Smith — *Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness* (2016)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: The Extended Engineer
 - [ ] ✅ Check Yourself — answered from memory
 
 ## Section 05 — Philosophy of AI
 - [ ] Turing — "Computing Machinery and Intelligence" (1950) 🔑
-- [ ] Searle — "Minds, Brains, and Programs" (Chinese Room) 🔑
+- [ ] Searle — "Minds, Brains, and Programs" (Chinese Room)
 - [ ] Dreyfus — "What Computers Still Can't Do"
 - [ ] Harnad — "The Symbol Grounding Problem"
 - [ ] Bender & Koller — "Climbing towards NLU" 🔑
@@ -100,6 +101,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] SEP — "The Turing Test" entry
 - [ ] Bender, Gebru et al. — "On the Dangers of Stochastic Parrots" (2021)
 - [ ] Mitchell & Krakauer — "The Debate Over Understanding in AI's Large Language Models" (2023) 🔑
+- [ ] Dennett — *The Intentional Stance* (1987)
 - [ ] Shanahan — "Talking About Large Language Models" (2022)
 - [ ] Millière & Buckner — "A Philosophical Introduction to Language Models — Part I" (2024)
 - [ ] 🛠️ Practice exercises 1–5
@@ -113,11 +115,12 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Jobin et al. — "The global landscape of AI ethics guidelines"
 - [ ] Crawford — *Atlas of AI*
 - [ ] Eubanks — *Automating Inequality*
-- [ ] Barocas, Hardt & Narayanan — *Fairness and Machine Learning*
+- [ ] Barocas, Hardt & Narayanan — *Fairness and Machine Learning* 🔑
 - [ ] Benjamin — *Race After Technology*
 - [ ] Sandel — Justice (Harvard lectures)
 - [ ] Matthias — "The Responsibility Gap" (2004)
 - [ ] Narayanan & Kapoor — *AI Snake Oil* (2024)
+- [ ] Kleinberg, Ludwig, Mullainathan & Sunstein — "Discrimination in the Age of Algorithms" (2018)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Ethics Case File for an AI Hiring Screen
 - [ ] ✅ Check Yourself — answered from memory
@@ -146,7 +149,9 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Austin — *How to Do Things with Words*
 - [ ] Grice — "Logic and Conversation"
 - [ ] Searle — *Speech Acts*
-- [ ] SEP — "Philosophy of Language" entry
+- [ ] SEP — "Theories of Meaning" entry
+- [ ] Frege — "Sense and Reference" (1892; trans. Max Black, 1948)
+- [ ] Putnam — "The Meaning of 'Meaning'" (1975)
 - [ ] SEP — "Wittgenstein" entry
 - [ ] Andreas — "Language Models as Agent Models" (2022)
 - [ ] Harris — "Distributional Structure" (1954)
@@ -158,14 +163,16 @@ Track your progress through the curriculum. Check off items as you complete them
 ## Section 09 — Free Will and Agency
 - [ ] Dennett — *Elbow Room* 🔑
 - [ ] Dennett — *Freedom Evolves*
-- [ ] Libet — "Time of Conscious Intention to Act"
+- [ ] Libet et al. — "Time of Conscious Intention to Act"
 - [ ] Frankfurt — "Alternate Possibilities and Moral Responsibility"
+- [ ] Strawson — "Freedom and Resentment" (1962)
 - [ ] SEP — "Free Will" entry
 - [ ] Sapolsky — *Determined*
 - [ ] SEP — "Compatibilism" entry
 - [ ] Sapolsky — Human Behavioral Biology (selected lectures)
 - [ ] Schurger, Sitt & Dehaene — "An Accumulator Model for Spontaneous Neural Activity Prior to Self-Initiated Movement" (2012)
 - [ ] Mitchell — *Free Agents: How Evolution Gave Us Free Will* (2023)
+- [ ] Dennett & Caruso — *Just Deserts: Debating Free Will* (2021)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Allocating Responsibility for an Agent's Act
 - [ ] ✅ Check Yourself — answered from memory
@@ -173,9 +180,11 @@ Track your progress through the curriculum. Check off items as you complete them
 ## Section 10 — Eastern Philosophy and Mind
 - [ ] Rahula — *What the Buddha Taught* 🔑
 - [ ] Siderits — *Buddhism as Philosophy*
+- [ ] Adamson & Ganeri — *Classical Indian Philosophy* (2020)
 - [ ] Thompson — *Waking, Dreaming, Being*
 - [ ] Garfield — *The Fundamental Wisdom of the Middle Way* (Nāgārjuna)
 - [ ] Flanagan — *The Bodhisattva's Brain*
+- [ ] Thompson — *Why I Am Not a Buddhist* (2020)
 - [ ] SEP — "Buddha" entry
 - [ ] SEP — "Mind in Indian Buddhist Philosophy" entry
 - [ ] Wright — Buddhism and Modern Psychology (Coursera)
@@ -194,8 +203,28 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Tegmark — *Life 3.0*
 - [ ] Long, Sebo et al. — "Taking AI Welfare Seriously" (2024)
 - [ ] The Alignment Forum
+- [ ] Birch — *The Edge of Sentience* (2024)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Is This Agent Conscious? A Theory-Relative Assessment
+- [ ] ✅ Check Yourself — answered from memory
+
+## Section 12 — Philosophy of Science and Scientific Reasoning
+- [ ] Godfrey-Smith — *Theory and Reality* (2nd ed., 2021) 🔑
+- [ ] SEP — "Karl Popper" entry
+- [ ] Popper — *The Logic of Scientific Discovery* (1959)
+- [ ] Kuhn — *The Structure of Scientific Revolutions* (1962; 50th Anniversary Edition, 2012)
+- [ ] Lakatos — "Falsification and the Methodology of Scientific Research Programmes" (1970)
+- [ ] SEP — "Science and Pseudo-Science" entry 🔑
+- [ ] SEP — "Bayesian Epistemology" entry
+- [ ] SEP — "Philosophy of Statistics" entry
+- [ ] Mayo — *Statistical Inference as Severe Testing* (2018)
+- [ ] Ioannidis — "Why Most Published Research Findings Are False" (2005)
+- [ ] Open Science Collaboration — "Estimating the reproducibility of psychological science" (2015)
+- [ ] Raji et al. — "AI and the Everything in the Whole Wide World Benchmark" (2021)
+- [ ] Recht et al. — "Do ImageNet Classifiers Generalize to ImageNet?" (2019)
+- [ ] University of Edinburgh — Philosophy and the Sciences: Introduction to the Philosophy of Physical Sciences (Coursera)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Referee Report on a Contested Claim
 - [ ] ✅ Check Yourself — answered from memory
 
 ## Books (supplementary)
@@ -216,3 +245,4 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] *The Mind's I* — Hofstadter & Dennett
 - [ ] *Reasons and Persons* — Parfit
 - [ ] *forall x: Calgary* — Magnus, Button, Thomas-Bolduc & Zach
+- [ ] *Theory and Reality* — Godfrey-Smith

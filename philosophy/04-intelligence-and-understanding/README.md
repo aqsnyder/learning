@@ -39,8 +39,13 @@ After this section you can:
 | | 📄 Paper | Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science | Andy Clark | 2013 | [Link](https://doi.org/10.1017/S0140525X12000477) | The landmark statement of predictive processing: brains as hierarchical prediction machines that minimize prediction error, tied to action and embodiment. One of the most influential unifying frameworks in cognitive science — and an obvious point of comparison with next-token-predicting language models. |
 | | 📄 Paper | Universal Intelligence: A Definition of Machine Intelligence | Shane Legg, Marcus Hutter | 2007 | [Link](https://arxiv.org/abs/0712.3329) | Distils informal definitions of intelligence into a formal measure: an agent's ability to achieve goals across all computable environments, weighted toward simpler ones. The theoretical backdrop to talk of "general" intelligence. |
 | | 📄 Paper | On the Measure of Intelligence | François Chollet | 2019 | [Link](https://arxiv.org/abs/1911.01547) | Argues that skill at tasks is a poor proxy for intelligence when priors and training data are unlimited, and defines intelligence as skill-acquisition efficiency. Introduces the ARC benchmark — the counterpoint to Legg & Hutter, and a live test of whether models generalize or memorize. |
+| | 📕 Book | Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness | Peter Godfrey-Smith | 2016 | — | A philosopher of science uses octopuses and other cephalopods — large-brained animals on an evolutionary branch far from ours — to ask how minds and consciousness arose. Their intelligence is real but alien to our usual concepts: the nearest thing to an independent experiment in building a mind, and a test case for every definition of intelligence and embodiment in this section. |
+
+> **See also:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md), for whether a benchmark score such as ARC measures the construct it is claimed to measure (Raji et al.; Recht et al.).
 
 ## Suggested Order
+
+**Core path (🔑):** Varela, Thompson & Rosch, *The Embodied Mind* → Clark & Chalmers, "The Extended Mind"
 
 1. **Legg & Hutter — Universal Intelligence** — What could "intelligence" mean, formally?
 2. **Chollet — On the Measure of Intelligence** — The rival view: intelligence as efficient skill acquisition
@@ -53,6 +58,7 @@ After this section you can:
 9. **Heidegger — Being and Time (selections)** — The philosophical roots of embodied cognition
 10. **Clark — Supersizing the Mind** — Full treatment of cognitive extension
 11. **Clark — "Whatever Next?"** — Predictive processing: the framework that ties brain, body, and world together
+12. **Godfrey-Smith — Other Minds** — An independently evolved intelligence as a test case for every definition above
 
 ---
 
