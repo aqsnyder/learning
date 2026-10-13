@@ -2,7 +2,18 @@
 
 > **Why this section matters:** Bitcoin is as much an economic innovation as a technical one. Understanding monetary theory, incentive structures, and game theory gives you the full picture.
 
-**Prerequisites:** Section [00 — History and Philosophy](../00-history-and-philosophy/).
+**Prerequisites:** Section [00 — History and Philosophy](../00-history-and-philosophy/). For the underlying theory see the economics curriculum: [econ/02 — Game Theory](../../econ/02-game-theory/README.md) and [econ/10 — Monetary Economics and Crypto](../../econ/10-monetary-economics-and-crypto/README.md).
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive Bitcoin's supply schedule from consensus code and compute stock-to-flow at each halving.
+- Test the Stock-to-Flow model critically: in-sample fit, out-of-sample performance and spurious-regression risk.
+- Estimate the security budget and the cost of a majority-hashrate attack under explicit, stated assumptions.
+- Model miner incentives — fee sniping, the post-subsidy fee market, selfish mining — with simple payoff calculations.
+- Evaluate the monetary arguments in the section's books (Gresham/Thiers, network effects, sound money), separating empirical claims, theory and advocacy.
 
 ---
 
@@ -10,16 +21,18 @@
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
-| 🔑 | Book | The Bitcoin Standard | Saifedean Ammous | 2018 | | History of money and Bitcoin's monetary properties |
+| 🔑 | Book | The Bitcoin Standard | Saifedean Ammous | 2018 | | History of money and Bitcoin's monetary properties — an Austrian-school advocacy book; balance it with the academic treatments in econ/10 and the Princeton textbook (Section 03) |
 | 🔑 | Book | The Internet of Money (Vols 1-3) | Andreas Antonopoulos | | | Why Bitcoin matters, accessible talks |
 | | Book | The Fiat Standard | Saifedean Ammous | 2021 | | Companion to The Bitcoin Standard, analyzes fiat system |
-| 🔑 | Concept | Stock-to-Flow model | | | | Scarcity and supply schedule (21M cap, halvings) |
+| | Concept | Stock-to-Flow model | | | | PlanB's 2019 price model built on scarcity (21M cap, halvings). Widely publicized but methodologically criticized — it treats supply as the sole driver of price — so study it as a case of narrative vs. evidence, not as a forecast. The supply schedule itself: Section 03 (Block Reward) |
 | | Concept | Game theory of mining | | | | Nash equilibrium, selfish mining, fee market dynamics |
-| | Concept | Network effects and Metcalfe's law | | | | Value grows with the square of connected users |
+| | Concept | Network effects and Metcalfe's law | | | | Metcalfe's law posits network value ∝ users²; empirical fits to Bitcoin are contested and depend heavily on how "users" are measured |
 | | Concept | Gresham's Law and Thiers' Law | | | | Bad money drives out good (and vice versa) |
-| 🔑 | Article | The Bullish Case for Bitcoin | Vijay Boyapati | | [Medium](https://vijayboyapati.medium.com/the-bullish-case-for-bitcoin-6ecc8bdecc1) | Comprehensive economic thesis |
-| | Video | Michael Saylor Bitcoin talks | Michael Saylor | | | Corporate treasury and macro perspective |
+| 🔑 | Article | The Bullish Case for Bitcoin | Vijay Boyapati | | [Medium](https://vijayboyapati.medium.com/the-bullish-case-for-bitcoin-6ecc8bdecc1) | Comprehensive economic thesis — explicitly an investment/advocacy case; read it as an argument to test, not as analysis |
+| | Video | Michael Saylor Bitcoin talks | Michael Saylor | | | Corporate-treasury and macro advocacy — promotional rather than analytical; useful for understanding the narrative, not for evaluating it |
 | | Book | The Sovereign Individual | Davidson and Rees-Mogg | 1997 | | Predicted digital currency |
+| | Article | Bitcoin Optech: Fee sniping | Bitcoin Optech | | [bitcoinops.org](https://bitcoinops.org/en/topics/fee-sniping/) | The long-run "security budget" problem in game-theory terms: once fees dominate the shrinking subsidy, re-mining a lucrative previous block can beat honest mining, and defections can cascade toward a reorg-avoiding mining cartel. Covers mitigations (block weight limit, anti-fee-sniping locktimes) and links the 2022 subsidy debate |
+| | Article | Statement on the Approval of Spot Bitcoin Exchange-Traded Products | Gary Gensler (SEC Chair) | 2024 | [sec.gov](https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023) | Primary source for the January 2024 approval of US spot-bitcoin ETPs — a major step toward custodial, exchange-traded ownership of bitcoin. Read for market structure (who holds the coins and through whom), including the SEC chair's own risk caveats; not an endorsement |
 
 ---
 
@@ -27,11 +40,40 @@
 
 1. **The Bitcoin Standard** — Start with the history of money and why Bitcoin's properties matter.
 2. **The Bullish Case for Bitcoin** — Read Boyapati's comprehensive economic thesis.
-3. **Stock-to-Flow model** — Understand scarcity, the supply schedule, and halvings.
+3. **Stock-to-Flow model** — Examine it critically: what it assumes and why a fitted price curve is not evidence (the supply schedule itself is in Section 03).
 4. **Gresham's Law and Thiers' Law** — See how monetary history applies to Bitcoin.
-5. **Network effects and Metcalfe's law** — Why adoption creates compounding value.
+5. **Network effects and Metcalfe's law** — Why adoption may compound value, and how contested the empirical evidence is.
 6. **Game theory of mining** — Nash equilibrium, selfish mining, and fee market dynamics.
-7. **The Fiat Standard** — Contrast Bitcoin with the fiat monetary system.
-8. **The Sovereign Individual** — Broader context on digital money and decentralization.
-9. **Michael Saylor Bitcoin talks** — Corporate and macro perspectives.
-10. **The Internet of Money** — Fill in remaining "why does this matter?" gaps.
+7. **Optech: Fee sniping** — What happens to miners' incentives as the subsidy shrinks toward zero.
+8. **SEC statement on spot bitcoin ETPs (2024)** — How Bitcoin entered mainstream finance, and what custodial ownership changes.
+9. **The Fiat Standard** — Contrast Bitcoin with the fiat monetary system.
+10. **The Sovereign Individual** — Broader context on digital money and decentralization.
+11. **Michael Saylor Bitcoin talks** — Corporate and macro perspectives (advocacy).
+12. **The Internet of Money** — Fill in remaining "why does this matter?" gaps.
+
+---
+
+## 🛠️ Practice
+
+*Analysis exercises only — nothing here is investment advice.*
+
+1. **Supply schedule from code** — Reimplement Bitcoin Core's `GetBlockSubsidy` (integer satoshis, one right shift per 210,000 blocks) and sum it to derive the exact maximum supply (it isn't 21,000,000), the height of the last subsidy-paying block, and the approximate year. Compute stock-to-flow at each halving and compare it with the gold and silver figures quoted in *The Bitcoin Standard*. List three reasons the spendable supply is below the schedule (start with the genesis output and BIP 30's duplicate coinbases). *(~1.5 h · The Bitcoin Standard; Stock-to-Flow concept; Mastering Bitcoin ch. 12 and Learn Me A Bitcoin: Block Reward (both Section 03))*
+2. **Security-budget scenarios** — Pull per-block fees for the last 2,016 blocks with `getblockstats` (your node must still hold them — raise `prune` if needed — or use mempool.space's API). For the 2028, 2032 and 2036 halvings, tabulate miner revenue per block in BTC under low/medium/high fee scenarios, and express the hashrate it can sustain as a function of price P and an all-in cost per TH-day (keep P symbolic). Estimate what it would cost to rent or build enough hashrate to out-mine the network for six blocks vs for one day. Close with 200 words: what fee level per block would replace today's subsidy, and what would it imply for transaction fees? *(~2 h · Game theory of mining concept; Bitcoin Optech: Fee sniping; Mastering Bitcoin ch. 12 (Section 03))*
+3. **Gresham vs Thiers, applied** — In ≤ 600 words: state both laws precisely, identify the institutional condition that decides which one applies (legal tender at a fixed exchange rate vs free floating), and apply them to bitcoin and a high-inflation national currency of your choice, anchored on one historical episode from *The Bitcoin Standard* or *The Fiat Standard*. End with one dated, falsifiable prediction about what that country's payment data should show. *(~3 h · Gresham's Law and Thiers' Law concept; The Fiat Standard; The Bitcoin Standard)*
+4. **The fee-sniping game** — A miner with hashrate share α sees a tip block carrying unusually high fees F. It can extend the tip (expected value ≈ α × (subsidy + fees left in the mempool)) or re-mine the tip to take F, which requires winning two blocks before the rest of the network finds one (handle ties with γ). Derive the condition under which forking pays, evaluate it with today's numbers and with zero subsidy, and explain how Bitcoin Core's anti-fee-sniping nLockTime weakens the incentive. Optional depth: Carlsten et al., "On the Instability of Bitcoin Without the Block Reward" (2016). *(~2.5 h · Bitcoin Optech: Fee sniping; Game theory of mining concept; Mastering Bitcoin ch. 9 (Section 06))*
+5. **Stock-to-Flow stress test** — Reproduce the log(market value) ~ log(S2F) regression from PlanB's 2019 stock-to-flow article using only data available at the time, then score its out-of-sample predictions against data through today. Test for spurious regression: check residual stationarity (ADF test) and re-run on first differences. Deliverable: a notebook plus a 300-word verdict on what the model does and doesn't show. *(~4 h · Stock-to-Flow concept; The Bullish Case for Bitcoin)*
+
+**🏗️ Mini-project — Claims Ledger for the Bitcoin Economic Thesis:** Extract 20 checkable claims from *The Bitcoin Standard*, *The Fiat Standard*, Boyapati's "The Bullish Case for Bitcoin", *The Internet of Money* and one Saylor talk, each with a page number or timestamp; classify them as empirical, theoretical or predictive. Test at least five with data in a notebook — e.g., stock-to-flow, a Metcalfe n² vs n·log n fit with an explicit user proxy, "volatility falls as adoption grows", "hashrate follows price" — and score every prediction made before 2020 against what happened. Write a 1,500-word balanced memo with the strongest steelman and the strongest critique. Deliverable: `projects/btc/09-claims-ledger/`. Success: every claim is sourced; at least five are tested reproducibly; the memo ends with one dated, falsifiable prediction and makes no investment recommendation. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the subsidy rule — initial amount, halving interval, integer arithmetic — and roughly when it reaches zero.
+2. Stock-to-flow describes supply only. What else would a price model need, and why is a good in-sample fit weak evidence?
+3. Using current numbers from your node, estimate the average fees per block needed to keep miner revenue in BTC constant across the next halving.
+4. When does Gresham's law apply and when does Thiers' law? Which institutional condition decides?
+5. What is fee sniping, and how does setting nLockTime to the current height discourage it?
+6. "Miners enforce the 21-million cap" and "each halving doubles the price." What is wrong with each claim?
+7. What does selfish mining imply for the claim that Bitcoin is safe as long as a majority of hashrate is honest?
+8. Explain to a smart friend, in three sentences, why the "security budget" question matters more with each halving.

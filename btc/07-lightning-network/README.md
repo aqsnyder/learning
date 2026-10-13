@@ -9,6 +9,15 @@ Lightning is Bitcoin's Layer 2 scaling solution. It enables instant, low-fee pay
 - [Section 04 — Transactions and Script](../04-transactions-and-scripting/README.md)
 - [Section 06 — Network and P2P](../06-network-and-p2p/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Walk through a channel's lifecycle — funding, asymmetric commitments, revocation, cooperative and force close — and identify every on-chain transaction and output.
+- Trace an HTLC across multiple hops, computing the forwarded amount, fee and CLTV expiry at each hop.
+- Decode a BOLT 11 invoice by hand and explain how the payment hash and preimage give proof of payment.
+- Model payment success under liquidity uncertainty and use the model to rank routes.
+- Run a multi-implementation regtest Lightning network and drive it from the CLI and an API.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -20,26 +29,58 @@ Lightning is Bitcoin's Layer 2 scaling solution. It enables instant, low-fee pay
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
-| 🔑 | 📖 Book (Free) | Mastering the Lightning Network | Antonopoulos, Osuntokun, Pickhardt | — | [GitHub](https://github.com/lnbook/lnbook) | THE Lightning reference |
+| 🔑 | 📖 Book (Free) | Mastering the Lightning Network | Antonopoulos, Osuntokun, Pickhardt | 2021 | [GitHub](https://github.com/lnbook/lnbook) | THE Lightning reference (published Dec 2021, so it predates BOLT 12 offers, splicing, and taproot channels — see the Optech row below) |
 | 🔑 | 📄 Paper | The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments | Poon, Dryja | 2016 | [PDF](https://lightning.network/lightning-network-paper.pdf) | The original Lightning whitepaper |
 | | 📚 Documentation | Lightning Engineering Docs | — | — | [Docs](https://docs.lightning.engineering/) | LND implementation documentation |
-| 🔑 | 🌐 Website | Learn Me A Bitcoin: Lightning | — | — | [Website](https://learnmeabitcoin.com/) | Visual Lightning explanations |
+| | 🌐 Website | Learn Me A Bitcoin (on-chain prerequisites only) | Greg Walker | — | [Website](https://learnmeabitcoin.com/) | Correction: the site has no Lightning section (checked Oct 2026). Use its Script and transaction (sequence/locktime) pages to prepare for HTLCs, and Mastering Bitcoin Ch. 14 as the on-ramp instead |
 | | 🎥 Video | Andreas Antonopoulos Lightning Network talks | Antonopoulos | — | [YouTube](https://www.youtube.com/@aantonop) | Accessible Lightning explanations from the master communicator |
-| | 💡 Concept | Payment channels | — | — | How two parties can transact off-chain |
-| | 💡 Concept | HTLCs (Hash Time-Locked Contracts) | — | — | Multi-hop payment routing |
-| | 💡 Concept | Channel capacity, liquidity, and routing | — | — | Managing inbound/outbound liquidity and pathfinding |
-| | 💡 Concept | Lightning implementations | — | — | LND, CLN (Core Lightning), Eclair, LDK |
-| 🔑 | 🛠️ Practice | Set up a Lightning node and open channels | — | — | Hands-on experience with real Lightning infrastructure |
+| | 💡 Concept | Payment channels | — | — | — | How two parties can transact off-chain |
+| | 💡 Concept | HTLCs (Hash Time-Locked Contracts) | — | — | — | Multi-hop payment routing |
+| | 💡 Concept | Channel capacity, liquidity, and routing | — | — | — | Managing inbound/outbound liquidity and pathfinding |
+| | 💡 Concept | Lightning implementations | — | — | — | LND, CLN (Core Lightning), Eclair, LDK |
+| 🔑 | 🛠️ Practice | Set up a Lightning node and open channels | — | — | — | Hands-on experience with real Lightning infrastructure — start with a throwaway regtest network in Polar (Section 12, Lab 5), then signet |
+| 🔑 | 📖 Book (Free) | Mastering Bitcoin, Chapter 14: Second-Layer Applications | Antonopoulos & Harding | 2023 | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc) | Builds payment channels from primitives you already know (multisig, timelocks, hash locks) through asymmetric revocable commitments and HTLCs to routed Lightning payments — the on-ramp before Mastering the Lightning Network |
+| | 📜 Standard | BOLT specifications (Basis of Lightning Technology) | Lightning protocol contributors | — | [GitHub](https://github.com/lightning/bolts) | The interoperability spec every implementation follows; now includes BOLT 12 offers (merged in 2024) and splicing (in BOLT 2) |
+| | 📚 Curriculum | Chaincode Labs: Lightning Protocol Development seminar | Chaincode Labs | — | [Seminar](https://chaincode.gitbook.io/seminars/lightning-protocol-development) | Five-session reading list with discussion questions: payment channels and HTLCs, how the layers fit together, routing, limitations, and the future of Lightning |
+| | 🌐 Website | Bitcoin Optech topics: Offers (BOLT 12) and Splicing | Bitcoin Optech | — | [Offers](https://bitcoinops.org/en/topics/offers/) · [Splicing](https://bitcoinops.org/en/topics/splicing/) | What changed after the book: reusable offers (in the spec since 2024, on by default in Core Lightning, implemented in LDK and Eclair, LND support in progress) and splicing (resize a channel without closing it; implemented in Eclair, Core Lightning and LDK) |
 
 ## Suggested Order
 
-1. **Learn Me A Bitcoin: Lightning** — Start with visual explanations to build intuition
+1. **Mastering Bitcoin Ch. 14** — Build up payment channels and HTLCs from the on-chain primitives you already know
 2. **Lightning whitepaper** — Read the original Poon & Dryja paper for the foundational design
 3. **Payment channels** — Understand how two parties transact off-chain with commitment transactions
-4. **HTLCs** — Learn Hash Time-Locked Contracts for multi-hop routing
+4. **HTLCs** — Learn Hash Time-Locked Contracts for multi-hop routing (Learn Me A Bitcoin's Script and sequence/locktime pages help here)
 5. **Mastering the Lightning Network** — Work through the comprehensive reference for deep understanding
 6. **Channel capacity, liquidity, and routing** — Understand the practical economics of Lightning
 7. **Lightning implementations** — Survey LND, CLN, Eclair, and LDK
-8. **Andreas Antonopoulos talks** — Reinforce concepts with accessible video explanations
-9. **Lightning Engineering Docs** — Reference for LND-specific development
-10. **Set up a Lightning node** — Open channels and send payments to make it real
+8. **Optech: Offers and Splicing** — Catch up on what changed after the book
+9. **BOLT specifications** — Go to the source for any protocol detail
+10. **Chaincode Lightning seminar** — Test your understanding against its discussion questions
+11. **Andreas Antonopoulos talks** — Reinforce concepts with accessible video explanations
+12. **Lightning Engineering Docs** — Reference for LND-specific development
+13. **Set up a Lightning node** — Open channels and send payments to make it real
+
+---
+
+## 🛠️ Practice
+
+1. **Stand up a lab network** — In Polar (or the book's docker-compose network: Alice on LND, Bob on Core Lightning, Chan on Eclair, Dina on LND), open Alice→Bob→Chan→Dina channels and pay a Dina invoice from Alice. On the regtest bitcoind, decode each funding transaction and identify the 2-of-2 output and its script type. Done when you can point to the funding outpoint of every channel in `listchannels` (or each implementation's equivalent). *(~2 h · Mastering the Lightning Network ch. 4; Polar (Section 12))*
+2. **HTLC arithmetic** — Alice pays Dina 100,000 sat via Bob (outgoing policy: base fee 1,000 msat, 100 ppm, `cltv_expiry_delta` 40) and Chan (base 0, 500 ppm, delta 80); Dina's invoice asks for a final CLTV delta of 18; the current height is 1,000. Compute, for each hop, the amount and CLTV expiry of the HTLC it receives (each node charges its fee on the amount it forwards). Write out the offered-HTLC script and enumerate its spending paths (preimage, timeout, revocation). Check your numbers by setting the same policies in your lab and building the route with LND's `buildroute` (compare expiries relative to the current height). *(~2 h · Mastering the Lightning Network chs. 8–9; Poon–Dryja whitepaper)*
+3. **Decode a BOLT 11 invoice by hand** — Create an invoice on a regtest node (`lnbcrt…`), bech32-decode it with your section-01 code (ignoring the 90-character limit), parse the amount multiplier, timestamp and tagged fields (`p`, `s`, `d`, `x`, `c`, …), and recover the payee's node key from the recoverable signature. Done when every field matches `lncli decodepayreq` and the recovered key equals the node's identity public key. *(~2.5 h · Mastering the Lightning Network ch. 15)*
+4. **Pay-per-reading instrument** — Write a small Python service that, for each measurement request, creates an invoice through LND's REST API and returns the reading — from an STM32 ADC over USB-serial, or a simulated sensor — only after the invoice settles; pay it from another lab node and log (payment_hash, preimage, reading) as a receipt. Stretch: put the endpoint behind Aperture (L402) as described in the Lightning Engineering docs. *(~3 h · Lightning Engineering Docs; Mastering the Lightning Network ch. 15)*
+5. **Force-close forensics** — Force-close a channel with balance on both sides and decode the commitment transaction: find the to_local output (revocation key or `to_self_delay` CSV path), to_remote, and any anchor outputs; compute the height at which to_local becomes sweepable and watch the sweep happen. Account for every satoshi of channel capacity from funding to final sweeps (balances, commitment fee, anchors, sweep fees). *(~3 h · Mastering the Lightning Network ch. 7; Mastering Bitcoin ch. 14)*
+
+**🏗️ Mini-project — Route-Reliability Experiment:** Build a regtest network of ≥ 6 nodes using at least two implementations, and open channels with uniformly random initial balances (random push amounts). Use LND's `buildroute`/`sendtoroute` to send ≥ 1,000 single-path payments over fixed 2–3-hop routes, with amounts from 1 % to 90 % of channel capacity, recording successes and failure codes. Compare with the uniform-liquidity model from *Mastering the Lightning Network* ch. 12, P(a) = (c + 1 − a)/(c + 1) for each channel whose balance the sender doesn't know, multiplied along the route. Deliverable: `projects/btc/07-route-reliability/` (driver script, notebook, one-page write-up). Success: measured success rates fall inside the model's 95 % binomial interval in most amount bins, and every systematic deviation is explained (channel reserve, fees, HTLC limits). *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Why are commitment transactions asymmetric — what differs between Alice's and Bob's versions?
+2. What does `to_self_delay` protect against, and which party chooses the delay you have to wait?
+3. With `cltv_expiry_delta` values of 40 and 80 at two intermediate hops and a final CLTV delta of 18, how many blocks above the current height must the sender's HTLC expire?
+4. Why is the same payment hash used at every hop, and what privacy problem does that create?
+5. What happens to a node that broadcasts a revoked commitment transaction, and what must its counterparty do, and by when?
+6. "Every Lightning payment is recorded on the blockchain" and "channel capacity is what I can send." Correct both.
+7. Under uniform liquidity uncertainty, estimate the chance that 400,000 sat gets through three unknown 1,000,000-sat channels.
+8. Explain to a smart friend, in three sentences, why routing nodes can't steal a payment they forward.

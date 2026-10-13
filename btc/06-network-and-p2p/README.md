@@ -6,7 +6,16 @@ Bitcoin is a peer-to-peer network first. Understanding how nodes discover each o
 
 ## Prerequisites
 
-- [Section 02 — How Bitcoin Works](../02-how-bitcoin-works/README.md)
+- [Section 02 — Protocol Fundamentals](../02-protocol-fundamentals/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Describe node types and Bitcoin Core's connection types (outbound full-relay, block-relay-only, feeler, inbound) and audit them on a live node.
+- Implement the P2P handshake and header sync in a minimal Python client, handling message framing and checksums.
+- Explain transaction relay (inv/getdata, wtxid relay) and compact blocks (BIP 152), estimate their bandwidth, and say what Erlay would change.
+- Run mempool-policy experiments (RBF, CPFP, package relay, cluster limits) and distinguish node policy from consensus.
+- Analyze eclipse and partition attacks and map each step to Bitcoin Core's mitigations in the source.
 
 ## Marking Convention
 
@@ -19,24 +28,57 @@ Bitcoin is a peer-to-peer network first. Understanding how nodes discover each o
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|-----------|------|-------------|
-| 🔑 | 📖 Book (Free) | Mastering Bitcoin, Chapter 10: The Network | Antonopoulos | [GitHub](https://github.com/bitcoinbook/bitcoinbook) | Comprehensive overview of Bitcoin's P2P network architecture |
+| 🔑 | 📖 Book (Free) | Mastering Bitcoin, Chapter 10: The Bitcoin Network | Antonopoulos & Harding | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch10_network.adoc) | Comprehensive overview of Bitcoin's P2P network architecture: node roles, compact block relay, lightweight clients and compact block filters, encrypted connections, mempools |
 | 🔑 | 📚 Curriculum | Chaincode Labs: P2P section | Chaincode Labs | [GitHub](https://github.com/chaincodelabs/bitcoin-curriculum) | Deep dive into P2P networking |
-| | 📚 Documentation | Bitcoin Developer Guide: P2P Network | — | [Guide](https://developer.bitcoin.org/devguide/p2p_network.html) | Official P2P protocol documentation |
+| | 📚 Documentation | Bitcoin Developer Guide: P2P Network | — | [Guide](https://developer.bitcoin.org/devguide/p2p_network.html) | bitcoin.org's community-written P2P guide — useful background but unmaintained since about 2021, so it predates v2 transport and recent relay changes |
 | | 🔧 Tool | Bitnodes | — | [Website](https://bitnodes.io/) | Live map of reachable Bitcoin nodes |
 | | 🔧 Tool | Mempool.space | — | [Website](https://mempool.space/) | Real-time mempool visualization |
 | | 💡 Concept | Node types | — | — | Full nodes, pruned nodes, SPV clients |
-| | 💡 Concept | Transaction and block propagation | — | — | Compact blocks (BIP 152), Erlay |
-| | 💡 Concept | Mempool policies and fee estimation | — | — | Policy rules, fee markets, RBF, CPFP |
-| 🔑 | 🛠️ Practice | Run your own Bitcoin full node | — | — | The best way to learn the network |
+| | 💡 Concept | Transaction and block propagation | — | — | Compact blocks (BIP 152); Erlay set reconciliation (BIP 330) is still a draft and not deployed |
+| | 💡 Concept | Mempool policies and fee estimation | — | — | Policy vs. consensus, fee markets, RBF (full-RBF default since Bitcoin Core 28), CPFP, package relay and TRUC (v3) transactions |
+| 🔑 | 🛠️ Practice | Run your own Bitcoin full node | — | — | The best way to learn the network — follow Mastering Bitcoin Ch. 3 (Section 10) or Learning Bitcoin from the Command Line, as set up in Section 12's Lab 0, starting on regtest/signet |
+| | 📖 Book (Free) | Mastering Bitcoin, Chapter 9: Transaction Fees | Antonopoulos & Harding | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc) | Fee rates and estimation, RBF and CPFP fee bumping, package relay, transaction pinning, anchor outputs — the policy layer behind every mempool |
+| | 📜 Standard | BIP 324: Version 2 P2P Encrypted Transport | Dhruv Mehta, Tim Ruffing, Jonas Schnelli, Pieter Wuille | [BIP 324](https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki) | Opportunistic encryption of node-to-node traffic against passive eavesdropping; enabled by default since Bitcoin Core 27.0 (April 2024) |
+| | 🌐 Website | Bitcoin Optech: Cluster mempool | Bitcoin Optech | [Topic](https://bitcoinops.org/en/topics/cluster-mempool/) | The mempool redesign shipped in Bitcoin Core 31.0 (April 2026): transactions grouped into clusters (≤64 tx / 101 kvB) and ordered by the feerate they are expected to be mined at; ancestor/descendant limits and the CPFP carve-out removed; replacements must improve the mempool's feerate diagram |
+| | 📄 Article | Bitcoin Core development and transaction relay policy | Bitcoin Core contributors (31 signers) | [bitcoincore.org](https://bitcoincore.org/en/2025/06/06/relay-statement/) | The 2025 OP_RETURN debate from Core's side: relay policy should predict what miners will mine rather than filter in-demand transactions — the rationale for v30's change (default `-datacarriersize` 100,000; multiple OP_RETURN outputs). Read [Optech Newsletter #352](https://bitcoinops.org/en/newsletters/2025/05/02/) for the arguments on both sides; the consensus-level counter-proposal, [BIP 110](https://github.com/bitcoin/bips/blob/master/bip-0110.mediawiki) "Reduced Data Temporary Softfork" (Dec 2025), is now marked Closed |
 
 ## Suggested Order
 
 1. **Mastering Bitcoin Ch. 10** — Start with Antonopoulos for the full network architecture picture
 2. **Chaincode Labs P2P section** — Go deeper into P2P networking with curated study materials
 3. **Node types** — Understand the differences between full nodes, pruned nodes, and SPV clients
-4. **Transaction and block propagation** — Learn compact blocks (BIP 152) and Erlay
-5. **Mempool policies and fee estimation** — Understand fee markets, RBF, and CPFP
-6. **Bitnodes** — Explore the live network topology
-7. **Mempool.space** — Watch real-time transaction flow and fee dynamics
-8. **Bitcoin Developer Guide: P2P** — Use as ongoing reference for protocol details
-9. **Run your own full node** — Nothing teaches the network like participating in it
+4. **Transaction and block propagation** — Learn compact blocks (BIP 152) and the Erlay proposal
+5. **BIP 324** — How node-to-node traffic got encrypted by default
+6. **Mempool policies and fee estimation** — Understand fee markets, RBF, and CPFP
+7. **Mastering Bitcoin Ch. 9** — Fees, fee bumping, package relay, and pinning in depth
+8. **Optech: Cluster mempool** — The 2026 redesign of how Bitcoin Core's mempool orders and replaces transactions
+9. **Relay policy statement + Optech #352** — The 2025 OP_RETURN debate: what policy is for, argued from both sides
+10. **Bitnodes** — Explore the live network topology
+11. **Mempool.space** — Watch real-time transaction flow and fee dynamics
+12. **Bitcoin Developer Guide: P2P** — Background reference (unmaintained; prefer BIPs for current behavior)
+13. **Run your own full node** — Nothing teaches the network like participating in it
+
+---
+
+## 🛠️ Practice
+
+1. **Census of your own node** — On your mainnet or signet node, tabulate `getpeerinfo` by `connection_type`, `network`, `transport_protocol_type` (v1 vs BIP 324 v2), service flags and user agent, and pull `getnetworkinfo` and `getnodeaddresses`. Compare your user-agent mix with Bitnodes' current snapshot and explain the differences (inbound vs outbound sampling, Tor). Deliverable: one table plus 150 words on why Core keeps block-relay-only connections alongside full-relay ones. *(~2 h · Mastering Bitcoin ch. 10; Bitnodes; Grokking Bitcoin ch. 8 (Section 02))*
+2. **Bandwidth arithmetic** — Estimate the bytes needed to relay a typical block in full vs as a BIP 152 compact block (80-byte header, nonce, 6-byte short IDs, prefilled coinbase), and the inv traffic to announce one transaction to all your peers. Then measure: snapshot `getpeerinfo`'s `bytesrecv_per_msg` and `bytessent_per_msg` 24 h apart and rank message types by bytes. Explain which cost Erlay (BIP 330) targets and roughly what it could save on your node. *(~2 h · Mastering Bitcoin ch. 10; Chaincode curriculum: The P2P Network (compact blocks, Minisketch))*
+3. **Speak P2P in Python** — Following *Programming Bitcoin* ch. 10, implement the message envelope (magic, command, length, checksum), the version/verack handshake, and `getheaders`/`headers` against your own regtest or signet node (use that network's magic), validating each header's proof-of-work and linkage with your section-02/03 code. Capture the session in Wireshark using its Bitcoin dissector ("Decode As" for non-mainnet ports; your client speaks unencrypted v1). Done when you sync every header from your node and Wireshark decodes each message you send. *(~4 h · Programming Bitcoin ch. 10 (Section 02); Bitcoin Developer Guide: P2P Network)*
+4. **Mempool-policy lab** — On regtest with Bitcoin Core ≥ 31 (cluster mempool): (a) replace a transaction with `bumpfee` and inspect what was evicted; (b) build a low-fee parent plus a high-fee child and read its cluster and chunk feerates through the RPCs the 31.0 release notes describe; (c) submit a zero-fee parent plus child with `submitpackage`, then try the parent alone; (d) extend a chain until you hit the cluster limit. Record every rejection message and map it to Bitcoin Core's `doc/policy/` and the 31.0 release notes — *Mastering Bitcoin* ch. 9 predates cluster mempool, so list what changed. *(~4 h · Mastering Bitcoin ch. 9; Bitcoin Optech: Cluster mempool; Mempool policies and fee estimation concept; Bitcoin Core release notes (Section 12))*
+5. **Eclipse-attack threat model** — From Heilman et al.'s eclipse-attack paper (in the Chaincode P2P reading list), list the attacker's steps and resources. For each step, name the Bitcoin Core countermeasure — address-manager bucketing by netgroup (and ASMap), feeler and block-relay-only connections, anchor connections kept across restarts, eviction protection, BIP 324 encryption — and find the source file that implements it. Deliverable: a three-column table (attack step → mitigation → file). *(~2.5 h · Chaincode curriculum: The P2P Network; Bitcoin Developer Guide: P2P Network)*
+
+**🏗️ Mini-project — Compact-Block Reconstruction Monitor:** Run your mainnet node (pruned is fine) with `-debug=cmpctblock` for a week, and write a Python pipeline that parses the "Successfully reconstructed block … txn prefilled, … txn from mempool (incl at least … from extra pool) and … txn (… bytes) requested" log lines, joins them with RPC block data (tx count, size, coinbase tag → pool) and your mempool size at arrival, and reports: the share of blocks needing a `getblocktxn` round trip, the distribution of missing transactions and bytes, and which pools' blocks miss most. Deliverable: `projects/btc/06-cmpct-monitor/` (notebook plus a one-page memo with one falsifiable hypothesis about the cause — e.g., policy divergence or out-of-band transactions — and how you would test it). Success: ≥ 500 blocks analyzed; every number traces back to a log line; all plots regenerate from the raw logs. *(~8 h plus a week of passive logging)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Name Bitcoin Core's outbound connection types and the attack that block-relay-only connections defend against.
+2. What does a compact block contain, and when does the receiver need a `getblocktxn` round trip?
+3. Estimate the inv traffic to announce one transaction to 10 peers, and compare it with the size of a typical transaction.
+4. Give two consensus rules and two policy rules. Why may nodes disagree on the second kind but not the first?
+5. "There's one global mempool, and transactions are sent to the miners." What's wrong with this picture?
+6. What does a pruned node keep, and which peer requests can't it serve?
+7. How does an eclipse attack work, and which defenses raise its cost?
+8. Explain to a smart friend, in three sentences, how a brand-new node finds peers and catches up to the chain tip.

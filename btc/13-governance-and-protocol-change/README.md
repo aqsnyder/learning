@@ -1,0 +1,131 @@
+# Governance and Protocol Change
+
+## Why This Section Matters
+
+Bitcoin has no one in charge — in BIP 3's words, "No formal or informal decision body governs Bitcoin development or decides adoption of BIPs." Yet its rules do change, in two ways:
+
+- **Soft forks**, which the economy's nodes must choose to enforce.
+- **Relay-policy changes**, which every node operator can accept or override.
+
+Knowing who can propose, review, merge, run, signal and refuse a change is the lens you need for every proposal in Section 11, and for the disputes in Sections 06 and 09. **Read this section between Sections 10 and 11.** It is numbered 13 only so that nothing else had to be renumbered.
+
+## Prerequisites
+
+- [Section 03 — Mining and Consensus](../03-mining-and-consensus/README.md) (forks, miner signaling)
+- [Section 06 — Network and P2P Layer](../06-network-and-p2p/README.md) (policy vs. consensus, and the 2025 relay-policy statement re-read below)
+- [Section 10 — Development and Programming](../10-development-and-programming/README.md) (how Bitcoin Core is actually developed and reviewed)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Classify a change as consensus, relay policy, P2P or wallet behavior. Predict what non-adopting nodes experience: a chain split, inconsistent mempools, or nothing.
+- Explain the BIP process under BIP 3 (Draft → Complete → Deployed, or Closed), and why a BIP's status says nothing about community consensus or activation.
+- Compare activation mechanisms by who holds a veto and how each fails, using the SegWit (2016–17) and Taproot (2021) histories. The mechanisms: hard-coded heights, IsSuperMajority, BIP 9, BIP 8, BIP 148-style mandatory signaling, and Speedy Trial.
+- Reconstruct a contested change from primary sources and measure its footprint in your own node's data — e.g. full-RBF 2022–24, OP_RETURN 2025, or CTV/CSFS 2025–26.
+- Map the stakeholders in a proposed soft fork and what each can actually block: users and economic nodes, miners, maintainers, alternative implementations, custodians.
+
+## Marking Convention
+
+| Symbol | Meaning |
+|--------|---------|
+| 🔑 | Must-read / must-watch — essential for understanding this topic |
+| ⭐ | Satoshi / Cypherpunk essential canon |
+
+## Resources
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|-----------|------|------|-------------|
+| 🔑 | 📖 Book (Free) | Mastering Bitcoin, Ch. 12 § "Changing the Consensus Rules" | Antonopoulos & Harding | 2023 | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc) | Hard forks (including contentious ones), soft forks and the criticisms of them, signaling and activation from BIP 34 through BIP 9, BIP 8 and Speedy Trial, and how consensus software is developed. Re-read it even if you did the whole chapter in Section 03. |
+| 🔑 | 🌐 Website | Bitcoin Optech: Soft fork activation | Bitcoin Optech | — | [bitcoinops.org](https://bitcoinops.org/en/topics/soft-fork-activation/) | How consensus rules have actually been changed, case by case: hard-coded heights, IsSuperMajority, BIP 9 version bits, the BIP 148/91 SegWit fight, emergency fixes, and links to later debates such as Speedy Trial for Taproot. (Moved here from Section 03.) |
+| | 📜 Standard | BIP 9 and BIP 8: version-bits activation | Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell; Shaolin Fry, Luke Dashjr | — | [BIP 9](https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki) · [BIP 8](https://github.com/bitcoin/bips/blob/master/bip-0008.mediawiki) | The signaling mechanisms in their own words. BIP 9 is miner signaling with a timeout (Deployed; used for the CSV and SegWit soft forks). BIP 8 is lock-in by height, with optional mandatory lock-in (Complete). |
+| 🔑 | 📜 Standard | BIP 3: Updated BIP Process | Murch | 2025 | [BIP 3](https://github.com/bitcoin/bips/blob/master/bip-0003.md) | How proposals are drafted, published and moved through Draft → Complete → Deployed, or Closed; it replaces BIP 2 (2016). Read "What is the Significance of BIPs?": a BIP is its authors' recommendation, not community consensus, and BIPs "do not define what Bitcoin is". |
+| | 📚 Documentation | Bitcoin Core: `doc/bips.md` | Bitcoin Core contributors | — | [GitHub](https://github.com/bitcoin/bitcoin/blob/master/doc/bips.md) | The BIPs Bitcoin Core actually implements. BIP 3 points to it as the model for how projects should publish what they adopt. Compare it with the statuses in the BIPs index. |
+| | 🌐 Website | Bitcoin Optech: Replace-by-fee (full-RBF history) | Bitcoin Optech | — | [bitcoinops.org](https://bitcoinops.org/en/topics/replace-by-fee/) | A policy change that took two years: the 2022 `mempoolfullrbf` option and debate, monitoring of full-RBF replacements, full-RBF on by default in Bitcoin Core 28, and the option removed in 29. |
+| | 🌐 Website | Bitcoin Optech: OP_CHECKTEMPLATEVERIFY topic | Bitcoin Optech | — | [bitcoinops.org](https://bitcoinops.org/en/topics/op_checktemplateverify/) | An activation push in progress, newsletter by newsletter: 2025 criticism of CTV+CSFS, an open letter, OP_TEMPLATEHASH as an alternative, the LNHANCE bundle, a December 2025 activation meeting, and the "CTV footgun" discussion. |
+| | 📄 Article | Bitcoin Optech Newsletter #385: 2025 Year-in-Review | Bitcoin Optech | 2025 | [bitcoinops.org](https://bitcoinops.org/en/newsletters/2025/12/19/) | The year's governance threads in one document: the OP_RETURN policy debate summarized from both sides; the soft-fork proposal landscape (CTV+CSFS, OP_TEMPLATEHASH, LNHANCE, BIP 54, CCV replacing OP_VAULT, Script Restoration); quantum planning; and more than a dozen vulnerability disclosures. |
+| | 📚 Curriculum | Chaincode syllabus: "Soft Forks & protocol overview" and "Consensus Changes & Hard Forks" | Chaincode Labs | — | [GitHub](https://github.com/chaincodelabs/bitcoin-curriculum) | Curated mid-2010s readings on fork terminology, flag-day and user-activated soft forks, BIP 9, BIP 148/149 and BIP 91, replay protection, and a history of Bitcoin's consensus forks — the debates that shaped today's caution. |
+
+## Suggested Order
+
+1. **Mastering Bitcoin Ch. 12 § Changing the Consensus Rules** — Vocabulary: hard vs. soft forks, signaling, lock-in, activation.
+2. **Optech: Soft fork activation** — What actually happened, from 2009 to SegWit. Then read *The Blocksize War* (books/) for the human story of 2015–17.
+3. **BIP 9 and BIP 8** — The mechanisms in their own words; sketch BIP 9's state machine before Practice exercise 2.
+4. **Chaincode syllabus: fork readings** — The arguments people made at the time, before anyone knew the outcome.
+5. **BIP 3** — The process, and what a BIP is not.
+6. **Bitcoin Core `doc/bips.md`** — What's implemented, as opposed to what's merely published.
+7. **Optech: Replace-by-fee** — A policy-default change traced from proposal to removal of the option.
+8. **Re-read Section 06's relay-policy statement, Optech #352 and BIP 110** — The 2025 OP_RETURN fight as a governance case: a policy change, then a proposed consensus counter-measure that was later Closed.
+9. **Optech: OP_CHECKTEMPLATEVERIFY** — A consensus change being negotiated right now.
+10. **Optech #385: 2025 Year-in-Review** — The current landscape, as the bridge into Section 11.
+
+---
+
+## 🛠️ Practice
+
+1. **Layer classifier** — Classify these 12 changes:
+   - P2SH (BIP 16)
+   - strict DER signatures (BIP 66)
+   - CSV (BIPs 68/112/113)
+   - SegWit (BIPs 141/143)
+   - Taproot (BIPs 340–342)
+   - opt-in RBF (BIP 125)
+   - the full-RBF default (Core 28)
+   - the OP_RETURN default change (Core 30)
+   - v2 transport (BIP 324, Core 27)
+   - cluster mempool (Core 31)
+   - legacy-wallet removal (Core 30)
+   - testnet4 (BIP 94)
+
+   For each, record: its layer; who must upgrade for it to take effect; what non-upgraded nodes experience; and the failure mode if it is contested (chain split, divergent mempools, or nothing). Check each against Bitcoin Core's `doc/bips.md` and the BIPs index. Deliverable: one table plus three sentences on the pattern. *(~2 h · Mastering Bitcoin ch. 12; BIP 3; Bitcoin Core `doc/bips.md`)*
+2. **Activation state machine** — Implement BIP 9's per-deployment state machine (DEFINED → STARTED → LOCKED_IN → ACTIVE, or FAILED) over synthetic 2,016-block periods. Then add two variants: BIP 8's lock-in on timeout, and a BIP 148-style rule that rejects non-signaling blocks.
+   - Drive all three with miner-support curves (e.g. 60 %, 90 % and 96 % signaling) and a parameter for the share of economic nodes enforcing the mandatory rule.
+   - Plot when each variant activates, fails, or produces two competing chains, and for how many blocks.
+   - Done when your BIP 9 implementation produces the transitions the BIP specifies on hand-built edge cases (threshold met exactly; timeout reached mid-period).
+
+   *(~4 h · BIP 9 and BIP 8; Bitcoin Optech: Soft fork activation; Mastering Bitcoin ch. 12)*
+3. **Signaling, measured** — Use only block headers from your own node; a pruned node keeps every header. Per retarget period, compute the share of blocks signaling:
+   - the SegWit deployment bit, across 2016–17;
+   - Taproot's Speedy Trial bit, in 2021.
+
+   Look up the bit numbers and thresholds in the BIPs and Mastering Bitcoin, plot both series with their thresholds, and mark the BIP 148 and BIP 91 milestones from the Optech topic. Done when the lock-in periods you derive match those in the sources. *(~3 h · Bitcoin Optech: Soft fork activation; BIP 9 and BIP 8; Mastering Bitcoin ch. 12)*
+4. **Full-RBF post-mortem** — Using the Optech replace-by-fee topic's chronology and the newsletters it links, write an incident-review-style post-mortem of Bitcoin Core's move to full-RBF. Cover:
+   - the timeline and the decision points;
+   - the evidence each side cited (e.g. miner adoption, compact-block reconstruction rates);
+   - what each side predicted vs. what happened;
+   - what the episode shows about how policy defaults change.
+
+   Deliverable: one page plus a timeline table with a primary source per row. *(~2.5 h · Bitcoin Optech: Replace-by-fee)*
+5. **Who can block CTV?** — For the CTV+CSFS push, map each stakeholder to what they control (running code, signaling, merging, listing), what they could block, and at what cost. Stakeholders:
+   - economic nodes and users
+   - miners and pools
+   - Bitcoin Core maintainers and reviewers
+   - alternative node implementations
+   - exchanges and custodians, including the spot-ETP custodians from Section 09
+   - wallet and L2 developers
+
+   End with ≤ 300 words on the conditions under which activation could happen without a chain split. (Section 11's exercise 4 weighs the technical merits; this one is about power.) *(~2.5 h · Bitcoin Optech: OP_CHECKTEMPLATEVERIFY topic; Bitcoin Optech Newsletter #385; BIP 3)*
+
+**🏗️ Mini-project — Governance Case File: SegWit Activation:** Build a reproducible case file on the 2015–17 SegWit activation. (Full-RBF or the 2025 OP_RETURN change work too if you'd rather study something recent.) It contains:
+- a dated timeline (CSV) of ≥ 30 events, each linked to a primary source — BIP texts, mailing-list posts (the Chaincode syllabus links and the gnusha.org archive), release notes, Optech;
+- the signaling series from exercise 3, regenerated from your node's headers;
+- a 1,500-word memo weighing the candidate causes of activation: BIP 9 signaling, the BIP 148 threat, BIP 91, and the miners' and businesses' two-step agreement. Optech notes this weighting "remains a subject of debate", so take a position, show your evidence, and say what would falsify it.
+
+Deliverable: `projects/btc/13-segwit-case-file/` (CSV, notebook, memo). Success:
+- every timeline row cites a primary source;
+- the signaling chart regenerates from raw headers;
+- NotebookLM, loaded with your sources, finds no misquotes in the memo.
+
+*(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Give one consensus change and one relay-policy change from the last decade, and explain why nodes can disagree about the second without splitting the chain.
+2. What does "Complete" mean for a BIP under BIP 3, and why isn't a Complete consensus BIP active?
+3. List BIP 9's states and what triggers each transition. What happens at the timeout if the threshold was never reached?
+4. Why was BIP 148 risky for the users who ran it, and what did BIP 91 change to remove that risk?
+5. "Bitcoin Core's maintainers decide what goes into Bitcoin." What's right and what's wrong with that statement?
+6. Why can a relay-policy default be contentious even though every operator can change it?
+7. What is a temporary soft fork, and what drawback did the 2025 discussions raise?
+8. Explain to a smart friend, in three sentences, how Bitcoin changes its rules without anyone being in charge.

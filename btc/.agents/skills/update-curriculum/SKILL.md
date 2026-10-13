@@ -23,7 +23,9 @@ Check the following sources for new material:
 |--------|-----|------------------|
 | Bitcoin Core Releases | https://github.com/bitcoin/bitcoin/releases | New versions, release notes, feature changes |
 | BIP Repository | https://github.com/bitcoin/bips | New and updated BIPs |
-| bitcoin-dev mailing list | https://lists.linuxfoundation.org/pipermail/bitcoin-dev/ | Protocol proposals, technical discussions |
+| Bitcoin Development Mailing List | https://groups.google.com/g/bitcoindev (archive: https://gnusha.org/pi/bitcoindev/) | Protocol proposals, technical discussions (moved off the old Linux Foundation list) |
+| Delving Bitcoin | https://delvingbitcoin.org/ | Developer forum for protocol and Lightning design discussion (the BOLTs repo now points discussion there) |
+| Bitcoin Optech Topics | https://bitcoinops.org/en/topics/ | Per-topic histories (covenants, cluster mempool, silent payments, …) — check status of proposals here |
 | Lopp.net | https://www.lopp.net/bitcoin-information.html | Curated resource updates |
 | Chaincode Labs Curriculum | https://github.com/chaincodelabs/bitcoin-curriculum | Curriculum updates and new modules |
 | Andreas Antonopoulos | https://www.youtube.com/@aantonop | New talks and educational content |
@@ -53,14 +55,16 @@ Map new resources to the appropriate section:
 | 01 | `01-cryptography-foundations/` | Hash functions, ECDSA, Merkle trees, Schnorr |
 | 02 | `02-protocol-fundamentals/` | Blocks, headers, chain structure, consensus rules |
 | 03 | `03-mining-and-consensus/` | PoW, difficulty, mining hardware, pools |
-| 04 | `04-transactions-and-script/` | Transaction structure, Script, SegWit, opcodes |
-| 05 | `05-wallets-and-key-management/` | HD wallets, BIP 32/39/44, key derivation |
-| 06 | `06-network-and-p2p-layer/` | P2P protocol, node operation, mempool |
+| 04 | `04-transactions-and-scripting/` | Transaction structure, Script, SegWit, opcodes |
+| 05 | `05-wallets-and-key-management/` | HD wallets, BIP 32/39/44, key derivation, descriptors, miniscript |
+| 06 | `06-network-and-p2p/` | P2P protocol, node operation, mempool and relay policy |
 | 07 | `07-lightning-network/` | Payment channels, routing, BOLT specs, LND/CLN |
 | 08 | `08-security-and-privacy/` | Cold storage, multisig, CoinJoin, chain analysis |
 | 09 | `09-economics-and-game-theory/` | Monetary theory, incentives, game theory, S2F |
 | 10 | `10-development-and-programming/` | Bitcoin Core, dev tools, RPC, testing |
 | 11 | `11-advanced-and-frontiers/` | Taproot, covenants, scaling, ordinals, new proposals |
+| 12 | `12-hands-on-labs/` | Lab track run in parallel with 02–10: node bench (regtest/signet/mainnet), CLI fluency, Python harness, transaction building, descriptor/PSBT interop, Lightning bench, Taproot workbench, embedded signer HIL |
+| 13 | `13-governance-and-protocol-change/` | BIP process, soft-fork activation, consensus vs. relay policy, contested changes, stakeholder analysis (read between 10 and 11) |
 
 Cross-cutting resources that span multiple topics go in `books/`, `courses/`, or `blogs-and-references/`.
 
@@ -68,10 +72,25 @@ Cross-cutting resources that span multiple topics go in `books/`, `courses/`, or
 
 > [!IMPORTANT]
 > - **Append-only** — Never remove existing entries from section READMEs.
-> - **Preserve formatting** — Match the existing table format (Priority | Type | Resource | Author(s) | Year | Link | Description).
-> - **Use priority markers** — 🔑 for must-read/must-watch, ⭐ for Satoshi/Cypherpunk canon.
-> - **Update PROGRESS.md** — After adding resources to a section README, update [PROGRESS.md](../../PROGRESS.md) to reflect the new entries.
+> - **Preserve formatting** — Match the format of the table you are adding to; column sets differ between sections (most use Priority | Type | Resource | Author(s) | [Year] | Link | Description; Section 11 has no Author/Year columns).
+> - **State proposal status precisely** — For BIPs, quote the status from the BIPs repository (Draft / Complete / Deployed / Closed under BIP 3) and say whether a consensus change has actually activated.
+> - **Use priority markers** — 🔑 for must-read/must-watch (sparingly). ⭐ only for the texts in the Bitcoin Canon table in `btc/README.md`; extending the canon is a deliberate README change, never a side effect of an update.
+> - **Update PROGRESS.md** — After adding resources to a section README, update [PROGRESS.md](../../../PROGRESS.md) to reflect the new entries.
 > - **Update suggested order** — If adding a resource that should be read in a specific sequence, update the Suggested Order section.
+
+## Verification & Curation Rules (mandatory)
+
+Earlier AI-generated updates to this repo introduced fabricated authors, resources that don't exist, and links to the wrong papers (all fixed in the October 2026 review — see `reviews/2026-10-deep-dive/`). Every update must follow these rules:
+
+1. **Open every link before adding it.** Fetch the arXiv abs page, the DOI record (`https://api.crossref.org/works/<DOI>`), the official page, or the YouTube oEmbed record (`https://www.youtube.com/oembed?url=<url>&format=json`) and confirm the exact title, author order, year, and edition. Never write a URL or an author list from memory.
+2. **Cite people, not organizations,** when a work lists authors ("Templeton et al.", not "Anthropic").
+3. **When in doubt, leave it out.** List doubtful or unverifiable candidates in your summary instead of adding them.
+4. **Correct, don't just append.** Fix wrong metadata in place. If a resource is superseded or dead, say so in its description and in your summary. (Append-only means don't silently delete — it does not mean leave errors.)
+5. **Keep the learning layer whole.** A new resource goes into the section table, its Suggested Order, and `PROGRESS.md`. A new section must ship with the full anatomy — Why · Prerequisites · 🎯 Learning Objectives · Resources · Suggested Order · 🛠️ Practice (+ 🏗️ mini-project) · ✅ Check Yourself — plus a PROGRESS block (see the root `.agents/skills/audit-curriculum/SKILL.md`). Append new sections at the next number and state where to take them; don't renumber.
+6. **Markers are closed lists.** ⭐ only for items on this curriculum's named list. Use 🔑 sparingly — aim for ~3 core items per section (many sections still exceed this; trim when you touch them rather than adding more).
+7. **Label speculation and advocacy as such** (e.g. unconfirmed theories, price models, vendor claims), and prefer measured evidence.
+8. **Run `python tools/check_repo.py`** from the repo root before finishing — it must report 0 problems.
+9. **One home per topic.** Check the overlap table in `STUDY-GUIDE.md`. If a resource's topic lives in another curriculum, cross-link to it there instead of adding a duplicate row.
 
 ## Workflow
 

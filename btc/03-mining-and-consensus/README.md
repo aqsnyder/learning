@@ -8,19 +8,32 @@
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Convert between `bits`, target and difficulty, and estimate network hashrate, power draw and solo-mining odds from live data.
+- Implement the 2016-block retarget exactly (4× clamps, the 2015-interval off-by-one, the proof-of-work limit), explain how the timewarp attack abuses it, and state how BIP 94 and BIP 54 close it.
+- Assemble and mine a valid block from `getblocktemplate`: coinbase with BIP 34 height and witness commitment, Merkle root, header, nonce search.
+- Quantify double-spend risk against confirmations and attacker hashrate, and critique the Poisson approximation in the whitepaper.
+- Analyze selfish mining and pool mechanics (Stratum jobs, extranonce, share difficulty), and explain why propagation and pool concentration matter.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
-| 🔑 | Book (Free) | Mastering Bitcoin, Chapter 12: Mining and Consensus | Andreas Antonopoulos | [ch12_mining.adoc](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc) | |
+| 🔑 | Book (Free) | Mastering Bitcoin, Chapter 12: Mining and Consensus | Andreas Antonopoulos and David Harding | [ch12_mining.adoc](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc) | Coinbase and subsidy, proof-of-work and difficulty retargeting, chain selection, mining pools, hashrate attacks, and how consensus rules change (hard vs. soft forks) |
 | 🔑 | Video | Andreas Antonopoulos: Bitcoin Q&A on Mining | Andreas Antonopoulos | [@aantonop](https://www.youtube.com/@aantonop) | Clear explanations of mining mechanics |
-| | Website | Learn Me A Bitcoin: Mining | | [learnmeabitcoin.com](https://learnmeabitcoin.com/) | Interactive mining visualizations |
+| | Website | Learn Me A Bitcoin: Mining | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/mining/) | Interactive mining visualizations |
 | 🔑 | Curriculum | Chaincode Labs: Proof of Work section | | [bitcoin-curriculum](https://github.com/chaincodelabs/bitcoin-curriculum) | Protocol-level deep dive |
 | | Tool | Mempool.space | | [mempool.space](https://mempool.space/) | Live blockchain explorer, fee estimation, mining pool stats |
 | | Concept | Difficulty adjustment algorithm | | | How Bitcoin self-regulates every 2016 blocks |
-| | Concept | Selfish mining and mining game theory | | | |
-| | Concept | Mining pools and hashrate distribution | | | |
+| | Concept | Selfish mining and mining game theory | | [Optech topic](https://bitcoinops.org/en/topics/selfish-mining/) | Block withholding and selfish mining: under minimal assumptions a miner with about 1/3 of the hashrate can earn more than its fair share, so the honest-majority "51%" framing is too optimistic. The Optech page links the original "Majority is not Enough" paper (Eyal & Sirer, 2013) and 2025–26 follow-ups |
+| | Concept | Mining pools and hashrate distribution | | | Pool payout schemes, hashrate concentration, and who chooses the transactions in a block (see Stratum V2 in Section 11) |
 | | Concept | Energy and incentive structure | | | Block rewards, halving schedule, fee market |
+| | Book (Free) | Bitcoin and Cryptocurrency Technologies, Ch. 2 and 5 | Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, Steven Goldfeder | [bitcoinbook.cs.princeton.edu](https://bitcoinbook.cs.princeton.edu/) | Princeton's textbook (2016): "How Bitcoin Achieves Decentralization" and "Bitcoin Mining", including mining incentives and strategies. Pre-SegWit, but the most rigorous textbook treatment of Nakamoto consensus; free pre-publication PDF and lectures on the site |
+| | Website | Learn Me A Bitcoin: Block Reward | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/mining/block-reward/) | The subsidy schedule in detail: halving every 210,000 blocks (3.125 BTC since the 2024 halving at block 840,000), bit-shift rounding, and why total supply ends just under 21 million |
 
 ---
 
@@ -30,5 +43,33 @@
 2. **Andreas Antonopoulos Q&A** — Watch his mining explanations to build intuition.
 3. **Learn Me A Bitcoin: Mining** — Interact with mining visualizations.
 4. **Chaincode Labs curriculum** — Deep dive into proof-of-work at the protocol level.
-5. **Concepts** — Study difficulty adjustment, selfish mining, pool mechanics, and the incentive structure.
-6. **Mempool.space** — Explore the live mempool, fee market, and mining pool distribution in real time.
+5. **Bitcoin and Cryptocurrency Technologies, Ch. 2 and 5** — The rigorous academic treatment of decentralization and mining incentives.
+6. **Concepts** — Study difficulty adjustment, selfish mining, pool mechanics, and the incentive structure.
+7. **Learn Me A Bitcoin: Block Reward** — Work through the subsidy schedule and the 21M cap yourself.
+8. **Mempool.space** — Explore the live mempool, fee market, and mining pool distribution in real time.
+9. **Continue in [Section 13 — Governance and Protocol Change](../13-governance-and-protocol-change/README.md)** — How consensus changes are deployed (and fought over) now has its own section, read between Sections 10 and 11.
+
+---
+
+## 🛠️ Practice
+
+1. **Difficulty, hashrate, power** — From your node (`getblockheader`, `getdifficulty`) or mempool.space: expand the current `bits` into a target, compute difficulty, expected hashes per block (D × 2³²) and implied hashrate (÷ 600 s); compare with mempool.space's hashrate estimate. With a stated J/TH assumption, estimate network power (GW) and energy per block. Then compute the expected time for a 1 TH/s home miner to find a block solo, and the Nakamoto coefficient of today's pool distribution (fewest pools controlling > 50 %). *(~1.5 h · Mastering Bitcoin ch. 12; Mempool.space)*
+2. **Retarget, exactly** — Implement `next_bits(prev_bits, t_first, t_last)` following *Programming Bitcoin*'s difficulty-adjustment section: clamp the timespan to 3.5 days–8 weeks, use the timestamps of the period's first and last blocks (the 2015-interval off-by-one), cap at the proof-of-work limit. Get mainnet headers from your node or by `getheaders` over P2P (2,000 per reply), and validate against every retarget boundary in the first 400,000 blocks. Done when every computed `bits` matches exactly. Then simulate a timewarp: show how a majority miner manipulating timestamps — while respecting median-time-past — drives difficulty down. Read BIP 94 (testnet4, Section 12) and BIP 54 (Consensus Cleanup, Section 11) and state the rule each adds to stop it. *(~3.5 h · Programming Bitcoin chs. 9–10 (Section 02); Mastering Bitcoin ch. 12; Chaincode curriculum: Mining)*
+3. **Mine a regtest block by hand** — Call `getblocktemplate '{"rules":["segwit"]}'` and build the coinbase yourself: BIP 34 height push (check how heights ≤ 16 encode and the 2–100-byte scriptSig rule), an extranonce, a payout to your own key, the `default_witness_commitment` output and the coinbase's 32-byte witness reserved value. Compute the Merkle root over the template's txids, assemble the header, grind the nonce until hash ≤ target, and `submitblock`. Done when `getbestblockhash` returns your block. Then break one thing at a time (Merkle root, bits, height push, timestamp) and record each reject reason. *(~4 h · Mastering Bitcoin ch. 12; Programming Bitcoin ch. 9 and Grokking Bitcoin ch. 7 (both Section 02))*
+4. **Double-spend risk, revisited** — Extend your §11 port from section 00: (a) Monte Carlo the race, with honest and attacker blocks as competing Poisson processes, the attacker mining privately from the moment the merchant's payment is broadcast, and Satoshi's success criterion (the attacker's chain ever catches up — cap the deficit at ~100 to end hopeless runs); (b) implement the exact negative-binomial distribution of the attacker's head start; (c) tabulate the confirmations needed for P < 0.1 % at q = 0.10…0.45 under both. Done when the Monte Carlo agrees with the exact model within its error bars — you should find Satoshi's approximation understates the risk (6 rather than 5 confirmations at q = 0.10). *(~3 h · Bitcoin whitepaper §11 (Section 00); Chaincode curriculum: Mining (Poisson process, 51 % attacks))*
+5. **Selfish mining** — Simulate Eyal and Sirer's selfish-mining strategy as a state machine (private lead 0, 0′, 1, 2, …; γ = fraction of honest hashrate that mines on the selfish branch during a tie). Plot the selfish pool's revenue share against hashrate share α for γ ∈ {0, 0.5, 1}. Done when the break-even α matches (1 − γ)/(3 − 2γ) — 1/3, 1/4 and 0 — within simulation noise. Close with 150 words on what determines γ in practice and how network position and propagation speed shift it. *(~4 h · Selfish mining and mining game theory concept (Optech topic, which links the Eyal–Sirer paper); Chaincode curriculum: Mining (selfish mining))*
+
+**🏗️ Mini-project — Toy Stratum Pool:** Write a minimal Stratum v1 pool in Python on top of your regtest node's `getblocktemplate`/`submitblock` (`mining.subscribe`, `authorize`, `set_difficulty`, `notify`, `submit`), plus a CPU miner that rebuilds the coinbase from coinb1 + extranonce1 + extranonce2 + coinb2, folds in the Merkle branch, and grinds headers. The pool validates shares against the share target, rejects stale and duplicate shares, submits shares that meet the block target, and credits shares per worker. Optionally, read the Stratum component of ESP-Miner — the open-source ESP32 firmware for the Bitaxe home miner — to see how a real device turns `mining.notify` into ASIC jobs, including version rolling (BIP 310/320). Deliverable: `projects/btc/03-toy-pool/` plus a sequence diagram of one job. Success: blocks found through your pool are accepted (`submitblock` returns null) and pay the pool's address; bad shares are rejected with reasons; if you own a Bitaxe-class miner, it mines through your pool (rate-limit block submissions — regtest difficulty is trivial). *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the retarget rule: interval, target timespan, clamps, and which two timestamps it compares.
+2. Why is mining "progress-free", and what does that imply for a small miner's income variance?
+3. If new blocks took 10 s on average to reach most of the hashrate, roughly what fraction would go stale? What about 60 s?
+4. What does a coinbase transaction contain that ordinary transactions don't, and why must its scriptSig begin with the block height?
+5. "A 51 % attacker can steal anyone's coins or mint new ones." What can such an attacker actually do, and what can't it?
+6. Why can selfish mining pay with less than 50 % of the hashrate, and what does γ measure?
+7. Half the hashrate switches off right after a retarget. Roughly how long until the next retarget, and what happens to fee rates meanwhile?
+8. Explain to a smart friend, in three sentences, how difficulty adjustment keeps blocks near ten minutes while hardware keeps improving.

@@ -3,7 +3,19 @@
 > **Why this section matters:** Bitcoin is built on cryptographic primitives. You don't need to be a cryptographer, but you need to understand hashing, public key cryptography, and digital signatures to truly understand Bitcoin.
 
 ### Prerequisites
-- Basic math
+- Basic math (modular arithmetic helps; Programming Bitcoin Ch. 1–2 builds finite fields and elliptic curves from scratch)
+- For the underlying algebra and number theory (groups, finite fields, discrete logs, elliptic-curve cryptography), see the math curriculum: [math/08 — Abstract Algebra](../../math/08-abstract-algebra/README.md) for groups and finite fields, then [math/13 — Number Theory and Cryptography](../../math/13-number-theory-and-cryptography/README.md) for discrete logs, the elliptic-curve group law, ECDSA and Schnorr (written as this section's companion)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Implement finite-field and secp256k1 elliptic-curve arithmetic from scratch and verify it against known values (1·G = G, n·G = point at infinity).
+- State the hash-function properties Bitcoin relies on and use the birthday bound to compare the collision security of 160-bit and 256-bit hashes.
+- Derive ECDSA signing and verification, show how a reused nonce leaks the private key, and explain how RFC 6979 removes the dependence on a good RNG at signing time.
+- Encode a public key into P2PKH (Base58Check) and P2WPKH (bech32) addresses by hand, matching published values.
+- Compare ECDSA with BIP 340 Schnorr signatures: linearity, key aggregation, and the rogue-key attack.
 
 ---
 
@@ -11,14 +23,16 @@
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
-| 🔑 | Book (Free) | Mastering Bitcoin, Chapter 4: Keys and Addresses | Andreas Antonopoulos | [ch04_keys.adoc](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc) | Best explanation of Bitcoin's cryptographic building blocks |
-| 🔑 | Website | Learn Me A Bitcoin: Keys and Addresses | | [learnmeabitcoin.com](https://learnmeabitcoin.com/) | Visual, interactive explanations |
+| 🔑 | Book (Free) | Mastering Bitcoin, Chapter 4: Keys and Addresses | Andreas Antonopoulos and David Harding | [ch04_keys.adoc](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc) | Private and public keys on secp256k1 and how they become addresses (Base58Check, P2PKH/P2SH, bech32/bech32m) — 3rd edition (2023) |
+| 🔑 | Website | Learn Me A Bitcoin: Keys and Addresses | Greg Walker | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/keys/) | Visual, interactive explanations |
 | 🔑 | Video | 3Blue1Brown: But how does bitcoin actually work? | 3Blue1Brown | [YouTube](https://www.youtube.com/watch?v=bBC-nXj3Ng4) | Beautiful visual explanation of hashing and digital signatures in Bitcoin |
 | | Course | Khan Academy: Cryptography | | [khanacademy.org](https://www.khanacademy.org/computing/computer-science/cryptography) | Free fundamentals of crypto |
 | | Concept | SHA-256 hashing | | | One-way functions, collision resistance, mining |
 | | Concept | Elliptic Curve Cryptography (secp256k1) | | | How Bitcoin generates keys |
-| | Concept | Digital Signatures (ECDSA and Schnorr) | | | Proving ownership without revealing private keys |
-| 🔑 | Book | Programming Bitcoin, Chapters 1-3 | Jimmy Song | | Build elliptic curve crypto from scratch in Python |
+| | Concept | Digital Signatures (ECDSA and Schnorr) | | [BIP 340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki) | Proving ownership without revealing private keys. Schnorr spec and test vectors: BIP 340; MuSig2 key aggregation: [BIP 327](https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki) (both also in Section 11) |
+| 🔑 | Book (Free) | Programming Bitcoin, Chapters 1-3 | Jimmy Song | [GitHub](https://github.com/jimmysong/programmingbitcoin) | Build elliptic curve crypto from scratch in Python (finite fields, elliptic curves, ECDSA). Full text free on GitHub (CC BY-NC-ND) |
+| 🔑 | Book (Free) | Mastering Bitcoin, Chapter 8: Digital Signatures | Andreas Antonopoulos and David Harding | [ch08_signatures.adoc](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch08_signatures.adoc) | How Schnorr (BIP 340) and ECDSA signatures work in Bitcoin, why nonce randomness is critical, and SegWit's signature-hash algorithm — the chapter this section's signature concepts point to |
+| | Article | Elliptic Curve Cryptography: a gentle introduction (4 parts) | Andrea Corbellini | [andrea.corbellini.name](https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/) | Curves over finite fields, the discrete-log problem, ECDH/ECDSA, and how ECC is attacked — the math behind secp256k1 at exactly the right depth (2015) |
 
 ---
 
@@ -28,5 +42,32 @@
 2. **Mastering Bitcoin, Ch. 4** — Deep dive into keys, addresses, and how they relate.
 3. **Learn Me A Bitcoin** — Explore interactively to solidify your understanding.
 4. **Khan Academy: Cryptography** — Fill in any gaps in fundamentals (modular arithmetic, etc.).
-5. **Concepts** — Study SHA-256, elliptic curves (secp256k1), and digital signatures (ECDSA → Schnorr).
-6. **Programming Bitcoin, Chs. 1-3** — Build it yourself. Best way to truly learn.
+5. **Corbellini: ECC, a gentle introduction** — The finite-field and discrete-log math behind secp256k1.
+6. **Mastering Bitcoin, Ch. 8** — Schnorr and ECDSA as Bitcoin actually uses them.
+7. **Concepts** — Study SHA-256, elliptic curves (secp256k1), and digital signatures (ECDSA → Schnorr).
+8. **Programming Bitcoin, Chs. 1-3** — Build it yourself. Best way to truly learn.
+
+---
+
+## 🛠️ Practice
+
+1. **Hash-function lab** — In a notebook: (a) flip one input bit 10,000 times and histogram how many SHA-256 output bits change — it should match Binomial(256, ½): mean 128, σ = 8; (b) find collisions on SHA-256 truncated to 32 bits, 50 times, and compare the mean number of tries with √(π/2 · 2³²) ≈ 82,000; (c) implement SHA-256 from FIPS 180-4, match `hashlib` on 1,000 random inputs, then use your implementation to forge a length extension against a naive SHA-256(secret ‖ message) MAC and explain why HMAC (used by BIP 32 and BIP 39) is immune. Finally compare 2⁸⁰ and 2¹²⁸ hash operations with today's network hashrate and write two sentences on what that implies for 160-bit P2SH script hashes vs 256-bit P2WSH ones. *(~3 h · 3Blue1Brown video; Khan Academy: Cryptography; Mastering Bitcoin ch. 4)*
+2. **secp256k1 from scratch** — Work through *Programming Bitcoin* chs. 1–3 (`FieldElement`, `Point`, `S256Point`, `Signature`, `PrivateKey`) and pass the book's tests. Check that n·G is the point at infinity and that private key 1 yields G (x = `79BE667E…16F81798`). Then time your double-and-add for scalars of low vs high Hamming weight, plot it, and explain in three sentences why this is a side channel and how constant-time code such as libsecp256k1 avoids it. *(~6 h · Programming Bitcoin chs. 1–3; Khan Academy: Cryptography (modular arithmetic))*
+3. **Keys to addresses by hand** — Write your own hash160, Base58Check and BIP 173 bech32 encoders. From private key 1, derive the compressed and uncompressed public keys and their P2PKH and P2WPKH addresses. Done when you produce `1BgGZ9tcN4rm9KBzDn7KprQz87SZ26SAMH`, `1EHNa6Q4Jz2uvNExL497mE43ikXhwF6kZm` and `bc1qw508d6qejxtdg4y5r3zarvary0c5xw7kv8f3t4`. Then corrupt 1–4 random characters 10,000 times per encoding, measure the detection rate, and relate it to bech32's error-detection guarantee and the flaw that led to bech32m. *(~2.5 h · Mastering Bitcoin ch. 4; Learn Me A Bitcoin: Keys and Addresses)*
+4. **Break ECDSA with a reused nonce** — Sign two different message hashes with the same k using your `PrivateKey`, then recover the private key from (r, s₁, s₂, z₁, z₂) with the derivation in *Programming Bitcoin*'s "Importance of a Unique k" sidebar. Switch to RFC 6979 deterministic k and show the same message now always yields the same signature. Finish with 150 words on how a microcontroller ends up reusing or biasing k (TRNG not ready at boot, RNG state restored from a snapshot or clone, weak PRNG seeding). *(~2 h · Programming Bitcoin ch. 3; Mastering Bitcoin ch. 8)*
+5. **Schnorr and the rogue-key attack** — On top of your library, implement BIP 340 signing and verification (tagged hashes, x-only public keys, even-Y convention) and pass `bip-0340/test-vectors.csv`. Then break naive key aggregation: given Alice's P_A, publish P_B = P_M − P_A and produce, alone, a valid signature for the "joint" key P_A + P_B. In ≤ 150 words, explain how MuSig2's key-aggregation coefficients (BIP 327) stop this and why ECDSA has no comparable aggregation. *(~3 h · Mastering Bitcoin ch. 8; Digital Signatures (ECDSA and Schnorr) concept — BIP 340, BIP 327)*
+
+**🏗️ Mini-project — Signing Token on a Microcontroller:** On any Cortex-M board (e.g., an STM32 Nucleo), build a minimal signing device: compile libsecp256k1 for the MCU (diybitcoinhardware's `secp256k1-embedded` shows one way) or port your own field and point code to C; generate a key from the TRNG on first boot; accept a 32-byte hash over UART; return the compressed public key, a low-s DER ECDSA signature and a BIP 340 signature. Your pure-Python library from exercises 2–5 is the host-side verifier. Deliverable: `projects/btc/01-signing-token/` (firmware, host script, results table). Success: 1,000 random hashes verify on the host; with a fixed test key, the MCU's ECDSA signatures are byte-identical to your Python RFC 6979 signer; you report cycles per sign and verify plus flash/RAM use, and a half-page threat note (key extraction over SWD without read-out protection, fault injection, why commercial signers add a secure element). *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State preimage, second-preimage and collision resistance. Which one does proof-of-work lean on, and which do addresses lean on?
+2. Why does the birthday bound give a 160-bit hash only ~80 bits of collision security, and when does that matter for multisig scripts?
+3. Given a public key, why can't you compute the private key — and what would change if the group order n were small?
+4. What exactly leaks when two ECDSA signatures share a nonce, and how does RFC 6979 prevent it without trusting the RNG at signing time?
+5. How many bytes are a compressed and an uncompressed public key, and why can the y-coordinate be dropped?
+6. "Bitcoin encrypts your coins." What in Bitcoin is actually encrypted, what is hashed, and what is signed?
+7. What property of Schnorr signatures enables key aggregation, and what attack does naive aggregation invite?
+8. Explain to a smart friend, in three sentences, how a digital signature proves you control coins without revealing your key.

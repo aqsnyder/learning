@@ -37,7 +37,11 @@ Section 08  →  Security and Privacy
 Section 09  →  Economics and Game Theory
 Section 10  →  Development and Programming
 Section 11  →  Advanced Topics and Frontiers
+Section 12  →  Hands-on Labs                      (run in parallel with Sections 02–10; Lab 0 alongside Section 02)
+Section 13  →  Governance and Protocol Change     (read between Sections 10 and 11)
 ```
+
+Sections 12 and 13 were added after the others and numbered last so nothing was renumbered. Start the [lab track](12-hands-on-labs/) together with Section 02, and read [Governance and Protocol Change](13-governance-and-protocol-change/) after Section 10, before the frontier proposals in Section 11.
 
 ### Cross-Cutting References
 
@@ -70,7 +74,7 @@ Section 11  →  Advanced Topics and Frontiers
 |----------|------|------|
 | **Bitcoin Whitepaper** | Paper | [bitcoin.org/bitcoin.pdf](https://bitcoin.org/bitcoin.pdf) |
 | **Mastering Bitcoin** | Book (Free) | [GitHub](https://github.com/bitcoinbook/bitcoinbook) |
-| **Programming Bitcoin** | Book | Jimmy Song |
+| **Programming Bitcoin** | Book (Free) | [GitHub](https://github.com/jimmysong/programmingbitcoin) (Jimmy Song) |
 | **Mastering the Lightning Network** | Book (Free) | [GitHub](https://github.com/lnbook/lnbook) |
 | **Learn Me A Bitcoin** | Website | [learnmeabitcoin.com](https://learnmeabitcoin.com/) |
 | **Lopp.net** | Resource Hub | [lopp.net](https://www.lopp.net/bitcoin-information.html) |

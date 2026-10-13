@@ -4,6 +4,17 @@
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Explain the double-spend problem for digital cash and how the whitepaper's timestamp server, proof-of-work and most-work chain rule remove the need for a trusted mint.
+- Trace each core mechanism to its precursor — Hashcash, b-money, Haber–Stornetta timestamping, the cypherpunks' privacy goals — and state precisely what Bitcoin added.
+- Reproduce the whitepaper's §11 attacker-success calculation and list the assumptions it rests on.
+- Verify claims about Bitcoin's origins against primary sources: Satoshi's own emails and posts, and the blockchain itself.
+- Critique the money-history narratives in *The Bitcoin Standard* and *The Sovereign Individual*, separating checkable claims from advocacy.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -14,10 +25,12 @@
 | ⭐ | Paper | b-money | Wei Dai | 1998 | [weidai.com](http://www.weidai.com/bmoney.txt) | Precursor to Bitcoin, cited in the whitepaper |
 | ⭐ | Paper | Hashcash | Adam Back | 2002 | [hashcash.org](http://www.hashcash.org/papers/hashcash.pdf) | Proof-of-work concept used by Bitcoin |
 | ⭐ | Paper | Bitcoin: A Peer-to-Peer Electronic Cash System (annotated) | Satoshi Nakamoto / Fermat's Library | | [fermatslibrary.com](https://fermatslibrary.com/s/bitcoin) | Annotated version with community explanations |
-| 🔑 | Book | The Bitcoin Standard: The Decentralized Alternative to Central Banking | Saifedean Ammous | 2018 | | History of money leading to Bitcoin |
+| 🔑 | Book | The Bitcoin Standard: The Decentralized Alternative to Central Banking | Saifedean Ammous | 2018 | | History of money leading to Bitcoin. A polemical, Austrian-school argument rather than neutral history — read it critically alongside Section 09 |
 | | Book | The Internet of Money (Vols 1-3) | Andreas Antonopoulos | | | Accessible talks on why Bitcoin matters |
-| ⭐ | Email | Satoshi Nakamoto's emails and forum posts | Various | 2008–2010 | [satoshi.nakamotoinstitute.org](https://satoshi.nakamotoinstitute.org/) | Primary source material from Bitcoin's creator |
+| ⭐ | Email | Satoshi Nakamoto's emails and forum posts | Satoshi Nakamoto (compiled by the Satoshi Nakamoto Institute) | 2008–2010 | [satoshi.nakamotoinstitute.org](https://satoshi.nakamotoinstitute.org/) | Primary source material from Bitcoin's creator |
 | | Book | The Sovereign Individual | Davidson and Rees-Mogg | 1997 | | Predicted digital currency and decentralization |
+| 🔑 | Paper | Bitcoin's Academic Pedigree | Arvind Narayanan and Jeremy Clark | 2017 | [ACM Queue](https://queue.acm.org/detail.cfm?id=3136559) | Traces Bitcoin's components (e.g. linked timestamping, Merkle trees, Byzantine fault tolerance, proof-of-work) back to the 1980s–90s research they came from, arguing that Satoshi's contribution was the combination. The best bridge from this section to the technical ones |
+| | Paper | Bit Gold | Nick Szabo | 2005 | [nakamotoinstitute.org](https://nakamotoinstitute.org/library/bit-gold/) | Timestamped proof-of-work strings recorded in a distributed title registry — the closest pre-Bitcoin design for unforgeable digital scarcity |
 
 ---
 
@@ -27,8 +40,34 @@
 2. **A Cypherpunk's Manifesto** — Understand the philosophical motivation.
 3. **Digital Gold** — Get the human story of Bitcoin's early days.
 4. **The Bitcoin Standard** — Zoom out to money's history and why Bitcoin is different.
-5. **Precursor papers** (b-money, Hashcash) — See what came before and what Satoshi built upon.
-6. **Satoshi's emails and forum posts** — Read the creator's own words.
-7. **The Sovereign Individual** — Broader context on decentralization and the digital age.
-8. **The Internet of Money** — Fill in any remaining "why does this matter?" gaps.
-9. **Re-read the whitepaper** — It will make much more sense now.
+5. **Bitcoin's Academic Pedigree** — Map where each component came from before reading the precursors themselves.
+6. **Precursor papers** (b-money, Hashcash, Bit Gold) — See what came before and what Satoshi built upon.
+7. **Satoshi's emails and forum posts** — Read the creator's own words.
+8. **The Sovereign Individual** — Broader context on decentralization and the digital age.
+9. **The Internet of Money** — Fill in any remaining "why does this matter?" gaps.
+10. **Re-read the whitepaper** — It will make much more sense now.
+
+---
+
+## 🛠️ Practice
+
+1. **Genesis-block forensics** — Run `bitcoind -regtest` (regtest and signet reuse mainnet's genesis coinbase transaction) and `bitcoin-cli -regtest getblock $(bitcoin-cli -regtest getblockhash 0) 2`, or fetch block 0 from the mempool.space API. Split the coinbase `scriptSig` hex into its three pushes — a 4-byte number you'll recognise as mainnet's `bits`, the number 4, and a 69-byte ASCII string — and annotate each byte range. Then call `getrawtransaction` on the genesis coinbase txid and explain the error. Done when your annotation reproduces the *Times* headline byte for byte and you can say why those 50 BTC can never be spent. *(~1 h · Digital Gold; Satoshi's emails and forum posts)*
+2. **Port §11 of the whitepaper** — Translate Satoshi's C function `AttackerSuccessProbability` into Python; regenerate the q = 0.1 and q = 0.3 tables and the "P < 0.001" table; plot P against z for q ∈ {0.1, 0.2, 0.3, 0.4} on a log axis. Done when every value matches the paper to 7 decimals. Then list, in five bullets, what the model assumes about the attacker's head start and rate of progress — section 03 stress-tests these. *(~2 h · Bitcoin whitepaper §11; Fermat's Library annotated whitepaper)*
+3. **Hashcash, measured** — Implement a hashcash-style minter and verifier: increment a counter until SHA-1(resource ‖ date ‖ counter) has ≥ k leading zero bits (Back's partial-preimage cost function), then repeat with double SHA-256. For k = 8…24 (≥ 30 runs each), show the number of tries is geometric with mean ≈ 2^k. Convert today's Bitcoin difficulty into equivalent leading zero bits, log₂(difficulty × 2³²). Finish with a table: which of Back's cost-function properties (publicly auditable, trapdoor-free, probabilistic vs fixed cost, interactive vs non-interactive) Bitcoin's proof-of-work has, and what Bitcoin added (chaining, cumulative work, difficulty retargeting). *(~2.5 h · Hashcash (Back, 2002); whitepaper §4)*
+4. **Precursor design-delta table** — From b-money, Hashcash, the Manifesto and the whitepaper (count how many of its eight references are about timestamping), build a table: rows = problems (Sybil resistance, transaction ordering and double-spend prevention, money issuance, value stability, contract enforcement, privacy); columns = b-money's first protocol, b-money's second protocol, Hashcash, Bitcoin. Each cell is a short quote with its location, or "—". Close with ≤ 200 words: which idea in the whitepaper was genuinely new, and which problem did b-money leave unsolved? *(~3 h · b-money; Hashcash; A Cypherpunk's Manifesto; Bitcoin whitepaper)*
+5. **Claims audit** — Pull five checkable historical claims from *The Bitcoin Standard*'s chapters on early and metallic money (e.g., Rai stones, glass beads, the classical gold standard) and five predictions from *The Sovereign Individual* about digital money and the nation-state. Grade each supported / contested / wrong / untestable, citing at least one independent source per claim. Deliverable: a 10-row claims ledger plus 150 words on how each book argues (evidence vs narrative). *(~3 h · The Bitcoin Standard; The Sovereign Individual)*
+
+**🏗️ Mini-project — Why Bitcoin Looks the Way It Does:** Build a CSV timeline of ≥ 25 dated events, 1993–2014, drawn from the Manifesto, *Digital Gold* and Satoshi's emails and posts, and plot it with matplotlib. Verify every on-chain event yourself by height or txid (block 0, block 170's first person-to-person payment, the May 2010 pizza purchase, the August 2010 value-overflow incident, block 210,000). Then write a 1,500-word blog-style explainer tracing six design decisions — proof-of-work, the "longest" (really: most-work) chain rule, the fixed issuance schedule, ~10-minute blocks, coins as chains of signatures, SPV — each to a precursor and to Satoshi's own words. Deliverable: `projects/btc/00-origins/` (CSV, notebook, explainer). Success: every claim links a primary source, every on-chain fact is checked against data you fetched, and NotebookLM loaded with your explainer plus the sources finds no contradictions. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. In one sentence each: what problem does the whitepaper set out to solve, and how does it define an electronic coin?
+2. What did Hashcash contribute to Bitcoin, and what does a block's proof-of-work achieve that a standalone hashcash stamp cannot?
+3. Which parts of b-money map onto Bitcoin, and what did b-money assume about its broadcast channel or its servers that Bitcoin avoids?
+4. Why does the whitepaper make consensus "one-CPU-one-vote" rather than one-IP-address-one-vote?
+5. Using the §11 tables, about how many confirmations does Satoshi's model require to keep risk under 0.1 % against a 10 % attacker? Against a 30 % attacker?
+6. "Bitcoin was invented in response to the 2008 financial crisis." What evidence supports this, and what complicates it?
+7. According to *A Cypherpunk's Manifesto*, how does privacy differ from secrecy — and which of the two does the whitepaper's privacy model (§10) provide?
+8. Explain to a smart friend, in three sentences, why digital cash needed either a trusted mint or something like proof-of-work.
