@@ -30,7 +30,7 @@
 | Resource | Description |
 |----------|-------------|
 | [Alignment Forum](https://www.alignmentforum.org/) | Technical AI alignment research community (companion to LessWrong) |
-| [AI Safety Fundamentals](https://aisafetyfundamentals.com/) | Free course covering the core arguments and open problems in AI alignment |
+| [BlueDot Impact (formerly AI Safety Fundamentals)](https://bluedot.org/) | Courses covering the core arguments and open problems in AI alignment and governance; the old aisafetyfundamentals.com address redirects here |
 | [80,000 Hours — AI Risk](https://80000hours.org/topic/priority-paths/ai-safety/) | Career-oriented resource on AI existential risk and what to do about it |
 | [MIRI](https://intelligence.org/) | Machine Intelligence Research Institute — foundational AI alignment research |
 

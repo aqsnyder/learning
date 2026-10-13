@@ -9,6 +9,15 @@ AI systems are already making decisions that affect hiring, criminal sentencing,
 - [Section 00 — Foundations of Philosophy](../00-foundations-of-philosophy/README.md)
 - [Section 05 — Philosophy of AI](../05-philosophy-of-ai/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Apply utilitarian, Kantian and Rawlsian reasoning (Sandel) to an AI deployment decision and locate the premise where their verdicts diverge.
+- Define demographic parity, equalized odds and calibration, compute them on real data, and explain why they cannot generally all hold at once.
+- Reconstruct Matthias's responsibility-gap argument and evaluate the main proposals for closing the gap.
+- Recognize "weapons of math destruction" (O'Neil) and predictive-AI "snake oil" (Narayanan & Kapoor) in concrete cases, and estimate the material costs Crawford highlights.
+- Defend a position on the moral status of AI systems under uncertainty against the strongest opposing view.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -21,21 +30,50 @@ AI systems are already making decisions that affect hiring, criminal sentencing,
 |----------|------|----------|-----------|------|------|-------------|
 | 🔑 | 📕 Book | Ethics of Artificial Intelligence | S. Matthew Liao (ed.) | 2020 | — | The most comprehensive anthology on AI ethics. Covers moral status of AI, fairness, responsibility, lethal autonomous weapons, and privacy. Systematic and philosophically rigorous. |
 | 🔑 | 📕 Book | Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy | Cathy O'Neil | 2016 | — | Vivid, accessible account of how algorithms perpetuate injustice in education, policing, and finance. Makes the abstract concrete. |
-| | 📕 Book | The Ethics of Artificial Intelligence: An Introduction | Mark Coeckelbergh | 2020 | — | Accessible textbook covering responsibility, justice, privacy, manipulation, and robot rights. Good systematic overview. |
+| | 📕 Book | AI Ethics (MIT Press Essential Knowledge series) | Mark Coeckelbergh | 2020 | — | Short, accessible introduction covering responsibility, justice, privacy, manipulation, and robot rights. Good systematic overview. |
 | | 📄 Paper | The global landscape of AI ethics guidelines | Jobin, Ienca, Vayena | 2019 | [Link](https://doi.org/10.1038/s42256-019-0088-2) | Meta-analysis of 84 AI ethics guidelines worldwide. Reveals common themes and important gaps. |
 | | 📕 Book | Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence | Kate Crawford | 2021 | — | Maps the material infrastructure of AI — labor, data, minerals, energy. Shows that AI is not immaterial but deeply embedded in power structures. |
 | | 📕 Book | Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor | Virginia Eubanks | 2018 | — | How automated systems target and harm vulnerable populations. Concrete case studies in welfare, housing, and child protective services. |
-| | 📄 Paper | Fairness and Machine Learning: Limitations and Opportunities | Barocas, Hardt, Narayanan | 2023 | [Free](https://fairmlbook.org/) | Free textbook on algorithmic fairness — definitions, impossibility results, and interventions. |
+| | 📕 Book | Fairness and Machine Learning: Limitations and Opportunities | Barocas, Hardt, Narayanan | 2023 | [Free](https://fairmlbook.org/) | Free textbook on algorithmic fairness — definitions, impossibility results, and interventions. |
 | | 📕 Book | Race After Technology: Abolitionist Tools for the New Jim Code | Ruha Benjamin | 2019 | — | How technology reinforces racial hierarchies. Essential for understanding the social dimensions of AI bias. |
+| | 📄 Paper | The Responsibility Gap: Ascribing Responsibility for the Actions of Learning Automata | Andreas Matthias | 2004 | [Link](https://doi.org/10.1007/s10676-004-3422-1) | Argues that learning systems act in ways their designers cannot foresee, leaving an accountability vacuum that traditional ways of assigning blame cannot fill. The origin of the "responsibility gap" debate, and the place to take Section 09's question of who is to blame when an autonomous system errs. |
+| | 📕 Book | AI Snake Oil: What Artificial Intelligence Can Do, What It Can't, and How to Tell the Difference | Arvind Narayanan, Sayash Kapoor | 2024 | [Link](https://press.princeton.edu/books/hardcover/9780691249131/ai-snake-oil) | Two Princeton computer scientists separate AI that works from AI that doesn't, with particular scrutiny of predictive AI used to make decisions about people. The up-to-date, evidence-driven successor to O'Neil. |
 | | 🎥 Video | Justice | Michael Sandel | — | [YouTube](https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6) | Harvard's famous ethics course. Builds the moral reasoning toolkit needed for AI ethics debates. |
 
 ## Suggested Order
 
 1. **Sandel — Justice (selected lectures)** — Build your moral reasoning toolkit
 2. **O'Neil — Weapons of Math Destruction** — See how algorithmic bias causes real harm
-3. **Liao (ed.) — Ethics of AI** — Systematic philosophical framework
-4. **Jobin et al. — Global AI ethics guidelines** — Map the institutional landscape
-5. **Barocas et al. — Fairness and ML** — Technical and philosophical foundations of fairness
-6. **Crawford — Atlas of AI** — Material and political dimensions
-7. **Eubanks — Automating Inequality** — Concrete case studies
-8. **Benjamin — Race After Technology** — Structural analysis of tech and race
+3. **Narayanan & Kapoor — AI Snake Oil** — What AI can and can't do, with current examples
+4. **Liao (ed.) — Ethics of AI** — Systematic philosophical framework
+5. **Matthias — The Responsibility Gap** — Who is accountable when a learning system errs?
+6. **Jobin et al. — Global AI ethics guidelines** — Map the institutional landscape
+7. **Barocas et al. — Fairness and ML** — Technical and philosophical foundations of fairness
+8. **Crawford — Atlas of AI** — Material and political dimensions
+9. **Eubanks — Automating Inequality** — Concrete case studies
+10. **Benjamin — Race After Technology** — Structural analysis of tech and race
+
+---
+
+## 🛠️ Practice
+
+1. **Three frameworks, one deployment** — Take Kamm's self-driving-car case from Liao's anthology, or a realistic deployment: an LLM that triages customer bug reports and auto-closes 30% of them as "not a defect". Using Sandel's lectures (and Section 00's ethics essays), analyze it as a utilitarian, a Kantian, and a Rawlsian behind the veil of ignorance — one standard-form argument each. Show exactly where the verdicts diverge and which premise drives the divergence. Then note what Kamm says about when trolley-style cases are, and are not, the right model for machine decisions. *(~3 h · Sandel, Justice; Liao (ed.), Kamm's chapter on the trolley problem and self-driving cars)*
+2. **The responsibility gap** — Reconstruct Matthias's argument in standard form (responsibility requires control and foreseeability; the behavior of learning systems is neither fully foreseeable nor controllable by their makers or operators; the machines themselves are not moral agents; so no one is responsible). Apply it to a deployed predictive model whose behavior drifts after retraining on new data. Evaluate three ways to close the gap — strict liability for deployers, "meaningful human control" requirements, and denying that unforeseeability defeats responsibility — pick one, and answer its strongest objection. 600 words. Check: your argument is valid, and you have said which premise each gap-closing proposal rejects. *(~3 h · Matthias, "The Responsibility Gap"; Coeckelbergh, AI Ethics)*
+3. **COMPAS, reproduced** — Download ProPublica's `compas-scores-two-years.csv` (GitHub: `propublica/compas-analysis`). Treat "Medium" and "High" as high risk and `two_year_recid` as the outcome. Compute, per race, false-positive rate, false-negative rate, positive predictive value, and calibration by decile score. Check: you should reproduce ProPublica's headline disparity — FPR ≈ 45% vs. 23% and FNR ≈ 28% vs. 48% for Black vs. white defendants. Exact values shift by a point or two depending on whether you apply ProPublica's standard row filters (6,172 of the 7,214 rows), so note which you used. Then verify per group that FPR = p/(1−p) · (1−PPV)/PPV · (1−FNR), where p is the base rate, and use the *Fairness and Machine Learning* discussion of incompatible criteria to explain how Northpointe's "it's calibrated" and ProPublica's "it's biased" can both be true. *(~4 h · Barocas, Hardt & Narayanan, Fairness and Machine Learning; O'Neil, Weapons of Math Destruction)*
+4. **The material footprint, estimated** — Fermi-estimate the annual energy and water footprint of (a) your own AI use (queries per day × energy per query) and (b) training one frontier model (accelerator count × power × days × data-center overhead). Give a low/high range for every input with a source, run a quick Monte Carlo over the ranges, and compare the results with a familiar benchmark (your bench equipment idling for a year; a household's annual electricity). 300 words: which of Crawford's material claims does your estimate support, and which depend on things your numbers can't capture (labor, mining, data extraction)? *(~3 h · Crawford, Atlas of AI)*
+5. **Can an AI be wronged?** — Write a 1,200-word position paper on whether, and under what conditions, an AI system could be a moral patient. Engage Liao's chapter on the moral status and rights of AI and Schwitzgebel & Garza's chapter on designing AI with rights (both in Liao's anthology). Include the strongest objection to your view and a reply, and end with one concrete policy you would adopt under uncertainty — e.g., as a company deploying agents. *(~4 h · Liao (ed.), Ethics of Artificial Intelligence; Coeckelbergh, AI Ethics)*
+
+**🏗️ Mini-project — Ethics Case File for an AI Hiring Screen:** You are the founder of a ten-person hardware startup considering an LLM-based résumé screener. Produce a 2,500-word case file: (1) an ethical matrix in the format of O'Neil & Gunn's chapter in Liao's anthology (stakeholders × concerns, rated by severity); (2) O'Neil's WMD test (opacity, scale, damage) and Narayanan & Kapoor's checks for predictive-AI snake oil; (3) analysis under Sandel's three frameworks; (4) a simulated applicant pool in Python with two groups at different base rates, showing the fairness trade-offs you would face when choosing a threshold; (5) the structural critique from Eubanks and Benjamin, steelmanned — the case for not automating this at all; (6) a check of your proposed policy against Jobin et al.'s principles; (7) a go/no-go recommendation with conditions. Deliverable: `projects/philosophy/06-hiring-screen-case/` (`case.md`, `sim.ipynb`). Success: the recommendation follows from explicitly stated premises; the stakeholder most opposed gets a steelmanned paragraph; the simulation shows at least one trade-off a reader can rerun and check. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What three features make a model a "weapon of math destruction" for O'Neil? Name one of her examples.
+2. Define demographic parity, equalized odds and calibration in one sentence each.
+3. Why can't a risk score be calibrated *and* have equal false-positive and false-negative rates across groups, except in special cases? Name the special cases.
+4. What did Jobin et al. find about convergence among AI-ethics guidelines, and what did they find missing or underrepresented?
+5. Misconception probe: "Removing race from the input features makes a model fair." Why doesn't it?
+6. State Matthias's responsibility gap in two sentences. Who falls into the gap, and why?
+7. Your company's AI tool is calibrated across groups but has twice the false-positive rate for one group. Which framework most strongly demands a change, and what change would it ask for?
+8. Explain to a smart friend in 3 sentences why AI ethics is not just a question of whether the model is accurate.

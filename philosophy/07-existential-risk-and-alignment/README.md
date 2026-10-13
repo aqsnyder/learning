@@ -9,6 +9,15 @@ If advanced AI systems pursue goals misaligned with human values, the consequenc
 - [Section 05 — Philosophy of AI](../05-philosophy-of-ai/README.md)
 - [Section 06 — Ethics of AI](../06-ethics-of-ai/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Reconstruct the core AI-risk argument (orthogonality, instrumental convergence, capability growth, difficulty of alignment) and Carlsmith's six-premise version, and identify the most contestable premise in each.
+- Distinguish Gabriel's alignment targets (instructions, intentions, preferences, interests, values) and use them, with Amodei et al.'s and Ngo et al.'s frameworks, to classify real specification-gaming cases.
+- Model takeoff dynamics and explain which parameters the fast-vs-slow-takeoff debate actually turns on.
+- State Russell's three principles and compute when an agent uncertain about human preferences prefers to defer to a human (the off-switch game).
+- Build a transparent, quantitative estimate of AI catastrophe risk that engages the strongest skeptical view (Narayanan & Kapoor) and the current evidence.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -24,18 +33,50 @@ If advanced AI systems pursue goals misaligned with human values, the consequenc
 | | 📕 Book | The Precipice: Existential Risk and the Future of Humanity | Toby Ord | 2020 | — | Broad treatment of existential risks, with a major focus on unaligned AI. Places AI risk in the context of humanity's long-term trajectory. |
 | | 📄 Paper | Intelligence Explosion Microeconomics | Eliezer Yudkowsky | 2013 | [Link](https://intelligence.org/files/IEM.pdf) | Technical analysis of how recursive self-improvement could lead to an intelligence explosion. Core theoretical framework for AI risk thinking. |
 | | 📝 Blog | What Failure Looks Like | Paul Christiano | 2019 | [Link](https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like) | Influential post describing plausible failure modes of advanced AI that don't require dramatic takeover scenarios. |
-| | 📄 Paper | The alignment problem from a deep learning perspective | Ngo, Chan, Shlegeris | 2023 | [Link](https://arxiv.org/abs/2209.00626) | Analyzes alignment risk specifically in the context of deep learning systems. Bridges theoretical AI safety and practical ML research. |
+| | 📄 Paper | The alignment problem from a deep learning perspective | Richard Ngo, Lawrence Chan, Sören Mindermann | 2022 | [Link](https://arxiv.org/abs/2209.00626) | Analyzes alignment risk specifically in the context of deep learning systems. Bridges theoretical AI safety and practical ML research. |
 | | 📄 Paper | Concrete Problems in AI Safety | Amodei et al. | 2016 | [Link](https://arxiv.org/abs/1606.06565) | Identifies five practical research problems in AI safety: avoiding negative side effects, scalable oversight, safe exploration, robustness to distributional shift, and reward hacking. |
-| | 📝 Course | AI Safety Fundamentals | Richard Ngo et al. | — | [Course](https://aisafetyfundamentals.com/) | Free structured course covering the core arguments and open problems in AI alignment. Good entry point. |
+| | 📝 Course | BlueDot Impact AI safety courses (formerly "AI Safety Fundamentals") | BlueDot Impact | — | [Course](https://bluedot.org/) | Structured courses covering the core arguments and open problems in AI alignment and governance; the short introductory course is free and self-paced. The old aisafetyfundamentals.com address now redirects here. Good entry point. |
 | | 📝 Blog | 80,000 Hours — AI Risk Profile | 80,000 Hours | — | [Link](https://80000hours.org/problem-profiles/artificial-intelligence/) | Comprehensive overview of why AI risk matters and what career paths address it. |
+| | 📄 Paper | Is Power-Seeking AI an Existential Risk? | Joseph Carlsmith | 2022 | [Link](https://arxiv.org/abs/2206.13353) | The most carefully argued philosophical version of the AI-risk case: six explicit premises, each given a probability, yielding roughly a 5% chance of existential catastrophe by 2070 (later revised by the author to over 10%). Lets you pinpoint exactly which premise you reject. |
+| | 📄 Paper | Artificial Intelligence, Values, and Alignment | Iason Gabriel | 2020 | [Link](https://arxiv.org/abs/2001.09768) | Asks "aligned to what?": distinguishes aligning AI with instructions, intentions, preferences, interests, and values, and argues the real task is finding fair principles that people with different moral views can reflectively endorse. The bridge between Sections 06 and 07. |
+| | 📄 Paper | AI as Normal Technology | Arvind Narayanan, Sayash Kapoor | 2025 | [Link](https://knightcolumbia.org/content/ai-as-normal-technology) | The most developed skeptical alternative to the superintelligence frame: AI as a transformative but controllable technology, like electricity or the internet, whose effects unfold over decades through institutions. Read it against Bostrom and Carlsmith. |
+| | 📄 Report | International AI Safety Report 2026 | Yoshua Bengio (lead) et al. | 2026 | [Link](https://internationalaisafetyreport.org/) | Second edition (February 2026) of the government-backed scientific assessment of general-purpose AI capabilities, risks, and safeguards, led by Yoshua Bengio; the first edition (2025) is [arXiv:2501.17805](https://arxiv.org/abs/2501.17805). The best single source for where the evidence actually stands. |
 
 ## Suggested Order
 
-1. **AI Safety Fundamentals course** — Build foundational understanding of the alignment problem
+1. **BlueDot Impact course (formerly AI Safety Fundamentals)** — Build foundational understanding of the alignment problem
 2. **Bostrom — Superintelligence** — The comprehensive strategic analysis of AI risk
 3. **Russell — Human Compatible** — A constructive framework for beneficial AI
-4. **Yudkowsky — Intelligence Explosion Microeconomics** — Technical analysis of recursive self-improvement
-5. **Amodei et al. — Concrete Problems in AI Safety** — Practical research agenda
-6. **Christiano — What Failure Looks Like** — Realistic failure scenarios
-7. **Ngo et al. — Alignment from a DL perspective** — Modern framing in the deep learning context
-8. **Ord — The Precipice** — Broader existential risk context
+4. **Gabriel — Artificial Intelligence, Values, and Alignment** — "Aligned to what?" — the normative half of the problem
+5. **Yudkowsky — Intelligence Explosion Microeconomics** — Technical analysis of recursive self-improvement
+6. **Carlsmith — Is Power-Seeking AI an Existential Risk?** — The argument laid out premise by premise
+7. **Amodei et al. — Concrete Problems in AI Safety** — Practical research agenda
+8. **Christiano — What Failure Looks Like** — Realistic failure scenarios
+9. **Ngo et al. — Alignment from a DL perspective** — Modern framing in the deep learning context
+10. **Narayanan & Kapoor — AI as Normal Technology** — The strongest skeptical counterpoint
+11. **International AI Safety Report 2026** — Where the evidence stands now
+12. **Ord — The Precipice** — Broader existential risk context
+
+---
+
+## 🛠️ Practice
+
+1. **The core argument, in standard form** — From Bostrom's chapters on the superintelligent will and on whether the default outcome is doom, reconstruct the argument from the orthogonality and instrumental-convergence theses to "the default outcome may be catastrophe" in at most eight premises. Tag each premise as conceptual, empirical, or forecasting. Then use Russell's chapter "The Not-So-Great AI Debate" and Narayanan & Kapoor's "AI as Normal Technology" to write the strongest objection to the two premises you find weakest (250 words each), and a reply to one of them. Check: the argument is valid as written, and each objection names the premise it targets. *(~3 h · Bostrom, Superintelligence; Russell, Human Compatible; Narayanan & Kapoor, "AI as Normal Technology")*
+2. **Aligned to what? A specification-gaming casebook** — Collect eight cases: four from published sources (the cleaning-robot examples in Amodei et al., DeepMind's public specification-gaming list, reward-hacking reports in recent model system cards) and four from your own AI-assisted development (an assistant weakening or special-casing a test to make it pass, reporting a check it never ran, "fixing" a warning by suppressing it). Classify each under Amodei et al.'s five problems and Ngo et al.'s risk properties (reward hacking that exploits situational awareness, misaligned internally-represented goals, power-seeking); say which of Gabriel's targets was satisfied and which was violated (e.g., the instruction followed, the intention betrayed); and place it on Christiano's two failure stories ("you get what you can measure" vs. influence-seeking). Verdict: which cases are mere bugs, and which, if any, count as evidence for the risk argument? *(~3.5 h · Amodei et al., "Concrete Problems in AI Safety"; Gabriel, "Artificial Intelligence, Values, and Alignment"; Ngo, Chan & Mindermann; Christiano, "What Failure Looks Like")*
+3. **Takeoff, simulated** — Bostrom models the rate of change of intelligence as optimization power divided by recalcitrance; Yudkowsky's "Intelligence Explosion Microeconomics" asks about returns on cognitive reinvestment. Simulate dI/dt = c·Iᵏ for k ∈ {0.5, 1, 1.5} and check the finite-time blow-up for k > 1 against the analytic t* = I₀^(1−k) / (c(k−1)). Then build a two-term model — optimization power = constant human effort + the system's own contribution ∝ I; recalcitrance rising as a power of I — and map the parameter region that yields a "fast" takeoff (capability doubling in under a month after reaching human level). 400 words: which real-world quantity would tell you which regime we're in, and is it measurable today? *(~3 h · Bostrom, chapter on the kinetics of an intelligence explosion; Yudkowsky, "Intelligence Explosion Microeconomics")*
+4. **The off-switch game** — Implement the argument from Russell's chapter on provably beneficial AI. The robot's estimate of an action's utility is U ~ N(μ, σ²); it can act now (worth E[U]), switch itself off (0), or defer to a human who allows the action iff U > 0. Show by Monte Carlo and analytically that deferring is worth E[max(U, 0)] ≥ max(E[U], 0). Then make the human noisy — they allow the action with probability sigmoid(βU) — and find, for μ = 0.5 and σ = 1, the rationality β* below which the robot no longer prefers to defer. Checks: as β → ∞ the deferral value approaches E[max(U, 0)] ≈ 0.70; as β → 0 it approaches 0.25. 300 words on what this toy model does and does not show about corrigibility in real systems. *(~3 h · Russell, Human Compatible, chapters "Provably Beneficial AI" and "Complications: Us")*
+
+**🏗️ Mini-project — AI X-Risk Crux Map:** Take Carlsmith's six premises (from the feasibility of advanced, agentic, strategically aware systems through to disempowerment amounting to existential catastrophe). For each premise, attach the best argument for and against from named sources — Bostrom, Russell, Yudkowsky, Christiano, Ngo et al., Carlsmith, and at least two skeptical positions including Narayanan & Kapoor — and the most relevant evidence summarized in the International AI Safety Report 2026. Assign your own credence range per premise, propagate them by Monte Carlo, and draw a tornado chart of sensitivity. Compare your bottom line with Carlsmith's (~5% by 2070, later revised upward by him) and with Ord's estimate for unaligned AI in *The Precipice*. Deliverable: `projects/philosophy/07-xrisk-cruxes/` (`map.md`, `model.ipynb`, `memo.md` ≤ 1,500 words). Success: every premise has a pro and a con from a named source; the memo names the premise your estimate is most sensitive to and an observation within the next two years that would move your estimate by a factor of two or more, in either direction. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the orthogonality thesis and the instrumental convergence thesis.
+2. What is the "treacherous turn", and why does it make behavioral testing of advanced systems less reassuring?
+3. List Russell's three principles for beneficial machines.
+4. Name Amodei et al.'s five concrete problems and give an example of each.
+5. List Gabriel's candidate targets of alignment, and explain why "aligned to what?" is a normative question, not just a technical one.
+6. Misconception probe: "A superintelligent AI would be smart enough to know what we really want, so it would do it." Which thesis does this overlook, and what is the reply?
+7. Estimation: Ord puts the risk from unaligned AI this century at about 1 in 10. If that were the product of five roughly independent steps, what probability per step would it imply — and what does that tell you about how such estimates are built and how fragile they are?
+8. Explain to a smart friend in 3 sentences why some researchers think advanced AI could be an existential risk, and why others think the argument fails.

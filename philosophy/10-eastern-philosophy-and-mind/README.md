@@ -9,6 +9,15 @@ Western philosophy of mind typically assumes a unified, persistent self — but 
 - [Section 01 — Philosophy of Mind](../01-philosophy-of-mind/README.md)
 - [Section 02 — Consciousness](../02-consciousness/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Explain the Four Noble Truths, the five aggregates, dependent origination and anattā (non-self) as Rahula presents them.
+- Reconstruct the arguments from impermanence and from control in standard form, make the exhaustiveness premise explicit, and test them against a self-theorist's reply.
+- Apply the two-truths framework (conventional vs. ultimate) and the chariot argument to persons and to software agents that can be copied, forked or rolled back.
+- Explain Nāgārjuna's emptiness (śūnyatā) and the tetralemma, and assess the logical form of the opening argument of the *Mūlamadhyamakakārikā*.
+- Relate the Buddhist debate over reflexive awareness to Western higher-order theories, and design a sound empirical test of a meditation claim.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -20,21 +29,48 @@ Western philosophy of mind typically assumes a unified, persistent self — but 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|-----------|------|------|-------------|
 | 🔑 | 📕 Book | What the Buddha Taught | Walpola Rahula | 1959 | — | The clearest, most authoritative introduction to Buddhist philosophy. Covers the Four Noble Truths, dependent origination, and anattā (non-self) with precision and accessibility. |
-| | 📕 Book | Buddhism as Philosophy: An Introduction | Mark Siderits | 2007 | — | Presents Buddhist thought using the tools of analytic philosophy. Bridges the gap between Eastern and Western philosophical traditions. Excellent for philosophers approaching Buddhism for the first time. |
+| | 📕 Book | Buddhism as Philosophy: An Introduction | Mark Siderits | 2007 (2nd ed. 2021) | — | Presents Buddhist thought using the tools of analytic philosophy. Bridges the gap between Eastern and Western philosophical traditions. Excellent for philosophers approaching Buddhism for the first time. Get the revised, expanded second edition (Hackett, 2021). |
 | | 📕 Book | Waking, Dreaming, Being: Self and Consciousness in Neuroscience, Meditation, and Philosophy | Evan Thompson | 2014 | — | Integrates neuroscience, phenomenology, and Buddhist philosophy to explore consciousness. Examines lucid dreaming, meditation, and dying as windows into the nature of awareness. |
 | | 📕 Book | The Fundamental Wisdom of the Middle Way: Nāgārjuna's Mūlamadhyamakakārikā | Nāgārjuna (trans. Jay Garfield) | 1995 | — | Nāgārjuna's foundational text on emptiness (śūnyatā) — the most influential work in Mahāyāna Buddhist philosophy. Garfield's translation includes excellent philosophical commentary. |
 | | 📕 Book | The Bodhisattva's Brain: Buddhism Naturalized | Owen Flanagan | 2011 | — | Attempts to extract the philosophically defensible core of Buddhism, separated from supernatural elements. A naturalist philosopher engages seriously with Buddhist metaphysics and ethics. |
 | | 📕 Book | The Embodied Mind (revisited) | Varela, Thompson, Rosch | 1991 | — | Returns here because its integration of Buddhist mindfulness with cognitive science is central to this section's themes. |
-| | 🎓 Course | Buddhist and Modern Psychology | Robert Wright | — | [Coursera](https://www.coursera.org/learn/science-of-meditation) | Princeton course examining Buddhist claims about the mind through the lens of modern psychology. Accessible and engaging. |
+| | 🎓 Course | Buddhism and Modern Psychology | Robert Wright | — | [Coursera](https://www.coursera.org/learn/science-of-meditation) | Princeton course examining Buddhist claims about the mind through the lens of modern psychology. Accessible and engaging. Course listings indicate it may no longer be offered on Coursera — check availability. |
 | | 📝 Encyclopedia | Buddha | SEP | — | [SEP](https://plato.stanford.edu/entries/buddha/) | Philosophical treatment of the Buddha's core teachings and their enduring philosophical significance. |
+| | 📝 Encyclopedia | Mind in Indian Buddhist Philosophy | SEP | — | [SEP](https://plato.stanford.edu/entries/mind-indian-buddhism/) | Christian Coseru's entry on Buddhist theories of mind proper: the not-self doctrine, the five aggregates, Abhidharma analyses of perception, attention and intentionality, "repository consciousness," and reflexive awareness. Much closer to this curriculum's questions than the general "Buddha" entry. |
 
 ## Suggested Order
 
 1. **Rahula — What the Buddha Taught** — The essential introduction to Buddhist philosophy
 2. **Siderits — Buddhism as Philosophy** — Bridge to Western analytic philosophy
 3. **SEP — Buddha** — Philosophical context and significance
-4. **Varela et al. — The Embodied Mind** — Buddhism meets cognitive science
-5. **Thompson — Waking, Dreaming, Being** — Consciousness through an East-West lens
-6. **Nāgārjuna/Garfield — Fundamental Wisdom of the Middle Way** — The deepest Buddhist metaphysics
-7. **Flanagan — The Bodhisattva's Brain** — Naturalist critique and appreciation
-8. **Wright — Buddhist and Modern Psychology (Coursera)** — Accessible video companion
+4. **SEP — Mind in Indian Buddhist Philosophy** — Buddhist theories of perception, attention, and consciousness
+5. **Varela et al. — The Embodied Mind** — Buddhism meets cognitive science
+6. **Thompson — Waking, Dreaming, Being** — Consciousness through an East-West lens
+7. **Nāgārjuna/Garfield — Fundamental Wisdom of the Middle Way** — The deepest Buddhist metaphysics
+8. **Flanagan — The Bodhisattva's Brain** — Naturalist critique and appreciation
+9. **Wright — Buddhism and Modern Psychology (Coursera)** — Accessible video companion
+
+---
+
+## 🛠️ Practice
+
+1. **No-self in standard form** — From the SEP *Buddha* entry and Rahula's chapter on anattā, reconstruct the argument from impermanence and the argument from control as separate standard-form arguments. Make explicit the premise that the five aggregates exhaust what a person is, and the premise that a self would have to be permanent (or wholly under its own control). Identify the weakest premise, and test it against the strongest self-theorist reply you can find in Siderits (e.g., the Nyāya arguments from memory and recognition: who remembers, if no one persists?). 500 words. Check: delete the exhaustiveness premise and confirm each argument becomes invalid. *(~3 h · Rahula, What the Buddha Taught; SEP Buddha; Siderits, Buddhism as Philosophy)*
+2. **The chariot and the agent** — The SEP *Buddha* entry uses the chariot as the stock example of a conventionally real whole. Apply the same two-truths analysis to (a) a person, (b) an assembled PCB, and (c) an LLM agent that persists across sessions through memory files and can be forked, rolled back, or run as several copies at once. For each: at the ultimate level, what exists; at the conventional level, what does the name usefully track, and for whom? Where does the analysis give a cleaner answer for the agent than for the person, or vice versa? Compare Parfit's fission verdicts from Section 01. 600 words. *(~2.5 h · SEP Buddha; Siderits, Buddhism as Philosophy; SEP Mind in Indian Buddhist Philosophy)*
+3. **First-person data, then a better study** — For 14 days, practice 15 minutes of noting meditation (silently label "seeing", "hearing", "thinking", "planning", "itch" as they arise), following Rahula's chapter on meditation (bhāvanā) or Wright's course if it is still available. Log each session: what you noted, and whether at any point you could find a stable observer distinct from the stream. Map the log onto the five aggregates and write 300 words on what this kind of evidence can and cannot establish, with Thompson's treatment of meditative reports as the foil. Then pick one popular claim ("meditation makes you happier", "meditators show reduced self-referential processing"), audit it in the spirit of Flanagan's critique of neuroscience-of-Buddhism hype (what was measured, in whom, against what control?), and design a better study: population, active control, a preregistered primary outcome, blinding where possible, and a sample size. Check: for a two-arm comparison at d = 0.25, α = 0.05, 80% power you should need roughly 250 participants per arm. *(~6 h · Rahula; Thompson, Waking, Dreaming, Being; Flanagan, The Bodhisattva's Brain; Wright, Buddhism and Modern Psychology)*
+4. **Nāgārjuna's tetralemma** — Take the opening verse of chapter 1 of the *Mūlamadhyamakakārikā* (after the dedication): nothing arises from itself, from another, from both, or without a cause. With Garfield's commentary, reconstruct the argument against each of the four modes of arising. Is the overall structure consistent with classical logic (excluded middle, non-contradiction)? Consider the reading on which Nāgārjuna rejects all four options because they share a false presupposition — that things have intrinsic nature (svabhāva). Finally, explain 24:18 (dependent origination = emptiness = the middle way) in your own words and say why emptiness is not nihilism. 600 words. *(~3 h · Nāgārjuna, trans. Garfield, The Fundamental Wisdom of the Middle Way; Siderits, chapter on Madhyamaka)*
+5. **Reflexive awareness vs. higher-order theories** — Using Coseru's SEP entry, explain the Buddhist debate over whether every cognition is reflexively self-aware (svasaṃvedana), with the main argument on each side (e.g., the memory argument: we remember not only what we saw but that we saw it). Map the debate onto Section 02's split between higher-order theories (a state is conscious when a separate state represents it) and views on which conscious states are self-presenting. Then apply both to an LLM agent's "reasoning trace" — a token stream about its own earlier tokens: is that higher-order representation, reflexive awareness, or neither? 600 words. *(~3 h · SEP Mind in Indian Buddhist Philosophy; Thompson, Waking, Dreaming, Being; Seth & Bayne, "Theories of Consciousness" (Section 02))*
+
+**🏗️ Mini-project — The Questions of the Engineer:** Write a 3,000-word dialogue in the manner of the *Questions of King Milinda* between the monk Nāgasena and an engineer who builds persistent AI agents. Required moves: the chariot argument; the two truths; the arguments from impermanence and from control; a self-theorist's objection given in full ("Then who remembers? Who is responsible?"); Nāgārjuna's turn — even the elements are empty; and three agent puzzles: forking (two copies with the same memories), rollback (restoring yesterday's memory file), and deletion (is anything lost that was not merely conventional?). End with what the dialogue implies for how we should talk about, and treat, such agents. Deliverable: `projects/philosophy/10-questions-of-the-engineer.md`. Success: every Buddhist position is stated in a form Rahula or Siderits would accept; the self-theorist gets a full speech, not a straw line; the dialogue makes at least one claim that would be false if Buddhist reductionism is false. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the Four Noble Truths in one line each.
+2. Name the five aggregates and say why, on the Buddha's argument, none of them is the self.
+3. What implicit premise does the argument from impermanence need, and why is it controversial?
+4. What is the difference between conventional and ultimate truth, and how does the chariot illustrate it?
+5. Misconception probe: "Emptiness means that nothing exists." What does Nāgārjuna mean by śūnyatā, and why does he call it the middle way?
+6. What is dependent origination, and how does it support the no-self doctrine?
+7. An AI agent is copied and both copies carry on the same project. On a Buddhist reductionist view, which one is "the" agent — and why might that be the wrong question?
+8. Explain to a smart friend in 3 sentences why Buddhist philosophy is relevant to debates about AI and the self.

@@ -9,6 +9,15 @@ Can machines think? This deceptively simple question, posed by Alan Turing in 19
 - [Section 01 — Philosophy of Mind](../01-philosophy-of-mind/README.md)
 - [Section 03 — Computation and Mind](../03-computation-and-mind/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- State Turing's imitation game precisely, list his nine objections and replies, and judge which objections current LLMs strengthen and which they weaken.
+- Classify the criterion for "thinking" or "understanding" used by Turing, Searle, Harnad, Dreyfus and Bender & Koller (behavioral, functional, causal-historical, embodied) and say what evidence each would accept.
+- Explain the symbol grounding problem and the octopus test, and decide with reasons whether multimodal, tool-using agents escape them.
+- Describe what an LLM-based system does without anthropomorphic overreach or dismissive underclaiming (Shanahan; Mitchell & Krakauer).
+- Design and run a preregistered evaluation that could discriminate "form-only competence" from "grounded understanding", and state what it cannot show.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -26,7 +35,10 @@ Can machines think? This deceptively simple question, posed by Alan Turing in 19
 | | 📝 Encyclopedia | Artificial Intelligence | SEP | — | [SEP](https://plato.stanford.edu/entries/artificial-intelligence/) | Comprehensive philosophical survey of AI — strong vs. weak AI, the frame problem, and the role of representation. |
 | | 📝 Encyclopedia | The Turing Test | SEP | — | [SEP](https://plato.stanford.edu/entries/turing-test/) | Detailed analysis of the Turing Test: what it tests, what it doesn't, and why it matters. |
 | 🔑 | 📄 Paper | Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data | Emily Bender, Alexander Koller | 2020 | [Link](https://doi.org/10.18653/v1/2020.acl-main.463) | The "Octopus Test" paper. Argues that language models trained on form alone cannot learn meaning. A modern update to the symbol grounding debate. |
-| | 📄 Paper | On the Dangers of Stochastic Parrots | Bender, Gebru, McMillan-Major, Shmitchell | 2021 | [Link](https://doi.org/10.1145/3442188.3445922) | Argues that large language models are "stochastic parrots" — generating text without understanding. Essential for contemporary AI philosophy. |
+| | 📄 Paper | On the Dangers of Stochastic Parrots | Bender, Gebru, McMillan-Major, Shmitchell | 2021 | [Link](https://doi.org/10.1145/3442188.3445922) | Mainly a risk paper — environmental and financial costs, biases baked into huge undocumented training sets — that also argues LMs stitch together linguistic form without reference to meaning ("stochastic parrots"), so fluent output invites people to ascribe understanding and intent that isn't there. Essential context for contemporary AI philosophy (and Section 06). |
+| 🔑 | 📄 Paper | The Debate Over Understanding in AI's Large Language Models | Melanie Mitchell, David C. Krakauer | 2023 | [Link](https://arxiv.org/abs/2210.13966) | Even-handed *PNAS* survey of both camps in the "do LLMs understand?" debate, arguing that we need a new science of intelligence to say what kinds of understanding different systems have. Read right after Bender & Koller for balance. |
+| | 📄 Paper | Talking About Large Language Models | Murray Shanahan | 2022 | [Link](https://arxiv.org/abs/2212.03551) | Argues that words like "knows," "believes," and "thinks" mislead when applied to LLMs, and urges us to keep restating what these systems actually do. A practical antidote to anthropomorphism that doesn't dismiss the systems. |
+| | 📄 Paper | A Philosophical Introduction to Language Models — Part I: Continuity With Classic Debates | Raphaël Millière, Cameron Buckner | 2024 | [Link](https://arxiv.org/abs/2401.03910) | The best philosophical primer on LLMs: how they work and how their successes bear on long-standing debates about neural networks, compositionality, language acquisition, meaning, grounding, and cultural knowledge. Ties this section back to Sections 03 and 08. |
 
 ## Suggested Order
 
@@ -38,3 +50,31 @@ Can machines think? This deceptively simple question, posed by Alan Turing in 19
 6. **SEP — Artificial Intelligence** — Broader philosophical landscape
 7. **Bender & Koller — Climbing towards NLU** — The modern version of these debates
 8. **Bender et al. — Stochastic Parrots** — Contemporary implications for LLMs
+9. **Mitchell & Krakauer — The Debate Over Understanding** — Both sides of the LLM-understanding debate
+10. **Shanahan — Talking About Large Language Models** — How to describe LLMs without anthropomorphizing them
+11. **Millière & Buckner — A Philosophical Introduction to Language Models (Part I)** — The full philosophical map of LLMs
+
+---
+
+## 🛠️ Practice
+
+1. **Turing's objections, 75 years on** — For each of Turing's nine objections (theological, "heads in the sand", mathematical, consciousness, various disabilities, Lady Lovelace, continuity of the nervous system, informality of behaviour, extrasensory perception), write the objection in one sentence, Turing's reply in one sentence, and whether 2026 LLMs strengthen or weaken it — go item by item through his list of "disabilities", and take Lady Lovelace's "originate anything" seriously. Then assess his prediction (machines with about 10⁹ of storage fooling an average interrogator at least 30% of the time after five minutes, within about fifty years): what came true, what didn't, and was the imitation game ever the right test? *(~3 h · Turing, "Computing Machinery and Intelligence"; SEP The Turing Test)*
+2. **Say what it does** — Collect ten sentences about LLMs from papers, blogs, and your own notes or commit messages ("the model knows…", "the agent decided…", "it lied about running the tests"). Rewrite each in the idiom Shanahan recommends, keeping his distinction between the bare model and the dialogue agent or agentic system built around it. Mark which rewrites lose explanatory or predictive power — a sign the intentional vocabulary was earning its keep. Then sort the original sentences by which camp in Mitchell & Krakauer's survey would accept them. One page. *(~2.5 h · Shanahan, "Talking About Large Language Models"; Mitchell & Krakauer, "The Debate Over Understanding in AI's Large Language Models")*
+3. **Build a stochastic parrot** — Train an explicit word n-gram model (n = 3–5) on 1–5 MB of text (Project Gutenberg books or your own engineering notes). Give it and a current LLM the same ten probes: continue a sentence, answer a factual question, do three-digit arithmetic, follow a novel instruction, and solve a new physical-improvisation problem in the style of Bender & Koller's coconut-catapult and bear scenarios. Tabulate the results. Then 500 words: with respect to *meaning*, is the difference between your n-gram model and the LLM one of degree or of kind? Write a 200-word steelman of the "stochastic parrots" framing and a 200-word steelman of the opposing view as Millière & Buckner present the continuity with classic debates. *(~4 h · Bender et al., "On the Dangers of Stochastic Parrots"; Bender & Koller, "Climbing towards NLU"; Millière & Buckner, Part I)*
+4. **Grounding routes for agents** — Reconstruct Harnad's argument in standard form (the dictionary-go-round; grounding through iconic and categorical representations). Evaluate three candidate grounding routes for modern systems: (a) training on images and video, (b) tool use and code execution with feedback from the world, (c) a robot body. For each, does it meet Harnad's requirement, survive Searle's reply to the robot reply, and satisfy Bender & Koller's notion of meaning as a relation between form and something outside language? 600 words plus a 3×3 verdict table. *(~3 h · Harnad, "The Symbol Grounding Problem"; Searle, "Minds, Brains, and Programs"; Bender & Koller; Millière & Buckner)*
+5. **What would change their minds?** — For Turing, Searle, Harnad, Dreyfus and Bender & Koller, state (a) their criterion for thinking or understanding; (b) whether it is behavioral, functional/architectural, causal-historical, or embodied; and (c) the observation that, by their own lights, would show a machine meets it — or "none possible". Place each on the strong/weak AI distinction from the SEP *Artificial Intelligence* entry. Then 300 words: which disagreements are empirical, and which are disputes about the concept of understanding that no experiment can settle? *(~2.5 h · all section resources; SEP Artificial Intelligence; Dreyfus, What Computers Still Can't Do)*
+
+**🏗️ Mini-project — The Octopus Test, Run for Real:** Design and run a preregistered evaluation of one or two current LLMs that operationalizes Bender & Koller's octopus test. Write 30 items in three bins: (A) form-solvable (pattern completion, style, paraphrase); (B) novel world-grounded problems unlikely to appear in any text (new physical-improvisation tasks in the coconut-catapult mold); (C) grounding in a real signal — raw data you generated yourself (ADC samples from a sensor, a scope CSV) with a request for physical interpretation. Before running anything, write down what Bender & Koller, a Turing-style behaviorist, and Harnad would each predict per bin, plus a scoring rubric. Run, score blind (shuffle outputs and strip model labels), and write a 1,500-word report. Deliverable: `projects/philosophy/05-octopus-test/` (`prereg.md`, `items.jsonl`, `results.csv`, `report.md`). Success: predictions are committed before results exist; at least one bin's outcome would have embarrassed each camp had it gone the other way; the report says explicitly what the results cannot show — e.g., whether success reflects understanding or traces of grounding in the training text (Searle's point). *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Describe the imitation game as Turing actually set it up, and state his fifty-year prediction.
+2. State Lady Lovelace's objection and Turing's reply.
+3. What is the symbol grounding problem, and what kind of solution does Harnad propose?
+4. Retell the octopus test in four sentences and state the conclusion Bender & Koller draw from it.
+5. Misconception probe: "Passing the Turing test proves that a machine understands." Which authors in this section reject that inference, and on what grounds?
+6. Why does Shanahan insist on distinguishing the bare LLM from the dialogue agent built on it?
+7. An LLM agent operates a lab instrument and corrects its own measurement errors. Does that solve the symbol grounding problem? Give Harnad's likely answer and Searle's.
+8. Explain to a smart friend in 3 sentences why "Can machines think?" is partly an empirical question and partly a conceptual one.

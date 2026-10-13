@@ -8,6 +8,15 @@ We are living through an unprecedented convergence: AI systems are becoming powe
 
 - All previous sections (this section synthesizes themes from across the curriculum)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Reconstruct Bostrom's simulation argument, compute its key fraction across parameter ranges, and identify the assumptions it rests on (substrate independence, the indifference principle, the reference class).
+- Apply Butlin et al.'s 14 indicator properties to a specific current AI system and state how theory-dependent the verdict is.
+- Explain IIT 4.0's core claims, compute system integrated information (φ_s) for toy networks, and state and assess the unfolding argument against causal-structure theories.
+- Evaluate Chalmers's case on LLM consciousness and Long, Sebo et al.'s case for taking AI welfare seriously, and state your own credences with reasons.
+- Write calibrated, falsifiable predictions about AI-consciousness science and policy, and score them later.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -20,11 +29,12 @@ We are living through an unprecedented convergence: AI systems are becoming powe
 |----------|------|----------|-----------|------|------|-------------|
 | 🔑 | 📄 Paper | Are You Living in a Computer Simulation? | Nick Bostrom | 2003 | [Link](https://doi.org/10.1111/1467-9213.00309) | The simulation argument: at least one of three propositions must be true — civilizations go extinct before creating simulations, they choose not to, or we are almost certainly in a simulation. Elegant and unsettling. |
 | | 📕 Book | Reality+: Virtual Worlds and the Problems of Philosophy | David Chalmers | 2022 | — | Chalmers argues that virtual worlds are genuine realities, not illusions. Extends the simulation argument into a full philosophical framework. If we're in a simulation, things are still real. |
-| 🔑 | 📄 Paper | Consciousness in Artificial Intelligence: Insights from the Science of Consciousness | Patrick Butlin et al. | 2023 | [Link](https://arxiv.org/abs/2308.08708) | Landmark report assessing whether current AI systems could be conscious, applying multiple scientific theories of consciousness. The most rigorous treatment of AI consciousness to date. |
+| 🔑 | 📄 Paper | Consciousness in Artificial Intelligence: Insights from the Science of Consciousness | Patrick Butlin et al. | 2023 | [Link](https://arxiv.org/abs/2308.08708) | Landmark report that derives "indicator properties" from leading scientific theories of consciousness (recurrent processing, global workspace, higher-order, predictive processing, attention schema) and assesses current AI systems against them: none is a strong candidate, but there are no obvious technical barriers to building systems that satisfy the indicators. The most rigorous treatment of AI consciousness to date. |
+| | 📄 Paper | Taking AI Welfare Seriously | Robert Long, Jeff Sebo, Patrick Butlin, et al. (incl. Jonathan Birch, David Chalmers) | 2024 | [Link](https://arxiv.org/abs/2411.00986) | Argues there is a realistic possibility that some AI systems will be conscious or robustly agentic in the near future, so AI companies should start now: acknowledge the issue, assess systems for welfare-relevant features, and prepare policies for treating them with appropriate moral concern. The ethical follow-on to Butlin et al. |
 | | 📕 Book | The Weirdness of the World | Eric Schwitzgebel | 2024 | — | Argues that reality is fundamentally strange — whether materialism or dualism is true, something deeply weird must be going on. Embraces philosophical uncertainty. |
 | | 📕 Book | Being You: A New Science of Consciousness | Anil Seth | 2021 | — | Predictive processing account of consciousness. Relevant to frontiers because it suggests new ways to think about machine consciousness. |
-| | 📄 Paper | IIT 4.0: Integrated Information Theory of Consciousness | Tononi et al. | 2023 | [Link](https://arxiv.org/abs/2212.14787) | The latest formulation of IIT — a mathematical theory of consciousness that makes specific predictions about which systems are conscious. Implications for AI consciousness. |
-| | 📄 Paper | Could a Large Language Model be Conscious? | Schneider, Turner | 2024 | — | Philosophical analysis of whether LLMs satisfy the criteria for consciousness under various theories. Engages with functionalism, IIT, and global workspace theory. |
+| | 📄 Paper | Integrated Information Theory (IIT) 4.0: Formulating the Properties of Phenomenal Existence in Physical Terms | Larissa Albantakis, …, Giulio Tononi | 2023 | [Link](https://arxiv.org/abs/2212.14787) | The latest formulation of IIT — a mathematical theory of consciousness that makes specific predictions about which systems are conscious. Implications for AI consciousness (IIT implies that conventional digital computers are not conscious, whatever software they run). Contested: see the 2023 "pseudoscience" letter and the 2025 adversarial test in Section 02. |
+| | 📄 Paper | Could a Large Language Model be Conscious? | David Chalmers | 2023 | [Link](https://arxiv.org/abs/2303.07103) | Chalmers weighs reasons for thinking LLMs are conscious (self-reports, conversational ability, general intelligence) against reasons against (no recurrent processing, global workspace, or unified agency; doubts about embodiment and world-models), concludes current models are unlikely to be conscious, and asks what extended successors would need. Clear, short, and even-handed. |
 | | 📕 Book | Life 3.0: Being Human in the Age of AI | Max Tegmark | 2017 | — | Broad exploration of AI's future impact on society, consciousness, and cosmic endowment. Accessible and wide-ranging. |
 | | 📝 Blog | The Alignment Forum | Various | — | [Link](https://www.alignmentforum.org/) | Ongoing research discussions on AI alignment, consciousness, and the future of intelligence. |
 
@@ -32,9 +42,35 @@ We are living through an unprecedented convergence: AI systems are becoming powe
 
 1. **Bostrom — Are You Living in a Computer Simulation?** — The classic simulation argument
 2. **Chalmers — Reality+** — Full philosophical treatment of virtual worlds and simulation
-3. **Butlin et al. — Consciousness in AI** — Rigorous assessment of AI consciousness
-4. **Tononi et al. — IIT 4.0** — Latest mathematical theory of consciousness
-5. **Schwitzgebel — The Weirdness of the World** — Embracing fundamental philosophical uncertainty
-6. **Seth — Being You** — Predictive processing and machine consciousness
-7. **Schneider & Turner — Could an LLM be Conscious?** — Direct engagement with current AI
-8. **Tegmark — Life 3.0** — Big-picture future of intelligence
+3. **Chalmers — Could a Large Language Model be Conscious?** — Short, direct engagement with current AI
+4. **Butlin et al. — Consciousness in AI** — Rigorous assessment of AI consciousness
+5. **Long, Sebo et al. — Taking AI Welfare Seriously** — What follows ethically if AI consciousness is a realistic possibility
+6. **Albantakis … Tononi — IIT 4.0** — Latest mathematical theory of consciousness (contested; see Section 02)
+7. **Schwitzgebel — The Weirdness of the World** — Embracing fundamental philosophical uncertainty
+8. **Seth — Being You** — Predictive processing and machine consciousness
+9. **Tegmark — Life 3.0** — Big-picture future of intelligence
+
+---
+
+## 🛠️ Practice
+
+1. **The simulation argument, quantified** — Reconstruct Bostrom's trilemma in standard form. Implement f_sim = f_P·f_I·N̄_I / (f_P·f_I·N̄_I + 1) — f_P: fraction of human-level civilizations that reach a posthuman stage; f_I: fraction of those interested in running ancestor simulations; N̄_I: average number of ancestor simulations an interested civilization runs — and plot it over log-ranges of each parameter. How small must f_P·f_I be for f_sim < 0.5 if each interested posthuman civilization runs 10⁶ ancestor simulations? Then identify the weakest premise — substrate independence, the bland indifference principle, or the choice of reference class — and test it against Chalmers's claim in *Reality+* that the simulation hypothesis is not a skeptical hypothesis. 500 words. *(~3 h · Bostrom, "Are You Living in a Computer Simulation?"; Chalmers, Reality+)*
+2. **Is SPICE a world?** — Chalmers argues that virtual objects are real digital objects. Apply his view to a SPICE simulation of a circuit you know: are the simulated currents real? If so, real in what sense; if not, what distinguishes them from the virtual objects Chalmers defends (interaction with users, persistence, causal powers)? Then turn it around: if we are in a simulation, which of your beliefs about your own lab equipment come out true on Chalmers's view, and which come out false? 600 words. *(~2.5 h · Chalmers, Reality+)*
+3. **Indicator audit of a current agent** — Apply Butlin et al.'s 14 indicator properties (RPT-1–2, GWT-1–4, HOT-1–4, AST-1, PP-1, AE-1–2) to one specific 2026 system you use — e.g., a tool-using coding agent with persistent memory. For each indicator: satisfied / partly / not / unknown, the evidence (architecture documentation, observed behavior), and your confidence. Cross-check against the features Chalmers says current LLMs lack (recurrent processing, a global workspace, unified agency, among others). Which indicators are architectural facts you can verify, and which would need interpretability evidence nobody yet has? The rubric assumes computational functionalism as a working hypothesis — say what changes if you drop it and adopt Seth's biological view. *(~4 h · Butlin et al., "Consciousness in Artificial Intelligence"; Chalmers, "Could a Large Language Model be Conscious?"; Seth, Being You)*
+4. **The unfolding argument, demonstrated** — With PyPhi v2 (IIT 4.0; `pip install --pre pyphi`, Python ≥ 3.13), compute φ_s (`.phi`) for a small noisy recurrent network — a 2- or 3-unit loop. Then build a feedforward network, one layer per time step, that reproduces the loop's input–output behavior over T steps, and verify the equivalence by simulating both. Keep it to about six units: a 6-unit analysis already takes minutes per state. IIT says φ_s = 0 for the feedforward version, since it is not strongly connected. State the unfolding argument (from Doerig et al., 2019, which is not among this section's resources; the summary given here is enough for the exercise): if functionally identical systems can differ in IIT-consciousness, no report or behavior can test IIT, so it is either unfalsifiable or false. Then give IIT's best reply — consciousness is intrinsic causal structure, not function (the IIT 4.0 paper; Koch in Section 02) — and judge who has the better of it. 500 words. *(~4 h · Albantakis … Tononi, "IIT 4.0"; Koch, The Feeling of Life Itself)*
+5. **Prediction ledger** — Write eight dated, probability-weighted predictions that resolve by the end of 2028, each with a precise resolution criterion — e.g., "a pre-registered adversarial collaboration reports a result that proponents of the losing theory accept as disconfirming a core prediction (p = …)"; "a frontier AI developer publishes an AI-welfare policy that restricts some deployment practice (p = …)"; "a national legislature formally debates legal protections for AI systems (p = …)". Include at least two predictions that would embarrass your current views if they came true. Put a reminder in your calendar to score them with a Brier score. *(~2 h · Schwitzgebel, The Weirdness of the World; Long, Sebo et al., "Taking AI Welfare Seriously"; The Alignment Forum)*
+
+**🏗️ Mini-project — Is This Agent Conscious? A Theory-Relative Assessment:** Write a 3,000-word report on one concrete 2026 AI agent. Sections: (1) the system's architecture as far as public information allows; (2) the Butlin et al. indicator audit (from exercise 3, refined); (3) IIT 4.0's verdict on the actual hardware — and why that verdict is about the chips, not the model; (4) Seth's and Chalmers's verdicts; (5) a credence range with reasons, stated per theory and then aggregated, with Schwitzgebel's case for pervasive uncertainty as the check on overconfidence; (6) a precautionary policy proposal following Long, Sebo et al.'s acknowledge–assess–prepare structure: what a developer should do now under this uncertainty, and what evidence would change the recommendation. Deliverable: `projects/philosophy/11-agent-consciousness-report.md`. Success: every verdict is explicitly conditional on a named theory; the report makes at least one falsifiable prediction (an architecture change that should flip specific indicators); no contested theory is presented as settled. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the three disjuncts of Bostrom's simulation argument, and explain why it needs substrate independence.
+2. Name the theories from which Butlin et al. derive their indicator properties, and give one indicator from each.
+3. What does IIT 4.0 imply about feedforward systems and about conventional digital computers, whatever software they run?
+4. Misconception probe: "Butlin et al. concluded that AI can't be conscious." What did they actually conclude?
+5. What features does Chalmers say current LLMs lack that would count against their being conscious, and what would extended successors need?
+6. What do Long, Sebo et al. recommend AI developers do now, and on what grounds, given that no one knows whether any AI system is conscious?
+7. A lab adds recurrence and a limited-capacity global workspace to an LLM agent. Which indicators would that affect, and should your credence change — by how much, and why?
+8. Explain to a smart friend in 3 sentences why scientists and philosophers disagree about whether an AI could be conscious.

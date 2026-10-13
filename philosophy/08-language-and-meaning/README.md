@@ -9,6 +9,15 @@ Language is the medium through which we express thought, and large language mode
 - [Section 00 — Foundations of Philosophy](../00-foundations-of-philosophy/README.md)
 - [Section 05 — Philosophy of AI](../05-philosophy-of-ai/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Explain "meaning is use" (*Philosophical Investigations* §43), family resemblance (§§65–71) and the private-language argument (§§243–315), and apply each to a technical vocabulary.
+- Classify utterances with Austin's and Searle's speech-act theory, and specify the conditions an AI agent would have to meet to assert or to promise.
+- Derive conversational implicatures from Grice's maxims, build a test set for them, and interpret a language model's performance on it.
+- Build distributional word vectors from scratch (Harris) and show which aspects of meaning distribution captures and which it misses.
+- Compare Bender & Koller, Andreas, and Coelho Mollo & Millière on whether models trained on form can mean anything, isolating the empirical and conceptual cruxes.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -26,7 +35,9 @@ Language is the medium through which we express thought, and large language mode
 | | 📕 Book | Speech Acts: An Essay in the Philosophy of Language | John Searle | 1969 | — | Extends Austin's speech act theory. Relevant because Searle later uses these ideas in the Chinese Room argument. |
 | | 📝 Encyclopedia | Philosophy of Language | SEP | — | [SEP](https://plato.stanford.edu/entries/philosophy-language/) | Broad survey of the major theories: reference, meaning, truth, and pragmatics. |
 | | 📝 Encyclopedia | Wittgenstein | SEP | — | [SEP](https://plato.stanford.edu/entries/wittgenstein/) | Detailed overview of Wittgenstein's philosophy — early (Tractatus) and late (Investigations). |
-| | 📄 Paper | Language Models as Agent Models | Andreas | 2022 | [Link](https://arxiv.org/abs/2212.01681) | Argues that language models can learn aspects of meaning through their training process. Important counterpoint to Bender & Koller. |
+| | 📄 Paper | Language Models as Agent Models | Jacob Andreas | 2022 | [Link](https://arxiv.org/abs/2212.01681) | Argues that LMs are, in a narrow sense, models of intentional communication: to predict the next word they infer and represent properties of the agent likely to have produced the text (such as its communicative intentions), which then shape what they generate. A partial counterpoint to Bender & Koller. |
+| | 📄 Paper | Distributional Structure | Zellig S. Harris | 1954 | [Link](https://doi.org/10.1080/00437956.1954.11659520) | The founding statement of the distributional hypothesis — that differences in meaning correlate with differences in the contexts words occur in. The linguistic idea behind word embeddings and, ultimately, LLMs; essential background to whether "form alone" can carry meaning. |
+| | 📄 Paper | The Vector Grounding Problem | Dimitri Coelho Mollo, Raphaël Millière | 2023 | [Link](https://arxiv.org/abs/2304.01481) | Updates Harnad's symbol grounding problem for neural networks and argues that LLMs can achieve referential grounding — internal states that refer to things in the world — through causal-informational relations and selection history, even without embodiment or multimodality. A rigorous philosophical reply to the Octopus argument. |
 
 ## Suggested Order
 
@@ -36,5 +47,32 @@ Language is the medium through which we express thought, and large language mode
 4. **Grice — Logic and Conversation** — How meaning exceeds literal content
 5. **Searle — Speech Acts** — Systematic speech act theory
 6. **Wittgenstein — PI (§§243-315)** — The private language argument
-7. **Bender & Koller — Climbing towards NLU** — Modern application: can LLMs understand?
-8. **Andreas — Language Models as Agent Models** — The counterargument
+7. **Harris — Distributional Structure** — The idea that meaning shows up in patterns of use, which LLMs are built on
+8. **Bender & Koller — Climbing towards NLU** — Modern application: can LLMs understand?
+9. **Andreas — Language Models as Agent Models** — The counterargument
+10. **Coelho Mollo & Millière — The Vector Grounding Problem** — Can LLM representations refer to the world after all?
+
+---
+
+## 🛠️ Practice
+
+1. **"Ground" has no essence** — Following PI §§65–71 ("don't think, but look!"), list at least eight uses of "ground" in electronics practice: earth, chassis, signal reference, return path, analog vs. digital ground, ground plane, ground loop, floating ground, and the op-amp "virtual ground" (which is not connected to ground at all). Draw the family-resemblance network: which features overlap between which uses, and is there one property they all share? Repeat for "noise". 400 words: does your result support Wittgenstein's anti-essentialism about concepts, or does physics supply an essence that ordinary use lacks? *(~2 h · Wittgenstein, Philosophical Investigations §§1–133; SEP Wittgenstein)*
+2. **Can an agent promise?** — Using Austin's felicity conditions and Searle's conditions on promising (propositional content, preparatory, sincerity, essential), analyze eight utterances from engineering life and from AI agents: "I approve this ECO", "The release candidate is tagged", "I'll have the firmware done by Friday", "I've run the tests and they all pass" (said by an AI coding agent), "I apologize for the confusion" (said by a chatbot), and three of your own. For each: speech-act type (and its locutionary/illocutionary/perlocutionary aspects), which condition could fail, and whether an AI system can satisfy the sincerity condition at all. 500-word conclusion: is an AI's "assertion" an assertion, and if not, who is asserting — the deployer? *(~3 h · Austin, How to Do Things with Words; Searle, Speech Acts)*
+3. **Implicature probe set** — Write 16 items: three per Gricean maxim (Quantity, Quality, Relation, Manner), each including at least one flouting, plus four cancellation tests ("Some of the boards failed — in fact all of them did"). Include Grice's reference-letter case. Run the set on two LLMs; score whether each draws the implicature, and whether it accepts the cancellations as consistent. 300 words: does success show that the model follows the Cooperative Principle, that it reproduces patterns in human text, or that this distinction is empty? *(~3 h · Grice, "Logic and Conversation")*
+4. **Meaning from distribution** — Following Harris, build word vectors from scratch: co-occurrence counts with a ±4-word window over 10–50 MB of text (a Wikipedia subset or Project Gutenberg), PPMI weighting, truncated SVD to 100 dimensions. Inspect nearest neighbors for ten words and try a few analogies. Then probe the classic failure: antonyms (hot/cold, pass/fail, input/output) come out as near neighbors. 400 words: what does distribution capture (relatedness, part of speech, topic), what does it miss (truth conditions, reference, which of two antonyms is meant), and what does that suggest about where Bender & Koller draw the line between form and meaning? *(~3.5 h · Harris, "Distributional Structure"; Bender & Koller, "Climbing towards NLU")*
+5. **Octopus, agent model, vector grounding** — Write three 250-word steelmen: Bender & Koller (form alone cannot yield meaning), Andreas (to predict text, an LM infers properties of the agents who produced it, such as their communicative intentions), and Coelho Mollo & Millière (LLM states can be referentially grounded through causal-informational relations and selection history, even without embodiment). Then a 400-word adjudication: where does each locate meaning; which of their disagreements are empirical and which conceptual; and does the private-language argument (PI §§243–315, the diary sign "S" at §258) — meaning needs public criteria of correctness — favor any of them? *(~3.5 h · Bender & Koller; Andreas, "Language Models as Agent Models"; Coelho Mollo & Millière, "The Vector Grounding Problem"; Wittgenstein, PI §§243–315)*
+
+**🏗️ Mini-project — The Builders' Game:** Implement Wittgenstein's §2 language game as a Lewis signaling game: the builder sees which of four stones (block, pillar, slab, beam) is needed and sends one of four signals; the assistant fetches a stone; both reinforce on success (Roth–Erev urn learning). Run 40 seeds × 50,000 rounds. Expect most runs to reach ≥ 95% communicative success while a minority stall in partial-pooling equilibria near 75% — report the fraction. Then train a form-only learner (an n-gram or a small transformer) on game transcripts under two conditions: (a) signals only; (b) signals interleaved with text descriptions of which stone was fetched. Measure what each condition lets it predict (the next signal; which stone a signal will bring). Write a 1,500-word essay: what the grounded game shows about meaning as use; what condition (b) shows about Bender & Koller's claim and the replies of Andreas and Coelho Mollo & Millière; and what no experiment of this kind can show. Deliverable: `projects/philosophy/08-builders-game/` (notebook + `essay.md`). Success: convergence statistics are reported with seeds, and the essay separates the claims the experiment bears on from those it cannot touch. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What is the "Augustinian picture" of language that opens the *Investigations*, and what does §43 put in its place?
+2. Explain family resemblance with one example of your own.
+3. What is the target of the private-language argument, and what is the point of the diary sign "S"?
+4. Using one utterance, distinguish its locutionary, illocutionary and perlocutionary acts.
+5. State Grice's four maxims and explain how flouting a maxim generates an implicature.
+6. Misconception probe: "Wittgenstein said meaning is use, and LLMs use words correctly, so LLMs understand language." What is wrong with this inference?
+7. A chatbot says "I promise I won't share your data." Which of Searle's conditions for promising can it meet — and who, if anyone, has made a promise?
+8. Explain to a smart friend in 3 sentences the octopus test and the strongest reply to it.

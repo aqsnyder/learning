@@ -2,12 +2,21 @@
 
 ## Why This Section Matters
 
-Classical AI and philosophy of mind assumed that intelligence is about abstract symbol manipulation — disembodied computation. But a powerful counter-tradition argues that genuine understanding requires a body, an environment, and a history of interaction with the world. Varela, Thompson, and Rosch's *The Embodied Mind* and Clark & Chalmers' *Extended Mind* thesis challenge the idea that cognition stops at the skull. If intelligence is fundamentally embodied and situated, this has radical implications for AI: can a system without a body truly understand? This section forces you to reconsider what intelligence actually is.
+Classical AI and philosophy of mind assumed that intelligence is about abstract symbol manipulation — disembodied computation. But a powerful counter-tradition argues that genuine understanding requires a body, an environment, and a history of interaction with the world. Varela, Thompson, and Rosch's *The Embodied Mind* and Clark & Chalmers' *Extended Mind* thesis challenge the idea that cognition stops at the skull. If intelligence is fundamentally embodied and situated, this has radical implications for AI: can a system without a body truly understand? The section opens with two influential attempts to define intelligence itself (Legg & Hutter's formal measure, Chollet's skill-acquisition efficiency) and closes with predictive processing. This section forces you to reconsider what intelligence actually is.
 
 ## Prerequisites
 
 - [Section 01 — Philosophy of Mind](../01-philosophy-of-mind/README.md)
 - [Section 03 — Computation and Mind](../03-computation-and-mind/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Compare Legg & Hutter's universal-intelligence measure with Chollet's skill-acquisition efficiency, compute a toy version of the first, and say which you would use to evaluate an AI system and why.
+- Use Heidegger's ready-to-hand/present-at-hand distinction and Dreyfus's four assumptions of classical AI to analyze skilled engineering practice and the limits of rule-based intelligence.
+- Implement a subsumption-style reactive controller and compare it empirically with a model-based planner on the same task.
+- Apply Clark & Chalmers's parity principle and conditions to decide when an external resource is part of a cognitive process, and answer the main objection to the thesis.
+- Contrast predictive processing (Clark) with enactivism (Varela, Thompson & Rosch) on what perception is, using a worked filtering example.
 
 ## Marking Convention
 
@@ -22,19 +31,50 @@ Classical AI and philosophy of mind assumed that intelligence is about abstract 
 | 🔑 | 📕 Book | The Embodied Mind: Cognitive Science and Human Experience | Francisco Varela, Evan Thompson, Eleanor Rosch | 1991 | — | Foundational text that integrates phenomenology, cognitive science, and Buddhist philosophy. Argues cognition is enacted through bodily engagement with the world, not abstract computation. |
 | 🔑 | 📄 Paper | The Extended Mind | Andy Clark, David Chalmers | 1998 | [Link](https://doi.org/10.1093/analys/58.1.7) | Argues that cognitive processes extend beyond the brain into the environment (notebooks, phones, tools). If true, the boundary between mind and world is permeable. |
 | | 📄 Paper | Intelligence Without Representation | Rodney Brooks | 1991 | [Link](https://doi.org/10.1016/0004-3702(91)90053-M) | Brooks argues that intelligent behavior can emerge from simple interactions with the environment, without internal representations. Inspired subsumption architecture in robotics. |
-| | 📕 Book | What Computers Can't Do: The Limits of Artificial Intelligence | Hubert Dreyfus | 1972 | — | Dreyfus draws on Heidegger and Merleau-Ponty to argue that human intelligence relies on embodied skills and background understanding that resist formalization. Prescient and provocative. |
+| | 📕 Book | What Computers Can't Do: A Critique of Artificial Reason | Hubert Dreyfus | 1972 | — | Dreyfus draws on Heidegger and Merleau-Ponty to argue that human intelligence relies on embodied skills and background understanding that resist formalization. Prescient and provocative. |
 | | 📕 Book | Being and Time (selections on "ready-to-hand") | Martin Heidegger | 1927 | — | Heidegger's concept of ready-to-hand (Zuhandenheit) — that we primarily engage with the world through skilled use, not detached contemplation — is foundational for embodied cognition. |
 | | 📝 Encyclopedia | Embodied Cognition | SEP | — | [SEP](https://plato.stanford.edu/entries/embodied-cognition/) | Comprehensive overview of theories that emphasize the role of the body in shaping thought and cognition. |
-| | 📝 Encyclopedia | Extended Mind | SEP | — | [SEP](https://plato.stanford.edu/entries/extended-mind/) | Detailed treatment of the thesis that mental processes can extend into the world. |
+| | 📝 Encyclopedia | Externalism About the Mind (§§5–7: Extended Mind) | SEP | — | [SEP](https://plato.stanford.edu/entries/content-externalism/#ExteMind) | SEP has no standalone "Extended Mind" entry; sections 5–7 of this one give a detailed treatment of the thesis that mental processes can extend into the world, its main objections, and its place in "4E" cognition. |
 | | 📕 Book | Supersizing the Mind: Embodiment, Action, and Cognitive Extension | Andy Clark | 2008 | — | Clark's full development of the extended mind thesis. Argues that our minds are not brain-bound but extend into our tools and environment. |
+| | 📄 Paper | Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science | Andy Clark | 2013 | [Link](https://doi.org/10.1017/S0140525X12000477) | The landmark statement of predictive processing: brains as hierarchical prediction machines that minimize prediction error, tied to action and embodiment. One of the most influential unifying frameworks in cognitive science — and an obvious point of comparison with next-token-predicting language models. |
+| | 📄 Paper | Universal Intelligence: A Definition of Machine Intelligence | Shane Legg, Marcus Hutter | 2007 | [Link](https://arxiv.org/abs/0712.3329) | Distils informal definitions of intelligence into a formal measure: an agent's ability to achieve goals across all computable environments, weighted toward simpler ones. The theoretical backdrop to talk of "general" intelligence. |
+| | 📄 Paper | On the Measure of Intelligence | François Chollet | 2019 | [Link](https://arxiv.org/abs/1911.01547) | Argues that skill at tasks is a poor proxy for intelligence when priors and training data are unlimited, and defines intelligence as skill-acquisition efficiency. Introduces the ARC benchmark — the counterpoint to Legg & Hutter, and a live test of whether models generalize or memorize. |
 
 ## Suggested Order
 
-1. **SEP — Embodied Cognition** — Map the landscape of embodied approaches
-2. **Dreyfus — What Computers Can't Do** — Understand the critique of classical AI from a phenomenological perspective
-3. **Varela et al. — The Embodied Mind** — The foundational text bridging phenomenology and cognitive science
-4. **Brooks — Intelligence Without Representation** — See embodied principles applied in robotics
-5. **Clark & Chalmers — The Extended Mind** — Extend the argument beyond the body into the environment
-6. **SEP — Extended Mind** — Deepen and contextualize the extended mind thesis
-7. **Heidegger — Being and Time (selections)** — The philosophical roots of embodied cognition
-8. **Clark — Supersizing the Mind** — Full treatment of cognitive extension
+1. **Legg & Hutter — Universal Intelligence** — What could "intelligence" mean, formally?
+2. **Chollet — On the Measure of Intelligence** — The rival view: intelligence as efficient skill acquisition
+3. **SEP — Embodied Cognition** — Map the landscape of embodied approaches
+4. **Dreyfus — What Computers Can't Do** — Understand the critique of classical AI from a phenomenological perspective
+5. **Varela et al. — The Embodied Mind** — The foundational text bridging phenomenology and cognitive science
+6. **Brooks — Intelligence Without Representation** — See embodied principles applied in robotics
+7. **Clark & Chalmers — The Extended Mind** — Extend the argument beyond the body into the environment
+8. **SEP — Externalism About the Mind (§§5–7)** — Deepen and contextualize the extended mind thesis
+9. **Heidegger — Being and Time (selections)** — The philosophical roots of embodied cognition
+10. **Clark — Supersizing the Mind** — Full treatment of cognitive extension
+11. **Clark — "Whatever Next?"** — Predictive processing: the framework that ties brain, body, and world together
+
+---
+
+## 🛠️ Practice
+
+1. **Breakdown at the bench** — Read *Being and Time* §§15–16 (equipment, the hammer, and the breakdown modes: conspicuousness, obtrusiveness, obstinacy). Describe three episodes from your own bench or coding work, one per mode — e.g., a scope probe's ground lead that suddenly shows ringing; a toolchain that refuses to build; an AI assistant that confidently invents a register name. For each: what was transparent before, what became present-at-hand, and what you learned about the tool that smooth use hid. Then state Dreyfus's four assumptions of classical AI (biological, psychological, epistemological, ontological) and mark which a 2026 LLM agent still makes, with one sentence of evidence each. 600 words plus a four-row table. *(~3 h · Heidegger, Being and Time §§15–16; Dreyfus, What Computers Can't Do)*
+2. **Otto, Inga, and your toolchain** — State the parity principle and Clark & Chalmers's conditions for an external resource to count as part of a cognitive process (reliably available, easily accessed, automatically endorsed, consciously endorsed at some earlier point). Apply them to five cases: Otto's notebook, your lab notebook, NotebookLM over your study notes, an AI coding assistant, a datasheet. For each, give a verdict and name the condition that decides it. Then state the main objection treated in SEP *Externalism About the Mind* §§5–7 (e.g., the coupling–constitution charge) and reply on Clark's behalf in 300 words. *(~3 h · Clark & Chalmers, "The Extended Mind"; SEP Externalism About the Mind §§5–7; Clark, Supersizing the Mind)*
+3. **Two definitions of intelligence, tested** — Build a toy Legg–Hutter measure: 30 binary-sequence environments generated by short programs (periodic patterns, counters, XOR rules), each weighted by 2^−(program length) as a stand-in for the uncomputable 2^−K. Score three predictors — random, a frequency counter, and an n-gram or LZ-style predictor — by prediction accuracy, and compute each one's weighted score. Then solve five public ARC tasks by hand and give the same five to an LLM. 400 words: which predictor or system is "more intelligent" under each definition; what Legg & Hutter's measure ignores that Chollet insists on (priors, experience, generalization difficulty); and which definition you would use to evaluate an AI coding assistant. Check: your weighted scores should rank the three predictors in an order you can justify from the environment mix. *(~4 h · Legg & Hutter, "Universal Intelligence"; Chollet, "On the Measure of Intelligence")*
+4. **Subsumption bot** — Implement Brooks's architecture for a simulated differential-drive robot in a 2-D arena (NumPy plus a matplotlib animation is enough): layer 0 *avoid* (range sensors → turn away), layer 1 *wander*, layer 2 *seek* a light or goal, with higher layers suppressing lower ones. Implement a sense–model–plan–act baseline too (occupancy grid + A*). Run both on 50 seeded arenas with moving obstacles and sensor noise; report success rate, collisions and compute per control step. Optional: port layers 0–1 to a microcontroller board with two time-of-flight sensors. 300-word note: which result supports Brooks's slogan about using the world as its own model, and which result doesn't? *(~5 h · Brooks, "Intelligence Without Representation")*
+5. **Prediction machines vs. enaction** — Implement a scalar Kalman filter tracking a drifting sensor signal (e.g., a thermocouple channel with slow drift plus white noise). Label its prediction, prediction error and precision weighting (the Kalman gain) in the vocabulary of Clark's "Whatever Next?". Then close the loop: let the estimate drive a heater toward a setpoint — action that changes the input to reduce error, a miniature of active inference. 500 words: is your filter a predictive-processing system in Clark's sense? Is an LLM, which predicts tokens but has no action loop of its own? How would Varela, Thompson & Rosch's enactivism, using their color-vision case, redescribe the same loop without "representing a pregiven world" — and is that a substantive disagreement or a choice of vocabulary? *(~4 h · Clark, "Whatever Next?"; Varela, Thompson & Rosch, The Embodied Mind; SEP Embodied Cognition)*
+
+**🏗️ Mini-project — The Extended Engineer:** Keep a seven-day tool-use diary (at least 25 entries) logging each use of an external resource — notebook, datasheet, search, NotebookLM, AI coding assistant, oscilloscope — tagged by mode (transparent use vs. breakdown) and by which of Clark & Chalmers's conditions it met. Design and run one small self-test of extension: e.g., ten comparable firmware or circuit-debug tasks, half with your notes and AI assistant available and half without; record time and errors. Then write a 2,000-word position paper: which of your tools, if any, are part of your cognitive system, and does it matter? Engage the coupling–constitution objection, Heidegger's breakdown analysis and Dreyfus's warning about formalizing know-how. Deliverable: `projects/philosophy/04-extended-engineer/` (`diary.csv`, `self-test.md`, `paper.md`). Success: every verdict cites diary evidence, and the paper states in advance a claim your self-test could have refuted — then reports whether it did. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Define intelligence in one sentence as Legg & Hutter do and in one sentence as Chollet does. Name one thing each rewards that the other doesn't.
+2. State Dreyfus's four assumptions of classical AI.
+3. What is the difference between ready-to-hand and present-at-hand, and what happens in a breakdown?
+4. What does Brooks mean by letting the world serve as its own model, and how does a subsumption architecture implement that idea?
+5. State the parity principle in your own words and apply it to Otto.
+6. Misconception probe: "The extended mind thesis says that using tools makes you smarter." What does it actually claim, and what is the difference between causal dependence and constitution?
+7. What does precision weighting do in predictive processing, and what plays that role in a Kalman filter?
+8. Explain to a smart friend in 3 sentences why embodiment might matter for whether an AI understands anything.
