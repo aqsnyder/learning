@@ -10,6 +10,17 @@ Mechanism design is "reverse game theory" — instead of analyzing existing game
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive the symmetric equilibrium bid in a first-price auction with uniform private values, and verify revenue equivalence — and its failure under risk aversion — by simulation.
+- State the revelation principle, prove that truthful bidding is weakly dominant in Vickrey's second-price auction, and compute VCG allocations and payments in small package auctions.
+- Compute Myerson's optimal reserve from virtual valuations, quantify its revenue gain and efficiency cost, and compare it with recruiting one more bidder.
+- Explain the Myerson–Satterthwaite impossibility and quantify the surplus a bilateral double auction loses.
+- Critique VCG in practice with Ausubel & Milgrom's failure modes, using concrete numbers.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -19,17 +30,46 @@ Mechanism design is "reverse game theory" — instead of analyzing existing game
 | | 📄 Paper | Incentive Compatibility and the Bargaining Problem | Roger Myerson | 1979 | — | The revelation principle paper. Shows every mechanism outcome can be replicated by a truthful direct mechanism. |
 | | 📖 Book | Auction Theory | Vijay Krishna | 2009 | [Link](https://www.elsevier.com/books/auction-theory/krishna/978-0-12-374507-1) | The definitive textbook on auction theory. Covers IPV, common value, optimal auctions, multi-unit auctions. |
 | | 📄 Paper | Optimal Auction Design | Roger Myerson | 1981 | [Link](https://www.jstor.org/stable/3689266) | Showed how to design revenue-maximizing auctions. One of the most important papers in the field. |
-| | 📄 Paper | A Lovely but Lonely Vickrey Auction | Lawrence Ausubel & Paul Milgrom | 2006 | [Link](https://web.stanford.edu/~milgrom/publishedarticles/Lovely%20but%20Lonely.pdf) | Why Vickrey auctions are theoretically beautiful but rarely used in practice. Bridges theory and practice. |
+| | 📄 Paper | The Lovely but Lonely Vickrey Auction | Lawrence Ausubel & Paul Milgrom | 2006 | [Link](https://web.stanford.edu/~milgrom/publishedarticles/Lovely%20but%20Lonely.pdf) | Why Vickrey auctions are theoretically beautiful but rarely used in practice. Bridges theory and practice. |
 | | 🎥 Video | Nobel Prize Lecture — Paul Milgrom | Paul Milgrom | 2020 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2020/milgrom/lecture/) | Milgrom's Nobel lecture on improvements to auction theory and new auction formats. |
+| | 📝 Article | Scientific Background: Mechanism Design Theory | Royal Swedish Academy of Sciences | 2007 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2007/advanced-information/) | Free survey written for the 2007 prize to Hurwicz, Maskin, and Myerson: incentive compatibility, the revelation principle, and implementation theory, with their history. A compact map of the field to read before or alongside Börgers. |
+| | 📝 Article | Stable Matching: Theory, Evidence, and Practical Design | Royal Swedish Academy of Sciences | 2012 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2012/popular-information/) | Accessible background for the 2012 prize to Shapley and Roth: Gale–Shapley deferred acceptance and stability, and Roth's redesigns of the U.S. medical residency match, New York City school choice, and kidney exchange. Covers market design without prices, which the auction-focused readings here leave out. |
 
 ---
 
 ## Suggested Order
 
-1. **Börgers — Mechanism Design** — Start with this textbook for a structured introduction to the entire field.
-2. **Vickrey — "Counterspeculation, Auctions"** — Read the paper that started auction theory.
-3. **Myerson — "Incentive Compatibility" (1979)** — Understand the revelation principle.
-4. **Myerson — "Optimal Auction Design" (1981)** — Learn how to design revenue-maximizing mechanisms.
-5. **Ausubel & Milgrom — "Lovely but Lonely Vickrey Auction"** — Appreciate the gap between theory and practice.
-6. **Krishna — Auction Theory** — Deep dive into auction theory for additional rigor.
-7. **Milgrom — Nobel Lecture** — Watch for a masterful overview of the field's evolution and practical impact.
+1. **Nobel 2007 Scientific Background — Mechanism Design Theory** — Skim first for a map of the field and its key results.
+2. **Börgers — Mechanism Design** — Work through this textbook for a structured introduction to the entire field.
+3. **Vickrey — "Counterspeculation, Auctions"** — Read the paper that started auction theory.
+4. **Myerson — "Incentive Compatibility" (1979)** — Understand the revelation principle.
+5. **Myerson — "Optimal Auction Design" (1981)** — Learn how to design revenue-maximizing mechanisms.
+6. **Ausubel & Milgrom — "Lovely but Lonely Vickrey Auction"** — Appreciate the gap between theory and practice.
+7. **Nobel 2012 — Stable Matching** — Learn deferred acceptance and how matching markets (residency, schools, kidneys) are designed.
+8. **Krishna — Auction Theory** — Deep dive into auction theory for additional rigor.
+9. **Milgrom — Nobel Lecture** — Watch for a masterful overview of the field's evolution and practical impact.
+
+---
+
+## 🛠️ Practice
+
+1. **Bid shading from first principles** — Two bidders, values iid U[0,1], first-price sealed bid. Guess b(v) = kv, write bidder 1's expected payoff against it, and solve for k; generalize to n bidders. Then prove in one paragraph, by case analysis on the highest rival bid, that bidding your value is weakly dominant in Vickrey's second-price auction. Compute expected revenue of both formats for n = 2 and n = 5. **Check:** b(v) = (n−1)v/n; expected revenue is (n−1)/(n+1) in both formats — ⅓ for n = 2. *(~1.5 h · Vickrey, "Counterspeculation, Auctions, and Competitive Sealed Tenders"; Krishna, Auction Theory, chapters on private values and revenue equivalence)*
+2. **Auction simulator and revenue equivalence** — Simulate first-price (equilibrium bids), second-price (truthful), and English (ascending clock) auctions for n = 2…10 with 10⁵ draws each. (a) Confirm equal mean revenue and compare variances. (b) Break one assumption at a time: risk-averse bidders with u(x) = x^α, whose first-price equilibrium bid is (n−1)v/(n−1+α); then a common-value item (true value V, private signals V + noise) where naive bidders bid their signal in a second-price auction — measure the winner's average profit as n grows. Plot revenue vs. n for each case. **Check:** n = 2 mean revenue ≈ 0.333 in every format; variances ≈ 0.056 (second-price) vs. ≈ 0.014 (first-price); with α = 0.5 first-price revenue rises to ≈ 0.444; with symmetric noise the naive winner's profit is −E[second-highest noise draw] — positive at n = 2, zero at n = 3, negative and worsening from n = 4. *(~3 h · Krishna, chapters on revenue equivalence, risk aversion, and common values (the winner's curse); numpy)*
+3. **Myerson's reserve vs. one more bidder** — Values U[0,1]. (a) Derive the virtual valuation φ(v) = v − (1 − F(v))/f(v) = 2v − 1 and the optimal reserve. (b) Compute revenue and no-sale probability for a two-bidder second-price auction with that reserve, analytically and by simulation. (c) Compare with three bidders and no reserve (Bulow & Klemperer's "one more bidder" result). (d) You auction one pre-production unit to engineers whose values are U[$0, $800]; if it doesn't sell you can sell it later for $150. Set φ(r) equal to your own value and find the reserve. **Check:** reserve = ½; revenue 5/12 ≈ 0.417 vs. ⅓ without it, with a 25% chance of no sale; three bidders with no reserve earn 0.5; the reserve in (d) is $475. *(~2 h · Myerson, "Optimal Auction Design" (1981); Börgers on revenue-maximizing auctions; Krishna)*
+4. **VCG, and why it's lonely** — Write `vcg(bids)` that brute-forces the welfare-maximizing allocation of items {A, B} among XOR package bids and charges each winner the externality it imposes on the others. Reproduce Ausubel & Milgrom's failure modes: (a) bidder 1 bids $2 for AB, bidder 2 $2 for A, bidder 3 $2 for B — revenue? (b) Shill bidding: a bidder who values AB at $2, facing a rival's $2 bid for AB, splits into two identities bidding $2 for A and $2 for B — compare its profit with bidding honestly. (c) Revenue non-monotonicity: bidders AB = $2 and AB = $1, then add bidders A = $2 and B = $2. (d) Losing-bidder collusion: in (a), suppose bidders 2 and 3 truly value their items at $0.50 — show that inflating to $2 pays for either one only if the other inflates too. Close with 200 words on why the FCC uses clock auctions instead (Milgrom's Nobel lecture). **Check:** (a) revenue $0 even though someone offered $2 for the package; (b) the shill wins both items for $0 instead of paying $2; (c) revenue falls from $1 to $0 when bidders are added. *(~3 h · Ausubel & Milgrom, "The Lovely but Lonely Vickrey Auction"; Börgers on dominant-strategy mechanisms and VCG; Milgrom, Nobel lecture)*
+5. **Myerson–Satterthwaite with a contract manufacturer** — You (buyer) value a production run at v ~ U[0,1]; the contract manufacturer's cost is c ~ U[0,1]; each is private. In a split-the-difference double auction (trade at the average of bid and ask if bid ≥ ask): (a) verify numerically that b(v) = ⅔v + 1/12 and s(c) = ⅔c + ¼ are mutual best responses for interior types (grid-search one side's deviation); (b) compute realized gains from trade vs. first-best; (c) compute the fraction of efficient pairs (v > c) that fail to trade; (d) explain via Myerson–Satterthwaite why no individually rational, budget-balanced, incentive-compatible mechanism can reach first-best here; (e) list two practical ways to shrink the loss in real procurement (credible outside quotes that make costs more public, posted prices, long-term relationships). **Check:** gains ≈ 9/64 ≈ 0.141 vs. first-best ⅙ ≈ 0.167 (≈ 84%); ≈ 44% of mutually beneficial pairs don't trade — the ones with small gains. *(~3 h · Börgers on bilateral trade; Myerson, "Incentive Compatibility and the Bargaining Problem" (1979), for the revelation principle)*
+
+**🏗️ Mini-project — Allocating scarce early units:** You have k = 20 early units of a new instrument and ~100 interested engineers with private values. Simulate and compare four mechanisms under at least two value distributions (uniform; log-normal with a long tail): (i) a posted price at the revenue-maximizing level, first come first served; (ii) a uniform-price auction where the top k pay the (k+1)-th highest bid; (iii) pay-as-bid, using the unit-demand equilibrium bid from Krishna's multi-unit chapter (bid = expected k-th highest rival value, given it's below yours); (iv) a fixed price plus a lottery when oversubscribed. Measure revenue, allocative efficiency, and a goodwill proxy (price dispersion among winners; share of winners who'd have bought at list). Verify by brute-force deviation search that truthful bidding is a best response in (ii) but not in (iii). Deliverable: `projects/econ/early-units/` notebook + one-page memo recommending a mechanism and stating the revenue you give up for simplicity and goodwill. **Success:** (ii) and (iii) earn the same expected revenue within simulation error (revenue equivalence with unit demand); the truthfulness check passes for (ii) and fails for (iii); the recommendation holds across both distributions or you state exactly where it flips. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. State the revelation principle. What does it let a designer assume without loss of generality, and what practical issues does it ignore?
+2. Walk through why overbidding and underbidding in a second-price auction can only hurt you.
+3. State the revenue equivalence theorem and its assumptions. Name two real-world violations and which format each favors.
+4. With values U[0,1], what is the revenue-maximizing reserve, and why doesn't it depend on the number of bidders?
+5. What is a virtual valuation, and why would a revenue-maximizing seller sometimes refuse to sell to a buyer who values the good above the seller's cost?
+6. Misconception probe: "VCG is truthful, so it's the right mechanism for any multi-item sale." Give two of Ausubel & Milgrom's counterexamples.
+7. What does Myerson–Satterthwaite imply about price negotiation between a buyer and a supplier who each hold private information?
+8. Explain to a smart friend in three sentences why a second-price auction makes honesty the best policy.

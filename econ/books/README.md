@@ -1,11 +1,11 @@
 # Recommended Books
 
-Do not read cover-to-cover. Use as companions to the section READMEs. Start with Mankiw then Varian then work through as needed.
+Do not read cover-to-cover. Use as companions to the section READMEs. Start with Mankiw (or the free CORE text) then Varian then work through as needed.
 
 | # | Priority | Title | Author(s) | Year | Free? | Level | Link | Notes |
 |---|----------|-------|-----------|------|-------|-------|------|-------|
-| 1 | 🔑 | Principles of Economics | N. Gregory Mankiw | — | Paid | Beginner | [Cengage](https://www.cengage.com/c/principles-of-economics-9e-mankiw/9780357038314/) | |
-| 2 | 🔑 | Intermediate Microeconomics: A Modern Approach | Hal Varian | — | Paid | Beginner | [Norton](https://wwnorton.com/books/9780393689860) | |
+| 1 | 🔑 | Principles of Economics | N. Gregory Mankiw | 2024 | Paid | Beginner | [Cengage](https://cengage.com/c/principles-of-economics-10e-mankiw/9780357722718) | 10th edition |
+| 2 | 🔑 | Intermediate Microeconomics: A Modern Approach | Hal Varian & Marc Melitz | 2024 | Paid | Beginner | [Norton](https://wwnorton.com/books/9781324034292) | 10th edition |
 | 3 | 🔑 | Game Theory: An Introduction | Steven Tadelis | 2013 | Paid | Intermediate | [Princeton](https://press.princeton.edu/books/hardcover/9780691129082/game-theory) | |
 | 4 | 🔑 | Thinking, Fast and Slow | Daniel Kahneman | 2011 | Paid | Beginner | | |
 | 5 | 🔑 | An Introduction to the Theory of Mechanism Design | Tilman Börgers | 2015 | Paid | Intermediate | [OUP](https://global.oup.com/academic/product/an-introduction-to-the-theory-of-mechanism-design-9780199734023) | |
@@ -19,5 +19,6 @@ Do not read cover-to-cover. Use as companions to the section READMEs. Start with
 | 13 | 🔑 | The Bitcoin Standard | Saifedean Ammous | 2018 | Paid | Beginner | [Site](https://saifedean.com/thebitcoinstandard/) | |
 | 14 | | The Alignment Problem | Brian Christian | 2020 | Paid | Beginner | | |
 | 15 | | The Strategy of Conflict | Thomas Schelling | 1960 | Paid | Intermediate | | Classic |
-| 16 | | The Undercover Economist | Tim Harford | — | Paid | Beginner | | |
+| 16 | | The Undercover Economist | Tim Harford | 2005 | Paid | Beginner | | |
 | 17 | | Prediction, Learning, and Games | Cesa-Bianchi & Lugosi | 2006 | Paid | Advanced | | |
+| 18 | | The Economy 2.0 | CORE Econ team | 2023 | Free | Beginner | [CORE](https://books.core-econ.org/the-economy/index.html) | Free alternative to Mankiw; includes a Macroeconomics volume |

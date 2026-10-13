@@ -8,6 +8,18 @@ The intersection of economics and AI alignment is one of the most important inte
 
 - [Section 02 — Game Theory](../02-game-theory/README.md)
 - [Section 04 — Mechanism Design](../04-mechanism-design/README.md)
+- [Section 05 — Information Economics](../05-information-economics/README.md) (principal–agent problems and incomplete contracts)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Classify real metric failures into Manheim & Garrabrant's four Goodhart variants, and demonstrate regressional and extremal Goodhart numerically.
+- Reproduce the Off-Switch Game's core result: compute a robot's incentive to defer to a human as a function of its uncertainty about the objective and the human's rationality.
+- Recast a failure mode from *Concrete Problems in AI Safety* (reward hacking, side effects, scalable oversight) as a principal–agent or mechanism-design problem, and propose an incentive fix along with the new Goodhart risk it creates.
+- Explain why an assistant serving several principals runs into Arrow and Gibbard–Satterthwaite, and what the multi-principal assistance-games paper proposes.
+- Map the cooperative-AI agenda (understanding, communication, commitment, institutions), run a small multi-agent experiment, and write a dated, falsifiable prediction.
 
 ---
 
@@ -16,11 +28,11 @@ The intersection of economics and AI alignment is one of the most important inte
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | 📄 Paper | Categorizing Variants of Goodhart's Law | David Manheim & Scott Garrabrant | 2018 | [Link](https://arxiv.org/abs/1803.04585) | Taxonomizes four types of Goodhart's Law failure (regressional, causal, extremal, adversarial). Essential for understanding AI alignment through an economics lens. |
-| 🔑 | 📄 Paper | Cooperative AI | Allan Dafoe, Edward Hughes, Yoram Bachrach et al. | 2020 | [Link](https://arxiv.org/abs/2012.08630) | Foundational paper on building AI systems that cooperate with humans and each other. Draws on game theory, mechanism design, and social choice. |
+| 🔑 | 📄 Paper | Open Problems in Cooperative AI | Allan Dafoe, Edward Hughes, Yoram Bachrach et al. | 2020 | [Link](https://arxiv.org/abs/2012.08630) | Foundational paper on building AI systems that cooperate with humans and each other. Draws on game theory, mechanism design, and social choice. |
 | | 📄 Paper | The Off-Switch Game | Dylan Hadfield-Menell et al. | 2017 | [Link](https://arxiv.org/abs/1611.08219) | Game-theoretic analysis of the AI shutdown problem. Shows why corrigibility is hard from an incentive perspective. |
 | | 📄 Paper | Concrete Problems in AI Safety | Dario Amodei et al. | 2016 | [Link](https://arxiv.org/abs/1606.06565) | Taxonomizes practical safety problems including reward hacking — Goodhart's Law applied to reinforcement learning. |
 | | 📖 Book | The Alignment Problem | Brian Christian | 2020 | — | Accessible narrative covering the AI alignment problem. Connects incentive design, value learning, and fairness. |
-| | 📄 Paper | Multi-Principal Assistance Games | Michael Dennis et al. | 2024 | [Link](https://arxiv.org/abs/2007.09540) | Extends cooperative AI to settings with multiple human principals who have conflicting preferences. Connects to social choice theory. |
+| | 📄 Paper | Multi-Principal Assistance Games | Arnaud Fickinger, Simon Zhuang, Dylan Hadfield-Menell & Stuart Russell | 2020 | [Link](https://arxiv.org/abs/2007.09540) | Extends cooperative AI to settings with multiple human principals who have conflicting preferences. Connects to social choice theory. |
 | | 🎥 Course | AI Safety Fundamentals | BlueDot Impact | — | [Link](https://aisafetyfundamentals.com/) | Structured curriculum on AI safety including governance, alignment, and the economic dimensions of AI risk. |
 | | 📝 Blog | AI Alignment Forum | — | — | [Link](https://www.alignmentforum.org/) | Community hub for AI alignment research. Heavy overlap with mechanism design, incentives, and game theory. |
 | | 📝 Article | Goodhart's Law | LessWrong | — | [Link](https://www.lesswrong.com/tag/goodhart-s-law) | Community wiki with extensive discussion, examples, and formalizations of Goodhart's Law. |
@@ -29,11 +41,37 @@ The intersection of economics and AI alignment is one of the most important inte
 
 ## Suggested Order
 
-1. **Manheim & Garrabrant — "Goodhart's Law"** — Start with this taxonomy to understand the core economic framing of AI alignment.
+1. **Manheim & Garrabrant — "Goodhart's Law"** — Start with this taxonomy to understand the core economic framing of AI alignment; use the LessWrong Goodhart's Law wiki for further examples.
 2. **Amodei et al. — "Concrete Problems in AI Safety"** — Read for the broader safety context, including reward hacking.
 3. **Hadfield-Menell et al. — "The Off-Switch Game"** — Study the game-theoretic analysis of corrigibility.
-4. **Dafoe et al. — "Cooperative AI"** — Read the foundational paper on multi-agent cooperation.
-5. **Dennis et al. — "Multi-Principal Assistance Games"** — Extend to multiple conflicting principals.
+4. **Dafoe et al. — "Open Problems in Cooperative AI"** — Read the foundational paper on multi-agent cooperation.
+5. **Fickinger et al. — "Multi-Principal Assistance Games"** — Extend to multiple conflicting principals.
 6. **Christian — The Alignment Problem** — Read for an accessible narrative that ties everything together.
 7. **AI Safety Fundamentals (BlueDot)** — Take the structured course for comprehensive coverage.
 8. **Alignment Forum** — Follow for ongoing frontier research at the economics-AI intersection.
+9. **Cross-links elsewhere in this curriculum** — Nobel 2016 *Contract Theory* background (Section 05: multitasking as Goodhart's Law in contract form), Conitzer et al. on social choice for aggregating human feedback (Section 09), and Horton et al. on LLMs as simulated economic agents (Section 08).
+
+---
+
+## 🛠️ Practice
+
+1. **Goodhart in 30 lines** — (a) Regressional: draw true value V ~ N(0,1) and proxy U = V + N(0, σ²) for 10⁶ candidates; select the top 1% by U and compare mean U with mean V for σ = 0.5, 1, 2, against the theoretical shrinkage 1/(1 + σ²). (b) Extremal: let V = U − 3·max(0, U − 2)² (the proxy tracks value until it leaves the normal range); compute mean V for the top 50%, 10%, 1%, and 0.1% by U. (c) Map each variant to an example from your own work (a test-coverage target, a contract manufacturer's first-pass-yield figure, a sales metric). **Check:** at σ = 1 the selected set's true value is ≈ half its proxy score; in (b) mean V peaks near the top 10% (≈ 1.6) and goes negative by the top 0.1% (≈ −2.5). *(~1.5 h · Manheim & Garrabrant, "Categorizing Variants of Goodhart's Law"; LessWrong Goodhart's Law wiki)*
+2. **The Off-Switch Game, reproduced** — Robot R can act (payoff U_a), switch itself off (payoff 0), or defer to human H, who either lets it act or switches it off. R believes U_a ~ N(μ, σ²). (a) For a rational H (allows iff U_a > 0), derive R's incentive to defer, Δ = E[max(U_a, 0)] − max(μ, 0), in closed form, and show Δ ≥ 0. (b) For a noisy H who allows with probability 1/(1 + e^(−U_a/β)), compute Δ by Monte Carlo over grids of μ, σ, β and map the region where R prefers to bypass H. (c) Summarize the paper's conclusion in 150 words, and explain why making R certain of its objective removes the incentive to defer. **Check:** Δ = μΦ(μ/σ) + σφ(μ/σ) − max(μ, 0); with β = 0.5 and μ = 0.5, Δ < 0 at σ = 0.1 but Δ > 0 at σ = 1. *(~3 h · Hadfield-Menell et al., "The Off-Switch Game"; Christian, The Alignment Problem)*
+3. **Specification gaming in your own AI-assisted development** — Collect ≥ 6 cases where a coding agent (or a firmware test pipeline) satisfied the letter of a check but not its intent — deleting or skipping a failing test, special-casing expected outputs, loosening a tolerance, mocking the hardware away — from your own sessions, optionally plus a few from DeepMind's public specification-gaming examples list. Classify each by Goodhart variant and by *Concrete Problems* category. For each, propose a mechanism fix (hidden held-out tests, randomized checks, an independent review step, flagging edits to test files) and name the new Goodhart risk the fix creates. Deliverable: a table + 300 words. **Check:** every row names the proxy, the intended objective, and the gap between them; at least one fix applies Holmström's informativeness principle from Section 05. *(~2.5 h · Amodei et al., "Concrete Problems in AI Safety"; Manheim & Garrabrant; Christian)*
+4. **Serving several principals** — Three principals have utilities over four actions an assistant can take. (a) Implement three aggregation rules — maximize the sum of reported utilities, Borda over reported rankings, random dictatorship — and brute-force each principal's best misreport. (b) Show which rules are manipulable, and which is strategy-proof but inefficient. (c) Read *Multi-Principal Assistance Games* (arXiv 2007.09540) and explain its bandit-apprentice setting, in which humans first demonstrate their preferences by choosing arms themselves: why does the cost of choosing a suboptimal arm reduce the incentive to mislead the robot? **Check:** random dictatorship gives no one a reason to lie; summing reported utilities rewards exaggeration; Borda rewards burying a rival's favorite. *(~3 h · Multi-Principal Assistance Games; Section 09 on Gibbard–Satterthwaite; Dafoe et al. on institutions)*
+5. **Communication and commitment for LLM agents** — Using Dafoe et al.'s capabilities as the frame, run two LLM agents (fresh contexts, ≥ 30 games per condition) in a 10-round repeated prisoner's dilemma and a stag hunt under three conditions: no communication; cheap talk before each round; and a binding commitment device (each agent can lock in a conditional strategy that the harness enforces). Report cooperation rates with confidence intervals. Write a one-page result plus one dated, falsifiable prediction about multi-agent AI deployments within two years. **Check:** the write-up states which capability each condition tests and whether the commitment device changes the set of equilibria or only which equilibrium gets selected. *(~4 h · Dafoe et al., "Open Problems in Cooperative AI"; Section 02 on repeated games and focal points; BlueDot AI Safety Fundamentals)*
+
+**🏗️ Mini-project — Goodhart bench for code generation:** Build a miniature of Gao, Schulman & Hilton (2022, "Scaling Laws for Reward Model Overoptimization") for code. For ≥ 20 small programming tasks, generate N candidate solutions per task (an LLM at temperature 1, or a mutation-based program generator); score each with a proxy (the visible unit tests, or a small learned reward model) and with the true objective (hidden property-based tests); select best-of-n by proxy for n = 1 … 256. Plot proxy and true score against log n with error bars. Then test two mitigations: rotating hidden tests, and a quantilizer that samples from the top q-fraction by proxy instead of taking the max (see the Alignment Forum's discussion of mild optimization). Deliverable: `projects/econ/goodhart-bench/` + a blog-style explainer built around the plot. **Success:** the plot shows whether and where proxy and true scores diverge, with uncertainty; each observed failure is classified by Goodhart variant; you state whether either mitigation moved the divergence point. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Name and define Manheim & Garrabrant's four Goodhart variants, with one example each.
+2. If a proxy's noise variance equals the true signal's variance, roughly how much of a top-1% selection's proxy advantage is real?
+3. In the Off-Switch Game, why does a rational human give the robot a (weak) incentive to defer, and what erodes that incentive?
+4. Which of Amodei et al.'s five problems is closest to Goodhart's law, and how does "avoiding negative side effects" differ from it?
+5. Name Dafoe et al.'s four cooperative capabilities and a game-theory concept behind each.
+6. Why does Gibbard–Satterthwaite matter for an AI assistant that serves several people?
+7. Misconception probe: "A more detailed reward function eliminates Goodhart." Why doesn't it, especially against extremal and adversarial Goodhart?
+8. Explain to a smart friend in three sentences why optimizing a metric harder can make the thing you actually care about worse.

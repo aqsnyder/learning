@@ -10,18 +10,31 @@ Microeconomics is the formal study of individual decision-making and market outc
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Derive Marshallian demand for Cobb–Douglas and quasilinear utility with a Lagrangian, and decompose a price change into substitution and income effects (Slutsky and Hicks).
+- Derive a cost function from a production function by cost minimization, and from it the competitive firm's long- and short-run supply curves.
+- Find a monopolist's profit-maximizing price from MR = MC, verify the Lerner (inverse-elasticity) rule, and show when third-degree price discrimination raises total surplus.
+- Apply the Coase theorem to a numerical externality — showing the efficient outcome is invariant to liability at zero transaction cost — and identify which transaction costs break it.
+- Explain Hayek's argument that prices aggregate "knowledge of the particular circumstances of time and place", and probe it with a decentralized-market simulation.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |----------|------|----------|------------|------|------|-------------|
-| 🔑 | 📖 Book | Intermediate Microeconomics: A Modern Approach | Hal Varian | 2014 | [Link](https://wwnorton.com/books/9780393689860) | The standard intermediate microeconomics textbook. Clear, rigorous treatment of consumer choice, firm behavior, market structures, general equilibrium, and welfare. |
-| | 📖 Book | Intermediate Microeconomics with Calculus | Hal Varian | — | [Link](https://wwnorton.com/books/9780393689877) | Calculus-based companion to the main text. Use if you want the mathematical treatment. |
+| 🔑 | 📖 Book | Intermediate Microeconomics: A Modern Approach (10th ed.) | Hal Varian & Marc Melitz | 2024 | [Link](https://wwnorton.com/books/9781324034292) | The standard intermediate microeconomics textbook. Clear, rigorous treatment of consumer choice, firm behavior, market structures, general equilibrium, and welfare. |
+| | 📖 Book | Intermediate Microeconomics with Calculus (2nd ed.) | Hal Varian & Marc Melitz | 2024 | [Link](https://wwnorton.com/books/9781324034414) | Calculus-based companion to the main text. Use if you want the mathematical treatment. |
 | 🔑 | 🎥 Course | MIT 14.01 Principles of Microeconomics (OCW) | Jonathan Gruber | — | [Link](https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/) | Full MIT course with video lectures, problem sets, and exams. Gruber is an excellent lecturer. |
 | | 📖 Book | Microeconomic Theory | Mas-Colell, Whinston, Green | 1995 | — | The graduate-level bible of microeconomics ("MWG"). Definitive reference for rigorous proofs. Not for first pass — use after Varian. |
-| | 📖 Book (Free) | Price Theory | David Friedman | — | [Link](http://www.daviddfriedman.com/Academic/Price_Theory/PThy_ToC.html) | Refreshingly intuitive approach to price theory. Free online. Good alternative perspective. |
+| | 📖 Book (Free) | Price Theory | David Friedman | 1990 | [Link](http://www.daviddfriedman.com/Academic/Price_Theory/PThy_ToC.html) | Refreshingly intuitive approach to price theory. Free online. Good alternative perspective. |
 | 🔑 | 🎥 Course | Khan Academy Microeconomics | Khan Academy | — | [Link](https://www.khanacademy.org/economics-finance-domain/microeconomics) | Free comprehensive coverage of micro concepts. Useful for visual reinforcement of textbook material. |
 | | 📄 Paper | The Use of Knowledge in Society | F.A. Hayek | 1945 | [Link](https://www.econlib.org/library/Essays/hykKnw.html) | Foundational essay on the price system as a mechanism for information aggregation. Essential for understanding why markets work. |
 | | 📄 Paper | The Problem of Social Cost | Ronald Coase | 1960 | [Link](https://www.law.uchicago.edu/files/file/coase-problem.pdf) | Introduced the Coase theorem — foundational for law and economics. Shows how property rights and bargaining resolve externalities. |
+| | 📄 Paper | Beyond Markets and States: Polycentric Governance of Complex Economic Systems | Elinor Ostrom | 2009 | [Link](https://www.nobelprize.org/prizes/economics/2009/ostrom/lecture/) | Ostrom's Nobel lecture: field evidence that communities often manage shared resources (fisheries, forests, irrigation) well without either privatization or state control — the empirical answer to the "tragedy of the commons." Summarizes the work behind her book *Governing the Commons* (1990) and fills this section's gap on public goods and common-pool resources. |
+| | 📖 Book (Free) | Models in Microeconomic Theory | Martin J. Osborne & Ariel Rubinstein | 2020 | [Link](https://www.openbookpublishers.com/books/10.11647/obp.0204) | Free, concise, mathematically careful micro text from the authors of *A Course in Game Theory*. A good free bridge between Varian and MWG; an expanded second edition is also available from the publisher. |
 
 ---
 
@@ -32,6 +45,32 @@ Microeconomics is the formal study of individual decision-making and market outc
 3. **MIT 14.01 (OCW)** — Watch Gruber's lectures alongside or after Varian for a different exposition.
 4. **Hayek — "The Use of Knowledge in Society"** — Read this essay to understand the informational role of prices.
 5. **Coase — "The Problem of Social Cost"** — Read for the foundational perspective on externalities and property rights.
-6. **Friedman — Price Theory** — Skim for an alternative, more intuitive perspective on micro.
-7. **Varian — Calculus companion** — Work through if you want the formal mathematical treatment.
-8. **MWG — Microeconomic Theory** — Reference as needed for graduate-level rigor.
+6. **Ostrom — "Beyond Markets and States" (Nobel lecture)** — Read next to Coase: how communities solve commons problems without markets or the state.
+7. **Friedman — Price Theory** — Skim for an alternative, more intuitive perspective on micro.
+8. **Varian — Calculus companion** — Work through if you want the formal mathematical treatment.
+9. **Osborne & Rubinstein — Models in Microeconomic Theory** — Free, more rigorous step up before MWG.
+10. **MWG — Microeconomic Theory** — Reference as needed for graduate-level rigor.
+
+---
+
+## 🛠️ Practice
+
+1. **Slutsky by hand, then in sympy** — For u(x, y) = x^a·y^(1−a), derive x* = aM/px and y* = (1−a)M/py. With a = ½, M = 100, py = 1 and px rising from 1 to 2, compute the total change in x, the Slutsky substitution effect (compensate purchasing power), the income effect, and the Hicks substitution effect (compensate utility). Repeat for u = ln x + y and show the income effect on x vanishes at interior solutions. Verify everything symbolically in sympy. **Check:** x falls 50 → 25; Slutsky substitution and income effects are −12.5 each; the Hicks substitution effect is ≈ −14.6 — explain why the two substitution effects differ for a discrete price change but coincide in the limit. *(~2.5 h · Varian, chapters on choice, demand, and the Slutsky equation; Varian's calculus companion; Gruber's 14.01 lectures on consumer choice; MWG on duality, optional)*
+2. **Cost curves from a technology** — For f(K, L) = K^(1/3)·L^(1/3), minimize wL + rK subject to output q to get c(w, r, q). With w = r = 1, plot long-run AC and MC, then short-run ATC/AVC/MC with capital fixed at K̄ = 1, 4, 9, and show the long-run AC is their lower envelope. Derive long-run supply q(p) and short-run supply q(p; K̄). Explain why this technology has no positive shutdown price. **Check:** c = 2√(wr)·q^(3/2); long-run supply q = p²/9; short-run supply q = √(pK̄/3); each short-run ATC touches the long-run AC exactly at the q for which K̄ is the cost-minimizing capital. *(~2.5 h · Varian, chapters on technology, cost minimization, cost curves, and firm supply; MIT 14.01 problem sets on production)*
+3. **Academic pricing as price discrimination** — An instrument has MC = $60. Commercial engineers' annual demand: Qc = 1000 − 2P; academics and hobbyists: Qa = 1200 − 6P. (a) Find the profit-maximizing single price — compare the best price that serves both segments with the best price that serves only one. (b) Find the optimal segment prices with verified academic status. (c) Verify (P − MC)/P = 1/|ε| in each segment. (d) Compare total surplus under (a) and (b). (e) What stops arbitrage in practice (license terms, verification, support entitlements), and what does enforcement cost you? **Check:** the best single price is $280 and excludes academics entirely ($96,800 beats $92,450 at the both-segment optimum of $167.50); discrimination at $280/$130 earns $126,200 and raises total surplus from $145,200 to $189,300 — nobody loses. *(~2 h · Varian, chapters on monopoly and monopoly behavior; Gruber's 14.01 lectures on monopoly; Friedman, Price Theory, on monopoly)*
+4. **Coase's cattle and crops, with numbers** — Use Coase's example: 1–4 steers destroy 1, 3, 6, 10 tons of crops; crops are worth $1/ton. Give the rancher marginal profits of $6, $4, $2.50, $1 for steers 1–4. (a) Find the efficient herd. (b) Show the same herd results whether or not the rancher is liable, and compute who pays whom under each rule. (c) A fence lets the rancher run 4 steers with no damage: find the annual fence cost below which fencing is efficient. (d) Replace the one farmer with 20 farmers each suffering 1/20 of the damage, with bargaining costs of $0.50 per farmer: which liability rule now reaches the efficient herd, and why does Coase conclude that the legal rule matters in the real world? **Check:** efficient herd = 2 steers (net surplus $7); fencing is efficient iff it costs < $6.50/yr; in (d) $10 of bargaining cost exceeds the $3.50 at stake, so without liability the herd stays at 4. *(~2 h · Coase, "The Problem of Social Cost"; Varian, chapter on externalities)*
+
+**🏗️ Mini-project — Zero-intelligence market lab:** Build a continuous double auction in Python populated by budget-constrained "zero-intelligence" traders (Gode & Sunder, 1993): each buyer has a private value and bids uniformly below it; each seller has a private cost and asks uniformly above it; a trade executes when the best bid ≥ the best ask. Induce stepped supply and demand schedules (e.g., 20 buyers, 20 sellers) and measure allocative efficiency (realized ÷ maximum surplus), price dispersion, and volume; compare against unconstrained random traders. Then run three experiments and compare each with Varian's textbook prediction: a per-unit tax, a binding price ceiling, and a supply shock (half the sellers' costs rise 50% — your component shortage). Write a blog-style explainer on what this does and doesn't show about Hayek's essay. Deliverable: `projects/econ/zi-market/` notebook + post. **Success:** budget-constrained traders average > 90% efficiency while unconstrained ones collapse; for the tax and the ceiling you report measured surplus loss next to the textbook triangle and explain the gap (expect a mismatch — misallocation among buyers and extramarginal trades both matter); you name one thing Hayek claims that this simulation cannot test. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write the Slutsky equation and explain why a Giffen good must be inferior, but an inferior good need not be Giffen.
+2. Why is a competitive firm's short-run supply curve the part of its MC curve above minimum AVC rather than above minimum ATC?
+3. A monopolist with linear demand and constant marginal cost sees MC rise by $10. Roughly how much does its price rise, and how does that compare with a competitive industry with constant costs?
+4. Misconception probe: "A monopolist charges the highest price any customer will pay." What's wrong with that, and why does a monopolist never price on the inelastic part of its demand curve?
+5. State the Coase theorem with its assumptions. Why did Coase himself treat the zero-transaction-cost world as the less interesting case?
+6. In Hayek's tin example, what do users of tin need to know to respond correctly, and what don't they need to know?
+7. State the First Welfare Theorem and name three conditions under which it fails.
+8. Explain to a smart friend in three sentences how an academic discount can make both the seller and academics better off without hurting commercial buyers.

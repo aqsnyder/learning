@@ -11,7 +11,8 @@
 | 🔑 | [Vitalik Buterin's Blog](https://vitalik.eth.limo/) | Deep technical and economic analysis of mechanism design, governance, and crypto economics |
 | | [Behavioral Scientist](https://behavioralscientist.org/) | Leading online magazine for behavioral science research and applications |
 | | [Overcoming Bias](https://www.overcomingbias.com/) | Robin Hanson — economics, prediction markets, signaling, futurism |
-| | [The Money Illusion](https://www.themoneyillusion.com/) | Scott Sumner — monetary economics and market monetarism |
+| | [The Money Illusion](https://www.themoneyillusion.com/) | Scott Sumner — monetary economics and market monetarism. Archive only since Sept 2024; Sumner now writes at [The Pursuit of Happiness](https://scottsumner.substack.com/) |
+| | [Data Colada](https://datacolada.org/) | Uri Simonsohn, Joe Simmons & Leif Nelson — p-hacking, replication, and data forensics (their 2021 post exposed evidence of fabricated data in a famous honesty study, which was then retracted). Essential companion to Sections 03 and 06 |
 | | [Tim Roughgarden's Page](https://timroughgarden.org/) | Course materials and lecture notes on algorithmic game theory |
 
 ---

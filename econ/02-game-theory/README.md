@@ -10,6 +10,17 @@ Game theory is the mathematics of strategic interaction — how rational agents 
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Find all pure and mixed Nash equilibria of small normal-form games by hand (iterated dominance, best-response marking, indifference conditions) and confirm them with nashpy.
+- Derive Cournot, Stackelberg, and Bertrand outcomes for linear demand, including Cournot with a rival whose cost is private information (Bayesian Nash equilibrium).
+- Solve extensive-form games by backward induction, separate subgame-perfect equilibria from Nash equilibria propped up by non-credible threats, and use a commitment (Schelling) to change the outcome.
+- Compute the discount factor that sustains cooperation in the repeated prisoner's dilemma and explain how noise changes which strategies do well.
+- Compute an evolutionarily stable strategy (Hawk–Dove) and show convergence under replicator dynamics.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
@@ -19,11 +30,13 @@ Game theory is the mathematics of strategic interaction — how rational agents 
 | | 📖 Book | Strategy: An Introduction to Game Theory | Joel Watson | 2013 | — | Excellent alternative textbook with emphasis on contract and mechanism design applications. |
 | | 📖 Book (Free) | A Course in Game Theory | Martin Osborne & Ariel Rubinstein | 1994 | [Link](https://books.osborne.economics.utoronto.ca/coursesingt) | Concise, mathematically precise treatment. Free PDF available from the authors. |
 | | 📖 Book | The Strategy of Conflict | Thomas Schelling | 1960 | — | Nobel laureate's classic on focal points, credible commitments, and strategic interaction. Brilliant insights without formal math. |
-| | 📄 Paper | Non-Cooperative Games | John Nash | 1951 | [Link](https://www.jstor.org/stable/1969529) | The original Nash equilibrium paper. Short, elegant, and historically essential. |
-| | 🎥 Course | Game Theory (Coursera) | Matthew Jackson & Yoav Shoham, Stanford | — | [Link](https://www.coursera.org/learn/game-theory-1) | Accessible online course covering normal form, extensive form, repeated, and coalitional games. |
+| | 📄 Paper | Non-Cooperative Games | John Nash | 1951 | [Link](https://www.jstor.org/stable/1969529) | The full statement and existence proof of Nash equilibrium (first announced in a one-page 1950 *PNAS* note). Short, elegant, and historically essential. |
+| | 🎥 Course | Game Theory (Coursera) | Matthew Jackson, Kevin Leyton-Brown & Yoav Shoham (Stanford / UBC) | — | [Link](https://www.coursera.org/learn/game-theory-1) | Accessible online course covering normal form, extensive form, repeated, and coalitional games. |
 | | 📝 Blog | Game Theory 101 | William Spaniel | — | [Link](https://gametheory101.com/) | Free video tutorials and textbook companion. Good for reinforcing specific concepts. |
 | | 📖 Book | Evolution and the Theory of Games | John Maynard Smith | 1982 | — | The foundational text on evolutionary game theory and evolutionarily stable strategies (ESS). |
 | | 📖 Book | The Art of Strategy | Avinash Dixit & Barry Nalebuff | 2008 | — | Accessible popular book applying game theory to business and everyday strategic decisions. |
+| | 📄 Paper | The Evolution of Cooperation | Robert Axelrod & William D. Hamilton | 1981 | [Link](https://websites.umich.edu/~axe/research/Axelrod%20and%20Hamilton%20EC%201981.pdf) | Short *Science* paper on how cooperation emerges in the repeated Prisoner's Dilemma, built on computer tournaments won by Tit-for-Tat. Expanded into Axelrod's 1984 book of the same name; the intuitive core of repeated games and essential background for cooperative AI (Section 11). |
+| | 📖 Book (Free) | Bargaining and Markets | Martin J. Osborne & Ariel Rubinstein | 1990 | [Link](https://www.economics.utoronto.ca/osborne/bm/) | Free text on bargaining theory — Nash's axiomatic solution and alternating-offers models with time — and how bargaining between traders produces market outcomes. Fills the bargaining gap that Section 11's cooperative-AI papers lean on. |
 
 ---
 
@@ -31,9 +44,37 @@ Game theory is the mathematics of strategic interaction — how rational agents 
 
 1. **Polak — Yale ECON 159** — Start with these lectures for an engaging, intuitive introduction to game theory.
 2. **Tadelis — Game Theory: An Introduction** — Work through the textbook systematically alongside or after the lectures.
-3. **Nash — "Non-Cooperative Games"** — Read the original paper to see where the central concept came from.
+3. **Nash — "Non-Cooperative Games"** — Read Nash's paper to see where the central concept came from.
 4. **Schelling — The Strategy of Conflict** — Read for deep strategic insights and the concept of focal points.
-5. **Osborne & Rubinstein — A Course in Game Theory** — Consult for a more mathematically rigorous treatment.
-6. **Jackson & Shoham — Game Theory (Coursera)** — Use for additional practice and alternative explanations.
-7. **Maynard Smith — Evolution and the Theory of Games** — Read for the evolutionary game theory perspective.
-8. **Dixit & Nalebuff — The Art of Strategy** — Enjoy as a capstone for applied strategic thinking.
+5. **Axelrod & Hamilton — "The Evolution of Cooperation"** — Read alongside the repeated-games material for how cooperation emerges and survives.
+6. **Osborne & Rubinstein — A Course in Game Theory** — Consult for a more mathematically rigorous treatment.
+7. **Osborne & Rubinstein — Bargaining and Markets** — Read the Nash and alternating-offers chapters before Section 11.
+8. **Jackson, Leyton-Brown & Shoham — Game Theory (Coursera)** — Use for additional practice and alternative explanations.
+9. **Maynard Smith — Evolution and the Theory of Games** — Read for the evolutionary game theory perspective.
+10. **Dixit & Nalebuff — The Art of Strategy** — Enjoy as a capstone for applied strategic thinking.
+11. **As needed: Watson — Strategy / Spaniel — Game Theory 101** — Alternative textbook (strong on contracts) and quick video refreshers for specific concepts.
+
+---
+
+## 🛠️ Practice
+
+1. **Equilibria by hand, confirmed in code** — Solve each by hand, then with nashpy's `support_enumeration`. (a) Rows T/M/B vs. columns L/C/R, payoffs (row, column): T: (4,2) (3,3) (6,1); M: (5,1) (2,4) (1,0); B: (3,0) (1,2) (5,5) — eliminate strictly dominated strategies, recording the order, and note why the Pareto-better (B,R) is unreachable. (b) Battle of the Sexes with (2,1), (0,0) / (0,0), (1,2): all three equilibria and their payoffs; then raise Row's payoff at her favorite outcome from 2 to 3 and predict, before computing, whose mixing probability moves. (c) A tennis-serve game like Polak's: the server's success rate is 50% (serve left, receiver anticipates left), 80% (left, anticipates right), 90% (right, anticipates left), 20% (right, anticipates right) — find both mixes from indifference conditions and the server's equilibrium success rate. **Check:** (a) B and L go in the first round, R only once B is gone, then M → (T, C); (b) the mixed equilibrium gives each player ⅔, worse than either pure equilibrium, and only Column's mix moves (to ¼ on L); (c) serve left 70%, anticipate left 60%, success rate 62%. *(~2.5 h · Tadelis, chapters on dominance, Nash equilibrium, and mixed strategies; Polak, ECON 159 lectures on mixed strategies; Spaniel, Game Theory 101; nashpy docs)*
+2. **Oligopoly three ways, plus a hidden cost** — Inverse demand P = 120 − Q, marginal cost $20. Derive (a) two-firm Cournot, (b) Stackelberg with firm 1 leading, (c) Bertrand, (d) n-firm Cournot — show P → MC as n grows, (e) Cournot where firm 2's cost is $10 or $30 with equal probability and known only to firm 2 (firm 1's is $20) — solve for the Bayesian Nash equilibrium. Code best-response iteration for (a) and show it converges from any starting quantities. **Check:** Cournot q = 33.3 each, P = $53.33; Stackelberg leader 50, follower 25, P = $45; Bertrand P = $20; n-firm P = (120 + 20n)/(n + 1); in (e) firm 1 still produces 33.3, while firm 2 produces 38.3 (low cost) or 28.3 (high cost). *(~3 h · Polak, ECON 159 lectures on Cournot, Bertrand, and Stackelberg; Tadelis, chapters on Nash equilibrium applications and Bayesian games; Jackson, Leyton-Brown & Shoham, Coursera)*
+3. **Entry, threats, and commitment** — An entrant chooses Out (payoffs: entrant 0, incumbent 10) or In; after entry the incumbent Accommodates (4, 5) or Fights (−3, 1). (a) Find all pure Nash equilibria and the subgame-perfect one; name the non-credible threat. (b) Before entry the incumbent can sink c into capacity that makes fighting pay 6 − c and accommodating 5 − c (staying out leaves it 10 − c): for which c does investing deter entry and pay? (c) Write a recursive backward-induction solver (or use `pygambit`) and confirm (a)–(b). (d) In 200 words, list what could play the role of "capacity" for a small hardware company facing a larger firm that might clone its product — a public price pledge, open-sourcing the firmware, a most-favored-customer clause — and judge each by Schelling's test: does it actually change your post-entry payoffs, or is it cheap talk? **Check:** without investment the SPE is (In, Accommodate); investing deters entry and pays iff c < 5. *(~3 h · Tadelis, chapters on extensive-form games and subgame perfection; Schelling, The Strategy of Conflict, on commitment and threats; Dixit & Nalebuff, The Art of Strategy, on credibility; Watson, Strategy)*
+4. **Repeated prisoner's dilemma tournament** — (a) With T = 5, R = 3, P = 1, S = 0, derive the discount factor at which grim trigger sustains cooperation, and show by backward induction why cooperation unravels with a known final round. (b) With the `axelrod` Python library, run round-robin tournaments of ~15 classic strategies (Cooperator, Defector, Tit For Tat, Grudger, Generous TFT, Win-Stay Lose-Shift, Random, …) at noise 0 and noise 0.05; compare rankings and average scores. (c) Explain each large rank change using Axelrod's properties (nice, retaliatory, forgiving, clear). **Check:** δ* = ½; with noise, Tit For Tat can lock into echoes of retaliation — confirm or refute from your data that forgiving strategies gain ground. *(~3 h · Polak and Tadelis on repeated games; Axelrod & Hamilton, "The Evolution of Cooperation"; Osborne & Rubinstein on repeated games, for the folk theorem; axelrod library docs)*
+5. **Hawk–Dove and replicator dynamics** — Maynard Smith's Hawk–Dove with resource value V = 2 and fight cost C = 4. (a) Derive the mixed equilibrium and check both ESS conditions. (b) Run nashpy's `replicator_dynamics` from several starting Hawk shares and plot convergence. (c) Re-run with V = 6, C = 4 and explain the change. (d) Interpret for two vendors in a niche who can start a price war (Hawk) or hold prices (Dove): what does the Hawk share V/C predict about price-war frequency as margins fall relative to the cost of a war? **Check:** Hawk share → V/C = ½ from any interior start; with V > C, all-Hawk is the ESS. *(~2 h · Maynard Smith, Evolution and the Theory of Games, Hawk–Dove analysis; Polak's lectures on evolutionary stability; nashpy)*
+
+**🏗️ Mini-project — Focal points and level-k reasoning in humans and LLMs:** Give two instruments to ≥ 15 people and to an LLM (≥ 30 independent samples per question, fresh context each): (1) Polak's "guess ⅔ of the average" (0–100); (2) a set of Schelling's tacit-coordination questions (heads or tails; pick a positive integer; when and where to meet a stranger in New York; split $100 into two piles with an unseen partner) where respondents win only if they match their partner. For (1), fit a level-k model (level-0 mean 50, so level 1 ≈ 33, level 2 ≈ 22, …), report the level distribution and the winning guess, and explain why the equilibrium guess almost never wins. For (2), compute coordination rates (probability two random respondents match) for human–human, LLM–LLM, and human–LLM pairs, and compare with what Schelling reports. Then vary one prompt feature ("your partner is another copy of you" vs. "a human") and test whether the focal point moves. Deliverable: `projects/econ/focal-points/` notebook + blog-style post. **Success:** every rate is reported with a 95% interval; you write down your prediction for LLM–LLM coordination before measuring and explain the miss; the post states what "common knowledge of rationality" means for two copies of the same model. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Define a Nash equilibrium and a strictly dominated strategy. Can a strictly dominated strategy get positive probability in a mixed equilibrium? Why not?
+2. In a 2×2 mixed equilibrium, why does each player's mixing probability depend only on the *other* player's payoffs?
+3. What makes a threat non-credible, and how does subgame perfection eliminate equilibria that rely on one?
+4. In the infinitely repeated prisoner's dilemma with T > R > P > S, what condition on δ supports grim trigger? What changes if both players know the game ends after 100 rounds?
+5. State Maynard Smith's conditions for an evolutionarily stable strategy, and explain why the Hawk–Dove ESS is a mixed population rather than all-Hawk when V < C.
+6. Misconception probe: "A Nash equilibrium is an outcome that's good for everyone." Give two counterexamples from this section.
+7. What is a focal point, and why does Schelling locate it in the players' shared culture rather than in the payoff matrix?
+8. Explain to a smart friend in three sentences what Nash proved in 1951 and why the proof needed a fixed-point theorem.

@@ -2,11 +2,23 @@
 
 ## Why This Section Matters
 
-Information asymmetry is one of the most powerful ideas in economics. When one side of a transaction knows more than the other, markets can break down entirely (adverse selection), agents may take hidden actions (moral hazard), or people may engage in costly activities purely to signal their type (signaling). Akerlof's "Market for Lemons" showed how asymmetric information can destroy an entire market. Spence showed how education might be valuable purely as a signal. Stiglitz showed how insurance companies use screening contracts. These ideas earned three Nobel Prizes and transformed our understanding of why markets fail — and how contracts and institutions emerge to fix them.
+Information asymmetry is one of the most powerful ideas in economics. When one side of a transaction knows more than the other, markets can break down entirely (adverse selection), agents may take hidden actions (moral hazard), or people may engage in costly activities purely to signal their type (signaling). Akerlof's "Market for Lemons" showed how asymmetric information can destroy an entire market. Spence showed how education might be valuable purely as a signal. Stiglitz showed how insurance companies use screening contracts. These ideas won Akerlof, Spence, and Stiglitz the 2001 Nobel Prize (contract theory followed with Hart and Holmström in 2016) and transformed our understanding of why markets fail — and how contracts and institutions emerge to fix them.
 
 ## Prerequisites
 
 - [Section 01 — Microeconomics](../01-microeconomics/README.md)
+- [Section 02 — Game Theory](../02-game-theory/README.md) (signaling and screening are games of incomplete information)
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Construct Akerlof's unraveling in a numeric used-equipment market and quantify how certification or warranties restore trade — and what they cost.
+- Derive separating and pooling equilibria in Spence's two-group signaling model, find the range of education thresholds that support separation, and say which equilibrium is the plausible prediction.
+- Solve a two-type screening (versioning) problem: identify the binding constraints, show "no distortion at the top", and compute the information rent.
+- Solve a principal–agent moral-hazard contract with a risk-averse agent and use Holmström's informativeness principle to decide which signals belong in pay.
+- Explain why Rothschild–Stiglitz competitive insurance has no pooling equilibrium and can have no equilibrium at all.
 
 ---
 
@@ -20,16 +32,47 @@ Information asymmetry is one of the most powerful ideas in economics. When one s
 | | 📄 Paper | Moral Hazard and Observability | Bengt Holmström | 1979 | [Link](https://www.jstor.org/stable/3003320) | The informativeness principle: optimal contracts should condition pay on any informative signal of effort. Nobel Prize work. |
 | | 📖 Book | Contract Theory | Patrick Bolton & Mathias Dewatripont | 2004 | [Link](https://mitpress.mit.edu/9780262025768/) | Comprehensive graduate textbook covering adverse selection, moral hazard, and incomplete contracts. The definitive reference. |
 | | 📖 Book | Information Rules | Carl Shapiro & Hal Varian | 1998 | — | How information economics applies to technology strategy — network effects, lock-in, versioning, bundling. |
-| | 📝 Article | Why Akerlof's "Lemons" Paper Was Initially Rejected | — | — | — | The remarkable story of the most important information economics paper being rejected by three top journals. |
-| | 📖 Book | The Economics of Information | Joseph Stiglitz | — | — | Stiglitz's collected contributions to information economics. |
+| | 📝 Article | Writing the "The Market for 'Lemons'": A Personal Interpretive Essay | George Akerlof | 2003 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2001/akerlof/article/) | Akerlof's own account of how "Lemons" was rejected by the *AER*, the *Review of Economic Studies*, and the *JPE* (one referee: "if this paper was correct, economics would be different") before the *QJE* accepted it. A short lesson in how new ideas meet resistance. |
+| | 📄 Paper | Information and the Change in the Paradigm in Economics (Nobel Lecture) | Joseph Stiglitz | 2001 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2001/stiglitz/lecture/) | Stiglitz's own synthesis of the information-economics revolution — screening, efficiency wages, credit rationing — and why markets with imperfect information are generally not efficient. The best single overview of his contributions. |
+| | 📝 Article | Contract Theory (Popular Science Background) | Royal Swedish Academy of Sciences | 2016 | [Link](https://www.nobelprize.org/prizes/economic-sciences/2016/popular-information/) | Accessible tour of Hart's and Holmström's work: the insurance-vs-incentives trade-off in performance pay, multitasking (pay for what's measurable and effort shifts away from what isn't — Goodhart's Law in contract form), and incomplete contracts and ownership. Read before Bolton & Dewatripont. |
+| | 📄 Paper | Bayesian Persuasion | Emir Kamenica & Matthew Gentzkow | 2011 | [Link](https://www.aeaweb.org/articles?id=10.1257/aer.101.6.2590) | Founded "information design": when and how a sender who controls what a receiver learns can profit by choosing the information structure, with applications to lawyers, lobbyists, and salespeople. A major post-2010 development, and a natural lens for thinking about persuasion by recommender systems and AI. |
 
 ---
 
 ## Suggested Order
 
 1. **Akerlof — "The Market for Lemons"** — Start with this short, readable paper that launched the field.
-2. **Spence — "Job Market Signaling"** — Read next to understand signaling as a response to information asymmetry.
-3. **Rothschild & Stiglitz — "Competitive Insurance Markets"** — Understand screening as the other side of signaling.
-4. **Holmström — "Moral Hazard and Observability"** — Learn how contracts optimally deal with hidden actions.
-5. **Bolton & Dewatripont — Contract Theory** — Work through for a systematic treatment that ties everything together.
-6. **Shapiro & Varian — Information Rules** — Read for modern applications to technology and strategy.
+2. **Akerlof — "Writing 'The Market for Lemons'"** — Read his short account of the paper's rejections.
+3. **Spence — "Job Market Signaling"** — Read next to understand signaling as a response to information asymmetry.
+4. **Rothschild & Stiglitz — "Competitive Insurance Markets"** — Understand screening as the other side of signaling.
+5. **Stiglitz — Nobel Lecture** — See how screening, efficiency wages, and credit rationing fit one paradigm.
+6. **Holmström — "Moral Hazard and Observability"** — Learn how contracts optimally deal with hidden actions.
+7. **Nobel 2016 — Contract Theory (popular background)** — Get the big picture of incentive and incomplete contracts.
+8. **Bolton & Dewatripont — Contract Theory** — Work through for a systematic treatment that ties everything together.
+9. **Kamenica & Gentzkow — "Bayesian Persuasion"** — Learn the modern theory of information design.
+10. **Shapiro & Varian — Information Rules** — Read for modern applications to technology and strategy.
+
+---
+
+## 🛠️ Practice
+
+1. **Lemons on the used-instrument market** — Used bench instruments have quality q ~ U[0,1] (in $k); sellers value a unit at q, buyers at 1.5q; buyers compete, so a unit sells for 1.5× the quality buyers expect, and they see only the average quality on offer. (a) Show that at any price p only units with q ≤ p are offered, and that the market unravels. (b) Add certification: a calibration lab reveals q for a fee c. Show that sellers with q ≥ 2c certify and sell at 1.5q while the uncertified market still collapses; compute the surplus lost relative to full information as a function of c. (c) Map four of Akerlof's counteracting institutions (guarantees, brand names, chains, licensing) onto how the real used test-equipment market works — refurbishers, manufacturer certified-used programs, marketplace feedback — and say which information problem each one solves. **Check:** unrealized trades cost c² and certification spending is c(1 − 2c); at c = 0.1 that's 0.09 of the 0.25 first-best surplus. *(~2.5 h · Akerlof, "The Market for 'Lemons'"; Bolton & Dewatripont, Contract Theory, adverse-selection chapters)*
+2. **Spence's two-group example** — Reproduce Spence's model: productivity 1 or 2; education costs y for the low group and y/2 for the high group; employers pay 2 above an education threshold y* and 1 below it. (a) Find every y* that supports a separating equilibrium. (b) Find the pooling wage when a fraction λ is high-productivity, and the λ above which the high group prefers pooling to the cheapest separating equilibrium. (c) In 150 words, explain why the least-cost separating equilibrium is the standard prediction (equilibrium refinements such as the intuitive criterion). (d) Is a warranty a credible signal for an instrument maker? With annual failure rates of 2% (good build) vs. 10% (bad build), a $150 repair, and buyers paying a $20 premium for perceived quality, find the warranty lengths that separate. **Check:** separation for 1 ≤ y* ≤ 2, least-cost y* = 1; the high group prefers pooling iff λ > ½; warranties from ≈ 1.3 to ≈ 6.7 years separate, the cheapest being ≈ 16 months. *(~2.5 h · Spence, "Job Market Signaling"; Bolton & Dewatripont on signaling)*
+3. **Versioning as screening** — Hobbyists (θ = 1, two-thirds of buyers) and professionals (θ = 2, one-third) value a product of "quality" q (bandwidth, features) at θq; providing quality q costs q²/2. (a) First-best qualities. (b) The monopolist's optimal menu: write the participation and incentive constraints, argue which bind, and solve. (c) Profit vs. serving only professionals. (d) The professional share above which hobbyists get dropped. (e) Explain why selling identical hardware with features locked in software is the extreme case of this menu, and whether it's efficient. **Check:** q_H = 2 (no distortion at the top), q_L = 0.5 (vs. 1 first-best); prices 0.5 and 3.5; information rent 0.5; profit 0.75 vs. 0.667 for professionals-only; hobbyists are dropped once the professional share reaches ½. *(~2.5 h · Bolton & Dewatripont, screening chapter; Shapiro & Varian, Information Rules, chapter on versioning)*
+4. **Moral hazard and the informativeness principle** — A sales rep's effort e ∈ {0, 1} makes a big order succeed with probability 0.8 (effort) or 0.4 (no effort); the rep's utility is √w − 2e, with reservation utility 10 (wages in $100s). (a) The first-best wage if effort were observable. (b) The second-best contract (w_S, w_F): show participation and incentive constraints both bind, and solve. (c) The agency cost. (d) Add a customer-satisfaction score Y ∈ {good, bad}, independent of the order outcome given effort, with P(good) = 0.7 under effort and 0.3 without; re-solve as a convex program (cvxpy or scipy) over the four outcome × score cells. (e) Replace Y with a pure-noise score and re-solve. **Check:** (b) w_S = 169, w_F = 64, expected cost 148 vs. 144 first-best; (d) cost falls to ≈ 145.6 with pay ranked by likelihood ratio across cells; (e) cost stays at 148 — Holmström's informativeness principle in numbers. *(~3 h · Holmström, "Moral Hazard and Observability"; Bolton & Dewatripont, moral-hazard chapter)*
+5. **Rothschild–Stiglitz, numerically** — Two risk types with loss probabilities 0.5 and 0.1; wealth 100, loss 50, log utility, competitive zero-profit insurers. (a) Compute the separating contracts: high risk fully insured at its fair price; low risk gets the most coverage at its fair price that the high type won't take. (b) For high-risk shares from 0.05 to 0.9, check whether a contract on the pooled zero-profit line beats the low type's separating contract; find the share below which no equilibrium exists. (c) In 150 words, explain the cream-skimming deviation that rules out any pooling equilibrium. **Check:** low-risk coverage ≈ 7.4 of the 50 loss; no equilibrium when high-risk types are below ≈ 8% of the market. *(~3 h · Rothschild & Stiglitz, "Equilibrium in Competitive Insurance Markets"; Bolton & Dewatripont)*
+
+**🏗️ Mini-project — Information-problem audit of a hardware business:** Pick three real information asymmetries in a small hardware business: one adverse-selection problem (who buys an extended warranty, who returns units, who asks for a trial), one moral-hazard problem (a contract manufacturer's quality effort, a distributor's or sales rep's effort), and one signaling problem (to customers, hires, or investors). For each, write the model (types or actions, what's observable to whom), solve a calibrated numeric version by adapting your code from Practice 1–5, and propose a contract or institution — checking incentive and participation constraints numerically and naming the informative signal it conditions on. Deliverable: `projects/econ/info-audit/` (notebook + 3-page memo). **Success:** every proposed fix passes its constraint checks in code; for each problem you name the cheapest observable that would make it disappear and estimate what acquiring it would cost. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Why can Akerlof's market collapse even when every unit is worth more to buyers than to sellers?
+2. In the used-instrument model, what happens to trade volume and total surplus as certification gets cheaper?
+3. What property of signaling costs (single crossing) makes a signal credible? Why can education pay off for workers and employers even if it adds nothing to productivity?
+4. Signaling vs. screening: who moves first in each? In Rothschild–Stiglitz, why can no pooling contract survive?
+5. In a two-type screening menu, what do "no distortion at the top" and "information rent" mean?
+6. State Holmström's informativeness principle. Give one signal that should and one that shouldn't enter a contract manufacturer's quality bonus.
+7. Misconception probe: "Moral hazard is about dishonest people." Why does the problem exist even with an honest, risk-averse agent?
+8. Explain to a smart friend in three sentences why a long warranty can be a believable promise of quality.
