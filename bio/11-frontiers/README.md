@@ -4,6 +4,8 @@
 
 Biology is moving faster than any curriculum can keep up with. This section collects the most important emerging directions — work that is actively reshaping what's possible in the life sciences. These aren't speculative futures; they are fields with landmark papers already published and major programs underway. Each subsection highlights a frontier area with its foundational and recent key works. Revisit this section regularly as new breakthroughs emerge.
 
+**Prerequisites:** Take this section last. Each subsection builds on an earlier section: synthetic biology and whole-cell modeling on [05 Systems Biology](../05-systems-biology/README.md), brain–computer interfaces on [09 Neuroscience](../09-neuroscience/README.md), and foundation models and biosecurity on [10 AI for Biology](../10-ai-for-biology/README.md).
+
 ---
 
 ## 🎯 Learning Objectives
@@ -95,7 +97,11 @@ Read these with Urbina et al. (2022), listed in [Section 10](../10-ai-for-biolog
 
 > 🔑 = must-read
 
+## Suggested Order
+
 **Core path (🔑):** Nielsen, Voigt et al., Cello genetic-circuit design automation (2016) → Willett et al., speech neuroprosthesis (2023) → Nguyen et al., Evo (2024)
+
+Read the three core items first. Then take the subsections above in any order, and finish with *Biosecurity and Dual Use*, which draws on the rest.
 
 ---
 

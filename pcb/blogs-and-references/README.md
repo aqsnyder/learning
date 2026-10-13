@@ -21,7 +21,7 @@
 | Priority | Tool | Link | Notes |
 |----------|------|------|-------|
 | 🔑 | KiCad | [kicad.org](https://www.kicad.org/) | Free, open-source, industry-standard EDA |
-| 🔑 | Your KiCad Template | [github.com/aqsnyder/KiCAD_Template_Snyder](https://github.com/aqsnyder/KiCAD_Template_Snyder) | Personal KiCad project template (private repo — link works when signed in) |
+| | Your KiCad Template | [github.com/aqsnyder/KiCAD_Template_Snyder](https://github.com/aqsnyder/KiCAD_Template_Snyder) | Personal KiCad project template (private repo: the link works only when signed in to GitHub as its owner) |
 | | Saturn PCB Toolkit | [saturnpcb.com](https://saturnpcb.com/saturn-pcb-toolkit/) | Essential calculators (conductor current per IPC-2152) |
 | | UltraCAD Calculators | [ultracad.com/calc.htm](https://www.ultracad.com/calc.htm) | Impedance and trace calculators |
 | | Open Source Thermal Sim | [jrainimo.com](https://jrainimo.com/build/2024/11/oss-thermal-simulation-of-pcbs/) | OSS thermal simulation of PCBs |

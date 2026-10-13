@@ -2,7 +2,7 @@
 
 > **Why this section matters:** This is the core of Bitcoin — how blocks, transactions, and the blockchain actually work together to create a trustless system.
 
-### Prerequisites
+## Prerequisites
 - [01 - Cryptography Foundations](../01-cryptography-foundations/)
 
 > 🛠️ **Start the hands-on lab track now:** [Section 12 — Hands-on Labs](../12-hands-on-labs/README.md) runs in parallel with Sections 02–10. Its Lab 0 (a scripted regtest, signet and pruned-mainnet bench) belongs alongside this section, and this section's exercise 1 runs on it.

@@ -447,3 +447,7 @@ Scores are 1–5 for the curriculum as found. The grade column gives the grade a
 - philosophy/README.md legend: 🔑🔑 row now reads "**Foundational masterwork** — a core-path item that defines the field; read carefully"
 - Second check (2026-10-13): `courses/README.md` #3 Dehaene, "What Is Consciousness, and What Are Its Brain Mechanisms?": 🔑 removed (index-only; Section 02 lists his book, unmarked).
 - Second check (2026-10-13): 06: *Fairness and Machine Learning* (Barocas, Hardt & Narayanan) made 🔑 (third slot), because objective 2 and Practice 3 rest on it. PROGRESS and the Core path line were updated.
+- Final decisions (2026-10-13):
+  - 10: Robert Wright's retired Coursera course is replaced by his book *Why Buddhism Is True: The Science and Philosophy of Meditation and Enlightenment* (Simon & Schuster, 2017, checked against a library catalogue record). It sits in the Suggested Order right before Thompson's critique.
+  - The courses index row was removed.
+  - The curriculum icon is now 💭.

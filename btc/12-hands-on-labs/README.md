@@ -17,7 +17,7 @@ Keep everything in one repository (e.g. `projects/btc/lab/`) so the bench, your 
 | 0 — The bench | Section 02 | Scripted regtest, signet and pruned-mainnet nodes |
 | 1 — CLI fluency | Sections 02–04 | `bitcoin-cli`, raw transactions and fee bumping without looking anything up |
 | 2 — Python harness | Sections 03–04 | A tested RPC/ZMQ package that every later lab imports |
-| 3 — Transactions in code | Section 04 (P2TR after 11) | One signer for every standard output type, differentially tested against Core |
+| 3 — Transactions in code | Section 04 (P2TR after Lab 6) | One signer for every standard output type, differentially tested against Core |
 | 4 — Wallet stack | Sections 05 and 08 | Descriptor multisig with PSBTs passing between your code, Core and embit |
 | 5 — Lightning bench | Section 07 | A multi-node regtest Lightning network you can rebuild in minutes |
 | 6 — Taproot workbench | Section 11 (or straight after 04) | Guided Schnorr/MuSig/Taptree notebooks, then the same pieces in your own library |
@@ -99,7 +99,7 @@ Each lab has a "done when" criterion. Don't move on until it holds.
 
      Copy the patterns of Bitcoin Core's functional test framework rather than inventing your own.
    - **Done when:** from a clean checkout, `pytest -q` starts regtest, creates and confirms a transaction, observes it over ZMQ, cleans up after itself, and passes twice in a row.
-3. **Lab 3 — Transactions in code** *(alongside Section 04; add P2TR after Section 11 · ~8 h)*
+3. **Lab 3 — Transactions in code** *(alongside Section 04; add P2TR after Lab 6 · ~8 h)*
    - **Guided pass:** Do bitcoin-tx-tutorial's notebooks (Section 04).
    - **Your library:** Extend the signer from Section 04's exercise 4 so one interface handles P2PKH, P2SH and P2WSH multisig, P2WPKH and P2TR key-path spends.
    - **Cross-check:** Use embit or Bitcoin Dev Kit (Section 10) as a second implementation.

@@ -6,7 +6,7 @@
 
 | # | Priority | Course / Channel | Source | Platform | Link | Pairs With | Notes |
 |---|----------|-----------------|--------|----------|------|------------|-------|
-| 1 | 🔑 | Modern Embedded Systems Programming | Miro Samek (Quantum Leaps) | YouTube | [Channel](https://www.youtube.com/@StateMachineCOM) | Sections 02, 07 | Gold standard embedded education |
+| 1 | 🔑 | Modern Embedded Systems Programming | Miro Samek (Quantum Leaps) | YouTube | [Playlist](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) | Sections 02, 07 | Gold standard embedded education |
 | 2 | 🔑 | MIT 6.006 Algorithms | MIT | OCW | [Course](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) | Section 00 | Foundational algorithms |
 | 3 | | CS50 | David Malan | Harvard | [Course](https://cs50.harvard.edu/) | Section 00 | Best intro CS course |
 | 4 | | System Design Interview | Mikhail Smarshchok | YouTube | [Channel](https://www.youtube.com/@SystemDesignInterview) | Sections 04, 06 | Seven in-depth architecture walkthroughs; channel no longer active |

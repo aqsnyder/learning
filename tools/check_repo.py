@@ -7,11 +7,14 @@ Usage:  python tools/check_repo.py            # run all checks, exit 1 on proble
 Checks:
   1. Relative links and image paths resolve.
   2. Markdown tables have a consistent column count.
-  3. Every numbered section README has Learning Objectives, Practice and Check Yourself H2 headings and a mini-project.
+  3. Every numbered section README has Prerequisites, and Learning Objectives, Suggested Order, Practice and
+     Check Yourself H2 headings, and a mini-project.
   4. Every numbered section has a "## Section NN" block in PROGRESS.md with the three practice checkboxes.
   5. Every numbered section appears in its curriculum README's learning path.
   6. Tier lists: at most 3 resource rows marked 🔑 per section (legend rows excluded), and a
      "**Core path (🔑):**" line at the top of the section's Suggested Order.
+  7. The generated learning-path tables and the root section index are current
+     (tools/build_index.py --check); if not, run python tools/build_index.py.
 """
 import os, re, sys
 
@@ -91,7 +94,9 @@ for cur in CURRICULA:
         nn = sec[:2]
         text = read(os.path.join(cdir, sec, "README.md"))
         if text is not None:
-            for heading in ("## 🎯 Learning Objectives", "## 🛠️ Practice", "## ✅ Check Yourself"):
+            if not re.search(r"^(## Prerequisites|\*\*Prerequisites:\*\*)", text, re.M):
+                problems.append(f"{cur}/{sec}/README.md: missing Prerequisites (a '## Prerequisites' heading or a '**Prerequisites:**' line)")
+            for heading in ("## 🎯 Learning Objectives", "## Suggested Order", "## 🛠️ Practice", "## ✅ Check Yourself"):
                 if not re.search(rf"^{re.escape(heading)}", text, re.M):  # line start: an H3 slip fails
                     problems.append(f"{cur}/{sec}/README.md: missing '{heading}'")
             if "**🏗️ Mini-project" not in text:
@@ -113,6 +118,14 @@ for cur in CURRICULA:
                     problems.append(f"{cur}/PROGRESS.md: Section {nn} lacks '{marker}' checkbox")
         if not re.search(rf"Section {nn}\b", readme):
             problems.append(f"{cur}/README.md: learning path does not mention Section {nn}")
+
+import subprocess
+r = subprocess.run([sys.executable, os.path.join(ROOT, "tools", "build_index.py"), "--check"],
+                   capture_output=True, text=True)
+if r.returncode != 0:
+    for line in r.stderr.splitlines():
+        if line.strip():
+            problems.append(line.strip())
 
 if "--urls" in sys.argv:
     print("\n".join(sorted(urls)))

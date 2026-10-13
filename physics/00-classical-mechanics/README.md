@@ -4,6 +4,10 @@
 
 Classical mechanics is the bedrock of all physics. Newtonian mechanics gives you the intuition for forces and motion; Lagrangian and Hamiltonian mechanics provide the elegant mathematical frameworks that generalize to quantum mechanics, statistical mechanics, and modern field theory. The principle of least action, conservation laws via Noether's theorem, and phase-space thinking are ideas you'll use in every subsequent section. This is where you learn to *think like a physicist*.
 
+## Prerequisites
+
+Single-variable calculus and vectors. If you need them, take [math/02 Calculus and Analysis](../../math/02-calculus-and-analysis/README.md) first; its core path starts with 3Blue1Brown's *Essence of Calculus*.
+
 ---
 
 ## 🎯 Learning Objectives

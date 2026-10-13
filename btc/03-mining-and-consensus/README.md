@@ -2,7 +2,7 @@
 
 > **Why this section matters:** Proof-of-work is what makes Bitcoin trustless. Understanding mining, difficulty adjustment, and Nakamoto consensus is essential.
 
-### Prerequisites
+## Prerequisites
 - [01 - Cryptography Foundations](../01-cryptography-foundations/)
 - [02 - Protocol Fundamentals](../02-protocol-fundamentals/)
 

@@ -503,3 +503,13 @@ No pcb section had more than 3 🔑 resource rows (36 in all; 04 and 09 were tri
 - pcb/README.md Key Educators: Altium Academy removed (not core in any section; unmarked in 01, 04 and 07)
 - Not changed, for Aaron: courses/README.md #8 KiCad Official Documentation stays unmarked. No section lists the docs as a whole, but one part, the KiCad Getting Started Guide, is core in 02. Add 🔑 if a part counts.
 - Second check (2026-10-13): `books/README.md` #12 Rick Hartley's Reading Recommendations: 🔑 removed (index-only; the ⭐ marks on the 12 books carry his list).
+- Final decisions (2026-10-13):
+  - 02: the KiCad Library Conventions (KLC) made core in place of the private KiCad template, which stays as a personal reference.
+  - The template repo is private: anonymous requests get 404 with no redirect, and the account's only public repo is `isi_openmv`.
+  - The template's 🔑 in blogs-and-references was removed.
+  - The update skill now says "at most 3".
+- Final pass: `pcb/README.md`'s "Key Educators" is renamed "Educators Worth Following" and marked as a highlights list, separate from the core paths. EEVblog stays on it, although it is no longer core in Section 00: Section 00's core path now names the four *Art of Electronics* chapters its objectives use (1, 4, 5 and 8).
+- Final pass, core paths:
+  - 08 now starts from a concrete talk instead of a YouTube search: Hartley's *The Extreme Importance of PC Board Stack-Up* (AltiumLive, 2018; Altium page checked).
+  - 07's search-link row is no longer core. LearnEMC → Ott carry the core path, and Hartley's grounding talk in 05 is the suggested warm-up.
+  - 10 adds TI AN-2020 (thermal design) to Feranec's BGA series, so the core path is not a single channel link.

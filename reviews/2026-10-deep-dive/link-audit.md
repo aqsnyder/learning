@@ -12,7 +12,7 @@ Every link added during the review was opened when it was added, so it is not pa
 
 **Outcome for the 115 non-ok links:**
 - **55 fixed:** a moved link was updated, a dead link replaced by a verified equivalent, or the citation text corrected.
-- **3 kept but marked dead:** no verified replacement could be found.
+- **3 dead:** no equivalent replacement could be found. They were marked dead at first; the final pass removed two of them and replaced the third with the course author's book.
 - **57 unchanged:** the page could not be checked. Robots rules, JavaScript-only pages, HTTP 429 rate limits and publisher bot walls are the usual reasons. For most, nothing suggests the resource is gone. Four look likely dead and should be checked by hand first:
   - L1-141, the Quanta philosophy tag page (it failed twice while the Quanta homepage loaded)
   - L2-125, OXT.me (possibly discontinued)
@@ -81,9 +81,9 @@ Per-file details of each fix are in each curriculum's review file, under "Link-a
 | L3-170 | pcb/00-electronics-fundamentals, pcb/courses | broken | Handle @greatscaboratory does not exist. GreatScott!'s channel is @greatscottlab (channel ID UC6mIxFTvXkWQVEHPsEdflzQ, 'Awesome Electronics… | Link replaced |
 | L3-176 | ml/06-transformers-and-attention, ml/courses | mismatch | Playlist is the 2023 offering of CS224N, not 2021 as the repo row states; lecturer not named in the visible description (repo says Manning et al.) | Citation text corrected; URL kept |
 
-## Kept, marked dead (3)
+## Dead, later removed or replaced (3)
 
-These rows now carry "⚠️ Link dead (checked Oct 2026)" or "Course retired", have no 🔑, and their Suggested Order steps are marked optional. Delete them or find a replacement.
+Each of these rows was first marked "⚠️ Link dead (checked Oct 2026)". The final pass removed the two retired Coursera courses (econ/03 and econ/06), and replaced Robert Wright's course (philosophy/10) with his book *Why Buddhism Is True*.
 
 | Key | Where | Auditor's finding |
 |---|---|---|

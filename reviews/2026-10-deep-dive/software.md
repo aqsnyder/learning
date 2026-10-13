@@ -650,3 +650,5 @@ Totals:
   - 08: 🔑 moved from the "Reviewing AI-generated code for security" concept row to the Threat Modeling Manifesto.
   - `courses/README.md` #6 ArjanCodes: 🔑 removed (index-only).
   - `blogs-and-references/` keeps its own 🔑, which means "follow first"; the README legend now says so.
+- Final decisions (2026-10-13): the update skill's rule 6 now also says to run `tools/build_index.py` after a 🔑 change.
+- Final pass: the Quantum Leaps rows in 02 and 07 and in courses/ now link the *Modern Embedded Systems Programming Course* playlist (checked via YouTube oEmbed: "Modern Embedded Systems Programming Course", Quantum Leaps, LLC), not the whole channel.

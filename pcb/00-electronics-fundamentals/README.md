@@ -2,7 +2,7 @@
 
 > **Why this section matters:** Before designing PCBs you need to understand the circuits that go on them.
 
-**Prerequisites:** Basic math / physics.
+**Prerequisites:** Algebra, complex numbers and first-order ODEs ([math/02](../../math/02-calculus-and-analysis/README.md), [math/07](../../math/07-differential-equations/README.md)), plus basic circuit laws (step 1 below). Exercises 2–4 need only LTspice. Exercise 1 and the mini-project need bench gear: a scope with a 10× probe, an STM32 dev board, and a VNA or a signal generator you can drive over PyVISA.
 
 ---
 
@@ -22,7 +22,7 @@ After this section you can:
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Book | *The Art of Electronics* (3rd ed.) | Horowitz & Hill | 2015 | [artofelectronics.net](https://artofelectronics.net/) | The industry bible for circuit design. Its advanced companion, *The Art of Electronics: The x-Chapters*, gets an expanded 2nd edition in 2026 that adds a 100+ page chapter on sensors ([x.artofelectronics.net](https://x.artofelectronics.net/)) |
 | 🔑 | Book (Lab Companion) | *Learning the Art of Electronics* | Hayes & Horowitz | — | [artofelectronics.net](https://artofelectronics.net/) | Practical lab companion: a paid Cambridge University Press book, not a free one. A 2nd edition is now available |
-| 🔑 | YouTube Channel | EEVblog | Dave Jones | — | [youtube.com/@EEVblog](https://www.youtube.com/@EEVblog) | Electronics tutorials, teardowns, fundamentals |
+| | YouTube Channel | EEVblog | Dave Jones | — | [youtube.com/@EEVblog](https://www.youtube.com/@EEVblog) | Electronics tutorials, teardowns, fundamentals |
 | | YouTube Channel | GreatScott! | — | — | [youtube.com/@greatscottlab](https://www.youtube.com/@greatscottlab) | Beginner-friendly electronics projects |
 | | Course | Khan Academy Electrical Engineering | — | — | [khanacademy.org](https://www.khanacademy.org/science/electrical-engineering) | Free fundamentals |
 | | Course | MIT 6.002 Circuits and Electronics (OCW) | Anant Agarwal (with Jeffrey Lang) | 2007 | [ocw.mit.edu](https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/) | Rigorous foundations, with full video lectures |
@@ -34,10 +34,10 @@ After this section you can:
 
 ## Suggested Order
 
-**Core path (🔑):** *The Art of Electronics* + *Learning the Art of Electronics* (read together) → EEVblog
+**Core path (🔑):** *The Art of Electronics* (3rd ed.) Ch. 1 Foundations, Ch. 4 Operational Amplifiers, Ch. 5 Precision Circuits and Ch. 8 Low-Noise Techniques → *Learning the Art of Electronics* labs alongside
 
 1. **Khan Academy Electrical Engineering** — Build intuition for voltage, current, and basic circuit laws.
-2. **The Art of Electronics** (read alongside **Learning the Art of Electronics**) — Work through both together for theory + hands-on labs.
+2. **The Art of Electronics** Chs. 1, 4, 5 and 8 (read alongside **Learning the Art of Electronics**) — Work through both together for theory plus hands-on labs. These four chapters cover this section's objectives; the rest of the book is reference.
 3. **EEVblog** — Supplement reading with video teardowns and tutorials.
 4. **GreatScott!** — Follow along with beginner projects to reinforce concepts.
 5. **MIT 6.002** — Deepen understanding with a rigorous university-level treatment.

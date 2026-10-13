@@ -14,7 +14,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Kurenkov — "A Brief History of Neural Nets and Deep Learning"
 - [ ] LeCun, Bengio & Hinton — "Deep Learning" (Nature, 2015)
 - [ ] Sutton — "The Bitter Lesson" (2019)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: 1943→1986 in One Notebook
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -32,7 +32,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] ⭐ Grünwald — "A Tutorial Introduction to the MDL Principle" (2004)
 - [ ] ⭐ *Kolmogorov Complexity and Algorithmic Randomness* — Shen, Uspensky & Vereshchagin (2017)
 - [ ] ⭐ Legg — *Machine Super Intelligence* (PhD thesis, 2008)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: MDL vs. Cross-Validation on a Calibration Curve
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -49,7 +49,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] *Pattern Recognition and Machine Learning* — Bishop
 - [ ] *The Elements of Statistical Learning*
 - [ ] *Gaussian Processes for Machine Learning* — Rasmussen & Williams (2006)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Event Classifier for a Sensor Stream
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -66,7 +66,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] ⭐ Grünwald — MDL Tutorial (same item as Section 01)
 - [ ] MIT 6.S191 — Intro to Deep Learning
 - [ ] *Deep Learning* — Goodfellow et al. (chapters 6–8)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: makemore MLP, Fully Instrumented
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -88,7 +88,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Liu et al. — Swin Transformer (2021)
 - [ ] Carion et al. — DETR (2020)
 - [ ] Liu et al. — ConvNeXt: A ConvNet for the 2020s (2022)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: A CNN That Fits a Microcontroller
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -105,7 +105,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Sutskever et al. — Seq2Seq (2014)
 - [ ] Graves — "Generating Sequences with RNNs" (2013)
 - [ ] ⭐ Amodei et al. — Deep Speech 2 (2015)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Recurrent Anomaly Detector for Sensor Data
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -121,7 +121,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Radford et al. — GPT-1 (2018)
 - [ ] Karpathy — "Let's build GPT from scratch"
 - [ ] Stanford CS224n lectures
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: A GPT Trained on Your Own Corpus
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -143,7 +143,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Song et al. — Consistency Models (2023)
 - [ ] Ramesh et al. — DALL·E 2 (2022)
 - [ ] Saharia et al. — Imagen (2022)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: One Dataset, Four Generators
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -169,7 +169,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Hinton et al. — Distilling the Knowledge in a Neural Network (2015)
 - [ ] Kwon et al. — PagedAttention / vLLM (2023)
 - [ ] Leviathan et al. — Speculative Decoding (2023)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Your Own Scaling Law
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -190,7 +190,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] DeepSeek-AI — DeepSeek-V3 Technical Report (2024)
 - [ ] OpenAI — GPT-4 Technical Report (2023)
 - [ ] Raffel et al. — T5 (2019)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: A Pocket Chat Model, End to End
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -213,7 +213,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Shao et al. — DeepSeekMath / GRPO (2024)
 - [ ] Lambert et al. — Tülu 3 / RL with Verifiable Rewards (2024)
 - [ ] Lambert — *Reinforcement Learning from Human Feedback* (RLHF Book, 2025)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: AlphaZero-lite for Connect Four
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -247,7 +247,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Brohan et al. — RT-2 (2023)
 - [ ] Black et al. — π0: A Vision-Language-Action Flow Model (2024)
 - [ ] Ha & Schmidhuber — World Models (2018)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: R1-Zero at Toy Scale
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -278,7 +278,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Schaeffer et al. — Are Emergent Abilities a Mirage? (2023)
 - [ ] Chiang et al. — Chatbot Arena (2024)
 - [ ] Kwa et al. (METR) — Measuring AI Ability to Complete Long Software Tasks (2025)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Train and Interrogate a Sparse Autoencoder
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -298,7 +298,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Watson et al. — RFdiffusion (2023)
 - [ ] Trinh et al. — AlphaGeometry (2024) & Hubert et al. — AlphaProof (2025)
 - [ ] Novikov et al. — AlphaEvolve (2025)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: A GNN That Reads Schematics
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -319,7 +319,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Sculley et al. — "Hidden Technical Debt in Machine Learning Systems" (2015)
 - [ ] Zinkevich — "Rules of Machine Learning: Best Practices for ML Engineering"
 - [ ] Huyen — *Designing Machine Learning Systems* (2022)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Always-On Event Detector on a Cortex-M33
 - [ ] ✅ Check Yourself — answered from memory
 

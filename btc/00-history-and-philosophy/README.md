@@ -2,6 +2,8 @@
 
 > **Why this section matters:** Bitcoin didn't appear in a vacuum. Understanding the cypherpunk movement, failed digital cash systems, and the 2008 financial crisis gives you the context to understand *why* Bitcoin was designed the way it was.
 
+**Prerequisites:** None; this is the starting section.
+
 ---
 
 ## 🎯 Learning Objectives

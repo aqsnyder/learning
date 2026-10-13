@@ -17,7 +17,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Macbeth — *The Mechanics of Proof* (free)
 - [ ] MIT 6.042J — Mathematics for Computer Science (Meyer & Chlipala)
 - [ ] Velleman — *How To Prove It with Lean* (free)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Verified integer square root
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -33,7 +33,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Meyer — *Matrix Analysis and Applied Linear Algebra*
 - [ ] Khan Academy — Linear Algebra
 - [ ] Boyd & Vandenberghe — *Introduction to Applied Linear Algebra* (free)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Low-rank denoising of multichannel sensor data
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -50,7 +50,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Boelkins — *Active Calculus* (free)
 - [ ] Needham — *Visual Complex Analysis*
 - [ ] MIT 18.04 — Complex Variables with Applications (Orloff)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Certified fixed-point sine
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -67,7 +67,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Lawler — *Introduction to Stochastic Processes*
 - [ ] McElreath — *Statistical Rethinking* (2024 course + book)
 - [ ] Labbe — *Kalman and Bayesian Filters in Python* (free)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Noise budget and false-alarm threshold for a sensor channel
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -82,7 +82,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Beck — *First-Order Methods in Optimization*
 - [ ] Stanford Engineering Everywhere — EE364A video lectures (Boyd)
 - [ ] Kochenderfer & Wheeler — *Algorithms for Optimization* (free)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Optimal FIR filter design as a convex program
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -95,7 +95,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] MIT 6.441 — Information Theory
 - [ ] Jordan — Variational Methods for Graphical Models
 - [ ] Polyanskiy & Wu — *Information Theory: From Coding to Learning* (free draft)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: The true bit rate of a sensor
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -109,7 +109,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Bronstein et al. — Geometric Deep Learning
 - [ ] Newman — *Networks*
 - [ ] West — *Introduction to Graph Theory*
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: DC IR-drop solver for a copper pour
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -126,7 +126,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Øksendal — *Stochastic Differential Equations*
 - [ ] Åström & Murray — *Feedback Systems* (free)
 - [ ] Särkkä & Solin — *Applied Stochastic Differential Equations* (free)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: A Wien-bridge oscillator is a Hopf bifurcation
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -141,7 +141,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Lang — *Algebra*
 - [ ] Cohen & Welling — Group Equivariant Convolutional Networks (paper)
 - [ ] Group Explorer (web app)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Reed–Solomon erasure coding over GF(2⁸)
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -155,7 +155,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Edelsbrunner & Harer — *Computational Topology*
 - [ ] Carlsson — Topology and Data (paper)
 - [ ] Albin — Algebraic Topology (lectures)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Discrete curvature and Gauss–Bonnet on real meshes
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -168,7 +168,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Peters et al. — *Elements of Causal Inference* (free)
 - [ ] Schölkopf et al. — Towards Causal Representation Learning
 - [ ] Dasgupta et al. — Causal Reasoning from Meta-Reinforcement Learning (paper)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: The thermal chamber is a do-operator
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -186,7 +186,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Aaronson — Book Review: "A New Kind of Science" (2002)
 - [ ] Avigad & Massot — *Mathematics in Lean* (free)
 - [ ] Georgiev, Gómez-Serrano, Tao & Wagner — Mathematical Exploration and Discovery at Scale (2025)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Signal-flow graphs as a monoidal category
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -198,7 +198,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] MIT 6.011 — Signals, Systems and Inference (Verghese, Oppenheim & Hagelstein)
 - [ ] Prandoni & Vetterli — *Signal Processing for Communications* (free)
 - [ ] Stein & Shakarchi — *Fourier Analysis: An Introduction*
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: FFT-based ADC dynamic test (SINAD, ENOB, SFDR)
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -211,7 +211,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Silverman & Tate — *Rational Points on Elliptic Curves*
 - [ ] Boneh & Shoup — *A Graduate Course in Applied Cryptography* (free)
 - [ ] Paar, Pelzl & Güneysu — *Understanding Cryptography*
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: A tested secp256k1 + BIP-340 library
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -222,7 +222,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Trefethen & Bau — *Numerical Linear Algebra*
 - [ ] Heath — *Scientific Computing: An Introductory Survey*
 - [ ] Higham — *Accuracy and Stability of Numerical Algorithms*
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Mini-SPICE, a transient circuit simulator from scratch
 - [ ] ✅ Check Yourself — answered from memory
 

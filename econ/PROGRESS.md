@@ -14,7 +14,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] MRUniversity — Principles of Microeconomics
 - [ ] Dalio — "How The Economic Machine Works"
 - [ ] Marginal Revolution blog
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Unit-economics model and pricing memo
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -29,7 +29,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Friedman — *Price Theory*
 - [ ] Osborne & Rubinstein — *Models in Microeconomic Theory* (2020)
 - [ ] MWG — *Microeconomic Theory* (reference)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Zero-intelligence market lab
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -46,7 +46,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Spaniel — Game Theory 101
 - [ ] Axelrod & Hamilton — "The Evolution of Cooperation" (1981)
 - [ ] Osborne & Rubinstein — *Bargaining and Markets* (1990)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Focal points and level-k reasoning in humans and LLMs
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -59,10 +59,9 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Knight — *Risk, Uncertainty and Profit*
 - [ ] von Neumann & Morgenstern — *Theory of Games* (Ch. 1 & Appendix)
 - [ ] Steele & Stefánsson — "Decision Theory" (Stanford Encyclopedia of Philosophy, rev. 2025)
-- [ ] Ariely — Behavioral Economics (Coursera)
 - [ ] Hastie & Dawes — *Rational Choice in an Uncertain World*
 - [ ] Ariely — *Predictably Irrational*
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Decision-analysis toolkit and a real decision memo
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -76,7 +75,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Milgrom — Nobel Prize Lecture (2020)
 - [ ] Royal Swedish Academy — "Scientific Background: Mechanism Design Theory" (2007)
 - [ ] Royal Swedish Academy — "Stable Matching: Theory, Evidence, and Practical Design" (2012)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Allocating scarce early units
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -91,7 +90,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Stiglitz — "Information and the Change in the Paradigm in Economics" (Nobel Lecture, 2001)
 - [ ] Royal Swedish Academy — "Contract Theory" (popular background, 2016)
 - [ ] Kamenica & Gentzkow — "Bayesian Persuasion" (2011)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Information-problem audit of a hardware business
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -103,12 +102,11 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Thaler & Sunstein — "Libertarian Paternalism" (2003)
 - [ ] Kahneman, Sibony, Sunstein — *Noise*
 - [ ] Lewis — *The Undoing Project*
-- [ ] Behavioral Economics in Action (Coursera)
 - [ ] DellaVigna — "Psychology and Economics: Evidence from the Field" (2009)
 - [ ] DellaVigna & Linos — "RCTs to Scale" (2022)
 - [ ] Camerer — *Behavioral Game Theory* (2003)
 - [ ] Behavioral Scientist (magazine)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Pre-registered choice-architecture experiment
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -122,7 +120,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Thompson — Stratechery
 - [ ] Evans & Schmalensee — *Matchmakers* (2016)
 - [ ] Briscoe, Odlyzko & Tilly — "Metcalfe's Law is Wrong" (2006)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Open vs. proprietary instrument ecosystem
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -140,7 +138,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Horton, Filippas & Manning — "Homo Silicus" (2023; rev. 2026)
 - [ ] Calvano, Calzolari, Denicolò & Pastorello — "Artificial Intelligence, Algorithmic Pricing, and Collusion" (2020)
 - [ ] Tim Roughgarden's page (course materials and notes)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Algorithmic pricing and tacit collusion
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -156,7 +154,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Lalley & Weyl — "Quadratic Voting" (2018)
 - [ ] Brandt et al. (eds.) — *Handbook of Computational Social Choice* (2016)
 - [ ] Conitzer et al. — "Social Choice Should Guide AI Alignment" (2024)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Voting-rule lab and a rule for your team
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -171,11 +169,10 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Voskuil — *Cryptoeconomics*
 - [ ] Vitalik Buterin's blog
 - [ ] Halaburda, Haeringer, Gans & Gandal — "The Microeconomics of Cryptocurrencies" (2022)
-- [ ] Budish — "The Economic Limits of Bitcoin and the Blockchain" (2018; *QJE* 2025 as "Trust at Scale")
 - [ ] Roughgarden — "Transaction Fee Mechanism Design for the Ethereum Blockchain" (2020)
 - [ ] Liu, Makarov & Schoar — "Anatomy of a Run: The Terra Luna Crash" (2023)
 - [ ] BIS — "The next-generation monetary and financial system" (Annual Economic Report 2025, Ch. III)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Payments and treasury policy for a hardware shop
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -190,7 +187,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] BlueDot Impact — AI safety course (formerly AI Safety Fundamentals)
 - [ ] LessWrong — Goodhart's Law (wiki)
 - [ ] AI Alignment Forum
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Goodhart bench for code generation
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -208,7 +205,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Brynjolfsson, Chandar & Chen — "Canaries in the Coal Mine?" (2025; rev. 2026)
 - [ ] Acemoglu — "The Simple Macroeconomics of AI" (2024)
 - [ ] Korinek & Suh — "Scenarios for the Transition to AGI" (2024)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: AI adoption memo for a small hardware company
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -223,7 +220,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Camerer et al. — "Evaluating replicability of laboratory experiments in economics" (2016)
 - [ ] Brodeur, Lé, Sangnier & Zylberberg — "Star Wars: The Empirics Strike Back" (2016)
 - [ ] causaldata (example datasets, Python/R/Stata)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Causal pipeline and a pre-analysis plan
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -239,7 +236,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Glosten & Milgrom — "Bid, ask and transaction prices in a specialist market with heterogeneously informed traders" (1985)
 - [ ] Budish, Cramton & Shim — "The High-Frequency Trading Arms Race" (2015)
 - [ ] FRED — Federal Reserve Economic Data
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Order-book lab: continuous trading vs. frequent batch auctions
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -253,7 +250,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Khan — "Amazon's Antitrust Paradox" (2017)
 - [ ] Shapiro — "Antitrust in a time of populism" (2018)
 - [ ] Stigler Committee on Digital Platforms — Final Report (2019)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Pricing and competitive-strategy memo for a small instrument maker
 - [ ] ✅ Check Yourself — answered from memory
 

@@ -601,3 +601,8 @@ It falls short in three ways:
 - ml/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
 - ml/README.md legend: 🔑⭐ row now says "a core-path item" instead of "a must-read"
 - Second check (2026-10-13): `books/README.md` #4 Bishop & Bishop, *Deep Learning: Foundations and Concepts*: 🔑 removed (index-only; in no section). See the "Second check" section of `independent-check.md` for the citation fixes made in ml/08, ml/12 and ml/14.
+- Final decisions (2026-10-13):
+  - 08: Adam made core in place of FlashAttention, because Practice 2 implements it and the mini-project trains with AdamW.
+  - 12: Constitutional AI made core in place of Scaling Monosemanticity, so the core path covers alignment (objective 4).
+  - ml/README's learning path is now a generated table in recommended order: 14 after 08, and 12 before 11.
+  - The update skill now says "at most 3" and names the index files.

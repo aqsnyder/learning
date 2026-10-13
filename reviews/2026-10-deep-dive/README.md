@@ -32,7 +32,7 @@ After this review:
 | ⚛️ physics | C+ | B | Dead and misattributed Lewin lectures; Wolfram presented as established physics (🔑); no measurement physics | New 12 Measurement, Noise & Sensor Physics; engineering bridge resources; Wolfram labeled speculative |
 | 🧬 bio | B− | B+ | About one invented citation per section; 2024–26 absent (protein-design Nobel, Evo 2, base/prime editing); PROGRESS tracked ~6 items per section | 34 + 26 additions; PROGRESS rebuilt; new 12 Statistics & Experimental Design, 13 Bioinstrumentation & Lab Automation, 14 Evolution & Population Genetics; a biosecurity subsection |
 | 📈 econ | C+ | B | Priming, ego depletion, and Ariely presented as solid; no macro, econometrics, or IO; "economics of AI" with no economics | Replication caveats and evidence-check sources; 22 + 50 additions; new 12 Economics of AI, 13 Empirical Economics & Causal Inference, 14 Macro, Money & Financial Markets, 15 Industrial Organization |
-| 🧠 philosophy | C+ | B | Misattributed and nonexistent resources; one-sided LLM-understanding debate; consciousness science stopped at 2021 | 32 + 26 additions that balance each debate; Wolfram labeled; PROGRESS synced; new 12 Philosophy of Science |
+| 💭 philosophy | C+ | B | Misattributed and nonexistent resources; one-sided LLM-understanding debate; consciousness science stopped at 2021 | 32 + 26 additions that balance each debate; Wolfram labeled; PROGRESS synced; new 12 Philosophy of Science |
 | 🔌 pcb | C | B− | Rick Hartley ⭐ list half wrong; KiCad 8 and IPC-2221A out of date; no analog, precision, bring-up, or test coverage | ⭐ matched to his PDF (12 books); KiCad 10 and IPC-2152; new 12 Analog & Precision and 13 Bring-up, Test & Debug |
 | ₿ btc | C | B | Invented 🔑 first step in Lightning; nothing after 2023; hands-on work came last | 42 additions with October 2026 proposal statuses; new 12 Hands-on Labs (in parallel) and 13 Governance |
 | 🏗️ software | C+ | B | Section 09 (AI workflows) was nearly empty; flagship books an edition behind; no bench work | ~48 additions; new 12 Firmware Toolchain & Debug and 13 HIL & Lab Automation; skill mapping fixed |
@@ -46,13 +46,13 @@ After this review:
 | | Before | After |
 |---|---|---|
 | Numbered sections | 110 | **129** (19 new: 10 in the first pass, 9 in the follow-up) |
-| Resource rows in section tables* | 1,026 | **1,503**. Each added item was opened and checked for title, authors, and year. |
+| Resource rows in section tables* | 1,026 | **1,499**. Each added item was opened and checked for title, authors, and year. |
 | Logged corrections | — | **~480**: ~290 in the first pass; ~190 in the follow-up (110 flags resolved, 55 link-audit fixes, 25 second-check fixes) |
-| Pre-existing links audited | — | **704** (116 arXiv, 33 GitHub, 555 other): 63 fixed, 3 marked dead, 57 couldn't be checked ([link audit](link-audit.md)) |
+| Pre-existing links audited | — | **704** (116 arXiv, 33 GitHub, 555 other): 63 fixed, 3 dead rows removed or replaced, 57 couldn't be checked ([link audit](link-audit.md)) |
 | Broken internal links | 36 | **0** |
-| 🔑 core-path rows | 340, up to 11 per section | **311**, at most 3 per section, each section's listed in a *Core path* line |
+| 🔑 core-path rows | 340, up to 11 per section | **310**, at most 3 per section, each section's listed in a *Core path* line |
 | Sections with learning objectives / exercises / self-tests | 0 | **129**: 639 objectives, 630 exercises, 129 mini-projects, 1,032 Check Yourself questions |
-| PROGRESS checkboxes | 990 (reading only) | **2,097** (resources + practice + mini-project + self-check) |
+| PROGRESS checkboxes | 990 (reading only) | **2,093** (resources + practice + mini-project + self-check) |
 
 \* Resource rows exclude marker legends, Key Concepts tables and btc/12's lab table. The first pass reported 1,076 → 1,458 by counting every table row.
 
@@ -117,7 +117,7 @@ The first pass ran out of web budget. The follow-up finished its backlog with pa
 
 1. **Link audit of pre-existing links: done.** All 704 links were checked (see [link-audit.md](link-audit.md)):
    - 63 fixed, counting the 8 arXiv mismatches fixed in the first pass
-   - 3 marked dead
+   - 3 dead (those rows were later removed or replaced)
    - 57 couldn't be checked (bot walls, JavaScript-only pages, rate limits); four of those look dead and are worth a manual look
 2. **The nine proposed sections now exist,** with the full anatomy and every expected value recomputed:
    - [ml/14 Edge & Embedded ML](../../ml/14-edge-and-embedded-ml/) (take after 08)
@@ -137,38 +137,50 @@ The first pass ran out of web budget. The follow-up finished its backlog with pa
    - software 3, math 2, ml 2 outside the new sections
    - Status claims (BIPs, Bitcoin Core 31.0, Python 3.15, Claude Code and `AGENTS.md`) were re-checked against primary sources.
 4. **Suspect entries: all three are real.** These are *Practical PCB Design* (Smith, No Starch, 2026), the Tech Explorations KiCad course, and Dr. EMC. Dr. EMC's old link pointed at an unrelated channel; it now points at `@DrEMC-sf8rx`.
-5. **Independent-check flags:** 67 of the first pass's 73 flagged rows are resolved. The other 6 are minor and marked **still open** in [independent-check.md](independent-check.md).
+5. **Independent-check flags:** 69 of the first pass's 73 flagged rows are resolved. The other 4 are minor and marked **still open** in [independent-check.md](independent-check.md): a mirror link for Legg's thesis, unchecked chapter numbers in some math exercises, a deliberately repeated pcb question, and the checker's blind spots.
 6. **Tier lists:** done (see *Structure*).
 7. **Second independent check.** Four fresh checkers with web access checked 342 items of the follow-up work. 25 failed, mostly arithmetic in one bio exercise, a few citation details, and core-path picks that put sourceless concept rows on the must-read path. All 25 are fixed and listed at the end of [independent-check.md](independent-check.md).
 
-### Still open: your calls
+### Decisions made (final pass)
 
-- **🔑 picks you may want to reverse.** Every change is logged with its reason. The closest calls:
-  - ml/08: Adam vs. FlashAttention
-  - ml/10: Silver's course vs. DPO
-  - ml/12: Scaling Monosemanticity vs. Constitutional AI
-  - btc/10: Bitcoin Core source vs. *Programming Bitcoin*
-  - philosophy/02: *The Conscious Mind* vs. "Facing Up"
-  - software/02: K&R demoted, because the exercises need C99
-- **Duplicates across curricula:**
-  - Budish's paper has a full row in both econ/10 and btc/09 (its home).
-  - Holmes & Huber has a full row in bio/04, although bio/12 is now its home.
-  
-  Turning each into a cross-link means deleting a row.
-- **econ/11's new title** ("AI Alignment through an Economic Lens"). Keep it, or revert.
-- **Dead or retired rows still in place:** two Coursera behavioral-economics courses (econ/03, econ/06) and Robert Wright's Coursera course (philosophy/10). Delete them or replace them.
-- **Your KiCad template repo** (`aqsnyder/KiCAD_Template_Snyder`) returns 404 to anonymous requests. Confirm it's private, not renamed.
-- **Vendor and tool notes worth knowing:**
+You asked for my best calls on the open questions. Here is what was done:
+
+- **Core paths:**
+  - **ml/08:** Adam replaces FlashAttention. Practice 2 implements Adam, and the mini-project trains with AdamW.
+  - **ml/12:** Constitutional AI replaces Scaling Monosemanticity, so the core path now covers alignment (objective 4) as well as interpretability.
+  - **pcb/02:** the KiCad Library Conventions replace your private template. The template stays in the section as a personal reference.
+  - **Kept as they were:** DPO over Silver's course (ml/10), the Bitcoin Core source over *Programming Bitcoin* (btc/10), *Modern C* over K&R (software/02), and *The Conscious Mind* (philosophy/02).
+- **More concrete core paths:**
+  - **pcb/00** names the four *Art of Electronics* chapters its objectives use, and its prerequisites now list the bench gear the exercises need.
+  - **pcb/08** starts from Hartley's *The Extreme Importance of PC Board Stack-Up* instead of a YouTube search.
+  - **pcb/07:** the search-link row is off the core path.
+  - **pcb/10** adds TI's AN-2020 on thermal design.
+  - **software/02 and 07** link the Quantum Leaps course playlist instead of the whole channel.
+- **One home per topic:**
+  - Budish's paper now lives only in btc/09, and Holmes & Huber only in bio/12.
+  - In econ/10 and bio/04, the duplicate rows became short "Also used here" notes that link to the home section.
+  - PROGRESS now tracks each item once.
+- **econ/11's title** stays "AI Alignment through an Economic Lens". The economics of AI moved to econ/12, and the title says what is left.
+- **Dead rows:**
+  - The two retired Coursera courses in econ/03 and econ/06 are removed.
+  - In philosophy/10, Robert Wright's retired course is replaced by his book *Why Buddhism Is True* (2017, checked against a library catalogue). It is placed right before Thompson's critique of it.
+- **Your KiCad template repo** is private. It returns 404 to anonymous requests with no redirect, and your only public repo is `isi_openmv`, so it wasn't renamed. The link stays, labelled as private.
+- **Update skills:** all four (ml, pcb, btc, software) now say "at most 3 🔑", keep the Core path line in sync, and run `tools/build_index.py`. The ml skill also says to update the books, courses and blogs indexes.
+- **Vendor and tool notes worth knowing** (no action needed):
   - ST now marks X-CUBE-AI as not recommended for new designs (noted in ml/04 and ml/14).
   - KiCad's SWIG Python bindings are deprecated in favour of the IPC API (pcb/11).
-- **Three update skills still need a one-line change:** ml, pcb and btc. Their rule 6 still says "many sections still exceed [~3 🔑]". The software skill and the root `audit-curriculum` skill already have the new wording. Suggested replacement: *"Use 🔑 sparingly — at most 3 core items per section. Each section's Suggested Order opens with a Core path line naming its 🔑 items; if you add or remove a 🔑, update that line too."*
+- **Newcomer path:**
+  - The main page now opens with a five-minute start, a pick-a-topic table and a collapsible index of all 129 sections.
+  - Each curriculum's learning path is a linked table in recommended order, showing every section's core path.
+  - `tools/build_index.py` generates both from the section READMEs, and `check_repo.py` fails if they go stale.
+  - Philosophy's icon is now 💭, so it no longer shares 🧠 with ml.
 
 ---
 
 ## Reviewing the branch
 
 ```bash
-git log --oneline master..review/2026-10-deep-dive     # 20 commits: two passes × (9 curricula + repo-level)
+git log --oneline master..review/2026-10-deep-dive     # 21 commits: two passes × (9 curricula + repo-level), then one final pass
 git diff --stat master...review/2026-10-deep-dive
 git switch review/2026-10-deep-dive
 python tools/check_repo.py              # expect: 0 problems

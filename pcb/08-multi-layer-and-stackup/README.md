@@ -23,7 +23,7 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
-| 🔑 | Video | Rick Hartley Stackup Design lectures | Rick Hartley | [Search YouTube](https://www.youtube.com/results?search_query=rick+hartley+stackup) | How stackup determines SI and EMC performance |
+| 🔑 | Video | The Extreme Importance of PC Board Stack-Up (AltiumLive, 2018) | Rick Hartley | [Altium](https://resources.altium.com/p/the-extreme-importance-of-pc-board-stack-up-rick-hartley) | Hartley's talk, with downloadable slides, on why the stackup sets SI and EMC performance. His other stackup talks: [search YouTube](https://www.youtube.com/results?search_query=rick+hartley+stackup) |
 | 🔑 | Video Series | Robert Feranec multi-layer PCB design | Robert Feranec | [YouTube](https://www.youtube.com/@RobertFeranec) | Complex multi-layer layout techniques |
 | ⭐ | Book | Right the First Time | Lee Ritchey | [Speeding Edge](https://speedingedge.com/product-category/handbook/) | Detailed stackup engineering (Rick's reading list) |
 | 🔑 | Tool | Saturn PCB Toolkit stackup calculator | — | [Link](https://saturnpcb.com/saturn-pcb-toolkit/) | Impedance and stackup calculation tool |
@@ -38,9 +38,9 @@ After this section you can:
 
 ## Suggested Order
 
-**Core path (🔑):** Rick Hartley stackup lectures → Saturn PCB Toolkit → Feranec multi-layer series
+**Core path (🔑):** Hartley, *The Extreme Importance of PC Board Stack-Up* → Saturn PCB Toolkit → Feranec multi-layer series
 
-1. **Rick Hartley Stackup lectures** — Understand why stackup is the single most important design decision.
+1. **Hartley — The Extreme Importance of PC Board Stack-Up** — Understand why stackup is the single most important design decision.
 2. **Saturn PCB Toolkit** — Install and experiment with impedance calculations for different stackups.
 3. **4-layer vs 6-layer vs 8-layer tradeoffs** — Learn when each layer count is appropriate.
 4. **Impedance-controlled stackups** — Understand how to work with your fab house on controlled impedance.

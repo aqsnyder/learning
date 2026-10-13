@@ -2,7 +2,7 @@
 
 > **Why this section matters:** Bitcoin is built on cryptographic primitives. You don't need to be a cryptographer, but you need to understand hashing, public key cryptography, and digital signatures to truly understand Bitcoin.
 
-### Prerequisites
+## Prerequisites
 - Basic math (modular arithmetic helps; Programming Bitcoin Ch. 1–2 builds finite fields and elliptic curves from scratch)
 - For the underlying algebra and number theory (groups, finite fields, discrete logs, elliptic-curve cryptography), see the math curriculum: [math/08 — Abstract Algebra](../../math/08-abstract-algebra/README.md) for groups and finite fields, then [math/13 — Number Theory and Cryptography](../../math/13-number-theory-and-cryptography/README.md) for discrete logs, the elliptic-curve group law, ECDSA and Schnorr (written as this section's companion)
 

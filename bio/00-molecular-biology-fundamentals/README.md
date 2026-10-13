@@ -4,6 +4,10 @@
 
 Molecular biology is the foundation upon which all modern life sciences are built. Understanding the central dogma — how genetic information flows from DNA to RNA to protein — is essential for grasping everything from how diseases arise to how drugs work to how evolution operates at the molecular level. This section covers cell structure, gene expression, DNA replication, transcription, and translation — the core machinery of life. Without a firm grasp of these concepts, later topics like genomics, structural biology, and computational biology will remain opaque. Whether your goal is drug design, protein engineering, or understanding the latest AlphaFold predictions, it all starts here.
 
+## Prerequisites
+
+None; this is the starting section. High-school chemistry helps.
+
 ## 🎯 Learning Objectives
 
 After this section you can:

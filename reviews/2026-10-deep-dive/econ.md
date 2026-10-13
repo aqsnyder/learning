@@ -548,3 +548,7 @@ Other gaps checked, and where they now live:
   - 03: SEP "Decision Theory" (Steele & Stefánsson) made 🔑, so the normative side is on the core path.
   - 12: Acemoglu, "The Simple Macroeconomics of AI" made 🔑, so the skeptical estimate is on the core path.
   - Each Core path line was updated to match.
+- Final decisions (2026-10-13):
+  - 10: the Budish row became an "Also used here" note pointing to btc/09, its home, and its PROGRESS line was dropped.
+  - The retired Coursera courses in 03 (Ariely) and 06 (Behavioral Economics in Action) were removed, together with their Suggested Order steps, PROGRESS lines, exercise mentions and the courses index row.
+  - Section 11's title is kept.

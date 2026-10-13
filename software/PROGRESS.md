@@ -16,7 +16,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Big-O complexity analysis
 - [ ] Data structures recognition
 - [ ] Recursion and dynamic programming
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Timer-Queue Showdown
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -35,7 +35,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Data model (__dunder__ methods)
 - [ ] Generators and lazy evaluation
 - [ ] Decorators and context managers
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Typed Instrument Library
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -57,7 +57,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Register manipulation and memory-mapped I/O
 - [ ] Interrupt handling and ISR design
 - [ ] HAL design patterns
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Reviewed UART Command Shell
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -74,7 +74,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Reading unfamiliar codebases technique
 - [ ] Static analysis as a reading aid
 - [ ] Security review practice
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: ARCHITECTURE.md for a Dependency
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -94,7 +94,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] SOLID principles
 - [ ] Microservices vs monolith trade-offs
 - [ ] Event-driven architecture, CQRS
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Lab-Automation Walking Skeleton
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -112,7 +112,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Mutation testing
 - [ ] Static analysis tools setup
 - [ ] CI/CD pipeline setup
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Bench HIL Rig
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -130,7 +130,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Infrastructure as Code (Terraform/Ansible basics)
 - [ ] *System Design Interview* (Vols 1 & 2) — Xu
 - [ ] *Release It!* (2nd ed) — Nygard
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Test-Data Pipeline in Compose
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -154,7 +154,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] How to debug a HardFault on an ARM Cortex-M MCU — Coleman (Interrupt)
 - [ ] From Zero to main() series — Baldassari (Interrupt)
 - [ ] *The Embedded Rust Book* (optional)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Event-Driven Data Logger
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -172,7 +172,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] 🤖 Package hallucinations paper — Spracklen et al. (USENIX Security 2025)
 - [ ] EU Cyber Resilience Act overview
 - [ ] Threat Modeling Manifesto
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Hardened Firmware Update Path
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -199,7 +199,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Model Context Protocol (MCP)
 - [ ] The lethal trifecta for AI agents — Willison
 - [ ] Understanding Spec-Driven-Development — Böckeler
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Architect-Only Build
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -217,7 +217,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] How to Write a Git Commit Message — Beams
 - [ ] pre-commit framework setup
 - [ ] 🤖 git worktree for parallel agent sessions
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Repo Hygiene Kit
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -235,7 +235,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Mentoring and code review culture
 - [ ] 🤖 Leading in the AI era
 - [ ] *The Manager's Path* — Fournier
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Decision Portfolio
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -250,7 +250,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] Reset-cause and fault telemetry
 - [ ] TrustZone-M builds and debugging
 - [ ] 🤖 Firmware an agent can verify
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Agent-Ready Firmware Harness
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -266,7 +266,7 @@ Track your progress through the Software Engineering curriculum. Check off items
 - [ ] The firmware test pyramid
 - [ ] HIL rigs as CI infrastructure
 - [ ] 🤖 HIL as the agent's ground truth
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Hardware CI Pipeline
 - [ ] ✅ Check Yourself — answered from memory
 

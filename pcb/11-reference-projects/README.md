@@ -6,6 +6,10 @@ Studying real designs is one of the best ways to learn. Read other engineers' sc
 
 > Study these projects by downloading their design files and opening them in KiCad or your EDA tool. Analyze component placement, routing strategies, and stackup choices.
 
+## Prerequisites
+
+Sections 00–09: enough schematic and layout background to read other engineers' design files in KiCad.
+
 ---
 
 ## 🎯 Learning Objectives

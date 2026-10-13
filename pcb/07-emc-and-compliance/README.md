@@ -30,7 +30,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|-----------|------|-------------|
 | 🔑⭐ | 📕 Book | Electromagnetic Compatibility Engineering (2009) | Henry W. Ott | [DOI](https://doi.org/10.1002/9780470508510) | The definitive EMC reference. Comprehensive, rigorous, and practical. Every serious PCB designer should own this. |
-| 🔑 | 🎥 Video Series | Rick Hartley — EMC Lectures | Rick Hartley | [Search YouTube](https://www.youtube.com/results?search_query=Rick+Hartley+EMC) | Foundational EMC thinking from Altium Academy, Sierra Circuits, and conference talks. Rick connects grounding, SI, and EMC into one coherent framework. |
+| | 🎥 Video Series | Rick Hartley — EMC Lectures | Rick Hartley | [Search YouTube](https://www.youtube.com/results?search_query=Rick+Hartley+EMC) | Foundational EMC thinking from Altium Academy, Sierra Circuits, and conference talks. Rick connects grounding, SI, and EMC into one coherent framework. |
 | 🔑 | 🎓 Course | LearnEMC | Todd Hubing | [learnemc.com](https://learnemc.com/) | Free, structured EMC curriculum (levels K–12) by Todd Hubing covering coupling mechanisms, grounding, filtering, shielding, crosstalk and PCB layout, plus a weekly EMC question. The best free self-study path through this section. |
 | | 🎥 YouTube Channel | Dr. EMC | Anton Tichenko | [YouTube](https://www.youtube.com/@DrEMC-sf8rx) | Electromagnetics and EM-compliance videos by a practising electronics design engineer (see the Section 06 row). An optional companion to LearnEMC. |
 | | 📕 Book | Noise Reduction Techniques in Electronic Systems | Henry Ott | — | Classic predecessor to EMC Engineering. Foundational noise and interference concepts that remain relevant decades later. Not on Rick's list: his list names Ott's *EMC Engineering*, which grew out of this book. |
@@ -44,9 +44,9 @@ After this section you can:
 
 ## Suggested Order
 
-**Core path (🔑):** Rick Hartley EMC lectures → LearnEMC → Ott's *Electromagnetic Compatibility Engineering*
+**Core path (🔑):** LearnEMC → Ott's *Electromagnetic Compatibility Engineering*
 
-1. **Rick Hartley EMC lectures** — Start here to see how grounding and SI principles connect to EMC
+1. **Rick Hartley EMC lectures** (optional warm-up) — See how grounding and SI principles connect to EMC; his grounding talk in [Section 05](../05-power-and-grounding/README.md) is the best single starting point
 2. **LearnEMC** — Work through the structured levels alongside the books
 3. **Electromagnetic Compatibility Engineering (Ott)** — Read the key chapters on coupling mechanisms, shielding, and filtering
 4. **Dr. EMC** — Optional: EM-compliance videos alongside LearnEMC

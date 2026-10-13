@@ -4,6 +4,10 @@
 
 Understanding the history of artificial intelligence helps you appreciate *why* certain ideas succeeded while others stalled for decades. Many "modern" breakthroughs — neural networks, backpropagation, even attention — have roots stretching back to the 1940s and 1950s. By studying the intellectual lineage, you'll see how constraints in compute, data, and theory shaped the field's trajectory, and you'll develop the intuition to recognize which ideas are genuinely novel versus rediscoveries with better hardware.
 
+## Prerequisites
+
+None; this is the starting section. Some algebra and a little calculus help with the original papers, and [Section 01](../01-math-foundations/README.md) covers the math properly.
+
 ---
 
 ## 🎯 Learning Objectives

@@ -4,6 +4,10 @@
 
 Before engaging with the philosophy of mind and AI, you need a toolkit: how to construct valid arguments, evaluate evidence, and distinguish knowledge from belief. Epistemology (the study of knowledge) and logic provide the bedrock for every subsequent section. Without these foundations, philosophical arguments about consciousness or AI ethics will feel like opinions rather than structured reasoning. This section equips you with the intellectual framework that makes rigorous philosophical inquiry possible.
 
+## Prerequisites
+
+None; this is the starting section.
+
 ## 🎯 Learning Objectives
 
 After this section you can:

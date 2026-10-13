@@ -558,3 +558,4 @@ Eight audit entries in btc/ were not `ok`. Applied 2, already fixed 0, annotated
   - 06: 🔑 moved from "Run your own full node" (a sourceless practice row) to *Mastering Bitcoin* Ch. 9.
   - 08: 🔑 moved from the Cold storage and Multisig concept rows to *Mastering Bitcoin* Ch. 13 and BIP 174.
   - `courses/README.md`: 🔑 removed from #2 Antonopoulos (now core in no section) and #7 Blockchain and Money (index-only). `btc/README.md` Key Resources: the Antonopoulos row removed.
+- Final decisions (2026-10-13): the update skill's rule 6 now says "at most 3" and to run `tools/build_index.py` after a 🔑 change.

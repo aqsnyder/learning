@@ -17,7 +17,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Bitcoin's Academic Pedigree — Narayanan & Clark (2017)
 - [ ] Bit Gold — Nick Szabo (2005)
 - [ ] Bitcoin whitepaper (annotated) — Fermat's Library
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Why Bitcoin Looks the Way It Does
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -32,7 +32,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Programming Bitcoin, Ch. 1-3
 - [ ] Mastering Bitcoin, Ch. 8: Digital Signatures
 - [ ] Elliptic Curve Cryptography: a gentle introduction — Andrea Corbellini (2015)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Signing Token on a Microcontroller
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -46,7 +46,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] UTXO model
 - [ ] Merkle trees
 - [ ] Block structure
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Shadow UTXO Set
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -62,7 +62,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Learn Me A Bitcoin: Block Reward — Greg Walker
 - [ ] Learn Me A Bitcoin: Mining
 - [ ] Mining pools and hashrate distribution
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Toy Stratum Pool
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -78,7 +78,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] btcdeb Script debugger
 - [ ] Bitcoin Developer Reference: Transactions (background)
 - [ ] Bitcoin Transaction Decoder (decode raw transactions by hand)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Mohammed's Company Vault
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -94,7 +94,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Backup and recovery strategies
 - [ ] Output Script Descriptors — BIPs 380–387
 - [ ] BIP 379: Miniscript (+ BIP 388 Wallet Policies)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Hardware Seed Generator
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -112,7 +112,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] BIP 324: Version 2 P2P Encrypted Transport
 - [ ] Bitcoin Optech: Cluster mempool
 - [ ] Bitcoin Core development and transaction relay policy — Bitcoin Core contributors (2025)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Compact-Block Reconstruction Monitor
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -131,7 +131,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Chaincode Labs: Lightning Protocol Development seminar
 - [ ] Bitcoin Optech: Offers (BOLT 12) and Splicing
 - [ ] Andreas Antonopoulos Lightning talks
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Route-Reliability Experiment
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -148,7 +148,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Bitcoin Privacy Guide (bitcoiner.guide)
 - [ ] Andreas Antonopoulos on privacy
 - [ ] Bitcoin Wiki: Privacy
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Air-Gapped 2-of-3 on Signet
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -167,7 +167,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] *The Sovereign Individual* — Davidson & Rees-Mogg
 - [ ] The Economic Limits of Bitcoin and the Blockchain — Eric Budish (2018; revised 2022 as "Trust at Scale")
 - [ ] On the Instability of Bitcoin Without the Block Reward — Carlsten, Kalodner, Weinberg & Narayanan (2016)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Claims Ledger for the Bitcoin Economic Thesis
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -187,7 +187,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Bitcoin Developer Documentation (background; unmaintained)
 - [ ] Bitcoin Development Mailing List
 - [ ] Cryptocurrency Engineering and Design (MIT MAS.S62) — Narula & Dryja (2018)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Differential Test Harness
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -216,7 +216,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Runes
 - [ ] Learn Me A Bitcoin: Taproot
 - [ ] Payjoin improvements (BIP 77)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Taproot Treasury Vault
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -234,7 +234,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Lab 5 — Lightning bench
 - [ ] Lab 6 — Taproot workbench
 - [ ] Lab 7 — Embedded signer, hardware in the loop (optional)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: One-Command Bitcoin Lab
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -248,7 +248,7 @@ Track your progress through the Bitcoin curriculum. Check off items as you compl
 - [ ] Bitcoin Optech: OP_CHECKTEMPLATEVERIFY topic
 - [ ] Bitcoin Optech Newsletter #385: 2025 Year-in-Review
 - [ ] Chaincode syllabus: Soft Forks & Consensus Changes readings
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Governance Case File — SegWit Activation
 - [ ] ✅ Check Yourself — answered from memory
 

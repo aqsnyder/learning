@@ -4,6 +4,10 @@
 
 Economics is fundamentally a way of thinking — a framework for understanding how people respond to incentives, make tradeoffs, and coordinate through markets. Before diving into formal models, you need to internalize the core principles: opportunity cost, marginal analysis, the power of prices, and the seen-vs-unseen effects of policies. These mental models will reappear in every subsequent section, from game theory to mechanism design to AI alignment. Economists don't just study markets — they study human decision-making, and that's what makes this foundation essential.
 
+## Prerequisites
+
+None; this is the starting section.
+
 ---
 
 ## 🎯 Learning Objectives

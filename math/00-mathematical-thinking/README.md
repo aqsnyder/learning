@@ -4,6 +4,10 @@
 
 Before you can learn any advanced mathematics, you need to learn how mathematicians *think*. This section builds the foundational skills of logical reasoning, proof writing, and problem-solving strategy that underpin every other section in this curriculum. Without these skills, you'll be memorizing formulas instead of understanding structures — and you'll hit a wall the moment you encounter unfamiliar territory. Mathematical maturity isn't about knowing more theorems; it's about being comfortable with abstraction, rigor, and the creative process of discovery.
 
+## Prerequisites
+
+None; this is the starting section. High-school algebra is enough.
+
 ---
 
 ## 🎯 Learning Objectives

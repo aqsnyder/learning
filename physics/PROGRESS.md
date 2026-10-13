@@ -13,7 +13,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] 3Blue1Brown — Essence of Calculus
 - [ ] Susskind — Classical Mechanics (Theoretical Minimum)
 - [ ] Goldstein — *Classical Mechanics* (advanced chapters)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Tennis-Racket Theorem with an IMU
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -28,7 +28,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] MIT 2.71 — Optics (OCW, Spring 2009)
 - [ ] Saleh & Teich — *Fundamentals of Photonics* (3rd ed., 2019)
 - [ ] CU Boulder — Optical Engineering Specialization (Coursera, McLeod) (optional, paid)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Optics Model of a Lens-Based IR Motion Sensor
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -41,7 +41,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Sethna — *Statistical Mechanics: Entropy, Order Parameters, and Complexity*
 - [ ] Reif — *Fundamentals of Statistical and Thermal Physics*
 - [ ] Johnson & Nyquist — "Thermal Agitation of Electricity/Electric Charge in Conductors" (1928)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Signal and Noise Budget for a Pyroelectric IR Detector
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -54,7 +54,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] 3Blue1Brown — Divergence and Curl
 - [ ] Ellingson — *Electromagnetics*, Vol. 1–2 (2018, 2020)
 - [ ] Haus & Melcher — *Electromagnetic Fields and Energy* (1989)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Impedance Test Coupon (Solver → KiCad → TDR)
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -68,7 +68,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Sakurai — *Modern Quantum Mechanics*
 - [ ] Cohen-Tannoudji — *Quantum Mechanics* (reference)
 - [ ] Miller — *Quantum Mechanics for Scientists and Engineers* (2008)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Wave Packets and Resonant Tunneling
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -82,7 +82,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Misner, Thorne & Wheeler — *Gravitation* (selected chapters)
 - [ ] Ashby — "Relativity in the Global Positioning System" (2003)
 - [ ] LIGO/Virgo — "Observation of Gravitational Waves from a Binary Black Hole Merger" (2016)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: A Schwarzschild Ray Tracer
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -95,7 +95,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Landau, Páez & Bordeianu — *A Survey of Computational Physics*
 - [ ] Kinder & Nelson — *A Student's Guide to Python for Physical Modeling*
 - [ ] Dokken — *The FEniCSx Tutorial*
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Thermal Model of a Real PCB
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -112,7 +112,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Krantz et al. — "A Quantum Engineer's Guide to Superconducting Qubits" (2019)
 - [ ] Google Quantum AI — "Quantum Error Correction Below the Surface Code Threshold" (2024)
 - [ ] Gidney — "How to Factor 2048 Bit RSA Integers with Less Than a Million Noisy Qubits" (2025)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Characterize a Quantum Processor Like an Instrument
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -125,7 +125,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Anderson — "More Is Different" (1972)
 - [ ] Simon — The Oxford Solid State Basics lectures (2014)
 - [ ] Hu — *Modern Semiconductor Devices for Integrated Circuits* (2010)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: One Transistor, Two Constants
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -140,7 +140,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] NCFMF — National Committee for Fluid Mechanics Films (1961–1969)
 - [ ] Barba & Forsyth — CFD Python: 12 Steps to Navier–Stokes
 - [ ] Lienhard & Lienhard — *A Heat Transfer Textbook* (6th ed., 2024)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Natural Convection in a Sealed Enclosure
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -153,7 +153,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] May — "Simple Mathematical Models with Very Complicated Dynamics" (1976)
 - [ ] Lorenz — *The Essence of Chaos*
 - [ ] Peitgen, Jürgens & Saupe — *Chaos and Fractals*
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Chaos on the Bench with Chua's Circuit
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -174,7 +174,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Wolfram — *A New Kind of Science* (2002) (optional, speculative)
 - [ ] Aaronson — Review of *A New Kind of Science* (2002)
 - [ ] Wolfram Physics Project (2020+) (optional, speculative)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: PINN vs Solver on a Thermal Inverse Problem
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -194,7 +194,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Palmer & Grant — *The Art of Radiometry* (2009)
 - [ ] Moore, Davis & Coplan — *Building Scientific Apparatus* (4th ed., 2009)
 - [ ] Degen, Reinhard & Cappellaro — "Quantum Sensing" (2017)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Chopped Thermopile Radiometer
 - [ ] ✅ Check Yourself — answered from memory
 

@@ -4,6 +4,8 @@
 >
 > **Status snapshot (October 2026):** no consensus change has activated since Taproot (November 2021). Everything under "Covenant Proposals" and "Other Open Soft-Fork Proposals" is a proposal, whatever its BIP status — under BIP 3, "Complete" means the authors consider the spec finished, not that it is deployed. Read [Section 13 — Governance and Protocol Change](../13-governance-and-protocol-change/README.md) first for how proposals become rules.
 
+**Prerequisites:** [Section 04](../04-transactions-and-scripting/README.md) for Script and Taproot outputs, [Section 05](../05-wallets-and-key-management/README.md) for keys and descriptors, [Section 07](../07-lightning-network/README.md) for Lightning, and [Section 13](../13-governance-and-protocol-change/README.md) for how soft forks are proposed and activated.
+
 ---
 
 ## 🎯 Learning Objectives

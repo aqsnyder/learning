@@ -17,7 +17,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] iBiology — Cell biology talks
 - [ ] Lodish et al. — *Molecular Cell Biology* (2021)
 - [ ] Schrödinger — *What Is Life?*
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Gene datasheet
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -31,7 +31,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] MIT 7.05 — General Biochemistry
 - [ ] Dill & MacCallum — "The Protein-Folding Problem, 50 Years On" (2012)
 - [ ] Voet & Voet — *Biochemistry*
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: Enzyme assay, simulated end to end
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -49,7 +49,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] 1000 Genomes Project Consortium — Integrated map of genetic variation (2012)
 - [ ] Karczewski et al. — gnomAD mutational constraint spectrum (2020)
 - [ ] Griffiths et al. — *Introduction to Genetic Analysis*
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: Population history of one variant
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -66,7 +66,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Petsko & Ringe — *Protein Structure and Function*
 - [ ] Jumper et al. — AlphaFold 2 (Nature 2021)
 - [ ] Varadi et al. — AlphaFold Protein Structure Database (2022)
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: Structure review memo for one disease variant
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -80,13 +80,12 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Compeau & Pevzner — *Bioinformatics Algorithms* (2024)
 - [ ] UCSC Genome Browser — Guides and tutorials
 - [ ] Altschul et al. — Gapped BLAST and PSI-BLAST (1997)
-- [ ] Holmes & Huber — *Modern Statistics for Modern Biology* (2019)
 - [ ] EMBL-EBI — Bioinformatics training
 - [ ] Heumos, Schaar et al. — Single-Cell Best Practices (2023)
 - [ ] Durbin et al. — *Biological Sequence Analysis* (Ch. 7–9)
 - [ ] Mount — *Bioinformatics: Sequence and Genome Analysis*
 - [ ] Higgins & Taylor — *Bioinformatics: Sequence, Structure, and Databanks*
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: A small, honest sequence-search engine
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -105,7 +104,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Ideker, Galitski & Hood — A new approach to decoding life (2001)
 - [ ] CellDesigner — Build and simulate a network model
 - [ ] Klipp et al. — *Systems Biology: A Textbook*
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: A gene circuit analysed as a control system
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -121,7 +120,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] TeachOpenCADD — CADD notebooks
 - [ ] Schneider — Automating drug discovery (2018)
 - [ ] Leach — *Molecular Modelling* (Ch. 9–12) + Klebe — *Drug Design*
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: One honest virtual screen, end to end
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -139,7 +138,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Nobel Committee for Chemistry — Scientific background, Chemistry 2024
 - [ ] Rosetta Commons — Install and run the tutorials
 - [ ] Baker Lab — Protein design resources
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: Design and triage a small binder
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -157,7 +156,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Musunuru et al. — Patient-specific in vivo gene editing (NEJM 2025)
 - [ ] Topol — *Deep Medicine*
 - [ ] NIH All of Us — Research program
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: Trace one disease variant end to end
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -174,7 +173,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Allen Brain Atlas — Exploration
 - [ ] Dorkenwald et al. — FlyWire adult brain connectome (Nature 2024)
 - [ ] Human Connectome Project — Exploration
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: Spike sorting from first principles, and where it breaks
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -191,7 +190,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Lee et al. — BioBERT (2020)
 - [ ] Cui et al. — scGPT (Nature Methods 2024)
 - [ ] Urbina et al. — Dual use of AI-powered drug discovery (2022)
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: Audited replication of one AI-for-biology claim
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -215,7 +214,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] NASEM — Biodefense in the Age of Synthetic Biology (2018)
 - [ ] Sandbrink — AI and biological misuse: language models vs biological design tools (2023)
 - [ ] Wittmann et al. — Strengthening nucleic acid biosecurity screening (Science 2025)
-- [ ] 🛠️ Practice exercises 1–6
+- [ ] 🛠️ Practice exercises (at least 2 of 1–6)
 - [ ] 🏗️ Mini-project: One frontier — one build and one memo
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -227,7 +226,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Ioannidis — Why most published research findings are false (2005)
 - [ ] Leek et al. — Batch effects in high-throughput data (2010)
 - [ ] Love, Huber & Anders — DESeq2 (2014)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Pre-register, then re-analyse
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -241,7 +240,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Assay Guidance Manual — Markossian et al. (NCBI Bookshelf)
 - [ ] Wierenga et al. — PyLabRobot (2023)
 - [ ] Rapp, Bremer & Romero — Self-driving laboratories (2024)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: One instrument, specified from the physics up
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -253,7 +252,7 @@ Each section below lists every resource in that section's README, in roughly the
 - [ ] Nielsen & Slatkin — *An Introduction to Population Genetics* (2013)
 - [ ] Nguyen et al. — IQ-TREE (2015)
 - [ ] Good et al. — The dynamics of molecular evolution over 60,000 generations (2017)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Is this locus under selection? A falsifiable answer
 - [ ] ✅ Check Yourself — answered from memory
 

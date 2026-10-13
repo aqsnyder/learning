@@ -14,7 +14,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] *Practical Electronics for Inventors* — Scherz & Monk
 - [ ] LTspice — simulate the circuits you study
 - [ ] TI Precision Labs — Op Amps
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Bench Impedance Analyzer
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -25,7 +25,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Altium Academy basics
 - [ ] PCB materials (FR-4 vs. Rogers, etc.)
 - [ ] Sierra Circuits knowledge base
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Fab Notes for Your Template
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -37,7 +37,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Robert Feranec schematic review series
 - [ ] KiCad Library Conventions (KLC)
 - [ ] ST AN4488 — Getting started with STM32 hardware development (or your family's equivalent)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Library QA Bot
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -50,7 +50,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Phil's Lab component selection guides
 - [ ] Maxim AN5527 — MLCC DC-bias and temperature derating (2012)
 - [ ] J-STD-048A / J-STD-046A — EOL and change-notification standards (2025)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Release BOM with Locked and Flexible Lines
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -64,7 +64,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Altium Academy routing tutorials
 - [ ] Phil's Lab — KiCad 6 STM32 PCB Design Full Tutorial (#65, 2022)
 - [ ] ST AN2867 — Oscillator design and crystal layout (2026)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Precision Channel Layout Block
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -83,7 +83,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] ADI MT-031 — Grounding Data Converters (AGND/DGND) (2008)
 - [ ] ADI AN-136 — Switching-regulator PCB layout (Henry Zhang)
 - [ ] FastHenry2 — 3D inductance cross-check (optional)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: PDN and Grounding Plan for a Mixed-Signal Board
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -101,7 +101,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] ⭐ *High-Speed Digital System Design* — Hall, Hall & McCall (2000)
 - [ ] TI SPRAAR7 — High-Speed Interface Layout Guidelines (2023)
 - [ ] TI SNLA387 — Ethernet PHY PCB Design Layout Checklist (2021)
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: SI Test-Coupon Board
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -118,12 +118,12 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] ⭐ *PCB Design for Real-World EMI Control* — Archambeault (2002)
 - [ ] ⭐ *Digital Design for Interference Specifications* — Terrell & Keenan (1999)
 - [ ] ⭐ *Introduction to Electromagnetic Compatibility* — Paul (2006)
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Pre-Compliance Lab in a Box
 - [ ] ✅ Check Yourself — answered from memory
 
 ## Section 08 — Multi-Layer Design and Stackup
-- [ ] Rick Hartley stackup lectures
+- [ ] Rick Hartley — *The Extreme Importance of PC Board Stack-Up* (AltiumLive, 2018)
 - [ ] Robert Feranec multi-layer design
 - [ ] ⭐ *Right the First Time* — Ritchey (stackup chapters)
 - [ ] Saturn PCB Toolkit stackup calculator
@@ -131,7 +131,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Blind and buried vias
 - [ ] Impedance-controlled stackups
 - [ ] IPC-2221 materials and impedance sections
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Stackup Spec Package
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -148,7 +148,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] kicad-cli — scripted ERC/DRC and outputs
 - [ ] KiBot — CI-generated release outputs
 - [ ] KiKit — panelization
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Production Release Kit
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -164,7 +164,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] TI AN-2020 — Thermal Design By Insight, Not Hindsight (2013)
 - [ ] openEMS + gerber2ems trace simulation
 - [ ] KiCad IPC API + kicad-python
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Thermal Characterization Board
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -181,7 +181,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] ThunderScope — study the instrument front end
 - [ ] Glasgow Interface Explorer — study the I/O protection
 - [ ] J-SMU — study a complete source-measure unit
-- [ ] 🛠️ Practice exercises 1–4
+- [ ] 🛠️ Practice exercises (at least 2 of 1–4)
 - [ ] 🏗️ Mini-project: Review One, Rebuild a Piece
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -196,7 +196,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] ADC drive, references and mixed-signal partitioning
 - [ ] Source-measure (force/sense) architecture
 - [ ] High-gain sensor front ends: dynamic range and overload recovery
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Precision Current-Measurement Channel
 - [ ] ✅ Check Yourself — answered from memory
 
@@ -211,7 +211,7 @@ Track your progress through the PCB design curriculum. Check off items as you co
 - [ ] Viveris JTAG Boundary Scanner — BSDL interconnect test
 - [ ] Production test: fixtures, sequencing, limits and traceability
 - [ ] JJS Manufacturing — Design Guidelines for In-Circuit Testability
-- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🛠️ Practice exercises (at least 2 of 1–5)
 - [ ] 🏗️ Mini-project: Pilot-Run Test Station
 - [ ] ✅ Check Yourself — answered from memory
 

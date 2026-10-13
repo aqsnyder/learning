@@ -11,7 +11,7 @@ Every numbered section follows the same anatomy: **Why → Prerequisites → �
 | Step | What to do | Why it works |
 |------|-----------|--------------|
 | 1. **Preview** (5 min) | Read *Why This Section Matters* and the 🎯 objectives. Skim the ✅ questions. | You read with a purpose and notice what matters. |
-| 2. **Core path** | Start with the *Core path* line at the top of *Suggested Order*: the 🔑 items, at most three. Treat everything else as "go deeper" or reference. | 🔑 marks the minimum route; long lists are menus, not obligations. |
+| 2. **Core path** | Start with the *Core path* line at the top of *Suggested Order*: the 🔑 items, at most three, read first. The numbered list under it is the full-depth order. For each exercise you pick, also read the sources named in its closing *(~time · sources)* note. | 🔑 marks the minimum route; long lists are menus, not obligations. |
 | 3. **Practice** | Do at least two 🛠️ exercises. Do the 🏗️ mini-project when the section is on your track. | You learn by producing things: derivations, code, boards, essays. |
 | 4. **Check yourself** | Answer the ✅ questions *from memory*, in writing, before looking anything up. Then correct your answers against the sources. | Retrieval practice beats rereading. |
 | 5. **Write it down** | Write a one-page note in your own words in `notes/<curriculum>/` (template in [notes/README.md](notes/README.md)), plus a handful of flashcards. | If you can't explain it simply, you've found the gap. |
@@ -85,7 +85,7 @@ flowchart LR
     ECON -- "02/10: games, money" --> BTC
     ML -- "13: geometric DL" --> BIO[🧬 bio]
     ML <-- "13 ↔ 11: AI for science" --> PHYS
-    ML <-- "12 ↔ 07: alignment" --> PHIL[🧠 philosophy]
+    ML <-- "12 ↔ 07: alignment" --> PHIL[💭 philosophy]
     ECON <-- "11 ↔ 07: incentives" --> PHIL
 ```
 
@@ -125,9 +125,9 @@ Several topics appear in more than one curriculum. Study each one in its **home*
 | Marker | Meaning |
 |--------|---------|
 | 🔑 | Core path: at most 3 per section, named in the *Core path* line at the top of each Suggested Order. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first. |
-| ⭐ | A named external list, closed and exact: **ml** = Ilya Sutskever's list · **pcb** = Rick Hartley's reading list · **btc** = Satoshi/cypherpunk canon |
+| ⭐ | A named, closed list: **ml** = Ilya Sutskever's list (the 27-item reconstruction) · **pcb** = Rick Hartley's reading list (12 books) · **btc** = the Bitcoin canon table in `btc/README.md` |
 | 🤖 | (software) AI-workflow-specific resource |
-| *(unverified: …)* | Kept from the original list, but couldn't be confirmed during review; check it before relying on it |
+| ⚠️ | A caveat to read before relying on it: a failed replication, a disputed claim, or a link problem |
 
 **Section numbers.** Some sections were added after the original numbering, for example `pcb/12`. Their curriculum README gives the position to take them in ("take after 05"). Nothing was renumbered, so existing links and NotebookLM sources keep working.
 
@@ -146,6 +146,13 @@ See [notes/README.md](notes/README.md) and [projects/README.md](projects/README.
 
 ## Keeping it healthy
 
-- `python tools/check_repo.py` runs offline. It checks relative links, table shapes, the learning blocks, PROGRESS coverage, learning-path listings, and the tier lists (at most 3 🔑 and a Core path line per section). Run it after every edit session. `--urls` dumps every external link for a link checker.
+- `python tools/check_repo.py` runs offline. It checks:
+  - relative links and table shapes
+  - every section's learning blocks and PROGRESS coverage
+  - the tier lists: at most 3 🔑 and a Core path line per section
+  - that the generated learning paths are current
+
+  Run it after every edit session. `--urls` dumps every external link for a link checker.
+- `python tools/build_index.py` refreshes each curriculum README's learning-path table and the section index on the main page, using the section titles and Core path lines. Row order and the *When* notes are yours to edit in the curriculum README; the tool keeps them.
 - **Adding material:** each curriculum's `update-curriculum` skill (in `ml`, `pcb`, `btc`, `software`), or the root [`audit-curriculum`](.agents/skills/audit-curriculum/SKILL.md) skill for any curriculum. Both require opening every link before it's added. Unverified, AI-generated citations are how errors got into this repo.
 - **Periodic audit:** run the `audit-curriculum` skill quarterly. Dated reports live in [`reviews/`](reviews/).

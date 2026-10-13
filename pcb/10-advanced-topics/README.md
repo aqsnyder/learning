@@ -31,7 +31,7 @@ After this section you can:
 | | Concept | Flex and rigid-flex PCB design (IPC-2223) | — | — | Flexible circuit design and manufacturing |
 | | Concept | RF PCB design basics | — | — | Microstrip, stripline, antenna matching |
 | | Tool | Open Source Thermal Simulation | — | [Link](https://jrainimo.com/build/2024/11/oss-thermal-simulation-of-pcbs/) | Walkthrough of an open-source KiCad → Salome → ElmerFEM flow that simulates DC current density and Joule heating in PCB copper (IR drop and hot spots). It is not part-level thermal modelling; use AN-2020 and the Thermal management concept for that. |
-| | App Note | AN-2020: Thermal Design By Insight, Not Hindsight (2013) | Texas Instruments | [PDF](https://www.ti.com/lit/pdf/snva419) | Practical PCB thermal design for power ICs: interpreting the package thermal metrics, copper spreading and thermal vias, and estimating junction temperature before layout is frozen |
+| 🔑 | App Note | AN-2020: Thermal Design By Insight, Not Hindsight (2013) | Texas Instruments | [PDF](https://www.ti.com/lit/pdf/snva419) | Practical PCB thermal design for power ICs: interpreting the package thermal metrics, copper spreading and thermal vias, and estimating junction temperature before layout is frozen |
 | | Tool | openEMS + gerber2ems | Thorsten Liebig (openEMS); Antmicro (gerber2ems) | [openems.de](https://www.openems.de/) · [gerber2ems](https://github.com/antmicro/gerber2ems) | Free FDTD field solver. Antmicro's gerber2ems drives it from Gerbers, drill files and a stackup description to extract S-parameters and impedance of real PCB traces, making open-source SI verification of KiCad boards practical |
 | | Tool | KiCad IPC API + kicad-python | KiCad Project | [Docs](https://docs.kicad.org/kicad-python/) | KiCad's new (9.0+) scripting and plugin API. The old SWIG `pcbnew` Python bindings are deprecated and slated for removal in KiCad 11, so write new scripts and plugins against this |
 
@@ -41,7 +41,7 @@ After this section you can:
 
 ## Suggested Order
 
-**Core path (🔑):** Robert Feranec BGA routing series
+**Core path (🔑):** Robert Feranec BGA routing series → TI AN-2020, *Thermal Design By Insight, Not Hindsight*
 
 1. **BGA escape routing and via-in-pad** — Understand the concept before watching the tutorials.
 2. **Robert Feranec BGA routing series** — Watch expert BGA fanout strategies in action.

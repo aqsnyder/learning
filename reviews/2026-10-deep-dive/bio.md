@@ -350,3 +350,4 @@ The three proposed sections (A, B, C above) are now created, with every resource
 - bio/README.md legend: 🔑 row now reads "**Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line"
 - Independent check: courses/README.md #5 Khan Academy AP Biology, #7 Uri Alon lecture videos, #9 iBiology Talks and #10 HHMI BioInteractive: 🔑 removed. None is 🔑 in any section; Section 05's 🔑 is Alon's textbook, and the other sections link only unmarked sub-pages of those sites.
 - Independent check: Section 00 MIT 7.012 lectures (Lander & Weinberg): 🔑 removed. It overlapped 7.01SC, the same Lander-led intro course. Core path is now 7.01SC → Alberts. 7.012 stays as the "deeper perspective" step 6.
+- Final decisions (2026-10-13): 04's Holmes & Huber row became an "Also used here" note pointing to Section 12, its home, and its PROGRESS line in Section 04 was dropped.

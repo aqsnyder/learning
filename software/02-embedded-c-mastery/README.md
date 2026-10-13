@@ -26,7 +26,7 @@ After this section you can:
 | 3 | 🔑 Book | *Making Embedded Systems* (2nd ed) — Elecia White (2024) | Best intro to embedded architecture and design patterns |
 | 4 | Book | *Embedded Software Design* — Jacob Beningo | Modern firmware architecture and maintainability |
 | 5 | Book | [*Embedded C Coding Standard*](https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard) — Barr Group | Minimizing bugs and improving portability |
-| 6 | 🔑 YouTube | [Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)](https://www.youtube.com/@StateMachineCOM) | Gold standard for embedded concepts and state machines |
+| 6 | 🔑 YouTube | [Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) | Gold standard for embedded concepts and state machines |
 | 7 | Blog | [Embedded Artistry](https://embeddedartistry.com/) | Modular, testable firmware architecture articles |
 | 8 | Blog | [Jacob Beningo](https://beningo.com/) | Firmware architecture best practices |
 | 9 | Course | FastBit Embedded Brain Academy (Udemy) | ARM Cortex-M, bare-metal, RTOS |
