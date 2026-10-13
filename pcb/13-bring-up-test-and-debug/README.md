@@ -1,0 +1,134 @@
+# Bring-up, Test and Debug
+
+## Why This Section Matters
+
+A board is not done when the fab ships it. It is done when it powers up safely, every subsystem has been proven against its design intent, and a production test can separate good units from bad ones quickly and repeatably. Bring-up and production test are where schematic assumptions meet reality, and where much of a small hardware team's schedule actually goes.
+
+This section turns the design-for-test plan from Section 09 into practice:
+
+- staged power-up
+- MCU first contact
+- measurements that don't lie
+- systematic fault-finding
+- boundary scan
+- a pilot-run test station with real limits and traceability
+
+Firmware-side debugging (GDB, OpenOCD, RTT) lives in the software curriculum; this section owns the hardware side.
+
+**Recommended position:** take this section after Section 09. It is numbered 13 only so that existing sections keep their numbers.
+
+## Prerequisites
+
+- [Section 00 — Electronics Fundamentals](../00-electronics-fundamentals/README.md): probing basics, rise time vs bandwidth (Practice 1)
+- [Section 05 — Power Distribution and Grounding](../05-power-and-grounding/README.md): the rails, regulators and return paths you will be measuring
+- [Section 09 — DFM and Fabrication](../09-dfm-and-fabrication/README.md): the DFT plan (Practice 4) and the production-test skeleton (mini-project)
+- Firmware side: [Software Section 07 — Embedded Systems and RTOS](../../software/07-embedded-systems-and-rtos/README.md) (JTAG/SWD debugging with GDB) and [Software Section 12 — Firmware Toolchain, Debug, and Observability](../../software/12-firmware-toolchain-debug-and-observability/README.md) (OpenOCD, SWO/RTT); for automating the mini-project's test station, [Software Section 13 — HIL Testing and Lab Automation](../../software/13-hil-testing-and-lab-automation/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Write and execute a staged bring-up plan (visual and pre-power impedance checks, current-limited first power, rail-by-rail enable, clock and debug-port bring-up), recording an expected value and tolerance for every measurement before you take it.
+- Measure rail ripple, switching nodes and fast edges without the setup dominating the result (probe grounding, bandwidth limits, 50 Ω coax, ground loops through USB-connected equipment), and quantify the error each setup adds.
+- Localize hardware faults systematically: apply Agans' debugging rules, find rail shorts by current injection with millivolt mapping or thermal imaging, and use boundary scan for opens and shorts on JTAG-capable parts.
+- Review a JTAG chain against DFT rules (pull resistors, TAP access, bypass links, buffering) and decide whether boundary scan earns its place in your test strategy.
+- Build a production test from the Section 09 DFT plan: fixture, automated sequence (power, program, calibrate, verify), limits derived from characterization with guard bands, a repeatability check, and per-serial traceability.
+
+## Marking Convention
+
+| Symbol | Meaning |
+|--------|---------|
+| 🔑 | Must-read / must-watch — essential for understanding this topic |
+| ⭐ | On the Rick Hartley recommended reading list |
+
+## Resources
+
+| Priority | Type | Resource | Author(s) | Link | Description |
+|----------|------|----------|-----------|------|-------------|
+| 🔑 | 💡 Concept | Staged bring-up plan and bring-up log | — | — | Write expected values down before power-up. Check resistance to ground on every rail, power up first with a current limit just above the expected idle current, then enable rails and subsystems one at a time. Log every measurement, deviation and disposition so someone else can repeat the bring-up. |
+| | 💡 Concept | Probing and measurement technique | — | — | Probe ground-lead inductance and loading, scope and probe bandwidth, rail ripple with a tip-and-barrel connection or 50 Ω coax, current measurement, and ground loops through USB-connected equipment. Section 00 Practice 1 is the starting point. |
+| 🔑 | 📕 Book | *Debugging* | Dave Agans | [debuggingrules.com](https://debuggingrules.com/) | Short, practical book built on nine rules for finding elusive hardware and software bugs ("Make it fail", "Quit thinking and look", "Divide and conquer" and six more). The discipline it teaches turns bring-up from guessing into engineering: reproduce, observe, change one thing at a time, keep an audit trail. |
+| | 💡 Concept | Fault localization: shorts, opens and intermittents | — | — | Find rail shorts by injecting current at a low, current-limited voltage and mapping millivolt drops (4-wire) or hot spots (thermal camera). Find opens with continuity checks and boundary scan. Expose intermittents with thermal, mechanical and supply-margin stress. |
+| | 📄 Reference | What is JTAG? (boundary-scan primer) | XJTAG | [xjtag.com](https://www.xjtag.com/about-jtag/what-is-jtag/) | Explains IEEE 1149.1 boundary scan and the four-wire test access port, and how scan chains test connections, non-JTAG devices and faults during prototype bring-up and production. |
+| | 📄 Reference | Design for Test (DFT) Guidelines for improving JTAG testability | XJTAG | [xjtag.com](https://www.xjtag.com/about-jtag/design-for-test-guidelines/) | Practical chain-design rules: daisy-chain TDO→TDI, run TCK/TMS/nTRST in parallel, pull up TDI/TDO/TMS and pull down nTRST (1–10 kΩ), never tie nTRST to ground, fit 0 Ω bypass links for optional devices, provide access between devices to locate chain faults, and buffer the TAP at board entry. |
+| | 💡 Concept | Production test: fixtures, sequencing, limits and traceability | — | — | A pogo-pin fixture with tooling holes. A sequence of power-on current check, rail checks, programming, calibration, functional test and serialization. Limits from characterization data, with guard bands for measurement uncertainty, and a repeatability check before you trust the station. Results logged per serial number. Builds on Section 09's DFT plan. |
+
+**Also used here (tracked in their home sections):** ST AN4488 and its FAQ on troubleshooting a non-working MCU ([Section 02](../02-schematic-capture/README.md)); ST AN2867 on oscillator gain margin and layout ([Section 04](../04-pcb-layout-fundamentals/README.md)); IPC-2221A §3.5 test requirement considerations, covering functional test, in-circuit test and boundary scan ([Section 09](../09-dfm-and-fabrication/README.md)); TI Precision Labs — Op Amps, "Board level troubleshooting" module ([Section 00](../00-electronics-fundamentals/README.md)); Keithley *Low Level Measurements Handbook* ([Section 12](../12-analog-mixed-signal-and-precision-measurement/README.md)); Glasgow Interface Explorer as a bring-up tool for digital interfaces ([Section 11](../11-reference-projects/README.md)).
+
+## Suggested Order
+
+1. **Agans, *Debugging*** — Read it first. It is short, and its rules shape every exercise here.
+2. **Staged bring-up plan and bring-up log** — Write the plan for your next board before it arrives (Practice 1).
+3. **AN4488 FAQ + AN2867 (Sections 02 and 04)** — Build your MCU first-contact runbook (Practice 2).
+4. **Probing and measurement technique** — Redo Section 00 Practice 1 at rail level (Practice 3).
+5. **Fault localization** — Practise on a sacrificial board (Practice 4).
+6. **XJTAG — What is JTAG?, then the DFT Guidelines** — Review your chains and decide whether boundary scan belongs in your test strategy (Practice 5).
+7. **Production test** — Turn your Section 09 DFT plan into a working station (mini-project). Use IPC-2221A §3.5.3 for functional-test design hooks: test connectors, initialization and synchronization, self-diagnostics.
+
+---
+
+## 🛠️ Practice
+
+1. **Bring-up plan before the boards arrive** — For your next board (or your last one, retroactively), write the plan:
+   - ESD-safe handling (grounded mat and wrist strap) whenever the board is out of its bag
+   - visual and X-ray/AOI checks for QFN and BGA parts
+   - expected resistance from each rail to ground, with the reasoning (bulk capacitance charging, feedback dividers, MCU rails reading diode-like) and a stop threshold
+   - bench-supply voltage and current limit for first power (≈ 1.5–2× expected idle current)
+   - power-up order using jumpers or 0 Ω links
+   - for each stage, what to measure (rail voltage and ripple, power-good, sequencing order and timing, inrush), each with an expected value and tolerance
+   - go/no-go criteria
+
+   Execute it on a real board with a thermal camera (or an IR thermometer) and fill in the log. Deliverable: plan + completed log. Done when every measurement had its expected value written before power-up and every deviation has a disposition (accepted, fixed, or ECO). *(~3 h · Staged bring-up plan concept, Agans' Debugging, AN4488 (Section 02))*
+2. **MCU first contact, and three faults on purpose** — Bring an STM32 board up to a blinking LED and a UART banner. Verify:
+   - VDD, VDDA and VREF+
+   - the NRST level and reset pulse
+   - the BOOT0 state
+   - HSE start-up: route HSE to the MCO pin and measure there, not on the crystal, whose load the probe would change
+   - an SWD connection at a reduced clock
+
+   Then introduce, one at a time: BOOT0 floating; NRST pulled low through 1 kΩ (mimicking a mis-wired supervisor or programmer header); and HSE load capacitors 2–3× too large. For each, record what the debugger, the HSE-ready flag and the scope show. Deliverable: a symptom → likely cause → check → fix runbook. Done when someone else can diagnose each fault on a fresh board from the runbook alone. *(~3 h · AN4488 FAQ (Section 02), AN2867 (Section 04), software Section 07 for the debugger side)*
+3. **Ripple measured honestly** — Measure a buck converter's output ripple and switching spikes:
+   - with a 10× probe on its long ground clip
+   - with a 10× probe on a ground spring or tip-and-barrel adapter
+   - with 50 Ω coax into the scope's 50 Ω input through a DC block (or a 1× probe)
+   - each of the above with and without the 20 MHz bandwidth limit
+
+   Repeat the best setup with the DUT powered from a laptop over USB and the scope mains-earthed, versus from an isolated supply. Never break a ground loop by lifting or defeating the scope's protective earth; isolate the DUT side instead (isolated supply, USB isolator) or use a differential probe. Deliverable: overlaid captures + a table of measured peak-to-peak per setup, with the mechanism behind each difference (ground-loop pickup, probe attenuation raising the noise floor, bandwidth). Done when the coax and tip-and-barrel results agree within ~20 % and you can say which setup a regulator datasheet's ripple figure implies. *(~2 h · Probing and measurement technique concept, Section 00 Practice 1, Low Level Measurements Handbook (noise) (Section 12))*
+4. **Find the short without lifting parts** — On a sacrificial board, create a rail-to-ground short: a solder bridge under a QFN, or a deliberately cracked MLCC. Localize it two ways, then confirm:
+   - (a) Inject 0.5–1 A from a supply limited to ≤ 0.5 V and map millivolt drops across the plane with a 4-wire meter; the gradient points at the short.
+   - (b) Find the hot spot with a thermal camera, or watch where isopropyl alcohol evaporates first (IPA is flammable: a few drops only, low injected power, and nothing nearby that can spark).
+   - (c) Remove the suspect part and confirm with a resistance measurement.
+
+   Deliverable: a drop map + photos. Done when (a) and (b) each point to the same component before you remove anything. *(~2 h · Fault localization concept, Agans' Debugging ("Divide and conquer", "Quit thinking and look"), Low Level Measurements Handbook (4-wire low-resistance measurement) (Section 12))*
+5. **JTAG chain review, and boundary scan if you have it** — Review the JTAG/SWD access on two of your boards against XJTAG's DFT guidelines: pull resistors and values, nTRST handling, access between devices, buffering, bypass links for optional parts, connector keying and interleaved grounds.
+   - If a part on the board has a published BSDL file and you have a boundary-scan tool, run an interconnect test and seed one lifted pin.
+   - Otherwise, estimate the coverage boundary scan would add over your Section 09 test-point plan: which nets become testable without probe access.
+
+   Deliverable: review findings + a coverage-delta table, or the test report. Done when every finding cites the rule it breaks and you have a written yes or no on boundary scan for production, with the cost-versus-access reasoning IPC-2221A §3.5.2 asks for. *(~3 h · XJTAG What is JTAG?, XJTAG DFT Guidelines, IPC-2221A §3.5.2 (Section 09))*
+
+**🏗️ Mini-project — Pilot-Run Test Station:** Take the Section 09 DFT plan and production-test skeleton to a working station for one of your boards:
+- **Fixture:** a pogo-pin nest (3D-printed or machined) with tooling pins.
+- **Test sequence (Python):** power-on current check on a programmable supply, rail checks, SWD programming through your programmer's CLI, calibration constants written to flash on precision boards, functional tests over USB or UART, and a serial-number write.
+- **Limits:** from characterization of at least five boards (mean ± k·σ, with guard bands for measurement uncertainty).
+- **Records:** a results store keyed by serial number.
+- **Repeatability first:** test one board 10× with re-seating and compare the measurement spread with each tolerance band before testing the rest.
+
+Deliverable: fixture CAD, test code, limits rationale and run logs in `projects/pcb/13-test-station/`. Success:
+- under 3 minutes per board
+- spread on every parametric test below 10 % of its tolerance band, or justified
+- Cpk ≥ 1.33 on rail and calibration measurements
+- the station catches three seeded faults (missing part, wrong-value resistor, unprogrammed MCU)
+
+*(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What do you measure and record before applying power to a new board for the first time, and how do you choose the bench supply's current limit?
+2. Why observe an STM32's HSE through the MCO pin rather than by probing the crystal?
+3. Name three ways a scope can overstate rail ripple, and the fix for each.
+4. Which of Agans' rules would you apply first to an intermittent reset that only happens in the field, and why?
+5. How does injecting current into a shorted rail and mapping millivolt drops find the short? Why keep the voltage low?
+6. In XJTAG's DFT guidelines, which JTAG signals get pull-ups, which gets a pull-down, and why must nTRST never be tied to ground?
+7. Misconception probe: "A unit that passes the functional test once is good." What do repeatability, guard bands and intermittent faults say?
+8. Explain to a smart friend in 3 sentences why bring-up starts with written expectations rather than with switching the board on.

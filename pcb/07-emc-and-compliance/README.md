@@ -9,6 +9,15 @@ Your board has to work in the real world without radiating or being susceptible 
 - [Section 05 — Power Distribution and Grounding](../05-power-and-grounding/README.md)
 - [Section 06 — Signal Integrity](../06-signal-integrity/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Estimate radiated emissions from differential-mode loops and common-mode cable currents with Ott's models, and explain why microamps of common-mode current on a cable can fail a Class B limit.
+- Separate common-mode and differential-mode noise paths on a real board and pick the matching fix: layout, filtering, ferrite, CM choke, shielding, or cable bonding.
+- Select ferrite beads and LC filters from impedance curves under DC bias, and design out resonant gain.
+- Run near-field and CM-current pre-compliance scans and attribute each peak to a specific circuit and harmonic.
+- Map the regulatory path for a USB-C/Ethernet instrument (FCC Part 15 Class A/B and its test-equipment exemption; the EU EMC Directive's standards) to concrete design decisions.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -20,22 +29,55 @@ Your board has to work in the real world without radiating or being susceptible 
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|-----------|------|-------------|
-| 🔑⭐ | 📕 Book | Electromagnetic Compatibility Engineering | Henry Ott | — | The definitive EMC reference. Comprehensive, rigorous, and practical. Every serious PCB designer should own this. |
+| 🔑⭐ | 📕 Book | Electromagnetic Compatibility Engineering (2009) | Henry W. Ott | [DOI](https://doi.org/10.1002/9780470508510) | The definitive EMC reference. Comprehensive, rigorous, and practical. Every serious PCB designer should own this. |
 | 🔑 | 🎥 Video Series | Rick Hartley — EMC Lectures | Rick Hartley | [Search YouTube](https://www.youtube.com/results?search_query=Rick+Hartley+EMC) | Foundational EMC thinking from Altium Academy, Sierra Circuits, and conference talks. Rick connects grounding, SI, and EMC into one coherent framework. |
-| 🔑 | 🎥 YouTube Channel | Dr. EMC | Dr. EMC | [YouTube](https://www.youtube.com/@DrEMC) | Practical EMC design and simulation. Clear explanations of radiation mechanisms and mitigation. |
-| ⭐ | 📕 Book | Noise Reduction Techniques in Electronic Systems | Henry Ott | — | Classic predecessor to EMC Engineering. Foundational noise and interference concepts that remain relevant decades later. |
+| 🔑 | 🎓 Course | LearnEMC | Todd Hubing | [learnemc.com](https://learnemc.com/) | Free, structured EMC curriculum (levels K–12) by Todd Hubing covering coupling mechanisms, grounding, filtering, shielding, crosstalk and PCB layout, plus a weekly EMC question. The best free self-study path through this section. |
+| | 🎥 YouTube Channel | Dr. EMC | Dr. EMC | [YouTube](https://www.youtube.com/@DrEMC) | Practical EMC design and simulation. Clear explanations of radiation mechanisms and mitigation. (Unverified: no presenter is named, and the only channel titled "Dr. EMC" found in search uses the handle `@DrEMC-sf8rx`.) |
+| | 📕 Book | Noise Reduction Techniques in Electronic Systems | Henry Ott | — | Classic predecessor to EMC Engineering. Foundational noise and interference concepts that remain relevant decades later. Not on Rick's list: his list names Ott's *EMC Engineering*, which grew out of this book. |
+| ⭐ | 📕 Book | PCB Design for Real-World EMI Control (2002) | Bruce R. Archambeault | [Springer](https://link.springer.com/978-1-4020-7130-0) | Board-level EMI from an IBM EMC engineer: what actually drives emissions from real PCBs and which common design "rules" hold up. |
+| ⭐ | 📕 Book | Digital Design for Interference Specifications: A Practical Handbook for EMI Suppression (2nd ed., 1999) | David L. Terrell, R. Kenneth Keenan | [Elsevier](https://shop.elsevier.com/books/digital-design-for-interference-specifications/terrell/978-0-08-057379-3) | Practical handbook for designing digital products that meet emissions limits the first time. |
+| ⭐ | 📕 Book | Introduction to Electromagnetic Compatibility (2nd ed., 2006) | Clayton R. Paul | [Wiley](https://gov.wiley.com/WileyCDA/WileyTitle/productCd-0471755001,descCd-description.html) | The standard university EMC textbook. Reach for it when you want the derivations behind Ott's practical explanations. |
 | | 🎥 Video | Altium Academy — EMC Design Guidelines | Altium Academy | [YouTube](https://www.youtube.com/@AltiumAcademy) | EMC-focused design guidelines and best practices in Altium Designer. |
 | | 💡 Concept | Common Mode vs Differential Mode Noise | — | — | Understanding the two fundamental noise modes is essential for diagnosing and solving EMC problems. |
 | | 💡 Concept | Shielding, Filtering, and Ferrite Bead Selection | — | — | Practical mitigation techniques: when to shield, how to filter, and choosing the right ferrite bead for your frequency range. |
-| | 💡 Concept | FCC/CE Compliance Testing Overview | — | — | What the test process looks like, what standards apply, and how to design for compliance from the start. |
+| | 💡 Concept | FCC/CE Compliance Testing Overview | — | — | What the test process looks like, what standards apply, and how to design for compliance from the start. Test-and-measurement and lab equipment has its own product standards: IEC 61326 (EMC for measurement, control and laboratory equipment) and [IEC 61010](https://en.wikipedia.org/wiki/IEC_61010) (safety, including spacing requirements). Identify which ones apply before the first layout, not after. |
 
 ## Suggested Order
 
 1. **Rick Hartley EMC lectures** — Start here to see how grounding and SI principles connect to EMC
-2. **Electromagnetic Compatibility Engineering (Ott)** — Read the key chapters on coupling mechanisms, shielding, and filtering
-3. **Dr. EMC** — Watch practical EMC design and simulation videos
-4. **Common mode vs differential mode noise** — Understand the two noise modes before trying to fix EMC problems
-5. **Shielding, filtering, and ferrite bead selection** — Learn the practical mitigation toolkit
-6. **Noise Reduction Techniques (Ott)** — Read for deeper foundational understanding
-7. **FCC/CE compliance testing overview** — Know what the test process looks like so you design for it
-8. **Altium Academy EMC guidelines** — Additional practical design rules and examples
+2. **LearnEMC** — Work through the structured levels alongside the books
+3. **Electromagnetic Compatibility Engineering (Ott)** — Read the key chapters on coupling mechanisms, shielding, and filtering
+4. **Dr. EMC** — Watch practical EMC design and simulation videos (unverified channel; check it first, otherwise rely on LearnEMC)
+5. **Common mode vs differential mode noise** — Understand the two noise modes before trying to fix EMC problems
+6. **Shielding, filtering, and ferrite bead selection** — Learn the practical mitigation toolkit
+7. **PCB Design for Real-World EMI Control (Archambeault)** — Board-level EMI, once Ott's fundamentals are in place
+8. **Noise Reduction Techniques (Ott)** — Read for deeper foundational understanding
+9. **FCC/CE compliance testing overview** — Know what the test process looks like and which product standards apply (IEC 61326 / IEC 61010 for measurement equipment) so you design for it
+10. **Digital Design for Interference Specifications (Terrell & Keenan)** — Design-to-the-limit handbook to use while preparing for compliance
+11. **Introduction to Electromagnetic Compatibility (Paul)** — Rigorous textbook reference when you need the theory
+12. **Altium Academy EMC guidelines** — Additional practical design rules and examples
+
+---
+
+## 🛠️ Practice
+
+1. **Ott's radiation models by hand** — Using Ott's simple differential-mode (∝ f²·A·I) and common-mode (∝ f·L·I) radiation equations, compute the 3 m field from (a) a 5 cm clock trace carrying a 10 mA, 100 MHz harmonic, with its return 0.1 mm below on a plane vs 4 mm away as on a 2-layer board, and (b) a 1 m USB cable carrying common-mode current at 100 MHz. Look up the FCC Part 15 Class B limit at that frequency and solve for the CM current that just reaches it. Deliverable: worked notebook. Done when you reproduce Ott's headline result — single-digit microamps of CM current reach the Class B limit — and can explain, in dB, what the plane buys you and why cable CM usually dominates once a plane is present. *(~2 h · Ott's Electromagnetic Compatibility Engineering (digital-circuit radiation), Common Mode vs Differential Mode Noise concept)*
+2. **Ferrite-bead filter that doesn't ring** — Take a real ferrite bead (e.g., an 0603, 220 Ω at 100 MHz) and its manufacturer's model, feeding 10 µF + 100 nF on an analog 3.3 V rail from a 2 MHz buck. Simulate the transfer function at zero load and at the rail's real DC current (beads lose impedance under bias); find the LC resonance — often tens of kHz to ~1 MHz, where the bead is mostly inductive — and its gain, then add damping (series-R bulk capacitor, a lossier bead, or a parallel resistor) until peaking is < 2 dB. Deliverable: before/after plots + chosen parts. Done when the simulated resonance matches 1/(2π√(L_bead·C)) within ~10 % using the bead's low-frequency inductance (from its model, or measured on your Section 00 impedance rig). *(~3 h · Ott's Electromagnetic Compatibility Engineering; the "Shielding, Filtering, and Ferrite Bead Selection" concept)*
+3. **Mode-conversion budget** — List every asymmetry on one of your differential interfaces (USB or Ethernet MDI): intra-pair skew, via asymmetry, unequal ESD-diode capacitance, a reference-plane change, connector pin assignment. Estimate the common-mode voltage each produces (e.g., skew/rise time × half the differential swing), the resulting cable CM current (state your assumed CM path impedance), and compare with the microamp threshold from Exercise 1. Deliverable: budget table + layout fixes ranked by dB saved. *(~2.5 h · Common Mode vs Differential Mode Noise concept, Rick Hartley's EMC lectures, Ott's Noise Reduction Techniques in Electronic Systems)*
+4. **Near-field scan of your own board** — With an H-field loop probe (DIY from semi-rigid coax, or a commercial set) and a spectrum analyzer (a tinySA-class unit is fine), scan a running board of yours from 30 MHz to 1 GHz in max-hold. Tabulate the top ten peaks and attribute each by harmonic family (HSE/PLL, SYSCLK, buck switching edges, USB, Ethernet 25 MHz reference) and by location. Try one mitigation on each of the top three (GPIO slew via OSPEEDR, a series resistor, a ferrite, extra stitching, a firmware clock change) and log the delta. Deliverable: peak table + before/after plots. Done when each delta repeats within ±2 dB across three scans. *(~4 h · Rick Hartley's EMC lectures, Ott's Electromagnetic Compatibility Engineering (pre-compliance))*
+5. **Compliance map** — Write a one-page plan for a USB-C-powered, Ethernet-connected bench instrument sold in the US and EU: whether FCC §15.103(c) (digital devices used exclusively as test equipment) exempts it and what still applies if so (§15.5, §15.29); Class A vs Class B; the EU EMC Directive route via EN 61326-1 (measurement and laboratory equipment) vs EN 55032/55035; and the immunity tests most likely to bite (ESD on connector shells and touchable metal, radiated immunity, EFT on long cables). For each test, name the board feature that answers it. *(~2 h · FCC/CE Compliance Testing Overview concept, Altium Academy EMC Design Guidelines, Ott's Electromagnetic Compatibility Engineering)*
+
+**🏗️ Mini-project — Pre-Compliance Lab in a Box:** Build a repeatable, scripted pre-compliance setup: a near-field probe set; a clamp-on CM current probe whose transfer impedance you calibrate with a signal generator and a 50 Ω fixture; and a spectrum analyzer driven from Python that sweeps 30 MHz–1 GHz in peak hold, stores CSV, converts cable CM current to an estimated 3 m field with your Exercise 1 model, and overlays the FCC Class B / CISPR 32 limits with a 6 dB guard band. Run it on one of your boards, then make two design/firmware/rework iterations on the worst offender. Deliverable: `projects/pcb/07-precompliance/` with scripts, calibration data, and an auto-generated report. Success: results repeat within ±2 dB, the worst peak drops ≥ 6 dB, and you can state an estimated margin you would defend at a test lab. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Write how differential-mode radiation scales with frequency, loop area, and current, and how common-mode radiation scales with frequency, cable length, and current.
+2. Why does common-mode cable current dominate radiated emissions in most products that have cables?
+3. Roughly how much CM current on a 1 m cable at 100 MHz reaches the FCC Class B limit at 3 m?
+4. When does adding a ferrite bead make supply noise worse, and how do you prevent it?
+5. What does an H-field near-field probe actually respond to, and why can't you read compliance margin directly from it?
+6. Misconception probe: "A metal enclosure fixes emissions no matter how the cables enter it." What breaks this?
+7. What distinguishes Class A from Class B, and what are the consequences of claiming each?
+8. Explain to a smart friend in 3 sentences how a circuit that works perfectly can still fail an EMC test.

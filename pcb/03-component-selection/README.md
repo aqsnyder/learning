@@ -6,6 +6,16 @@
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Select a precision part from parametric search by computing worst-case error and noise against the requirement — designing to max-over-temperature specs, not typicals.
+- Predict effective component values in circuit: MLCC capacitance under DC bias, temperature, and aging; resistor TCR and power/voltage derating; op-amp bias current vs temperature.
+- Score supply-chain risk (lifecycle, sourcing breadth, stock, lead time, verified form-fit-function alternates) and decide which BOM lines may be substituted and which must be locked.
+- Read package names and outline drawings (pitch, body, height, exposed pad, JEDEC outline reference) and translate them into fab, assembly, and inspection consequences.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Link | Description |
@@ -17,6 +27,8 @@
 | | Reference | JEDEC standards overview | — | Package naming conventions (QFP, BGA, QFN, etc.) |
 | 🔑 | Concept | Design for Supply Chain | — | Choosing components that are available and not sole-sourced |
 
+**Also used here (tracked in their home sections):** kicad-cli BOM export ([Section 09](../09-dfm-and-fabrication/README.md)) for the mini-project.
+
 ---
 
 ## Suggested Order
@@ -27,3 +39,27 @@
 4. **JLCPCB Parts Library** — Check part availability early if targeting JLCPCB assembly.
 5. **JEDEC standards overview** — Familiarize yourself with package naming so you can read datasheets fluently.
 6. **Design for Supply Chain** — Internalize the practice of choosing multi-sourced, in-production parts from the start.
+
+---
+
+## 🛠️ Practice
+
+1. **Package literacy drill** — For ten packages on or near your boards (LQFP-100 0.5 mm, UFQFPN-48, a 0.4 mm-pitch WLCSP, SOT-23-6 vs SC-70-6 vs SOT-563, an exposed-pad VSON, TSSOP-20, 0201 vs 0402, a 0.5 mm-pitch BGA), record body size, pitch, height, the JEDEC outline the package drawing cites, whether it forces via-in-pad or tighter-than-standard trace/space, how its joints get inspected (AOI vs X-ray), and whether the JLCPCB Parts Library stocks it for assembly. Deliverable: a table with a "does this raise my fab or assembly class?" column. *(~2 h · JEDEC standards overview, JLCPCB Parts Library)*
+2. **MLCC derating, quantified** — Find the smallest package that delivers ≥ 4.7 µF *effective* at 3.3 V bias and 85 °C on an LDO output, comparing 0402/0603/0805 at 6.3/10/16/25 V in X5R and X7R. Distributor filters show nominal values only, so read effective capacitance from the manufacturers' characteristic data (Murata, TDK, Samsung, KEMET tools). Deliverable: nominal-vs-effective table + pick, checked against the LDO's stability window (minimum C, ESR range). Then write three sentences on why the same part is a poor coupling or timing capacitor in a high-gain, sub-10 Hz sensor amplifier, and what you would use instead. *(~2 h · DigiKey/Mouser parametric search, Phil's Lab component selection guides)*
+3. **Op-amp shoot-out for a high-Z buffer** — Requirement: buffer a 1 GΩ source with < 1 % of a 1 nA full scale (≈ 10 pA) total input-current error from 0–70 °C, on a single 3.3 V supply at < 2 mA. Shortlist four candidates with DigiKey/Mouser parametric filters and tabulate I_B (typ/max at 25 °C, max at 70 °C — or extrapolated at ~2× per 10 °C for CMOS/JFET inputs), V_OS and drift, e_n at 1 Hz and 1 kHz, input common-mode range, price, stock, lifecycle, and second sources. Deliverable: table + pick + the error budget that justifies it. Done when your pick meets the requirement on max specs and you have flagged one "typical-only" trap in a rival's datasheet. *(~3 h · DigiKey/Mouser parametric search, Phil's Lab component selection guides)*
+4. **Automated BOM risk scoring** — Export a BOM from one of your boards and write a Python script against the Nexar (Octopart) or DigiKey/Mouser APIs that pulls lifecycle, authorized stock, lead time, and price breaks, then scores each line (single source, < 1 k in stock, NRND/EOL, lead time > 12 weeks, no form-fit-function alternate). Deliverable: script + scored CSV + the top five risks, each with a proposed alternate. Done when every alternate is verified pin-for-pin and spec-for-spec against its datasheet, not just matched parametrically. *(~4 h · Octopart, DigiKey/Mouser parametric search, Design for Supply Chain)*
+
+**🏗️ Mini-project — Release BOM with Locked and Flexible Lines:** For one STM32U5-class board, build a release BOM in which every line carries MPN, one or two *verified* alternates (pinout, footprint, and electrical), lifecycle, a stock snapshot, roll-up cost at 10/100/1k, JLCPCB basic/extended status, and a `substitution` field: `free` (generic passives), `approved-alternates-only`, or `locked` (sense resistors, references, low-leakage and C0G signal-path caps, magnetics). Store alternates and the substitution policy as symbol fields in your library so they flow into `kicad-cli` BOM exports. Deliverable: `projects/pcb/03-release-bom/` with the BOM, its generator script, and a one-page sourcing policy. Success: in a "line-down drill" where you knock out three random lines, the board stays buildable without a re-spin. *(~8 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Typical vs max vs "guaranteed by design": which do you design to, and what (if anything) does "typical" tell you statistically?
+2. A CMOS op-amp's input bias current roughly doubles every ____ °C. Estimate the factor between 25 °C and 85 °C.
+3. Define Active, NRND, EOL, and Last Time Buy, and what each should trigger in your design process.
+4. Why might two "pin-compatible" LDOs fail as drop-in replacements? Give three reasons.
+5. Estimate the remaining capacitance of a 10 µF, 6.3 V, 0603 X5R at 5 V DC bias. Where do you get the real number?
+6. Misconception probe: "X7R is a stable dielectric, so it's fine in a high-gain, low-frequency signal path." Which three effects say otherwise?
+7. What does a design-for-supply-chain policy look like for generic passives versus single-source ICs?
+8. Explain to a smart friend in 3 sentences why the cheapest BOM rarely produces the cheapest product.

@@ -6,9 +6,17 @@ This is the core skill — placing components and routing traces. Everything you
 
 ## Prerequisites
 
-- [Section 01 — Electronics Fundamentals](../01-electronics-fundamentals/README.md)
-- [Section 02 — Schematic Design](../02-schematic-design/README.md)
-- [Section 03 — PCB Stackup and Materials](../03-pcb-stackup-and-materials/README.md)
+- [Section 00 — Electronics Fundamentals](../00-electronics-fundamentals/README.md)
+- [Section 01 — PCB Anatomy and Materials](../01-pcb-anatomy-and-materials/README.md)
+- [Section 02 — Schematic Capture and Library Management](../02-schematic-capture/README.md)
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Plan placement from current loops and sensitivity — high-di/dt loops, high-impedance and Kelvin nodes, connector and mechanical constraints — and place to minimize loop area and coupling before routing anything.
+- Encode a fab's capabilities and your electrical constraints in KiCad (Board Setup, netclasses, custom `.kicad_dru` rules) so that DRC enforces them, and prove each rule fires.
+- Lay out precision analog structures: 4-wire (Kelvin) connections to shunts and references, driven guard rings and planes around high-impedance nodes, and mask/slot features that interrupt leakage.
+- Use copper pours deliberately (zone priority, clearance, thermal relief, island removal, stitching) and predict when a pour changes a trace's impedance.
 
 ## Marking Convention
 
@@ -23,18 +31,47 @@ This is the core skill — placing components and routing traces. Everything you
 |----------|------|----------|------|-------------|
 | 🔑 | 🎥 Video Series | Phil's Lab — PCB Layout Tutorials | [YouTube](https://www.youtube.com/@PhilsLab) | Step-by-step layout walkthroughs with theory. Excellent for building practical intuition alongside conceptual understanding. |
 | 🔑 | 🎥 Video Series | Robert Feranec — Layout and Routing | [YouTube](https://www.youtube.com/@RobertFeranec) | Professional-grade layout techniques from an experienced PCB designer. |
-| 🔑 | 🎓 Course | KiCad PCB Editor Guide | [Docs](https://docs.kicad.org/8/) | Official layout tool documentation. Essential reference for KiCad-based workflows. |
+| 🔑 | 🎓 Course | KiCad PCB Editor Guide (KiCad 10) | [Docs](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html) | Official layout tool documentation. Essential reference for KiCad-based workflows. |
+| | 🎥 Video | KiCad 6 STM32 PCB Design Full Tutorial — Phil's Lab #65 (2022) | [YouTube](https://www.youtube.com/watch?v=aVUqaB0IMh4) | One complete STM32 board taken from schematic to fab outputs in a single long session. The tool version is older, but the workflow and placement reasoning carry over directly to KiCad 10. |
+| | 📄 App Note | AN2867 — Guidelines for oscillator design on STM8 and STM32 MCUs/MPUs (Rev 24, 2026) — STMicroelectronics | [PDF](https://www.st.com/resource/en/application_note/an2867-guidelines-for-oscillator-design-on-stm8afals-and-stm32-mcusmpus-stmicroelectronics.pdf) | Crystal selection (gain margin, load capacitors) plus PCB layout rules for the oscillator: a compact loop, guard ring and separated ground (Section 7). A crystal that won't start is a classic bring-up failure, and good layout prevents it. |
 | | 🎥 Video | Altium Academy — Routing Tutorials | [YouTube](https://www.youtube.com/@AltiumAcademy) | Routing walkthroughs in Altium Designer; concepts transfer to any EDA tool. |
 | 🔑 | 💡 Concept | Component Placement Strategy | — | Place before you route; placement is 90% of the design. Group by function, minimize critical path lengths, and think about thermal and mechanical constraints first. |
 | | 💡 Concept | Design Rule Check (DRC) | — | Understanding and configuring manufacturer constraints. Your DRC settings should match your fab house's capabilities. |
 | | 💡 Concept | Copper Pours and Fills | — | Ground planes, power planes, thermal relief. When and how to use polygon pours effectively. |
 
+**Also used here (tracked in their home sections):** Saturn PCB Toolkit ([Section 05](../05-power-and-grounding/README.md)) for Practice 1; the JLCPCB capabilities page ([Section 09](../09-dfm-and-fabrication/README.md)) and IPC-2221A Table 6-1 ([Section 01](../01-pcb-anatomy-and-materials/README.md)) for Practice 2.
+
 ## Suggested Order
 
 1. **KiCad PCB Editor Guide** — Get comfortable with the tool you'll be using for all exercises
-2. **Phil's Lab layout tutorials** — Watch the walkthroughs to see the full placement-to-routing workflow
+2. **Phil's Lab layout tutorials** — Watch the walkthroughs to see the full placement-to-routing workflow; start with the end-to-end STM32 board (#65)
 3. **Component Placement Strategy** — Internalize the principle: placement is 90% of the design
-4. **Robert Feranec layout and routing** — Level up with professional techniques and real-world examples
-5. **DRC and manufacturer constraints** — Learn to configure rules that match your fab house
-6. **Copper Pours and Fills** — Understand ground planes and thermal relief
-7. **Altium Academy routing** — Broaden exposure to different EDA tool approaches
+4. **AN2867 crystal/oscillator layout** — Apply it to the first MCU board you place
+5. **Robert Feranec layout and routing** — Level up with professional techniques and real-world examples
+6. **DRC and manufacturer constraints** — Learn to configure rules that match your fab house
+7. **Copper Pours and Fills** — Understand ground planes and thermal relief
+8. **Altium Academy routing** — Broaden exposure to different EDA tool approaches
+
+---
+
+## 🛠️ Practice
+
+1. **Pours vs controlled impedance** — With KiCad's PCB Calculator (or Saturn PCB Toolkit), compute Z₀ for a 50 Ω microstrip on your 4-layer stackup, then as grounded coplanar waveguide with pour gaps of 0.15, 0.25, 0.5, and 1.0 mm. Find the gap at which Z₀ stays within 2 % of the bare microstrip and turn it into a zone-clearance rule for your controlled-impedance netclasses. Deliverable: table + the rule committed to your template. *(~1.5 h · Copper Pours and Fills, KiCad PCB Editor Guide)*
+2. **Fab rules as code** — Encode JLCPCB's (and one other fab's) published 4/6-layer capabilities in Board Setup plus a `.kicad_dru` file: track/space by copper weight, via drill and annular ring, hole-to-hole, copper-to-edge, mask web, silk-to-pad, and a high-voltage netclass clearance taken from IPC-2221A Table 6-1 (Rev A values; Rev C (2023) updated the clearance guidance) (plus a creepage rule on KiCad 9+). Safety note: IPC-2221 spacing is a design guideline, not a safety rating. For mains-connected or user-accessible hazardous voltages, creepage, clearance and insulation come from the product safety standard (IEC 61010-1 for measurement equipment, IEC 62368-1 for IT/AV), so don't treat this rule as a safety design. Build a scrap board with one deliberate violation per rule. Deliverable: the rule file in your template + the test board. Done when every violation fires exactly one DRC error and nothing else does. *(~3 h · KiCad PCB Editor Guide, Design Rule Check concept)*
+3. **Place-only study** — For a board with an STM32U5, USB-C, a buck and two LDOs, an HSE crystal, SWD, an SPI Ethernet controller with magnetics and RJ45, and a sensor connector, make three placements without routing. Score each on switcher hot-loop area, decoupling distance to power pins (mm), crystal trace length, connectors on board edges, separation of noisy and high-impedance regions, ratsnest crossings, and test-point access. Route the winner. Deliverable: three screenshots, the scoring sheet, and a DRC-clean routed board. *(~5 h · Component Placement Strategy, Phil's Lab layout tutorials, Robert Feranec layout and routing)*
+4. **Kelvin and guard block** — Lay out a precision sense block: a 4-terminal shunt (or a 2-terminal shunt with Kelvin taps from the inner pad edges) routed as a tight sense pair to a difference amplifier, plus a high-impedance input enclosed by a driven guard ring on both outer layers with solder mask opened over it, a guard pour under the node on the next layer, and optionally a routed slot. Use a net-tie footprint so the sense nets join the shunt pads without DRC shorts, and a custom rule that keeps non-guard copper away. Deliverable: layout + rationale + a leakage estimate for a 5 V neighbor across 10¹⁰ Ω and 10¹² Ω surface paths, with and without the guard. *(~3 h · KiCad PCB Editor Guide, Copper Pours and Fills, Robert Feranec layout and routing)*
+
+**🏗️ Mini-project — Precision Channel Layout Block:** Design one precision measurement channel as a hierarchical sheet plus layout — force amplifier with Kelvin force/sense outputs, range resistors inside guard rings, high-Z sense buffer with guard driver, ADC driver, local decoupling — then replicate it to four channels with KiCad's multichannel (9+) or PCB design-block (10) tools. Use your Exercise 2 rules plus channel-specific custom rules (guard clearances, Kelvin pair coupling, keepouts under range resistors). Deliverable: `projects/pcb/04-precision-channel/` with the KiCad files and a one-page layout rationale. Success: DRC-clean; identical routing across channels; every high-Z node enclosed by guard on both outer layers and on the inner layer beneath it; and a reviewer (or you after 48 h) can trace each force and sense path from the schematic notes without asking. *(~12 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Why is placement "90 % of the design"? Name three things placement fixes that routing cannot.
+2. In KiCad, how do Board Setup minimums, netclass values, and custom rules interact when they disagree? (Check the PCB Editor Guide.)
+3. Does a coplanar ground pour beside a microstrip raise or lower its impedance, and roughly how close must the pour get before you care?
+4. Why does a 4-wire (Kelvin) connection remove pad and solder resistance from a shunt measurement, and where on the pads should the sense traces attach?
+5. Why is solder mask removed over a guard ring, why is a guard normally driven to the node's potential rather than grounded, and when is grounding it correct?
+6. Misconception probe: "Flood every layer with ground copper — more copper is always better." When does a pour hurt?
+7. When should a plane connection use a thermal relief, and what is the electrical cost of using one?
+8. Explain to a smart friend in 3 sentences why a ground pour is not automatically a ground plane.

@@ -8,6 +8,15 @@ Poor power design is the #1 cause of board failures and noise issues. A clean, l
 
 - [Section 04 — PCB Layout Fundamentals](../04-pcb-layout-fundamentals/README.md)
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Trace return current at DC and at high frequency on a multilayer board (path of least resistance vs least inductance), including across layer changes, and explain it with the fields-and-energy view from Hartley and Morrison.
+- Derive a rail's target impedance and design a decoupling network — VRM, bulk, MLCCs with mounted inductance, plane capacitance — that meets it, simulating |Z(f)| and explaining each anti-resonance.
+- Estimate a decoupling capacitor's mounted loop inductance from pad, via, and plane geometry, and rank layout options by their effect.
+- Lay out a switching regulator's hot loop and predict its parasitic inductance, switch-node overshoot, and ringing frequency.
+- Decide when, if ever, to split or partition a ground plane, and lay out mixed-signal grounding on one unbroken reference.
+
 ## Marking Convention
 
 | Symbol | Meaning |
@@ -19,22 +28,55 @@ Poor power design is the #1 cause of board failures and noise issues. A clean, l
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|-----------|------|-------------|
-| 🔑⭐ | 🎥 Video | How to Achieve Proper Grounding | Rick Hartley | [YouTube](https://www.youtube.com/watch?v=ySuUZEjARPY) | THE definitive lecture on grounding. If you watch one video on PCB design, make it this one. |
-| 🔑⭐ | 🎥 Video | Power Distribution Networks | Rick Hartley | [YouTube](https://www.youtube.com/watch?v=WnLRHuvl6Eg) | PDN design fundamentals — understanding impedance, decoupling, and energy delivery. |
+| 🔑 | 🎥 Video | How to Achieve Proper Grounding | Rick Hartley | [YouTube](https://www.youtube.com/watch?v=ySuUZEjARPY) | THE definitive lecture on grounding (Altium "Expert Live Training"). If you watch one video on PCB design, make it this one. |
+| 🔑 | 🎥 Video | Power Distribution Networks | Rick Hartley | [YouTube](https://www.youtube.com/watch?v=WnLRHuvl6Eg) | PDN design fundamentals — understanding impedance, decoupling, and energy delivery. (Posted on the NineDotConnects channel.) |
 | 🔑 | 🎥 Video Series | Phil's Lab — Power Design Tutorials | Phil's Lab | [YouTube](https://www.youtube.com/@PhilsLab) | Practical power supply layout with hands-on KiCad examples. |
-| ⭐ | 📕 Book | Fast Circuit Boards: Energy Management | Ralph Morrison | — | How energy travels as fields, not currents. Reframes how you think about power delivery at the physics level. |
-| ⭐ | 📕 Book | Principles of Power Integrity for PDN Design Simplified | Smith, Bogatin | — | PDN theory made accessible. Target impedance, decoupling strategies, and simulation. |
-| | 🔧 Tool | Saturn PCB Design Toolkit | — | [Website](https://saturnpcb.com/saturn-pcb-toolkit/) | Calculators for trace width, via current, thermal resistance, and more. Essential desktop tool. |
+| ⭐ | 📕 Book | Fast Circuit Boards: Energy Management (2017) | Ralph Morrison | [Wiley](https://wiley-vch.e-bookshelf.de/fast-circuit-boards-10620117.html) | How energy travels as fields, not currents. Reframes how you think about power delivery at the physics level. |
+| ⭐ | 📕 Book | Principles of Power Integrity for PDN Design — Simplified (2017) | Larry D. Smith, Eric Bogatin | [InformIT](https://www.informit.com/store/principles-of-power-integrity-for-pdn-design-simplified-9780132735551) | PDN theory made accessible. Target impedance, decoupling strategies, and simulation. |
+| ⭐ | 📕 Book | Grounding and Shielding: Circuits and Interference (6th ed., 2016) | Ralph Morrison | [Wiley](https://www.wiley-vch.de/en/areas-interest/engineering/grounding-and-shielding-978-1-119-18374-7) | Morrison's classic on grounds, guards and shields in instrumentation and analog circuits, written from the fields point of view. Rick's list cites the 5th edition, *Grounding & Shielding Techniques*. |
+| | 🔧 Tool | Saturn PCB Design Toolkit | — | [Website](https://saturnpcb.com/saturn-pcb-toolkit/) | Free (Windows) calculators for trace width, via current, impedance, thermal resistance, and more. Its conductor-current calculator follows IPC-2152, and the vendor notes that calculators built on the old IPC-2221 formula are obsolete. Essential desktop tool. |
+| | 📄 Standard | IPC-2152 — Standard for Determining Current-Carrying Capacity in Printed Board Design (2009) | IPC | [PCD&F release note](https://pcdandf.com/pcdesign/index.php/editorial/menu-new-indust-prod/5545-ipc-releases-ipc-2152-standard) | Replaced the IPC-2221 conductor-sizing charts (which date to 1956) with new test data for internal and external conductors, in air and in vacuum. Use it, for example through Saturn, whenever you size traces or planes for current. |
 | | 💡 Concept | Decoupling Capacitor Placement and Selection | — | — | Strategy for choosing values, quantities, and placement of decoupling caps relative to IC power pins. |
+| | 📄 App Note | MT-101: Decoupling Techniques (2009) | Analog Devices | [PDF](https://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf) | ADI's free tutorial on choosing and placing decoupling capacitors and on the parasitics that limit them. A concrete companion to the concept row above. |
 | | 💡 Concept | Ground Plane Splits | — | — | When and why to split ground planes (usually: don't). Understand the consequences before you cut a plane. |
+| | 📄 App Note | MT-031: Grounding Data Converters and Solving the Mystery of "AGND" and "DGND" (2008) | Walt Kester, James Bryant, Mike Byrne (Analog Devices) | [PDF](https://www.analog.com/media/en/training-seminars/tutorials/mt-031.pdf) | The canonical answer to "what do I do with AGND and DGND?". For converters with low digital currents, tie both pins to the analog ground plane right at the part. Read it before splitting any plane on a mixed-signal board. |
+| | 📄 App Note | AN-136: PCB Layout Considerations for Non-Isolated Switching Power Supplies | Henry Zhang (Analog Devices) | [App note](https://www.analog.com/en/resources/app-notes/an-136.html) | The standard reference for buck/boost converter layout: power-stage placement, the high-di/dt "hot loop", and grounding of the power and control sections. |
+
+**Also used here (tracked in their home sections):** LTspice ([Section 00](../00-electronics-fundamentals/README.md)) for Practice 2, and your Section 00 impedance rig for the mini-project.
 
 ## Suggested Order
 
 1. **Rick Hartley — How to Achieve Proper Grounding** — Watch this first; it will reshape how you think about current return paths
 2. **Rick Hartley — Power Distribution Networks** — Understand PDN impedance and why it matters
 3. **Phil's Lab power design tutorials** — See practical implementation of power design principles
-4. **Fast Circuit Boards: Energy Management** — Deepen your physics intuition about energy flow
-5. **Decoupling capacitor placement and selection** — Learn the practical rules for cap selection and placement
-6. **Ground plane splits** — Understand why splitting planes is almost always a mistake
-7. **Principles of Power Integrity** — Formalize your PDN knowledge with Bogatin's approach
-8. **Saturn PCB Toolkit** — Use the calculators to verify your designs quantitatively
+4. **AN-136 (switching-regulator layout)** — Study the hot loop before you lay out your next buck converter
+5. **Fast Circuit Boards: Energy Management** — Deepen your physics intuition about energy flow
+6. **Decoupling capacitor placement and selection** — Learn the practical rules for cap selection and placement, using MT-101 as the worked reference
+7. **Ground plane splits** — Understand why splitting planes is almost always a mistake, then read MT-031 for how mixed-signal parts should actually be grounded
+8. **Principles of Power Integrity** — Formalize your PDN knowledge with Bogatin's approach
+9. **Grounding and Shielding (Morrison)** — Grounds, guards and shields for instrumentation and analog front ends; continue with [Section 12](../12-analog-mixed-signal-and-precision-measurement/README.md) for precision and mixed-signal front ends, where MT-031 and this book are used again
+10. **Saturn PCB Toolkit + IPC-2152** — Use the calculators to verify your designs quantitatively, sizing current-carrying copper with IPC-2152 rather than the old IPC-2221 charts
+
+---
+
+## 🛠️ Practice
+
+1. **Return-path map of your own board** — On a recent 4/6-layer board, pick five nets: a fast clock or SPI line that changes layers, USB D+/D−, the buck input loop, a high-impedance analog input, and an LDO-to-MCU rail. Sketch each return path at DC and above ~1 MHz on every layer it touches. At each layer change, show how return current moves between reference planes (stitching via for GND→GND, decoupling capacitor for GND→PWR), and mark every discontinuity: plane slots, antipad "Swiss cheese" under via fields, split crossings, connector transitions. Deliverable: annotated screenshots + fix list. Done when each fix names the mechanism it removes (added loop area, cavity coupling, a detour around a slot). *(~3 h · Rick Hartley's How to Achieve Proper Grounding, Morrison's Fast Circuit Boards)*
+2. **Target impedance and a decoupling design** — Compute Z_target = ΔV/ΔI for (a) a 3.3 V MCU rail with a 3 % ripple budget and a 150 mA step and (b) a 1.0 V FPGA-class core with 3 % and a 3 A step. Model each in Python (complex impedances) and in LTspice: VRM as R + L, bulk capacitor, an MLCC bank with DC-bias-derated C, ESR and *mounted* L, plus plane capacitance C = ε₀εᵣA/d. Iterate counts and values until |Z| < Z_target from ~10 kHz to ~50–100 MHz (above that the package takes over), and compare a "three values per decade" bank with a few-values design. Deliverable: plots + chosen capacitor list. Done when Python and LTspice agree within 1 dB and you can explain every anti-resonance peak. *(~4 h · Smith & Bogatin's Principles of Power Integrity for PDN Design, Rick Hartley's Power Distribution Networks, Saturn PCB Toolkit PDN calculator)*
+3. **Mounted-inductance shoot-out** — Estimate the loop inductance of an 0402 decoupling capacitor in four mountings — trace-to-via, vias beside the pads, via-in-pad, and bottom side directly under the IC — with the power/ground plane pair starting 0.1 mm vs 0.5 mm below the capacitor's layer. Use hand estimates (pad, via barrel, spreading inductance), Saturn's via calculator for the via term, and, if you have a 3D inductance solver (e.g. FastHenry — not a listed resource), cross-check one case. Deliverable: a 4 × 2 table in nH plus the resulting self-resonant frequency of a 100 nF part; update your footprint and via rules accordingly. Done when your ranking matches Smith & Bogatin's mounted-inductance discussion (and, if you ran a solver, it agrees with your hand number within ~30 %). *(~4 h · Smith & Bogatin's Principles of Power Integrity for PDN Design, Saturn PCB Toolkit, Decoupling Capacitor Placement and Selection)*
+4. **Buck hot loop, predicted then measured** — Lay out a 12 V → 3.3 V, 2 A synchronous buck twice: datasheet-tight (input capacitor hard against VIN/PGND, return on the plane directly beneath) and naive (input capacitor 10 mm away). Estimate each hot-loop inductance (L ≈ μ₀·h·ℓ/w for a strip over a plane, plus vias), then predict switch-node overshoot (L·di/dt) and ringing frequency 1/(2π√(L·C_oss)). If you build it, measure the switch node with a tip-and-barrel probe connection. Deliverable: both layouts + predictions (+ scope captures). Done when measured ringing lands within ~30 % of prediction and the naive layout rings measurably harder. *(~5 h · Phil's Lab power design tutorials, Rick Hartley's Power Distribution Networks)*
+
+**🏗️ Mini-project — PDN and Grounding Plan for a Mixed-Signal Board:** For a 6-layer board with an STM32U5, USB-C input, a buck plus LDOs, Ethernet, and a precision analog section, produce: (1) a power tree with currents, dropout, dissipation, and sequencing; (2) per-rail target impedance and |Z(f)| models built from Exercises 2–3 with real derated capacitors and mounted inductance; (3) a one-page grounding memo — one unbroken reference, partitioning by placement, where the ADC and reference return currents flow, and where chassis/shield ground meets circuit ground at the connectors; (4) bench validation with a load-step generator (MOSFET + resistor driven by an MCU timer) measuring droop and ringing on the MCU rail, or a shunt-through impedance measurement with your Section 00 rig. Deliverable: `projects/pcb/05-pdn/` with notebook, memo, and captures. Success: measured load-step droop within ±30 % of the model's prediction, and every rail meets its target impedance in simulation. *(~14 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. In Hartley's and Morrison's view, where does the energy of a signal or supply actually travel, and how does that change what "ground" means?
+2. On a solid plane under a meandering trace, where does the return current flow at 1 kHz versus 10 MHz, and why?
+3. Compute Z_target for a 1.2 V rail with ±5 % tolerance and a 2 A transient.
+4. Why do parallel capacitors of different values create anti-resonant peaks, and which two changes lower those peaks?
+5. Above ~10–20 MHz, why does a decoupling capacitor's mounted inductance matter more than its capacitance?
+6. Estimate the capacitance of a 100 cm² power/ground plane pair 0.1 mm apart (εᵣ ≈ 4.3) and its impedance at 100 MHz. Is that significant?
+7. Misconception probe: "Splitting into AGND and DGND, joined at one point under the ADC, always lowers noise." When does it make things worse?
+8. Explain to a smart friend in 3 sentences why "ground" is not one voltage everywhere on a board.

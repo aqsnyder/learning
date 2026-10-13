@@ -15,14 +15,14 @@ This repository is a structured curriculum for self-studying PCB (Printed Circui
 | Symbol | Meaning |
 |--------|---------|
 | 🔑 | **Must-read / must-watch** — absolute priority items |
-| ⭐ | **Rick Hartley's recommended reading** — from his curated list for PCB designers |
+| ⭐ | **Rick Hartley's recommended reading** — from his curated list for PCB designers (books only; his own talks are not on the list) |
 | 🔑⭐ | Both — a must-read that's also on Rick's list |
 
 ---
 
 ## Learning Path
 
-Work through the numbered sections in order. Each section's README contains curated resources with direct links, descriptions, and a suggested order within that section.
+Work through the numbered sections in order. Sections 12 and 13 were added later and keep their numbers so nothing else is renumbered; take them at the positions shown. Each section's README contains curated resources with direct links, descriptions, and a suggested order within that section.
 
 ```
 Section 00  →  Electronics Fundamentals
@@ -37,6 +37,8 @@ Section 08  →  Multi-Layer Design and Stackup
 Section 09  →  Design for Manufacturing (DFM) and Fabrication
 Section 10  →  Advanced Topics
 Section 11  →  Reference Projects and Open-Source Hardware
+Section 12  →  Analog, Mixed-Signal and Precision Measurement   (take after Section 05)
+Section 13  →  Bring-up, Test and Debug                          (take after Section 09)
 ```
 
 ### Cross-Cutting References
@@ -46,25 +48,32 @@ Section 11  →  Reference Projects and Open-Source Hardware
 | [books/](books/) | Curated book list with reading order |
 | [courses/](courses/) | Video lectures and channels in recommended sequence |
 | [blogs-and-references/](blogs-and-references/) | Essential sites, tools, component libraries, fab houses |
-| [documents/](documents/) | Included reference PDFs (IPC-2221, tutorials, Rick's reading list) |
+| [documents/](documents/) | Included reference PDFs: IPC-2221A (2003; superseded by IPC-2221C, 2023, see Section 01), Dave Jones' PCB Design Tutorial (2004), Rick's reading list |
 
 ---
 
 ## ⭐ Rick Hartley's Reading List — Cross-Reference
 
-> Rick Hartley is widely regarded as a legend in signal integrity and EMC design. His recommended reading list is the standard curriculum for professional PCB designers.
+> Rick Hartley is widely regarded as a legend in signal integrity and EMC design. His reading list (12 books, distributed by Nine Dot Connects) is a widely shared core library for SI/EMC-minded PCB designers. Rick groups the books under *Signal Integrity Control* (1–6) and *EMI & Noise Control* (7–12).
 
 Source: [documents/Ricks-Reading-Recommendation.pdf](documents/Ricks-Reading-Recommendation.pdf)
 
 | # | Book / Resource | Section |
 |---|-----------------|---------|
-| 1 | Signal and Power Integrity — Simplified (Bogatin) | [06 — Signal Integrity](06-signal-integrity/) |
-| 2 | High-Speed Digital Design: A Handbook of Black Magic (Johnson & Graham) | [06 — Signal Integrity](06-signal-integrity/) |
-| 3 | Electromagnetic Compatibility Engineering (Ott) | [07 — EMC](07-emc-and-compliance/) |
-| 4 | Right the First Time, Vols I & II (Ritchey) | [06 — Signal Integrity](06-signal-integrity/) / [08 — Stackup](08-multi-layer-and-stackup/) |
-| 5 | Fast Circuit Boards: Energy Management (Morrison) | [05 — Power & Grounding](05-power-and-grounding/) |
-| 6 | Principles of Power Integrity for PDN Design (Smith & Bogatin) | [05 — Power & Grounding](05-power-and-grounding/) |
-| 7 | Noise Reduction Techniques in Electronic Systems (Ott) | [07 — EMC](07-emc-and-compliance/) |
+| 1 | Fast Circuit Boards: Energy Management (Morrison) | [05 — Power & Grounding](05-power-and-grounding/) |
+| 2 | Right the First Time, Vols I & II (Ritchey) | [06 — Signal Integrity](06-signal-integrity/) / [08 — Stackup](08-multi-layer-and-stackup/) |
+| 3 | High-Speed Digital System Design: A Handbook of Interconnect Theory and Design Practices (Hall, Hall & McCall) | [06 — Signal Integrity](06-signal-integrity/) |
+| 4 | High-Speed Digital Design: A Handbook of Black Magic (Johnson & Graham) | [06 — Signal Integrity](06-signal-integrity/) |
+| 5 | High-Speed Signal Propagation: Advanced Black Magic (Johnson & Graham) | [06 — Signal Integrity](06-signal-integrity/) |
+| 6 | Signal and Power Integrity — Simplified (Bogatin) | [06 — Signal Integrity](06-signal-integrity/) |
+| 7 | PCB Design for Real-World EMI Control (Archambeault) | [07 — EMC](07-emc-and-compliance/) |
+| 8 | Digital Design for Interference Specifications: A Practical Handbook for EMI Suppression (Terrell & Keenan) | [07 — EMC](07-emc-and-compliance/) |
+| 9 | Electromagnetic Compatibility Engineering (Ott) | [07 — EMC](07-emc-and-compliance/) |
+| 10 | Principles of Power Integrity for PDN Design — Simplified (Smith & Bogatin) | [05 — Power & Grounding](05-power-and-grounding/) |
+| 11 | Grounding & Shielding (Morrison; Rick cites the 5th ed., *Grounding & Shielding Techniques*, and the current 6th ed. is *Grounding and Shielding: Circuits and Interference*) | [05 — Power & Grounding](05-power-and-grounding/) |
+| 12 | Introduction to Electromagnetic Compatibility (Paul) | [07 — EMC](07-emc-and-compliance/) |
+
+> Ott's *Noise Reduction Techniques in Electronic Systems* (Section 07) is a good book but is **not** on Rick's list; his list names Ott's later *Electromagnetic Compatibility Engineering*.
 
 ---
 
@@ -76,7 +85,7 @@ Source: [documents/Ricks-Reading-Recommendation.pdf](documents/Ricks-Reading-Rec
 | **Robert Feranec** | [YouTube](https://www.youtube.com/@RobertFeranec) | High-speed design, layout reviews, industry interviews |
 | **Rick Hartley** | Various (Altium, Sierra Circuits) | Signal integrity, EMC, grounding, stackup |
 | **EEVblog** | [YouTube](https://www.youtube.com/@EEVblog) | Electronics fundamentals, teardowns |
-| **Dr. EMC** | [YouTube](https://www.youtube.com/@DrEMC) | EMC simulation and practical design |
+| **Dr. EMC** | [YouTube](https://www.youtube.com/@DrEMC) | EMC simulation and practical design (unverified channel; see the note in [Section 06](06-signal-integrity/)) |
 | **Altium Academy** | [YouTube](https://www.youtube.com/@AltiumAcademy) | Broad PCB education, expert interviews |
 
 ---
@@ -84,7 +93,7 @@ Source: [documents/Ricks-Reading-Recommendation.pdf](documents/Ricks-Reading-Rec
 ## How to Use with NotebookLM
 
 1. **Section-by-section**: Upload a section's README for study guidance
-2. **Standards**: Upload the included IPC-2221 PDF for interactive Q&A
+2. **Standards**: Upload the included IPC-2221A PDF (2003 revision, since superseded by IPC-2221B/C; use IPC-2152 for current capacity) for interactive Q&A
 3. **Datasheets**: Upload component datasheets for design assistance
 4. **Progress tracking**: Use [PROGRESS.md](PROGRESS.md) to track completion
 

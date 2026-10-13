@@ -6,17 +6,32 @@
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Design a library architecture — symbol ↔ footprint ↔ 3D linkage; MPN, manufacturer, alternates, DNP, and supplier fields; atomic vs generic parts — and justify it for small-batch production.
+- Configure KiCad ERC (pin electrical types, power flags, pin-conflict matrix, no-connect discipline) so that a clean ERC carries real information and every waiver is documented.
+- Verify vendor models from SnapEDA, Ultra Librarian, and SamacSys against the datasheet, catching pin-map, pin-type, polarity, and land-pattern errors before they reach a board.
+- Structure a hierarchical schematic as a review document: page partitioning, net naming, and layout/test intent (Kelvin, guard, impedance, current, test points) captured on the sheet.
+- Automate ERC, DRC, netlist, BOM, and PDF generation with `kicad-cli` in CI.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Author(s) | Link | Description |
 |----------|------|----------|------------|------|-------------|
 | 🔑 | Video Series | Phil's Lab Schematic Design tutorials | Phil | [youtube.com/@PhilsLab](https://www.youtube.com/@PhilsLab) | Practical schematic capture walkthroughs |
-| 🔑 | Course | KiCad Getting Started Guide | KiCad Project | [docs.kicad.org/8](https://docs.kicad.org/8/) | Official documentation |
+| 🔑 | Course | KiCad Getting Started Guide (KiCad 10) | KiCad Project | [docs.kicad.org/10.0](https://docs.kicad.org/10.0/en/getting_started_in_kicad/getting_started_in_kicad.html) | Official documentation. KiCad 10.0 (March 2026) is the current release; it adds design variants (one schematic, several BOM variants) and a graphical DRC rule editor; reusable design blocks arrived in 9.0 |
 | | Tool | SnapEDA component library | — | [snapeda.com](https://www.snapeda.com/) | Verified symbols and footprints |
 | | Tool | Ultra Librarian | — | [ultralibrarian.com](https://www.ultralibrarian.com/) | CAD model downloads |
 | | Tool | SamacSys | — | [samacsys.com](https://www.samacsys.com/) | Free component libraries |
 | 🔑 | Reference | KiCad Template with Altium Theme | aqsnyder | [github.com/aqsnyder/KiCAD_Template_Snyder](https://github.com/aqsnyder/KiCAD_Template_Snyder) | Personal design starting point |
 | | Video | Robert Feranec schematic review series | Robert Feranec | [youtube.com/@RobertFeranec](https://www.youtube.com/@RobertFeranec) | Learn from real design reviews |
+| | Reference | KiCad Library Conventions (KLC) | KiCad Library Team | [klc.kicad.org](https://klc.kicad.org/) | The official rules for symbols, footprints and 3D models: naming, pin and pad conventions, layers, courtyards. Adopt them in your own libraries so they stay consistent with the stock KiCad libraries |
+| | App Note | AN4488 — Getting started with STM32F4xxxx MCU hardware development (Rev 7, 2018) | STMicroelectronics | [PDF](https://www.st.com/resource/en/application_note/an4488-getting-started-with-stm32f4xxxx-mcu-hardware-development-stmicroelectronics.pdf) | Schematic checklist for an STM32 board: supplies and decoupling, VDDA/VREF+, reset, clocks, boot pins, SWD/JTAG, plus a reference schematic and layout notes. ST publishes an equivalent "Getting started with … hardware development" note for each family, so use the one for yours |
+
+**Also used here (tracked in their home sections):** kicad-cli ([Section 09](../09-dfm-and-fabrication/README.md)) for Practice 4.
 
 ---
 
@@ -25,5 +40,31 @@
 1. **KiCad Getting Started Guide** — Walk through the official tutorial to learn the EDA environment.
 2. **KiCad Template with Altium Theme** — Set up your personal template so every new project starts consistently.
 3. **Phil's Lab Schematic Design tutorials** — Watch real-world schematic capture from start to finish.
-4. **SnapEDA / Ultra Librarian / SamacSys** — Learn to pull verified symbols and footprints instead of drawing from scratch.
-5. **Robert Feranec schematic review series** — Study common mistakes and best practices from peer reviews.
+4. **SnapEDA / Ultra Librarian / SamacSys** — Learn to pull symbols and footprints instead of drawing from scratch, but always check pin maps and land patterns against the datasheet before first use.
+5. **KiCad Library Conventions (KLC)** — Use as the style guide for your own symbol and footprint libraries.
+6. **AN4488 (or your STM32 family's equivalent)** — Run every MCU schematic against it: power pins, decoupling, reset, clocks, boot and debug.
+7. **Robert Feranec schematic review series** — Study common mistakes and best practices from peer reviews.
+
+---
+
+## 🛠️ Practice
+
+1. **Vendor-model audit** — Download the SnapEDA, Ultra Librarian, and SamacSys models for three parts you actually use: an STM32U5 in LQFP, a 16-pin USB-C receptacle, and an RJ45 with integrated magnetics. Check each against the datasheet: pin numbers and names, electrical types (power pins typed as power input? NC pins truly unconnected?), pads vs the manufacturer's recommended land pattern, courtyard, pin-1/polarity marking, paste layer, mechanical holes and shield tabs, and 3D-model alignment. Deliverable: defect table (vendor × part × defect × severity). Done when every defect is proven by overlaying the datasheet drawing in the footprint editor and measuring. *(~3 h · SnapEDA, Ultra Librarian, SamacSys, KiCad documentation)*
+2. **ERC that means something** — On one of your real schematics, retype pins so supply nets are driven by `power output` pins (regulator outputs) instead of blanket `PWR_FLAG`s, set the pin-conflict matrix deliberately, run ERC, and justify every exclusion in one line. Then seed six faults — floating VDDA, missing I²C pull-ups, a label typo (`SDA` vs `SDA1`), two regulator outputs tied together, an unconnected hierarchical sheet pin, swapped crystal pins — and record which ones ERC catches. Deliverable: before/after ERC reports, the waiver list, and how you would catch each miss (single-label-net warning, a netlist script, a review checklist). *(~2.5 h · KiCad Getting Started Guide and Schematic Editor docs, Phil's Lab schematic tutorials)*
+3. **Feranec's checklist, applied** — Watch two of Robert Feranec's schematic-review videos and distill his recurring checks into a ≥ 25-item checklist (power-up, reset and boot pins; decoupling per datasheet; crystal load caps; ESD/TVS on every external connector; pull-ups/downs and strap pins; debug access; test points; current and voltage ratings). Apply it to your latest STM32U5 schematic — e.g., recompute the HSE load caps as C1 = C2 = 2(C_L − C_stray) and confirm CC1 and CC2 each have their own 5.1 kΩ Rd. Deliverable: checklist + findings ranked blocker/major/minor. Done when you have ≥ 3 actionable findings, or a written argument for every item you pass. *(~3 h · Robert Feranec schematic review series, Phil's Lab schematic tutorials)*
+4. **Schematic CI** — Add a GitHub Actions workflow to your template repo, using the official KiCad Docker image, that runs `kicad-cli sch erc --exit-code-violations` and `kicad-cli pcb drc --exit-code-violations`, exports netlist, BOM CSV, and schematic PDF as artifacts (or runs a KiCad 9+ jobset via `kicad-cli jobset run`), and posts a BOM diff against the previous commit to the job summary. Deliverable: working workflow. Done when a deliberately broken commit fails with the violation in the log and a clean commit passes. *(~3 h · KiCad documentation (kicad-cli), KiCad Template with Altium Theme)*
+
+**🏗️ Mini-project — Library QA Bot:** Write a Python linter for your personal KiCad library — parse the `.kicad_sym` / `.kicad_mod` S-expressions directly, or extend KiCad's own KLC checker scripts (kicad-library-utils). Checks: every symbol has MPN, manufacturer, datasheet URL, and a footprint that resolves; IC symbols are not all `passive` pins; footprints have courtyard, fab, and silk layers, a pin-1 marker, paste apertures within a sane fraction of pad area, and a 3D model that resolves. Run it in CI beside Exercise 4. Deliverable: `projects/pcb/02-libqa/` plus the CI job. Success: a full-library run in < 60 s, zero false positives on 10 hand-verified parts, and it flags the vendor-model defects you found in Exercise 1. *(~10 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. What does `PWR_FLAG` actually tell ERC, and when is needing one a design smell?
+2. Give the correct KiCad pin electrical type for an LDO output, an MCU VDD pin, an open-drain I²C pin, a crystal pin, and an NC pin.
+3. Atomic parts vs generic symbols with footprint and MPN assigned later: name one advantage of each for a small production company.
+4. List four checks you would make on any downloaded footprint before putting it on a board.
+5. Misconception probe: "ERC passes, so the schematic is correct." Name three classes of error ERC cannot see.
+6. An 8 MHz crystal specifies C_L = 10 pF and you estimate 3 pF of stray capacitance. Which load capacitors do you fit, and which way does the frequency move if they are too large?
+7. Local, hierarchical, and global labels: what is each one's scope, and when does a global label become a liability?
+8. Explain to a smart friend in 3 sentences why the schematic is the source of truth for layout, BOM, and test.

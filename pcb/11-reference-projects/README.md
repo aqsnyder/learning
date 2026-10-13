@@ -8,18 +8,33 @@ Studying real designs is one of the best ways to learn. Read other engineers' sc
 
 ---
 
+## 🎯 Learning Objectives
+
+After this section you can:
+- Run a structured, evidence-based review of someone else's board (schematic and layout) with your checklists from Sections 02–09, separating principle violations from style preferences.
+- Reverse-engineer a design's stackup, impedance strategy, return-path transitions, PDN, and protection scheme from its published files alone — and test its stated claims with your own calculations.
+- Compare how hobby, production, RF, and vehicle-environment designs trade cost, robustness, testability, and manufacturability, and explain each choice by volume and environment.
+- Harvest proven circuit and layout patterns (USB-C sink, ESD, PoE/Ethernet front end, RF shielding, test-pad strategy) into your own library as reusable blocks.
+
+---
+
 ## Resources
 
 | Priority | Type | Resource | Link | Description |
 |----------|------|----------|------|-------------|
 | 🔑 | Open Source | HackRF One | [GitHub](https://github.com/greatscottgadgets/hackrf) | Complex RF design, excellent reference for mixed-signal layout |
-| 🔑 | Open Source | CommaAI hardware | [GitHub](https://github.com/commaai) | Automotive-grade hardware design |
+| | Open Source | CommaAI hardware | [GitHub](https://github.com/commaai) | Small vehicle-interface boards, not current automotive designs. comma.ai's published board files are older Eagle-format CAN-interface and harness boards (e.g., the pedal interceptor and giraffe). The [panda](https://github.com/commaai/panda) repo (an STM32H7 CAN/CAN FD interface) holds firmware and software only. Useful for studying input protection and CAN interfacing in a vehicle environment |
 | | Open Source | Adafruit open-source boards | [GitHub](https://github.com/adafruit) | Massive library of beginner-friendly reference designs |
 | | Open Source | SparkFun open-source boards | [GitHub](https://github.com/sparkfun) | Well-documented hobby/pro designs |
 | | Open Source | Arduino reference designs | [Link](https://www.arduino.cc/en/Main/Boards) | Simple but well-documented |
 | 🔑 | Open Source | Raspberry Pi Hardware | [Datasheets](https://datasheets.raspberrypi.com/) | Production-quality reference designs |
 | | Open Source | OLIMEX open-source hardware | [GitHub](https://github.com/OLIMEX) | European OSHW designs |
+| 🔑 | Open Source | Antmicro Open Hardware Portal | [openhardware.antmicro.com](https://openhardware.antmicro.com/) | Professional open boards designed in KiCad, including DDR4/DDR5 RDIMM testers, an LPDDR4 test board, Thunderbolt-to-PCIe and 10GbE adapters, and a USB-C PD adapter. Schematics, BOMs, stackup views and 3D models are browsable. The closest thing to studying a high-speed consultancy's production KiCad work |
+| | Open Source | ThunderScope | [GitHub](https://github.com/EEVengers/ThunderScope) | Open-source 4-channel, 1 GS/s oscilloscope streaming over Thunderbolt/USB4 (MIT licence). The baseboard is in Altium (KiCad can import it), and the FPGA module is in both Altium and KiCad. A rare open look at a real instrument's front end and high-speed data path |
+| | Open Source | Glasgow Interface Explorer | [GitHub](https://github.com/GlasgowEmbedded/glasgow) | OSHWA-certified, FPGA-based tool for exploring digital interfaces, designed to survive operator error. Study its I/O protection and how a small USB instrument is partitioned |
 | | Concept | Design reviews | — | Watch Robert Feranec's schematic and layout review videos to learn critical thinking |
+
+**Also used here (tracked in their home sections):** IPC-2221A §3.5 test guidance ([Section 09](../09-dfm-and-fabrication/README.md)) for Practice 1; the IPC-2221A §6.4 equations ([Section 08](../08-multi-layer-and-stackup/README.md)) and Saturn PCB Toolkit ([Section 05](../05-power-and-grounding/README.md)) for Practice 2.
 
 ---
 
@@ -28,6 +43,33 @@ Studying real designs is one of the best ways to learn. Read other engineers' sc
 1. **Adafruit / SparkFun / Arduino boards** — Start with simpler, well-documented designs to build your reading skills.
 2. **OLIMEX open-source hardware** — Explore European OSHW designs for different perspectives.
 3. **HackRF One** — Study a complex RF/mixed-signal design and its layout strategies.
-4. **Raspberry Pi Hardware** — Analyze production-quality designs with professional stackups.
-5. **CommaAI hardware** — Examine automotive-grade design requirements and implementation.
-6. **Robert Feranec design reviews** — Watch critical reviews of real designs to sharpen your eye.
+4. **Glasgow Interface Explorer** — Study a compact USB instrument with robust I/O protection.
+5. **Raspberry Pi Hardware** — Analyze production-quality designs with professional stackups.
+6. **Antmicro Open Hardware Portal** — Read professional high-speed KiCad boards (DDR, PCIe, 10GbE, USB-C PD) layer by layer.
+7. **ThunderScope** — Examine an open instrument's analog front end and high-speed data path.
+8. **CommaAI hardware** — Examine how small, older vehicle-interface boards (CAN interface, harness) handle power-input protection and CAN robustness.
+9. **Robert Feranec design reviews** — Watch critical reviews of real designs to sharpen your eye.
+
+---
+
+## 🛠️ Practice
+
+1. **Production test pads (Raspberry Pi Zero 2 W)** — Raspberry Pi publishes the Zero 2 W schematic and a "test pad positions" document used in production. Infer the test strategy: which nets get pads, pad size and pitch, which side is probed, and what is left to functional test. Compare with IPC-2221A §3.5 guidance and with your Section 09 DFT plan. Deliverable: a half-page note + three changes to your DFT checklist. *(~2 h · Raspberry Pi Hardware)*
+2. **Check a published impedance claim (HackRF One)** — HackRF One's `hardware/hackrf-one/README` specifies a 4-layer, 1.6 mm board with 0.2104 mm of 7628 prepreg (εᵣ 4.6), 35 µm outer copper, and "50 ohm (+/- 5%) 11.55 mil microstrip". Compute Z₀ for that geometry with the IPC-2221A formula, Saturn PCB Toolkit or KiCad's PCB Calculator, and your Section 06 field solver, with and without the 12.7 µm LPI mask listed in the board's KiCad stackup. If your numbers disagree with the README beyond its ±5 %, list the assumptions that could reconcile them (pressed thickness, Dk at frequency, mask, etch profile) and what you would ask the fab. Then open the board and map how the RF traces, ground-stitching vias, and the shield-can footprint relate to the planes beneath. Deliverable: a one-page note with screenshots. *(~3 h · HackRF One)*
+3. **Vehicle vs hobby protection audit** — Open comma.ai's pedal interceptor (`pedal/board/interceptor` in the commaai/hardware repo — the schematic PDF is enough, or import the Eagle files into KiCad for layout) and inventory every protection and robustness feature on its power input and CAN/IO lines (reverse polarity, TVS, filtering, connector choice). Map each to the vehicle hazard it addresses (load dump, jump start, reverse battery, ESD). Do the same for an Adafruit or SparkFun STM32-class board and write the gap list. Deliverable: side-by-side table + what you would copy into a field-deployed product. *(~3 h · comma.ai hardware, Adafruit open-source boards, SparkFun open-source boards)*
+4. **Revision archaeology (OLIMEX ESP32-PoE)** — The ESP32-PoE repo keeps every hardware revision (B1 through M2) as KiCad files. Diff three consecutive revisions — schematic PDFs and BOMs, plus layout via `kicad-cli` SVG exports or a visual diff tool such as KiRI — list every change, and infer its driver: bug fix, EMC, cost, supply chain, or manufacturability. Check your inferences against any revision notes OLIMEX publishes. Deliverable: change log with a "why" column + the two lessons you will apply to your own Ethernet designs. *(~4 h · OLIMEX open-source hardware)*
+
+**🏗️ Mini-project — Review One, Rebuild a Piece:** Pick the reference design closest to your work — Raspberry Pi's CM4 IO Board (published as KiCad files: Gigabit Ethernet, USB, PCIe) or HackRF One (mixed-signal/RF). Write a full review in GitHub-issue style — modeled on Robert Feranec's design-review videos — covering schematic, PDN, stackup, SI, EMC, DFM, and DFT; tag every finding blocker/major/minor/nit with a screenshot and the principle it rests on (Hartley, Bogatin, Ott, IPC). Then re-lay out one subsystem — e.g., Ethernet PHY → magnetics → RJ45, or the USB-C power input — in your own template with your rules, and compare before/after on impedance, return-path transitions, loop areas, and test access. Deliverable: `projects/pcb/11-review/` with the review and the KiCad subsystem. Success: ≥ 15 findings, ≥ 80 % of which survive a 48-hour cold re-read (or a peer's review), and your subsystem passes your DRC and checklists with zero blockers. *(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Name the first five things you check when you open an unfamiliar board's layout, and why in that order.
+2. What stackup and impedance target does HackRF One's hardware README specify?
+3. Why does an RF section like HackRF One's get a shield can and ground-stitching vias, and what happens if those vias are spaced too far apart?
+4. Name three robustness features you would expect on a vehicle-interface board that a hobby board usually omits, and the hazard each covers.
+5. Misconception probe: "It's open source and sold by the thousands, so its layout is a safe template to copy." What's wrong with that reasoning?
+6. In a review, how do you tell a principle violation from a preference, and why does the distinction matter?
+7. What does a published test-pad positions document reveal about a product's manufacturing strategy?
+8. Explain to a smart friend in 3 sentences why reading other engineers' boards is the fastest way to get better at your own.
