@@ -25,6 +25,8 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] *Mathematics for Machine Learning* — Deisenroth, Faisal & Ong (2020)
 - [ ] Parr & Howard — "The Matrix Calculus You Need For Deep Learning" (2018)
 - [ ] Olah — "Visual Information Theory" (2015)
+- [ ] Khan Academy — linear algebra, calculus, statistics (gap-filling, as needed)
+- [ ] Starmer — StatQuest videos (as needed)
 - [ ] ⭐ Aaronson — "The First Law of Complexodynamics" (2011)
 - [ ] ⭐ Aaronson, Carroll & Ouellette — "The Coffee Automaton" (2014)
 - [ ] ⭐ Grünwald — "A Tutorial Introduction to the MDL Principle" (2004)
@@ -41,6 +43,9 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Domingos — "A Few Useful Things to Know About Machine Learning" (2012)
 - [ ] Chen & Guestrin — XGBoost (2016)
 - [ ] Grinsztajn, Oyallon & Varoquaux — "Why Do Tree-Based Models Still Outperform Deep Learning on Tabular Data?" (2022)
+- [ ] Hollmann et al. — TabPFN: "Accurate Predictions on Small Data with a Tabular Foundation Model" (2025)
+- [ ] Scikit-learn User Guide (reference)
+- [ ] Google Machine Learning Crash Course (optional refresher)
 - [ ] *Pattern Recognition and Machine Learning* — Bishop
 - [ ] *The Elements of Statistical Learning*
 - [ ] *Gaussian Processes for Machine Learning* — Rasmussen & Williams (2006)
@@ -107,7 +112,7 @@ Track your progress through the curriculum. Check off items as you complete them
 ## Section 06 — Transformers and Attention
 - [ ] ⭐ Bahdanau et al. — Attention mechanism (2014)
 - [ ] ⭐ Vaswani et al. — "Attention Is All You Need" (2017)
-- [ ] ⭐ "The Annotated Transformer" — Harvard NLP
+- [ ] ⭐ Rush — "The Annotated Transformer" (2018; 2022 update by Huang et al.)
 - [ ] Jay Alammar — "The Illustrated Transformer"
 - [ ] Phuong & Hutter — "Formal Algorithms for Transformers" (2022)
 - [ ] Su et al. — RoFormer / Rotary Position Embedding (2021)
@@ -255,7 +260,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Templeton et al. — Scaling Monosemanticity (2024)
 - [ ] Ameisen et al. — Circuit Tracing: Revealing Computational Graphs in Language Models (2025)
 - [ ] Lindsey et al. — On the Biology of a Large Language Model (2025)
-- [ ] Gurnee, Sofroniew, Lindsey et al. — Verbalizable Representations Form a Global Workspace in Language Models (2026)
+- [ ] Gurnee, Sofroniew et al. — Verbalizable Representations Form a Global Workspace in Language Models (2026)
 - [ ] Elhage et al. — Softmax Linear Units (2022)
 - [ ] Zou et al. — Representation Engineering (2023)
 - [ ] Neel Nanda — TransformerLens & Mech Interp tutorials
@@ -272,7 +277,7 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] Russell — *Human Compatible* (2019)
 - [ ] Schaeffer et al. — Are Emergent Abilities a Mirage? (2023)
 - [ ] Chiang et al. — Chatbot Arena (2024)
-- [ ] Kwa et al. (METR) — Measuring AI Ability to Complete Long Tasks (2025)
+- [ ] Kwa et al. (METR) — Measuring AI Ability to Complete Long Software Tasks (2025)
 - [ ] 🛠️ Practice exercises 1–5
 - [ ] 🏗️ Mini-project: Train and Interrogate a Sparse Autoencoder
 - [ ] ✅ Check Yourself — answered from memory
@@ -297,6 +302,27 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] 🏗️ Mini-project: A GNN That Reads Schematics
 - [ ] ✅ Check Yourself — answered from memory
 
+## Section 14 — Edge and Embedded ML (TinyML)
+- [ ] Warden & Situnayake — *TinyML* (2019)
+- [ ] Han — MIT 6.5940: TinyML and Efficient Deep Learning Computing (Fall 2024)
+- [ ] Janapa Reddi — *Machine Learning Systems* (open textbook, 2026)
+- [ ] David et al. — "TensorFlow Lite Micro: Embedded Machine Learning on TinyML Systems" (2020)
+- [ ] Lai, Suda & Chandra — "CMSIS-NN: Efficient Neural Network Kernels for Arm Cortex-M CPUs" (2018)
+- [ ] STMicroelectronics — ST Edge AI Core (tool and documentation)
+- [ ] Nagel et al. — "A White Paper on Neural Network Quantization" (2021)
+- [ ] Gholami et al. — "A Survey of Quantization Methods for Efficient Neural Network Inference" (2021)
+- [ ] Zhang, Suda, Lai & Chandra — "Hello Edge: Keyword Spotting on Microcontrollers" (2017)
+- [ ] Lin et al. — "MCUNet: Tiny Deep Learning on IoT Devices" (2020)
+- [ ] Nordby et al. — emlearn (tool)
+- [ ] Banbury et al. — "MLPerf Tiny Benchmark" (2021)
+- [ ] Warden — "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition" (2018)
+- [ ] Sculley et al. — "Hidden Technical Debt in Machine Learning Systems" (2015)
+- [ ] Zinkevich — "Rules of Machine Learning: Best Practices for ML Engineering"
+- [ ] Huyen — *Designing Machine Learning Systems* (2022)
+- [ ] 🛠️ Practice exercises 1–5
+- [ ] 🏗️ Mini-project: Always-On Event Detector on a Cortex-M33
+- [ ] ✅ Check Yourself — answered from memory
+
 ## Books (supplementary)
 - [ ] *Neural Networks and Deep Learning* — Nielsen
 - [ ] *ISLR* — James et al.
@@ -312,3 +338,6 @@ Track your progress through the curriculum. Check off items as you complete them
 - [ ] *Hands-On ML with Scikit-Learn and PyTorch* — Géron (2025)
 - [ ] *Speech and Language Processing* (3rd ed. draft) — Jurafsky & Martin
 - [ ] *Build a Large Language Model (From Scratch)* — Raschka (2024)
+- [ ] *AI Engineering* — Huyen (2024)
+
+*PRML, ESL and GPML are tracked under Section 02, the RLHF Book under Section 10, and the TinyML, Machine Learning Systems and Designing Machine Learning Systems books under Section 14.*

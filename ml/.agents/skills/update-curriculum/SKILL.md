@@ -83,6 +83,7 @@ After updating, provide a summary of:
 | Reasoning, agents, multimodal, robotics, latest models | `11-frontiers/` |
 | Interpretability, alignment, safety evaluations, capability measurement | `12-interpretability-and-alignment/` |
 | GNNs, geometric/equivariant DL, AI for science | `13-graphs-geometry-and-science/` |
+| On-device/embedded ML (TinyML): MCU runtimes and kernels, int8 deployment, hardware-aware model design, on-target benchmarking, shipping ML in products | `14-edge-and-embedded-ml/` (take after 08; general quantization papers stay in 08) |
 | New courses or lectures | `courses/` |
 | New blogs or newsletters | `blogs-and-references/` |
 | New books | `books/` |

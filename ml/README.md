@@ -14,15 +14,17 @@ This repository is a structured curriculum for self-studying machine learning an
 
 | Symbol | Meaning |
 |--------|---------|
-| 🔑 | **Must-read / must-watch** — absolute priority items |
+| 🔑 | **Core path** — must-read / must-watch; at most 3 per section, named in each section's *Core path* line. In `books/` and `courses/`, 🔑 marks items that are core in some section; in `blogs-and-references/`, the sources to follow first |
 | ⭐ | **Ilya Sutskever's reading list** — from the famous ~30 paper list given to John Carmack |
-| 🔑⭐ | Both — a must-read that's also on Ilya's list |
+| 🔑⭐ | Both — a core-path item that's also on Ilya's list |
 
 ---
 
 ## Learning Path
 
 Work through the numbered sections in order. Each section's README contains curated resources with direct links, descriptions, and a suggested reading order within that section.
+
+Section 14 was added later, so its number doesn't reflect where it belongs: take it after Section 08 (it builds on 02, 04 and 08).
 
 ```
 Section 00  →  Historical Foundations
@@ -39,6 +41,7 @@ Section 10  →  Reinforcement Learning
 Section 11  →  Frontiers (2023–2026+)
 Section 12  →  Interpretability and Alignment
 Section 13  →  Graphs, Geometry, and Science
+Section 14  →  Edge and Embedded ML (TinyML)   (take after 08)
 ```
 
 ### Cross-Cutting References

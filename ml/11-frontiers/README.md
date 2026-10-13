@@ -4,6 +4,8 @@
 
 The frontier of ML research moves fast. This section collects the most impactful recent work across reasoning, multimodality, self-supervised learning, alternative architectures, agentic AI, robotics, and ecosystem-level reports. Revisit regularly.
 
+**Prerequisites:** [Section 06 – Transformers and Attention](../06-transformers-and-attention/README.md) and [Section 09 – Large Language Models](../09-llms-and-language/README.md) for everything here; [Section 10 – Reinforcement Learning](../10-reinforcement-learning/README.md) for the reasoning thread; [Section 04 – CNNs and Computer Vision](../04-cnns-and-computer-vision/README.md) for the multimodal and self-supervised tables; [Section 05 – RNNs, Sequences, and Memory](../05-rnns-sequences-and-memory/README.md) for the alternative architectures.
+
 ---
 
 ## 🎯 Learning Objectives
@@ -19,11 +21,11 @@ After this section you can:
 
 ## Reasoning and Test-Time Compute
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | Scaling LLM Test-Time Compute – Snell et al. (2024) | Paper | 🔑 | [arxiv.org/abs/2408.03314](https://arxiv.org/abs/2408.03314) |
-| 2 | DeepSeek-R1 (2025) | Paper | 🔑 | [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) |
-| 3 | Learning to Reason with LLMs (o1) – OpenAI (2024) | Blog | | [openai.com](https://openai.com/index/learning-to-reason-with-llms/) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | Scaling LLM Test-Time Compute – Snell et al. (2024) | Paper | 🔑 | [arxiv.org/abs/2408.03314](https://arxiv.org/abs/2408.03314) | Compares two uses of inference compute, search against process-reward verifiers and sequential revision, and shows when they beat a bigger model. Basis for Practice 3. |
+| 2 | DeepSeek-R1 (2025) | Paper | 🔑 | [arxiv.org/abs/2501.12948](https://arxiv.org/abs/2501.12948) | R1-Zero gets long chain-of-thought reasoning from RL alone (GRPO, rule-based rewards); R1 adds cold-start SFT and more stages. The mini-project's recipe. |
+| 3 | Learning to Reason with LLMs (o1) – OpenAI (2024) | Blog | | [openai.com](https://openai.com/index/learning-to-reason-with-llms/) | OpenAI's announcement of o1: RL-trained chain-of-thought whose performance improves with both train-time RL and test-time thinking compute. Introduces the paradigm; few technical details. |
 
 Reasoning models are trained with large-scale reinforcement learning to think in long chains of thought, and their accuracy keeps improving as they are allowed more inference-time compute. OpenAI's o1 announcement introduced the paradigm. Snell et al. formalizes when test-time compute scaling beats simply training a larger model. DeepSeek-R1 openly demonstrated reinforcement-learning-driven chain-of-thought at scale (for the RL recipes behind it — GRPO and RL with verifiable rewards, plus the process-reward alternative it did not adopt — see [Section 10](../10-reinforcement-learning/README.md)).
 
@@ -31,12 +33,12 @@ Reasoning models are trained with large-scale reinforcement learning to think in
 
 ## Multimodal Models
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | Gemini – Google DeepMind (2023) | Paper | 🔑 | [arxiv.org/abs/2312.11805](https://arxiv.org/abs/2312.11805) |
-| 2 | SAM – Kirillov et al. (2023) | Paper | | [arxiv.org/abs/2304.02643](https://arxiv.org/abs/2304.02643) |
-| 3 | CLIP – Radford et al. (2021) | Paper | | [arxiv.org/abs/2103.00020](https://arxiv.org/abs/2103.00020) |
-| 4 | LLaVA: Visual Instruction Tuning – Liu et al. (2023) | Paper | | [arxiv.org/abs/2304.08485](https://arxiv.org/abs/2304.08485) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | Gemini – Google DeepMind (2023) | Paper | | [arxiv.org/abs/2312.11805](https://arxiv.org/abs/2312.11805) | Google's report on the first Gemini models (Ultra, Pro, Nano), multimodal across text, images, audio and video. A snapshot of the 2023 frontier. |
+| 2 | SAM – Kirillov et al. (2023) | Paper | | [arxiv.org/abs/2304.02643](https://arxiv.org/abs/2304.02643) | Segment Anything: a promptable segmentation model trained on SA-1B, a billion-mask dataset, that transfers zero-shot to new tasks. Foundation-model thinking applied to segmentation. |
+| 3 | CLIP – Radford et al. (2021) | Paper | | [arxiv.org/abs/2103.00020](https://arxiv.org/abs/2103.00020) | Trains image and text encoders contrastively on 400M web image-text pairs, enabling zero-shot classification from text prompts. The vision-language foundation LLaVA builds on. |
+| 4 | LLaVA: Visual Instruction Tuning – Liu et al. (2023) | Paper | | [arxiv.org/abs/2304.08485](https://arxiv.org/abs/2304.08485) | Joins a CLIP vision encoder to an LLM via a projection layer, tuned on GPT-4-generated visual instruction data. The recipe most open VLMs follow. |
 
 Multimodal models unify vision, language, and other modalities into a single architecture. CLIP pioneered contrastive image-text pretraining, SAM brought foundation-model thinking to segmentation, LLaVA showed the simple open recipe (vision encoder + projection + LLM, trained on visual instruction data) that most open vision-language models still follow, and Gemini represented the natively multimodal frontier at its 2023 release.
 
@@ -46,13 +48,13 @@ Multimodal models unify vision, language, and other modalities into a single arc
 
 Self-supervised learning extracts rich representations from unlabeled data, dramatically reducing the need for labeled datasets. Contrastive methods (SimCLR, MoCo) learn by comparing augmented views, self-distillation (DINO) learns without negative pairs, and masked prediction (MAE, JEPA) reconstructs missing information. These methods now provide the default initialization for most vision systems.
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | SimCLR – Chen et al. (2020) | Paper | 🔑 | [arxiv.org/abs/2002.05709](https://arxiv.org/abs/2002.05709) |
-| 2 | MoCo v2 – Chen et al. (2020) | Paper | | [arxiv.org/abs/2003.04297](https://arxiv.org/abs/2003.04297) |
-| 3 | DINO / DINOv2 – Caron et al. (2021) / Oquab et al. (2023) | Paper | 🔑 | [DINO](https://arxiv.org/abs/2104.14294) · [DINOv2](https://arxiv.org/abs/2304.07193) |
-| 4 | MAE – Masked Autoencoders Are Scalable Vision Learners – He et al. (2022) | Paper | | [arxiv.org/abs/2111.06377](https://arxiv.org/abs/2111.06377) |
-| 5 | JEPA / I-JEPA – Assran et al. (2023) | Paper | | [arxiv.org/abs/2301.08243](https://arxiv.org/abs/2301.08243) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | SimCLR – Chen et al. (2020) | Paper | | [arxiv.org/abs/2002.05709](https://arxiv.org/abs/2002.05709) | Contrastive learning between two augmented views of each image. Shows that the augmentation mix, a nonlinear projection head and large batches all matter. |
+| 2 | MoCo v2 – Chen et al. (2020) | Paper | | [arxiv.org/abs/2003.04297](https://arxiv.org/abs/2003.04297) | Short note adding SimCLR's MLP projection head and stronger augmentation to MoCo's momentum encoder and negative queue; it outperforms SimCLR without large batches. |
+| 3 | DINO / DINOv2 – Caron et al. (2021) / Oquab et al. (2023) | Paper | | [DINO](https://arxiv.org/abs/2104.14294) · [DINOv2](https://arxiv.org/abs/2304.07193) | DINO: a student network matches a momentum teacher without negatives; its ViT attention maps outline objects. DINOv2 scales data and model for all-purpose frozen features. |
+| 4 | MAE – Masked Autoencoders Are Scalable Vision Learners – He et al. (2022) | Paper | | [arxiv.org/abs/2111.06377](https://arxiv.org/abs/2111.06377) | Masks a high fraction (e.g. 75%) of image patches and reconstructs the pixels; the encoder sees only visible patches, so pretraining is fast. |
+| 5 | JEPA / I-JEPA – Assran et al. (2023) | Paper | | [arxiv.org/abs/2301.08243](https://arxiv.org/abs/2301.08243) | Predicts representations of masked target blocks from one context block, not pixels, and needs no hand-crafted augmentations. Compare with MAE's pixel reconstruction. |
 
 ---
 
@@ -60,12 +62,12 @@ Self-supervised learning extracts rich representations from unlabeled data, dram
 
 The transformer's quadratic attention cost has spurred a wave of subquadratic alternatives. State space models (S4, Mamba) achieve linear-time sequence modeling, while RWKV and xLSTM revisit recurrence with modern training tricks. These architectures are particularly compelling for long-context and real-time applications.
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | S4 – Efficiently Modeling Long Sequences with Structured State Spaces – Gu, Goel & Ré (2021) | Paper | 🔑 | [arxiv.org/abs/2111.00396](https://arxiv.org/abs/2111.00396) |
-| 2 | Mamba – Linear-Time Sequence Modeling with Selective State Spaces – Gu & Dao (2023) | Paper | 🔑 | [arxiv.org/abs/2312.00752](https://arxiv.org/abs/2312.00752) |
-| 3 | RWKV – Reinventing RNNs for the Transformer Era – Peng et al. (2023) | Paper | | [arxiv.org/abs/2305.13048](https://arxiv.org/abs/2305.13048) |
-| 4 | xLSTM – Extended Long Short-Term Memory – Beck et al. (2024) | Paper | | [arxiv.org/abs/2405.04517](https://arxiv.org/abs/2405.04517) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | S4 – Efficiently Modeling Long Sequences with Structured State Spaces – Gu, Goel & Ré (2021) | Paper | | [arxiv.org/abs/2111.00396](https://arxiv.org/abs/2111.00396) | Makes long-range state-space models practical with a structured (normal plus low-rank) parameterization; first to solve LRA's Path-X. Source for Practice 1's recurrence/convolution duality. |
+| 2 | Mamba – Linear-Time Sequence Modeling with Selective State Spaces – Gu & Dao (2023) | Paper | 🔑 | [arxiv.org/abs/2312.00752](https://arxiv.org/abs/2312.00752) | Makes SSM parameters input-dependent ('selection'), giving up the convolution view for a hardware-aware parallel scan. Linear-time and competitive with transformers on language. |
+| 3 | RWKV – Reinventing RNNs for the Transformer Era – Peng et al. (2023) | Paper | | [arxiv.org/abs/2305.13048](https://arxiv.org/abs/2305.13048) | A linear-attention RNN that trains in parallel like a transformer but runs with constant memory and compute per token at inference; scaled to 14B parameters. |
+| 4 | xLSTM – Extended Long Short-Term Memory – Beck et al. (2024) | Paper | | [arxiv.org/abs/2405.04517](https://arxiv.org/abs/2405.04517) | Revives the LSTM with exponential gating and new memory cells (scalar sLSTM, parallelizable matrix mLSTM), stacked into residual blocks. Tests whether scaled recurrence rivals transformers. |
 
 ---
 
@@ -73,17 +75,17 @@ The transformer's quadratic attention cost has spurred a wave of subquadratic al
 
 LLM-powered agents combine reasoning, tool use, memory, and retrieval to act autonomously. ReAct interleaves reasoning traces with actions, RAG grounds generation in retrieved documents (Sentence-BERT explains the sentence embeddings that semantic retrieval is built on), Tree of Thoughts explores branching reasoning paths, and Toolformer teaches models to call APIs on their own. "Building Effective Agents" distills the practical design patterns (prompt chaining, routing, orchestrator–workers, evaluator–optimizer, autonomous loops), and SWE-bench is the benchmark that made real-world software engineering the standard test of agent capability. (Sparks of AGI is a capabilities-evaluation study of GPT-4 rather than an agents paper; it sits here for historical reasons.)
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | ReAct – Yao et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2210.03629](https://arxiv.org/abs/2210.03629) |
-| 2 | RAG – Retrieval-Augmented Generation – Lewis et al. (2020) | Paper | 🔑 | [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401) |
-| 3 | Tree of Thoughts – Yao et al. (2023) | Paper | | [arxiv.org/abs/2305.10601](https://arxiv.org/abs/2305.10601) |
-| 4 | Toolformer – Schick et al. (2023) | Paper | | [arxiv.org/abs/2302.04761](https://arxiv.org/abs/2302.04761) |
-| 5 | Sparks of AGI – Bubeck et al. (2023) | Paper | 🔑 | [arxiv.org/abs/2303.12712](https://arxiv.org/abs/2303.12712) |
-| 6 | Voyager – Wang et al. (2023) | Paper | | [arxiv.org/abs/2305.16291](https://arxiv.org/abs/2305.16291) |
-| 7 | Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks – Reimers & Gurevych (2019) | Paper | | [arxiv.org/abs/1908.10084](https://arxiv.org/abs/1908.10084) |
-| 8 | Building Effective Agents – Schluntz & Zhang, Anthropic (2024) | Blog | | [anthropic.com](https://www.anthropic.com/engineering/building-effective-agents) |
-| 9 | SWE-bench: Can Language Models Resolve Real-World GitHub Issues? – Jimenez et al. (2023) | Paper | | [arxiv.org/abs/2310.06770](https://arxiv.org/abs/2310.06770) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | ReAct – Yao et al. (2022) | Paper | | [arxiv.org/abs/2210.03629](https://arxiv.org/abs/2210.03629) | Interleaves reasoning traces with actions such as Wikipedia lookups, reducing chain-of-thought hallucination and error propagation. The Thought-Action-Observation loop of Practice 4. |
+| 2 | RAG – Retrieval-Augmented Generation – Lewis et al. (2020) | Paper | | [arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401) | Pairs a pretrained seq2seq generator with a neural retriever over a dense Wikipedia index, fine-tuned jointly. Grounds generation in retrieved text, not parameters alone. |
+| 3 | Tree of Thoughts – Yao et al. (2023) | Paper | | [arxiv.org/abs/2305.10601](https://arxiv.org/abs/2305.10601) | Generalizes chain-of-thought into tree search: the model proposes and self-evaluates intermediate thoughts, with lookahead and backtracking. Prompt-level search, before RL-trained reasoners. |
+| 4 | Toolformer – Schick et al. (2023) | Paper | | [arxiv.org/abs/2302.04761](https://arxiv.org/abs/2302.04761) | A model teaches itself, from a few demonstrations per API, when to call tools (calculator, Q&A, search, translation, calendar) and how to use results. |
+| 5 | Sparks of AGI – Bubeck et al. (2023) | Paper | | [arxiv.org/abs/2303.12712](https://arxiv.org/abs/2303.12712) | Qualitative probes of an early GPT-4 across math, coding, vision, medicine and law, arguing it is an early, incomplete AGI. Read critically (Practice 5). |
+| 6 | Voyager – Wang et al. (2023) | Paper | | [arxiv.org/abs/2305.16291](https://arxiv.org/abs/2305.16291) | A GPT-4-driven Minecraft agent with an automatic curriculum, a growing library of code skills and self-verification. An example of open-ended lifelong learning. |
+| 7 | Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks – Reimers & Gurevych (2019) | Paper | | [arxiv.org/abs/1908.10084](https://arxiv.org/abs/1908.10084) | Fine-tunes BERT with siamese and triplet networks so sentence embeddings compare by cosine similarity. The idea behind Practice 4's embedding retrieval. |
+| 8 | Building Effective Agents – Schluntz & Zhang, Anthropic (2024) | Blog | | [anthropic.com](https://www.anthropic.com/engineering/building-effective-agents) | Anthropic's practical guide: start simple, and use composable workflows (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer) before autonomous agents. |
+| 9 | SWE-bench: Can Language Models Resolve Real-World GitHub Issues? – Jimenez et al. (2023) | Paper | | [arxiv.org/abs/2310.06770](https://arxiv.org/abs/2310.06770) | Benchmark of real GitHub issues from popular Python repositories: the model edits the codebase and repository tests judge the fix. Became the standard coding-agent benchmark. |
 
 ---
 
@@ -91,25 +93,40 @@ LLM-powered agents combine reasoning, tool use, memory, and retrieval to act aut
 
 Foundation models are increasingly being applied to physical-world reasoning and control. RT-2 connects vision-language models directly to robot actions, π0 pairs a pretrained vision-language model with a flow-matching action head to control many different robots, and World Models learn compressed latent dynamics for planning and imagination.
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | RT-2 – Brohan et al. (2023) | Paper | | [arxiv.org/abs/2307.15818](https://arxiv.org/abs/2307.15818) |
-| 2 | World Models – Ha & Schmidhuber (2018) | Paper | | [arxiv.org/abs/1803.10122](https://arxiv.org/abs/1803.10122) |
-| 3 | π0: A Vision-Language-Action Flow Model for General Robot Control – Black et al. (2024) | Paper | | [arxiv.org/abs/2410.24164](https://arxiv.org/abs/2410.24164) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | RT-2 – Brohan et al. (2023) | Paper | | [arxiv.org/abs/2307.15818](https://arxiv.org/abs/2307.15818) | Co-fine-tunes a vision-language model on web data and robot trajectories, emitting actions as text tokens. Names the class: vision-language-action (VLA) models. |
+| 2 | World Models – Ha & Schmidhuber (2018) | Paper | | [arxiv.org/abs/1803.10122](https://arxiv.org/abs/1803.10122) | Learns a compressed latent model of an environment (VAE plus mixture-density RNN) and trains a small controller, even entirely inside the model's own 'dream'. |
+| 3 | π0: A Vision-Language-Action Flow Model for General Robot Control – Black et al. (2024) | Paper | | [arxiv.org/abs/2410.24164](https://arxiv.org/abs/2410.24164) | Adds a flow-matching action head to a pretrained vision-language model, trained on many robot platforms. A generalist policy for dexterous tasks like laundry folding. |
 
 ---
 
 ## Annual Reports
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | Stanford HAI – AI Index Report | Report | 🔑 | [aiindex.stanford.edu/report](https://aiindex.stanford.edu/report/) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | Stanford HAI – AI Index Report | Report | | [hai.stanford.edu/ai-index](https://hai.stanford.edu/ai-index) | Stanford HAI's annual data report on AI: research, technical performance, economy, education and policy. Its trend data calibrates Practice 5's predictions. |
 
-The AI Index provides a comprehensive yearly snapshot of research trends, industry adoption, policy developments, and societal impact. Essential for staying calibrated on the state of the field.
+The AI Index provides a comprehensive yearly snapshot of research trends, industry adoption, policy developments, and societal impact. Useful for staying calibrated on the state of the field.
 
 ---
 
 > 🔑 = must-read &nbsp;&nbsp; ⭐ = Ilya Sutskever reading list
+
+---
+
+## Suggested Order
+
+**Core path (🔑):** Snell et al. test-time compute → DeepSeek-R1 → Mamba
+
+The threads are independent, so follow the one you need; within each, read in this order.
+
+1. **Reasoning** – The o1 announcement for the paradigm, then Snell et al. on when test-time compute beats a bigger model, then DeepSeek-R1, ideally after Section 10's GRPO and RLVR papers.
+2. **Representation learning** – SimCLR → MoCo v2 → DINO/DINOv2 → MAE → I-JEPA for self-supervised vision; then CLIP → LLaVA for vision–language models, and SAM. Read Gemini last, as a snapshot of the 2023 frontier.
+3. **Alternative architectures** – S4, then Mamba; then RWKV and xLSTM as the recurrent revival.
+4. **Agents** – ReAct → Sentence-BERT → RAG → Toolformer → Tree of Thoughts → Building Effective Agents → SWE-bench, with Voyager as an open-ended example. *Sparks of AGI* is optional; read it critically (Practice 5).
+5. **Robotics** – World Models, then RT-2, then π0.
+6. **Calibration** – Skim the latest AI Index report's highlights once a year.
 
 ---
 

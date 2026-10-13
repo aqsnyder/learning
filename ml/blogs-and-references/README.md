@@ -25,7 +25,7 @@
 |------------|-------------|
 | [Import AI](https://importai.substack.com/) | Weekly digest of the most important AI research, policy, and industry developments |
 | [The Batch](https://www.deeplearning.ai/the-batch/) | Andrew Ng's weekly newsletter breaking down AI news and research for practitioners |
-| [AI Index Report](https://aiindex.stanford.edu/report/) | Stanford's annual comprehensive report on the state of artificial intelligence |
+| [AI Index Report](https://hai.stanford.edu/ai-index) | Stanford's annual comprehensive report on the state of artificial intelligence |
 | [Ahead of AI](https://magazine.sebastianraschka.com/) | Sebastian Raschka's newsletter covering practical ML research and engineering |
 
 ---

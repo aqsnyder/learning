@@ -19,31 +19,33 @@ After this section you can:
 
 ## Resources
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | Intro to LLMs – Andrej Karpathy (Video) | Video | 🔑 | [youtube.com](https://www.youtube.com/watch?v=zjkBMFhNj_g) |
-| 2 | Deep Dive into LLMs – Andrej Karpathy (Video) | Video | 🔑 | [youtube.com](https://www.youtube.com/watch?v=7xTGNNLPyMI) |
-| 3 | GPT-2 – Radford et al. (2019) | Paper | 🔑 | [openai.com](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) |
-| 4 | GPT-3 – Brown et al. (2020) | Paper | 🔑 | [arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165) |
-| 5 | T5 – Raffel et al. (2019) | Paper | | [arxiv.org/abs/1910.10683](https://arxiv.org/abs/1910.10683) |
-| 6 | InstructGPT / RLHF – Ouyang et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2203.02155](https://arxiv.org/abs/2203.02155) |
-| 7 | Chain-of-Thought Prompting – Wei et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2201.11903](https://arxiv.org/abs/2201.11903) |
-| 8 | LLaMA – Touvron et al. (2023) | Paper | | [arxiv.org/abs/2302.13971](https://arxiv.org/abs/2302.13971) |
-| 9 | GPT-4 Technical Report (2023) | Paper | 🔑 | [arxiv.org/abs/2303.08774](https://arxiv.org/abs/2303.08774) |
-| 10 | Anthropic Research Blog | Blog | | [anthropic.com/research](https://www.anthropic.com/research) |
-| 11 | Let's build the GPT Tokenizer – Andrej Karpathy (Video; lecture 8 of Zero to Hero) | Video | | [youtube.com](https://www.youtube.com/watch?v=zduSFxRajkE) |
-| 12 | Let's reproduce GPT-2 (124M) – Andrej Karpathy (Video) | Video | | [youtube.com](https://www.youtube.com/watch?v=l8pRSuU81PU) |
-| 13 | FLAN: Finetuned Language Models Are Zero-Shot Learners – Wei et al. (2021) | Paper | | [arxiv.org/abs/2109.01652](https://arxiv.org/abs/2109.01652) |
-| 14 | The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale – Penedo et al. (2024) | Paper | | [arxiv.org/abs/2406.17557](https://arxiv.org/abs/2406.17557) |
-| 15 | The Llama 3 Herd of Models – Grattafiori et al., Meta (2024) | Paper | | [arxiv.org/abs/2407.21783](https://arxiv.org/abs/2407.21783) |
-| 16 | DeepSeek-V3 Technical Report – DeepSeek-AI (2024) | Paper | | [arxiv.org/abs/2412.19437](https://arxiv.org/abs/2412.19437) |
-| 17 | Stanford CS336: Language Modeling from Scratch – Hashimoto & Liang (2025) | Course | | [cs336.stanford.edu](https://cs336.stanford.edu/spring2025/) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | Intro to LLMs – Andrej Karpathy (Video) | Video | | [youtube.com](https://www.youtube.com/watch?v=zjkBMFhNj_g) | Karpathy's one-hour talk: an LLM as "two files", how pretraining and fine-tuning produce an assistant, the road ahead, and LLM security. Your first mental model. |
+| 2 | Deep Dive into LLMs – Andrej Karpathy (Video) | Video | 🔑 | [youtube.com](https://www.youtube.com/watch?v=7xTGNNLPyMI) | 3.5-hour tour of the full pipeline: pretraining data, tokenization, training, inference, post-training (SFT, RL, RLHF) and why models need tokens to think. The section's spine. |
+| 3 | GPT-2 – Radford et al. (2019) | Paper | | [openai.com](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) | Shows a 1.5B-parameter language model trained on WebText performing tasks zero-shot, with gains growing log-linearly in size. Also read its byte-level BPE rationale. |
+| 4 | GPT-3 – Brown et al. (2020) | Paper | 🔑 | [arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165) | 175B-parameter model doing tasks from a few in-prompt examples, with no gradient updates. The core paper on in-context learning and its dependence on scale. |
+| 5 | T5 – Raffel et al. (2019) | Paper | | [arxiv.org/abs/1910.10683](https://arxiv.org/abs/1910.10683) | Casts every NLP task as text-to-text and systematically compares pre-training objectives, architectures and datasets, introducing the C4 corpus. The encoder–decoder contrast to GPT. |
+| 6 | InstructGPT / RLHF – Ouyang et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2203.02155](https://arxiv.org/abs/2203.02155) | Fine-tunes GPT-3 on demonstrations, fits a reward model to rankings, then optimizes against it with PPO. Learn each step's loss and the alignment tax. |
+| 7 | Chain-of-Thought Prompting – Wei et al. (2022) | Paper | | [arxiv.org/abs/2201.11903](https://arxiv.org/abs/2201.11903) | Few-shot exemplars with intermediate reasoning steps improve arithmetic, commonsense and symbolic reasoning in sufficiently large models. Practice 4 tests that scale dependence. |
+| 8 | LLaMA – Touvron et al. (2023) | Paper | | [arxiv.org/abs/2302.13971](https://arxiv.org/abs/2302.13971) | 7B–65B models trained on trillions of tokens from public data; LLaMA-13B beats GPT-3 on most benchmarks. Why training small models longer pays off at inference. |
+| 9 | GPT-4 Technical Report (2023) | Paper | | [arxiv.org/abs/2303.08774](https://arxiv.org/abs/2303.08774) | Multimodal model report: exam results, performance predicted from runs using ≤1/1,000th the compute, and no architecture, size or data details. Read it critically. |
+| 10 | Anthropic Research Blog | Blog | | [anthropic.com/research](https://www.anthropic.com/research) | Index of Anthropic's research posts: alignment, interpretability, societal impacts, economics and frontier red-teaming. Browse it for current work, not as a course. |
+| 11 | Let's build the GPT Tokenizer – Andrej Karpathy (Video; lecture 8 of Zero to Hero) | Video | | [youtube.com](https://www.youtube.com/watch?v=zduSFxRajkE) | Builds the GPT-series BPE tokenizer from scratch (encode, decode, training). Learn which LLM quirks, such as spelling and arithmetic errors, trace back to tokenization. |
+| 12 | Let's reproduce GPT-2 (124M) – Andrej Karpathy (Video) | Video | | [youtube.com](https://www.youtube.com/watch?v=l8pRSuU81PU) | Codes and pretrains GPT-2 (124M) from an empty file, step by step. Pretraining only (no chat fine-tuning); follow it end to end. |
+| 13 | FLAN: Finetuned Language Models Are Zero-Shot Learners – Wei et al. (2021) | Paper | | [arxiv.org/abs/2109.01652](https://arxiv.org/abs/2109.01652) | Instruction tuning: fine-tuning a 137B model on 60+ datasets phrased as instructions improves zero-shot performance on unseen tasks. Ablations: task count, scale and instructions matter. |
+| 14 | The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale – Penedo et al. (2024) | Paper | | [arxiv.org/abs/2406.17557](https://arxiv.org/abs/2406.17557) | A 15T-token Common Crawl dataset with each design choice documented and ablated, plus the FineWeb-Edu educational subset. Learn how filtering and deduplication move model quality. |
+| 15 | The Llama 3 Herd of Models – Grattafiori et al., Meta (2024) | Paper | | [arxiv.org/abs/2407.21783](https://arxiv.org/abs/2407.21783) | Dense transformers up to 405B parameters and 128K context, with pretraining data, infrastructure and post-training documented in depth. Study it as a full frontier recipe. |
+| 16 | DeepSeek-V3 Technical Report – DeepSeek-AI (2024) | Paper | | [arxiv.org/abs/2412.19437](https://arxiv.org/abs/2412.19437) | A 671B MoE (37B active per token) with multi-head latent attention, auxiliary-loss-free load balancing and multi-token prediction. Frontier MoE engineering, openly documented. |
+| 17 | Stanford CS336: Language Modeling from Scratch – Hashimoto & Liang (2025) | Course | | [cs336.stanford.edu](https://cs336.stanford.edu/spring2025/) | Implementation-heavy course: build a tokenizer, transformer and optimizer, then systems (FlashAttention2 in Triton, distributed training), scaling laws, data filtering, and SFT plus RL for math. |
 
 > 🔑 = must-read &nbsp;&nbsp; ⭐ = Ilya Sutskever reading list
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Karpathy's *Deep Dive into LLMs* → GPT-3 → InstructGPT
 
 1. **Big picture** – Watch Karpathy's Intro to LLMs for a high-level mental model, then the Deep Dive for implementation-level detail.
 2. **Tokenization** – Watch Karpathy's tokenizer lecture; many "LLM weirdness" bugs (spelling, arithmetic, trailing spaces) trace back here.
@@ -66,7 +68,7 @@ After this section you can:
 4. **Chain-of-thought, measured** — On 200 GSM8K test problems, compare standard 8-shot prompting with 8-shot chain-of-thought (exemplars from Wei et al.'s appendix) for three *base* models of one family at different sizes (e.g. ~0.5B, ~1.5B, ~7B). Report accuracy with 95% confidence intervals, and add self-consistency (majority vote over 5 samples) for the largest model. Done when: you've compared your scale trend with the paper's finding that CoT helps only at sufficient scale, and noted the contamination caveat for recent models trained on math-heavy data. *(~5 h · Chain-of-Thought Prompting; Karpathy, "Deep Dive into LLMs", segment on why models need tokens to think)*
 5. **A reward model from preferences** — Implement InstructGPT's pairwise loss −log σ(r(x, y_w) − r(x, y_l)) with a scalar head on GPT-2 medium (or a ~0.5B model) and train on ~10k pairs from Anthropic's HH-RLHF dataset. Report held-out pairwise accuracy and compare it with the inter-labeler agreement InstructGPT reports. Then use the reward model for best-of-16 reranking and inspect what it rewards — length? hedging? politeness? Done when: you've found at least one exploitable bias (e.g. reward rising with length regardless of quality) and shown it with a plot. *(~5 h · InstructGPT; Anthropic research blog)*
 
-**🏗️ Mini-project — A Pocket Chat Model, End to End:** Run the whole pipeline at small scale with nanochat, Karpathy's end-to-end successor to nanoGPT (tokenizer → pretraining → SFT → RL → evaluation → chat): its single-GPU mode uses gradient accumulation, or rent an 8×H100 node for its few-hour "speedrun" (check the README for the current time and cost). If budget is tight, do the same stages yourself on TinyStories with nanoGPT. (Neither codebase is a listed resource; Karpathy's "Let's reproduce GPT-2 (124M)" and Stanford CS336 above walk through the same stages.) Deliverable: `projects/ml/09-llm/pocket-chat/` with a cost sheet (FLOPs from 6ND, GPU-hours, dollars), loss and eval curves per stage, base vs. SFT vs. RL transcripts on 30 held-out prompts, and a one-page postmortem mapping each stage to Karpathy's "Deep Dive into LLMs" and to InstructGPT's three steps. Done when: your FLOP estimate matches the logged compute within 2×, and you can point to a concrete behavior change caused by each post-training stage. *(~15 h incl. GPU time)*
+**🏗️ Mini-project — A Pocket Chat Model, End to End:** Run the whole pipeline at small scale with nanochat, Karpathy's end-to-end successor to nanoGPT (tokenizer → pretraining → SFT → RL → evaluation → chat): its single-GPU mode uses gradient accumulation, or rent an 8×H100 node for its few-hour "speedrun" (check the README for the current time and cost). If budget is tight, do the same stages yourself on TinyStories with nanoGPT. (Neither codebase is a listed resource. Karpathy's "Let's reproduce GPT-2 (124M)" above covers the pretraining stage only — its companion repository notes that it does not cover chat fine-tuning — while Stanford CS336 walks through every stage, ending with SFT and reasoning RL in its "Alignment and Reasoning RL" assignment.) Deliverable: `projects/ml/09-llm/pocket-chat/` with a cost sheet (FLOPs from 6ND, GPU-hours, dollars), loss and eval curves per stage, base vs. SFT vs. RL transcripts on 30 held-out prompts, and a one-page postmortem mapping each stage to Karpathy's "Deep Dive into LLMs" and to InstructGPT's three steps. Done when: your FLOP estimate matches the logged compute within 2×, and you can point to a concrete behavior change caused by each post-training stage. *(~15 h incl. GPU time)*
 
 ## ✅ Check Yourself
 

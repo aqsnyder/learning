@@ -31,7 +31,7 @@ After this section you can:
 |----------|------|----------|------------|------|------|-------------|
 | 🔑 | Video Series | Essence of Linear Algebra | 3Blue1Brown | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) | Beautiful visual explanations of vectors, matrices, transformations, eigenvalues, and more. The gold standard for building geometric intuition. |
 | 🔑 | Video Series | Essence of Calculus | 3Blue1Brown | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) | Visual, intuition-first approach to derivatives, integrals, and the chain rule — all essential for understanding backpropagation. |
-| 🔑 | Video Series | Neural Networks | 3Blue1Brown | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) | Bridges the math foundations into neural networks. Covers gradient descent and backpropagation with stunning visualizations. |
+| | Video Series | Neural Networks | 3Blue1Brown | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) | Bridges the math foundations into neural networks. Covers gradient descent and backpropagation with stunning visualizations. |
 | 🔑 | Book (Free) | Mathematics for Machine Learning | Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong | 2020 | [Link](https://mml-book.github.io/) | Comprehensive textbook covering linear algebra, calculus, probability, and optimization — all targeted specifically at ML applications. |
 | | Paper (Tutorial) | The Matrix Calculus You Need For Deep Learning | Terence Parr, Jeremy Howard | 2018 | [Link](https://arxiv.org/abs/1802.01528) | Derives the vector/matrix derivatives (Jacobians, element-wise ops, the vector chain rule) that backprop actually uses. The missing step between single-variable calculus and reading a backprop derivation. |
 | | Blog Post | Visual Information Theory | Christopher Olah | 2015 | [Link](https://colah.github.io/posts/2015-09-Visual-Information/) | Builds entropy, cross-entropy, KL divergence, and mutual information from pictures of optimal codes. After this, "minimize cross-entropy loss" means something concrete. |
@@ -53,6 +53,8 @@ These ⭐ items share one idea: learning is compression, and the simplest descri
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** 3Blue1Brown *Essence of Linear Algebra* → 3Blue1Brown *Essence of Calculus* → *Mathematics for Machine Learning* (Deisenroth et al.)
 
 1. **3Blue1Brown — Essence of Linear Algebra** — Start here to build visual intuition for vectors, matrices, and transformations.
 2. **3Blue1Brown — Essence of Calculus** — Understand derivatives and the chain rule, which power backpropagation.

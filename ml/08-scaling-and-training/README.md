@@ -19,35 +19,37 @@ After this section you can:
 
 ## Resources
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | Scaling Laws for Neural LMs – Kaplan et al. (2020) | Paper | 🔑⭐ | [arxiv.org/abs/2001.08361](https://arxiv.org/abs/2001.08361) |
-| 2 | GPipe – Huang et al. (2019) | Paper | ⭐ | [arxiv.org/abs/1811.06965](https://arxiv.org/abs/1811.06965) |
-| 3 | Chinchilla – Hoffmann et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2203.15556](https://arxiv.org/abs/2203.15556) |
-| 4 | Adam Optimizer – Kingma & Ba (2014) | Paper | 🔑 | [arxiv.org/abs/1412.6980](https://arxiv.org/abs/1412.6980) |
-| 5 | AdamW – Loshchilov & Hutter (2017) | Paper | | [arxiv.org/abs/1711.05101](https://arxiv.org/abs/1711.05101) |
-| 6 | Batch Normalization – Ioffe & Szegedy (2015) | Paper | | [arxiv.org/abs/1502.03167](https://arxiv.org/abs/1502.03167) |
-| 7 | Layer Normalization – Ba et al. (2016) | Paper | | [arxiv.org/abs/1607.06450](https://arxiv.org/abs/1607.06450) |
-| 8 | Megatron-LM – Shoeybi et al. (2019) | Paper | | [arxiv.org/abs/1909.08053](https://arxiv.org/abs/1909.08053) |
-| 9 | MoE – Outrageously Large Neural Networks – Shazeer et al. (2017) | Paper | 🔑 | [arxiv.org/abs/1701.06538](https://arxiv.org/abs/1701.06538) |
-| 10 | Switch Transformer – Fedus et al. (2021) | Paper | 🔑 | [arxiv.org/abs/2101.03961](https://arxiv.org/abs/2101.03961) |
-| 11 | Mixtral of Experts – Jiang et al. (Mistral AI, 2024) | Paper | | [arxiv.org/abs/2401.04088](https://arxiv.org/abs/2401.04088) |
-| 12 | FlashAttention – Dao et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2205.14135](https://arxiv.org/abs/2205.14135) |
-| 13 | LoRA – Low-Rank Adaptation – Hu et al. (2021) | Paper | 🔑 | [arxiv.org/abs/2106.09685](https://arxiv.org/abs/2106.09685) |
-| 14 | QLoRA – Dettmers et al. (2023) | Paper | | [arxiv.org/abs/2305.14314](https://arxiv.org/abs/2305.14314) |
-| 15 | Distilling the Knowledge in a Neural Network – Hinton et al. (2015) | Paper | 🔑 | [arxiv.org/abs/1503.02531](https://arxiv.org/abs/1503.02531) |
-| 16 | Speculative Decoding – Leviathan et al. (2023) | Paper | | [arxiv.org/abs/2211.17192](https://arxiv.org/abs/2211.17192) |
-| 17 | ZeRO: Memory Optimizations Toward Training Trillion Parameter Models – Rajbhandari et al. (2019) | Paper | | [arxiv.org/abs/1910.02054](https://arxiv.org/abs/1910.02054) |
-| 18 | μP – Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer – Yang et al. (2022) | Paper | | [arxiv.org/abs/2203.03466](https://arxiv.org/abs/2203.03466) |
-| 19 | The Ultra-Scale Playbook: Training LLMs on GPU Clusters – Tazi et al. (Hugging Face, 2025) | Guide | | [huggingface.co](https://huggingface.co/spaces/nanotron/ultrascale-playbook) |
-| 20 | PagedAttention / vLLM – Efficient Memory Management for LLM Serving – Kwon et al. (2023) | Paper | | [arxiv.org/abs/2309.06180](https://arxiv.org/abs/2309.06180) |
-| 21 | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference – Jacob et al. (2017) | Paper | | [arxiv.org/abs/1712.05877](https://arxiv.org/abs/1712.05877) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | Scaling Laws for Neural LMs – Kaplan et al. (2020) | Paper | 🔑⭐ | [arxiv.org/abs/2001.08361](https://arxiv.org/abs/2001.08361) | Language-model loss follows power laws in model size, data and compute. Learn the fits, the 6N FLOPs-per-token estimate, and the compute-optimal recipe Chinchilla later revised. |
+| 2 | GPipe – Huang et al. (2019) | Paper | ⭐ | [arxiv.org/abs/1811.06965](https://arxiv.org/abs/1811.06965) | Pipeline-parallelism library: splits a layer sequence across accelerators and pipelines micro-batches through it. Learn where the pipeline bubble comes from and how micro-batching shrinks it. |
+| 3 | Chinchilla – Hoffmann et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2203.15556](https://arxiv.org/abs/2203.15556) | Model size and training tokens should scale equally with compute, so earlier LLMs were undertrained. Source of the ~20 tokens-per-parameter rule; learn why Kaplan differed. |
+| 4 | Adam Optimizer – Kingma & Ba (2014) | Paper | | [arxiv.org/abs/1412.6980](https://arxiv.org/abs/1412.6980) | Per-parameter adaptive steps from bias-corrected moving averages of the gradient and its square. Implement Algorithm 1 exactly; know why bias correction matters early on. |
+| 5 | AdamW – Loshchilov & Hutter (2017) | Paper | | [arxiv.org/abs/1711.05101](https://arxiv.org/abs/1711.05101) | Shows L2 regularization and weight decay differ under Adam, and decouples decay from the gradient update. This separates decay from learning-rate tuning and improves generalization. |
+| 6 | Batch Normalization – Ioffe & Szegedy (2015) | Paper | | [arxiv.org/abs/1502.03167](https://arxiv.org/abs/1502.03167) | Normalizes layer inputs over each mini-batch, permitting higher learning rates. Learn its train-versus-inference statistics and why small batches hurt it. |
+| 7 | Layer Normalization – Ba et al. (2016) | Paper | | [arxiv.org/abs/1607.06450](https://arxiv.org/abs/1607.06450) | Normalizes across a layer's units within each example: identical at training and test time, and easy to apply to RNNs. Learn why transformers prefer it. |
+| 8 | Megatron-LM – Shoeybi et al. (2019) | Paper | | [arxiv.org/abs/1909.08053](https://arxiv.org/abs/1909.08053) | Intra-layer (tensor) model parallelism in plain PyTorch with a few added communication operations, training multi-billion-parameter GPT-2-style and BERT-style models. Learn the column-then-row MLP split. |
+| 9 | MoE – Outrageously Large Neural Networks – Shazeer et al. (2017) | Paper | | [arxiv.org/abs/1701.06538](https://arxiv.org/abs/1701.06538) | The sparsely-gated mixture-of-experts layer: a trainable gate sends each example to a few of many experts. Conditional computation decouples parameter count from compute. |
+| 10 | Switch Transformer – Fedus et al. (2021) | Paper | | [arxiv.org/abs/2101.03961](https://arxiv.org/abs/2101.03961) | Simplifies MoE routing to a single expert per token, cutting communication and compute, and tames training instability. Source of Practice 3's load-balancing loss. |
+| 11 | Mixtral of Experts – Jiang et al. (Mistral AI, 2024) | Paper | | [arxiv.org/abs/2401.04088](https://arxiv.org/abs/2401.04088) | Open-weight sparse MoE: eight feed-forward experts per layer, two chosen per token, so 47B total but 13B active parameters. Practice 3 reconciles those numbers. |
+| 12 | FlashAttention – Dao et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2205.14135](https://arxiv.org/abs/2205.14135) | IO-aware exact attention: tiling keeps blocks in on-chip SRAM to cut HBM reads and writes. Learn why it runs faster despite recomputation's extra FLOPs. |
+| 13 | LoRA – Low-Rank Adaptation – Hu et al. (2021) | Paper | | [arxiv.org/abs/2106.09685](https://arxiv.org/abs/2106.09685) | Freezes pretrained weights and trains low-rank update matrices that merge back in with no extra inference latency. Learn why B starts at zero. |
+| 14 | QLoRA – Dettmers et al. (2023) | Paper | | [arxiv.org/abs/2305.14314](https://arxiv.org/abs/2305.14314) | Backpropagates through a frozen 4-bit base model into LoRA adapters, using NF4, double quantization and paged optimizers. How large-model fine-tuning fits on one GPU. |
+| 15 | Distilling the Knowledge in a Neural Network – Hinton et al. (2015) | Paper | | [arxiv.org/abs/1503.02531](https://arxiv.org/abs/1503.02531) | Compresses an ensemble or large model into a small one by training on temperature-softened outputs. Learn what soft targets carry that hard labels lack. |
+| 16 | Speculative Decoding – Leviathan et al. (2023) | Paper | | [arxiv.org/abs/2211.17192](https://arxiv.org/abs/2211.17192) | A small model drafts tokens and the target model checks them in parallel. Learn the accept/reject rule that keeps the target's output distribution exact. |
+| 17 | ZeRO: Memory Optimizations Toward Training Trillion Parameter Models – Rajbhandari et al. (2019) | Paper | | [arxiv.org/abs/1910.02054](https://arxiv.org/abs/1910.02054) | Removes data-parallel memory redundancy by sharding optimizer state, gradients and parameters across workers at low communication cost. The idea behind PyTorch FSDP. |
+| 18 | μP – Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer – Yang et al. (2022) | Paper | | [arxiv.org/abs/2203.03466](https://arxiv.org/abs/2203.03466) | Under the Maximal Update Parametrization, many optimal hyperparameters stay stable as models grow: tune a small proxy, then transfer them zero-shot (μTransfer). |
+| 19 | The Ultra-Scale Playbook: Training LLMs on GPU Clusters – Tazi et al. (Hugging Face, 2025) | Guide | | [huggingface.co](https://huggingface.co/spaces/nanotron/ultrascale-playbook) | Interactive guide to multi-GPU LLM training: data parallelism and ZeRO, tensor, sequence, context, pipeline and expert parallelism, and how to combine them. |
+| 20 | PagedAttention / vLLM – Efficient Memory Management for LLM Serving – Kwon et al. (2023) | Paper | | [arxiv.org/abs/2309.06180](https://arxiv.org/abs/2309.06180) | Pages the KV cache in fixed-size blocks, like OS virtual memory, cutting fragmentation and enabling sharing. Learn why KV-cache memory caps serving throughput. |
+| 21 | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference – Jacob et al. (2017) | Paper | | [arxiv.org/abs/1712.05877](https://arxiv.org/abs/1712.05877) | Affine 8-bit quantization with integer-only arithmetic, plus training with simulated quantization to keep accuracy. Learn the scale and zero-point math edge deployment relies on. |
 
 > 🔑 = must-read &nbsp;&nbsp; ⭐ = Ilya Sutskever reading list
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Kaplan et al. scaling laws → Chinchilla → FlashAttention
 
 1. **Optimizers first** – Read the Adam paper, then AdamW to understand decoupled weight decay and why it matters.
 2. **Normalization** – Study Batch Normalization and Layer Normalization; know when to use each and why transformers prefer LayerNorm.
@@ -59,7 +61,7 @@ After this section you can:
 8. **Mixture of Experts** – Read the original MoE paper, then Switch Transformer for simplified routing, then Mixtral for modern open-weight MoE.
 9. **Efficient attention** – Read FlashAttention to understand IO-aware exact attention and why it's now the default.
 10. **Parameter-efficient fine-tuning** – Read LoRA, then QLoRA for 4-bit quantized fine-tuning.
-11. **Quantization** – Read Jacob et al. for int8 integer-only inference, the basis of TensorFlow Lite and most edge/microcontroller deployment.
+11. **Quantization** – Read Jacob et al. for int8 integer-only inference, the basis of TensorFlow Lite and most edge/microcontroller deployment. To take quantized models all the way down to a microcontroller — runtimes, on-target latency and energy measurement — continue with [Section 14 – Edge and Embedded ML](../14-edge-and-embedded-ml/README.md) after this section.
 12. **Knowledge distillation** – Read Hinton et al. to understand how to compress large models into smaller ones.
 13. **Fast inference** – Read PagedAttention/vLLM to understand KV-cache memory management in LLM serving, then Speculative Decoding for draft-model-based acceleration.
 
@@ -73,7 +75,7 @@ After this section you can:
 4. **FlashAttention's IO argument** — (a) For n = 4096, d = 64 in fp16, count the HBM bytes read and written by standard attention (which materializes the n×n score and probability matrices) vs. a tiled kernel that never does. (b) Implement the online-softmax recurrence (running max and running sum) over blocks in NumPy and verify it equals the full softmax-weighted sum. (c) On a GPU, benchmark naive PyTorch attention vs. `F.scaled_dot_product_attention` for n = 512 to 8192: wall time and peak memory. Done when: your measured memory scales as ~n² vs. ~n and you can explain why FlashAttention is faster even though its backward pass does *more* FLOPs. *(~3 h · FlashAttention)*
 5. **Adapt, then accelerate** — (a) LoRA: fine-tune GPT-2 small (or a ~0.5B open model) on a small task with rank r = 8 on W_q and W_v — the matrices Hu et al. found most effective to adapt — with B initialized to zero, vs. full fine-tuning; compare trainable parameters, peak memory and the eval metric, then merge the adapter and verify the merged model's outputs match the unmerged ones to float tolerance. Re-run with the base model loaded in 4-bit NF4 (QLoRA) and record the memory saving. (b) Speculative decoding: implement Leviathan et al.'s accept/reject rule with GPT-2 small as the draft and GPT-2 large as the target; measure acceptance rate α and wall-clock speedup for γ = 2, 4, 8, and compare with the expected tokens per target call, (1 − α^(γ+1))/(1 − α). Done when: the merge check passes, and a statistical test shows your speculative sampler's output distribution matches the target's on a fixed prompt. *(~6 h · LoRA; QLoRA; Speculative Decoding)*
 
-**🏗️ Mini-project — Your Own Scaling Law:** Train a family of six GPT models (≈1M–50M non-embedding parameters) on one tokenized corpus (TinyStories or a FineWeb-Edu sample), each at 3–4 token budgets, using AdamW with cosine decay and PyTorch's fused attention. Fit Chinchilla's parametric form L(N, D) = E + A/N^α + B/D^β to your final losses, and Kaplan's power law L(N) to your largest-budget runs. Deliverable: `projects/ml/08-scaling/my-scaling-law/` with the run table, fitted constants with bootstrap CIs, an iso-FLOP plot, and the compute-optimal N and D your fit predicts for a 10× larger budget — then train that model and compare. Done when: the prediction lands within ~0.05 nats of the realized loss, or you can explain from your fits why it doesn't. *(~15 h incl. GPU time)*
+**🏗️ Mini-project — Your Own Scaling Law:** Train a family of six GPT models (≈1M–20M non-embedding parameters) on one tokenized corpus, each at 3–4 token budgets between ≈5 and ≈40 tokens per parameter, so the largest run stays near 10¹⁷ FLOPs (C ≈ 6ND: 20M parameters × 800M tokens ≈ 9.6 × 10¹⁶), using AdamW with cosine decay and PyTorch's fused attention. Use a FineWeb-Edu sample of at least ~2B tokens: TinyStories (2.12M short stories) is too small for the 800M-token and 10× runs without repeating data, which biases the fit, so keep it for quick pilots. Fit Chinchilla's parametric form L(N, D) = E + A/N^α + B/D^β to your final losses, and Kaplan's power law L(N) to your largest-budget runs. Deliverable: `projects/ml/08-scaling/my-scaling-law/` with the run table, fitted constants with bootstrap CIs, an iso-FLOP plot, and the compute-optimal N and D your fit predicts for a 10× larger budget (≈10¹⁸ FLOPs) — then train that model and compare. Done when: the prediction lands within ~0.05 nats of the realized loss, or you can explain from your fits why it doesn't. *(~20 h: about 12 h hands-on, plus ≈1.3 × 10¹⁸ training FLOPs in all — ≈3 A100-hours at 40% utilization, or ≈18 h on a T4)*
 
 ## ✅ Check Yourself
 

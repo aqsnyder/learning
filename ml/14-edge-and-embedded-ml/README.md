@@ -1,0 +1,133 @@
+# Edge and Embedded ML (TinyML)
+
+## Why This Section Matters
+
+Most of this curriculum deploys to GPUs and servers. Many of the most useful models never get near one: they run on a microcontroller next to the sensor, inside an instrument or a battery-powered node, with a few hundred kilobytes of SRAM, no operating system, integer arithmetic, and a power budget measured in milliwatts. Running inference at the sensor cuts latency, radio power and bandwidth, keeps raw data private, and keeps working when the network doesn't.
+
+The constraints change the craft:
+- **Memory, not FLOPs, is usually the wall.** Weights live in flash; activations, the tensor arena and the feature buffers must fit in SRAM at the same time as the firmware.
+- **Integer arithmetic.** Models ship as int8, with fixed-point rescaling and the core's SIMD/DSP instructions doing the work.
+- **Energy per inference** sets battery life and thermal headroom, and it has to be *measured*, not read off a spec sheet.
+- **Classical often wins.** A few kilobytes of trees on well-engineered features often match or beat a neural network on sensor data, at a fraction of the energy.
+- **The feature pipeline is part of the model.** C code on the device must compute exactly what Python computed at training time.
+
+This section teaches the loop: budget the target first, try a classical baseline, quantize to int8, deploy through a runtime (TFLM with CMSIS-NN, or ST Edge AI Core), and measure accuracy, latency and energy on the board, the way MLPerf Tiny does. That last step is where an instrumentation engineer has an edge over most ML practitioners.
+
+**Where it fits:** this section is numbered 14 only because it was added after the original sections. Take it after Section 08. It builds on rows that live elsewhere rather than repeating them: Jacob et al.'s integer-only quantization and Hinton et al.'s distillation are in [Section 08](../08-scaling-and-training/README.md); XGBoost and Grinsztajn et al.'s tabular benchmark are in [Section 02](../02-classical-ml/README.md).
+
+---
+
+## Prerequisites
+
+- [Section 02 — Classical Machine Learning](../02-classical-ml/README.md) — feature engineering for sensor windows, tree ensembles, grouped cross-validation. Its mini-project (*Event Classifier for a Sensor Stream*) is the natural starting point here.
+- [Section 04 — CNNs and Computer Vision](../04-cnns-and-computer-vision/README.md) — parameter, MAC and receptive-field arithmetic; depthwise-separable and 1×1 blocks. Its mini-project (*A CNN That Fits a Microcontroller*) is a first pass at this section's workflow.
+- [Section 08 — Scaling, Efficiency, and Deployment](../08-scaling-and-training/README.md) — read Jacob et al. (int8 integer-only inference) and Hinton et al. (distillation) there first.
+- Embedded C on a Cortex-M part — the software curriculum's [Embedded C Mastery](../../software/02-embedded-c-mastery/README.md) and [Embedded Systems and RTOS](../../software/07-embedded-systems-and-rtos/README.md); cycle-accurate timing with the DWT counter is in [Firmware Toolchain, Debug, and Observability](../../software/12-firmware-toolchain-debug-and-observability/README.md).
+- Windows, the FFT and digital filters for feature extraction — the math curriculum's [Fourier Analysis, Signals and Systems](../../math/12-fourier-analysis-signals-and-systems/README.md).
+- Hardware: a Cortex-M4/M33-class dev board (an STM32U5 board works well), a microphone or IMU (on the board or a breakout), and a way to measure supply current: an SMU, a power analyzer, or a current-sense resistor and amplifier into a scope.
+
+---
+
+## 🎯 Learning Objectives
+
+After this section you can:
+- Budget a model for a microcontroller before training it: compute parameters, MACs, flash and peak activation SRAM for a candidate architecture, estimate latency and energy per inference, and reconcile every estimate with an on-target measurement.
+- Implement int8 affine quantization the way integer-only inference does it (zero points, per-channel weight scales, int32 accumulators, a fixed-point requantization multiplier), and choose between post-training quantization and quantization-aware training from measured accuracy loss.
+- Build a sensor-to-decision pipeline on a Cortex-M board, with fixed-point feature extraction and an int8 model run through TFLM/CMSIS-NN or ST Edge AI Core, whose on-device features and outputs match the training pipeline (no training–serving skew).
+- Measure accuracy, latency and energy per inference in the spirit of MLPerf Tiny, and report them reproducibly: clock, toolchain, runtime and measurement method.
+- Decide from a measured accuracy-versus-energy tradeoff when engineered features plus a tiny tree ensemble beat a neural network, and when the network earns its cost.
+
+## Marking Convention
+
+| Symbol | Meaning |
+|--------|---------|
+| 🔑 | Must-read — essential for understanding this topic |
+
+## Resources
+
+### Core texts and course
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| 🔑 | Book | TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers | Pete Warden, Daniel Situnayake | 2019 | [Link](https://www.oreilly.com/library/view/tinyml/9781492052036/) | The hands-on introduction, co-written by one of TFLM's authors. A "Hello World" model taken from training to a microcontroller, then three end-to-end projects (wake-word detection, person detection, and the "Magic Wand" gesture project), then chapters on TFLM itself, designing your own application, optimizing latency, energy, and model and binary size, debugging, and privacy and deployment. The 2019 Arduino toolchain and TensorFlow APIs have aged; the engineering chapters still apply. |
+| 🔑 | Course (Free) | MIT 6.5940: TinyML and Efficient Deep Learning Computing | Song Han | 2024 | [Link](https://hanlab.mit.edu/courses/2024-fall-65940) | Fall 2024 lectures (recorded on YouTube), slides and Colab labs. The efficient-inference chapter is this section's spine: pruning and sparsity, quantization (two lectures), neural architecture search, knowledge distillation, "MCUNet: TinyML on Microcontrollers" and "TinyEngine and Parallel Processing". Later lectures cover on-device training. The pruning, quantization and NAS labs give guided, hands-on compression practice. |
+| | Book (Free) | Machine Learning Systems | Vijay Janapa Reddi | 2026 | [Link](https://mlsysbook.ai/) | Harvard's open-access textbook (CC BY-NC-SA 4.0; MIT Press edition 2026), actively maintained online. It comes in two volumes, *Foundations* and *At Scale*, and companion hardware kits deploy to Arduino, Seeed and Raspberry Pi boards. The current systems reference to pair with Warden & Situnayake's 2019 book. |
+
+### Runtimes, kernels, and vendor tools
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| | Paper | TensorFlow Lite Micro: Embedded Machine Learning on TinyML Systems | Robert David et al. | 2020 | [Paper](https://arxiv.org/abs/2010.08678) · [Code](https://github.com/tensorflow/tflite-micro) | Why TFLM is an interpreter, and how it keeps memory use and runtime overhead small enough for devices with kilobytes of RAM while staying portable across very different embedded hardware. The repository's memory-management, profiling and optimized-kernel guides are the practical companions: read them before you size a tensor arena. |
+| | Paper | CMSIS-NN: Efficient Neural Network Kernels for Arm Cortex-M CPUs | Liangzhen Lai, Naveen Suda, Vikas Chandra | 2018 | [Paper](https://arxiv.org/abs/1801.06601) · [Code](https://github.com/ARM-software/CMSIS-NN) | Hand-optimized neural-network kernels for Cortex-M; the paper reports a 4.6× improvement in runtime/throughput and a 4.9× improvement in energy efficiency. Today's library follows TFLM's int8/int16 quantization specification, is bit-exact with TFLite's reference kernels, and has SIMD paths for cores with the DSP extension (Cortex-M4, Cortex-M33 with DSP) and for Helium (Cortex-M55/M85). |
+| | Tool | ST Edge AI Core (STEdgeAI-Core) | STMicroelectronics | — | [Link](https://www.st.com/en/development-tools/stedgeai-core.html) | ST's free model compiler and command-line tool. Imports Keras, TFLite and ONNX models (including scikit-learn models via ONNX), generates optimized C for STM32, reports RAM and flash, and validates and benchmarks the converted model on the host and on the target. ST's STM32CubeMX expansion pack, X-CUBE-AI (part of the same ST Edge AI Suite), is now marked NRND on st.com with STEDGEAI-CUBEAI listed as its replacement, so check which one your toolchain uses. |
+
+### Compression and hardware-aware design
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| | Paper | A White Paper on Neural Network Quantization | Markus Nagel, Marios Fournarakis, Rana Ali Amjad, Yelysei Bondarenko, Mart van Baalen, Tijmen Blankevoort | 2021 | [Link](https://arxiv.org/abs/2106.08295) | The practitioner's guide, with tested pipelines for both routes: post-training quantization (no retraining or labels; 8-bit typically lands near float accuracy) and quantization-aware training (fine-tuning with labels, which reaches lower bit widths). Read it after Jacob et al. in Section 08. |
+| | Paper | A Survey of Quantization Methods for Efficient Neural Network Inference | Amir Gholami, Sehoon Kim, Zhen Dong, Zhewei Yao, Michael W. Mahoney, Kurt Keutzer | 2021 | [Link](https://arxiv.org/abs/2103.13630) | A broad survey that organizes the quantization literature and weighs the tradeoffs between approaches. Use it as the reference map when a paper or tool names a method you don't recognize. |
+| | Paper | Hello Edge: Keyword Spotting on Microcontrollers | Yundong Zhang, Naveen Suda, Liangzhen Lai, Vikas Chandra | 2017 | [Link](https://arxiv.org/abs/1711.07128) | Trains published keyword-spotting architectures under microcontroller memory and compute limits and compares their accuracy against their memory and compute needs. A depthwise-separable CNN (DS-CNN) wins with 95.4% accuracy, about 10% higher than a fully connected network with a similar parameter count. The template for this section's mini-project. |
+| | Paper | MCUNet: Tiny Deep Learning on IoT Devices | Ji Lin, Wei-Ming Chen, Yujun Lin, John Cohn, Chuang Gan, Song Han | 2020 | [Link](https://arxiv.org/abs/2007.10319) | Designs the network (TinyNAS) and the inference engine (TinyEngine) together under an MCU's SRAM and flash limits. It reaches more than 70% ImageNet top-1 on an off-the-shelf microcontroller with 3.5× less SRAM and 5.7× less flash than quantized MobileNetV2 and ResNet-18. Read it for why peak activation memory, not parameter count, is the constraint to design around. |
+| | Tool | emlearn | Jon Nordby et al. | — | [Link](https://github.com/emlearn/emlearn) | Converts scikit-learn models (decision trees, random forests, extra trees, Gaussian naive Bayes, MLPs) and Keras fully connected networks into portable C99 with no dynamic allocation, and includes IIR filters and an FFT for feature extraction. The shortest path from a Section 02 random forest to firmware. |
+
+### Benchmarking, data, and shipping it
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|----------|------|----------|------------|------|------|-------------|
+| | Paper | MLPerf Tiny Benchmark | Colby Banbury et al. | 2021 | [Paper](https://arxiv.org/abs/2106.07597) · [Code](https://github.com/mlcommons/tiny) | The industry-standard benchmark for tiny ML systems, built by more than 50 organizations. Four tasks (keyword spotting, visual wake words, image classification, anomaly detection) are scored on accuracy, latency and energy, under rules that keep results comparable across hardware and software stacks. Copy its reporting discipline for your own boards; the repository holds the reference models and benchmark code, built on TFLM. |
+| | Paper | Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition | Pete Warden | 2018 | [Link](https://arxiv.org/abs/1804.03209) | A dataset of spoken words built for training and evaluating keyword spotters, with a method for producing reproducible, comparable accuracy numbers. The data for the mini-project's keyword-spotting track. |
+| | Paper | Hidden Technical Debt in Machine Learning Systems | D. Sculley et al. | 2015 | [Link](https://proceedings.neurips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html) | The classic warning that ML systems accrue maintenance costs ordinary software doesn't: boundary erosion, entanglement, hidden feedback loops, undeclared consumers, data dependencies, configuration issues, and changes in the external world. Read it as a checklist for a model that ships inside an instrument and has to keep working as sensors age and conditions drift. |
+| | Guide | Rules of Machine Learning: Best Practices for ML Engineering | Martin Zinkevich | — | [Link](https://developers.google.com/machine-learning/guides/rules-of-ml) | Forty-three rules for shipping ML in a product, from Google. Start with Rule #1 ("Don't be afraid to launch a product without machine learning") and Rule #4 ("Keep the first model simple and get the infrastructure right"). For embedded work the training–serving skew rules (#29, #32, #37) matter most: the C feature code on the MCU must compute exactly what your Python features computed. |
+| | Book | Designing Machine Learning Systems | Chip Huyen | 2022 | [Link](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) | The book-length treatment of ML in production: training data, feature engineering, deployment, data distribution shifts and monitoring, continual learning, and MLOps infrastructure. It is mostly about the cloud side, but its chapter on distribution shifts and monitoring is exactly the problem of a fielded sensor model. |
+
+## Suggested Order
+
+**Core path (🔑):** Warden & Situnayake, *TinyML* → MIT 6.5940 (Song Han) quantization and MCUNet lectures
+
+1. **Warden & Situnayake, chapters 1–6** — Take the "Hello World" model from training to a board once, so the whole toolchain works before anything is at stake.
+2. **Classical first** — Revisit [Section 02](../02-classical-ml/README.md)'s XGBoost and Grinsztajn et al. rows and your sensor-events mini-project, then skim emlearn's README. Many sensor problems end here.
+3. **Quantization** — Jacob et al. in [Section 08](../08-scaling-and-training/README.md), then MIT 6.5940's two quantization lectures and its quantization lab, then Nagel et al.'s white paper. Keep Gholami et al. as the reference map.
+4. **Runtimes and kernels** — The TFLM paper and the repository's memory-management guide, then CMSIS-NN, then ST Edge AI Core's documentation for your STM32 toolchain.
+5. **Architectures that fit** — Hello Edge, then MCUNet alongside MIT 6.5940's MCUNet and TinyEngine lectures. Hinton et al.'s distillation (Section 08) is the tool for squeezing a larger teacher into a student that fits.
+6. **Benchmarking** — The MLPerf Tiny paper, then Warden & Situnayake's chapters on optimizing latency, energy, and model and binary size. Download Speech Commands if you take the keyword-spotting track.
+7. **Shipping it** — Rules of ML, then Hidden Technical Debt, then Huyen's chapter on data distribution shifts and monitoring.
+8. **Reference** — Janapa Reddi's *Machine Learning Systems* for the systems view, and MIT 6.5940's NAS and on-device-training lectures when you need them.
+
+---
+
+## 🛠️ Practice
+
+1. **Budget a keyword spotter on paper** — Inputs: 1 s of 16 kHz audio framed with a 40 ms window and 20 ms hop (49 frames) × 10 MFCCs, and a small DS-CNN in the style of Hello Edge: a 10×4 convolution with 64 filters, stride 2 and "same" padding; four depthwise-separable blocks (3×3 depthwise plus 1×1 pointwise, 64 channels); global average pooling; and a 12-way fully connected layer. Compute every layer's output shape, parameters and MACs, the int8 weight bytes, and the peak activation memory for layer-by-layer execution. Then estimate latency at your core clock for assumed int8 throughputs of 0.25, 0.5 and 1 MAC per cycle, and energy per inference from your MCU datasheet's run-mode current. You should get ≈22.6k parameters (BatchNorm folded into the convolutions), ≈2.66M MACs, ≈22 KB of int8 weights, and a largest activation of 25×5×64 = 8,000 bytes, so two ping-pong buffers need ≈16 KB. At 160 MHz the three throughputs give ≈66, 33 and 17 ms. Deliverable: a one-page budget sheet (notebook or spreadsheet) with an empty "measured" column for Exercise 4. Done when: your shapes, parameters and MACs match a Keras or PyTorch summary of the same network, every estimate has units, and you have added a line for the cost of the MFCC front end. *(~2 h · Hello Edge; MCUNet; MIT 6.5940 lectures on MCUNet and TinyEngine)*
+2. **int8 quantization by hand** — (a) Quantize 10⁵ samples of a unit-variance Gaussian and of a unit-variance Laplacian (stand-ins for weights and activations) symmetrically to 8 and 4 bits (integer codes ±127 and ±7). Set the range two ways: min–max, and an MSE-optimal clip found by grid search. Report SQNR for each. You should get ≈39–40 dB (min–max) against ≈40–41 dB (MSE-optimal) for the Gaussian at 8 bits, but ≈14 against ≈19 dB at 4 bits; for the Laplacian at 4 bits the gap widens to ≈9–11 against ≈15.5 dB. Explain why range setting matters more as bits fall and tails get heavier. (b) Implement an integer-only fully connected layer as Jacob et al. describe it, using the TFLite int8 scheme that CMSIS-NN follows: int8 activations with zero points, symmetric per-channel int8 weights, int32 accumulators and bias, and requantization by M = S_in·S_w/S_out written as M₀·2⁻ⁿ with M₀ ∈ [0.5, 1) stored as a Q31 integer. For S_in = 0.02, S_w = 0.005 and S_out = 0.05 you should get M = 0.002 = 0.512·2⁻⁸, so M₀ = 1,099,511,628 in Q31. (c) Convert the same layer with TFLite's converter and a representative dataset, and compare outputs. Done when: your layer matches the converter's int8 output exactly, or within 1 LSB on 1,000 random inputs with the rounding step that causes it identified. *(~4 h · Jacob et al. in Section 08; Nagel et al.; Gholami et al.; MIT 6.5940 quantization lectures and lab)*
+3. **Features that match on both sides** — Implement your feature front end twice: in Python for training, and in C on the board, using your vendor's DSP library or emlearn's FFT and IIR filters. Use log-mel or MFCC frames for audio, or Section 02's window features (RMS, band powers, zero-crossing rate) for an IMU or analog sensor. Stream 200 recorded windows to the board over UART, compute the features there, send them back, and compare them with Python's. Report the maximum absolute and relative error per feature, then the model's accuracy on board-computed versus Python-computed features. Done when: every feature's error is below the int8 quantization step of that feature's input scale and the two accuracies differ by less than 0.5 points — or you have found and fixed the mismatch (typical culprits: window alignment, log of zero, fixed-point scaling, FFT normalization). *(~5 h · Rules of ML, rules #29, #32 and #37; emlearn; Warden & Situnayake's wake-word chapters)*
+4. **Latency and energy on target** — Deploy the Exercise 1 network (train it on Speech Commands first; budget about 2 h extra for the MFCC front end, training and int8 conversion), or your Section 04 *tinyvision* model, twice: with TFLM plus CMSIS-NN, and with ST Edge AI Core. For each runtime:
+   - **Latency:** read the DWT cycle counter around the inference call; report the median and spread of 100 runs after a warm-up, at a fixed, recorded clock.
+   - **Energy:** raise a GPIO for the inference window. Power the board at its normal input voltage from an SMU, or from a current-limited bench supply through a current-sense resistor and amplifier — not from a Li-ion cell. Capture the current with a scope or digitizer and integrate V·I over the GPIO-high window. Cross-check against average power × latency. Script the capture with your instrument tooling from the software curriculum's [HIL Testing and Lab Automation](../../software/13-hil-testing-and-lab-automation/README.md) section.
+   - **Memory:** flash and RAM from the linker map against what each tool reports.
+
+   Fill in the measured column of your Exercise 1 sheet, and back out the MACs per cycle you actually achieved. Deliverable: the completed sheet and a one-line MLPerf-Tiny-style report per runtime (accuracy, median latency, energy per inference, clock, toolchain and runtime version, measurement method). Done when: the two energy methods agree within 10%, and you can explain every estimate that missed by more than 2×. *(~6 h on the *tinyvision* route, ~8 h on the keyword-spotting route · MLPerf Tiny; TFLM; CMSIS-NN; ST Edge AI Core; Warden & Situnayake's chapters on optimizing latency and energy)*
+5. **Classical versus neural on the same budget** — On one sensor task (your Section 02 event-classifier data, or the UCI HAR accelerometer set), build three candidates: (i) engineered features plus a random forest exported with emlearn; (ii) the same features plus a tiny int8 MLP; (iii) a small int8 1-D CNN on raw windows. Measure each on the board: accuracy under grouped cross-validation (as in Section 02), flash, peak RAM, and latency and energy per inference *including* feature extraction. Plot accuracy against energy per inference and mark the Pareto front. Done when: you have the plot and a 200-word recommendation of which one you'd ship and why, citing Grinsztajn et al. if the trees win. *(~6 h · emlearn; XGBoost and Grinsztajn et al. in Section 02; Hello Edge; MCUNet)*
+
+**🏗️ Mini-project — Always-On Event Detector on a Cortex-M33:** Build one detector end to end on an STM32U5-class board, choosing a track:
+- **(a) Keyword spotting:** a 10–12-word subset of Speech Commands plus "unknown" and "silence", run live from a MEMS microphone (on the board or a breakout).
+- **(b) Sensor events:** gestures or tool-use events from an IMU, or your own sensor's event classes from Section 02's mini-project.
+
+Write the budget down before you start, for example: ≥ 90% test accuracy, ≤ 50 ms per inference, ≤ 64 KB of RAM for the model, ≤ 256 KB of flash, and an energy per inference that gives a stated battery life at your duty cycle (computed from your measurements, not tested on a cell). Then work through the pipeline: data → features → classical baseline → int8 model with post-training quantization (move to quantization-aware training only if PTQ misses the accuracy target by more than 1 point) → deployment with TFLM plus CMSIS-NN or ST Edge AI Core → measurement as in Exercise 4 → a 30-minute field test in real conditions, counting false triggers and misses.
+
+Deliverable: `projects/ml/14-edge/always-on-detector/` with the firmware, the training notebook, the budget sheet with estimated and measured columns, an MLPerf-Tiny-style results table, and a one-page memo on what you would change before this went into a product.
+
+Done when: on-device int8 accuracy is within 1 point of your offline int8 accuracy on the same test clips (streamed to the board over UART), every budget line is met or its miss is explained by a measurement, and the field test reports a false-trigger rate per hour. *(~15 h)*
+
+## ✅ Check Yourself
+
+Answer from memory first, then check against the sources — or paste this section into NotebookLM and ask it to quiz you.
+
+1. Name four reasons to run inference on the device rather than streaming raw data to a server, and one cost you take on by doing so.
+2. Write the int8 affine mapping between a real value and its integer code. Why must zero be exactly representable, and how does an integer-only layer apply the rescale S_in·S_w/S_out without any floating point?
+3. What sets the peak SRAM of a CNN executed layer by layer? Why can two models with the same parameter count need very different amounts of SRAM, and how did MCUNet attack the problem?
+4. Estimate: a model needs 5 million MACs per inference, your int8 kernels sustain 0.5 MAC per cycle at 160 MHz, and the board draws 10 mW while computing. What are the latency and the energy per inference, and what is the average power at one inference per second with a 10 µW sleep floor?
+5. Misconception probe: "If the model's weights fit in flash, it will run." What else has to fit, and where?
+6. Your model scores 95% in Python but 88% on the board on the same test clips. List four places to look, in the order you'd check them.
+7. What does MLPerf Tiny measure, and what must you hold fixed and report before two boards' energy-per-inference numbers can be compared?
+8. Explain to a smart friend in 3 sentences why a few kilobytes of decision trees on good features often beat a neural network on sensor data.

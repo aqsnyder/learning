@@ -19,32 +19,34 @@ After this section you can:
 
 ## Resources
 
-| # | Resource | Type | Marking | Link |
-|---|----------|------|---------|------|
-| 1 | VAE – Kingma & Welling (2013) | Paper | 🔑 | [arxiv.org/abs/1312.6114](https://arxiv.org/abs/1312.6114) |
-| 2 | GAN – Goodfellow et al. (2014) | Paper | 🔑 | [arxiv.org/abs/1406.2661](https://arxiv.org/abs/1406.2661) |
-| 3 | DCGAN – Radford et al. (2015) | Paper | | [arxiv.org/abs/1511.06434](https://arxiv.org/abs/1511.06434) |
-| 4 | Normalizing Flows – Rezende & Mohamed (2015) | Paper | | [arxiv.org/abs/1505.05770](https://arxiv.org/abs/1505.05770) |
-| 5 | DDPM – Ho, Jain & Abbeel (2020) | Paper | 🔑 | [arxiv.org/abs/2006.11239](https://arxiv.org/abs/2006.11239) |
-| 6 | Latent Diffusion – Rombach et al. (2022) | Paper | | [arxiv.org/abs/2112.10752](https://arxiv.org/abs/2112.10752) |
-| 7 | What are Diffusion Models? – Lilian Weng | Blog | | [lilianweng.github.io](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) |
-| 8 | Distill.pub | Blog | | [distill.pub](https://distill.pub/) |
-| 9 | Flow Matching for Generative Modeling – Lipman et al. (2022) | Paper | 🔑 | [arxiv.org/abs/2210.02747](https://arxiv.org/abs/2210.02747) |
-| 10 | Classifier-Free Diffusion Guidance – Ho & Salimans (2022) | Paper | | [arxiv.org/abs/2207.12598](https://arxiv.org/abs/2207.12598) |
-| 11 | Consistency Models – Song et al. (2023) | Paper | | [arxiv.org/abs/2303.01469](https://arxiv.org/abs/2303.01469) |
-| 12 | DALL·E 2 – Ramesh et al. (2022) | Paper | | [arxiv.org/abs/2204.06125](https://arxiv.org/abs/2204.06125) |
-| 13 | Imagen – Saharia et al. (2022) | Paper | | [arxiv.org/abs/2205.11487](https://arxiv.org/abs/2205.11487) |
-| 14 | Variational Lossy Autoencoder – Chen et al. (2016) | Paper | ⭐ | [arxiv.org/abs/1611.02731](https://arxiv.org/abs/1611.02731) |
-| 15 | VQ-VAE: Neural Discrete Representation Learning – van den Oord, Vinyals & Kavukcuoglu (2017) | Paper | | [arxiv.org/abs/1711.00937](https://arxiv.org/abs/1711.00937) |
-| 16 | Score-Based Generative Modeling through Stochastic Differential Equations – Song et al. (2020) | Paper | | [arxiv.org/abs/2011.13456](https://arxiv.org/abs/2011.13456) |
-| 17 | DiT: Scalable Diffusion Models with Transformers – Peebles & Xie (2022) | Paper | | [arxiv.org/abs/2212.09748](https://arxiv.org/abs/2212.09748) |
-| 18 | MIT 6.S184: Introduction to Flow Matching and Diffusion Models – Holderrieth & Erives (2025) | Course | | [diffusion.csail.mit.edu](https://diffusion.csail.mit.edu/2025/index.html) · [Notes](https://arxiv.org/abs/2506.02070) |
+| # | Resource | Type | Marking | Link | Description |
+|---|----------|------|---------|------|-------------|
+| 1 | VAE – Kingma & Welling (2013) | Paper | 🔑 | [arxiv.org/abs/1312.6114](https://arxiv.org/abs/1312.6114) | Auto-Encoding Variational Bayes, the VAE paper: a reparameterized lower-bound (ELBO) estimator trained with standard SGD. Master the ELBO and the reparameterization trick here. |
+| 2 | GAN – Goodfellow et al. (2014) | Paper | 🔑 | [arxiv.org/abs/1406.2661](https://arxiv.org/abs/1406.2661) | The original adversarial framework: generator versus discriminator in a minimax game. Work through its proof that the global optimum recovers the data distribution. |
+| 3 | DCGAN – Radford et al. (2015) | Paper | | [arxiv.org/abs/1511.06434](https://arxiv.org/abs/1511.06434) | Convolutional GANs made stable through a short list of architecture guidelines; their learned features transfer to other tasks. Follow it for Practice 2's DCGAN. |
+| 4 | Normalizing Flows – Rezende & Mohamed (2015) | Paper | | [arxiv.org/abs/1505.05770](https://arxiv.org/abs/1505.05770) | Builds flexible variational posteriors by pushing a simple density through invertible maps. Learn the change-of-variables formula and the planar flow used in Practice 3. |
+| 5 | DDPM – Ho, Jain & Abbeel (2020) | Paper | 🔑 | [arxiv.org/abs/2006.11239](https://arxiv.org/abs/2006.11239) | High-quality image synthesis with diffusion probabilistic models, via a link to denoising score matching. Derive its closed-form forward process and simplified noise-prediction loss. |
+| 6 | Latent Diffusion – Rombach et al. (2022) | Paper | | [arxiv.org/abs/2112.10752](https://arxiv.org/abs/2112.10752) | Diffusion in a pretrained autoencoder's latent space, conditioned on text or boxes via cross-attention. The basis of Stable Diffusion; see how latents cut compute. |
+| 7 | What are Diffusion Models? – Lilian Weng | Blog | | [lilianweng.github.io](https://lilianweng.github.io/posts/2021-07-11-diffusion-models/) | Survey post deriving DDPM's math, then guidance, DDIM, distillation and consistency models, latent diffusion, and U-Net/DiT backbones. Practice 4's source for DDIM. |
+| 8 | Distill.pub | Blog | | [distill.pub](https://distill.pub/) | Interactive ML explainer journal, on hiatus since July 2021. Here, read "Deconvolution and Checkerboard Artifacts" (Practice 2) and "Open Questions about Generative Adversarial Networks". |
+| 9 | Flow Matching for Generative Modeling – Lipman et al. (2022) | Paper | | [arxiv.org/abs/2210.02747](https://arxiv.org/abs/2210.02747) | Trains continuous normalizing flows simulation-free by regressing vector fields along fixed noise-to-data paths. See why optimal-transport paths train and sample faster than diffusion paths. |
+| 10 | Classifier-Free Diffusion Guidance – Ho & Salimans (2022) | Paper | | [arxiv.org/abs/2207.12598](https://arxiv.org/abs/2207.12598) | Guidance without a separate classifier: jointly train conditional and unconditional diffusion models and mix their scores. Learn the knob trading sample quality against diversity. |
+| 11 | Consistency Models – Song et al. (2023) | Paper | | [arxiv.org/abs/2303.01469](https://arxiv.org/abs/2303.01469) | Maps noise straight to data for one-step generation, with optional multistep refinement; trained by distilling a diffusion model or standalone. The mini-project's stretch goal. |
+| 12 | DALL·E 2 – Ramesh et al. (2022) | Paper | | [arxiv.org/abs/2204.06125](https://arxiv.org/abs/2204.06125) | Two stages: a prior turns a caption into a CLIP image embedding, then a diffusion decoder generates the image. Compare with Imagen's frozen-T5 conditioning. |
+| 13 | Imagen – Saharia et al. (2022) | Paper | | [arxiv.org/abs/2205.11487](https://arxiv.org/abs/2205.11487) | Text-to-image diffusion conditioned on a frozen T5 text encoder. Key finding: scaling the language model helps more than scaling the image diffusion model. |
+| 14 | Variational Lossy Autoencoder – Chen et al. (2016) | Paper | ⭐ | [arxiv.org/abs/1611.02731](https://arxiv.org/abs/1611.02731) | Combines a VAE with autoregressive decoders and priors to control what the latent code keeps: global structure, not texture. Lossy compression as representation learning. |
+| 15 | VQ-VAE: Neural Discrete Representation Learning – van den Oord, Vinyals & Kavukcuoglu (2017) | Paper | | [arxiv.org/abs/1711.00937](https://arxiv.org/abs/1711.00937) | Encodes data as discrete codes via vector quantization, with a learned autoregressive prior, avoiding posterior collapse. See how images and audio become tokens. |
+| 16 | Score-Based Generative Modeling through Stochastic Differential Equations – Song et al. (2020) | Paper | | [arxiv.org/abs/2011.13456](https://arxiv.org/abs/2011.13456) | Continuous-time view: a noising SDE, its score-driven reverse SDE, and an equivalent ODE with exact likelihood. Unifies score-based models and DDPM. |
+| 17 | DiT: Scalable Diffusion Models with Transformers – Peebles & Xie (2022) | Paper | | [arxiv.org/abs/2212.09748](https://arxiv.org/abs/2212.09748) | Swaps the diffusion U-Net for a transformer on latent patches; FID improves with Gflops. The backbone family behind many current image and video generators. |
+| 18 | MIT 6.S184: Introduction to Flow Matching and Diffusion Models – Holderrieth & Erives (2025) | Course | | [diffusion.csail.mit.edu](https://diffusion.csail.mit.edu/2025/index.html) · [Notes](https://arxiv.org/abs/2506.02070) | MIT IAP 2025 course: lectures, self-contained notes and three Colab labs building flow matching and diffusion from ODEs/SDEs to image generators. Start diffusion here. |
 
 > 🔑 = must-read &nbsp;&nbsp; ⭐ = Ilya Sutskever reading list
 
 ---
 
 ## Suggested Order
+
+**Core path (🔑):** Kingma & Welling VAE → Goodfellow et al. GAN → Ho et al. DDPM
 
 1. **Start with VAEs** – Read the Kingma & Welling paper to understand latent variable models and the reparameterization trick.
 2. **Move to GANs** – Read the original GAN paper, then DCGAN for practical architectural patterns.

@@ -31,8 +31,8 @@ After this section you can:
 | 🔑 | 📄 Paper | Long Short-Term Memory | Hochreiter, Schmidhuber | 1997 | [Paper](https://www.bioinf.jku.at/publications/older/2604.pdf) | The original LSTM paper. Introduced gated memory cells to solve the vanishing gradient problem, enabling learning over long time dependencies. |
 | 🔑⭐ | 📝 Blog | The Unreasonable Effectiveness of Recurrent Neural Networks | Karpathy | 2015 | [Blog](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) · [Code](https://github.com/karpathy/char-rnn) | Legendary blog post showing char-level RNNs generating Shakespeare, Wikipedia, LaTeX, and C code. The best intuition-builder for what RNNs can learn. |
 | 🔑⭐ | 📝 Blog | Understanding LSTM Networks | Olah | 2015 | [Blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) | The clearest visual explanation of LSTM internals. Walks through forget, input, and output gates with excellent diagrams. Read this before or alongside the original paper. |
-| 🔑⭐ | 📄 Paper | Recurrent Neural Network Regularization | Zaremba, Sutskever, Vinyals | 2014 | [Paper](https://arxiv.org/abs/1409.2329) | Showed how to correctly apply dropout to RNNs (only on non-recurrent connections). Essential for training RNNs that generalize. |
-| 🔑⭐ | 📄 Paper | Neural Turing Machines | Graves, Wayne, Danihelka | 2014 | [Paper](https://arxiv.org/abs/1410.5401) | Extended neural networks with external memory and attention-based read/write heads. A landmark paper bridging neural networks and classical computation. |
+| ⭐ | 📄 Paper | Recurrent Neural Network Regularization | Zaremba, Sutskever, Vinyals | 2014 | [Paper](https://arxiv.org/abs/1409.2329) | Showed how to correctly apply dropout to RNNs (only on non-recurrent connections). Essential for training RNNs that generalize. |
+| ⭐ | 📄 Paper | Neural Turing Machines | Graves, Wayne, Danihelka | 2014 | [Paper](https://arxiv.org/abs/1410.5401) | Extended neural networks with external memory and attention-based read/write heads. A landmark paper bridging neural networks and classical computation. |
 | ⭐ | 📄 Paper | Relational Recurrent Neural Networks | Santoro et al. | 2018 | [Paper](https://arxiv.org/abs/1806.01822) | Adds multi-head self-attention between memory slots (the "Relational Memory Core") so a recurrent model can reason about relationships between the things it has stored. A bridge from NTM-style memory to transformer-style attention. |
 | ⭐ | 📄 Paper | Pointer Networks | Vinyals, Fortunato, Jaitly | 2015 | [Paper](https://arxiv.org/abs/1506.03134) | Used attention as a pointer to input elements, solving combinatorial problems where output size depends on input. An influential repurposing of (Bahdanau-style) attention as a selection mechanism, and the basis of later copy/pointer mechanisms. |
 | ⭐ | 📄 Paper | Order Matters: Sequence to Sequence for Sets | Vinyals, Bengio, Kudlur | 2015 | [Paper](https://arxiv.org/abs/1511.06391) | Shows that the order in which inputs and outputs are presented significantly changes what seq2seq models learn, and extends seq2seq to handle unordered input and output sets. |
@@ -42,6 +42,8 @@ After this section you can:
 | ⭐ | 📄 Paper | Deep Speech 2: End-to-End Speech Recognition in English and Mandarin | Amodei et al. | 2015 | [Paper](https://arxiv.org/abs/1512.02595) | One end-to-end recurrent network trained with CTC loss replaces hand-engineered speech pipelines in two very different languages. Also an early lesson in how much scale and high-performance-computing engineering matter. |
 
 ## Suggested Order
+
+**Core path (🔑):** Olah, "Understanding LSTM Networks" → Hochreiter & Schmidhuber LSTM (1997) → Karpathy, "The Unreasonable Effectiveness of RNNs"
 
 1. **Olah — Understanding LSTM Networks** — Start here for visual intuition on gating and memory
 2. **Hochreiter & Schmidhuber — LSTM** — Read the original paper with Olah's diagrams fresh in mind
