@@ -57,11 +57,12 @@ After this section you can:
 ```
 1. Effective Python (quick wins, immediately applicable)
 2. Fluent Python (deep mastery of the language)
-3. Robust Python (type hints and disciplined design)
-4. Architecture Patterns with Python (scaling to real systems)
-5. Hypermodern Python Tooling (polish your dev environment)
-6. What's New in Python 3.13 → 3.15 (skim each release; re-read before upgrading a tool or test rig)
-7. High Performance Python (when something is slow: profile first, then optimize)
+3. Real Python's decorator and with-statement tutorials (alongside exercise 4)
+4. Robust Python (type hints and disciplined design), with the typing docs and mypy/pyright
+5. Architecture Patterns with Python (scaling to real systems)
+6. Hypermodern Python Tooling (polish your dev environment), with the uv and Ruff docs
+7. What's New in Python 3.13 → 3.15 (skim each release; re-read before upgrading a tool or test rig)
+8. High Performance Python (when something is slow: profile first, then optimize)
 ```
 
 ---
@@ -73,7 +74,7 @@ After this section you can:
    - ruff for lint and format, with a deliberate rule selection;
    - pre-commit hooks.
 
-   Time a cold `uv sync` against your old `pip install -r requirements.txt`. Done when a fresh clone on another machine runs the tests with two commands and you can explain every table in `pyproject.toml`. *(~2 h · Hypermodern Python Tooling on environments, dependency management and linting; uv and ruff docs)*
+   Time a cold `uv sync` against your old `pip install -r requirements.txt`. Done when a fresh clone on another machine runs the tests with two commands and you can explain every table in `pyproject.toml`. *(~2 h · Hypermodern Python Tooling ch. 2 "Python Environments", ch. 4 "Dependency Management" and ch. 9 "Linting with Ruff and pre-commit"; uv and Ruff docs)*
 2. **`Trace`: a data-model drill** — Implement `Trace` (samples + `t0` + `dt` + units) with support for:
    - `len()`, indexing and iteration;
    - slicing, where a step-k slice returns a `Trace` with `dt*k` and the correct `t0`;
@@ -86,8 +87,8 @@ After this section you can:
    - (a) `@retry(times=3, on=(TimeoutError,), backoff_s=0.1)`, preserving `__name__`, `__doc__`, `__wrapped__` and `inspect.signature`;
    - (b) an `instrument_session()` context manager (via `@contextmanager`) that always sends "output off".
 
-   Test (b) with a fake instrument that records commands, and with a test that raises mid-block. *(~3 h · Fluent Python ch. 9 "Decorators and Closures" and ch. 18 "with, match, and else Blocks"; Real Python's decorator and context-manager tutorials)*
-5. **Type-tighten a real script** — Take one of your untyped tooling scripts (≥ 300 lines). Add annotations incrementally, running `mypy --strict` and pyright in strict mode (`typeCheckingMode = "strict"`) as you go, and log every finding as a real bug, a latent bug or noise. Introduce `NewType` for `Volts`/`Amps`, `Literal["DC", "AC"]`, an `Enum` for instrument modes, a `TypedDict` for config and a `Protocol` for the instrument. Done when both checkers are clean and passing amps where volts are expected fails type-checking. *(~4 h · Robust Python on annotating code and defining your own types; Python `typing` docs; mypy/pyright)*
+   Test (b) with a fake instrument that records commands, and with a test that raises mid-block. *(~3 h · Fluent Python ch. 9 "Decorators and Closures" and ch. 18 "with, match, and else Blocks"; Real Python's "Primer on Python Decorators" and "Python's with Statement")*
+5. **Type-tighten a real script** — Take one of your untyped tooling scripts (≥ 300 lines). Add annotations incrementally, running `mypy --strict` and pyright in strict mode (`typeCheckingMode = "strict"`) as you go, and log every finding as a real bug, a latent bug or noise. Introduce `NewType` for `Volts`/`Amps`, `Literal["DC", "AC"]`, an `Enum` for instrument modes, a `TypedDict` for config and a `Protocol` for the instrument. Done when both checkers are clean and passing amps where volts are expected fails type-checking. *(~4 h · Robust Python Part I "Annotating Your Code with Types", ch. 8 "User-Defined Types: Enums" and ch. 13 "Protocols"; Python `typing` docs; mypy and pyright docs)*
 
 **🏗️ Mini-project — Typed Instrument Library:** Build a uv-managed package (src layout, lockfile, ruff, `mypy --strict`, pytest) that wraps a bench PSU and DMM over PyVISA (listed in Section 13). It should have:
 - `Protocol`-based instrument interfaces and typed units;

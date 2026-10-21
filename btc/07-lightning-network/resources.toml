@@ -3,20 +3,23 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** Polar ([Section 12](../12-hands-on-labs/README.md)) for the lab network in Practice 1 and the mini-project; it runs LND, Core Lightning and Eclair nodes side by side.
+'''
 
 [[groups.items]]
-id = "mastering-the-lightning-network"
-title = "Mastering the Lightning Network"
-authors = "Antonopoulos, Osuntokun, Pickhardt"
-year = "2021"
+id = "mastering-bitcoin-chapter-14-second"
+title = "Mastering Bitcoin, Chapter 14: Second-Layer Applications"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
 level = "intermediate"
 marks = ["core"]
-url = "https://github.com/lnbook/lnbook"
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc"
 link_text = "GitHub"
-description = "THE Lightning reference (published Dec 2021, so it predates BOLT 12 offers, splicing, and taproot channels — see the Optech row below)"
-verified = 2026-10-13
+description = "Third edition (O'Reilly, December 2023; free on GitHub under CC BY-SA 4.0). Builds payment channels from primitives you already know (multisig, timelocks, hash locks) through asymmetric revocable commitments and HTLCs to routed Lightning payments: the on-ramp before Mastering the Lightning Network."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-bitcoin-lightning-network-scalable"
@@ -24,108 +27,76 @@ title = "The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments"
 authors = "Poon, Dryja"
 year = "2016"
 type = "paper"
+access = "free"
 marks = ["core"]
 url = "https://lightning.network/lightning-network-paper.pdf"
 link_text = "PDF"
-description = "The original Lightning whitepaper"
+description = "The original Lightning design paper. Read it for the design reasoning; today's implementations follow the BOLT specifications below, not the paper."
 verified = 2026-10-13
 
 [[groups.items]]
-id = "lightning-engineering-docs"
-title = "Lightning Engineering Docs"
-type = "docs"
-label = "Documentation"
-url = "https://docs.lightning.engineering/"
-link_text = "Docs"
-description = "LND implementation documentation"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "learn-me-a-bitcoin-on-chain"
-title = "Learn Me A Bitcoin (on-chain prerequisites only)"
-authors = "Greg Walker"
-type = "website"
+id = "mastering-the-lightning-network"
+title = "Mastering the Lightning Network"
+authors = "Andreas M. Antonopoulos, Olaoluwa Osuntokun, Rene Pickhardt"
+year = "2021"
+type = "book"
 access = "free"
-url = "https://learnmeabitcoin.com/"
-link_text = "Website"
-description = "Correction: the site has no Lightning section (checked Oct 2026). Use its Script and transaction (sequence/locktime) pages to prepare for HTLCs, and Mastering Bitcoin Ch. 14 as the on-ramp instead"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "andreas-antonopoulos-lightning-network"
-title = "Andreas Antonopoulos Lightning Network talks"
-authors = "Antonopoulos"
-type = "video"
-access = "free"
-url = "https://www.youtube.com/@aantonop"
-link_text = "YouTube"
-description = "Accessible Lightning explanations from the master communicator"
-verified = 2026-10-13
+level = "intermediate"
+marks = ["core"]
+url = "https://github.com/lnbook/lnbook"
+link_text = "GitHub"
+description = "O'Reilly, first edition (21 December 2021), free on GitHub under CC BY-SA 4.0. Goes from node software (ch. 4: c-lightning, now Core Lightning, plus LND and Eclair, wired into one docker-compose network) through payment channels (ch. 7), HTLC routing and forwarding (chs. 8–9), onion routing, pathfinding under liquidity uncertainty (ch. 12) and payment requests (ch. 15). It predates BOLT 12 offers, splicing and simple taproot channels: see the BOLT and Optech rows."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "payment-channels"
-title = "Payment channels"
-type = "concept"
-description = "How two parties can transact off-chain"
+title = "BOLT #2: Peer Protocol for Channel Management, and BOLT #3: Bitcoin Transaction and Script Formats"
+short = "BOLT #2 and BOLT #3 — channel messages and transactions"
+authors = "Lightning protocol contributors"
+year = "2016–2026"
+type = "standard"
+access = "free"
+url = "https://github.com/lightning/bolts/blob/master/03-transactions.md"
+link_text = "BOLT #3"
+more_links = [{ text = "BOLT #2", url = "https://github.com/lightning/bolts/blob/master/02-peer-protocol.md" }]
+description = "A channel's lifecycle as implementations must build it. BOLT #2 has the messages: opening (`open_channel` … `channel_ready`), normal operation (`update_add_htlc`, `commitment_signed`, `revoke_and_ack`, with a section on choosing `cltv_expiry_delta`), splicing and closing. BOLT #3 has the exact transactions: the funding output, the commitment outputs (`to_local` with its revocation and delayed paths, `to_remote`, anchors), the offered and received HTLC scripts, key derivation and test vectors. Practices 2 and 5 decode against it."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "htlcs-hash-time-locked-contracts"
-title = "HTLCs (Hash Time-Locked Contracts)"
-type = "concept"
-description = "Multi-hop payment routing"
+title = "Bitcoin Optech: Hash Time Locked Contract (HTLC) and CLTV expiry delta"
+authors = "Bitcoin Optech"
+type = "website"
+access = "free"
+url = "https://bitcoinops.org/en/topics/htlc/"
+link_text = "HTLC"
+more_links = [{ text = "CLTV expiry delta", url = "https://bitcoinops.org/en/topics/cltv-expiry-delta/" }]
+description = "Two short topic pages, each with its primary sources and dated newsletter mentions. The HTLC page explains the hash-lock payment clause and the time-lock refund clause, and why each also needs a signature. The CLTV-expiry-delta page shows why every forwarding node sets its outgoing HTLC to expire a fixed number of blocks before its incoming one, and who loses money if that margin is too small: the arithmetic of Practice 2."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "channel-capacity-liquidity-and-routing"
-title = "Channel capacity, liquidity, and routing"
-type = "concept"
-description = "Managing inbound/outbound liquidity and pathfinding"
-
-[[groups.items]]
-id = "lightning-implementations"
-title = "Lightning implementations"
-type = "concept"
-description = "LND, CLN (Core Lightning), Eclair, LDK"
-
-[[groups.items]]
-id = "set-up-a-lightning-node-and-open"
-title = "Set up a Lightning node and open channels"
-type = "practice"
-description = "Hands-on experience with real Lightning infrastructure — start with a throwaway regtest network in Polar (Section 12, Lab 5), then signet"
-
-[[groups.items]]
-id = "mastering-bitcoin-chapter-14-second"
-title = "Mastering Bitcoin, Chapter 14: Second-Layer Applications"
-authors = "Antonopoulos & Harding"
-year = "2023"
-type = "book"
+title = "Optimally Reliable & Cheap Payment Flows on the Lightning Network"
+authors = "Rene Pickhardt, Stefan Richter"
+year = "2021"
+type = "paper"
 access = "free"
-marks = ["core"]
-url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch14_applications.adoc"
-link_text = "GitHub"
-description = "Builds payment channels from primitives you already know (multisig, timelocks, hash locks) through asymmetric revocable commitments and HTLCs to routed Lightning payments — the on-ramp before Mastering the Lightning Network"
-verified = 2026-10-13
+url = "https://arxiv.org/abs/2107.05322"
+link_text = "arXiv:2107.05322"
+description = "Channel balances are unknown to the sender, so a payment may not fit. This paper makes the probability that it does part of route selection, uses min-cost flows to split multipart payments, and updates its estimates after each failed attempt. Mastering the Lightning Network ch. 12 cites it; read it with that chapter before the mini-project."
+verified = 2026-10-21
 
 [[groups.items]]
-id = "bolt-specifications-basis-of-lightning"
-title = "BOLT specifications (Basis of Lightning Technology)"
-authors = "Lightning protocol contributors"
-type = "standard"
+id = "learn-me-a-bitcoin-on-chain"
+title = "Learn Me A Bitcoin: Script, Locktime and Sequence (on-chain prerequisites)"
+authors = "Greg Walker"
+type = "website"
 access = "free"
-url = "https://github.com/lightning/bolts"
-link_text = "GitHub"
-description = "The interoperability spec every implementation follows; now includes BOLT 12 offers (merged in 2024) and splicing (in BOLT 2)"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "chaincode-labs-lightning-protocol"
-title = "Chaincode Labs: Lightning Protocol Development seminar"
-authors = "Chaincode Labs"
-type = "course"
-label = "Curriculum"
-url = "https://chaincode.gitbook.io/seminars/lightning-protocol-development"
-link_text = "Seminar"
-description = "Five-session reading list with discussion questions: payment channels and HTLCs, how the layers fit together, routing, limitations, and the future of Lightning"
-verified = 2026-10-13
+url = "https://learnmeabitcoin.com/technical/script/"
+link_text = "Script"
+more_links = [{ text = "Locktime", url = "https://learnmeabitcoin.com/technical/transaction/locktime/" }, { text = "Sequence", url = "https://learnmeabitcoin.com/technical/transaction/input/sequence/" }]
+description = "The site has no Lightning section (checked October 2026). These three pages cover what HTLC and commitment scripts are built from: Script itself, absolute locktime, and the sequence field's relative locktime (BIP 68). Use them to fill gaps while reading Mastering Bitcoin Ch. 14."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-optech-topics-offers-bolt-12-and"
@@ -136,5 +107,56 @@ access = "free"
 url = "https://bitcoinops.org/en/topics/offers/"
 link_text = "Offers"
 more_links = [{ text = "Splicing", url = "https://bitcoinops.org/en/topics/splicing/" }]
-description = "What changed after the book: reusable offers (in the spec since 2024, on by default in Core Lightning, implemented in LDK and Eclair, LND support in progress) and splicing (resize a channel without closing it; implemented in Eclair, Core Lightning and LDK)"
+description = "What changed after the book, with every newsletter mention. Offers (reusable payment requests): merged into the spec as BOLT 12 (Optech, October 2024), on by default in Core Lightning since November 2024, implemented in LDK and Eclair; LND was still adding BOLT 12 encoding and signing in September 2026. Splicing (resizing a channel without closing it): merged into BOLT 2 in March 2026 (BOLTs #1160, reported in Optech Newsletter #398) and implemented in Eclair, Core Lightning and LDK. Status as of October 2026."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "bolt-specifications-basis-of-lightning"
+title = "BOLT specifications (Basis of Lightning Technology)"
+authors = "Lightning protocol contributors"
+year = "2016–2026"
+type = "standard"
+access = "free"
+url = "https://github.com/lightning/bolts"
+link_text = "GitHub"
+description = "The interoperability specification, CC BY 4.0; BOLT #0 is the index. As of October 2026 it includes BOLT #12 offers (in the repository since September 2024), splicing in BOLT #2 (merged March 2026) and simple taproot channels as an extension BOLT (merged May 2026). BOLT #11 is the invoice format Practice 3 decodes."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "chaincode-labs-lightning-protocol"
+title = "Chaincode Labs: Lightning Protocol Development seminar"
+authors = "Chaincode Labs"
+year = "2019–2025"
+type = "course"
+label = "Curriculum"
+access = "free"
+level = "advanced"
+url = "https://chaincode.gitbook.io/seminars/lightning-protocol-development"
+link_text = "Seminar"
+description = "Five sessions, each a timed reading list with discussion questions: LN history, payment channels and HTLCs; how the layers fit together; routing; limitations; the future of Lightning. It assumes you have read Mastering the Lightning Network first. Its source repository was last updated in February 2025."
 verified = 2026-10-13
+
+[[groups.items]]
+id = "andreas-antonopoulos-lightning-network"
+title = "Bitcoin Q&A: Misconceptions about Lightning Network"
+authors = "Andreas M. Antonopoulos"
+year = "2018"
+type = "video"
+access = "free"
+url = "https://www.youtube.com/watch?v=c4TjfaLgzj4"
+link_text = "YouTube"
+description = "A short Q&A from Antonopoulos's channel (published February 2018, from a January 2018 live session): common misconceptions about Lightning, how onion routing and channel funding work, and the risks of running a node. Accessible, but it predates most of today's protocol, so check any status claim against the Optech row."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "lightning-engineering-docs"
+title = "Builder's Guide to the LND Galaxy (Lightning Labs documentation)"
+authors = "Lightning Labs"
+type = "docs"
+label = "Documentation"
+access = "free"
+url = "https://docs.lightning.engineering/"
+link_text = "Docs"
+more_links = [{ text = "L402", url = "https://docs.lightning.engineering/the-lightning-network/l402" }]
+description = "Lightning Labs' documentation for LND and its tools (Lightning Terminal, Loop, Pool, Taproot Assets, L402). Practice 4 uses LND's REST API and, as a stretch, the L402 protocol with Aperture, the reverse HTTP proxy these pages document."
+verified = 2026-10-21

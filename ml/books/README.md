@@ -14,19 +14,19 @@ Do not read cover-to-cover. Use as companions to the section READMEs. Start with
 | 7 | | Deep Learning (Chapters 6–8) | Ian Goodfellow, Yoshua Bengio, Aaron Courville | 2016 | Free | Intermediate | [Link](https://www.deeplearningbook.org/) | [03](../03-neural-network-fundamentals/README.md) |
 | 8 | | Machine Learning Systems | Vijay Janapa Reddi | 2026 | Free | Intermediate | [Link](https://mlsysbook.ai/) | [14](../14-edge-and-embedded-ml/README.md) |
 | 9 | | Designing Machine Learning Systems | Chip Huyen | 2022 | Paid | Intermediate | [Link](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) | [14](../14-edge-and-embedded-ml/README.md) |
-| 10 | 🔑 | Reinforcement Learning: An Introduction – Sutton & Barto (2nd ed.) | — | — | Free | Intermediate | [incompleteideas.net](http://incompleteideas.net/book/the-book-2nd.html) | [10](../10-reinforcement-learning/README.md) |
-| 11 | | Probabilistic Machine Learning: An Introduction | Kevin Murphy | 2022 | Free | Intermediate | [PML Book 1](https://probml.github.io/pml-book/book1.html) | Further reading |
-| 12 | | Dive into Deep Learning | Zhang, Lipton, Li, Smola | 2023 | Free | Intermediate | [d2l.ai](https://d2l.ai/) | Further reading |
-| 13 | | Speech and Language Processing (3rd ed. draft) | Jurafsky, Martin | 2026 (draft) | Free | Intermediate | [web.stanford.edu/~jurafsky/slp3](https://web.stanford.edu/~jurafsky/slp3/) | Further reading |
+| 10 | 🔑 | Reinforcement Learning: An Introduction (2nd ed.) | Richard S. Sutton, Andrew G. Barto | 2018 | Free | Intermediate | [incompleteideas.net](http://incompleteideas.net/book/the-book-2nd.html) | [10](../10-reinforcement-learning/README.md) |
+| 11 | | Probabilistic Machine Learning: An Introduction | Kevin P. Murphy | 2022 | Free | Intermediate | [PML Book 1](https://probml.github.io/pml-book/book1.html) | Further reading |
+| 12 | | Dive into Deep Learning | Aston Zhang, Zachary C. Lipton, Mu Li, Alex J. Smola | 2023 | Free | Intermediate | [d2l.ai](https://d2l.ai/) | Further reading |
+| 13 | | Speech and Language Processing (3rd ed. draft) | Daniel Jurafsky, James H. Martin | 2026 (draft) | Free | Intermediate | [web.stanford.edu/~jurafsky/slp3](https://web.stanford.edu/~jurafsky/slp3/) | Further reading |
 | 14 | | Build a Large Language Model (From Scratch) | Sebastian Raschka | 2024 | Paid | Intermediate | [Manning](https://www.manning.com/books/build-a-large-language-model-from-scratch) | Further reading |
 | 15 | | AI Engineering | Chip Huyen | 2024 | Paid | Intermediate | [O'Reilly](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) | Further reading |
-| 16 | | Pattern Recognition and Machine Learning (PRML) | Christopher Bishop | 2006 | Free | Advanced | [Link](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) | [02](../02-classical-ml/README.md) |
-| 17 | | Gaussian Processes for Machine Learning | Carl Edward Rasmussen, Christopher K. I. Williams | 2006 | Free | Advanced | [Link](https://gaussianprocess.org/gpml/) | [02](../02-classical-ml/README.md) |
-| 18 | | The Elements of Statistical Learning (ESL) | Trevor Hastie, Robert Tibshirani, Jerome Friedman | 2009 | Free | Advanced | [Link](https://hastie.su.domains/ElemStatLearn/) | [02](../02-classical-ml/README.md) |
-| 19 | | Reinforcement Learning from Human Feedback (RLHF Book) | Nathan Lambert | 2025 | Free | Advanced | [rlhfbook.com](https://rlhfbook.com/) | [10](../10-reinforcement-learning/README.md) |
-| 20 | | Perceptrons: An Introduction to Computational Geometry | Marvin Minsky, Seymour Papert | 1969 | — | — | [Link](https://doi.org/10.7551/mitpress/11301.001.0001) | [00](../00-historical-foundations/README.md) |
-| 21 | ⭐ | Kolmogorov Complexity and Algorithmic Randomness | A. Shen, V. A. Uspensky, N. Vereshchagin | 2017 | — | — | [Link](https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf) | [01](../01-math-foundations/README.md) |
-| 22 | | Superintelligence: Paths, Dangers, Strategies | Bostrom | 2014 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
-| 23 | | Human Compatible: Artificial Intelligence and the Problem of Control | Russell | 2019 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
-| 24 | 🔑 | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein et al. | 2021 | Free | — | [arxiv.org/abs/2104.13478](https://arxiv.org/abs/2104.13478) | [13](../13-graphs-geometry-and-science/README.md) |
+| 16 | | Perceptrons: An Introduction to Computational Geometry | Marvin Minsky, Seymour Papert | 1969 | Paid | Advanced | [Link](https://doi.org/10.7551/mitpress/11301.001.0001) | [00](../00-historical-foundations/README.md) |
+| 17 | ⭐ | Kolmogorov Complexity and Algorithmic Randomness | A. Shen, V. A. Uspensky, N. Vereshchagin | 2017 | Free | Advanced | [Link](https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf) | [01](../01-math-foundations/README.md) |
+| 18 | | Pattern Recognition and Machine Learning (PRML) | Christopher Bishop | 2006 | Free | Advanced | [Link](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) | [02](../02-classical-ml/README.md) |
+| 19 | | Gaussian Processes for Machine Learning | Carl Edward Rasmussen, Christopher K. I. Williams | 2006 | Free | Advanced | [Link](https://gaussianprocess.org/gpml/) | [02](../02-classical-ml/README.md) |
+| 20 | | The Elements of Statistical Learning (ESL) | Trevor Hastie, Robert Tibshirani, Jerome Friedman | 2009 | Free | Advanced | [Link](https://hastie.su.domains/ElemStatLearn/) · [Springer (DOI)](https://doi.org/10.1007/978-0-387-84858-7) | [02](../02-classical-ml/README.md) |
+| 21 | | Reinforcement Learning from Human Feedback (RLHF Book) | Nathan Lambert | 2025 | Free | Advanced | [rlhfbook.com](https://rlhfbook.com/) | [10](../10-reinforcement-learning/README.md) |
+| 22 | 🔑 | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein et al. | 2021 | Free | Advanced | [arxiv.org/abs/2104.13478](https://arxiv.org/abs/2104.13478) | [13](../13-graphs-geometry-and-science/README.md) |
+| 23 | | Superintelligence: Paths, Dangers, Strategies | Bostrom | 2014 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
+| 24 | | Human Compatible: Artificial Intelligence and the Problem of Control | Russell | 2019 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
 <!-- books:end -->

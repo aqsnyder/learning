@@ -158,5 +158,7 @@ Answer from memory first, then check against the sources — or paste this secti
 4. Estimate: you solve a linear system with κ ≈ 10¹⁰ in double precision using a backward-stable method. About how many correct significant digits should you expect?
 5. Misconception: "the residual ‖Ax̂ − b‖ is tiny, so x̂ is accurate." When is this false?
 6. Why is high-degree interpolation at equispaced points a bad idea, and what fixes it?
-7. What makes an ODE stiff, and why does an explicit method's step size stay limited by the fastest mode even after that mode has decayed?
-8. Explain to a smart friend in 3 sentences why 0.1 + 0.2 ≠ 0.3 on a computer.
+7. Why is the trapezoid rule spectrally accurate for a smooth periodic function over a full period, yet only second-order for ∫₀¹ eˣ dx?
+8. What makes an ODE stiff, and why does an explicit method's step size stay limited by the fastest mode even after that mode has decayed?
+9. How do you recognize quadratic convergence of Newton's method in a table of errors, and name two safeguards for when it fails to converge.
+10. Explain to a smart friend in 3 sentences why 0.1 + 0.2 ≠ 0.3 on a computer.

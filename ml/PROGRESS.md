@@ -34,12 +34,11 @@ pass are ticked. Everything else is there for going deeper.
 
 - [ ] 🔑 Essence of Linear Algebra — 3Blue1Brown <!-- id:ml/01/essence-of-linear-algebra -->
 - [ ] 🔑 Essence of Calculus — 3Blue1Brown <!-- id:ml/01/essence-of-calculus -->
-- [ ] Neural Networks — 3Blue1Brown <!-- id:ml/01/neural-networks -->
 - [ ] 🔑 Mathematics for Machine Learning — Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong <!-- id:ml/01/mathematics-for-machine-learning -->
 - [ ] The Matrix Calculus You Need For Deep Learning — Terence Parr, Jeremy Howard <!-- id:ml/01/the-matrix-calculus-you-need-for-deep -->
 - [ ] Visual Information Theory — Christopher Olah <!-- id:ml/01/visual-information-theory -->
 - [ ] Khan Academy — Linear Algebra, Calculus, Statistics — Khan Academy <!-- id:ml/01/khan-academy-linear-algebra-calculus -->
-- [ ] StatQuest — Josh Starmer <!-- id:ml/01/statquest -->
+- [ ] StatQuest — maximum likelihood and Bayes' theorem videos (Josh Starmer) <!-- id:ml/01/statquest -->
 - [ ] The First Law of Complexodynamics — Scott Aaronson <!-- id:ml/01/the-first-law-of-complexodynamics -->
 - [ ] Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton — Scott Aaronson, Sean M. Carroll, Lauren Ouellette <!-- id:ml/01/quantifying-the-rise-and-fall-of -->
 - [ ] A Tutorial Introduction to the Minimum Description Length Principle — Peter Grünwald <!-- id:ml/01/a-tutorial-introduction-to-the-minimum -->
@@ -58,7 +57,7 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 02 — Classical Machine Learning
 
-- [ ] 🔑 Machine Learning Specialization — Andrew Ng <!-- id:ml/02/machine-learning-specialization -->
+- [ ] 🔑 Machine Learning Specialization — Andrew Ng, Eddy Shyu, Aarti Bagul, Geoff Ladwig <!-- id:ml/02/machine-learning-specialization -->
 - [ ] 🔑 Stanford CS229: Machine Learning — Andrew Ng <!-- id:ml/02/stanford-cs229-machine-learning -->
 - [ ] 🔑 An Introduction to Statistical Learning (ISLR 2nd ed. / ISLP Python ed.) — Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani (+ Jonathan Taylor for ISLP) <!-- id:ml/02/an-introduction-to-statistical-learning -->
 - [ ] Pattern Recognition and Machine Learning (PRML) — Christopher Bishop <!-- id:ml/02/pattern-recognition-and-machine-learning -->
@@ -68,7 +67,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] Why Do Tree-Based Models Still Outperform Deep Learning on Tabular Data? — Léo Grinsztajn, Edouard Oyallon, Gaël Varoquaux <!-- id:ml/02/why-do-tree-based-models-still -->
 - [ ] Accurate Predictions on Small Data with a Tabular Foundation Model (TabPFN) — Noah Hollmann et al. <!-- id:ml/02/accurate-predictions-on-small-data-with -->
 - [ ] The Elements of Statistical Learning (ESL) — Trevor Hastie, Robert Tibshirani, Jerome Friedman <!-- id:ml/02/the-elements-of-statistical-learning-esl -->
-- [ ] Scikit-learn User Guide — Scikit-learn developers <!-- id:ml/02/scikit-learn-user-guide -->
+- [ ] scikit-learn User Guide — scikit-learn developers <!-- id:ml/02/scikit-learn-user-guide -->
 - [ ] Google Machine Learning Crash Course — Google <!-- id:ml/02/google-machine-learning-crash-course -->
 - [ ] 🛠️ Exercise 1: Regularized regression vs. scikit-learn <!-- id:ml/02/ex-1 -->
 - [ ] 🛠️ Exercise 2: Bias–variance by simulation <!-- id:ml/02/ex-2 -->
@@ -86,9 +85,8 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 Neural Networks: Zero to Hero — Andrej Karpathy <!-- id:ml/03/neural-networks-zero-to-hero -->
 - [ ] Neural Networks — 3Blue1Brown <!-- id:ml/03/neural-networks -->
 - [ ] 🔑 Neural Networks and Deep Learning — Michael Nielsen <!-- id:ml/03/neural-networks-and-deep-learning -->
-- [ ] Colah's Blog — Christopher Olah <!-- id:ml/03/colah-s-blog -->
+- [ ] Olah — Calculus on Computational Graphs: Backpropagation <!-- id:ml/03/colah-s-blog -->
 - [ ] Keeping Neural Networks Simple by Minimizing the Description Length of the Weights — Geoffrey Hinton, Drew van Camp <!-- id:ml/03/keeping-neural-networks-simple-by -->
-- [ ] A Tutorial Introduction to the Minimum Description Length Principle — Peter Grünwald <!-- id:ml/03/a-tutorial-introduction-to-the-minimum -->
 - [ ] 🔑 Understanding Deep Learning — Simon J. D. Prince <!-- id:ml/03/understanding-deep-learning -->
 - [ ] Practical Deep Learning for Coders — Jeremy Howard (fast.ai) <!-- id:ml/03/practical-deep-learning-for-coders -->
 - [ ] A Recipe for Training Neural Networks — Andrej Karpathy <!-- id:ml/03/a-recipe-for-training-neural-networks -->
@@ -187,23 +185,23 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 07 — Generative Models
 
-- [ ] 🔑 VAE — Kingma & Welling <!-- id:ml/07/vae -->
-- [ ] 🔑 GAN — Goodfellow et al. <!-- id:ml/07/gan -->
-- [ ] DCGAN — Radford et al. <!-- id:ml/07/dcgan -->
-- [ ] Normalizing Flows — Rezende & Mohamed <!-- id:ml/07/normalizing-flows -->
-- [ ] 🔑 DDPM — Ho, Jain & Abbeel <!-- id:ml/07/ddpm -->
-- [ ] Latent Diffusion — Rombach et al. <!-- id:ml/07/latent-diffusion -->
+- [ ] 🔑 VAE — Auto-Encoding Variational Bayes — Diederik P. Kingma, Max Welling <!-- id:ml/07/vae -->
+- [ ] 🔑 GAN — Generative Adversarial Networks — Ian J. Goodfellow et al. <!-- id:ml/07/gan -->
+- [ ] DCGAN — Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks — Alec Radford, Luke Metz, Soumith Chintala <!-- id:ml/07/dcgan -->
+- [ ] Variational Inference with Normalizing Flows — Danilo Jimenez Rezende, Shakir Mohamed <!-- id:ml/07/normalizing-flows -->
+- [ ] 🔑 DDPM — Denoising Diffusion Probabilistic Models — Jonathan Ho, Ajay Jain, Pieter Abbeel <!-- id:ml/07/ddpm -->
+- [ ] High-Resolution Image Synthesis with Latent Diffusion Models — Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer <!-- id:ml/07/latent-diffusion -->
 - [ ] What are Diffusion Models? — Lilian Weng <!-- id:ml/07/what-are-diffusion-models -->
-- [ ] Distill.pub <!-- id:ml/07/distill-pub -->
+- [ ] Odena, Dumoulin & Olah — Deconvolution and Checkerboard Artifacts (Distill) <!-- id:ml/07/distill-pub -->
 - [ ] Flow Matching for Generative Modeling — Lipman et al. <!-- id:ml/07/flow-matching-for-generative-modeling -->
 - [ ] Classifier-Free Diffusion Guidance — Ho & Salimans <!-- id:ml/07/classifier-free-diffusion-guidance -->
 - [ ] Consistency Models — Song et al. <!-- id:ml/07/consistency-models -->
-- [ ] DALL·E 2 — Ramesh et al. <!-- id:ml/07/dalle-2 -->
-- [ ] Imagen — Saharia et al. <!-- id:ml/07/imagen -->
+- [ ] DALL·E 2 — Hierarchical Text-Conditional Image Generation with CLIP Latents — Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, Mark Chen <!-- id:ml/07/dalle-2 -->
+- [ ] Imagen — Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding — Chitwan Saharia et al. <!-- id:ml/07/imagen -->
 - [ ] Variational Lossy Autoencoder — Chen et al. <!-- id:ml/07/variational-lossy-autoencoder -->
-- [ ] VQ-VAE: Neural Discrete Representation Learning — van den Oord, Vinyals & Kavukcuoglu <!-- id:ml/07/vq-vae-neural-discrete-representation -->
+- [ ] VQ-VAE — Neural Discrete Representation Learning — Aaron van den Oord, Oriol Vinyals, Koray Kavukcuoglu <!-- id:ml/07/vq-vae-neural-discrete-representation -->
 - [ ] Score-Based Generative Modeling through Stochastic Differential Equations — Song et al. <!-- id:ml/07/score-based-generative-modeling-through -->
-- [ ] DiT: Scalable Diffusion Models with Transformers — Peebles & Xie <!-- id:ml/07/dit-scalable-diffusion-models-with -->
+- [ ] DiT — Scalable Diffusion Models with Transformers — William Peebles, Saining Xie <!-- id:ml/07/dit-scalable-diffusion-models-with -->
 - [ ] MIT 6.S184: Introduction to Flow Matching and Diffusion Models — Holderrieth & Erives <!-- id:ml/07/mit-6-s184-introduction-to-flow-matching -->
 - [ ] 🛠️ Exercise 1: VAE with a 2-D latent <!-- id:ml/07/ex-1 -->
 - [ ] 🛠️ Exercise 2: GANs on a toy, then DCGAN <!-- id:ml/07/ex-2 -->
@@ -218,26 +216,26 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 08 — Scaling, Efficiency, and Deployment
 
-- [ ] 🔑 Scaling Laws for Neural LMs — Kaplan et al. <!-- id:ml/08/scaling-laws-for-neural-lms -->
-- [ ] GPipe — Huang et al. <!-- id:ml/08/gpipe -->
-- [ ] 🔑 Chinchilla — Hoffmann et al. <!-- id:ml/08/chinchilla -->
-- [ ] 🔑 Adam Optimizer — Kingma & Ba <!-- id:ml/08/adam-optimizer -->
-- [ ] AdamW — Loshchilov & Hutter <!-- id:ml/08/adamw -->
-- [ ] Batch Normalization — Ioffe & Szegedy <!-- id:ml/08/batch-normalization -->
+- [ ] 🔑 Scaling Laws for Neural Language Models — Kaplan et al. <!-- id:ml/08/scaling-laws-for-neural-lms -->
+- [ ] GPipe: Efficient Training of Giant Neural Networks using Pipeline Parallelism — Huang et al. <!-- id:ml/08/gpipe -->
+- [ ] 🔑 Chinchilla — Training Compute-Optimal Large Language Models — Hoffmann et al. <!-- id:ml/08/chinchilla -->
+- [ ] 🔑 Adam: A Method for Stochastic Optimization — Kingma & Ba <!-- id:ml/08/adam-optimizer -->
+- [ ] AdamW — Decoupled Weight Decay Regularization — Loshchilov & Hutter <!-- id:ml/08/adamw -->
+- [ ] Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift — Ioffe & Szegedy <!-- id:ml/08/batch-normalization -->
 - [ ] Layer Normalization — Ba et al. <!-- id:ml/08/layer-normalization -->
-- [ ] Megatron-LM — Shoeybi et al. <!-- id:ml/08/megatron-lm -->
-- [ ] MoE — Outrageously Large Neural Networks — Shazeer et al. <!-- id:ml/08/moe-outrageously-large-neural-networks -->
-- [ ] Switch Transformer — Fedus et al. <!-- id:ml/08/switch-transformer -->
-- [ ] Mixtral of Experts – Jiang et al. (Mistral AI, 2024) <!-- id:ml/08/mixtral-of-experts-jiang-et-al-mistral -->
-- [ ] FlashAttention — Dao et al. <!-- id:ml/08/flashattention -->
-- [ ] LoRA — Low-Rank Adaptation — Hu et al. <!-- id:ml/08/lora-low-rank-adaptation -->
-- [ ] QLoRA — Dettmers et al. <!-- id:ml/08/qlora -->
+- [ ] Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism — Shoeybi et al. <!-- id:ml/08/megatron-lm -->
+- [ ] Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer — Shazeer et al. <!-- id:ml/08/moe-outrageously-large-neural-networks -->
+- [ ] Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity — Fedus et al. <!-- id:ml/08/switch-transformer -->
+- [ ] Mixtral of Experts — Jiang et al. (Mistral AI) <!-- id:ml/08/mixtral-of-experts-jiang-et-al-mistral -->
+- [ ] FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness — Dao et al. <!-- id:ml/08/flashattention -->
+- [ ] LoRA: Low-Rank Adaptation of Large Language Models — Hu et al. <!-- id:ml/08/lora-low-rank-adaptation -->
+- [ ] QLoRA: Efficient Finetuning of Quantized LLMs — Dettmers et al. <!-- id:ml/08/qlora -->
 - [ ] Distilling the Knowledge in a Neural Network — Hinton et al. <!-- id:ml/08/distilling-the-knowledge-in-a-neural -->
-- [ ] Speculative Decoding — Leviathan et al. <!-- id:ml/08/speculative-decoding -->
+- [ ] Fast Inference from Transformers via Speculative Decoding — Leviathan et al. <!-- id:ml/08/speculative-decoding -->
 - [ ] ZeRO: Memory Optimizations Toward Training Trillion Parameter Models — Rajbhandari et al. <!-- id:ml/08/zero-memory-optimizations-toward -->
 - [ ] μP — Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer — Yang et al. <!-- id:ml/08/p-tensor-programs-v-tuning-large-neural -->
-- [ ] The Ultra-Scale Playbook: Training LLMs on GPU Clusters – Tazi et al. (Hugging Face, 2025) <!-- id:ml/08/the-ultra-scale-playbook-training-llms -->
-- [ ] PagedAttention / vLLM — Efficient Memory Management for LLM Serving — Kwon et al. <!-- id:ml/08/pagedattention-vllm-efficient-memory -->
+- [ ] The Ultra-Scale Playbook: Training LLMs on GPU Clusters — Tazi et al. (Hugging Face) <!-- id:ml/08/the-ultra-scale-playbook-training-llms -->
+- [ ] vLLM — Efficient Memory Management for Large Language Model Serving with PagedAttention — Kwon et al. <!-- id:ml/08/pagedattention-vllm-efficient-memory -->
 - [ ] Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference — Jacob et al. <!-- id:ml/08/quantization-and-training-of-neural -->
 - [ ] 🛠️ Exercise 1: Compute-budget Fermi problems <!-- id:ml/08/ex-1 -->
 - [ ] 🛠️ Exercise 2: Optimizers and normalization from the papers <!-- id:ml/08/ex-2 -->
@@ -281,22 +279,22 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 09 — Large Language Models
 
-- [ ] Intro to LLMs – Andrej Karpathy (Video) <!-- id:ml/09/intro-to-llms-andrej-karpathy-video -->
-- [ ] 🔑 Deep Dive into LLMs – Andrej Karpathy (Video) <!-- id:ml/09/deep-dive-into-llms-andrej-karpathy -->
-- [ ] GPT-2 — Radford et al. <!-- id:ml/09/gpt-2 -->
-- [ ] 🔑 GPT-3 — Brown et al. <!-- id:ml/09/gpt-3 -->
-- [ ] T5 — Raffel et al. <!-- id:ml/09/t5 -->
-- [ ] 🔑 InstructGPT / RLHF — Ouyang et al. <!-- id:ml/09/instructgpt-rlhf -->
-- [ ] Chain-of-Thought Prompting — Wei et al. <!-- id:ml/09/chain-of-thought-prompting -->
-- [ ] LLaMA — Touvron et al. <!-- id:ml/09/llama -->
-- [ ] GPT-4 Technical Report (2023) <!-- id:ml/09/gpt-4-technical-report-2023 -->
-- [ ] Anthropic Research Blog <!-- id:ml/09/anthropic-research-blog -->
-- [ ] Let's build the GPT Tokenizer – Andrej Karpathy (Video; lecture 8 of Zero to Hero) <!-- id:ml/09/let-s-build-the-gpt-tokenizer-andrej -->
-- [ ] Let's reproduce GPT-2 (124M) – Andrej Karpathy (Video) <!-- id:ml/09/let-s-reproduce-gpt-2-124m-andrej -->
-- [ ] FLAN: Finetuned Language Models Are Zero-Shot Learners — Wei et al. <!-- id:ml/09/flan-finetuned-language-models-are-zero -->
+- [ ] [1hr Talk] Intro to Large Language Models — Andrej Karpathy <!-- id:ml/09/intro-to-llms-andrej-karpathy-video -->
+- [ ] 🔑 Deep Dive into LLMs like ChatGPT — Andrej Karpathy <!-- id:ml/09/deep-dive-into-llms-andrej-karpathy -->
+- [ ] GPT-2 — Language Models are Unsupervised Multitask Learners — Radford et al. <!-- id:ml/09/gpt-2 -->
+- [ ] 🔑 GPT-3 — Language Models are Few-Shot Learners — Brown et al. <!-- id:ml/09/gpt-3 -->
+- [ ] T5 — Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer — Raffel et al. <!-- id:ml/09/t5 -->
+- [ ] 🔑 InstructGPT — Training language models to follow instructions with human feedback — Ouyang et al. <!-- id:ml/09/instructgpt-rlhf -->
+- [ ] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models — Wei et al. <!-- id:ml/09/chain-of-thought-prompting -->
+- [ ] LLaMA: Open and Efficient Foundation Language Models — Touvron et al. <!-- id:ml/09/llama -->
+- [ ] GPT-4 Technical Report — OpenAI et al. <!-- id:ml/09/gpt-4-technical-report-2023 -->
+- [ ] Anthropic Research Blog — Anthropic <!-- id:ml/09/anthropic-research-blog -->
+- [ ] Let's build the GPT Tokenizer — Andrej Karpathy <!-- id:ml/09/let-s-build-the-gpt-tokenizer-andrej -->
+- [ ] Let's reproduce GPT-2 (124M) — Andrej Karpathy <!-- id:ml/09/let-s-reproduce-gpt-2-124m-andrej -->
+- [ ] FLAN — Finetuned Language Models Are Zero-Shot Learners — Wei et al. <!-- id:ml/09/flan-finetuned-language-models-are-zero -->
 - [ ] The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale — Penedo et al. <!-- id:ml/09/the-fineweb-datasets-decanting-the-web -->
-- [ ] The Llama 3 Herd of Models — Grattafiori et al., Meta <!-- id:ml/09/the-llama-3-herd-of-models -->
-- [ ] DeepSeek-V3 Technical Report – DeepSeek-AI (2024) <!-- id:ml/09/deepseek-v3-technical-report-deepseek-ai -->
+- [ ] The Llama 3 Herd of Models — Grattafiori et al. (Meta) <!-- id:ml/09/the-llama-3-herd-of-models -->
+- [ ] DeepSeek-V3 Technical Report — DeepSeek-AI et al. <!-- id:ml/09/deepseek-v3-technical-report-deepseek-ai -->
 - [ ] Stanford CS336: Language Modeling from Scratch — Hashimoto & Liang <!-- id:ml/09/stanford-cs336-language-modeling-from -->
 - [ ] 🛠️ Exercise 1: Tokenizer forensics <!-- id:ml/09/ex-1 -->
 - [ ] 🛠️ Exercise 2: Sampling and the zero-shot trick <!-- id:ml/09/ex-2 -->
@@ -311,23 +309,23 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 10 — Reinforcement Learning
 
-- [ ] 🔑 Reinforcement Learning: An Introduction – Sutton & Barto (2nd ed.) <!-- id:ml/10/reinforcement-learning-an-introduction -->
-- [ ] RL Course — David Silver (DeepMind, YouTube) <!-- id:ml/10/rl-course -->
-- [ ] DQN — Mnih et al. <!-- id:ml/10/dqn -->
-- [ ] Human-Level Control (Nature DQN) — Mnih et al. <!-- id:ml/10/human-level-control-nature-dqn -->
-- [ ] DDPG — Lillicrap et al. <!-- id:ml/10/ddpg -->
+- [ ] 🔑 Reinforcement Learning: An Introduction (2nd ed.) — Richard S. Sutton, Andrew G. Barto <!-- id:ml/10/reinforcement-learning-an-introduction -->
+- [ ] Introduction to Reinforcement Learning (DeepMind x UCL, 2015) — David Silver (DeepMind x UCL) <!-- id:ml/10/rl-course -->
+- [ ] DQN — Playing Atari with Deep Reinforcement Learning — Mnih et al. <!-- id:ml/10/dqn -->
+- [ ] Nature DQN — Human-level control through deep reinforcement learning — Mnih et al. <!-- id:ml/10/human-level-control-nature-dqn -->
+- [ ] DDPG — Continuous control with deep reinforcement learning — Lillicrap et al. <!-- id:ml/10/ddpg -->
 - [ ] AlphaGo — Silver et al. <!-- id:ml/10/alphago -->
-- [ ] AlphaGo Zero — Silver et al. <!-- id:ml/10/alphago-zero -->
-- [ ] 🔑 PPO — Schulman et al. <!-- id:ml/10/ppo -->
-- [ ] Stanford CS234 – Reinforcement Learning (YouTube, Winter 2019 lectures) <!-- id:ml/10/stanford-cs234-reinforcement-learning -->
-- [ ] Spinning Up in Deep RL — Josh Achiam, OpenAI <!-- id:ml/10/spinning-up-in-deep-rl -->
-- [ ] Deep RL from Human Preferences — Christiano et al. <!-- id:ml/10/deep-rl-from-human-preferences -->
-- [ ] 🔑 Direct Preference Optimization (DPO) — Rafailov et al. <!-- id:ml/10/direct-preference-optimization-dpo -->
-- [ ] Self-Play Fine-Tuning (SPIN) — Chen et al. <!-- id:ml/10/self-play-fine-tuning-spin -->
-- [ ] STaR — Self-Taught Reasoner — Zelikman et al. <!-- id:ml/10/star-self-taught-reasoner -->
-- [ ] Let's Verify Step by Step (process reward models) — Lightman et al. <!-- id:ml/10/let-s-verify-step-by-step-process-reward -->
-- [ ] DeepSeekMath (introduces GRPO) — Shao et al. <!-- id:ml/10/deepseekmath-introduces-grpo -->
-- [ ] Tülu 3: Pushing Frontiers in Open LM Post-Training (introduces RLVR) — Lambert et al. <!-- id:ml/10/tulu-3-pushing-frontiers-in-open-lm-post -->
+- [ ] AlphaGo Zero — Mastering the game of Go without human knowledge — Silver et al. <!-- id:ml/10/alphago-zero -->
+- [ ] 🔑 Proximal Policy Optimization Algorithms — Schulman et al. <!-- id:ml/10/ppo -->
+- [ ] Stanford CS234: Reinforcement Learning (Winter 2019) — Emma Brunskill (Stanford Online) <!-- id:ml/10/stanford-cs234-reinforcement-learning -->
+- [ ] Spinning Up in Deep RL — Josh Achiam (OpenAI) <!-- id:ml/10/spinning-up-in-deep-rl -->
+- [ ] Deep reinforcement learning from human preferences — Christiano et al. <!-- id:ml/10/deep-rl-from-human-preferences -->
+- [ ] 🔑 Direct Preference Optimization: Your Language Model is Secretly a Reward Model — Rafailov et al. <!-- id:ml/10/direct-preference-optimization-dpo -->
+- [ ] SPIN — Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models — Chen et al. <!-- id:ml/10/self-play-fine-tuning-spin -->
+- [ ] STaR: Bootstrapping Reasoning With Reasoning — Zelikman et al. <!-- id:ml/10/star-self-taught-reasoner -->
+- [ ] Let's Verify Step by Step — Lightman et al. <!-- id:ml/10/let-s-verify-step-by-step-process-reward -->
+- [ ] DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models — Shao et al. <!-- id:ml/10/deepseekmath-introduces-grpo -->
+- [ ] Tulu 3: Pushing Frontiers in Open Language Model Post-Training — Lambert et al. <!-- id:ml/10/tulu-3-pushing-frontiers-in-open-lm-post -->
 - [ ] Reinforcement Learning from Human Feedback (RLHF Book) — Nathan Lambert <!-- id:ml/10/reinforcement-learning-from-human -->
 - [ ] 🛠️ Exercise 1: Reproduce the 10-armed testbed <!-- id:ml/10/ex-1 -->
 - [ ] 🛠️ Exercise 2: Dynamic programming and TD control <!-- id:ml/10/ex-2 -->
@@ -352,12 +350,10 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] On the Biology of a Large Language Model — Lindsey et al. <!-- id:ml/12/on-the-biology-of-a-large-language-model -->
 - [ ] Verbalizable Representations Form a Global Workspace in Language Models — Gurnee, Sofroniew et al. <!-- id:ml/12/verbalizable-representations-form-a -->
 - [ ] Softmax Linear Units — Elhage et al. <!-- id:ml/12/softmax-linear-units -->
-- [ ] Representation Engineering — Zou et al. <!-- id:ml/12/representation-engineering -->
+- [ ] Representation Engineering: A Top-Down Approach to AI Transparency — Zou et al. <!-- id:ml/12/representation-engineering -->
 - [ ] TransformerLens & Mech Interp tutorials — Neel Nanda <!-- id:ml/12/transformerlens-mech-interp-tutorials -->
 - [ ] ARENA (Alignment Research Engineer Accelerator) — self-study curriculum: transformer interpretability, RL/RLHF, LLM evals, alignment science — Callum McDougall / ARENA <!-- id:ml/12/arena-alignment-research-engineer -->
 - [ ] 🔑 Constitutional AI: Harmlessness from AI Feedback — Bai et al. <!-- id:ml/12/constitutional-ai-harmlessness-from-ai -->
-- [ ] Direct Preference Optimization (DPO) — Rafailov et al. <!-- id:ml/12/direct-preference-optimization-dpo -->
-- [ ] Deep RL from Human Preferences — Christiano et al. <!-- id:ml/12/deep-rl-from-human-preferences -->
 - [ ] Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training — Hubinger et al. <!-- id:ml/12/sleeper-agents-training-deceptive-llms -->
 - [ ] Alignment Faking in Large Language Models — Greenblatt et al. <!-- id:ml/12/alignment-faking-in-large-language -->
 - [ ] Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs — Betley et al. <!-- id:ml/12/emergent-misalignment-narrow-finetuning -->
@@ -367,7 +363,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] Human Compatible: Artificial Intelligence and the Problem of Control — Russell <!-- id:ml/12/human-compatible-artificial-intelligence -->
 - [ ] Are Emergent Abilities of Large Language Models a Mirage? — Schaeffer et al. <!-- id:ml/12/are-emergent-abilities-of-large-language -->
 - [ ] Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Chiang et al. <!-- id:ml/12/chatbot-arena-an-open-platform-for -->
-- [ ] Measuring AI Ability to Complete Long Software Tasks (METR time horizons) — Kwa et al. <!-- id:ml/12/measuring-ai-ability-to-complete-long -->
+- [ ] METR time horizons — Measuring AI Ability to Complete Long Software Tasks — Kwa et al. <!-- id:ml/12/measuring-ai-ability-to-complete-long -->
 - [ ] 🛠️ Exercise 1: Reproduce Toy Models of Superposition <!-- id:ml/12/ex-1 -->
 - [ ] 🛠️ Exercise 2: Circuits with TransformerLens: induction heads, then IOI <!-- id:ml/12/ex-2 -->
 - [ ] 🛠️ Exercise 3: Logit lens vs. J-lens <!-- id:ml/12/ex-3 -->
@@ -381,35 +377,35 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 11 — Frontiers (2023-2026+)
 
-- [ ] 🔑 Scaling LLM Test-Time Compute — Snell et al. <!-- id:ml/11/scaling-llm-test-time-compute -->
-- [ ] 🔑 DeepSeek-R1 (2025) <!-- id:ml/11/deepseek-r1-2025 -->
-- [ ] Learning to Reason with LLMs (o1) – OpenAI (2024) <!-- id:ml/11/learning-to-reason-with-llms-o1-openai -->
-- [ ] Gemini — Google DeepMind <!-- id:ml/11/gemini -->
-- [ ] SAM — Kirillov et al. <!-- id:ml/11/sam -->
-- [ ] CLIP — Radford et al. <!-- id:ml/11/clip -->
-- [ ] LLaVA: Visual Instruction Tuning — Liu et al. <!-- id:ml/11/llava-visual-instruction-tuning -->
-- [ ] SimCLR — Chen et al. <!-- id:ml/11/simclr -->
-- [ ] MoCo v2 — Chen et al. <!-- id:ml/11/moco-v2 -->
-- [ ] DINO / DINOv2 – Caron et al. (2021) / Oquab et al. (2023) <!-- id:ml/11/dino-dinov2-caron-et-al-2021-oquab-et-al -->
+- [ ] 🔑 Scaling LLM Test-Time Compute Optimally can be More Effective than Scaling Model Parameters — Snell et al. <!-- id:ml/11/scaling-llm-test-time-compute -->
+- [ ] 🔑 DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning — DeepSeek-AI et al. <!-- id:ml/11/deepseek-r1-2025 -->
+- [ ] o1 — Learning to reason with LLMs — OpenAI <!-- id:ml/11/learning-to-reason-with-llms-o1-openai -->
+- [ ] Gemini: A Family of Highly Capable Multimodal Models — Gemini Team et al. (Google) <!-- id:ml/11/gemini -->
+- [ ] SAM — Segment Anything — Kirillov et al. <!-- id:ml/11/sam -->
+- [ ] CLIP — Learning Transferable Visual Models From Natural Language Supervision — Radford et al. <!-- id:ml/11/clip -->
+- [ ] LLaVA — Visual Instruction Tuning — Liu et al. <!-- id:ml/11/llava-visual-instruction-tuning -->
+- [ ] SimCLR — A Simple Framework for Contrastive Learning of Visual Representations — Chen et al. <!-- id:ml/11/simclr -->
+- [ ] MoCo v2 — Improved Baselines with Momentum Contrastive Learning — Chen et al. <!-- id:ml/11/moco-v2 -->
+- [ ] DINO — Emerging Properties in Self-Supervised Vision Transformers; DINOv2: Learning Robust Visual Features without Supervision — Caron et al.; Oquab et al. <!-- id:ml/11/dino-dinov2-caron-et-al-2021-oquab-et-al -->
 - [ ] MAE — Masked Autoencoders Are Scalable Vision Learners — He et al. <!-- id:ml/11/mae-masked-autoencoders-are-scalable -->
-- [ ] JEPA / I-JEPA — Assran et al. <!-- id:ml/11/jepa-i-jepa -->
+- [ ] I-JEPA — Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture — Assran et al. <!-- id:ml/11/jepa-i-jepa -->
 - [ ] S4 — Efficiently Modeling Long Sequences with Structured State Spaces — Gu, Goel & Ré <!-- id:ml/11/s4-efficiently-modeling-long-sequences -->
-- [ ] 🔑 Mamba — Linear-Time Sequence Modeling with Selective State Spaces — Gu & Dao <!-- id:ml/11/mamba-linear-time-sequence-modeling-with -->
-- [ ] RWKV — Reinventing RNNs for the Transformer Era — Peng et al. <!-- id:ml/11/rwkv-reinventing-rnns-for-the -->
-- [ ] xLSTM — Extended Long Short-Term Memory — Beck et al. <!-- id:ml/11/xlstm-extended-long-short-term-memory -->
-- [ ] ReAct — Yao et al. <!-- id:ml/11/react -->
-- [ ] RAG — Retrieval-Augmented Generation — Lewis et al. <!-- id:ml/11/rag-retrieval-augmented-generation -->
-- [ ] Tree of Thoughts — Yao et al. <!-- id:ml/11/tree-of-thoughts -->
-- [ ] Toolformer — Schick et al. <!-- id:ml/11/toolformer -->
-- [ ] Sparks of AGI — Bubeck et al. <!-- id:ml/11/sparks-of-agi -->
-- [ ] Voyager — Wang et al. <!-- id:ml/11/voyager -->
+- [ ] 🔑 Mamba: Linear-Time Sequence Modeling with Selective State Spaces — Gu & Dao <!-- id:ml/11/mamba-linear-time-sequence-modeling-with -->
+- [ ] RWKV: Reinventing RNNs for the Transformer Era — Peng et al. <!-- id:ml/11/rwkv-reinventing-rnns-for-the -->
+- [ ] xLSTM: Extended Long Short-Term Memory — Beck et al. <!-- id:ml/11/xlstm-extended-long-short-term-memory -->
+- [ ] ReAct: Synergizing Reasoning and Acting in Language Models — Yao et al. <!-- id:ml/11/react -->
+- [ ] RAG — Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks — Lewis et al. <!-- id:ml/11/rag-retrieval-augmented-generation -->
+- [ ] Tree of Thoughts: Deliberate Problem Solving with Large Language Models — Yao et al. <!-- id:ml/11/tree-of-thoughts -->
+- [ ] Toolformer: Language Models Can Teach Themselves to Use Tools — Schick et al. <!-- id:ml/11/toolformer -->
+- [ ] Sparks of Artificial General Intelligence: Early experiments with GPT-4 — Bubeck et al. <!-- id:ml/11/sparks-of-agi -->
+- [ ] Voyager: An Open-Ended Embodied Agent with Large Language Models — Wang et al. <!-- id:ml/11/voyager -->
 - [ ] Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks — Reimers & Gurevych <!-- id:ml/11/sentence-bert-sentence-embeddings-using -->
-- [ ] Building Effective Agents — Schluntz & Zhang, Anthropic <!-- id:ml/11/building-effective-agents -->
+- [ ] Building effective agents — Erik Schluntz, Barry Zhang (Anthropic) <!-- id:ml/11/building-effective-agents -->
 - [ ] SWE-bench: Can Language Models Resolve Real-World GitHub Issues? — Jimenez et al. <!-- id:ml/11/swe-bench-can-language-models-resolve -->
-- [ ] RT-2 — Brohan et al. <!-- id:ml/11/rt-2 -->
+- [ ] RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control — Brohan et al. <!-- id:ml/11/rt-2 -->
 - [ ] World Models — Ha & Schmidhuber <!-- id:ml/11/world-models -->
 - [ ] π0: A Vision-Language-Action Flow Model for General Robot Control — Black et al. <!-- id:ml/11/0-a-vision-language-action-flow-model -->
-- [ ] AI Index Report — Stanford HAI <!-- id:ml/11/stanford-hai -->
+- [ ] The 2026 AI Index Report — Stanford HAI (AI Index Steering Committee) <!-- id:ml/11/stanford-hai -->
 - [ ] 🛠️ Exercise 1: State-space models are filters you already know <!-- id:ml/11/ex-1 -->
 - [ ] 🛠️ Exercise 2: Representations without labels <!-- id:ml/11/ex-2 -->
 - [ ] 🛠️ Exercise 3: Test-time compute on a small model <!-- id:ml/11/ex-3 -->
@@ -431,12 +427,12 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges — Bronstein et al. <!-- id:ml/13/geometric-deep-learning-grids-groups -->
 - [ ] E(n) Equivariant Graph Neural Networks — Satorras et al. <!-- id:ml/13/e-n-equivariant-graph-neural-networks -->
 - [ ] SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks — Fuchs et al. <!-- id:ml/13/se-3-transformers-3d-roto-translation -->
-- [ ] 🔑 Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2) — Jumper et al. <!-- id:ml/13/highly-accurate-protein-structure -->
-- [ ] Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3 — Abramson et al. <!-- id:ml/13/accurate-structure-prediction-of -->
+- [ ] 🔑 AlphaFold 2 — Highly accurate protein structure prediction with AlphaFold — Jumper et al. <!-- id:ml/13/highly-accurate-protein-structure -->
+- [ ] Accurate structure prediction of biomolecular interactions with AlphaFold 3 — Abramson et al. <!-- id:ml/13/accurate-structure-prediction-of -->
 - [ ] GraphCast: Learning Skillful Medium-Range Global Weather Forecasting — Lam et al. <!-- id:ml/13/graphcast-learning-skillful-medium-range -->
-- [ ] Scaling Deep Learning for Materials Discovery (GNoME) — Merchant et al. <!-- id:ml/13/scaling-deep-learning-for-materials -->
-- [ ] De Novo Design of Protein Structure and Function with RFdiffusion — Watson et al. <!-- id:ml/13/de-novo-design-of-protein-structure-and -->
-- [ ] AlphaGeometry (Solving Olympiad Geometry without Human Demonstrations) & AlphaProof (Olympiad-Level Formal Mathematical Reasoning with Reinforcement Learning) — Trinh et al. (AlphaGeometry); Hubert et al. (AlphaProof) — Google DeepMind <!-- id:ml/13/alphageometry-solving-olympiad-geometry -->
+- [ ] GNoME — Scaling deep learning for materials discovery — Merchant et al. <!-- id:ml/13/scaling-deep-learning-for-materials -->
+- [ ] De novo design of protein structure and function with RFdiffusion — Watson et al. <!-- id:ml/13/de-novo-design-of-protein-structure-and -->
+- [ ] AlphaGeometry — Solving olympiad geometry without human demonstrations; AlphaProof — Olympiad-level formal mathematical reasoning with reinforcement learning — Trinh et al.; Hubert et al. (Google DeepMind) <!-- id:ml/13/alphageometry-solving-olympiad-geometry -->
 - [ ] AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery — Novikov et al. <!-- id:ml/13/alphaevolve-a-coding-agent-for -->
 - [ ] 🛠️ Exercise 1: GCN from the equation <!-- id:ml/13/ex-1 -->
 - [ ] 🛠️ Exercise 2: GAT, and when neighbors mislead <!-- id:ml/13/ex-2 -->
@@ -451,10 +447,10 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Further reading (no section home)
 
-- [ ] Probabilistic Machine Learning: An Introduction — Kevin Murphy <!-- id:ml/extras/probabilistic-machine-learning-an -->
-- [ ] Probabilistic Machine Learning: Advanced Topics — Kevin Murphy <!-- id:ml/extras/probabilistic-machine-learning-advanced -->
+- [ ] Probabilistic Machine Learning: An Introduction — Kevin P. Murphy <!-- id:ml/extras/probabilistic-machine-learning-an -->
+- [ ] Probabilistic Machine Learning: Advanced Topics — Kevin P. Murphy <!-- id:ml/extras/probabilistic-machine-learning-advanced -->
 - [ ] Hands-On Machine Learning with Scikit-Learn and PyTorch — Aurélien Géron <!-- id:ml/extras/hands-on-machine-learning-with-scikit -->
-- [ ] Dive into Deep Learning — Zhang, Lipton, Li, Smola <!-- id:ml/extras/dive-into-deep-learning -->
-- [ ] Speech and Language Processing (3rd ed. draft) — Jurafsky, Martin <!-- id:ml/extras/speech-and-language-processing -->
+- [ ] Dive into Deep Learning — Aston Zhang, Zachary C. Lipton, Mu Li, Alex J. Smola <!-- id:ml/extras/dive-into-deep-learning -->
+- [ ] Speech and Language Processing (3rd ed. draft) — Daniel Jurafsky, James H. Martin <!-- id:ml/extras/speech-and-language-processing -->
 - [ ] Build a Large Language Model (From Scratch) — Sebastian Raschka <!-- id:ml/extras/build-a-large-language-model -->
 - [ ] AI Engineering — Chip Huyen <!-- id:ml/extras/ai-engineering -->

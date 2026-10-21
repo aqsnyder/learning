@@ -66,6 +66,7 @@ year = "2018"
 type = "course"
 level = "intermediate"
 access = "free"
+marks = ["core"]
 url = "https://ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/"
 link_text = "Link"
 description = "Where signals meet probability: state-space models, random processes, correlation functions and power spectra, Wiener filtering, LMMSE estimation, hypothesis testing, and matched filters (notes and problem sets, no videos). The mathematics of noise and detection in instruments."

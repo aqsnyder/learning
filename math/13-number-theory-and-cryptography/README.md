@@ -44,7 +44,7 @@ After this section you can:
 | 🔑 | 📕 Book | An Introduction to Mathematical Cryptography | Jeffrey Hoffstein, Jill Pipher, Joseph H. Silverman | 2014 | [Link](https://link.springer.com/book/10.1007/978-1-4939-1711-2) | Algebra and number theory where they are used: discrete logarithms and Diffie–Hellman, RSA, digital signatures, elliptic-curve cryptography, and lattices (2nd edition). The mathematical backing for the btc curriculum's keys-and-signatures material and the core text of this section. |
 | | 📕 Book | Elliptic Curves: Number Theory and Cryptography | Lawrence C. Washington | 2008 | [Link](https://www.routledge.com/Elliptic-Curves-Number-Theory-and-Cryptography-Second-Edition/Washington/p/book/9781420071467) | The standard next step after Hoffstein–Pipher–Silverman (2nd edition): the group law proved properly, curves over finite fields, the discrete-log problem and its attacks, and pairings. |
 | | 📕 Book | Rational Points on Elliptic Curves | Joseph H. Silverman, John T. Tate | 2015 | [Link](https://link.springer.com/book/10.1007/978-3-319-18588-0) | Optional depth (2nd edition): the arithmetic of elliptic curves at an undergraduate level — the "why" behind the group law and point counting. |
-| | 📕 Book (free) | A Graduate Course in Applied Cryptography | Dan Boneh, Victor Shoup | 2023 | [Link](https://toc.cryptobook.us/) | Free (v0.6) graduate text on provable security: what it means for a signature or key exchange to be secure, with chapters on digital signatures and on elliptic-curve cryptography and pairings. For when you want definitions and proofs, not recipes. |
+| | 📕 Book (free) | A Graduate Course in Applied Cryptography | Dan Boneh, Victor Shoup | 2023 | [Link](https://toc.cryptobook.us/) | Free graduate text on provable security (version 0.6, January 2023, still the latest version as of October 2026): what it means for a signature or key exchange to be secure, with chapters on digital signatures and on elliptic-curve cryptography and pairings. For when you want definitions and proofs, not recipes. |
 | | 📕 Book | Understanding Cryptography | Christof Paar, Jan Pelzl, Tim Güneysu | 2024 | [Link](https://link.springer.com/book/10.1007/978-3-662-69007-9) | Engineering-oriented textbook (2nd edition) spanning symmetric and asymmetric ciphers up to post-quantum algorithms. The practical, implementation-minded complement to Hoffstein–Pipher–Silverman. |
 
 <!-- resources:end -->
@@ -68,7 +68,7 @@ After this section you can:
 
 ## 🛠️ Practice
 
-1. **The Euclidean toolkit** *(~4 h · Silverman's Friendly Introduction — gcd, congruences, Euler's formula, and RSA; Stein's ENT on the integers mod n and public-key cryptography; MIT 6.042J's number-theory lectures)*
+1. **The Euclidean toolkit** *(~4 h · Silverman's Friendly Introduction — gcd, congruences, Euler's formula, and RSA; Stein's ENT on the integers mod n and public-key cryptography; MIT 6.042J's number-theory lectures (Section 00))*
    - (a) Implement the extended Euclidean algorithm and reproduce the classic toy RSA key: p = 61, q = 53, n = 3233, φ = 3120, e = 17 → d = 2753. Check that 65 encrypts to 2790 and decrypts back to 65.
    - (b) Write a general CRT solver and solve Sunzi's system x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7). The answer is 23.
    - (c) Implement RSA-CRT decryption for a 2048-bit key and measure the speedup over a single `pow(c, d, n)`. Expect roughly 3–4× in Python, and explain why (two half-size exponentiations).
@@ -151,4 +151,6 @@ Answer from memory first, then check against the sources — or paste this secti
 5. What does Hasse's theorem say about #E(𝔽ₚ), and why must the group order used in Bitcoin be prime?
 6. Misconception: "the private key is safe because elliptic-curve multiplication can't be reversed." What exactly is believed hard, and name two implementation mistakes that make it easy.
 7. Why does reusing an ECDSA nonce reveal the private key? Write the two signature equations and solve them.
-8. Explain to a smart friend in 3 sentences how a digital signature proves you hold a private key without revealing it.
+8. Why does p ≡ 3 (mod 4) let you decompress a secp256k1 point with a single modular exponentiation, and how do you choose between the two square roots?
+9. Estimate: about how many group operations do baby-step giant-step or Pollard's rho need for a discrete log on secp256k1, and what does "128-bit security" mean?
+10. Explain to a smart friend in 3 sentences how a digital signature proves you hold a private key without revealing it.

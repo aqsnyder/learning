@@ -94,8 +94,8 @@ level = "advanced"
 access = "free"
 url = "https://toc.cryptobook.us/"
 link_text = "Link"
-description = "Free (v0.6) graduate text on provable security: what it means for a signature or key exchange to be secure, with chapters on digital signatures and on elliptic-curve cryptography and pairings. For when you want definitions and proofs, not recipes."
-verified = 2026-10-13
+description = "Free graduate text on provable security (version 0.6, January 2023, still the latest version as of October 2026): what it means for a signature or key exchange to be secure, with chapters on digital signatures and on elliptic-curve cryptography and pairings. For when you want definitions and proofs, not recipes."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "understanding-cryptography"

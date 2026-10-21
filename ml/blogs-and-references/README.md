@@ -7,7 +7,7 @@
 | Priority | Blog | Description |
 |----------|------|-------------|
 | 🔑 | [Colah's Blog](https://colah.github.io/) | Beautiful visual explanations of neural network concepts (LSTMs, convnets, manifolds) |
-| 🔑 | [Distill.pub](https://distill.pub/) | Interactive, peer-reviewed articles with best-in-class visualizations of ML research. On indefinite hiatus since July 2021 — no new articles, but the archive remains essential |
+| 🔑 | [Distill.pub](https://distill.pub/) | Interactive, peer-reviewed articles with best-in-class visualizations of ML research. On hiatus since July 2021 (its last articles appeared in September 2021; still paused as of October 2026), but the archive remains essential |
 | 🔑 | [Anthropic Research](https://www.anthropic.com/research) | Frontier research on AI safety, interpretability, and large language models |
 | | [Transformer Circuits Thread](https://transformer-circuits.pub/) | Anthropic interpretability team's research site — where the papers in Section 12 (superposition, monosemanticity, attribution graphs) and monthly "Circuits Updates" appear first |
 | | [Interconnects](https://www.interconnects.ai/) | Nathan Lambert's newsletter on post-training, RLHF/RLVR, and open models — technical, insider, low-hype |

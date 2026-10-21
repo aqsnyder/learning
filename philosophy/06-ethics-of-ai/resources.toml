@@ -27,7 +27,10 @@ type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "Vivid, accessible account of how algorithms perpetuate injustice in education, policing, and finance. Makes the abstract concrete."
+url = "https://www.penguinrandomhouse.com/books/241363/weapons-of-math-destruction-by-cathy-oneil/"
+link_text = "Crown"
+description = "Vivid, accessible account of how opaque, large-scale, damaging models (\"weapons of math destruction\") entrench injustice in education, policing and finance. Makes the abstract concrete; its three-part test (opacity, scale, damage) is used in Check Yourself 1 and the mini-project. Argues from the critical side — see the balance note below."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ai-ethics-mit-press-essential-knowledge"
@@ -40,12 +43,13 @@ description = "Short, accessible introduction covering responsibility, justice, 
 [[groups.items]]
 id = "the-global-landscape-of-ai-ethics"
 title = "The global landscape of AI ethics guidelines"
-authors = "Jobin, Ienca, Vayena"
+authors = "Anna Jobin, Marcello Ienca, Effy Vayena"
 year = "2019"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1038/s42256-019-0088-2"
 link_text = "Link"
-description = "Meta-analysis of 84 AI ethics guidelines worldwide. Reveals common themes and important gaps."
+description = "*Nature Machine Intelligence* 1(9): 389–399. Maps 84 AI ethics guidelines from around the world: which principles they converge on, how differently they interpret them, and what they leave out. Used in Check Yourself 4 and to test the mini-project's policy."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -54,7 +58,12 @@ title = "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Int
 authors = "Kate Crawford"
 year = "2021"
 type = "book"
-description = "Maps the material infrastructure of AI — labor, data, minerals, energy. Shows that AI is not immaterial but deeply embedded in power structures."
+access = "paid"
+level = "beginner"
+url = "https://yalebooks.yale.edu/book/9780300264630/atlas-of-ai/"
+link_text = "Yale"
+description = "Maps the material infrastructure of AI — labor, data, minerals, energy — and argues that AI is not immaterial but embedded in power structures. Argues from the critical side; Practice 4 tests its material claims with your own Fermi estimate. The link is the Yale paperback (2022, 336 pp.)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "automating-inequality-how-high-tech"
@@ -70,6 +79,8 @@ title = "Fairness and Machine Learning: Limitations and Opportunities"
 authors = "Barocas, Hardt, Narayanan"
 year = "2023"
 type = "book"
+access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://fairmlbook.org/"
 link_text = "Free"
@@ -92,7 +103,8 @@ year = "2004"
 type = "paper"
 url = "https://doi.org/10.1007/s10676-004-3422-1"
 link_text = "Link"
-description = "Argues that learning systems act in ways their designers cannot foresee, leaving an accountability vacuum that traditional ways of assigning blame cannot fill. The origin of the \"responsibility gap\" debate, and the place to take Section 09's question of who is to blame when an autonomous system errs."
+description = "Argues that learning systems act in ways their designers cannot foresee, leaving an accountability vacuum that traditional ways of assigning blame cannot fill. The origin of the \"responsibility gap\" debate (Practice 2), and the place to take Section 09's question of who is to blame when an autonomous system errs."
+access = "paid"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -103,7 +115,9 @@ year = "2024"
 type = "book"
 url = "https://press.princeton.edu/books/hardcover/9780691249131/ai-snake-oil"
 link_text = "Link"
-description = "Two Princeton computer scientists separate AI that works from AI that doesn't, with particular scrutiny of predictive AI used to make decisions about people. The up-to-date, evidence-driven successor to O'Neil."
+description = "Two Princeton computer scientists separate AI that works from AI that doesn't, with particular scrutiny of predictive AI used to make decisions about people. The up-to-date, evidence-driven successor to O'Neil; its checks for predictive-AI \"snake oil\" are used in the mini-project, and it cuts both ways in the balance note below."
+access = "paid"
+level = "beginner"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -115,6 +129,7 @@ type = "paper"
 url = "https://doi.org/10.1093/jla/laz001"
 link_text = "Link"
 description = "The strongest counterweight to this section's critical books. With the right legal requirements in place, algorithms make discrimination easier to *detect* than opaque human decisions do, and they make trade-offs between competing values explicit — so they can be \"a potential positive force for equity\", not only a threat to be regulated. Open access (*Journal of Legal Analysis* 10). Read it against O'Neil, Eubanks and Benjamin."
+access = "free"
 verified = 2026-10-13
 
 [[groups.items]]

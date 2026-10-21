@@ -76,6 +76,8 @@ title = "The Weirdness of the World"
 authors = "Eric Schwitzgebel"
 year = "2024"
 type = "book"
+access = "paid"
+level = "intermediate"
 description = "Argues that reality is fundamentally strange — whether materialism or dualism is true, something deeply weird must be going on. Embraces philosophical uncertainty."
 
 [[groups.items]]

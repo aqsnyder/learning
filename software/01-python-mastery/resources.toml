@@ -13,7 +13,10 @@ type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "THE Python mastery book. Understand the data model, generators, async, and metaprogramming"
+url = "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/"
+link_text = "oreilly.com"
+description = "The deep book on the language (O'Reilly, April 2022): the data model, generators, async and metaprogramming. Ch. 1 \"The Python Data Model\", 9 \"Decorators and Closures\", 12 \"Special Methods for Sequences\", 16 \"Operator Overloading\", 17 \"Iterators, Generators, and Classic Coroutines\" and 18 \"with, match, and else Blocks\" drive this section's exercises."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "effective-python-3rd-ed"
@@ -24,7 +27,10 @@ type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "125 specific ways to write better Python"
+url = "https://informit.com/store/effective-python-125-specific-ways-to-write-better-9780138172183"
+link_text = "informit.com"
+description = "\"125 Specific Ways to Write Better Python\" (Addison-Wesley, November 2024): short, self-contained items, so it pays off immediately. Ch. 6 \"Comprehensions and Generators\" backs exercise 3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "robust-python"
@@ -35,17 +41,23 @@ type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "Type hints, boundaries, and disciplined design"
+url = "https://www.oreilly.com/library/view/robust-python/9781098100650/"
+link_text = "oreilly.com"
+description = "Type annotations, user-defined types and protocols as tools for maintainable code (O'Reilly, July 2021). Part I \"Annotating Your Code with Types\", the Part II chapters on Enums, data classes and classes, and ch. 13 \"Protocols\" back exercise 5 and the mini-project."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "architecture-patterns-with-python"
 title = "*Architecture Patterns with Python*"
-authors = "Percival and Gregory"
+authors = "Harry Percival and Bob Gregory"
+year = "2020"
 type = "book"
+access = "free"
 level = "intermediate"
 url = "https://www.cosmicpython.com/"
 link_text = "cosmicpython.com"
-description = "DDD, repository pattern, event-driven architecture in Python (free online)"
+more_links = [{ text = "O'Reilly", url = "https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/" }]
+description = "DDD, the repository pattern and event-driven architecture in Python, free online at cosmicpython.com (print from O'Reilly, March 2020). Ch. 2 \"Repository Pattern\" and ch. 3 \"A Brief Interlude: On Coupling and Abstractions\" shape the mini-project's instrument boundary."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -54,61 +66,82 @@ title = "*Hypermodern Python Tooling*"
 authors = "Claudio Jolowicz"
 year = "2024"
 type = "book"
-description = "Modern project setup: uv, Hatch, Poetry, Nox, pytest, Ruff, mypy, pre-commit"
+access = "paid"
+level = "intermediate"
+url = "https://www.oreilly.com/library/view/hypermodern-python-tooling/9781098139575/"
+link_text = "oreilly.com"
+description = "Modern project setup (O'Reilly, June 2024): environments, packaging and dependency management, pytest and Coverage.py, Nox, Ruff and pre-commit, and type checking; the tools covered include uv, Hatch, Poetry and Rye. Ch. 2 \"Python Environments\", ch. 4 \"Dependency Management\" and ch. 9 \"Linting with Ruff and pre-commit\" back exercise 1."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "python-type-hints-typing-module"
 title = "Python Type Hints (`typing` module)"
+authors = "Python Software Foundation"
 type = "docs"
 access = "free"
 url = "https://docs.python.org/3/library/typing.html"
 link_text = "docs.python.org"
-description = "Essential for reading modern Python"
+description = "The reference for `Protocol`, `NewType`, `Literal`, `TypedDict` and the rest of the typing vocabulary that exercise 5 and the mini-project use. Read it next to *Robust Python*."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "mypy-pyright"
 title = "mypy / pyright"
+authors = "Jukka Lehtosalo and mypy contributors; Microsoft (pyright)"
 type = "tool"
-description = "Static type checkers — catch bugs before running code"
+access = "free"
+url = "https://mypy.readthedocs.io/en/stable/"
+link_text = "mypy docs"
+more_links = [{ text = "pyright docs", url = "https://microsoft.github.io/pyright" }]
+description = "The two main static type checkers for Python (mypy 2.4 as of October 2026). Exercise 5 runs both in strict mode; mypy's docs on strict mode and on adopting it in existing code show how to tighten an untyped script step by step."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "uv"
 title = "uv"
+authors = "Astral"
 type = "tool"
 access = "free"
 url = "https://github.com/astral-sh/uv"
 link_text = "github.com"
-description = "Modern Python package management"
-verified = 2026-10-13
+more_links = [{ text = "Docs", url = "https://docs.astral.sh/uv" }]
+description = "\"An extremely fast Python package and project manager, written in Rust\": projects, lockfiles, virtual environments and Python versions in one tool. Exercise 1 and the mini-project build on it."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ruff"
-title = "ruff"
+title = "Ruff"
+authors = "Astral"
 type = "tool"
 access = "free"
 url = "https://github.com/astral-sh/ruff"
 link_text = "github.com"
-description = "Fast linter and formatter"
-verified = 2026-10-13
+more_links = [{ text = "Docs", url = "https://docs.astral.sh/ruff/" }]
+description = "\"An extremely fast Python linter and code formatter, written in Rust\" (`ruff check`, `ruff format`; MIT-licensed). Exercise 1 asks for a deliberate rule selection, so read the rules reference in the docs."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "real-python"
-title = "Real Python"
-type = "website"
-url = "https://realpython.com/"
+title = "Primer on Python Decorators (Real Python)"
+authors = "Geir Arne Hjelle"
+year = "2026"
+type = "tutorial"
+access = "free"
+url = "https://realpython.com/primer-on-python-decorators/"
 link_text = "realpython.com"
-description = "High-quality Python tutorials"
-verified = 2026-10-13
+more_links = [{ text = "Python's with Statement (Leodanis Pozo Ramos, 2025)", url = "https://realpython.com/python-with-statement/" }]
+description = "Two tutorials for exercise 4: decorators from first principles through `functools.wraps` and decorators with arguments (updated September 2026), and \"Python's with Statement: Manage External Resources Safely\" on `@contextmanager` and on how `__exit__` swallows or propagates exceptions. Free to read; the site may ask for a free account."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "what-s-new-in-python-3-13-3-15"
 title = "What's New in Python (3.13 → 3.15)"
+authors = "Python Software Foundation"
 type = "docs"
 access = "free"
 url = "https://docs.python.org/3/whatsnew/index.html"
 link_text = "What's New in Python"
-description = "Read the notes for every version you ship on. 3.13 (Oct 2024) added an experimental free-threaded (no-GIL) build and a basic JIT, off by default; 3.14 (Oct 2025) made free-threading officially supported (PEP 779) and annotations lazily evaluated (PEP 649/749); 3.15 (9 Oct 2026) adds explicit lazy imports (PEP 810), a `profiling` package with a sampling profiler (PEP 799) and a stable ABI for free-threaded builds (PEP 803). The JIT is still labelled experimental in 3.15. Pair with the [free-threading HOWTO](https://docs.python.org/3/howto/free-threading-python.html) before trusting C extensions under threads"
+description = "Read the notes for every version you ship on. 3.13 (Oct 2024) added an experimental free-threaded (no-GIL) build and a basic JIT, off by default; 3.14 (7 Oct 2025) made free-threading officially supported (PEP 779) and annotations lazily evaluated (PEP 649/749); 3.15 (9 Oct 2026), the latest release as of October 2026, adds explicit lazy imports (PEP 810), a `profiling` package with a sampling profiler (PEP 799) and a stable ABI for free-threaded builds (PEP 803). The JIT is still labelled experimental in 3.15. Pair with the [free-threading HOWTO](https://docs.python.org/3/howto/free-threading-python.html) before trusting C extensions under threads"
 verified = 2026-10-13
 
 [[groups.items]]

@@ -57,10 +57,10 @@ organizations"), with `year` as "first published (rev. year)" and the dates in t
 | 09 | just-deserts-debating-free-will | access paid; level intermediate | (verified 2026-10-13) |
 | 09 | free-will | authors SEP → Christopher Franklin (the entry's only `citation_author`); year 2002 (rev. 2022); description points to §2.2; verified | https://plato.stanford.edu/entries/freewill/ |
 | 09 | compatibilism | authors SEP → D. Justin Coates; year 2004 (rev. 2024); description maps §§3.1, 3.2, 4.4; verified | https://plato.stanford.edu/entries/compatibilism/ |
-| 09 | human-behavioral-biology | Link was a third-party playlist (channel "otur1") → Stanford's own "Lecture Collection \| Human Behavioral Biology"; type video → video-series; verified | https://www.youtube.com/oembed?url=https://www.youtube.com/playlist?list=PL848F2368C90DDC3D&format=json |
+| 09 | human-behavioral-biology | Link was a third-party playlist (channel "otur1") → Stanford's own "Lecture Collection \| Human Behavioral Biology"; type video → video-series; level intermediate; verified | https://www.youtube.com/oembed?url=https://www.youtube.com/playlist?list=PL848F2368C90DDC3D&format=json |
 | 09 | README | Q7 (Mitchell vs. Sapolsky) and Q9 (responsibility for an agent's act) added | — |
 | 10 | (section) | **Broadened** to match its title: four titled groups (Buddhist philosophy of mind; Indian rivals: Nyāya and Advaita Vedānta; Chinese philosophy: heart-mind and agency; Buddhism and the sciences of mind) | — |
-| 10 | what-the-buddha-taught | Link added (Grove paperback, 1 May 1969, foreword by Paul Demiéville); `year` 1959 → 1969 (the linked edition); verified | https://groveatlantic.com/book/what-the-buddha-taught/ |
+| 10 | what-the-buddha-taught | Link added (Grove paperback, 1 May 1969, foreword by Paul Demiéville); `year` 1959 → 1969 (the linked edition); "clearest, most authoritative" → "classic, widely used"; verified | https://groveatlantic.com/book/what-the-buddha-taught/ |
 | 10 | buddhism-as-philosophy-an-introduction | access paid; level beginner (no link: see browser check) | — |
 | 10 | buddha | authors SEP → Mark Siderits; year 2011 (rev. 2023); description; verified | https://plato.stanford.edu/entries/buddha/ |
 | 10 | mind-in-indian-buddhist-philosophy | authors SEP → Christian Coseru; year 2009 (rev. 2012); verified | https://plato.stanford.edu/entries/mind-indian-buddhism/ |
@@ -79,11 +79,12 @@ organizations"), with `year` as "first published (rev. year)" and the dates in t
 | 11 | reality-virtual-worlds-and-the-problems | Link added (free excerpt on the author's site; W. W. Norton, © 2022); authors "David J. Chalmers"; access partial; level beginner; verified | https://consc.net/reality+/excerpt.pdf |
 | 11 | consciousness-in-artificial-intelligence | Authors "Patrick Butlin, Robert Long, et al. (19 authors)"; description dated (August 2023), "most rigorous … to date" removed; verified | https://arxiv.org/abs/2308.08708 |
 | 11 | the-edge-of-sentience-risk-and | access free (open access); level intermediate | (verified 2026-10-13) |
+| 11 | the-weirdness-of-the-world | access paid; level intermediate (no link: see browser check) | — |
 | 11 | being-you-a-new-science-of-consciousness | Link added (Dutton, 19 Oct 2021); access paid; level beginner; description tied to Practice 3; verified | https://www.penguinrandomhouse.com/books/566315/being-you-by-anil-seth/ |
 | 11 | integrated-information-theory-iit-4-0 | Link: arXiv preprint → published version (*PLOS Comput. Biol.* 19(10) e1011465, 17 Oct 2023, CC BY), arXiv kept as second link; "latest formulation" → "IIT's 2023 formulation"; authors note 16; verified | https://api.crossref.org/works/10.1371/journal.pcbi.1011465 ; https://arxiv.org/abs/2212.14787 |
 | 11 | life-3-0-being-human-in-the-age-of-ai | Title subtitle → "…in the Age of Artificial Intelligence"; link added (PRH; ebook 29 Aug 2017); access paid; level beginner; labeled speculative; verified | https://www.penguinrandomhouse.com/books/530584/life-30-by-max-tegmark |
 | 11 | the-alignment-forum | Title → "AI Alignment Forum"; authors "Various" → "LessWrong team (maintainers)"; year 2018; type blog → website (label Forum); access free; "Also used in econ/11."; verified | https://www.alignmentforum.org/about |
-| 11 | README | Dated "recent landmark report" → "2023 report"; objective 2 and Suggested Order 3, 7 dated; P4 PyPhi claim dated (2.0.0rc4, October 2026; stable 1.2 is IIT 3.0); P4 Koch "(Section 02)"; Q3 extended to the unfolding argument; Q8 (predictions, Brier score) added | https://pypi.org/pypi/pyphi/json |
+| 11 | README | Dated "recent landmark report" → "2023 report"; objective 2 and Suggested Order 3, 7 dated; P4 PyPhi claim dated (2.0.0rc4, October 2026; stable 1.2 is IIT 3.0); P4 Koch "(Section 02)"; Q3 extended to the unfolding argument; Q5 dated ("the LLMs of 2023"); Q8 (predictions, Brier score) added | https://pypi.org/pypi/pyphi/json |
 | 12 | karl-popper | authors SEP → Stephen Thornton; year 1997 (rev. July 2026); verified | https://plato.stanford.edu/entries/popper/ |
 | 12 | the-logic-of-scientific-discovery | Link added (Routledge DOI); 1959 and the 1935 original confirmed in SEP; "Routledge Classics" wording dropped (not on a fetched page); access paid; level advanced; verified | https://api.crossref.org/works/10.4324/9780203994627 ; https://plato.stanford.edu/entries/popper/ |
 | 12 | the-structure-of-scientific-revolutions | access paid; level intermediate | (verified 2026-10-13) |
@@ -166,7 +167,23 @@ section that lists it. Fixed: 07 P2 (added Krakovna et al.), 08 P4–P5 (Bender 
 
 ## 3. For a browser check
 
-PLACEHOLDER_BROWSER
+Eleven items. Six books still have no link because their publisher pages could not be reached this run (no
+Wiley, Harvard, Hackett, MIT Press, Yale or Princeton page appeared in search results; Crossref then rate-limited
+every further lookup, and the search budget ran out). Their other fields are filled; `verified` is left empty.
+
+| Section | Item (id) | URL to check | Why |
+|---|---|---|---|
+| 08 | philosophical-investigations-selections | Wiley-Blackwell page for the 4th edition (2009, ed. Hacker & Schulte) | No publisher page found; core item |
+| 08 | how-to-do-things-with-words | Harvard UP page for the 2nd edition (ISBN 9780674411524), or OUP's | No publisher page found |
+| 10 | buddhism-as-philosophy-an-introduction | Hackett page for the 2nd edition (2021) | Hackett pages not indexed; its catalog search was blocked. SEP "Buddha" confirms "2021, *Buddhism As Philosophy*, 2nd edition, Indianapolis: Hackett" — check whether the 2nd edition keeps the subtitle "An Introduction" |
+| 10 | the-bodhisattva-s-brain-buddhism | MIT Press page (2011) | Crossref rate-limited |
+| 10 | why-i-am-not-a-buddhist | Yale UP page (2020) | Crossref rate-limited |
+| 11 | the-weirdness-of-the-world | Princeton UP page (2024); also whether the author hosts a free copy (would make access "partial") | Crossref rate-limited |
+| 11 | are-you-living-in-a-computer-simulation | https://doi.org/10.1111/1467-9213.00309 | `access` unknown: doi.org rate-limited. If the journal page is paywalled, the author's own copy could be added as a second link |
+| 12 | estimating-the-reproducibility-of | https://doi.org/10.1126/science.aac4716 | `access` unknown (is it free with a Science account?) |
+| 12 | philosophy-and-the-sciences-introduction | https://www.coursera.org/learn/philosophy-physical-sciences | `year`: the page shows no launch date (earliest review November 2017) |
+| 07 | 80-000-hours-ai-risk-profile | https://80000hours.org/problem-profiles/artificial-intelligence/ | Fetch refused (permission prompt unanswered). Check whether it now redirects to `/problem-profiles/loss-of-control/` (the URL blogs-and-references uses, by Cody Fenwick and Zershaaneh Qureshi) and update title, authors and date |
+| 09 | an-accumulator-model-for-spontaneous | https://doi.org/10.1073/pnas.1210467109 | `access = free` set from PNAS's free-after-six-months policy, not from the page |
 
 ## 4. Decisions for the owner
 
@@ -179,8 +196,9 @@ PLACEHOLDER_BROWSER
    Millière, the paper that answers the octopus argument, so the core path is still "classic + the LLM debate".
    Alternatives: Grice's "Logic and Conversation" or Austin. Since 05 is a prerequisite, learners meet both sides.
 3. **Section 10 duplicate of *The Embodied Mind*.** The row in 10 was the same book as 04's core row and was still
-   tracked despite saying "tracked once". I replaced it with an outro cross-link. A learner who ticked
-   `philosophy/10/the-embodied-mind-revisited` will see it under "Removed upstream" after `progress.py sync`.
+   tracked despite saying "tracked once". I replaced it with an outro cross-link. Learners who ticked
+   `philosophy/10/the-embodied-mind-revisited` or `philosophy/08/climbing-towards-nlu-on-meaning-form-and` will see
+   those ticks under "Removed upstream" after `progress.py sync` (both books stay tracked in 04 and 05).
 4. **SEP/IEP authors.** I replaced `authors = "SEP"` with the entry's author in 07–12 (binding rule: cite people).
    Sections 00–06 belong to another agent; the curriculum should use one convention. Authors were taken from each
    entry's `citation_author` metadata on 2026-10-21 (e.g. "Free Will": Christopher Franklin only; "Ludwig

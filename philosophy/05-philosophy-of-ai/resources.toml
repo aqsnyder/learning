@@ -18,8 +18,9 @@ type = "paper"
 marks = ["core"]
 url = "https://academic.oup.com/mind/article/LIX/236/433/986238"
 link_text = "Link"
-description = "The paper that asked \"Can machines think?\" and proposed the imitation game (Turing Test). Still the essential starting point for philosophy of AI. Every argument in this section is in dialogue with Turing."
-verified = 2026-10-13
+description = "*Mind* 59 (236): 433–460. The paper that asked \"Can machines think?\" and proposed the imitation game (Turing Test), with replies to nine objections and a fifty-year prediction. Still the essential starting point for philosophy of AI; every argument in this section is in dialogue with Turing. OUP's article page showed the full text when checked (October 2026); the PDF is for subscribers. Also used in ml/00."
+access = "partial"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-symbol-grounding-problem"
@@ -73,13 +74,14 @@ type = "paper"
 marks = ["core"]
 url = "https://doi.org/10.18653/v1/2020.acl-main.463"
 link_text = "Link"
-description = "The \"Octopus Test\" paper. Argues that language models trained on form alone cannot learn meaning. A modern update to the symbol grounding debate."
+description = "ACL 2020 paper, open access in the ACL Anthology. The \"octopus test\": a system trained only on linguistic form has no way to learn meaning, understood as the relation between form and something outside language. A modern update to the symbol grounding debate, and the model for this section's mini-project. This is its home entry; [Section 08](../08-language-and-meaning/README.md) also uses it."
+access = "free"
 verified = 2026-10-13
 
 [[groups.items]]
 id = "on-the-dangers-of-stochastic-parrots"
-title = "On the Dangers of Stochastic Parrots"
-authors = "Bender, Gebru, McMillan-Major, Shmitchell"
+title = "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
+authors = "Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell"
 year = "2021"
 type = "paper"
 url = "https://doi.org/10.1145/3442188.3445922"

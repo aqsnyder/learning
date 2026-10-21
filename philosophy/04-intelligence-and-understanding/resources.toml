@@ -92,7 +92,7 @@ access = "paid"
 level = "advanced"
 url = "https://academic.oup.com/book/6746"
 link_text = "OUP"
-description = "Clark's full development of the extended mind thesis (with a foreword by David Chalmers): our minds are not brain-bound but extend into our tools and environment, defended against the main objections, including the coupling–constitution charge that Practice 2 asks you to answer."
+description = "Clark's book-length development of the extended mind thesis: our minds are not brain-bound but extend into our bodies, tools and environment (\"brainbound versus extended\"), defended at length against its critics. The place to go deeper after Practice 2."
 verified = 2026-10-21
 
 [[groups.items]]

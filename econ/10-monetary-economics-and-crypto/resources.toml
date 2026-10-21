@@ -3,8 +3,98 @@
 # Field reference: tools/README.md
 
 [[groups]]
+title = "Part 1: Money, banking and central banking"
+intro = '''What money is, who creates it, and what central banks do. [Section 14](../14-macroeconomics-money-and-financial-markets/README.md) comes first and supplies the mechanics: T-accounts, payments and bank runs.'''
 outro = '''
-> **Also used here:** Eric Budish, *The Economic Limits of Bitcoin and the Blockchain* (2018; published in the *QJE* in 2025 as "Trust at Scale"). Its home is [btc/09](../../btc/09-economics-and-game-theory/README.md), where it is linked and tracked; objective 4 and Practice 3 in this section build on it.
+> **Also used here (tracked in its home section):** McLeay, Radia & Thomas, "Money creation in the modern economy" ([Section 14](../14-macroeconomics-money-and-financial-markets/README.md)) for how banks create deposits by lending, the companion to the Bank of England introduction above; Mehrling's *Economics of Money and Banking* and Diamond & Dybvig, "Bank Runs, Deposit Insurance, and Liquidity" ([Section 14](../14-macroeconomics-money-and-financial-markets/README.md)) for payments, the hierarchy of money and bank runs; FRED ([Section 14](../14-macroeconomics-money-and-financial-markets/README.md)) for Practice 4's data.
+'''
+
+[[groups.items]]
+id = "money-in-the-modern-economy"
+title = "Money in the modern economy: an introduction"
+authors = "Michael McLeay, Amar Radia & Ryland Thomas"
+year = "2014"
+type = "article"
+access = "free"
+marks = ["core"]
+url = "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-in-the-modern-economy-an-introduction"
+link_text = "Bank of England"
+description = "Bank of England *Quarterly Bulletin* 2014 Q1. What money is today: a special kind of IOU that everyone trusts to be accepted in payment. It distinguishes the three forms of modern money (currency, bank deposits and central-bank reserves), each an IOU from one sector of the economy to another, and shows that most money is bank deposits, which commercial banks create themselves. The core reading for objective 1; its companion on money creation is tracked in Section 14."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "money-the-unauthorized-biography"
+title = "Money: The Unauthorised Biography"
+authors = "Felix Martin"
+year = "2013"
+type = "book"
+access = "paid"
+level = "beginner"
+url = "https://www.penguin.co.uk/books/416100/money-by-felix-martin/9780099578529"
+link_text = "Penguin"
+description = "A history of money that rejects the textbook story in which money grew out of barter, and explains instead what money is, where it comes from and how it works. Practice 1 uses its account of the stone money of Yap and its view of money as transferable credit. First published by The Bodley Head in 2013; the link is the Vintage paperback (2014)."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "the-federal-reserve-and-the-financial-crisis"
+title = "The Federal Reserve and the Financial Crisis (Chairman Bernanke's College Lecture Series)"
+authors = "Ben S. Bernanke"
+year = "2012"
+type = "lecture"
+label = "Lecture series"
+access = "free"
+level = "beginner"
+marks = ["core"]
+url = "https://www.federalreserve.gov/aboutthefed/educational-tools/chairmans-lecture-series-about.htm"
+link_text = "Federal Reserve"
+more_links = [{ text = "Lecture 1 slides", url = "https://www.federalreserve.gov/newsevents/files/bernanke-lecture-one-20120320.pdf" }]
+description = "Four lectures given to an undergraduate class at George Washington University in March 2012, with video, transcripts and slides. Lecture 1, \"Origins and Mission of the Federal Reserve\", is the core: a central bank's two missions (macroeconomic and financial stability), its two tools (short-term interest rates, and lending to financial institutions as lender of last resort), Bagehot's dictum for panics (lend freely, against good assets, at a penalty rate), and why the gold standard, which tied the money supply to the stock of gold, did not prevent panics. Lectures 2–4 cover the Federal Reserve after World War II, its response to the 2008 crisis and the aftermath. The institution explaining itself, so read it against the critics in Part 2."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "monetary-theory-and-policy"
+title = "Monetary Theory and Policy (4th ed.)"
+authors = "Carl E. Walsh"
+year = "2017"
+type = "book"
+access = "paid"
+level = "advanced"
+url = "https://mitpressbookstore.mit.edu/book/9780262035811"
+link_text = "MIT Press Bookstore"
+description = "The standard graduate textbook on monetary economics (MIT Press, 4th ed., May 2017): the main models of money and monetary policy and the frictions behind them. This edition adds a chapter on the effective lower bound, forward guidance and quantitative easing. Practice 4 uses its chapters on discretion and time inconsistency and on policy rules."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "discretion-versus-policy-rules-in-practice"
+title = "Discretion versus policy rules in practice"
+authors = "John B. Taylor"
+year = "1993"
+type = "paper"
+access = "paid"
+url = "https://doi.org/10.1016/0167-2231(93)90009-L"
+link_text = "Link"
+description = "*Carnegie-Rochester Conference Series on Public Policy* 39: 195–214 (December 1993). The paper that proposed the Taylor rule. Practice 4 plots the rule against the actual federal funds rate."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "iii-the-next-generation-monetary-and"
+title = "III. The next-generation monetary and financial system (BIS Annual Economic Report 2025)"
+authors = "Bank for International Settlements"
+year = "2025"
+type = "report"
+access = "free"
+url = "https://www.bis.org/publ/arpdf/ar2025e3.htm"
+link_text = "Link"
+description = "The central banks' view, and the bridge to Part 2. Any money that is to be the mainstay of the monetary system must pass three tests: singleness (it trades at par with other forms of money), elasticity (supply can expand when payments need it) and integrity (it resists financial crime). Stablecoins fall short on all three; the chapter proposes a unified ledger of tokenised central-bank reserves, commercial-bank money and government bonds instead. Read it as one side of the argument, not the last word."
+verified = 2026-10-13
+
+[[groups]]
+title = "Part 2: Crypto, read as monetary economics"
+intro = '''Part 1's questions applied to Bitcoin, Ethereum and stablecoins. **Educational only:** nothing here is investment advice.'''
+outro = '''
+> **Also used here (tracked in its home section):** Eric Budish, *The Economic Limits of Bitcoin and the Blockchain* (2018; published in the *QJE* in 2025 as "Trust at Scale"), in [btc/09](../../btc/09-economics-and-game-theory/README.md), for objective 4 and Practice 3.
+>
+> **Where the btc curriculum goes deeper:** the whitepaper's history and its precursors (Hashcash, b-money, Bit Gold) in [btc/00](../../btc/00-history-and-philosophy/README.md); proof-of-work, the block subsidy and the 21M supply schedule in [btc/03](../../btc/03-mining-and-consensus/README.md); Lightning payments, for the mini-project, in [btc/07](../../btc/07-lightning-network/README.md); the security budget, fee sniping and mining without a block subsidy in [btc/09](../../btc/09-economics-and-game-theory/README.md).
 '''
 
 [[groups.items]]
@@ -17,16 +107,8 @@ access = "paid"
 level = "beginner"
 url = "https://saifedean.com/thebitcoinstandard/"
 link_text = "Link"
-description = "Accessible case for Bitcoin as sound money, grounded in Austrian monetary economics. Covers the history of money, monetary policy failures, and Bitcoin's economic design. An advocacy book from a heterodox school: read it as a thesis to test against the mainstream sources in this section, not as settled economics."
+description = "Accessible case for Bitcoin as sound money, grounded in Austrian monetary economics. Covers the history of money, monetary policy failures, and Bitcoin's economic design. An advocacy book from a heterodox school: read it as a thesis to test against Part 1 and the mainstream sources below, not as settled economics. Also used in btc/00 and btc/09."
 verified = 2026-10-13
-
-[[groups.items]]
-id = "money-the-unauthorized-biography"
-title = "Money: The Unauthorized Biography"
-authors = "Felix Martin"
-year = "2013"
-type = "book"
-description = "Engaging history of money from Babylonian clay tablets to modern financial systems. Challenges conventional narratives."
 
 [[groups.items]]
 id = "denationalisation-of-money-the-argument"
@@ -34,75 +116,11 @@ title = "Denationalisation of Money: The Argument Refined"
 authors = "F.A. Hayek"
 year = "1976 (2nd ed. 1978)"
 type = "book"
+access = "free"
+level = "intermediate"
 url = "https://mises.org/library/denationalisation-money-argument-refined"
 link_text = "Link"
-description = "Hayek's prescient argument for competing private currencies. Intellectual precursor to cryptocurrency. The 1976 first edition was subtitled *An Analysis of the Theory and Practice of Concurrent Currencies*; the link is the expanded *Argument Refined* text (Institute of Economic Affairs, 3rd ed., 1990), hosted by the Mises Institute, an advocacy site."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "bitcoin-a-peer-to-peer-electronic-cash"
-title = "Bitcoin: A Peer-to-Peer Electronic Cash System"
-authors = "Satoshi Nakamoto"
-year = "2008"
-type = "paper"
-access = "free"
-marks = ["core"]
-url = "https://bitcoin.org/bitcoin.pdf"
-link_text = "Link"
-description = "The Bitcoin whitepaper. 9 pages that launched a trillion-dollar asset class. Essential reading regardless of your views on crypto."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "ethereum-whitepaper"
-title = "Ethereum Whitepaper"
-authors = "Vitalik Buterin"
-year = "2014"
-type = "paper"
-url = "https://ethereum.org/en/whitepaper/"
-link_text = "Link"
-description = "Introduced smart contracts and programmable money. Foundation for DeFi and token economics."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "blockchain-and-money"
-title = "Blockchain and Money"
-authors = "Gary Gensler, MIT"
-year = "2018"
-type = "course"
-access = "free"
-marks = ["core"]
-url = "https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/"
-link_text = "Link"
-description = "Full MIT course on blockchain technology, cryptocurrency, and their economic implications. Gensler later chaired the SEC (2021–2025)."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "monetary-theory-and-policy"
-title = "Monetary Theory and Policy"
-authors = "Carl Walsh"
-year = "2017"
-type = "book"
-description = "The standard graduate textbook on monetary economics. Rigorous treatment of money demand, central banking, and optimal monetary policy."
-
-[[groups.items]]
-id = "vitalik-buterin-s-blog"
-title = "Vitalik Buterin's Blog"
-authors = "Vitalik Buterin"
-type = "blog"
-url = "https://vitalik.eth.limo/"
-link_text = "Link"
-description = "Deep technical and economic analysis of mechanism design, governance, and crypto economics by Ethereum's creator."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "cryptoeconomics"
-title = "Cryptoeconomics"
-authors = "Eric Voskuil"
-type = "book"
-access = "free"
-url = "https://github.com/libbitcoin/libbitcoin-system/wiki/Cryptoeconomics"
-link_text = "Link"
-description = "Rigorous treatment of the economic principles underlying cryptocurrency systems."
+description = "Hayek's argument for competing private currencies, whose issuers would compete by keeping their money's purchasing power stable: the intellectual precursor to cryptocurrency. The 1976 first edition was subtitled *An Analysis of the Theory and Practice of Concurrent Currencies*; the link is the expanded *Argument Refined* text (Institute of Economic Affairs, 3rd ed., 1990), hosted by the Mises Institute, an advocacy site."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -112,9 +130,34 @@ authors = "Hanna Halaburda, Guillaume Haeringer, Joshua S. Gans & Neil Gandal"
 year = "2022"
 type = "paper"
 access = "free"
+marks = ["core"]
 url = "https://www.nber.org/papers/w27477"
 link_text = "Link"
-description = "*Journal of Economic Literature* 60(3), 2022 (NBER WP 2020, free). A mainstream survey of the economics of cryptocurrencies: the counterweight to read against Ammous."
+description = "*Journal of Economic Literature* 60(3): 971–1013, 2022 (NBER WP 27477, July 2020, free). The mainstream survey and the core reading for Part 2: the double-spending problem, consensus as an equilibrium among miners, a formal model of the longest-chain attack including Budish's flow-versus-stock argument, proof of stake, transaction fees, what drives bitcoin's price, bitcoin as \"digital gold\", and competition among cryptocurrencies. It leaves stablecoins out. Read it right after Ammous."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "bitcoin-a-peer-to-peer-electronic-cash"
+title = "Bitcoin: A Peer-to-Peer Electronic Cash System"
+authors = "Satoshi Nakamoto"
+year = "2008"
+type = "paper"
+access = "free"
+url = "https://bitcoin.org/bitcoin.pdf"
+link_text = "bitcoin.pdf"
+description = "The Bitcoin whitepaper, announced on 31 October 2008: electronic cash with no trusted third party, in which a peer-to-peer network prevents double-spending and the proof-of-work that creates new coins also secures the ledger. Practice 2 reproduces its attacker calculation. Also used in btc/00."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ethereum-whitepaper"
+title = "Ethereum Whitepaper"
+authors = "Vitalik Buterin"
+year = "2014"
+type = "paper"
+access = "free"
+url = "https://ethereum.org/en/whitepaper/"
+link_text = "Link"
+description = "Introduced smart contracts and programmable money: the foundation for DeFi and token economics. Practice 5 compares its stable-value hedging contract, from the part on financial derivatives and stable-value currencies, with an algorithmic stablecoin."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -130,6 +173,18 @@ description = "Mechanism design (Section 04) applied to a blockchain fee market:
 verified = 2026-10-13
 
 [[groups.items]]
+id = "taming-wildcat-stablecoins"
+title = "Taming Wildcat Stablecoins"
+authors = "Gary B. Gorton & Jeffery Y. Zhang"
+year = "2023"
+type = "paper"
+access = "free"
+url = "https://repository.law.umich.edu/articles/2896"
+link_text = "Link"
+description = "*University of Chicago Law Review* 90(3): 909–972 (2023). Banking history applied to crypto: stablecoins are a return of the private banknotes of the 1800s, money that is not always accepted at face value, from issuers prone to destabilizing runs. Reviews how existing law treats them and three policy responses: issuance only through banks, one-for-one backing with safe assets, or sovereign digital money instead. An argument, not a neutral survey; read it with the BIS chapter before Practice 5."
+verified = 2026-10-21
+
+[[groups.items]]
 id = "anatomy-of-a-run-the-terra-luna-crash"
 title = "Anatomy of a Run: The Terra Luna Crash"
 authors = "Jiageng Liu, Igor Makarov & Antoinette Schoar"
@@ -138,16 +193,42 @@ type = "paper"
 access = "free"
 url = "https://www.nber.org/papers/w31160"
 link_text = "Link"
-description = "NBER WP 31160 (published in the *Journal of Financial Economics*, 2026). Terra's collapse in May 2022 erased about $50 billion within three days, centered on a run on UST deposits in the Anchor protocol. Large, sophisticated holders ran first and lost less; public blockchain records let investors watch one another, which sped up the run. The empirical counterpart to Practice 5."
+description = "NBER WP 31160 (April 2023; published in the *Journal of Financial Economics* 184, 2026). Terra's collapse in May 2022 erased about $50 billion within three days, centered on a run on UST deposits in the Anchor protocol. Large, sophisticated holders ran first and lost less; public blockchain records let investors watch one another, which sped up the run. The empirical counterpart to Practice 5."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "blockchain-and-money"
+title = "Blockchain and Money"
+authors = "Gary Gensler (MIT)"
+year = "2018"
+type = "course"
+access = "free"
+level = "intermediate"
+url = "https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/"
+link_text = "MIT OCW"
+description = "MIT course 15.S12 (Fall 2018) on OpenCourseWare: video lectures, slides, readings and study questions (CC BY-NC-SA). It starts with Bitcoin and the commercial, technical and policy basics of blockchains, distributed ledgers and smart contracts, then turns to their uses in finance. A structured video course over Part 2. Gensler later chaired the SEC (2021–2025)."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "vitalik-buterin-s-blog"
+title = "Vitalik Buterin's Blog"
+authors = "Vitalik Buterin"
+type = "blog"
+access = "free"
+url = "https://vitalik.eth.limo/"
+link_text = "Link"
+description = "Deep technical and economic analysis of mechanism design, governance, and crypto economics by Ethereum's creator."
 verified = 2026-10-13
 
 [[groups.items]]
-id = "iii-the-next-generation-monetary-and"
-title = "III. The next-generation monetary and financial system (BIS Annual Economic Report 2025)"
-authors = "Bank for International Settlements"
-year = "2025"
-type = "report"
-url = "https://www.bis.org/publ/arpdf/ar2025e3.htm"
-link_text = "Link"
-description = "The central banks' view. Stablecoins fall short of the requirements to be the mainstay of the monetary system: they fail the tests of singleness, elasticity and integrity. The chapter proposes a unified ledger of tokenised central-bank reserves, commercial-bank money and government bonds instead. Read it as one side of the argument, not the last word."
-verified = 2026-10-13
+id = "cryptoeconomics"
+title = "Cryptoeconomics"
+authors = "Eric Voskuil"
+year = "2020"
+type = "book"
+access = "partial"
+level = "advanced"
+url = "https://github.com/libbitcoin/libbitcoin-system/wiki/Cryptoeconomics"
+link_text = "libbitcoin wiki"
+description = "A Bitcoin developer's essays applying Austrian-school economics to Bitcoin, written for readers who already know both. The linked libbitcoin wiki hosts the essays free; a paperback, *Cryptoeconomics* (2020), is sold separately. Heterodox and opinionated: it files stock-to-flow and proof of stake under \"fallacies\". Optional."
+verified = 2026-10-21

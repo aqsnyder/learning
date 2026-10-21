@@ -28,7 +28,7 @@ level = "beginner"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
 link_text = "MIT OCW"
-description = "Strang's Spring 2010 course on MIT OpenCourseWare: 34 video lectures, ten problem sets with solutions, and exams with solutions. It builds computational skill and the conceptual picture (the four fundamental subspaces, projections, eigenvalues, the SVD) together. The problem sets cite sections of the 4th edition of Strang's textbook."
+description = "Strang's Spring 2010 course on MIT OpenCourseWare: video lectures, ten problem sets with solutions, and exams with solutions. It builds computational skill and the conceptual picture (the four fundamental subspaces, projections, eigenvalues, the SVD) together. The problem sets cite sections of the 4th edition of Strang's textbook."
 verified = 2026-10-21
 
 [[groups.items]]
@@ -123,14 +123,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "the-matrix-cookbook"
 title = "The Matrix Cookbook"
-authors = "Kaare Brandt Petersen, Michael Syskind Pedersen"
+authors = "Kaare Brandt Petersen, Michael Pedersen"
 year = "2012"
 type = "report"
 label = "Reference"
 access = "free"
 url = "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf"
 link_text = "PDF"
-description = "A free compendium of matrix identities, derivatives, and decompositions (version of November 2012). Practice 3 uses its derivative identities to derive the normal equations; keep it as a lookup table, not a textbook."
+description = "A free compendium of matrix identities, derivatives, and decompositions. Practice 3 uses its derivative identities to derive the normal equations; keep it as a lookup table, not a textbook."
 verified = 2026-10-13
 
 [[groups.items]]
