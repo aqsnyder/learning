@@ -1,0 +1,239 @@
+# Resources for: Scaling, Efficiency, and Deployment
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "scaling-laws-for-neural-lms"
+title = "Scaling Laws for Neural LMs"
+authors = "Kaplan et al."
+year = "2020"
+type = "paper"
+marks = ["core", "canon"]
+url = "https://arxiv.org/abs/2001.08361"
+link_text = "arxiv.org/abs/2001.08361"
+description = "Language-model loss follows power laws in model size, data and compute. Learn the fits, the 6N FLOPs-per-token estimate, and the compute-optimal recipe Chinchilla later revised."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "gpipe"
+title = "GPipe"
+authors = "Huang et al."
+year = "2019"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1811.06965"
+link_text = "arxiv.org/abs/1811.06965"
+description = "Pipeline-parallelism library: splits a layer sequence across accelerators and pipelines micro-batches through it. Learn where the pipeline bubble comes from and how micro-batching shrinks it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chinchilla"
+title = "Chinchilla"
+authors = "Hoffmann et al."
+year = "2022"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2203.15556"
+link_text = "arxiv.org/abs/2203.15556"
+description = "Model size and training tokens should scale equally with compute, so earlier LLMs were undertrained. Source of the ~20 tokens-per-parameter rule; learn why Kaplan differed."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "adam-optimizer"
+title = "Adam Optimizer"
+authors = "Kingma & Ba"
+year = "2014"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/1412.6980"
+link_text = "arxiv.org/abs/1412.6980"
+description = "Per-parameter adaptive steps from bias-corrected moving averages of the gradient and its square. Implement Algorithm 1 exactly; know why bias correction matters early on."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "adamw"
+title = "AdamW"
+authors = "Loshchilov & Hutter"
+year = "2017"
+type = "paper"
+url = "https://arxiv.org/abs/1711.05101"
+link_text = "arxiv.org/abs/1711.05101"
+description = "Shows L2 regularization and weight decay differ under Adam, and decouples decay from the gradient update. This separates decay from learning-rate tuning and improves generalization."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "batch-normalization"
+title = "Batch Normalization"
+authors = "Ioffe & Szegedy"
+year = "2015"
+type = "paper"
+url = "https://arxiv.org/abs/1502.03167"
+link_text = "arxiv.org/abs/1502.03167"
+description = "Normalizes layer inputs over each mini-batch, permitting higher learning rates. Learn its train-versus-inference statistics and why small batches hurt it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "layer-normalization"
+title = "Layer Normalization"
+authors = "Ba et al."
+year = "2016"
+type = "paper"
+url = "https://arxiv.org/abs/1607.06450"
+link_text = "arxiv.org/abs/1607.06450"
+description = "Normalizes across a layer's units within each example: identical at training and test time, and easy to apply to RNNs. Learn why transformers prefer it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "megatron-lm"
+title = "Megatron-LM"
+authors = "Shoeybi et al."
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1909.08053"
+link_text = "arxiv.org/abs/1909.08053"
+description = "Intra-layer (tensor) model parallelism in plain PyTorch with a few added communication operations, training multi-billion-parameter GPT-2-style and BERT-style models. Learn the column-then-row MLP split."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "moe-outrageously-large-neural-networks"
+title = "MoE — Outrageously Large Neural Networks"
+authors = "Shazeer et al."
+year = "2017"
+type = "paper"
+url = "https://arxiv.org/abs/1701.06538"
+link_text = "arxiv.org/abs/1701.06538"
+description = "The sparsely-gated mixture-of-experts layer: a trainable gate sends each example to a few of many experts. Conditional computation decouples parameter count from compute."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "switch-transformer"
+title = "Switch Transformer"
+authors = "Fedus et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2101.03961"
+link_text = "arxiv.org/abs/2101.03961"
+description = "Simplifies MoE routing to a single expert per token, cutting communication and compute, and tames training instability. Source of Practice 3's load-balancing loss."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mixtral-of-experts-jiang-et-al-mistral"
+title = "Mixtral of Experts – Jiang et al. (Mistral AI, 2024)"
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2401.04088"
+link_text = "arxiv.org/abs/2401.04088"
+description = "Open-weight sparse MoE: eight feed-forward experts per layer, two chosen per token, so 47B total but 13B active parameters. Practice 3 reconciles those numbers."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "flashattention"
+title = "FlashAttention"
+authors = "Dao et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2205.14135"
+link_text = "arxiv.org/abs/2205.14135"
+description = "IO-aware exact attention: tiling keeps blocks in on-chip SRAM to cut HBM reads and writes. Learn why it runs faster despite recomputation's extra FLOPs."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "lora-low-rank-adaptation"
+title = "LoRA — Low-Rank Adaptation"
+authors = "Hu et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2106.09685"
+link_text = "arxiv.org/abs/2106.09685"
+description = "Freezes pretrained weights and trains low-rank update matrices that merge back in with no extra inference latency. Learn why B starts at zero."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "qlora"
+title = "QLoRA"
+authors = "Dettmers et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2305.14314"
+link_text = "arxiv.org/abs/2305.14314"
+description = "Backpropagates through a frozen 4-bit base model into LoRA adapters, using NF4, double quantization and paged optimizers. How large-model fine-tuning fits on one GPU."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "distilling-the-knowledge-in-a-neural"
+title = "Distilling the Knowledge in a Neural Network"
+authors = "Hinton et al."
+year = "2015"
+type = "paper"
+url = "https://arxiv.org/abs/1503.02531"
+link_text = "arxiv.org/abs/1503.02531"
+description = "Compresses an ensemble or large model into a small one by training on temperature-softened outputs. Learn what soft targets carry that hard labels lack."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "speculative-decoding"
+title = "Speculative Decoding"
+authors = "Leviathan et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2211.17192"
+link_text = "arxiv.org/abs/2211.17192"
+description = "A small model drafts tokens and the target model checks them in parallel. Learn the accept/reject rule that keeps the target's output distribution exact."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "zero-memory-optimizations-toward"
+title = "ZeRO: Memory Optimizations Toward Training Trillion Parameter Models"
+authors = "Rajbhandari et al."
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1910.02054"
+link_text = "arxiv.org/abs/1910.02054"
+description = "Removes data-parallel memory redundancy by sharding optimizer state, gradients and parameters across workers at low communication cost. The idea behind PyTorch FSDP."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "p-tensor-programs-v-tuning-large-neural"
+title = "μP — Tensor Programs V: Tuning Large Neural Networks via Zero-Shot Hyperparameter Transfer"
+authors = "Yang et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2203.03466"
+link_text = "arxiv.org/abs/2203.03466"
+description = "Under the Maximal Update Parametrization, many optimal hyperparameters stay stable as models grow: tune a small proxy, then transfer them zero-shot (μTransfer)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-ultra-scale-playbook-training-llms"
+title = "The Ultra-Scale Playbook: Training LLMs on GPU Clusters – Tazi et al. (Hugging Face, 2025)"
+year = "2025"
+type = "docs"
+label = "Guide"
+url = "https://huggingface.co/spaces/nanotron/ultrascale-playbook"
+link_text = "huggingface.co"
+description = "Interactive guide to multi-GPU LLM training: data parallelism and ZeRO, tensor, sequence, context, pipeline and expert parallelism, and how to combine them."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pagedattention-vllm-efficient-memory"
+title = "PagedAttention / vLLM — Efficient Memory Management for LLM Serving"
+authors = "Kwon et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2309.06180"
+link_text = "arxiv.org/abs/2309.06180"
+description = "Pages the KV cache in fixed-size blocks, like OS virtual memory, cutting fragmentation and enabling sharing. Learn why KV-cache memory caps serving throughput."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "quantization-and-training-of-neural"
+title = "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference"
+authors = "Jacob et al."
+year = "2017"
+type = "paper"
+url = "https://arxiv.org/abs/1712.05877"
+link_text = "arxiv.org/abs/1712.05877"
+description = "Affine 8-bit quantization with integer-only arithmetic, plus training with simulated quantization to keep accuracy. Learn the scale and zero-point math edge deployment relies on."
+verified = 2026-10-13

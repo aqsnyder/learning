@@ -1,0 +1,303 @@
+# Resources for: Interpretability and Alignment
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+title = "Mechanistic Interpretability"
+intro = '''
+The core arc: **early circuits** → **superposition** → **monosemanticity** → **circuit tracing / full model understanding**. Olah et al. showed that individual neurons form interpretable circuits. Elhage et al. formalized how transformers implement algorithms, and the induction-heads paper found a concrete circuit behind in-context learning. The Toy Models paper revealed why features are entangled (superposition); Towards Monosemanticity and Scaling Monosemanticity showed that sparse autoencoders (dictionary learning) can extract clean, interpretable features — first from a one-layer model, then from a production-scale model. Circuit Tracing builds "attribution graphs" over those features, and "On the Biology of a Large Language Model" applies them to explain real behaviors (multi-step reasoning, planning in poems, refusals) in a production Claude model.
+'''
+
+[[groups.items]]
+id = "zoom-in-an-introduction-to-circuits"
+title = "Zoom In: An Introduction to Circuits"
+authors = "Olah et al."
+year = "2020"
+type = "article"
+url = "https://distill.pub/2020/circuits/zoom-in/"
+link_text = "distill.pub"
+description = "Distill essay setting out the circuits agenda's three claims about features, circuits and universality, with InceptionV1 examples such as curve detectors. Short and readable."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-mathematical-framework-for-transformer"
+title = "A Mathematical Framework for Transformer Circuits"
+authors = "Elhage et al."
+year = "2021"
+type = "paper"
+marks = ["core"]
+url = "https://transformer-circuits.pub/2021/framework/"
+link_text = "transformer-circuits.pub"
+description = "Reverse-engineers attention-only transformers of zero to two layers: the residual stream, QK and OV circuits, and how heads compose into induction heads. Practice 2's vocabulary."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "in-context-learning-and-induction-heads"
+title = "In-context Learning and Induction Heads"
+authors = "Olsson et al."
+year = "2022"
+type = "paper"
+url = "https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html"
+link_text = "transformer-circuits.pub"
+description = "Six lines of evidence that induction heads may drive most in-context learning; they form abruptly, visible as a bump in the training loss."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "toy-models-of-superposition"
+title = "Toy Models of Superposition"
+authors = "Elhage et al."
+year = "2022"
+type = "paper"
+marks = ["core"]
+url = "https://transformer-circuits.pub/2022/toy_model/"
+link_text = "transformer-circuits.pub"
+description = "Small ReLU networks on synthetic sparse features store more features than dimensions (superposition), with sharp phase changes and polytope geometry. Reproduced in Practice 1."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "towards-monosemanticity-decomposing"
+title = "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning"
+authors = "Bricken et al."
+year = "2023"
+type = "paper"
+url = "https://transformer-circuits.pub/2023/monosemantic-features/index.html"
+link_text = "transformer-circuits.pub"
+description = "Trains a sparse autoencoder on a one-layer transformer's MLP activations, finding features more interpretable than neurons. The detailed SAE recipe behind the mini-project."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scaling-monosemanticity-extracting"
+title = "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet"
+authors = "Templeton et al."
+year = "2024"
+type = "paper"
+url = "https://transformer-circuits.pub/2024/scaling-monosemanticity/"
+link_text = "transformer-circuits.pub"
+description = "Scales sparse autoencoders to Claude 3 Sonnet: abstract, multilingual and multimodal features, including safety-relevant ones, that can steer behavior (the Golden Gate Bridge feature)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "circuit-tracing-revealing-computational"
+title = "Circuit Tracing: Revealing Computational Graphs in Language Models"
+authors = "Ameisen et al."
+year = "2025"
+type = "paper"
+url = "https://transformer-circuits.pub/2025/attribution-graphs/methods.html"
+link_text = "transformer-circuits.pub"
+description = "Methods paper: replaces MLPs with a cross-layer transcoder and builds attribution graphs of feature interactions for a single prompt, validated by interventions."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "on-the-biology-of-a-large-language-model"
+title = "On the Biology of a Large Language Model"
+authors = "Lindsey et al."
+year = "2025"
+type = "paper"
+url = "https://transformer-circuits.pub/2025/attribution-graphs/biology.html"
+link_text = "transformer-circuits.pub"
+description = "Applies attribution graphs to Claude 3.5 Haiku: multi-step reasoning, planning rhymes in poems, multilingual circuits, arithmetic, hallucinations and refusals. Case studies of the method."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "verbalizable-representations-form-a"
+title = "Verbalizable Representations Form a Global Workspace in Language Models"
+authors = "Gurnee, Sofroniew et al."
+year = "2026"
+type = "paper"
+url = "https://transformer-circuits.pub/2026/workspace/index.html"
+link_text = "transformer-circuits.pub"
+description = "Introduces the J-lens, an averaged-Jacobian refinement of the logit lens, and argues the subspace it reads (J-space) acts as a global workspace in Claude models."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "softmax-linear-units"
+title = "Softmax Linear Units"
+authors = "Elhage et al."
+year = "2022"
+type = "paper"
+url = "https://transformer-circuits.pub/2022/solu/"
+link_text = "transformer-circuits.pub"
+description = "Replaces the MLP activation with SoLU, x·softmax(x), raising the share of interpretable neurons at little performance cost. Shows architecture can aid interpretability."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "representation-engineering"
+title = "Representation Engineering"
+authors = "Zou et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2310.01405"
+link_text = "arxiv.org/abs/2310.01405"
+description = "Monitors and steers population-level representations (honesty, harmlessness, power-seeking) instead of neurons or circuits. A top-down complement to circuit analysis."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "transformerlens-mech-interp-tutorials"
+title = "TransformerLens & Mech Interp tutorials"
+authors = "Neel Nanda"
+year = "ongoing"
+type = "tutorial"
+url = "https://www.neelnanda.io/mechanistic-interpretability"
+link_text = "neelnanda.io"
+description = "Neel Nanda's resources: TransformerLens, the library he created for inspecting and editing activations, plus demos, a getting-started guide and a glossary. Practice 2's toolkit."
+
+[[groups.items]]
+id = "arena-alignment-research-engineer"
+title = "ARENA (Alignment Research Engineer Accelerator) — self-study curriculum: transformer interpretability, RL/RLHF, LLM evals, alignment science"
+authors = "Callum McDougall / ARENA"
+year = "ongoing"
+type = "course"
+url = "https://learn.arena.education"
+link_text = "learn.arena.education"
+description = "ARENA's online course: fundamentals, then interpretability (probes, SAEs, circuits, toy models), RL, evals and alignment science, taught through coding exercises. This section's hands-on companion."
+verified = 2026-10-13
+
+[[groups]]
+title = "Safety and Alignment"
+intro = '''
+Alignment research aims to ensure AI systems act in accordance with human values. Constitutional AI removes the need for human labels at every step by encoding principles into the training process. DPO simplifies RLHF by directly optimizing preferences without a separate reward model. A newer empirical line of work stress-tests these techniques on real models: Sleeper Agents shows deceptive behavior can persist through safety training, Alignment Faking shows a model strategically complying with training it disagrees with, and Emergent Misalignment shows narrow fine-tuning can produce broadly misaligned behavior. AI Control and Chain-of-Thought Monitorability ask the complementary question: how to stay safe even if alignment fails, by monitoring and constraining what models do.
+'''
+
+[[groups.items]]
+id = "constitutional-ai-harmlessness-from-ai"
+title = "Constitutional AI: Harmlessness from AI Feedback"
+authors = "Bai et al."
+year = "2022"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2212.08073"
+link_text = "arxiv.org/abs/2212.08073"
+description = "Trains a harmless, non-evasive assistant from a list of principles, in a supervised stage and an RL stage, without human harm labels. Introduced RLAIF."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "direct-preference-optimization-dpo"
+title = "Direct Preference Optimization (DPO)"
+authors = "Rafailov et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2305.18290"
+link_text = "arxiv.org/abs/2305.18290"
+description = "Optimizes the RLHF objective directly on preference pairs with a classification loss, skipping the explicit reward model and RL loop. Section 10 covers it too."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "deep-rl-from-human-preferences"
+title = "Deep RL from Human Preferences"
+authors = "Christiano et al."
+year = "2017"
+type = "paper"
+url = "https://arxiv.org/abs/1706.03741"
+link_text = "arxiv.org/abs/1706.03741"
+description = "Fits a reward model to human comparisons of trajectory clips and trains RL agents on it, for Atari and simulated robots. The foundational RLHF paper."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "sleeper-agents-training-deceptive-llms"
+title = "Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training"
+authors = "Hubinger et al."
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2401.05566"
+link_text = "arxiv.org/abs/2401.05566"
+description = "Trains backdoored models (e.g. writing exploitable code when the prompt says 2024) and tests whether standard safety training removes the backdoor. Basis for Practice 4."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "alignment-faking-in-large-language"
+title = "Alignment Faking in Large Language Models"
+authors = "Greenblatt et al."
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2412.14093"
+link_text = "arxiv.org/abs/2412.14093"
+description = "Shows Claude 3 Opus selectively complying with a conflicting training objective when it believes it is in training, to avoid being modified."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "emergent-misalignment-narrow-finetuning"
+title = "Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs"
+authors = "Betley et al."
+year = "2025"
+type = "paper"
+url = "https://arxiv.org/abs/2502.17424"
+link_text = "arxiv.org/abs/2502.17424"
+description = "Fine-tuning on insecure code, written without telling the user, made models broadly misaligned on unrelated prompts: malicious advice, deception, claims AI should enslave humans."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ai-control-improving-safety-despite"
+title = "AI Control: Improving Safety Despite Intentional Subversion"
+authors = "Greenblatt, Shlegeris, Sachan, Roger"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2312.06942"
+link_text = "arxiv.org/abs/2312.06942"
+description = "Tests protocols that stop an untrusted GPT-4 from submitting backdoored code, using a weaker trusted model, against a red team. Safety without assuming alignment."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chain-of-thought-monitorability-a-new"
+title = "Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety"
+authors = "Korbak, Balesni et al."
+year = "2025"
+type = "paper"
+url = "https://arxiv.org/abs/2507.11473"
+link_text = "arxiv.org/abs/2507.11473"
+description = "Position paper: models that reason in natural language let us monitor their chains of thought for intent to misbehave, but development choices could erode this."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "superintelligence-paths-dangers"
+title = "Superintelligence: Paths, Dangers, Strategies"
+authors = "Bostrom"
+year = "2014"
+type = "book"
+description = "Bostrom's argument that superintelligent AI could be hard to control: takeoff dynamics, orthogonality, instrumental convergence, the treacherous turn. Philosophical context, not technique."
+
+[[groups.items]]
+id = "human-compatible-artificial-intelligence"
+title = "Human Compatible: Artificial Intelligence and the Problem of Control"
+authors = "Russell"
+year = "2019"
+type = "book"
+description = "Russell argues that AI built to optimize fixed objectives is unsafe, and proposes machines uncertain about human preferences that learn them from behavior."
+
+[[groups]]
+title = "Evaluation"
+intro = '''
+How do we know if models are truly improving, or if our benchmarks are misleading us? Schaeffer et al. argues that many "emergent abilities" are artifacts of metric choice, Chatbot Arena provides a continuously-updated Elo ranking from real user votes, and METR's time-horizon work measures capability as the length of real software tasks an agent can complete — a metric that has been doubling roughly every seven months. (For agent benchmarks such as SWE-bench, see [Section 11](../11-frontiers/README.md).)
+'''
+
+[[groups.items]]
+id = "are-emergent-abilities-of-large-language"
+title = "Are Emergent Abilities of Large Language Models a Mirage?"
+authors = "Schaeffer et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2304.15004"
+link_text = "arxiv.org/abs/2304.15004"
+description = "Argues many 'emergent abilities' come from nonlinear or discontinuous metrics; continuous metrics show smooth, predictable improvement with scale. Basis for Practice 5a."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chatbot-arena-an-open-platform-for"
+title = "Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference"
+authors = "Chiang et al."
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2403.04132"
+link_text = "arxiv.org/abs/2403.04132"
+description = "Crowdsourced pairwise battles between anonymous chatbots, ranked with Bradley-Terry statistics from user votes. Learn how its leaderboard is built before trusting it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "measuring-ai-ability-to-complete-long"
+title = "Measuring AI Ability to Complete Long Software Tasks (METR time horizons)"
+authors = "Kwa et al."
+year = "2025"
+type = "paper"
+url = "https://arxiv.org/abs/2503.14499"
+link_text = "arxiv.org/abs/2503.14499"
+description = "Measures a model's 50% time horizon, the human duration of tasks it completes half the time, finding it doubled about every seven months since 2019."
+verified = 2026-10-13

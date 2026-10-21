@@ -1,0 +1,148 @@
+# Resources for: Structural Biology
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "introduction-to-protein-structure-2nd"
+title = "Introduction to Protein Structure (2nd Edition)"
+authors = "Carl Ivar Branden, John Tooze"
+year = "1999"
+type = "book"
+label = "Textbook"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://www.routledge.com/Introduction-to-Protein-Structure/Branden-Tooze/p/book/9780815323051"
+link_text = "Book"
+description = "The classic introduction to protein structure — clear, visual, and focused on building structural intuition from first principles. 424 pp; originally Garland Science, now published by Routledge (the old `garlandscience.com` URL is dead)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pdb-101-learn-about-structural-biology"
+title = "PDB-101: Learn about Structural Biology"
+authors = "RCSB PDB"
+year = "2024"
+type = "website"
+label = "Resource"
+marks = ["core"]
+url = "https://pdb101.rcsb.org/"
+link_text = "PDB-101"
+description = "Authoritative educational resource from the Protein Data Bank with Molecule of the Month, structural biology guides, and interactive tutorials"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rcsb-protein-data-bank"
+title = "RCSB Protein Data Bank"
+authors = "RCSB PDB"
+year = "2024"
+type = "database"
+marks = ["core"]
+url = "https://www.rcsb.org/"
+link_text = "PDB"
+description = "The primary global repository for 3D structural data of biological macromolecules — learn to search, visualize, and download structures"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "protein-structure-and-function"
+title = "Protein Structure and Function"
+authors = "Gregory A. Petsko, Dagmar Ringe"
+year = "2004"
+type = "book"
+label = "Textbook"
+url = "https://global.oup.com/academic/product/protein-structure-and-function-9780199556847"
+link_text = "Book"
+description = "Concise, accessible textbook connecting protein structure to biological function with excellent case studies"
+
+[[groups.items]]
+id = "ibiology-techniques-talks-cryo-em-and"
+title = "iBiology: Techniques Talks — cryo-EM and cryocrystallography"
+authors = "Various (iBiology), incl. Yifan Cheng, David J. Haas"
+type = "video-series"
+label = "Videos"
+url = "https://www.ibiology.org/research-talks/techniques/"
+link_text = "iBiology"
+description = "iBiology no longer has a structural-biology collection (the old URL is dead); its Techniques collection holds the structural-methods talks: Yifan Cheng on *Single Particle Cryo-EM* and David J. Haas on *Macromolecular Cryocrystallography*, plus Dorothee Kern on *Visualizing Protein Dynamics*. No NMR talk is listed"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "studies-on-the-principles-that-govern"
+title = "Studies on the Principles that Govern the Folding of Protein Chains"
+authors = "Christian B. Anfinsen"
+year = "1972"
+type = "lecture"
+label = "Nobel Lecture"
+url = "https://www.nobelprize.org/prizes/chemistry/1972/anfinsen/lecture/"
+link_text = "Nobel Lecture"
+description = "Anfinsen's Nobel Prize lecture establishing that amino acid sequence determines protein structure — the foundation of the folding problem"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-revolution-will-not-be-crystallized"
+title = "The Revolution Will Not Be Crystallized: A New Method Sweeps through Structural Biology"
+authors = "Ewen Callaway"
+year = "2015"
+type = "article"
+label = "Feature"
+url = "https://doi.org/10.1038/525172a"
+link_text = "Nature"
+description = "Nature feature on how cryo-EM transformed structural biology — context for understanding the field's current state"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "nobel-prize-in-chemistry-2017-cryo"
+title = "Nobel Prize in Chemistry 2017: Cryo-Electron Microscopy"
+authors = "Jacques Dubochet, Joachim Frank, Richard Henderson"
+year = "2017"
+type = "lecture"
+label = "Nobel Lecture"
+url = "https://www.nobelprize.org/prizes/chemistry/2017/summary/"
+link_text = "Nobel Lectures"
+description = "Nobel lectures by the three pioneers of cryo-EM — essential for understanding how the technique developed and why it matters"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rcsb-pdb-training-courses-pdb-101"
+title = "RCSB PDB Training Courses (PDB-101)"
+authors = "RCSB PDB"
+year = "2024"
+type = "tutorial"
+url = "https://pdb101.rcsb.org/train/training-events"
+link_text = "PDB-101 Training"
+description = "RCSB PDB's training courses and webinars, now hosted on PDB-101 (`rcsb.org/training` no longer resolves): searching RCSB.org with Advanced Search and chemical search, 3D visualization with Mol*, assessing validation and ligand quality, computed structure models, and the RCSB APIs from Python — essential practical skills"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "highly-accurate-protein-structure"
+title = "Highly Accurate Protein Structure Prediction with AlphaFold"
+authors = "John Jumper et al. (DeepMind)"
+year = "2021"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-021-03819-2"
+link_text = "Paper"
+description = "The AlphaFold2 paper that revolutionized structure prediction — read after building structural biology foundations to appreciate its significance"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "alphafold-protein-structure-database"
+title = "AlphaFold Protein Structure Database: Massively Expanding the Structural Coverage of Protein-Sequence Space with High-Accuracy Models"
+authors = "Mihaly Varadi et al. (EMBL-EBI & DeepMind)"
+year = "2022"
+type = "paper"
+url = "https://academic.oup.com/nar/article/50/D1/D439/6430488"
+link_text = "Nucleic Acids Research"
+description = "Describes the database that now sits beside the PDB with predicted structures for essentially every known protein — and, crucially, how to read its pLDDT and PAE confidence measures before you trust a model"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ucsf-chimerax"
+title = "UCSF ChimeraX"
+authors = "RBVI, University of California San Francisco"
+year = "2026"
+type = "tool"
+label = "Software"
+url = "https://www.rbvi.ucsf.edu/chimerax/"
+link_text = "ChimeraX"
+description = "The successor to Chimera and the practical tool for this section: open a PDB entry or an AlphaFold model, inspect the fold, color by confidence, and measure contacts yourself — free for academic use"
+verified = 2026-10-13

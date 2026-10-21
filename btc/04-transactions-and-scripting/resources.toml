@@ -1,0 +1,105 @@
+# Resources for: Transactions and Script
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "mastering-bitcoin-chapters-67"
+title = "Mastering Bitcoin, Chapters 6–7: Transactions; Authorization and Authentication"
+authors = "Antonopoulos & Harding"
+type = "book"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch06_transactions.adoc"
+link_text = "GitHub"
+description = "The definitive walkthrough of transaction structure (Ch. 6) and Bitcoin Script (Ch. 7: P2SH, OP_RETURN, flow control, Taproot and Tapscript)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learn-me-a-bitcoin-transactions"
+title = "Learn Me A Bitcoin: Transactions"
+authors = "Greg Walker"
+type = "website"
+marks = ["core"]
+url = "https://learnmeabitcoin.com/technical/transaction/"
+link_text = "Website"
+description = "Interactive, field-by-field transaction dissection, with built-in transaction splitter and builder tools"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "programming-bitcoin-chapters-58-and-13"
+title = "Programming Bitcoin, Chapters 5–8 and 13"
+authors = "Jimmy Song"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://github.com/jimmysong/programmingbitcoin"
+link_text = "GitHub"
+description = "Build transaction parsing and Script interpreter from scratch; ch. 13 adds SegWit serialization and signing"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-developer-reference-transactions"
+title = "Bitcoin Developer Reference: Transactions"
+type = "docs"
+label = "Documentation"
+url = "https://developer.bitcoin.org/reference/transactions.html"
+link_text = "Reference"
+description = "bitcoin.org's reference for raw transaction fields — community-maintained and frozen around 2020–21, so check BIPs 141/143/341 for SegWit and Taproot details"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "utxo-model-deep-dive"
+title = "UTXO model deep dive"
+type = "concept"
+description = "Inputs, outputs, change, coin selection"
+
+[[groups.items]]
+id = "bitcoin-script"
+title = "Bitcoin Script"
+type = "concept"
+description = "Stack-based, opcodes, P2PKH, P2SH"
+
+[[groups.items]]
+id = "segwit-bip-141"
+title = "SegWit (BIP 141)"
+type = "concept"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki"
+link_text = "BIP 141"
+more_links = [{ text = "BIP 143", url = "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki" }]
+description = "Segregated Witness, witness discount, transaction malleability fix; BIP 143 defines the new signature hash (with worked examples)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "timelocks"
+title = "Timelocks"
+type = "concept"
+description = "CLTV (BIP 65), CSV (BIP 112), nLocktime"
+
+[[groups.items]]
+id = "bitcoin-transaction-decoder"
+title = "Bitcoin Transaction Decoder"
+type = "tool"
+description = "Manually decode raw transactions, then check your work with `bitcoin-cli decoderawtransaction` or Learn Me A Bitcoin's transaction splitter"
+
+[[groups.items]]
+id = "bitcoin-tx-tutorial-jupyter-notebooks"
+title = "bitcoin-tx-tutorial (Jupyter notebooks)"
+authors = "Darius Parvin (Chaincode Labs)"
+type = "practice"
+url = "https://github.com/chaincodelabs/bitcoin-tx-tutorial"
+link_text = "GitHub"
+description = "Build and sign P2PKH, P2SH multisig, P2WPKH, P2WSH and P2TR (key- and script-path) transactions by hand in Python and broadcast them to a local regtest node; extra chapters on sighash flags and timelocks"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "btcdeb-bitcoin-script-debugger"
+title = "btcdeb — Bitcoin Script debugger"
+authors = "kallewoof"
+type = "tool"
+url = "https://github.com/kallewoof/btcdeb"
+link_text = "GitHub"
+description = "Step through Script and Tapscript execution opcode by opcode; used by Learning Bitcoin from the Command Line's scripting chapters (Section 12)"
+verified = 2026-10-13

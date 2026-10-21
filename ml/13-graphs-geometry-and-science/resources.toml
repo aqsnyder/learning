@@ -1,0 +1,192 @@
+# Resources for: Graphs, Geometry, and Science
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+title = "Graph Neural Networks"
+intro = '''
+Message passing on graphs is the foundation for reasoning about relational data. GCNs introduced spectral graph convolutions in a scalable form, Gilmer et al. unified prior work under the message passing framework, GATs added attention to graph edges, Relation Networks showed a tiny module that reasons over all pairs of objects, and Bronstein et al.'s monograph provides the geometric deep learning perspective that ties it all together. Start with the Distill article for intuition.
+'''
+
+[[groups.items]]
+id = "a-gentle-introduction-to-graph-neural"
+title = "A Gentle Introduction to Graph Neural Networks"
+authors = "Sanchez-Lengeling, Reif, Pearce, Wiltschko"
+year = "2021"
+type = "article"
+url = "https://distill.pub/2021/gnn-intro/"
+link_text = "distill.pub"
+description = "Interactive Distill article on which data are graphs and how a GNN is built from simple parts, with a playground. The intuition to start with."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "semi-supervised-classification-with"
+title = "Semi-Supervised Classification with Graph Convolutional Networks (GCN)"
+authors = "Kipf & Welling"
+year = "2016"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/1609.02907"
+link_text = "arxiv.org/abs/1609.02907"
+description = "Derives a scalable graph convolution from a first-order approximation of spectral filters, for semi-supervised node classification on citation graphs. You implement it in Practice 1."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "graph-attention-networks-gat"
+title = "Graph Attention Networks (GAT)"
+authors = "Veličković et al."
+year = "2018"
+type = "paper"
+url = "https://arxiv.org/abs/1710.10903"
+link_text = "arxiv.org/abs/1710.10903"
+description = "Masked self-attention over each node's neighbors learns per-edge weights, replacing GCN's fixed normalization; works inductively. Compared with GCN in Practice 2."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neural-message-passing-for-quantum"
+title = "Neural Message Passing for Quantum Chemistry"
+authors = "Gilmer et al."
+year = "2017"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1704.01212"
+link_text = "arxiv.org/abs/1704.01212"
+description = "Recasts earlier graph networks as message passing neural networks (message, update, readout) and sets a new state of the art on QM9 molecular properties."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-simple-neural-network-module-for"
+title = "A Simple Neural Network Module for Relational Reasoning (Relation Networks)"
+authors = "Santoro et al."
+year = "2017"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1706.01427"
+link_text = "arxiv.org/abs/1706.01427"
+description = "Applies one shared MLP to every pair of objects and sums the results: a plug-in module for relational reasoning, tested on CLEVR and bAbI."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "geometric-deep-learning-grids-groups"
+title = "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges"
+authors = "Bronstein et al."
+year = "2021"
+type = "book"
+label = "Monograph"
+marks = ["core"]
+url = "https://arxiv.org/abs/2104.13478"
+link_text = "arxiv.org/abs/2104.13478"
+description = "Unifies CNNs, GNNs, transformers and equivariant networks as architectures built from symmetry: equivariant layers, local pooling and invariant readouts. The section's organizing framework."
+verified = 2026-10-13
+
+[[groups]]
+title = "Equivariant & Geometric Networks"
+intro = '''
+Standard neural networks ignore the symmetries of physical systems. Equivariant networks build in rotation, translation, and reflection symmetries by construction — crucial for molecular dynamics, protein modeling, and any domain where the laws of physics don't depend on your coordinate system.
+'''
+
+[[groups.items]]
+id = "e-n-equivariant-graph-neural-networks"
+title = "E(n) Equivariant Graph Neural Networks"
+authors = "Satorras et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2102.09844"
+link_text = "arxiv.org/abs/2102.09844"
+description = "A graph network equivariant to rotations, translations, reflections and permutations, without costly higher-order (spherical-harmonic) features. Simple enough to implement in Practice 3."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "se-3-transformers-3d-roto-translation"
+title = "SE(3)-Transformers: 3D Roto-Translation Equivariant Attention Networks"
+authors = "Fuchs et al."
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2006.10503"
+link_text = "arxiv.org/abs/2006.10503"
+description = "Self-attention for 3D point clouds and graphs that is equivariant to rotations and translations, built on spherical-harmonic (tensor field) features. The heavier alternative to EGNN."
+verified = 2026-10-13
+
+[[groups]]
+title = "AI for Science"
+intro = '''
+Deep learning is accelerating scientific discovery at an unprecedented pace. AlphaFold 2 solved protein structure prediction — a 50-year grand challenge in biology. AlphaFold 3 extends to general biomolecular complexes. GraphCast produces 10-day global weather forecasts in under a minute, GNoME identified 2.2 million crystal structures below the known stability convex hull (381,000 of them new stable entries; 736 already independently synthesized), RFdiffusion generates novel proteins, AlphaGeometry and AlphaProof reached olympiad-level mathematical reasoning, and AlphaEvolve turns an LLM coding agent plus evolutionary search into a tool for discovering new algorithms.
+'''
+
+[[groups.items]]
+id = "highly-accurate-protein-structure"
+title = "Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)"
+authors = "Jumper et al."
+year = "2021"
+type = "paper"
+marks = ["core"]
+url = "https://www.nature.com/articles/s41586-021-03819-2"
+link_text = "nature.com"
+description = "Predicts protein structure from sequence and multiple sequence alignments, often at experimental accuracy (CASP14), via the Evoformer and an invariant-point-attention structure module."
+
+[[groups.items]]
+id = "accurate-structure-prediction-of"
+title = "Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3"
+authors = "Abramson et al."
+year = "2024"
+type = "paper"
+url = "https://www.nature.com/articles/s41586-024-07487-w"
+link_text = "nature.com"
+description = "Replaces AF2's structure module with diffusion over atom coordinates (Pairformer trunk), predicting complexes of proteins, nucleic acids, small molecules, ions and modified residues."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "graphcast-learning-skillful-medium-range"
+title = "GraphCast: Learning Skillful Medium-Range Global Weather Forecasting"
+authors = "Lam et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2212.12794"
+link_text = "arxiv.org/abs/2212.12794"
+description = "Encoder-processor-decoder GNN on a multi-mesh, trained on reanalysis, that forecasts hundreds of variables 10 days ahead at 0.25° in under a minute."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scaling-deep-learning-for-materials"
+title = "Scaling Deep Learning for Materials Discovery (GNoME)"
+authors = "Merchant et al."
+year = "2023"
+type = "paper"
+url = "https://www.nature.com/articles/s41586-023-06735-9"
+link_text = "nature.com"
+description = "Graph networks trained at scale, with active learning and DFT checks, find 2.2 million structures below the known convex hull. Practice 5 audits the claim."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "de-novo-design-of-protein-structure-and"
+title = "De Novo Design of Protein Structure and Function with RFdiffusion"
+authors = "Watson et al."
+year = "2023"
+type = "paper"
+url = "https://www.nature.com/articles/s41586-023-06415-8"
+link_text = "nature.com"
+description = "Fine-tunes the RoseTTAFold structure network as a denoising diffusion model of protein backbones, designing binders, symmetric assemblies and enzyme-site scaffolds; hundreds characterized experimentally."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "alphageometry-solving-olympiad-geometry"
+title = "AlphaGeometry (Solving Olympiad Geometry without Human Demonstrations) & AlphaProof (Olympiad-Level Formal Mathematical Reasoning with Reinforcement Learning)"
+authors = "Trinh et al. (AlphaGeometry); Hubert et al. (AlphaProof) — Google DeepMind"
+year = "2024 / 2025"
+type = "paper"
+url = "https://www.nature.com/articles/s41586-023-06747-5"
+link_text = "AlphaGeometry"
+more_links = [{ text = "AlphaProof", url = "https://www.nature.com/articles/s41586-025-09833-y" }]
+description = "AlphaGeometry: a language model trained on synthetic data steers a symbolic engine. AlphaProof: AlphaZero-style RL for formal proofs, scoring IMO 2024 silver with AlphaGeometry 2."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "alphaevolve-a-coding-agent-for"
+title = "AlphaEvolve: A Coding Agent for Scientific and Algorithmic Discovery"
+authors = "Novikov et al."
+year = "2025"
+type = "paper"
+url = "https://arxiv.org/abs/2506.13131"
+link_text = "arxiv.org/abs/2506.13131"
+description = "Evolutionary coding agent: LLMs propose code changes, automated evaluators score them, and the best seed later rounds. Found improved algorithms in math and computing."
+verified = 2026-10-13

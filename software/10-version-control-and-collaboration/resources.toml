@@ -1,0 +1,109 @@
+# Resources for: Version Control and Collaboration
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "pro-git"
+title = "Pro Git"
+authors = "Scott Chacon, Ben Straub"
+type = "book"
+access = "free"
+level = "beginner"
+marks = ["core"]
+url = "https://git-scm.com/book/en/v2"
+link_text = "Link"
+description = "THE Git reference. Read chapters 1–3 for fundamentals, then use the rest as a reference. Covers everything from basics to internals."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learn-git-branching"
+title = "Learn Git Branching"
+type = "practice"
+label = "Interactive"
+marks = ["core"]
+url = "https://learngitbranching.js.org/"
+link_text = "Link"
+description = "Visual, interactive Git tutorial. The best way to build intuition for how branches, merges, and rebases actually work."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "branching-strategies"
+title = "Branching strategies"
+type = "concept"
+description = "Git Flow, GitHub Flow, trunk-based development. Understand the trade-offs and when each strategy fits your team size and release cadence."
+
+[[groups.items]]
+id = "pull-request-best-practices"
+title = "Pull request best practices"
+type = "concept"
+description = "Writing good PR descriptions, reviewing effectively, keeping PRs small and focused. The PR is a communication tool, not just a merge gate."
+
+[[groups.items]]
+id = "managing-ai-generated-prs"
+title = "Managing AI-generated PRs"
+type = "concept"
+marks = ["ai"]
+description = "Reviewing large diffs, ensuring atomic changes, verifying AI didn't introduce unrelated modifications. AI PRs need stricter review than human ones."
+
+[[groups.items]]
+id = "rebasing-vs-merging"
+title = "Rebasing vs merging"
+type = "concept"
+description = "When to use each. Rebase for clean history, merge for preserving context. Know the trade-offs and your team's convention."
+
+[[groups.items]]
+id = "git-bisect"
+title = "Git bisect"
+type = "concept"
+description = "Finding the commit that introduced a bug. A powerful debugging tool that most developers underuse."
+
+[[groups.items]]
+id = "git-hooks-and-automation"
+title = "Git hooks and automation"
+type = "concept"
+description = "Pre-commit checks, linting, formatting. Automate quality gates so review can focus on logic and design."
+
+[[groups.items]]
+id = "github-actions-ci-cd"
+title = "GitHub Actions / CI-CD"
+type = "tool"
+description = "Automated testing and deployment pipelines. The infrastructure that makes continuous delivery possible."
+
+[[groups.items]]
+id = "monorepos-vs-polyrepos"
+title = "Monorepos vs polyrepos"
+type = "concept"
+description = "Trade-offs for project organization. Monorepos simplify dependency management; polyrepos simplify ownership boundaries."
+
+[[groups.items]]
+id = "how-to-write-a-git-commit-message"
+title = "How to Write a Git Commit Message"
+authors = "Chris Beams"
+type = "article"
+url = "https://cbea.ms/git-commit/"
+link_text = "Link"
+description = "2014. The seven rules (blank line after subject, ≤50-character imperative subject, body wrapped at 72 explaining what and why). Hand it to your agents as the commit-message spec."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pre-commit"
+title = "pre-commit"
+authors = "Anthony Sottile et al."
+type = "tool"
+url = "https://pre-commit.com/"
+link_text = "Link"
+description = "A framework for managing multi-language Git hooks: run formatters, linters, and checks on every commit, whoever (or whatever) wrote it. The concrete tool behind the \"Git hooks and automation\" row."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "git-worktree"
+title = "git worktree"
+authors = "Git project"
+type = "docs"
+marks = ["ai"]
+url = "https://git-scm.com/docs/git-worktree"
+link_text = "Link"
+description = "Several working trees attached to one repository, each on its own branch. The standard way to run parallel coding-agent sessions without their edits colliding."
+verified = 2026-10-13

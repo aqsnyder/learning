@@ -1,0 +1,93 @@
+# Resources for: Topology and Geometry
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "visual-differential-geometry-and-forms"
+title = "Visual Differential Geometry and Forms"
+authors = "Tristan Needham"
+year = "2021"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "A revolutionary visual approach to differential geometry. Needham makes curvature, geodesics, and forms intuitive through geometric reasoning rather than coordinate computations. Beautiful and deep."
+
+[[groups.items]]
+id = "topology"
+title = "Topology"
+authors = "James Munkres"
+year = "2000"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "The standard introduction to point-set topology. Covers topological spaces, continuity, compactness, connectedness, and the fundamental group. Rigorous and well-written."
+
+[[groups.items]]
+id = "topology-without-tears"
+title = "Topology Without Tears"
+authors = "Sidney Morris"
+type = "book"
+access = "free"
+url = "https://www.topologywithouttears.net/"
+link_text = "Link"
+description = "Free, accessible introduction to topology. Good for building intuition before Munkres."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-smooth-manifolds"
+title = "Introduction to Smooth Manifolds"
+authors = "John Lee"
+year = "2012"
+type = "book"
+description = "The standard graduate text on smooth manifolds. Covers tangent spaces, differential forms, de Rham cohomology, and Lie groups. Thorough and rigorous."
+
+[[groups.items]]
+id = "algebraic-topology"
+title = "Algebraic Topology"
+authors = "Pierre Albin"
+type = "course"
+access = "free"
+url = "https://www.youtube.com/playlist?list=PLpRLWqLFLVTCL15U6N3o35g4uhMSBVA2b"
+link_text = "Link"
+description = "Lecture series covering fundamental groups, covering spaces, and homology. Good visual approach to algebraic topology."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "riemannian-geometry"
+title = "Riemannian Geometry"
+authors = "Manfredo do Carmo"
+year = "1992"
+type = "book"
+description = "Classic introduction to Riemannian geometry: geodesics, curvature, Gauss-Bonnet theorem. Foundation for understanding optimization on manifolds."
+
+[[groups.items]]
+id = "computational-topology-an-introduction"
+title = "Computational Topology: An Introduction"
+authors = "Herbert Edelsbrunner, John Harer"
+year = "2010"
+type = "book"
+description = "Introduction to topological data analysis (TDA): simplicial complexes, persistent homology, and Betti numbers. Connects topology to data science."
+
+[[groups.items]]
+id = "topology-geometry"
+title = "Topology & Geometry"
+authors = "Tadashi Tokieda"
+type = "video-series"
+url = "https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ"
+link_text = "Link"
+description = "Charming, intuitive lectures on topology and geometry by an exceptional communicator. Great for building visual intuition."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "topology-and-data"
+title = "Topology and Data"
+authors = "Gunnar Carlsson"
+year = "2009"
+type = "paper"
+url = "https://doi.org/10.1090/S0273-0979-09-01249-X"
+link_text = "Link"
+description = "Survey paper on topological data analysis (TDA), *Bulletin of the AMS*. Connects persistent homology to practical data analysis. Bridge from theory to applications."
+verified = 2026-10-13

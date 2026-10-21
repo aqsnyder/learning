@@ -1,0 +1,98 @@
+# Resources for: Bring-up, Test and Debug
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** ST AN4488 and its FAQ on troubleshooting a non-working MCU ([Section 02](../02-schematic-capture/README.md)); ST AN2867 on oscillator gain margin and layout ([Section 04](../04-pcb-layout-fundamentals/README.md)); IPC-2221A §3.5 test requirement considerations, covering functional test, in-circuit test and boundary scan ([Section 09](../09-dfm-and-fabrication/README.md)); TI Precision Labs — Op Amps, "Board level troubleshooting" module ([Section 00](../00-electronics-fundamentals/README.md)); Keithley *Low Level Measurements Handbook* ([Section 12](../12-analog-mixed-signal-and-precision-measurement/README.md)); Glasgow Interface Explorer as a bring-up tool for digital interfaces ([Section 11](../11-reference-projects/README.md)); PyVISA and SCPI for driving the test station's instruments from Python ([Software Section 13](../../software/13-hil-testing-and-lab-automation/README.md)).
+'''
+
+[[groups.items]]
+id = "staged-bring-up-plan-and-bring-up-log"
+title = "Staged bring-up plan and bring-up log"
+type = "concept"
+marks = ["core"]
+description = "Write expected values down before power-up. Check resistance to ground on every rail, power up first with a current limit just above the expected idle current, then enable rails and subsystems one at a time. Log every measurement, deviation and disposition so someone else can repeat the bring-up."
+
+[[groups.items]]
+id = "probing-and-measurement-technique"
+title = "Probing and measurement technique"
+type = "concept"
+description = "Probe ground-lead inductance and loading, scope and probe bandwidth, rail ripple with a tip-and-barrel connection or 50 Ω coax, current measurement, and ground loops through USB-connected equipment. Section 00 Practice 1 is the starting point."
+
+[[groups.items]]
+id = "abcs-of-probes-primer-60w-6053-17"
+title = "*ABCs of Probes* primer (60W-6053-17)"
+authors = "Tektronix"
+type = "docs"
+label = "Reference"
+url = "https://www.tek.com/en/documents/whitepaper/abcs-probes-primer"
+link_text = "tek.com"
+description = "Free primer on what the probe does to your measurement: probing safety and voltage ratings, source loading by tip resistance and capacitance, how probe and scope bandwidth and rise time combine, ground-lead inductance and the ringing it adds, compensation, and the trade-offs between passive, active, differential, power-rail, high-voltage, optically isolated and current probes. The reading behind the probing concept row and Practice 3."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "debugging"
+title = "*Debugging*"
+authors = "Dave Agans"
+type = "book"
+marks = ["core"]
+url = "https://debuggingrules.com/"
+link_text = "debuggingrules.com"
+description = "Short, practical book built on nine rules for finding elusive hardware and software bugs (\"Make it fail\", \"Quit thinking and look\", \"Divide and conquer\" and six more). The discipline it teaches turns bring-up from guessing into engineering: reproduce, observe, change one thing at a time, keep an audit trail."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fault-localization-shorts-opens-and"
+title = "Fault localization: shorts, opens and intermittents"
+type = "concept"
+description = "Find rail shorts by injecting current at a low, current-limited voltage and mapping millivolt drops (4-wire) or hot spots (thermal camera). Find opens with continuity checks and boundary scan. Expose intermittents with thermal, mechanical and supply-margin stress."
+
+[[groups.items]]
+id = "what-is-jtag-boundary-scan-primer"
+title = "What is JTAG? (boundary-scan primer)"
+authors = "XJTAG"
+type = "docs"
+label = "Reference"
+url = "https://www.xjtag.com/about-jtag/what-is-jtag/"
+link_text = "xjtag.com"
+description = "Explains IEEE 1149.1 boundary scan and the four-wire test access port, and how scan chains test connections, non-JTAG devices and faults during prototype bring-up and production."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "design-for-test-dft-guidelines-for"
+title = "Design for Test (DFT) Guidelines for improving JTAG testability"
+authors = "XJTAG"
+type = "docs"
+label = "Reference"
+url = "https://www.xjtag.com/about-jtag/design-for-test-guidelines/"
+link_text = "xjtag.com"
+description = "Practical chain-design rules: daisy-chain TDO→TDI, run TCK/TMS/nTRST in parallel, pull up TDI/TDO/TMS and pull down nTRST (1–10 kΩ), never tie nTRST to ground, fit 0 Ω bypass links for optional devices, provide access between devices to locate chain faults, and buffer the TAP at board entry."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "jtag-boundary-scanner"
+title = "JTAG Boundary Scanner"
+authors = "Viveris"
+type = "tool"
+url = "https://github.com/viveris/jtag-boundary-scanner"
+link_text = "GitHub"
+description = "Free, open-source (GPL-3.0) boundary-scan tool: scans and auto-detects the chain, loads BSDL files, samples and drives pins (SAMPLE and EXTEST), and can emulate I²C, SPI and MDIO through boundary-scan cells. Windows GUI plus scripting and a socket interface for remote control. Works with FT2232H-based probes and SEGGER J-Link (ST-LINK is not listed). It gives pin-level control, not automatic test generation from your netlist, which is enough for Practice 5's manual interconnect check on any part with a published BSDL file."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "production-test-fixtures-sequencing"
+title = "Production test: fixtures, sequencing, limits and traceability"
+type = "concept"
+description = "A pogo-pin fixture with tooling holes. A sequence of power-on current check, rail checks, programming, calibration, functional test and serialization. Limits from characterization data, with guard bands for measurement uncertainty, and a repeatability check before you trust the station. Results logged per serial number. Builds on Section 09's DFT plan."
+
+[[groups.items]]
+id = "design-guidelines-for-in-circuit"
+title = "Design Guidelines for In-Circuit Testability (technical paper)"
+authors = "JJS Manufacturing"
+type = "docs"
+label = "Reference"
+url = "https://www.smtnet.com/library/files/upload/Design_guidelines_for_in-circuit_testability.pdf"
+link_text = "PDF (SMTnet)"
+description = "An electronics manufacturer's numeric rules for bed-of-nails access: test pads 0.050″ preferred (minimum 0.035″ bottom, 0.040″ top) on a 0.100″ pitch, at least 0.125″ from the board edge and 0.100″ from components; two non-plated tooling holes in diagonally opposite corners (3–4 mm, +0.05/−0 mm); all test pads on one side; two test points per functional-test net, and several on each power and ground rail. The paper is undated. Use it to size the mini-project's pogo-pin nest and to audit your Section 09 test-point plan."
+verified = 2026-10-13

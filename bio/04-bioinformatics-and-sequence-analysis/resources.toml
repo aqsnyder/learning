@@ -1,0 +1,152 @@
+# Resources for: Bioinformatics and Sequence Analysis
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **Also used here:** Holmes & Huber, *Modern Statistics for Modern Biology* (2019, free online). Its home is [Section 12 — Statistics and Experimental Design](../12-statistics-and-experimental-design/README.md), where it is linked and tracked; take Section 12 alongside this one.
+'''
+
+[[groups.items]]
+id = "biological-sequence-analysis"
+title = "Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids"
+authors = "Durbin, Eddy, Krogh, Mitchison"
+year = "1998"
+type = "book"
+label = "Textbook"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://www.cambridge.org/core/books/biological-sequence-analysis/921BB7F305C7D4F1EC0E84A141B2D4E1"
+link_text = "Cambridge University Press"
+description = "The definitive textbook on probabilistic methods in bioinformatics — covers pairwise alignment, HMMs, profile HMMs, phylogenetics, and RNA structure prediction with mathematical rigor"
+
+[[groups.items]]
+id = "ncbi-blast-tutorials-and-documentation"
+title = "NCBI BLAST Tutorials and Documentation"
+authors = "NCBI Staff"
+year = "2024"
+type = "tutorial"
+marks = ["core"]
+url = "https://blast.ncbi.nlm.nih.gov/doc/blast-help/"
+link_text = "BLAST Help"
+description = "NCBI's official BLAST Help pages, with tutorials under \"Getting Help\" — how to run nucleotide and protein BLAST searches and interpret E-values and alignment scores. The searches themselves run from the [BLAST home page](https://blast.ncbi.nlm.nih.gov/Blast.cgi)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "what-is-a-hidden-markov-model"
+title = "What Is a Hidden Markov Model?"
+authors = "Eddy, S. R."
+year = "2004"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1038/nbt1004-1315"
+link_text = "Nature Biotechnology"
+description = "Exceptionally clear 2-page primer explaining HMMs and their application to biological sequence analysis — the single best introduction to the topic"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bioinformatics-sequence-and-genome"
+title = "Bioinformatics: Sequence and Genome Analysis"
+authors = "Mount, D. W."
+year = "2004"
+type = "book"
+label = "Textbook"
+url = "https://cshlpress.com/link/bioinf2p.htm"
+link_text = "Cold Spring Harbor Laboratory Press"
+description = "Comprehensive and practical textbook covering sequence alignment, database searching, gene finding, phylogenetics, and genome annotation with worked examples"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "basic-local-alignment-search-tool"
+title = "Basic Local Alignment Search Tool"
+authors = "Altschul, S. F., Gish, W., Miller, W., Myers, E. W., Lipman, D. J."
+year = "1990"
+type = "paper"
+url = "https://doi.org/10.1016/S0022-2836(05)80360-2"
+link_text = "J. Mol. Biol."
+description = "The original BLAST paper — introduced the heuristic algorithm that made large-scale sequence database searching practical; it ranks 12th on *Nature*'s 2014 tally of the most-cited papers of all time (the 1997 PSI-BLAST paper is 14th)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "embl-ebi-training-bioinformatics"
+title = "EMBL-EBI Training — Bioinformatics"
+authors = "EMBL-EBI"
+year = "2024"
+type = "course"
+label = "Training"
+url = "https://www.ebi.ac.uk/training/"
+link_text = "EBI Training"
+description = "Free online courses and tutorials covering sequence analysis, protein classification, genome annotation, and biological databases from one of the world's leading bioinformatics centers"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rosalind-bioinformatics-stronghold"
+title = "Rosalind — Bioinformatics Stronghold"
+authors = "Rosalind team (Vyahhi, N., Compeau, P. et al.) — a joint project of UC San Diego and Saint Petersburg Academic University"
+year = "2012"
+type = "practice"
+label = "Problem Set"
+url = "https://rosalind.info/problems/locations/"
+link_text = "Rosalind"
+description = "Interactive platform with 200+ bioinformatics programming challenges — learn by implementing algorithms for sequence alignment, motif finding, genome assembly, and phylogenetics. Its Bioinformatics Textbook Track follows Compeau & Pevzner's book below"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ucsc-genome-browser-user-guide"
+title = "UCSC Genome Browser User Guide"
+authors = "UCSC Genomics Institute"
+year = "2024"
+type = "tutorial"
+url = "https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html"
+link_text = "UCSC Genome Browser"
+description = "Official guide to navigating the UCSC Genome Browser — essential for exploring genomic annotations, conservation tracks, and variant data in their genomic context"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bioinformatics-sequence-structure-and"
+title = "Bioinformatics: Sequence, Structure, and Databanks"
+authors = "Higgins, D. & Taylor, W."
+year = "2000"
+type = "book"
+label = "Textbook"
+url = "https://global.oup.com/academic/product/bioinformatics-9780199637904"
+link_text = "Oxford University Press"
+description = "Practical guide to multiple sequence alignment (including ClustalW), database searching strategies, and protein structure prediction methods"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "gapped-blast-and-psi-blast-a-new"
+title = "Gapped BLAST and PSI-BLAST: A New Generation of Protein Database Search Programs"
+authors = "Altschul, S. F., Madden, T. L., Schäffer, A. A., Zhang, J., Zhang, Z., Miller, W., Lipman, D. J."
+year = "1997"
+type = "paper"
+url = "https://doi.org/10.1093/nar/25.17.3389"
+link_text = "Nucleic Acids Research"
+description = "Introduced gapped alignments and position-specific iterated BLAST (PSI-BLAST), dramatically improving sensitivity for detecting remote homologs in protein databases"
+
+[[groups.items]]
+id = "bioinformatics-algorithms-an-active"
+title = "Bioinformatics Algorithms: An Active Learning Approach"
+authors = "Compeau, P. & Pevzner, P."
+year = "2024"
+type = "book"
+label = "Textbook"
+access = "free"
+level = "intermediate"
+url = "https://www.bioinformaticsalgorithms.org/"
+link_text = "Site"
+description = "The algorithmic complement to Durbin: you learn assembly, motif finding, alignment, and phylogeny by implementing them. First five chapters and all lecture videos are free, and it is the text behind Rosalind's Textbook Track"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "single-cell-best-practices"
+title = "Single-Cell Best Practices"
+authors = "Heumos, L., Schaar, A. C. et al. (single-cell best practices consortium)"
+year = "2023"
+type = "course"
+label = "Training"
+url = "https://www.sc-best-practices.org/"
+link_text = "Book"
+description = "Free community Jupyter book behind *Best practices for single-cell analysis across modalities* (Nat. Rev. Genet. 2023) — an end-to-end scRNA-seq pipeline in Python, from QC and normalization to annotation and trajectory inference"
+verified = 2026-10-13

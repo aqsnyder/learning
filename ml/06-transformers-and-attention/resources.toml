@@ -1,0 +1,131 @@
+# Resources for: Transformers and Attention
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "attention-is-all-you-need"
+title = "Attention Is All You Need"
+authors = "Vaswani et al."
+year = "2017"
+type = "paper"
+marks = ["core", "canon"]
+url = "https://arxiv.org/abs/1706.03762"
+link_text = "Paper"
+description = "The transformer paper. Introduced multi-head self-attention, positional encoding, and the encoder-decoder transformer architecture. The most consequential ML paper of the decade."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-annotated-transformer"
+title = "The Annotated Transformer"
+authors = "Rush; 2022 update by Huang, Subramanian, Sum, Almubarak, Biderman"
+year = "2018 / 2022"
+type = "tutorial"
+marks = ["core", "canon"]
+url = "https://nlp.seas.harvard.edu/annotated-transformer/"
+link_text = "Tutorial"
+more_links = [{ text = "Code", url = "https://github.com/harvardnlp/annotated-transformer/" }]
+description = "Line-by-line PyTorch implementation of the transformer. Read alongside the original paper to ground every equation in working code. The linked page is the 2022 update (v2022) of Rush's 2018 original."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-illustrated-transformer"
+title = "The Illustrated Transformer"
+authors = "Alammar"
+year = "2018"
+type = "blog"
+url = "https://jalammar.github.io/illustrated-transformer/"
+link_text = "Blog"
+description = "Outstanding visual walkthrough of the transformer architecture. Makes self-attention, multi-head attention, and positional encoding intuitive through step-by-step diagrams."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "let-s-build-gpt-from-scratch-in-code"
+title = "Let's build GPT: from scratch, in code, spelled out"
+authors = "Karpathy"
+year = "2023"
+type = "video"
+marks = ["core"]
+url = "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+link_text = "YouTube"
+description = "Karpathy builds a GPT from scratch in ~2 hours. The best way to deeply internalize the transformer architecture through hands-on coding."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bert-pre-training-of-deep-bidirectional"
+title = "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+authors = "Devlin et al."
+year = "2018"
+type = "paper"
+url = "https://arxiv.org/abs/1810.04805"
+link_text = "Paper"
+description = "Introduced bidirectional pre-training with masked language modeling and next-sentence prediction. Dominated NLP benchmarks and established the pre-train → fine-tune paradigm."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neural-machine-translation-by-jointly"
+title = "Neural Machine Translation by Jointly Learning to Align and Translate (Bahdanau Attention)"
+authors = "Bahdanau, Cho, Bengio"
+year = "2014"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1409.0473"
+link_text = "Paper"
+description = "The paper that introduced attention to sequence-to-sequence models, allowing the decoder to focus on relevant parts of the input. Direct precursor to the transformer."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "formal-algorithms-for-transformers"
+title = "Formal Algorithms for Transformers"
+authors = "Phuong, Hutter"
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2207.09238"
+link_text = "Paper"
+description = "Precise, self-contained pseudocode for the main transformer variants (encoder–decoder, BERT-style, GPT-style) and their training and sampling procedures. The spec sheet to check your mental model and your code against."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "roformer-enhanced-transformer-with"
+title = "RoFormer: Enhanced Transformer with Rotary Position Embedding (RoPE)"
+authors = "Su et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2104.09864"
+link_text = "Paper"
+description = "Encodes position by rotating query and key vectors so attention scores depend on relative distance. RoPE replaced the original sinusoidal encodings in most modern open LLMs (LLaMA and its descendants), so read it to understand today's transformers, not 2017's."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "improving-language-understanding-by"
+title = "Improving Language Understanding by Generative Pre-Training (GPT-1)"
+authors = "Radford et al."
+year = "2018"
+type = "paper"
+url = "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+link_text = "Paper"
+description = "The first GPT. Showed that generative pre-training of a transformer on unlabeled text followed by discriminative fine-tuning achieves strong results across diverse NLP tasks."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "stanford-cs224n-nlp-with-deep-learning"
+title = "Stanford CS224n: NLP with Deep Learning"
+authors = "Manning et al."
+year = "2023"
+type = "course"
+url = "https://www.youtube.com/playlist?list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4"
+link_text = "YouTube"
+description = "Comprehensive NLP course covering word vectors, RNNs, attention, transformers, pre-training, and modern NLP applications. The linked Stanford Online playlist holds the 2023 lectures (23 videos)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-illustrated-bert-elmo-and-co"
+title = "The Illustrated BERT, ELMo, and co."
+authors = "Alammar"
+year = "2018"
+type = "blog"
+url = "https://jalammar.github.io/illustrated-bert/"
+link_text = "Blog"
+description = "Visual guide to BERT and contextual embeddings. Excellent companion to the BERT paper, explaining masked LM and next-sentence prediction with clear diagrams."
+verified = 2026-10-13

@@ -1,0 +1,69 @@
+# Resources for: Hands-on Labs
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+intro = '''
+These are the bench resources. Each lab also uses on-ramps listed in other sections, named in the lab text:
+- Mastering Bitcoin Ch. 3, embit and Bitcoin Dev Kit (Section 10)
+- bitcoin-tx-tutorial and btcdeb (Section 04)
+- Bitcoin Core's multisig and offline-signing tutorials (Section 08)
+- the Optech Schnorr/Taproot workshop (Section 11)
+'''
+
+[[groups]]
+
+[[groups.items]]
+id = "learning-bitcoin-from-the-command-line"
+title = "Learning Bitcoin from the Command Line (v2.2.2; 3.0 in progress)"
+authors = "Christopher Allen and Shannon Appelcline (Blockchain Commons)"
+year = "2020–2026"
+type = "practice"
+marks = ["core"]
+url = "https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line"
+link_text = "GitHub"
+description = "The lab manual for Labs 0, 1 and 5. Covers Bitcoin Core setup and `bitcoin-cli`, raw transactions, RBF/CPFP, multisig, PSBTs and hardware wallets, timelocks, Script with btcdeb, Tor/I2P, RPC from Python/Rust/Go, Core Lightning, and a regtest appendix. It was written for Bitcoin Core 22, and v30 removed legacy wallets and RPCs such as `dumpprivkey` and `importprivkey`, so expect to translate some steps. A 3.0 rewrite targets late 2026. (Moved here from Section 10.)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "polar"
+title = "Polar"
+authors = "jamaljsr (GitHub)"
+type = "tool"
+url = "https://github.com/jamaljsr/polar"
+link_text = "GitHub"
+description = "One-click Lightning networks on regtest for local development: add nodes by drag and drop, start and stop them, connect over RPC. The quickest Lab 5 bench."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-325-signet-and-bip-94-testnet-4"
+title = "BIP 325: Signet and BIP 94: Testnet 4"
+authors = "Karl-Johan Alm, Anthony Towns; Fabian Jahr"
+year = "2019, 2024"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0325.mediawiki"
+link_text = "BIP 325"
+more_links = [{ text = "BIP 94", url = "https://github.com/bitcoin/bips/blob/master/bip-0094.mediawiki" }]
+description = "Why the test networks behave differently. Signet blocks must also satisfy the network's signature \"challenge\" script, so the network is predictably rather than randomly unreliable. Testnet4 keeps proof-of-work with testnet's 20-minute minimum-difficulty exception plus a block-storm fix. Testnet3 is being phased out, and a Testnet 5 (BIP 95) is in draft."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-core-functional-test-framework"
+title = "Bitcoin Core functional test framework"
+authors = "Bitcoin Core contributors"
+type = "docs"
+label = "Documentation"
+url = "https://github.com/bitcoin/bitcoin/tree/master/test/functional"
+link_text = "GitHub"
+description = "The Python framework Bitcoin Core uses to spin up regtest nodes and assert behavior. Its `test_framework/` (e.g. `key.py`, `script.py`) doubles as a reference Python implementation, and both bitcoin-tx-tutorial and the Optech Taproot workshop are built on it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-core-release-notes"
+title = "Bitcoin Core release notes"
+authors = "Bitcoin Core"
+type = "docs"
+label = "Documentation"
+url = "https://bitcoincore.org/en/releases/"
+link_text = "bitcoincore.org"
+description = "Read the notes for the version you run before following any tutorial. For example: 28.0 added testnet4 and made full-RBF the default; 29.0 moved the build to CMake; 30.0 removed legacy wallets; 31.0 introduced cluster mempool."
+verified = 2026-10-13

@@ -1,0 +1,67 @@
+# Resources for: Classical Mechanics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-feynman-lectures-on-physics-vol-1"
+title = "The Feynman Lectures on Physics, Vol. 1"
+authors = "Feynman, Leighton, Sands"
+type = "book"
+marks = ["core"]
+url = "https://www.feynmanlectures.caltech.edu/"
+link_text = "feynmanlectures.caltech.edu"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "classical-mechanics"
+title = "Classical Mechanics"
+authors = "John R. Taylor"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "mit-8-01sc-classical-mechanics-fall-2016"
+title = "MIT 8.01SC Classical Mechanics (Fall 2016)"
+authors = "Chakrabarty, Dourmashkin et al."
+type = "course"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/"
+link_text = "MIT OCW"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "classical-mechanics-the-theoretical"
+title = "Classical Mechanics (The Theoretical Minimum)"
+authors = "Leonard Susskind"
+type = "course"
+url = "https://www.youtube.com/playlist?list=PL47F408D36D4CF129"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-classical-mechanics"
+title = "Introduction to Classical Mechanics"
+authors = "David Morin"
+type = "book"
+
+[[groups.items]]
+id = "essence-of-calculus-3blue1brown"
+title = "Essence of Calculus — 3Blue1Brown"
+type = "video"
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mechanics"
+title = "Mechanics"
+authors = "Landau & Lifshitz"
+type = "book"
+
+[[groups.items]]
+id = "classical-mechanics-2"
+title = "Classical Mechanics"
+authors = "Herbert Goldstein"
+type = "book"

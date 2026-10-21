@@ -1,0 +1,92 @@
+# Resources for: Reading and Reviewing Code
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-art-of-readable-code"
+title = "*The Art of Readable Code*"
+authors = "Boswell and Foucher"
+type = "book"
+description = "How to evaluate whether code is clear and maintainable"
+
+[[groups.items]]
+id = "code-reading-the-open-source-perspective"
+title = "*Code Reading: The Open Source Perspective*"
+authors = "Diomidis Spinellis"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "The only book dedicated to reading (not writing) code"
+
+[[groups.items]]
+id = "refactoring-improving-the-design-of"
+title = "*Refactoring: Improving the Design of Existing Code* (2nd ed)"
+authors = "Martin Fowler"
+year = "2018"
+type = "book"
+marks = ["core"]
+description = "Recognize code smells and know the fix"
+
+[[groups.items]]
+id = "a-philosophy-of-software-design-2nd-ed"
+title = "*A Philosophy of Software Design* (2nd ed)"
+authors = "John Ousterhout"
+year = "2021"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "Managing complexity, the #1 code review skill"
+
+[[groups.items]]
+id = "google-s-engineering-practices-code"
+title = "Google's Engineering Practices: Code Review Guidelines"
+type = "docs"
+label = "Guide"
+url = "https://google.github.io/eng-practices/review/"
+link_text = "google.github.io"
+description = "How Google does code reviews"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "review-ai-generated-code-critically"
+title = "Review AI-generated code critically"
+type = "practice"
+marks = ["ai"]
+description = "Treat every AI output as a PR from a junior developer"
+
+[[groups.items]]
+id = "the-programmer-s-brain"
+title = "*The Programmer's Brain*"
+authors = "Felienne Hermans"
+year = "2021"
+type = "book"
+url = "https://www.manning.com/books/the-programmers-brain"
+link_text = "manning.com"
+description = "The cognitive science of reading code: why unfamiliar code overloads working memory, and concrete techniques (state tables, dependency graphs, mental models) to read it faster. Trains this section's core skill directly"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "your-code-as-a-crime-scene-2nd-ed"
+title = "*Your Code as a Crime Scene* (2nd ed)"
+authors = "Adam Tornhill"
+year = "2024"
+type = "book"
+url = "https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/"
+link_text = "pragprog.com"
+description = "Read a codebase through its git history: hotspots (complexity × churn), change coupling, knowledge distribution. Tells you where to spend review effort in a large or agent-generated codebase"
+verified = 2026-10-13
+
+[[groups]]
+title = "Key Concepts"
+intro = '''
+| Concept | Why It Matters |
+|---------|---------------|
+| Code smells | Recognize anti-patterns: long methods, deep nesting, god objects |
+| Reading unfamiliar codebases | Start from tests, entry points, and API surfaces |
+| Static analysis as a reading aid | Use linters and type checkers to understand code faster |
+| Reviewing for security | Common vulnerabilities in Python (injection, deserialization) and C (buffer overflows, use-after-free) |
+'''

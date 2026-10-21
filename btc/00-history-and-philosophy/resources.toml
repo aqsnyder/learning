@@ -1,0 +1,136 @@
+# Resources for: History and Philosophy
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "bitcoin-a-peer-to-peer-electronic-cash"
+title = "Bitcoin: A Peer-to-Peer Electronic Cash System"
+authors = "Satoshi Nakamoto"
+year = "2008"
+type = "paper"
+marks = ["core", "canon"]
+url = "https://bitcoin.org/bitcoin.pdf"
+link_text = "bitcoin.pdf"
+description = "THE whitepaper. Read it first, re-read it last."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-cypherpunk-s-manifesto"
+title = "A Cypherpunk's Manifesto"
+authors = "Eric Hughes"
+year = "1993"
+type = "article"
+label = "Manifesto"
+marks = ["core", "canon"]
+url = "https://www.activism.net/cypherpunk/manifesto.html"
+link_text = "activism.net"
+description = "The ideological roots of Bitcoin"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "digital-gold-bitcoin-and-the-inside"
+title = "Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money"
+authors = "Nathaniel Popper"
+year = "2015"
+type = "book"
+description = "Best historical narrative of Bitcoin's early days"
+
+[[groups.items]]
+id = "b-money"
+title = "b-money"
+authors = "Wei Dai"
+year = "1998"
+type = "paper"
+marks = ["canon"]
+url = "http://www.weidai.com/bmoney.txt"
+link_text = "weidai.com"
+description = "Precursor to Bitcoin, cited in the whitepaper"
+
+[[groups.items]]
+id = "hashcash"
+title = "Hashcash"
+authors = "Adam Back"
+year = "2002"
+type = "paper"
+marks = ["canon"]
+url = "http://www.hashcash.org/papers/hashcash.pdf"
+link_text = "hashcash.org"
+description = "Proof-of-work concept used by Bitcoin"
+
+[[groups.items]]
+id = "bitcoin-a-peer-to-peer-electronic-cash-2"
+title = "Bitcoin: A Peer-to-Peer Electronic Cash System (annotated)"
+authors = "Satoshi Nakamoto / Fermat's Library"
+type = "paper"
+marks = ["canon"]
+url = "https://fermatslibrary.com/s/bitcoin"
+link_text = "fermatslibrary.com"
+description = "Annotated version with community explanations"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-bitcoin-standard-the-decentralized"
+title = "The Bitcoin Standard: The Decentralized Alternative to Central Banking"
+authors = "Saifedean Ammous"
+year = "2018"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "History of money leading to Bitcoin. A polemical, Austrian-school argument rather than neutral history — read it critically alongside Section 09"
+
+[[groups.items]]
+id = "the-internet-of-money-vols-1-3"
+title = "The Internet of Money (Vols 1-3)"
+authors = "Andreas Antonopoulos"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Accessible talks on why Bitcoin matters"
+
+[[groups.items]]
+id = "satoshi-nakamoto-s-emails-and-forum"
+title = "Satoshi Nakamoto's emails and forum posts"
+authors = "Satoshi Nakamoto (compiled by the Satoshi Nakamoto Institute)"
+year = "2008–2010"
+type = "article"
+label = "Email"
+marks = ["canon"]
+url = "https://satoshi.nakamotoinstitute.org/"
+link_text = "satoshi.nakamotoinstitute.org"
+description = "Primary source material from Bitcoin's creator"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-sovereign-individual"
+title = "The Sovereign Individual"
+authors = "Davidson and Rees-Mogg"
+year = "1997"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Predicted digital currency and decentralization"
+
+[[groups.items]]
+id = "bitcoin-s-academic-pedigree"
+title = "Bitcoin's Academic Pedigree"
+authors = "Arvind Narayanan and Jeremy Clark"
+year = "2017"
+type = "paper"
+marks = ["core"]
+url = "https://queue.acm.org/detail.cfm?id=3136559"
+link_text = "ACM Queue"
+description = "Traces Bitcoin's components (e.g. linked timestamping, Merkle trees, Byzantine fault tolerance, proof-of-work) back to the 1980s–90s research they came from, arguing that Satoshi's contribution was the combination. The best bridge from this section to the technical ones"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bit-gold"
+title = "Bit Gold"
+authors = "Nick Szabo"
+year = "2005"
+type = "paper"
+url = "https://nakamotoinstitute.org/library/bit-gold/"
+link_text = "nakamotoinstitute.org"
+description = "Timestamped proof-of-work strings recorded in a distributed title registry — the closest pre-Bitcoin design for unforgeable digital scarcity"
+verified = 2026-10-13

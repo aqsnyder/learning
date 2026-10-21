@@ -1,0 +1,116 @@
+# Resources for: Bioinstrumentation, Imaging and Lab Automation
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also relevant, listed in their home sections:** [Jun et al. (2017) on Neuropixels](../09-neuroscience/README.md) — the CMOS probe, multiplexing and noise budget that define modern electrophysiology; [Goodwin, McPherson & McCombie (2016) on NGS platforms](../02-genetics-and-genomics/README.md) — read lengths and error profiles per platform; the [cryo-EM Nobel lectures and Callaway's feature](../03-structural-biology/README.md) — detectors as the unlock, and Section 03's Practice 6 for the dose budget.
+'''
+
+[[groups.items]]
+id = "nikon-s-microscopyu-the-source-for"
+title = "Nikon's MicroscopyU — The Source for Microscopy Education"
+authors = "Nikon Instruments"
+year = "2026"
+type = "website"
+label = "Resource"
+marks = ["core"]
+url = "https://www.microscopyu.com/"
+link_text = "MicroscopyU"
+description = "The best free optics-for-biologists reference there is: resolution and numerical aperture, fluorescence, super-resolution, and a Digital Imaging section whose interactive tutorials on [CCD noise sources](https://www.microscopyu.com/tutorials/ccd-noise-sources) and [CCD signal-to-noise ratio](https://www.microscopyu.com/tutorials/ccd-signal-to-noise-ratio) are exactly the detector budget an instrument engineer wants. Start at [Resolution](https://www.microscopyu.com/microscopy-basics/resolution)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-axon-guide-electrophysiology-and"
+title = "The Axon Guide — Electrophysiology and Biophysics Laboratory Techniques (5th Edition)"
+authors = "Molecular Devices"
+year = "2026"
+type = "book"
+label = "Handbook"
+marks = ["core"]
+url = "https://www.moleculardevices.com/axon-guide"
+link_text = "Axon Guide"
+description = "The electrophysiology equivalent of an applications handbook, free with registration, and unusually good on instrumentation: Ch. 3 on measuring bioelectric signals, Ch. 6 on signal conditioning, Ch. 9 on acquisition hardware, Ch. 11 on noise in electrophysiological measurements, and an appendix on reading specifications honestly"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "super-resolution-microscopy-demystified"
+title = "Super-Resolution Microscopy Demystified"
+authors = "Lothar Schermelleh, Alexia Ferrand, Thomas Huser et al. (… Gregor P. C. Drummen)"
+year = "2019"
+type = "paper"
+label = "Review"
+url = "https://doi.org/10.1038/s41556-018-0251-8"
+link_text = "Nat. Cell Biol."
+description = "The comparison table and decision tree for SIM, STED and single-molecule localization: what each buys in resolution and what it charges in photons, time, labelling density and artefacts. Nat. Cell Biol. 21:72–84 (subscription)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-nobel-prize-in-chemistry-2014-for"
+title = "The Nobel Prize in Chemistry 2014 — \"for the development of super-resolved fluorescence microscopy\""
+authors = "Eric Betzig, Stefan W. Hell, William E. Moerner"
+year = "2014"
+type = "website"
+label = "Nobel Prize"
+url = "https://www.nobelprize.org/prizes/chemistry/2014/summary/"
+link_text = "Nobel Prize"
+description = "The prize for breaking a limit that was considered physical law: STED's patterned depletion and single-molecule localization are two entirely different ways around Abbe, and the prize materials are the clearest short account of both"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "three-decades-of-nanopore-sequencing"
+title = "Three Decades of Nanopore Sequencing"
+authors = "David Deamer, Mark Akeson, Daniel Branton"
+year = "2016"
+type = "paper"
+label = "Perspective"
+url = "https://doi.org/10.1038/nbt.3423"
+link_text = "Nat. Biotechnol."
+description = "How an idea becomes an instrument: a single-channel current measurement through a protein pore, followed from a 1989 notebook sketch to a commercial sequencer. Read it as an engineering-development story, then compare its error profile with Illumina's. Nat. Biotechnol. 34:518–524"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "flow-cytometry-retrospective"
+title = "Flow Cytometry: Retrospective, Fundamentals and Recent Instrumentation"
+authors = "Julien Picot, Coralie L. Guerin, Caroline Le Van Kim, Chantal M. Boulanger"
+year = "2012"
+type = "paper"
+label = "Review"
+url = "https://doi.org/10.1007/s10616-011-9415-0"
+link_text = "Cytotechnology"
+description = "Flow cytometry taken apart: hydrodynamic focusing, excitation optics, detector arrays, spectral overlap and compensation, and how a sorter decides and deflects in microseconds. Cytotechnology 64(2):109–130 (subscription)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "assay-guidance-manual"
+title = "Assay Guidance Manual"
+authors = "Sarine Markossian (Editor-in-Chief), Abigail Grossman, Hannah Baskir et al."
+year = "2004–"
+type = "docs"
+label = "Reference"
+url = "https://www.ncbi.nlm.nih.gov/books/NBK53196/"
+link_text = "NCBI Bookshelf"
+description = "A free, continuously updated manual from Eli Lilly and NCATS (CC BY-NC-SA 3.0) on making an assay that actually measures something: controls, signal windows, reproducibility, interference and artefacts. The closest thing biology has to a metrology standard, and the home of the screening statistics in Practice 5"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pylabrobot-an-open-source-hardware"
+title = "PyLabRobot: An Open-Source, Hardware-Agnostic Interface for Liquid-Handling Robots and Accessories"
+authors = "Rick P. Wierenga, Stefan M. Golas, Wilson Ho, Connor W. Coley, Kevin M. Esvelt"
+year = "2023"
+type = "tool"
+url = "https://doi.org/10.1016/j.device.2023.100111"
+link_text = "Device"
+description = "One Python API across liquid handlers, plate readers and incubators, with a simulator — a hardware-abstraction layer for wet lab work, and the obvious entry point if you want to automate a protocol without buying into one vendor's ecosystem. Device 1(4):100111"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "self-driving-laboratories-to"
+title = "Self-Driving Laboratories to Autonomously Navigate the Protein Fitness Landscape"
+authors = "Jacob T. Rapp, Bennett J. Bremer, Philip A. Romero"
+year = "2024"
+type = "paper"
+url = "https://doi.org/10.1038/s44286-023-00002-4"
+link_text = "Nat. Chem. Eng."
+description = "A closed design-build-test-learn loop run by a robot: an agent proposes protein variants, the platform builds and assays them, and the measurements retrain the agent. Nat. Chem. Eng. 1:97–107"
+verified = 2026-10-13

@@ -1,0 +1,164 @@
+# Resources for: Development and Programming
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "programming-bitcoin"
+title = "Programming Bitcoin"
+authors = "Jimmy Song"
+year = "2019"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://github.com/jimmysong/programmingbitcoin"
+link_text = "GitHub"
+description = "Build a Bitcoin library from scratch in Python (full text and exercises free on GitHub; pre-Taproot)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chaincode-labs-bitcoin-curriculum"
+title = "Chaincode Labs Bitcoin Curriculum"
+authors = "Chaincode Labs"
+type = "course"
+label = "Curriculum"
+url = "https://github.com/chaincodelabs/bitcoin-curriculum"
+link_text = "GitHub"
+description = "Syllabus of curated readings by subject, from Chaincode's developer residency; many links date from 2016–2019, so pair with Optech for anything recent"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "btrust-builders-mastering-bitcoin"
+title = "Btrust Builders: Mastering Bitcoin Pathway"
+authors = "Btrust"
+type = "course"
+label = "Curriculum"
+url = "https://pathways.btrust.tech/"
+link_text = "pathways.btrust.tech"
+description = "8-week study pathway built on Mastering Bitcoin; live cohorts are application-based (aimed at developers in Africa) but the self-paced track is open to anyone. Sibling pathways: Learn Bitcoin from the Command Line (7 weeks), Rust for Bitcoiners (6 weeks)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-core"
+title = "Bitcoin Core"
+type = "tool"
+label = "Source Code"
+marks = ["core"]
+url = "https://github.com/bitcoin/bitcoin"
+link_text = "GitHub"
+description = "The reference implementation"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "saylor-university-cs120-bitcoin-for"
+title = "Saylor University CS120: Bitcoin for Developers I"
+authors = "Saylor University"
+type = "course"
+url = "https://learn.saylor.org/course/cs120"
+link_text = "learn.saylor.org"
+description = "Developer course for learners with some coding experience (~18 hours, free certificate): cryptography, keys, hashing and proof-of-work, wallets, nodes"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-developer-documentation"
+title = "Bitcoin Developer Documentation"
+type = "docs"
+label = "Documentation"
+url = "https://developer.bitcoin.org/"
+link_text = "developer.bitcoin.org"
+description = "bitcoin.org's community docs — not official Bitcoin Core documentation, and unmaintained since about 2021 (its RPC reference stops at Bitcoin Core 0.21)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-core-pr-review-club"
+title = "Bitcoin Core PR Review Club"
+type = "practice"
+marks = ["core"]
+url = "https://bitcoincore.reviews/"
+link_text = "bitcoincore.reviews"
+description = "Learn by reviewing real code changes"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-core-rpc-api"
+title = "Bitcoin Core RPC API"
+authors = "Bitcoin Core"
+type = "tool"
+url = "https://bitcoincore.org/en/doc/"
+link_text = "RPC reference"
+description = "Programmatic interaction with a node. Use the versioned official reference (latest: 31.x) or `bitcoin-cli help` — the developer.bitcoin.org copy is frozen at 0.21 and lacks years of RPC changes"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-development-mailing-list"
+title = "Bitcoin Development Mailing List"
+type = "website"
+label = "Community"
+url = "https://groups.google.com/g/bitcoindev"
+link_text = "Google Groups"
+description = "Protocol discussion and BIP proposals (moved off the Linux Foundation list; archive at [gnusha.org](https://gnusha.org/pi/bitcoindev/))"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "set-up-bitcoin-core-on-regtest-signet"
+title = "Set up Bitcoin Core on regtest, signet, and testnet4"
+type = "practice"
+description = "Hands-on experimentation: regtest for instant local blocks, then signet (BIP 325) or testnet4 (BIP 94, Bitcoin Core 28+); testnet3 is being phased out"
+
+[[groups.items]]
+id = "mastering-bitcoin-chapter-3-bitcoin-core"
+title = "Mastering Bitcoin, Chapter 3: Bitcoin Core: The Reference Implementation"
+authors = "Andreas Antonopoulos and David Harding"
+year = "2023"
+type = "book"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch03_bitcoin-core.adoc"
+link_text = "GitHub"
+description = "Compile, configure, and run a node; explore transactions and blocks with `bitcoin-cli`; call the JSON-RPC API from Python; survey of alternative clients and libraries — the on-ramp to everything else here"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chaincode-labs-bitcoin-protocol"
+title = "Chaincode Labs: Bitcoin Protocol Development seminar"
+authors = "Chaincode Labs"
+type = "course"
+label = "Curriculum"
+url = "https://chaincode.gitbook.io/seminars/bitcoin-protocol-development"
+link_text = "Seminar"
+description = "Five-session reading list with discussion questions (SegWit, mining and propagation, P2P, Script and wallets) — the bridge from Mastering Bitcoin to Bitcoin Core development"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "embit"
+title = "embit"
+authors = "Stepan Snigirev"
+year = "2020–"
+type = "tool"
+url = "https://github.com/diybitcoinhardware/embit"
+link_text = "GitHub"
+description = "Minimal Bitcoin library for Python 3 and MicroPython, built for embedded signers (used by SeedSigner): keys, BIP 32/39, scripts, PSBTs, descriptors. A natural fit for firmware/hardware-wallet experiments"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-dev-kit-book-of-bdk"
+title = "Bitcoin Dev Kit (Book of BDK)"
+authors = "Bitcoin Dev Kit Foundation"
+year = "2026"
+type = "tool"
+url = "https://bookofbdk.com/"
+link_text = "bookofbdk.com"
+description = "Rust libraries for descriptor-based wallets (built on rust-bitcoin and rust-miniscript), with Kotlin/Swift bindings and a separately maintained Python package. For lower-level transaction building in Rust see the [Rust Bitcoin Cookbook](https://rust-bitcoin.org/book/)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cryptocurrency-engineering-and-design"
+title = "Cryptocurrency Engineering and Design (MIT MAS.S62, Spring 2018)"
+authors = "Neha Narula, Tadge Dryja"
+year = "2018"
+type = "course"
+url = "https://ocw.mit.edu/courses/mas-s62-cryptocurrency-engineering-and-design-spring-2018/"
+link_text = "MIT OCW"
+description = "University course on how Bitcoin is engineered: lecture videos, notes and three problem sets (\"Hash-based Signature Schemes\", \"Mine Your Name\", \"UTXOhunt\"). The lectures run from signatures, proof of work and the UTXO model through sync and pruning, SPV and wallets, forks, fees, SegWit, Lightning, discreet log contracts, MAST/Taproot/Graftroot, CoinJoin and confidential transactions; four lectures (9, 19–21) have no video. Recorded in 2018, before Taproot activated: watch it for the design reasoning, and check current behavior against Mastering Bitcoin and the BIPs"
+verified = 2026-10-13

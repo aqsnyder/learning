@@ -1,0 +1,101 @@
+# Resources for: Number Theory and Cryptography
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "a-friendly-introduction-to-number-theory"
+title = "A Friendly Introduction to Number Theory"
+authors = "Joseph H. Silverman"
+year = "2012"
+type = "book"
+marks = ["core"]
+url = "https://www.math.brown.edu/johsilve/frint.html"
+link_text = "Link"
+description = "The gentlest rigorous start (4th edition): divisibility, congruences, Euler's formula, primality testing, and public-key cryptography, with plenty of hands-on computation."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "elementary-number-theory-primes"
+title = "Elementary Number Theory: Primes, Congruences, and Secrets"
+authors = "William Stein"
+year = "2008"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://wstein.org/ent/"
+link_text = "Link"
+description = "Free legal PDF (Springer) of a computation-friendly number theory text built around public-key cryptography — the \"secrets\" of the subtitle. A free alternative or companion to Silverman."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-computational-introduction-to-number"
+title = "A Computational Introduction to Number Theory and Algebra"
+authors = "Victor Shoup"
+year = "2008"
+type = "book"
+access = "free"
+url = "https://shoup.net/ntb/"
+link_text = "Link"
+description = "Free 2nd-edition PDF covering number theory and algebra together with the algorithms and running-time analysis that implementations need: modular arithmetic, primality testing, finite fields, and polynomial arithmetic. The reference to keep open while coding."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an-introduction-to-mathematical"
+title = "An Introduction to Mathematical Cryptography"
+authors = "Jeffrey Hoffstein, Jill Pipher, Joseph H. Silverman"
+year = "2014"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://link.springer.com/book/10.1007/978-1-4939-1711-2"
+link_text = "Link"
+description = "Algebra and number theory where they are used: discrete logarithms and Diffie–Hellman, RSA, digital signatures, elliptic-curve cryptography, and lattices (2nd edition). The mathematical backing for the btc curriculum's keys-and-signatures material and the core text of this section."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "elliptic-curves-number-theory-and"
+title = "Elliptic Curves: Number Theory and Cryptography"
+authors = "Lawrence C. Washington"
+year = "2008"
+type = "book"
+url = "https://www.routledge.com/Elliptic-Curves-Number-Theory-and-Cryptography-Second-Edition/Washington/p/book/9781420071467"
+link_text = "Link"
+description = "The standard next step after Hoffstein–Pipher–Silverman (2nd edition): the group law proved properly, curves over finite fields, the discrete-log problem and its attacks, and pairings."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rational-points-on-elliptic-curves"
+title = "Rational Points on Elliptic Curves"
+authors = "Joseph H. Silverman, John T. Tate"
+year = "2015"
+type = "book"
+url = "https://link.springer.com/book/10.1007/978-3-319-18588-0"
+link_text = "Link"
+description = "Optional depth (2nd edition): the arithmetic of elliptic curves at an undergraduate level — the \"why\" behind the group law and point counting."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-graduate-course-in-applied"
+title = "A Graduate Course in Applied Cryptography"
+authors = "Dan Boneh, Victor Shoup"
+year = "2023"
+type = "book"
+access = "free"
+url = "https://toc.cryptobook.us/"
+link_text = "Link"
+description = "Free (v0.6) graduate text on provable security: what it means for a signature or key exchange to be secure, with chapters on digital signatures and on elliptic-curve cryptography and pairings. For when you want definitions and proofs, not recipes."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "understanding-cryptography"
+title = "Understanding Cryptography"
+authors = "Christof Paar, Jan Pelzl, Tim Güneysu"
+year = "2024"
+type = "book"
+url = "https://link.springer.com/book/10.1007/978-3-662-69007-9"
+link_text = "Link"
+description = "Engineering-oriented textbook (2nd edition) spanning symmetric and asymmetric ciphers up to post-quantum algorithms. The practical, implementation-minded complement to Hoffstein–Pipher–Silverman."
+verified = 2026-10-13

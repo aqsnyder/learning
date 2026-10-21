@@ -1,0 +1,67 @@
+# Resources for: PCB Anatomy and Materials
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** Saturn PCB Toolkit and IPC-2152 ([Section 05](../05-power-and-grounding/README.md)) for Practice 2; Rick Hartley's grounding lecture ([Section 05](../05-power-and-grounding/README.md)) as evidence in Practice 4.
+'''
+
+[[groups.items]]
+id = "pcb-design-tutorial-rev-a-2004"
+title = "PCB Design Tutorial Rev A (2004)"
+authors = "David L. Jones (EEVblog)"
+year = "2004"
+type = "tutorial"
+marks = ["core"]
+url = "../documents/PCBDesignTutorialRevA.pdf"
+link_text = "documents/PCBDesignTutorialRevA.pdf"
+description = "Comprehensive intro to PCB structure. It is a 2004, Protel-era snapshot, and some advice is outdated: its split-plane \"star grounding\" (see Section 05) and \"avoid generating Gerbers\" (see Section 09). Its track-width table comes from the old IPC-2221 charts (use IPC-2152; see Section 05)"
+
+[[groups.items]]
+id = "nine-dot-connects"
+title = "Nine Dot Connects"
+type = "website"
+label = "Web Resource"
+marks = ["core"]
+url = "https://www.ninedotconnects.com/"
+link_text = "ninedotconnects.com"
+description = "Professional PCB design education"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "altium-academy-basics"
+title = "Altium Academy Basics"
+type = "video-series"
+url = "https://www.youtube.com/@AltiumAcademy"
+link_text = "youtube.com/@AltiumAcademy"
+description = "PCB fundamentals and stackup intro"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ipc-2221-generic-standard-on-printed"
+title = "IPC-2221 Generic Standard on Printed Board Design"
+authors = "IPC"
+year = "2023"
+type = "standard"
+access = "paid"
+url = "https://shop.electronics.org/ipc-2221/ipc-2221-standard-only/Revision-c/english"
+link_text = "IPC store (Rev C)"
+description = "THE foundational IPC design standard, sold by IPC (current revision C, 2023; earlier: B, 2012, and A, 2003). Section, table and figure numbers in this curriculum follow Rev A; in a later revision, find the same topic by name. Its conductor current charts (Fig. 6-4) date from a 1956 NBS report, and the internal-layer curve was never tested (it is just half the external one; see Appendix B of Rev A). IPC-2152 (2009) replaced those charts, so size traces for current with IPC-2152 (Section 05), not Fig. 6-4"
+verified = 2026-10-21
+
+[[groups.items]]
+id = "sierra-circuits-pcb-knowledge-base"
+title = "Sierra Circuits PCB Knowledge Base"
+type = "website"
+label = "Web Resource"
+url = "https://www.protoexpress.com/blog/"
+link_text = "protoexpress.com/blog"
+description = "Manufacturing constraints reference"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pcb-materials-guide-fr-4-rogers-etc"
+title = "PCB Materials Guide (FR-4, Rogers, etc.)"
+type = "article"
+description = "Understanding substrate choices"

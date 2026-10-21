@@ -1,0 +1,204 @@
+# Resources for: Agentic AI Development Workflows
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-human-in-the-loop-model"
+title = "The human-in-the-loop model"
+type = "concept"
+marks = ["ai"]
+description = "You are the architect, AI is the junior developer. Never blindly accept. Define the *what* and *why*, let AI handle the *how*."
+
+[[groups.items]]
+id = "prompt-engineering-for-code"
+title = "Prompt engineering for code"
+type = "concept"
+marks = ["ai"]
+description = "Clear context, constraints, and iterative refinement. Specify architecture, not implementation. Better prompts and context mean less rework, not less review."
+
+[[groups.items]]
+id = "reviewing-ai-generated-code"
+title = "Reviewing AI-generated code"
+type = "concept"
+marks = ["ai"]
+description = "Three-layer review: logic correctness, security, architectural alignment. AI code passes syntax checks but fails design intent — learn to catch that."
+
+[[groups.items]]
+id = "ai-assisted-code-review-workflow"
+title = "AI-assisted code review workflow"
+type = "concept"
+marks = ["ai"]
+description = "Use AI to review AI output (meta-review), then apply human judgment. The human reviews the *review*, not just the code."
+
+[[groups.items]]
+id = "project-context-and-constraints-files"
+title = "Project context and constraints files"
+type = "concept"
+marks = ["ai"]
+description = "`AGENTS.md`, rules files, skills — teaching AI your project's conventions. The better the context, the fewer corrections needed."
+
+[[groups.items]]
+id = "task-decomposition-for-agents"
+title = "Task decomposition for agents"
+type = "concept"
+marks = ["ai"]
+description = "Break complex features into atomic, verifiable tasks. Each task should have a clear input, output, and success criteria."
+
+[[groups.items]]
+id = "testing-ai-output"
+title = "Testing AI output"
+type = "concept"
+marks = ["ai"]
+description = "AI writes code, you write (or review) the tests. Tests are the specification. If the agent can't pass them, check the spec, the tests, and the task size; and when it does pass, check it didn't weaken, skip, or special-case a test to get there."
+
+[[groups.items]]
+id = "avoiding-the-tower-of-babel"
+title = "Avoiding the \"Tower of Babel\""
+type = "concept"
+marks = ["ai"]
+description = "Maintaining style consistency when multiple agents generate code. Enforce linting, formatting, and naming conventions ruthlessly."
+
+[[groups.items]]
+id = "simon-willison-s-blog"
+title = "Simon Willison's blog"
+authors = "Simon Willison"
+type = "blog"
+marks = ["core", "ai"]
+url = "https://simonwillison.net/"
+link_text = "Link"
+description = "The best writing on practical AI-assisted development. Honest, detailed, and focused on real workflows rather than hype."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cursor-copilot-best-practices"
+title = "Cursor/Copilot best practices"
+type = "blog"
+marks = ["ai"]
+description = "IDE agent workflows and tips. Learn the keyboard shortcuts, context tricks, and prompting patterns specific to your tooling."
+
+[[groups.items]]
+id = "when-not-to-use-ai"
+title = "When NOT to use AI"
+type = "concept"
+marks = ["ai"]
+description = "Security-critical code, novel algorithms, hardware-specific timing. Know the boundaries — AI is a tool, not a replacement for expertise."
+
+[[groups.items]]
+id = "version-control-discipline-with-ai"
+title = "Version control discipline with AI"
+type = "concept"
+marks = ["ai"]
+description = "Atomic commits, meaningful diffs, avoiding AI commit message spam. Every commit should tell a story a reviewer can follow."
+
+[[groups.items]]
+id = "build-a-project-entirely-with-ai"
+title = "Build a project entirely with AI assistance"
+type = "practice"
+marks = ["ai"]
+description = "Practice the architect role end-to-end. Define requirements, decompose tasks, prompt agents, review output, iterate. The capstone exercise."
+
+[[groups.items]]
+id = "building-effective-agents"
+title = "Building effective agents"
+authors = "Erik Schluntz, Barry Zhang (Anthropic)"
+type = "article"
+marks = ["core", "ai"]
+url = "https://www.anthropic.com/engineering/building-effective-agents"
+link_text = "Link"
+description = "Dec 2024. Workflows vs. agents, and five composable patterns (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer). Core advice: use the simplest design that works and add agentic complexity only when it measurably helps."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "measuring-the-impact-of-early-2025-ai-on"
+title = "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity, plus the Feb 2026 update"
+authors = "Joel Becker, Nate Rush, Elizabeth Barnes, David Rein (METR); update: Becker, Rush, Tom Cunningham, Rein, Khalid Mahamud"
+type = "article"
+label = "Research"
+marks = ["core", "ai"]
+url = "https://arxiv.org/abs/2507.09089"
+link_text = "Paper"
+more_links = [{ text = "2026 update", url = "https://metr.org/blog/2026-02-24-uplift-update/" }]
+description = "Randomized trial, 16 experienced maintainers, 246 tasks, early-2025 tools: allowing AI made tasks take 19% longer, while developers believed it made them ~20% faster. The Feb 2026 update (\"We are Changing our Developer Productivity Experiment Design\") covers a follow-up started in August 2025 (57 developers, 800+ tasks). METR says its new central estimate is hard to interpret and probably understates the effect: developers increasingly declined to take part, or held tasks back (30–50% said they did), because they didn't want to work without AI. METR believes developers are likely sped up more in early 2026 than in early 2025, but calls its data only very weak evidence of how much. The durable lesson: measure your own workflow, because the feeling of speed is not evidence."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "state-of-ai-assisted-software"
+title = "State of AI-assisted Software Development 2025 (DORA)"
+authors = "Google Cloud DORA"
+type = "report"
+access = "free"
+marks = ["ai"]
+url = "https://dora.dev/research/2025/dora-report/"
+link_text = "Link"
+description = "Survey of ~5,000 practitioners (Sep 2025): 90% use AI at work, and 30% report little or no trust in AI-generated code; AI adoption now correlates with higher delivery throughput but still with lower delivery stability. Central finding: AI amplifies an organization's existing strengths and weaknesses."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "effective-context-engineering-for-ai"
+title = "Effective context engineering for AI agents"
+authors = "Prithvi Rajasekaran, Ethan Dixon, Carly Ryan, Jeremy Hadfield (Anthropic Applied AI team)"
+type = "article"
+marks = ["ai"]
+url = "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+link_text = "Link"
+description = "Sep 2025. Treats context as a finite attention budget: compaction, structured note-taking (e.g. a NOTES.md), sub-agents with clean context windows, just-in-time retrieval. Explains why lean, high-signal context beats exhaustive context."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "claude-code-best-practices"
+title = "Claude Code best practices"
+authors = "Anthropic"
+type = "docs"
+marks = ["ai"]
+url = "https://code.claude.com/docs/en/best-practices"
+link_text = "Link"
+description = "Concrete agentic-coding discipline: give the agent a check it can run (tests, build, linter), explore → plan → implement → commit, keep CLAUDE.md/AGENTS.md short, clear context between tasks, and review diffs in a fresh context. Tool-specific, but the practices transfer to any coding agent."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "agents-md"
+title = "AGENTS.md"
+authors = "OpenAI Codex, Amp, Google Jules, Cursor, Factory; now stewarded by the Agentic AI Foundation (Linux Foundation)"
+type = "standard"
+label = "Spec"
+marks = ["ai"]
+url = "https://agents.md/"
+link_text = "Link"
+description = "The open \"README for agents\" convention behind the context-files row above. Read by Codex, GitHub Copilot's coding agent, Cursor, Gemini CLI, Jules, Aider and others; under the convention, the nearest file to the edited code wins. Claude Code (v2.1.277 or later) also reads `AGENTS.md` directly, but by default only when there is no `CLAUDE.md` or `CLAUDE.local.md` in the working directory or above it. If there is one, Claude Code reads only the CLAUDE.md files, so add an `@AGENTS.md` import line to that file, or change its *Project instructions* setting ([docs](https://code.claude.com/docs/en/memory#agents-md))."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "model-context-protocol-mcp"
+title = "Model Context Protocol (MCP)"
+authors = "Anthropic (originator); open standard"
+type = "standard"
+label = "Spec"
+marks = ["ai"]
+url = "https://modelcontextprotocol.io/"
+link_text = "Link"
+description = "Open protocol (Nov 2024) for connecting agents to tools and data, supported by Claude, ChatGPT, VS Code, Cursor and others. Learn it as an architect: an MCP server is how you would expose an instrument or test rig to agents, and every server you add widens the attack surface."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-lethal-trifecta-for-ai-agents"
+title = "The lethal trifecta for AI agents"
+authors = "Simon Willison"
+type = "article"
+marks = ["ai"]
+url = "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/"
+link_text = "Link"
+description = "Jun 2025. Private data + untrusted content + a way to communicate externally = data exfiltration through prompt injection. The working security model for wiring agents to MCP servers, browsers, and inboxes: guardrails don't reliably stop it, so avoid combining all three."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "understanding-spec-driven-development"
+title = "Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl"
+authors = "Birgitta Böckeler (martinfowler.com)"
+type = "article"
+marks = ["ai"]
+url = "https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html"
+link_text = "Link"
+description = "Oct 2025. A hands-on, skeptical look at spec-driven agent tooling: writing a spec first helps, but heavyweight spec workflows misfit small tasks, are tedious to review, and can give a false sense of control. Read before adopting any \"spec-driven\" process."
+verified = 2026-10-13

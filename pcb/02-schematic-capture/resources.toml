@@ -1,0 +1,101 @@
+# Resources for: Schematic Capture and Library Management
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** kicad-cli ([Section 09](../09-dfm-and-fabrication/README.md)) for Practice 4.
+'''
+
+[[groups.items]]
+id = "phil-s-lab-schematic-design-tutorials"
+title = "Phil's Lab Schematic Design tutorials"
+authors = "Phil"
+type = "video-series"
+marks = ["core"]
+url = "https://www.youtube.com/@PhilsLab"
+link_text = "youtube.com/@PhilsLab"
+description = "Practical schematic capture walkthroughs"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kicad-getting-started-guide-kicad-10"
+title = "KiCad Getting Started Guide (KiCad 10)"
+authors = "KiCad Project"
+type = "course"
+marks = ["core"]
+url = "https://docs.kicad.org/10.0/en/getting_started_in_kicad/getting_started_in_kicad.html"
+link_text = "docs.kicad.org/10.0"
+description = "Official documentation. KiCad 10.0 (March 2026) is the current release; it adds design variants (one schematic, several BOM variants) and a graphical DRC rule editor; reusable design blocks arrived in 9.0"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "snapeda-component-library"
+title = "SnapEDA component library"
+type = "tool"
+url = "https://www.snapeda.com/"
+link_text = "snapeda.com"
+description = "Verified symbols and footprints"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ultra-librarian"
+title = "Ultra Librarian"
+type = "tool"
+url = "https://www.ultralibrarian.com/"
+link_text = "ultralibrarian.com"
+description = "CAD model downloads"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "samacsys"
+title = "SamacSys"
+type = "tool"
+url = "https://supplyframe.com/samacsys"
+link_text = "supplyframe.com/samacsys"
+description = "Free component libraries"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kicad-template-with-altium-theme"
+title = "KiCad Template with Altium Theme"
+authors = "aqsnyder"
+type = "docs"
+label = "Reference"
+url = "https://github.com/aqsnyder/KiCAD_Template_Snyder"
+link_text = "github.com/aqsnyder/KiCAD_Template_Snyder"
+description = "Personal design starting point (private repo: the link works only when signed in to GitHub as its owner)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "robert-feranec-schematic-review-series"
+title = "Robert Feranec schematic review series"
+authors = "Robert Feranec"
+type = "video"
+url = "https://www.youtube.com/@RobertFeranec"
+link_text = "youtube.com/@RobertFeranec"
+description = "Learn from real design reviews"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kicad-library-conventions-klc"
+title = "KiCad Library Conventions (KLC)"
+authors = "KiCad Library Team"
+type = "docs"
+label = "Reference"
+marks = ["core"]
+url = "https://klc.kicad.org/"
+link_text = "klc.kicad.org"
+description = "The official rules for symbols, footprints and 3D models: naming, pin and pad conventions, layers, courtyards. Adopt them in your own libraries so they stay consistent with the stock KiCad libraries"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an4488-getting-started-with-stm32f4xxxx"
+title = "AN4488 — Getting started with STM32F4xxxx MCU hardware development (Rev 7, 2018)"
+authors = "STMicroelectronics"
+year = "2018"
+type = "app-note"
+url = "https://www.st.com/resource/en/application_note/an4488-getting-started-with-stm32f4xxxx-mcu-hardware-development-stmicroelectronics.pdf"
+link_text = "PDF"
+description = "Schematic checklist for an STM32 board: supplies and decoupling, VDDA/VREF+, reset, clocks, boot pins, SWD/JTAG, plus a reference schematic and layout notes. ST publishes an equivalent \"Getting started with … hardware development\" note for each family, so use the one for yours"
+verified = 2026-10-13

@@ -1,0 +1,146 @@
+# Resources for: Neuroscience
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "theoretical-neuroscience-computational"
+title = "Theoretical Neuroscience: Computational and Mathematical Modeling of Neural Systems"
+authors = "Peter Dayan & L.F. Abbott"
+year = "2001"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://mitpress.mit.edu/9780262541855/theoretical-neuroscience/"
+link_text = "Book"
+description = "The standard graduate textbook for computational neuroscience, covering neural encoding, decoding, plasticity, and network models"
+
+[[groups.items]]
+id = "principles-of-neural-science-6th-edition"
+title = "Principles of Neural Science (6th Edition)"
+authors = "Eric Kandel, John Koester, Sarah Mack, Steven Siegelbaum"
+year = "2021"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["core"]
+url = "https://www.mheducation.com/highered/mhp/product/principles-neural-science-sixth-edition.html"
+link_text = "Book"
+description = "The comprehensive reference for neuroscience, from ion channels to cognition — the \"bible\" of the field"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neuronal-dynamics-from-single-neurons-to"
+title = "Neuronal Dynamics: From Single Neurons to Networks and Models of Cognition"
+authors = "Wulfram Gerstner, Werner Kistler, Richard Naud & Liam Paninski"
+year = "2014"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://neuronaldynamics.epfl.ch/"
+link_text = "Textbook"
+description = "Freely available textbook covering spiking neuron models, neural coding, and network dynamics with interactive exercises"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-9-40-introduction-to-neural"
+title = "MIT 9.40 — Introduction to Neural Computation"
+authors = "MIT (Michale Fee & others)"
+year = "2018"
+type = "course"
+url = "https://ocw.mit.edu/courses/9-40-introduction-to-neural-computation-spring-2018/"
+link_text = "OCW"
+description = "MIT undergraduate course on the mathematical modeling of neural systems, from single neurons to networks"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "computational-neuroscience"
+title = "Computational Neuroscience"
+authors = "Rajesh Rao & Adrienne Fairhall"
+year = "2013–"
+type = "course"
+url = "https://www.coursera.org/learn/computational-neuroscience"
+link_text = "Coursera"
+description = "Accessible introduction to computational models of the brain covering encoding, decoding, information theory, and learning"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "receptive-fields-binocular-interaction"
+title = "Receptive Fields, Binocular Interaction and Functional Architecture in the Cat's Visual Cortex"
+authors = "David Hubel & Torsten Wiesel"
+year = "1962"
+type = "paper"
+url = "https://doi.org/10.1113/jphysiol.1962.sp006837"
+link_text = "Paper"
+description = "Nobel Prize–winning work establishing how visual cortex neurons organize into orientation-selective columns"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "allen-brain-atlas"
+title = "Allen Brain Atlas"
+authors = "Allen Institute for Brain Science"
+year = "2006–"
+type = "database"
+url = "https://brain-map.org/"
+link_text = "Atlas"
+description = "Comprehensive, publicly available atlas of gene expression, connectivity, and cell types across the mouse and human brain"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "human-connectome-project"
+title = "Human Connectome Project"
+authors = "NIH / Washington University / University of Minnesota"
+year = "2010–"
+type = "website"
+label = "Project"
+url = "https://www.humanconnectome.org/"
+link_text = "Project"
+description = "Large-scale effort to map the structural and functional connectivity of the human brain using advanced MRI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-quantitative-description-of-membrane"
+title = "A Quantitative Description of Membrane Current and Its Application to Conduction and Excitation in Nerve"
+authors = "Alan Hodgkin & Andrew Huxley"
+year = "1952"
+type = "paper"
+url = "https://doi.org/10.1113/jphysiol.1952.sp004764"
+link_text = "Paper"
+description = "The foundational biophysical model of the action potential — one of the most important papers in all of neuroscience"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neuromatch-academy-computational"
+title = "Neuromatch Academy — Computational Neuroscience"
+authors = "Neuromatch"
+year = "2025"
+type = "course"
+marks = ["core"]
+url = "https://compneuro.neuromatch.io/"
+link_text = "Course book"
+description = "Free, CC-BY course of Colab notebooks and short videos: model fitting, dimensionality reduction, dynamical systems, Bayesian decoding, and deep learning for neural data — the most hands-on way into the field"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fully-integrated-silicon-probes-for-high"
+title = "Fully Integrated Silicon Probes for High-Density Recording of Neural Activity (Neuropixels)"
+authors = "James J. Jun, Nicholas A. Steinmetz, Joshua H. Siegle et al. (… Timothy D. Harris)"
+year = "2017"
+type = "paper"
+url = "https://doi.org/10.1038/nature24636"
+link_text = "Nature"
+description = "The CMOS probe that reshaped experimental neuroscience: 384 channels addressing 960 sites on a single 10 mm shank — read it for how electrode design, multiplexing, and noise budgets determine which neural data can exist at all"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neuronal-wiring-diagram-of-an-adult"
+title = "Neuronal Wiring Diagram of an Adult Brain (FlyWire)"
+authors = "Sven Dorkenwald, Arie Matsliah, Amy R. Sterling et al. (… Mala Murthy & the FlyWire Consortium)"
+year = "2024"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-024-07558-y"
+link_text = "Nature"
+description = "The first synapse-resolution connectome of a complete adult brain — about 139,000 neurons and 54.5 million synapses in *Drosophila*, with the proofread dataset publicly browsable"
+verified = 2026-10-13

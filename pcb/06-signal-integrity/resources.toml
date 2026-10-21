@@ -1,0 +1,149 @@
+# Resources for: Signal Integrity
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** LTspice ([Section 00](../00-electronics-fundamentals/README.md)) for Practices 1 and 3; Saturn PCB Toolkit ([Section 05](../05-power-and-grounding/README.md)) and the IPC-2221A §6.4 impedance equations ([Section 08](../08-multi-layer-and-stackup/README.md)) for Practices 2–4.
+'''
+
+[[groups.items]]
+id = "signal-and-power-integrity-simplified"
+title = "Signal and Power Integrity — Simplified (3rd ed., 2018)"
+authors = "Eric Bogatin"
+year = "2018"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core", "canon"]
+url = "https://www.informit.com/store/signal-and-power-integrity-simplified-9780134513416"
+link_text = "InformIT"
+description = "THE most approachable signal integrity book. Bogatin explains transmission lines, impedance, and crosstalk with clarity and intuition. Start here."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "high-speed-digital-design-a-handbook-of"
+title = "High-Speed Digital Design: A Handbook of Black Magic (1993)"
+authors = "Howard Johnson, Martin Graham"
+year = "1993"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core", "canon"]
+url = "https://sigcon.com/books/bookHSDD.html"
+link_text = "sigcon.com"
+description = "The signal integrity bible. Dense but indispensable — covers everything from rise times to termination strategies."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "high-speed-signal-propagation-advanced"
+title = "High-Speed Signal Propagation: Advanced Black Magic (2003)"
+authors = "Howard Johnson, Martin Graham"
+year = "2003"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["canon"]
+url = "https://sigcon.com/books/bookHSSP.html"
+link_text = "sigcon.com"
+description = "The sequel to *Black Magic*, focused on how signals propagate along real, lossy interconnect. Read it once edge rates and trace lengths make loss matter."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "high-speed-digital-system-design-a"
+title = "High-Speed Digital System Design: A Handbook of Interconnect Theory and Design Practices (2000)"
+authors = "Stephen H. Hall, Garrett W. Hall, James A. McCall"
+year = "2000"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["canon"]
+url = "https://gov.wiley.com/WileyCDA/WileyTitle/productCd-0471360902,descCd-description.html"
+link_text = "Wiley"
+description = "Interconnect theory and design practice from three Intel engineers. A compact, practical complement to Johnson & Graham."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "right-the-first-time-vols-i-and-ii-2003"
+title = "Right the First Time, Vols I and II (2003, 2007)"
+authors = "Lee Ritchey"
+year = "2007"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["canon"]
+url = "https://speedingedge.com/product-category/handbook/"
+link_text = "Speeding Edge"
+description = "Physics-first approach to high-speed PCB design. Practical rules derived from electromagnetic fundamentals."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "robert-feranec-signal-integrity-and-high"
+title = "Robert Feranec — Signal Integrity and High-Speed Design"
+authors = "Robert Feranec"
+type = "video-series"
+marks = ["core"]
+url = "https://www.youtube.com/@RobertFeranec"
+link_text = "YouTube"
+description = "DDR routing, differential pairs, impedance control, and real-world high-speed design walkthroughs."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "dr-emc"
+title = "Dr. EMC"
+authors = "Anton Tichenko"
+type = "video-series"
+label = "YouTube Channel"
+url = "https://www.youtube.com/@DrEMC-sf8rx"
+link_text = "YouTube"
+description = "Electromagnetics and EM-compliance videos by a practising electronics design engineer (per the channel's About page: a principal electronics design engineer doing PhD research at the University of Surrey's 6G Innovation Centre). Use the videos that match this section's topics as field-intuition companions to Bogatin."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ultracad-calculators"
+title = "UltraCAD Calculators"
+type = "tool"
+url = "https://www.ultracad.com/calc.htm"
+link_text = "Website"
+description = "Impedance, trace width, and via calculations. Useful for quick design verification. For trace width vs. current, prefer an IPC-2152-based calculator such as Saturn (Section 05)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "controlled-impedance"
+title = "Controlled Impedance"
+type = "concept"
+description = "What it means, how to specify it to your fab house, and why your stackup determines your trace geometry."
+
+[[groups.items]]
+id = "differential-pairs"
+title = "Differential Pairs"
+type = "concept"
+description = "Routing rules, coupling, and when to use differential signaling (USB, LVDS, Ethernet, DDR)."
+
+[[groups.items]]
+id = "high-speed-interface-layout-guidelines"
+title = "High-Speed Interface Layout Guidelines (SPRAAR7J, 2023)"
+authors = "Texas Instruments"
+year = "2023"
+type = "app-note"
+url = "https://www.ti.com/lit/pdf/spraar7"
+link_text = "PDF"
+description = "Concrete differential-pair routing rules for USB 2.0, USB 3.x, PCIe, HDMI, SATA and SGMII: impedance, length matching, vias and reference planes. Keep it open while routing any high-speed interface."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ethernet-phy-pcb-design-layout-checklist"
+title = "Ethernet PHY PCB Design Layout Checklist (SNLA387, 2021)"
+authors = "Lysny Woodahl (Texas Instruments)"
+year = "2021"
+type = "app-note"
+url = "https://www.ti.com/lit/pdf/snla387"
+link_text = "PDF"
+description = "Checklist for PHY decoupling, clocking and bias-resistor placement, 100 Ω MDI pairs (length limits and matching), and the magnetics/RJ45 region (no metal under the magnetics, ESD placement). Use it in every Ethernet board review."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "return-paths-and-reference-planes"
+title = "Return Paths and Reference Planes"
+type = "concept"
+description = "Where the current actually flows. A trace is only half the circuit — the return path through the reference plane completes it."

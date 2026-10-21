@@ -1,0 +1,103 @@
+# Resources for: Economic Thinking
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "principles-of-economics-10th-ed"
+title = "Principles of Economics (10th ed.)"
+authors = "N. Gregory Mankiw"
+year = "2024"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+url = "https://cengage.com/c/principles-of-economics-10e-mankiw/9780357722718"
+link_text = "Link"
+description = "The canonical introductory economics textbook. Covers the 10 principles of economics, supply and demand, market outcomes, externalities, and public goods. Clear writing with excellent real-world examples."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-economy-2-0-microeconomics-and"
+title = "The Economy 2.0 (Microeconomics and Macroeconomics volumes)"
+authors = "CORE Econ team"
+year = "2023"
+type = "book"
+access = "free"
+level = "beginner"
+url = "https://books.core-econ.org/the-economy/index.html"
+link_text = "Link"
+description = "Free, modern introductory text built around real problems (inequality, innovation, climate, social dilemmas), using game theory and incentive problems from the start. The best free alternative to Mankiw, and the easiest way to cover the macroeconomics (growth, unemployment, inflation) that this curriculum otherwise skips."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-undercover-economist"
+title = "The Undercover Economist"
+authors = "Tim Harford"
+year = "2005"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Accessible popular introduction to economic reasoning in everyday life. Great for building intuition before tackling formal models."
+
+[[groups.items]]
+id = "khan-academy-microeconomics"
+title = "Khan Academy Microeconomics"
+authors = "Khan Academy"
+type = "course"
+marks = ["core"]
+url = "https://www.khanacademy.org/economics-finance-domain/microeconomics"
+link_text = "Link"
+description = "Free, comprehensive introduction to microeconomic concepts. Covers supply/demand, elasticity, consumer/producer surplus, market failures. Ideal for visual learners."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "principles-of-microeconomics"
+title = "Principles of Microeconomics"
+authors = "MRUniversity (Tyler Cowen, Alex Tabarrok & Joana Girante)"
+type = "course"
+url = "https://learn.mru.org/courses/principles-of-microeconomics"
+link_text = "Link"
+description = "Short, engaging video lectures on core economic concepts. Excellent supplement to a textbook."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "economics-in-one-lesson"
+title = "Economics in One Lesson"
+authors = "Henry Hazlitt"
+year = "1946"
+type = "book"
+description = "Classic short book on the seen and unseen effects of economic policies. Trains you to think about second-order consequences."
+
+[[groups.items]]
+id = "i-pencil"
+title = "\"I, Pencil\""
+authors = "Leonard Read"
+year = "1958"
+type = "article"
+url = "https://fee.org/resources/i-pencil/"
+link_text = "Link"
+description = "Famous essay illustrating the astonishing complexity of market coordination through the simple example of a pencil's production."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "marginal-revolution"
+title = "Marginal Revolution"
+authors = "Tyler Cowen & Alex Tabarrok"
+type = "blog"
+url = "https://marginalrevolution.com/"
+link_text = "Link"
+description = "The most influential economics blog. Daily posts covering economics, policy, culture, and ideas. Essential for staying current."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "how-the-economic-machine-works"
+title = "How The Economic Machine Works"
+authors = "Ray Dalio"
+year = "2013"
+type = "video"
+url = "https://www.youtube.com/watch?v=PHe0bXAIuk0"
+link_text = "Link"
+description = "Popular 30-minute animated overview of Dalio's own debt-cycle model — credit cycles, deleveraging, and monetary policy made intuitive. A useful mental model, but one investor's framework rather than textbook macroeconomics; check it against CORE's macro volume."
+verified = 2026-10-13

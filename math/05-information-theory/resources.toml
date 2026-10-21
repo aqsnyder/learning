@@ -1,0 +1,97 @@
+# Resources for: Information Theory
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "elements-of-information-theory"
+title = "Elements of Information Theory"
+authors = "Thomas Cover, Joy Thomas"
+year = "2006"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "The standard textbook. Comprehensive coverage of entropy, mutual information, channel capacity, rate-distortion theory, and connections to statistics. Clear exposition with excellent problems."
+
+[[groups.items]]
+id = "a-mathematical-theory-of-communication"
+title = "A Mathematical Theory of Communication"
+authors = "Claude Shannon"
+year = "1948"
+type = "paper"
+marks = ["core"]
+url = "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+link_text = "Link"
+description = "The founding paper of information theory. Beautifully written and surprisingly accessible. Reading Shannon in the original is a rite of passage."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "information-theory-inference-and"
+title = "Information Theory, Inference, and Learning Algorithms"
+authors = "David MacKay"
+year = "2003"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://www.inference.org.uk/itprnn/book.pdf"
+link_text = "Link"
+description = "A brilliant free book connecting information theory to Bayesian inference, error-correcting codes, and neural networks. Unique perspective that bridges multiple fields."
+
+[[groups.items]]
+id = "information-theory-playlist"
+title = "Information Theory (playlist)"
+authors = "mathematicalmonk"
+type = "video-series"
+url = "https://www.youtube.com/playlist?list=PLE125425EC837021F"
+link_text = "Link"
+description = "Clear video lectures covering entropy, mutual information, KL divergence, and channel coding. Good visual supplement."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-6-441-information-theory"
+title = "MIT 6.441: Information Theory"
+authors = "Yury Polyanskiy"
+year = "2016"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/"
+link_text = "Link"
+description = "MIT's graduate course on information theory with problem sets and lecture notes (no videos)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an-introduction-to-variational-methods"
+title = "An Introduction to Variational Methods for Graphical Models"
+authors = "Michael Jordan et al."
+year = "1999"
+type = "paper"
+url = "https://people.eecs.berkeley.edu/~jordan/papers/variational-intro.pdf"
+link_text = "Link"
+description = "Connects information theory (KL divergence, variational bounds) to probabilistic graphical models. Bridge to modern variational inference."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "visual-information-theory"
+title = "Visual Information Theory"
+authors = "Chris Olah"
+year = "2015"
+type = "article"
+label = "Blog Post"
+url = "https://colah.github.io/posts/2015-09-Visual-Information/"
+link_text = "Link"
+description = "Gorgeous visual explanations of entropy, cross-entropy, and KL divergence. The best intuitive introduction to these concepts."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "information-theory-from-coding-to"
+title = "Information Theory: From Coding to Learning"
+authors = "Yury Polyanskiy, Yihong Wu"
+year = "2025"
+type = "book"
+access = "free"
+url = "https://people.lids.mit.edu/yp/homepage/data/itbook-export.pdf"
+link_text = "Link"
+description = "The modern graduate text (Cambridge University Press, 2025) by the MIT 6.441 instructor and Yihong Wu (Yale): classical coding theorems plus the information-theoretic tools now used in statistics and machine learning. A graduate-level alternative to Cover & Thomas, not a replacement for it as a first text; the authors' free draft PDF is for personal use."
+verified = 2026-10-13

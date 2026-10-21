@@ -1,0 +1,105 @@
+# Resources for: Decision Theory
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "thinking-fast-and-slow"
+title = "Thinking, Fast and Slow"
+authors = "Daniel Kahneman"
+year = "2011"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+description = "The definitive popular account of decades of research on judgment and decision-making: heuristics, biases, prospect theory, and two-systems thinking. ⚠️ Some studies it relies on have not survived replication, notably the social-priming results (Ch. 4) and ego depletion (Ch. 3); Kahneman later conceded he \"placed too much faith in underpowered studies.\" The core heuristics-and-biases and prospect-theory findings have held up much better."
+
+[[groups.items]]
+id = "reconstruction-of-a-train-wreck-how"
+title = "Reconstruction of a Train Wreck: How Priming Research Went off the Rails"
+authors = "Ulrich Schimmack, Moritz Heene & Kamini Kesavan"
+year = "2017"
+type = "article"
+url = "https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/"
+link_text = "Link"
+description = "Statistical audit of the priming studies cited in Ch. 4 of *Thinking, Fast and Slow*, showing they were too underpowered to be credible; Kahneman's reply in the comments accepts the critique. Read right after Kahneman as a lesson in judging evidence."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "prospect-theory-an-analysis-of-decision"
+title = "Prospect Theory: An Analysis of Decision under Risk"
+authors = "Daniel Kahneman & Amos Tversky"
+year = "1979"
+type = "paper"
+marks = ["core"]
+url = "https://www.jstor.org/stable/1914185"
+link_text = "Link"
+description = "The most-cited paper in economics. Introduced loss aversion, reference dependence, and probability weighting. Foundational."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "judgment-under-uncertainty-heuristics"
+title = "Judgment under Uncertainty: Heuristics and Biases"
+authors = "Amos Tversky & Daniel Kahneman"
+year = "1974"
+type = "paper"
+url = "https://www.science.org/doi/10.1126/science.185.4157.1124"
+link_text = "Link"
+description = "The landmark paper cataloging anchoring, availability, and representativeness heuristics."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-foundations-of-statistics"
+title = "The Foundations of Statistics"
+authors = "Leonard Savage"
+year = "1954"
+type = "book"
+description = "The foundational axiomatization of subjective expected utility theory. Dense but historically essential."
+
+[[groups.items]]
+id = "risk-uncertainty-and-profit"
+title = "Risk, Uncertainty and Profit"
+authors = "Frank Knight"
+year = "1921"
+type = "book"
+url = "https://oll.libertyfund.org/titles/knight-risk-uncertainty-and-profit"
+link_text = "Link"
+description = "Introduced the crucial distinction between measurable risk and unmeasurable uncertainty (\"Knightian uncertainty\")."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "theory-of-games-and-economic-behavior-ch"
+title = "Theory of Games and Economic Behavior (Ch. 1 & Appendix)"
+authors = "John von Neumann & Oskar Morgenstern"
+year = "1944"
+type = "book"
+description = "The book that founded game theory. Ch. 1 argues for numerical utility; the axiomatic derivation of expected utility was added as an appendix in the 1947 second edition. Read that appendix for the normative starting point."
+
+[[groups.items]]
+id = "decision-theory-stanford-encyclopedia-of"
+title = "Decision Theory (Stanford Encyclopedia of Philosophy)"
+authors = "Katie Steele & H. Orri Stefánsson"
+year = "2015 (rev. 2025)"
+type = "article"
+marks = ["core"]
+url = "https://plato.stanford.edu/entries/decision-theory/"
+link_text = "Link"
+description = "Free, authoritative overview of normative decision theory: preferences and utility, the von Neumann–Morgenstern and Savage representation theorems, Jeffrey's theory, and challenges such as Allais-type risk attitudes and unawareness. The normative counterweight to this section's mostly behavioral readings."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rational-choice-in-an-uncertain-world"
+title = "Rational Choice in an Uncertain World"
+authors = "Reid Hastie & Robyn Dawes"
+year = "2009"
+type = "book"
+description = "Clear textbook on the psychology of judgment and decision-making. Good companion to Kahneman."
+
+[[groups.items]]
+id = "predictably-irrational"
+title = "Predictably Irrational"
+authors = "Dan Ariely"
+year = "2008"
+type = "book"
+description = "Accessible popular introduction to behavioral anomalies in decision-making. ⚠️ Read critically: a 2012 *PNAS* honesty study Ariely co-authored was retracted in 2021 after evidence its field data were fabricated, and the \"Ten Commandments\" honesty result described in the book failed a 25-lab preregistered replication (2018)."

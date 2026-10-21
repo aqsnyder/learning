@@ -1,0 +1,157 @@
+# Resources for: Genomic Medicine
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "a-programmable-dual-rnaguided-dna"
+title = "A Programmable Dual-RNA–Guided DNA Endonuclease in Adaptive Bacterial Immunity"
+authors = "Jinek, Chylinski, Fonfara, Hauer, Doudna & Charpentier"
+year = "2012"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1126/science.1225829"
+link_text = "Paper"
+description = "The foundational CRISPR-Cas9 paper demonstrating programmable genome editing, launching the gene-editing revolution"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "standards-and-guidelines-for-the"
+title = "Standards and Guidelines for the Interpretation of Sequence Variants"
+authors = "Richards, Aziz, Bale, Bick, Das et al. (ACMG/AMP)"
+year = "2015"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1038/gim.2015.30"
+link_text = "Paper"
+description = "The definitive clinical framework for classifying genetic variants as pathogenic, benign, or uncertain significance"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "deep-medicine-how-artificial"
+title = "Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again"
+authors = "Eric Topol"
+year = "2019"
+type = "book"
+access = "paid"
+level = "beginner"
+url = "https://www.hachettebookgroup.com/titles/eric-topol/deep-medicine/9781541644649/?lens=basic-books"
+link_text = "Book"
+description = "Compelling vision of how AI and genomics converge to transform clinical practice and restore the human side of medicine"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-new-initiative-on-precision-medicine"
+title = "A New Initiative on Precision Medicine"
+authors = "Collins & Varmus"
+year = "2015"
+type = "paper"
+url = "https://doi.org/10.1056/NEJMp1500523"
+link_text = "Paper"
+description = "NEJM perspective from NIH and NCI directors laying out the vision for the U.S. Precision Medicine Initiative"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "finding-the-missing-heritability-of"
+title = "Finding the Missing Heritability of Complex Diseases"
+authors = "Manolio, Collins, Cox et al."
+year = "2009"
+type = "paper"
+url = "https://doi.org/10.1038/nature08494"
+link_text = "Paper"
+description = "Landmark review of the \"missing heritability\" problem: why GWAS-identified variants explain only a small share of the heritability of complex diseases, and strategies for finding the rest"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "clinvar"
+title = "ClinVar"
+authors = "NCBI"
+year = "2013–"
+type = "database"
+url = "https://www.ncbi.nlm.nih.gov/clinvar/"
+link_text = "Database"
+description = "Public archive of clinically interpreted genetic variants and their relationships to human health"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pharmgkb-pharmacogenomics-knowledgebase"
+title = "PharmGKB — Pharmacogenomics Knowledgebase (now served at ClinPGx)"
+authors = "Stanford University"
+year = "2000–"
+type = "database"
+url = "https://www.clinpgx.org/"
+link_text = "Database"
+description = "Curated resource linking genetic variation to drug response, essential for pharmacogenomics; pharmgkb.org now redirects to the ClinPGx platform"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "how-crispr-lets-us-edit-our-dna"
+title = "How CRISPR Lets Us Edit Our DNA"
+authors = "Jennifer Doudna"
+year = "2015"
+type = "lecture"
+label = "Talk"
+url = "https://www.ted.com/talks/jennifer_doudna_how_crispr_lets_us_edit_our_dna"
+link_text = "TED Talk"
+description = "Accessible overview of CRISPR technology and its implications from one of its co-discoverers"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "nih-all-of-us-research-program"
+title = "NIH All of Us Research Program"
+authors = "National Institutes of Health"
+year = "2018–"
+type = "course"
+label = "Program"
+url = "https://allofus.nih.gov/"
+link_text = "Program"
+description = "Million-person cohort building a diverse genomic and health dataset to accelerate precision medicine research"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "genome-editing-with-crisprcas-nucleases"
+title = "Genome Editing with CRISPR–Cas Nucleases, Base Editors, Transposases and Prime Editors"
+authors = "Anzalone, A. V., Koblan, L. W. & Liu, D. R."
+year = "2020"
+type = "paper"
+label = "Review"
+marks = ["core"]
+url = "https://doi.org/10.1038/s41587-020-0561-9"
+link_text = "Nat. Biotechnol."
+description = "The map of the editing toolbox beyond Cas9 cutting — base editors, prime editors, transposases — with the trade-offs in precision, cargo size, and delivery that decide which one a therapy can actually use"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fda-approves-first-gene-therapies-to"
+title = "FDA Approves First Gene Therapies to Treat Patients with Sickle Cell Disease"
+authors = "U.S. Food and Drug Administration"
+year = "2023"
+type = "article"
+label = "Announcement"
+url = "https://www.fda.gov/news-events/press-announcements/fda-approves-first-gene-therapies-treat-patients-sickle-cell-disease"
+link_text = "FDA"
+description = "The 8 December 2023 approval of Casgevy and Lyfgenia — Casgevy being \"the first FDA-approved therapy utilizing CRISPR/Cas9\" — and a short lesson in how a regulator frames evidence, indication, and risk"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "exagamglogene-autotemcel-for-severe"
+title = "Exagamglogene Autotemcel for Severe Sickle Cell Disease"
+authors = "Frangoul, H., Locatelli, F., Sharma, A. et al. (… Grupp, S. A.)"
+year = "2024"
+type = "paper"
+url = "https://doi.org/10.1056/NEJMoa2309676"
+link_text = "NEJM"
+description = "The pivotal trial behind Casgevy: *ex vivo* CRISPR editing of a patient's own haematopoietic stem cells to switch fetal haemoglobin back on, which eliminated vaso-occlusive crises in most recipients"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "patient-specific-in-vivo-gene-editing-to"
+title = "Patient-Specific In Vivo Gene Editing to Treat a Rare Genetic Disease"
+authors = "Musunuru, K. et al. (CHOP & Penn)"
+year = "2025"
+type = "paper"
+url = "https://doi.org/10.1056/NEJMoa2504747"
+link_text = "NEJM"
+description = "\"Baby KJ\": a bespoke base-editing therapy for one infant's CPS1 deficiency, designed, manufactured, and dosed by lipid nanoparticle within about six months — the first personalized *in vivo* CRISPR therapy"
+verified = 2026-10-13

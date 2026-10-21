@@ -1,0 +1,126 @@
+# Resources for: Foundations of Philosophy
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **Next:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md) is meant to be taken right after this section. It picks up Hume's problem of induction and the Hume-vs-Bayes notebook (Practice 5) and asks what makes a claim scientific.
+'''
+
+[[groups.items]]
+id = "think-a-compelling-introduction-to"
+title = "Think: A Compelling Introduction to Philosophy"
+authors = "Simon Blackburn"
+year = "1999"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+description = "The best single-volume introduction to philosophy. Covers knowledge, mind, free will, ethics, and God with clarity and wit. Start here."
+
+[[groups.items]]
+id = "epistemology"
+title = "Epistemology"
+authors = "SEP"
+type = "encyclopedia"
+marks = ["core"]
+url = "https://plato.stanford.edu/entries/epistemology/"
+link_text = "SEP"
+description = "Comprehensive entry on the nature, sources, and limits of knowledge. The gold-standard reference."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "what-does-it-all-mean-a-very-short"
+title = "What Does It All Mean? A Very Short Introduction to Philosophy"
+authors = "Thomas Nagel"
+year = "1987"
+type = "book"
+description = "Ultra-concise introduction — 101 pages covering the big questions. Good warmup before Blackburn."
+
+[[groups.items]]
+id = "meditations-on-first-philosophy"
+title = "Meditations on First Philosophy"
+authors = "René Descartes"
+year = "1641"
+type = "book"
+url = "https://www.earlymoderntexts.com/assets/pdfs/descartes1641.pdf"
+link_text = "Free"
+description = "The foundational text of modern philosophy. Introduces radical doubt and the cogito (\"I think, therefore I am\"). The free link is Jonathan Bennett's lightly modernized translation (Early Modern Texts)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "logic-and-ontology"
+title = "Logic and Ontology"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/logic-ontology/"
+link_text = "SEP"
+description = "Thomas Hofweber's entry on how logic relates to ontology (the study of what exists): ontological commitment, whether logic is neutral about what there is, Carnap's rejection of ontology. An advanced metaphysics entry, not a reasoning primer — *forall x* below is the actual toolkit. Optional."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-critical-thinking"
+title = "Introduction to Critical Thinking"
+authors = "Wireless Philosophy (Wi-Phi)"
+type = "video"
+url = "https://www.youtube.com/playlist?list=PLtKNX4SfKpzX_bhh4LOEWEGy3pkLmFDmk"
+link_text = "YouTube"
+description = "35 short animated lessons from Wi-Phi on the basics of good reasoning — what arguments are and how to evaluate them. The fastest on-ramp before formal logic."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "forall-x-calgary-a-free-and-open"
+title = "forall x: Calgary — A Free and Open Introduction to Formal Logic"
+authors = "P. D. Magnus, Tim Button, Aaron Thomas-Bolduc, Richard Zach"
+year = "2023"
+type = "book"
+access = "free"
+level = "beginner"
+url = "https://forallx.openlogicproject.org/"
+link_text = "Free"
+description = "Free, CC-licensed textbook on truth-functional and first-order logic: validity, truth tables, natural deduction, quantifiers. The formal reasoning toolkit this section promises; work through truth-functional logic and the basics of first-order logic, in parallel with later sections if needed."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "1000-word-philosophy-ethics-essays"
+title = "1000-Word Philosophy — Ethics essays: \"Consequentialism and Utilitarianism\", \"Kantian Deontology\", \"Virtue Ethics\", \"Social Contract Theory\""
+authors = "Shane Gronholz; Andrew Chapman; David Merry; David Antonini"
+type = "article"
+label = "Essays"
+url = "https://1000wordphilosophy.com/ethics/"
+link_text = "Link"
+description = "Short, free introductions to the main normative theories. The curriculum otherwise has no ethics primer before Section 06 — these give you the vocabulary that AI-ethics and alignment debates assume."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "meno"
+title = "Meno"
+authors = "Plato"
+year = "~380 BC"
+type = "paper"
+label = "Dialogue"
+url = "https://www.gutenberg.org/ebooks/1643"
+link_text = "Free"
+description = "Classic dialogue on knowledge vs. true belief. Introduces the paradox of inquiry."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an-enquiry-concerning-human"
+title = "An Enquiry Concerning Human Understanding"
+authors = "David Hume"
+year = "1748"
+type = "book"
+url = "https://www.gutenberg.org/ebooks/9662"
+link_text = "Free"
+description = "Empiricism, causation, the problem of induction. Read at least Sections 2-5 and 7 for foundations."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-philosophy"
+title = "Introduction to Philosophy"
+authors = "University of Edinburgh"
+type = "course"
+url = "https://www.coursera.org/learn/philosophy"
+link_text = "Coursera"
+description = "Broad intro covering epistemology, metaphysics, philosophy of mind, and ethics. Good video companion."
+verified = 2026-10-13

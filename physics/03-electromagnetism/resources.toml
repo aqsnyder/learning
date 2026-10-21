@@ -1,0 +1,75 @@
+# Resources for: Electromagnetism
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "introduction-to-electrodynamics-5th-ed"
+title = "Introduction to Electrodynamics (5th ed., 2023)"
+authors = "David J. Griffiths"
+year = "2023"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "the-feynman-lectures-on-physics-vol-2"
+title = "The Feynman Lectures on Physics, Vol. 2"
+authors = "Feynman, Leighton, Sands"
+type = "book"
+marks = ["core"]
+url = "https://www.feynmanlectures.caltech.edu/"
+link_text = "feynmanlectures.caltech.edu"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fundamentals-of-physics-ii-yale-phys-201"
+title = "Fundamentals of Physics II (Yale PHYS 201, 2010)"
+authors = "Ramamurti Shankar"
+year = "2010"
+type = "course"
+marks = ["core"]
+url = "https://oyc.yale.edu/physics/phys-201"
+link_text = "Open Yale Courses"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "electricity-and-magnetism"
+title = "Electricity and Magnetism"
+authors = "Purcell & Morin"
+type = "book"
+
+[[groups.items]]
+id = "divergence-and-curl-3blue1brown"
+title = "Divergence and Curl — 3Blue1Brown"
+type = "video"
+url = "https://www.youtube.com/watch?v=rB83DpBJQsE"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "classical-electrodynamics"
+title = "Classical Electrodynamics"
+authors = "J.D. Jackson"
+type = "book"
+
+[[groups.items]]
+id = "electromagnetics-vol-1-2018-vol-2-2020"
+title = "Electromagnetics, Vol. 1 (2018) & Vol. 2 (2020)"
+authors = "Steven W. Ellingson (open textbook, CC BY-SA)"
+year = "2020"
+type = "book"
+url = "https://doi.org/10.21061/electromagnetics-vol-1"
+link_text = "Vol. 1"
+more_links = [{ text = "Vol. 2", url = "https://doi.org/10.21061/electromagnetics-vol-2" }]
+verified = 2026-10-13
+
+[[groups.items]]
+id = "electromagnetic-fields-and-energy"
+title = "Electromagnetic Fields and Energy"
+authors = "Hermann A. Haus & James R. Melcher"
+year = "1989"
+type = "book"
+url = "https://ocw.mit.edu/courses/res-6-001-electromagnetic-fields-and-energy-spring-2008/"
+link_text = "MIT OCW"
+verified = 2026-10-13

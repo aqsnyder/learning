@@ -1,0 +1,90 @@
+# Resources for: Statistics and Experimental Design for Biology
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "modern-statistics-for-modern-biology"
+title = "Modern Statistics for Modern Biology"
+authors = "Susan Holmes, Wolfgang Huber"
+year = "2019"
+type = "book"
+label = "Textbook"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://www.huber.embl.de/msmb/"
+link_text = "Free online"
+description = "The anchor of this section and the best statistics book written for biological data: multiple testing, experimental design, clustering, count models, robustness, with R/Bioconductor code throughout. Free and CC BY-NC-SA online; also Cambridge University Press, ISBN 9781108705295. (Also listed in Section 04, where it covers the inference half of bioinformatics; this section is its home)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "controlling-the-false-discovery-rate-a"
+title = "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing"
+authors = "Yoav Benjamini, Yosef Hochberg"
+year = "1995"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1111/j.2517-6161.1995.tb02031.x"
+link_text = "J. R. Stat. Soc. B"
+description = "The paper that made genomics possible to analyse. Twelve pages, almost no machinery, and it reframes the problem: stop trying to make no false claims, and start controlling the *fraction* of your claims that are false. J. R. Stat. Soc. B 57(1):289–300"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "why-most-published-research-findings-are"
+title = "Why Most Published Research Findings Are False"
+authors = "John P. A. Ioannidis"
+year = "2005"
+type = "paper"
+url = "https://doi.org/10.1371/journal.pmed.0020124"
+link_text = "PLoS Medicine"
+description = "The replication crisis stated as arithmetic: positive predictive value as a function of prior odds, power, significance level, and bias. The title is a provocation but the model is simple enough to re-derive in twenty lines of code — do that rather than argue with it. PLoS Med. 2(8):e124"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "tackling-the-widespread-and-critical"
+title = "Tackling the Widespread and Critical Impact of Batch Effects in High-Throughput Data"
+authors = "Jeffrey T. Leek, Robert B. Scharpf, Héctor Corrada Bravo, David Simcha, Benjamin Langmead, W. Evan Johnson, Donald Geman, Keith Baggerly, Rafael A. Irizarry"
+year = "2010"
+type = "paper"
+label = "Review"
+url = "https://doi.org/10.1038/nrg2825"
+link_text = "Nat. Rev. Genet."
+description = "What processing date, reagent lot, technician and instrument do to high-throughput data, with published examples where the batch structure explained more variance than the biology. The one paper here that will change how you *run* an experiment rather than how you analyse it. Nat. Rev. Genet. 11:733–739"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "moderated-estimation-of-fold-change-and"
+title = "Moderated Estimation of Fold Change and Dispersion for RNA-seq Data with DESeq2"
+authors = "Michael I. Love, Wolfgang Huber, Simon Anders"
+year = "2014"
+type = "paper"
+url = "https://doi.org/10.1186/s13059-014-0550-8"
+link_text = "Genome Biology"
+description = "The standard count-based differential-expression method, and a readable treatment of the two ideas that make small-*n* omics work at all: shrinkage of dispersion estimates across genes, and shrinkage of fold-change estimates for low-count genes. Genome Biol. 15:550"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-asa-statement-on-p-values-context"
+title = "The ASA Statement on *p*-Values: Context, Process, and Purpose"
+authors = "Ronald L. Wasserstein, Nicole A. Lazar"
+year = "2016"
+type = "article"
+label = "Statement"
+url = "https://doi.org/10.1080/00031305.2016.1154108"
+link_text = "The American Statistician"
+description = "Six principles, two pages, from the American Statistical Association. Read it before you next write \"significant\", and note which of the six your own habits violate. Am. Stat. 70(2):129–133"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "statistics-for-biologists-including-the"
+title = "Statistics for Biologists — including the *Points of Significance* columns"
+authors = "Martin Krzywinski, Naomi Altman et al. (*Nature Methods*)"
+year = "2013–"
+type = "website"
+label = "Collection"
+url = "https://www.nature.com/collections/qghhqm"
+link_text = "Nature collection"
+description = "Free-to-read one-page columns, each with one figure that does the explaining. The ones to read first: \"Importance of being uncertain\" ([10.1038/nmeth.2613](https://doi.org/10.1038/nmeth.2613)), \"Error bars\" ([10.1038/nmeth.2659](https://doi.org/10.1038/nmeth.2659)), \"Significance, *P* values and *t*-tests\" ([10.1038/nmeth.2698](https://doi.org/10.1038/nmeth.2698)), \"Power and sample size\" ([10.1038/nmeth.2738](https://doi.org/10.1038/nmeth.2738)), \"Comparing samples—part II\" on multiple testing ([10.1038/nmeth.2900](https://doi.org/10.1038/nmeth.2900)), \"Designing comparative experiments\" ([10.1038/nmeth.2974](https://doi.org/10.1038/nmeth.2974)), \"Analysis of variance and blocking\" ([10.1038/nmeth.3005](https://doi.org/10.1038/nmeth.3005)) and \"Replication\" ([10.1038/nmeth.3091](https://doi.org/10.1038/nmeth.3091))"
+verified = 2026-10-13

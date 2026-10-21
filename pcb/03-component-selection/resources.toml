@@ -1,0 +1,83 @@
+# Resources for: Component Selection and Sourcing
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** kicad-cli BOM export ([Section 09](../09-dfm-and-fabrication/README.md)) for the mini-project; for precision passives (resistor tempco, thermocouple effects, dielectric absorption), Section 7 of the *Op Amp Applications Handbook* ([Section 12](../12-analog-mixed-signal-and-precision-measurement/README.md)).
+'''
+
+[[groups.items]]
+id = "digikey-mouser-parametric-search"
+title = "DigiKey / Mouser parametric search"
+type = "tool"
+label = "Web Tool"
+marks = ["core"]
+url = "https://www.digikey.com/"
+link_text = "digikey.com"
+more_links = [{ text = "mouser.com", url = "https://www.mouser.com/" }]
+description = "Industry standard component distributors"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "octopart"
+title = "Octopart"
+type = "tool"
+label = "Web Tool"
+url = "https://octopart.com/"
+link_text = "octopart.com"
+description = "Cross-distributor search and availability"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "jlcpcb-parts-library"
+title = "JLCPCB Parts Library"
+type = "tool"
+label = "Web Tool"
+url = "https://jlcpcb.com/parts"
+link_text = "jlcpcb.com/parts"
+description = "For JLCPCB assembly service"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "phil-s-lab-component-selection-guides"
+title = "Phil's Lab component selection guides"
+type = "video"
+url = "https://www.youtube.com/@PhilsLab"
+link_text = "youtube.com/@PhilsLab"
+description = "Practical selection walkthrough"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "jedec-standards-overview"
+title = "JEDEC standards overview"
+type = "docs"
+label = "Reference"
+description = "Package naming conventions (QFP, BGA, QFN, etc.)"
+
+[[groups.items]]
+id = "design-for-supply-chain"
+title = "Design for Supply Chain"
+type = "concept"
+marks = ["core"]
+description = "Choosing components that are available and not sole-sourced"
+
+[[groups.items]]
+id = "temperature-and-voltage-variation-of"
+title = "Temperature and Voltage Variation of Ceramic Capacitors, or Why Your 4.7µF Capacitor Becomes a 0.33µF Capacitor (Maxim AN5527, 2012)"
+year = "2012"
+type = "app-note"
+url = "https://www.analog.com/en/resources/technical-articles/temperature-and-voltage-variation-ceramic-capacitor.html"
+link_text = "analog.com"
+description = "Measured DC-bias and temperature derating of real MLCCs. A 4.7 µF, 16 V, 0805 X7R keeps about 1.5 µF (33 %) at 12 V; in the same test a 1206 kept 73 % and a 1210 about 88 %, with no further gain from larger cases. A 4.7 µF, 6.3 V, 0603 Y5V falls to 0.33 µF at 5 V. The key point: X7R/X5R codes specify temperature behaviour only, with no voltage-coefficient limit, so specify manufacturer part numbers from their bias curves, not dielectric codes. Now hosted by Analog Devices; the page names no author."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "j-std-048a-notification-standard-for"
+title = "J-STD-048A Notification Standard for Product Discontinuance · J-STD-046A Customer Notification Standard for Product/Process Changes by Electronic Product Suppliers (both 2025)"
+type = "standard"
+url = "https://www.jedec.org/node/8470"
+link_text = "J-STD-048A"
+more_links = [{ text = "J-STD-046A", url = "https://www.jedec.org/node/8587" }]
+description = "The joint industry standards (048A is JEDEC/ECIA/IPC) that define what an end-of-life notice and a product/process change notice (PCN) must tell you. 048A supersedes JESD48; its predecessor JESD48C (2011) required at least 6 months from notice for final orders and 12 months for final shipments, so check 048A's current windows. Free from JEDEC with registration. Use them to set your last-time-buy and redesign triggers."
+verified = 2026-10-13

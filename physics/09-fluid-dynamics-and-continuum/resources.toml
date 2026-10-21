@@ -1,0 +1,86 @@
+# Resources for: Fluid Dynamics and Continuum Mechanics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "fluid-mechanics-7th-ed-2024"
+title = "Fluid Mechanics (7th ed., 2024)"
+authors = "Kundu, Cohen, Dowling & Capecelatro"
+year = "2024"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "the-feynman-lectures-on-physics"
+title = "The Feynman Lectures on Physics — Elasticity and Fluid Flow chapters (Vol. 2, Ch. 38–41)"
+type = "book"
+url = "https://www.feynmanlectures.caltech.edu/"
+link_text = "feynmanlectures.caltech.edu"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an-introduction-to-fluid-dynamics"
+title = "An Introduction to Fluid Dynamics"
+authors = "G.K. Batchelor"
+type = "book"
+
+[[groups.items]]
+id = "mit-18-085-computational-science-and"
+title = "MIT 18.085 Computational Science and Engineering"
+authors = "Gilbert Strang"
+type = "course"
+url = "https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/"
+link_text = "MIT OCW"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "elementary-fluid-dynamics"
+title = "Elementary Fluid Dynamics"
+authors = "D.J. Acheson"
+type = "book"
+
+[[groups.items]]
+id = "fluid-mechanics"
+title = "Fluid Mechanics"
+authors = "Landau & Lifshitz"
+type = "book"
+
+[[groups.items]]
+id = "data-driven-science-and-engineering"
+title = "Data-Driven Science and Engineering"
+authors = "Brunton & Kutz"
+type = "book"
+marks = ["core"]
+url = "https://databookuw.com/"
+link_text = "databookuw.com"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "national-committee-for-fluid-mechanics"
+title = "National Committee for Fluid Mechanics Films"
+authors = "Ascher Shapiro et al."
+year = "1961–1969"
+type = "video"
+url = "http://web.mit.edu/hml/ncfmf.html"
+link_text = "MIT"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cfd-python-12-steps-to-navierstokes"
+title = "CFD Python: 12 Steps to Navier–Stokes — Lorena A. Barba & Gilbert F. Forsyth (2013; JOSE 2018)"
+type = "course"
+url = "https://github.com/barbagroup/CFDPython"
+link_text = "GitHub"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-heat-transfer-textbook-6th-ed-2024"
+title = "A Heat Transfer Textbook (6th ed., 2024)"
+authors = "John H. Lienhard V & John H. Lienhard IV"
+year = "2024"
+type = "book"
+url = "https://ahtt.mit.edu/"
+link_text = "ahtt.mit.edu (free PDF)"
+verified = 2026-10-13

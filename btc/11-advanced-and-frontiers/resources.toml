@@ -1,0 +1,250 @@
+# Resources for: Advanced Topics and Frontiers
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+title = "Tracking the Frontier"
+
+[[groups.items]]
+id = "bitcoin-optech-topics-index"
+title = "Bitcoin Optech Topics index"
+type = "website"
+marks = ["core"]
+url = "https://bitcoinops.org/en/topics/"
+link_text = "bitcoinops.org/en/topics"
+description = "~160 topic pages, each with a summary, primary sources, and every newsletter mention in date order — the fastest way to check the current status of anything in this section"
+verified = 2026-10-13
+
+[[groups]]
+title = "Taproot and Schnorr (2021 Upgrade)"
+
+[[groups.items]]
+id = "bip-340-schnorr-signatures"
+title = "BIP 340: Schnorr Signatures"
+type = "standard"
+marks = ["core"]
+url = "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki"
+link_text = "BIP 340"
+description = "Schnorr signature scheme for Bitcoin"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-341-taproot"
+title = "BIP 341: Taproot"
+type = "standard"
+marks = ["core"]
+url = "https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki"
+link_text = "BIP 341"
+description = "SegWit v1 spending rules, Merkleized script trees"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-342-tapscript"
+title = "BIP 342: Tapscript"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki"
+link_text = "BIP 342"
+description = "Script validation rules for Taproot"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learn-me-a-bitcoin-taproot"
+title = "Learn Me A Bitcoin: Taproot"
+type = "website"
+url = "https://learnmeabitcoin.com/technical/upgrades/taproot/"
+link_text = "learnmeabitcoin.com"
+description = "Visual explanations of Taproot concepts: tweaked keys, script trees, key-path and script-path spends, worked examples"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "optech-schnorr-taproot-workshop"
+title = "Optech Schnorr/Taproot workshop"
+type = "practice"
+url = "https://github.com/bitcoinops/taproot-workshop"
+link_text = "GitHub"
+description = "Jupyter notebooks (runnable on Google Colab) built on Bitcoin Core's Python test framework: elliptic-curve math, tagged hashes, Schnorr, MuSig, taptweak, tapscript, taptrees, and a degrading-multisig case study"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-327-musig2"
+title = "BIP 327: MuSig2"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki"
+link_text = "BIP 327"
+description = "n-of-n Schnorr multisignatures that look like an ordinary single-key Taproot spend. Deployed: used in Lightning tooling (e.g. Loop, simple taproot channels), and Bitcoin Core parses `musig()` descriptors (BIP 390)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "frost-threshold-signatures"
+title = "FROST threshold signatures"
+type = "concept"
+url = "https://bitcoinops.org/en/topics/threshold-signature/"
+link_text = "Optech topic"
+description = "k-of-n Schnorr signing that still produces one ordinary signature. A FROST signing BIP was proposed in 2024 and the ChillDKG key-generation protocol is in draft; neither is in the BIPs repository yet, though k-of-n signing devices (Frostsnap) shipped in 2025"
+verified = 2026-10-13
+
+[[groups]]
+title = "Covenant Proposals"
+
+[[groups.items]]
+id = "opctv-bip-119-checktemplateverify"
+title = "OP_CTV (BIP 119: CheckTemplateVerify)"
+type = "concept"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki"
+link_text = "BIP 119"
+description = "Transaction covenants — restricting how coins can be spent. BIP status Draft; not activated. Activation is still being debated (a December 2025 meeting discussed conservative BIP 9 parameters), often paired with CSFS (BIP 348)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "opcat-in-tapscript-bip-347"
+title = "OP_CAT in Tapscript (BIP 347)"
+type = "concept"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0347.mediawiki"
+link_text = "BIP 347"
+description = "Re-enabling concatenation for advanced scripts. The spec is marked Complete in the BIPs repository, but it has not been activated"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "vaults"
+title = "Vaults"
+type = "concept"
+url = "https://bitcoinops.org/en/topics/vaults/"
+link_text = "Optech topic"
+description = "Time-delayed spending for security. OP_VAULT (BIP 345) is Closed; OP_CHECKCONTRACTVERIFY (BIP 443) is its proposed replacement, and CTV-only vault designs are also being explored"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-optech-covenants-topic"
+title = "Bitcoin Optech: Covenants topic"
+type = "website"
+url = "https://bitcoinops.org/en/topics/covenants/"
+link_text = "Topic"
+description = "The maintained overview of covenant proposals and their history — CTV, CSFS, APO (BIP 118), OP_CAT, OP_VAULT, TXHASH (BIP 346), OP_TEMPLATEHASH (BIP 446), BIP 448 — with links to each debate. Read this before any single proposal"
+verified = 2026-10-13
+
+[[groups]]
+title = "Other Open Soft-Fork Proposals"
+
+[[groups.items]]
+id = "bip-54-consensus-cleanup"
+title = "BIP 54: Consensus Cleanup"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0054.md"
+link_text = "BIP 54"
+description = "Bundles fixes for long-standing consensus bugs: the timewarp attack, worst-case slow-to-validate blocks, 64-byte-transaction Merkle weaknesses, and duplicate transactions. Spec Complete (2025); not activated"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-optech-quantum-resistance"
+title = "Bitcoin Optech: Quantum resistance"
+type = "website"
+url = "https://bitcoinops.org/en/topics/quantum-resistance/"
+link_text = "Topic"
+description = "Where post-quantum planning stands: BIP 360 (Pay-to-Merkle-Root, a Taproot-like output without the key-path spend; Draft) and BIP 361 (a phased sunset of legacy ECDSA/Schnorr signatures; Draft, 2026). Useful for separating the real long-term risk from the hype"
+verified = 2026-10-13
+
+[[groups]]
+title = "Scaling and Sidechains"
+
+[[groups.items]]
+id = "fedimint"
+title = "Fedimint"
+type = "concept"
+url = "https://github.com/fedimint/fedimint"
+link_text = "GitHub"
+description = "Federated Chaumian e-cash on Bitcoin"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "liquid-network"
+title = "Liquid Network"
+type = "concept"
+description = "Blockstream's federated sidechain"
+
+[[groups.items]]
+id = "ark"
+title = "Ark"
+type = "concept"
+url = "https://ark-protocol.org/"
+link_text = "ark-protocol.org"
+description = "Off-chain UTXO sharing protocol: a server coordinates batches of shared \"virtual UTXOs\" that users can always exit on-chain without it. Implementations: Arkade (Ark Labs, launched late 2025) and Bark (Second, on mainnet since mid-2026) — see the [Optech topic](https://bitcoinops.org/en/topics/ark/)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cashu-nuts-specification"
+title = "Cashu (NUTs specification)"
+type = "standard"
+url = "https://github.com/cashubtc/nuts"
+link_text = "GitHub"
+description = "Chaumian ecash with a single custodial mint (vs. Fedimint's federation); tokens are minted and melted over Lightning. Strong payer privacy in exchange for trusting the mint"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitvm-2023-and-bitvm2-2024"
+title = "BitVM (2023) and BitVM2 (2024)"
+year = "2024"
+type = "paper"
+url = "https://bitvm.org/"
+link_text = "bitvm.org"
+description = "Robin Linus et al.: arbitrary computation verified on Bitcoin through fraud proofs, without a soft fork; BitVM2 applies it to bridges where safety needs only one honest signer from setup. Research-stage — read the papers, not the marketing"
+verified = 2026-10-13
+
+[[groups]]
+title = "Ordinals and Inscriptions"
+
+[[groups.items]]
+id = "ordinal-theory"
+title = "Ordinal Theory"
+type = "concept"
+url = "https://docs.ordinals.com/"
+link_text = "docs.ordinals.com"
+description = "Satoshi numbering and tracking (Ordinal Theory Handbook, Casey Rodarmor et al.)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "inscriptions"
+title = "Inscriptions"
+type = "concept"
+description = "Data embedded in Bitcoin transactions (BRC-20, etc.). The relay-policy fight this triggered is covered in Section 06"
+
+[[groups.items]]
+id = "runes"
+title = "Runes"
+type = "standard"
+url = "https://docs.ordinals.com/runes/specification.html"
+link_text = "Specification"
+description = "Fungible tokens carried in OP_RETURN \"runestones\"; the protocol activated at block 840,000, the 2024 halving block"
+verified = 2026-10-13
+
+[[groups]]
+title = "Privacy Advances"
+
+[[groups.items]]
+id = "silent-payments-bip-352"
+title = "Silent Payments (BIP 352)"
+type = "concept"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki"
+link_text = "BIP 352"
+description = "Reusable stealth addresses that need no notification transaction. BIP Complete; wallet support is growing (e.g. Sparrow 2.5 receiving, 2026), libsecp256k1 0.8 ships a silent-payments module, and Bitcoin Core support is being merged (2026)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "payjoin-improvements-bip-77-async"
+title = "Payjoin improvements (BIP 77 Async Payjoin, \"v2\")"
+type = "concept"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0077.md"
+link_text = "BIP 77"
+description = "Enhanced collaborative transaction privacy: an untrusted \"directory\" server relays encrypted messages, so receivers no longer need to run a public endpoint. Draft; reference implementation in [rust-payjoin](https://github.com/payjoin/rust-payjoin)"
+verified = 2026-10-13
+
+[[groups]]
+title = "Mining"
+
+[[groups.items]]
+id = "stratum-v2"
+title = "Stratum V2"
+type = "concept"
+url = "https://github.com/stratum-mining/sv2-spec"
+link_text = "Spec"
+description = "Next-gen mining pool protocol: encrypted (Noise) and binary, with a Job Declaration protocol that lets miners build their own block templates. Bitcoin Core 30 added an experimental IPC mining interface for Stratum v2 template providers"
+verified = 2026-10-13

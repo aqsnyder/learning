@@ -1,0 +1,91 @@
+# Resources for: Bitcoin Protocol Fundamentals
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "mastering-bitcoin-full-book"
+title = "Mastering Bitcoin (full book)"
+authors = "Andreas Antonopoulos and David Harding"
+type = "book"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoinbook/bitcoinbook"
+link_text = "bitcoinbook"
+description = "THE technical Bitcoin reference (3rd edition, Dec 2023; covers Taproot)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learn-me-a-bitcoin"
+title = "Learn Me A Bitcoin"
+authors = "Greg Walker"
+type = "website"
+url = "https://learnmeabitcoin.com/"
+link_text = "learnmeabitcoin.com"
+description = "Interactive exploration of blocks, transactions, Merkle trees"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "grokking-bitcoin"
+title = "Grokking Bitcoin"
+authors = "Kalle Rosenbaum"
+type = "book"
+access = "free"
+level = "beginner"
+marks = ["core"]
+url = "https://rosenbaum.se/book/"
+link_text = "rosenbaum.se"
+description = "Best visual explanations of the protocol (Manning, 2019; free to read online under CC BY-NC-SA)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "but-how-does-bitcoin-actually-work"
+title = "But how does bitcoin actually work?"
+authors = "3Blue1Brown"
+type = "video"
+url = "https://www.youtube.com/watch?v=bBC-nXj3Ng4"
+link_text = "YouTube"
+description = "High-level protocol overview"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-developer-guide"
+title = "Bitcoin Developer Guide"
+type = "docs"
+label = "Documentation"
+url = "https://developer.bitcoin.org/devguide/"
+link_text = "developer.bitcoin.org"
+description = "Community-written guide from bitcoin.org — not an official spec, and no longer maintained (© 2009–2020; its RPC reference stops at Bitcoin Core 0.21). Clear conceptual reference, but check BIPs for SegWit/Taproot details"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "programming-bitcoin"
+title = "Programming Bitcoin"
+authors = "Jimmy Song"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://github.com/jimmysong/programmingbitcoin"
+link_text = "GitHub"
+description = "Build a Bitcoin library from scratch in Python (O'Reilly, 2019; pre-Taproot)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "utxo-model"
+title = "UTXO model"
+type = "concept"
+description = "How Bitcoin tracks ownership (vs account model)"
+
+[[groups.items]]
+id = "merkle-trees"
+title = "Merkle trees"
+type = "concept"
+description = "How transactions are efficiently verified"
+
+[[groups.items]]
+id = "block-structure"
+title = "Block structure"
+type = "concept"
+description = "Header, nonce, difficulty target, timestamp"

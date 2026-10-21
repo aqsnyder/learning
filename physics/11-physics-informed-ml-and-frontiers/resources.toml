@@ -1,0 +1,174 @@
+# Resources for: Physics-Informed ML and Frontiers
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "neural-ordinary-differential-equations"
+title = "Neural Ordinary Differential Equations"
+authors = "Chen et al."
+year = "2018"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/1806.07366"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "physics-informed-neural-networks-raissi"
+title = "Physics-Informed Neural Networks — Raissi, Perdikaris & Karniadakis (J. Comput. Phys., 2019)"
+year = "2019"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1016/j.jcp.2018.10.045"
+link_text = "DOI"
+more_links = [{ text = "arXiv preprint (2017)", url = "https://arxiv.org/abs/1711.10561" }]
+verified = 2026-10-13
+
+[[groups.items]]
+id = "hamiltonian-neural-networks"
+title = "Hamiltonian Neural Networks"
+authors = "Greydanus, Dzamba & Yosinski"
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1906.01563"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "lagrangian-neural-networks"
+title = "Lagrangian Neural Networks"
+authors = "Cranmer, Greydanus & others"
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2003.04630"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "physics-informed-machine-learning-review"
+title = "Physics-Informed Machine Learning (review)"
+authors = "Karniadakis et al."
+year = "2021"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1038/s42254-021-00314-5"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "highly-accurate-protein-structure"
+title = "Highly Accurate Protein Structure Prediction with AlphaFold"
+authors = "Jumper et al."
+year = "2021"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-021-03819-2"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "message-passing-neural-pde-solvers"
+title = "Message Passing Neural PDE Solvers"
+authors = "Brandstetter, Worrall & Welling"
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2202.03376"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learning-to-simulate-complex-physics"
+title = "Learning to Simulate Complex Physics with Graph Networks"
+authors = "Sanchez-Gonzalez et al."
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2002.09405"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "e-n-equivariant-graph-neural-networks"
+title = "E(n) Equivariant Graph Neural Networks"
+authors = "Satorras, Hoogeboom & Welling"
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2102.09844"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "data-driven-science-and-engineering"
+title = "Data-Driven Science and Engineering"
+authors = "Brunton & Kutz"
+type = "book"
+url = "https://databookuw.com/"
+link_text = "databookuw.com"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-new-kind-of-science"
+title = "A New Kind of Science"
+authors = "Stephen Wolfram"
+year = "2002"
+type = "book"
+url = "https://www.wolframscience.com/nks/"
+link_text = "wolframscience.com"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-wolfram-physics-project-stephen"
+title = "The Wolfram Physics Project — Stephen Wolfram (2020+; speculative, outside mainstream physics)"
+type = "website"
+label = "Project"
+url = "https://www.wolframphysics.org/"
+link_text = "wolframphysics.org"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fourier-neural-operator-for-parametric"
+title = "Fourier Neural Operator for Parametric Partial Differential Equations"
+authors = "Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya, Stuart & Anandkumar"
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2010.08895"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "deeponet-learning-nonlinear-operators-lu"
+title = "DeepONet: Learning Nonlinear Operators — Lu et al. (arXiv 2019; Nature Machine Intelligence 2021)"
+type = "paper"
+url = "https://arxiv.org/abs/1910.03193"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "book-review-a-new-kind-of-science"
+title = "Book Review: \"A New Kind of Science\""
+authors = "Scott Aaronson"
+year = "2002"
+type = "paper"
+url = "https://arxiv.org/abs/quant-ph/0206089"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "weak-baselines-and-reporting-biases-lead"
+title = "Weak Baselines and Reporting Biases Lead to Overoptimism in Machine Learning for Fluid-Related Partial Differential Equations — Nick McGreivy & Ammar Hakim (Nature Machine Intelligence, 2024)"
+year = "2024"
+type = "paper"
+url = "https://doi.org/10.1038/s42256-024-00897-5"
+link_text = "DOI"
+more_links = [{ text = "arXiv", url = "https://arxiv.org/abs/2407.07218" }]
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neural-general-circulation-models-for"
+title = "Neural General Circulation Models for Weather and Climate — Kochkov et al. (Nature, 2024)"
+year = "2024"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-024-07744-y"
+link_text = "DOI"
+more_links = [{ text = "arXiv", url = "https://arxiv.org/abs/2311.07222" }]
+verified = 2026-10-13

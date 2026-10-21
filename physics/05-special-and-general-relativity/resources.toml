@@ -1,0 +1,84 @@
+# Resources for: Special and General Relativity
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "spacetime-physics-2nd-ed-1992"
+title = "Spacetime Physics (2nd ed., 1992)"
+authors = "Taylor & Wheeler"
+year = "1992"
+type = "book"
+marks = ["core"]
+url = "https://www.eftaylor.com/spacetimephysics/"
+link_text = "eftaylor.com (free, CC BY)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "special-relativity-the-theoretical"
+title = "Special Relativity (The Theoretical Minimum)"
+authors = "Leonard Susskind"
+type = "course"
+url = "https://www.youtube.com/playlist?list=PLD9DDFBDC338226CA"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "on-the-electrodynamics-of-moving-bodies"
+title = "On the Electrodynamics of Moving Bodies"
+authors = "Albert Einstein"
+year = "1905"
+type = "paper"
+marks = ["core"]
+url = "https://www.fourmilab.ch/etexts/einstein/specrel/specrel.pdf"
+link_text = "Link"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "spacetime-and-geometry"
+title = "Spacetime and Geometry"
+authors = "Sean Carroll"
+type = "book"
+marks = ["core"]
+url = "https://arxiv.org/abs/gr-qc/9712019"
+link_text = "free 1997 lecture notes (arXiv)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "gravity-an-introduction-to-einstein-s"
+title = "Gravity: An Introduction to Einstein's General Relativity"
+authors = "James Hartle"
+type = "book"
+
+[[groups.items]]
+id = "a-first-course-in-general-relativity"
+title = "A First Course in General Relativity"
+authors = "Bernard Schutz"
+type = "book"
+
+[[groups.items]]
+id = "gravitation"
+title = "Gravitation"
+authors = "Misner, Thorne & Wheeler"
+type = "book"
+
+[[groups.items]]
+id = "relativity-in-the-global-positioning"
+title = "Relativity in the Global Positioning System"
+authors = "Neil Ashby"
+year = "2003"
+type = "paper"
+url = "https://doi.org/10.12942/lrr-2003-1"
+link_text = "Living Reviews"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "observation-of-gravitational-waves-from"
+title = "Observation of Gravitational Waves from a Binary Black Hole Merger"
+authors = "LIGO Scientific & Virgo Collaborations"
+year = "2016"
+type = "paper"
+url = "https://doi.org/10.1103/PhysRevLett.116.061102"
+link_text = "DOI"
+verified = 2026-10-13

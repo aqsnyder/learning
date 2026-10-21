@@ -1,0 +1,143 @@
+# Resources for: Computational Economics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "algorithmic-game-theory"
+title = "Algorithmic Game Theory"
+authors = "Nisan, Roughgarden, Tardos, Vazirani"
+year = "2007"
+type = "book"
+access = "free"
+level = "advanced"
+marks = ["core"]
+url = "https://www.cs.cmu.edu/~sandholm/cs15-892F13/algorithmic-game-theory.pdf"
+link_text = "Link"
+description = "The definitive reference for algorithmic game theory. Covers mechanism design, combinatorial auctions, price of anarchy, online learning. Free PDF."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "algorithmic-game-theory-cs364a"
+title = "Algorithmic Game Theory (CS364A)"
+authors = "Tim Roughgarden, Stanford"
+type = "course"
+marks = ["core"]
+url = "https://timroughgarden.org/f13/f13.html"
+link_text = "Link"
+description = "Excellent lecture notes and problem sets. Roughgarden is the clearest expositor of this material."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "twenty-lectures-on-algorithmic-game"
+title = "Twenty Lectures on Algorithmic Game Theory"
+authors = "Tim Roughgarden"
+year = "2016"
+type = "book"
+description = "More accessible companion to the full reference. Covers equilibrium computation, mechanism design, price of anarchy in 20 self-contained lectures."
+
+[[groups.items]]
+id = "the-complexity-of-computing-a-nash"
+title = "The Complexity of Computing a Nash Equilibrium"
+authors = "Daskalakis, Goldberg, Papadimitriou"
+year = "2009"
+type = "paper"
+url = "https://dl.acm.org/doi/10.1145/1461928.1461951"
+link_text = "Link"
+description = "PPAD-completeness of Nash equilibrium. A landmark result at the intersection of CS and game theory."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-multiplicative-weights-update-method"
+title = "The Multiplicative Weights Update Method: A Meta-Algorithm and Applications"
+authors = "Arora, Hazan, Kale"
+year = "2012"
+type = "paper"
+url = "https://theoryofcomputing.org/articles/v008a006/"
+link_text = "Link"
+description = "Survey of the no-regret learning framework that unifies results across optimization, game theory, and machine learning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "frontiers-in-mechanism-design-cs364b"
+title = "Frontiers in Mechanism Design (CS364B)"
+authors = "Tim Roughgarden, Stanford"
+year = "2014"
+type = "course"
+url = "https://timroughgarden.org/w14/w14.html"
+link_text = "Link"
+description = "Advanced follow-up covering more mechanism design and auction theory."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "prediction-learning-and-games"
+title = "Prediction, Learning, and Games"
+authors = "Nicolo Cesa-Bianchi & Gabor Lugosi"
+year = "2006"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "Rigorous treatment of online learning, regret minimization, and game-theoretic foundations of prediction."
+
+[[groups.items]]
+id = "regret-minimization-and-the-price-of"
+title = "Regret Minimization and the Price of Total Anarchy"
+authors = "Avrim Blum, MohammadTaghi Hajiaghayi, Katrina Ligett, Aaron Roth"
+year = "2008"
+type = "paper"
+description = "Shows price of anarchy bounds hold even when agents use no-regret dynamics rather than Nash equilibrium."
+
+[[groups.items]]
+id = "tim-roughgarden-s-page"
+title = "Tim Roughgarden's Page"
+authors = "Tim Roughgarden"
+type = "blog"
+url = "https://timroughgarden.org/"
+link_text = "Link"
+description = "Home page with all course materials, lecture notes, research papers, and talks."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "quantecon-lectures-quantitative"
+title = "QuantEcon Lectures (Quantitative Economics with Python)"
+authors = "Thomas J. Sargent & John Stachurski"
+type = "book"
+access = "free"
+url = "https://quantecon.org/lectures/"
+link_text = "Link"
+description = "Free, continuously updated lecture series on computational economics in Python: dynamic programming, job search, Markov dynamics, optimal savings, asset pricing. Start with \"A First Course in Quantitative Economics with Python.\" The canonical numerical-methods side of computational economics."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "large-language-models-as-simulated"
+title = "Large Language Models as Simulated Economic Agents: What Can We Learn from Homo Silicus?"
+authors = "John J. Horton, Apostolos Filippas & Benjamin S. Manning"
+year = "2023 (rev. 2026)"
+type = "paper"
+url = "https://www.nber.org/papers/w31122"
+link_text = "Link"
+description = "Treats LLMs as simulated economic agents — given endowments, information, and preferences — and re-runs classic behavioral experiments on them. The starting point for LLM-based economic simulation; read skeptically about how far \"silicon subjects\" generalize to people."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "artificial-intelligence-algorithmic"
+title = "Artificial Intelligence, Algorithmic Pricing, and Collusion"
+authors = "Emilio Calvano, Giacomo Calzolari, Vincenzo Denicolò & Sergio Pastorello"
+year = "2020"
+type = "paper"
+url = "https://doi.org/10.1257/aer.20190623"
+link_text = "Link"
+description = "*American Economic Review* 110(10). In a standard repeated price-competition oligopoly, Q-learning pricing algorithms consistently learn to charge supracompetitive prices without communicating with one another, sustained by a finite phase of punishment followed by a gradual return to cooperation. The experiment behind this section's mini-project; [Section 15](../15-industrial-organization-and-strategy/README.md) takes up the antitrust question."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mesa-3-agent-based-modeling-with-python"
+title = "Mesa 3: Agent-Based Modeling with Python in 2025"
+authors = "Ewout ter Hoeven, Jan Kwakkel et al."
+year = "2025"
+type = "paper"
+url = "https://joss.theoj.org/papers/10.21105/joss.07668"
+link_text = "Link"
+description = "Paper describing Mesa, the main open-source Python framework for agent-based models; its documentation (mesa.readthedocs.io) has tutorials and example models. Use it to see market and social outcomes emerge from simple agent rules where closed-form equilibria don't exist."
+verified = 2026-10-13

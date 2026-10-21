@@ -1,0 +1,164 @@
+# Resources for: Mathematical Foundations
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "essence-of-linear-algebra"
+title = "Essence of Linear Algebra"
+authors = "3Blue1Brown"
+type = "video-series"
+marks = ["core"]
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+link_text = "Link"
+description = "Beautiful visual explanations of vectors, matrices, transformations, eigenvalues, and more. The gold standard for building geometric intuition."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "essence-of-calculus"
+title = "Essence of Calculus"
+authors = "3Blue1Brown"
+type = "video-series"
+marks = ["core"]
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
+link_text = "Link"
+description = "Visual, intuition-first approach to derivatives, integrals, and the chain rule — all essential for understanding backpropagation."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neural-networks"
+title = "Neural Networks"
+authors = "3Blue1Brown"
+type = "video-series"
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
+link_text = "Link"
+description = "Bridges the math foundations into neural networks. Covers gradient descent and backpropagation with stunning visualizations."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mathematics-for-machine-learning"
+title = "Mathematics for Machine Learning"
+authors = "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong"
+year = "2020"
+type = "book"
+access = "free"
+level = "beginner"
+marks = ["core"]
+url = "https://mml-book.github.io/"
+link_text = "Link"
+description = "Comprehensive textbook covering linear algebra, calculus, probability, and optimization — all targeted specifically at ML applications."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-matrix-calculus-you-need-for-deep"
+title = "The Matrix Calculus You Need For Deep Learning"
+authors = "Terence Parr, Jeremy Howard"
+year = "2018"
+type = "paper"
+label = "Paper (Tutorial)"
+url = "https://arxiv.org/abs/1802.01528"
+link_text = "Link"
+description = "Derives the vector/matrix derivatives (Jacobians, element-wise ops, the vector chain rule) that backprop actually uses. The missing step between single-variable calculus and reading a backprop derivation."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "visual-information-theory"
+title = "Visual Information Theory"
+authors = "Christopher Olah"
+year = "2015"
+type = "article"
+label = "Blog Post"
+url = "https://colah.github.io/posts/2015-09-Visual-Information/"
+link_text = "Link"
+description = "Builds entropy, cross-entropy, KL divergence, and mutual information from pictures of optimal codes. After this, \"minimize cross-entropy loss\" means something concrete."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "khan-academy-linear-algebra-calculus"
+title = "Khan Academy — Linear Algebra, Calculus, Statistics"
+authors = "Khan Academy"
+type = "course"
+label = "Online Course"
+url = "https://www.khanacademy.org/"
+link_text = "Link"
+description = "Excellent for filling gaps. Use as a supplementary reference when you need extra practice on a specific topic."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "statquest"
+title = "StatQuest"
+authors = "Josh Starmer"
+type = "video-series"
+url = "https://www.youtube.com/@statquest"
+link_text = "Link"
+description = "Fun, clear, no-nonsense explanations of statistics and ML concepts. Great for probability and statistics foundations."
+verified = 2026-10-13
+
+[[groups]]
+title = "Compression, Complexity, and Intelligence (Ilya list theory cluster)"
+intro = '''
+These ⭐ items share one idea: learning is compression, and the simplest description that explains the data generalizes best. They are optional theory, best read after you have trained a few models (Sections 03–06). Hinton & van Camp's MDL paper in [Section 03](../03-neural-network-fundamentals/README.md) belongs to the same cluster.
+'''
+
+[[groups.items]]
+id = "the-first-law-of-complexodynamics"
+title = "The First Law of Complexodynamics"
+authors = "Scott Aaronson"
+year = "2011"
+type = "article"
+label = "Blog Post"
+marks = ["canon"]
+url = "https://scottaaronson.blog/?p=762"
+link_text = "Link"
+description = "From the Ilya Sutskever reading list. Why does the \"interestingness\" of a closed system (cream mixing into coffee) rise and then fall while entropy only increases? Proposes \"complextropy\" via resource-bounded Kolmogorov complexity."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "quantifying-the-rise-and-fall-of"
+title = "Quantifying the Rise and Fall of Complexity in Closed Systems: The Coffee Automaton"
+authors = "Scott Aaronson, Sean M. Carroll, Lauren Ouellette"
+year = "2014"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1405.6903"
+link_text = "Link"
+description = "From the Ilya Sutskever reading list. The follow-up paper: a simple automaton model of cream mixing into coffee, used to test quantitatively whether complexity rises and then falls as the blog post conjectured."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-tutorial-introduction-to-the-minimum"
+title = "A Tutorial Introduction to the Minimum Description Length Principle"
+authors = "Peter Grünwald"
+year = "2004"
+type = "tutorial"
+marks = ["canon"]
+url = "https://arxiv.org/abs/math/0406077"
+link_text = "Link"
+description = "From the Ilya Sutskever reading list. Formalizes Occam's Razor mathematically — the best model is the one that compresses the data most. Grünwald's 2007 MIT Press book *The Minimum Description Length Principle* is the full-length follow-up."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kolmogorov-complexity-and-algorithmic"
+title = "Kolmogorov Complexity and Algorithmic Randomness"
+authors = "A. Shen, V. A. Uspensky, N. Vereshchagin"
+year = "2017"
+type = "book"
+marks = ["canon"]
+url = "https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf"
+link_text = "Link"
+description = "From the Ilya Sutskever reading list (AMS, free scan on Shen's homepage). Rigorous text on algorithmic information theory — the theoretical underpinning of compression, learning, and generalization. Li & Vitányi's *An Introduction to Kolmogorov Complexity and Its Applications* is the classic alternative reference."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "machine-super-intelligence"
+title = "Machine Super Intelligence"
+authors = "Shane Legg"
+year = "2008"
+type = "paper"
+label = "Thesis"
+marks = ["canon"]
+url = "https://pdf.stafforini.com/legg-2008-machine-super-intelligence.pdf"
+link_text = "Link"
+description = "From the Ilya Sutskever reading list. Legg's PhD thesis (University of Lugano, supervised by Marcus Hutter): surveys definitions and tests of machine intelligence, studies Hutter's AIXI model of an optimal universal agent (Solomonoff induction + sequential decision theory), relates achievable performance to Kolmogorov complexity, and ends with speculation about future highly intelligent machines."
+verified = 2026-10-13

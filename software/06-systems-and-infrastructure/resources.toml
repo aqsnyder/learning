@@ -1,0 +1,111 @@
+# Resources for: Systems Design and Infrastructure
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "designing-data-intensive-applications"
+title = "Designing Data-Intensive Applications (2nd ed)"
+authors = "Martin Kleppmann, Chris Riccomini"
+year = "2026"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["core"]
+description = "Replication, partitioning, consistency, batch and stream processing. If not read in Section 04, start here."
+
+[[groups.items]]
+id = "the-software-engineer-s-guidebook"
+title = "The Software Engineer's Guidebook"
+authors = "Gergely Orosz"
+year = "2023"
+type = "book"
+access = "paid"
+description = "Practical senior engineer field guide covering career growth, code reviews, technical strategy, and team dynamics."
+
+[[groups.items]]
+id = "bytebytego"
+title = "ByteByteGo"
+authors = "Alex Xu"
+type = "blog"
+label = "Newsletter"
+marks = ["core"]
+url = "https://bytebytego.com/"
+link_text = "Link"
+description = "System design visualized. Weekly breakdowns of how real-world systems — payment processing, rate limiting, CDNs — actually work."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "docker"
+title = "Docker"
+type = "tool"
+url = "https://docs.docker.com/"
+link_text = "Link"
+description = "Containerization fundamentals. Understand images, containers, volumes, networks, and Docker Compose for local development."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "git-advanced-workflows"
+title = "Git advanced workflows"
+type = "tool"
+description = "Branching strategies (trunk-based, GitFlow), interactive rebasing, bisecting to find bugs, worktrees."
+
+[[groups.items]]
+id = "rest-api-design-and-openapi"
+title = "REST API design and OpenAPI specifications"
+type = "concept"
+description = "Designing clean APIs, versioning strategies, error handling conventions, and machine-readable API contracts."
+
+[[groups.items]]
+id = "database-fundamentals"
+title = "Database fundamentals"
+type = "concept"
+description = "SQL vs NoSQL trade-offs, indexing strategies, query optimization, normalization vs denormalization, and choosing the right data store."
+
+[[groups.items]]
+id = "message-queues-and-async-processing"
+title = "Message queues and async processing"
+type = "concept"
+description = "RabbitMQ, Redis, Celery — decoupling services, handling background jobs, and managing eventual consistency."
+
+[[groups.items]]
+id = "monitoring-and-observability"
+title = "Monitoring and observability"
+type = "concept"
+description = "The three pillars: logging, metrics, and distributed tracing. Know how to diagnose production issues."
+
+[[groups.items]]
+id = "infrastructure-as-code"
+title = "Infrastructure as Code"
+type = "concept"
+description = "Terraform, Ansible basics — declarative infrastructure, reproducible environments, and configuration management."
+
+[[groups.items]]
+id = "system-design-interview-vol-1-and-2"
+title = "System Design Interview (Vol 1 and 2)"
+authors = "Alex Xu (Vol 2 with Sahn Lam)"
+year = "2020–2022"
+type = "book"
+marks = ["core"]
+description = "Step-by-step system design practice. Breaks down real problems: rate limiter, URL shortener, notification system, chat system, and more."
+
+[[groups.items]]
+id = "release-it-2nd-ed"
+title = "Release It! (2nd ed)"
+authors = "Michael Nygard"
+year = "2018"
+type = "book"
+description = "Stability patterns for production systems — circuit breakers, bulkheads, timeouts, and designing for failure."
+
+[[groups.items]]
+id = "beej-s-guide-to-network-programming"
+title = "Beej's Guide to Network Programming"
+authors = "Brian \"Beej Jorgensen\" Hall"
+year = "2026 (v3.3.2)"
+type = "book"
+access = "free"
+url = "https://beej.us/guide/bgnet/"
+link_text = "Link"
+description = "Sockets in C: TCP vs UDP, IPv4/IPv6, client-server examples, `select()`/`poll()`. The layer beneath every API in this section, and the one an Ethernet-connected instrument or test rig actually speaks."
+verified = 2026-10-13

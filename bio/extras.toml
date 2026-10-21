@@ -1,0 +1,75 @@
+# Books and courses that have no home in a section.
+# Edit this file, then run `python tools/build.py`. Field reference: tools/README.md
+
+[[groups]]
+title = "Books"
+
+[[groups.items]]
+id = "lifespan"
+title = "Lifespan"
+authors = "David Sinclair"
+year = "2019"
+type = "book"
+access = "paid"
+level = "beginner"
+
+[[groups]]
+title = "Courses"
+
+[[groups.items]]
+id = "khan-academy-ap-biology"
+title = "Khan Academy AP Biology"
+authors = "Khan Academy"
+type = "course"
+url = "https://www.khanacademy.org/science/ap-biology"
+link_text = "Course"
+
+[[groups.items]]
+id = "bioinformatics-specialization"
+title = "Bioinformatics Specialization"
+authors = "Pavel Pevzner, Phillip Compeau"
+type = "course"
+url = "https://www.coursera.org/specializations/bioinformatics"
+link_text = "Course"
+
+[[groups.items]]
+id = "uri-alon-systems-biology-course-2018"
+title = "Uri Alon — Systems Biology Course 2018 (lecture videos)"
+authors = "Uri Alon (Alon Lab)"
+type = "course"
+url = "https://www.youtube.com/watch?v=N6VZeWuME_A"
+link_text = "Lecture 1"
+description = "Starts at Lecture 1, \"Basic concepts\", on the [Alon Lab channel](https://www.youtube.com/@alonlab9733); the [course page](https://www.weizmann.ac.il/mcb/alon/courses/systems-biology-2018) lists all twelve lecture topics. Replaces a playlist that no longer loads"
+
+[[groups.items]]
+id = "ibiology-talks"
+title = "iBiology Talks"
+authors = "Various"
+type = "course"
+url = "https://www.ibiology.org/"
+link_text = "Site"
+
+[[groups.items]]
+id = "hhmi-biointeractive"
+title = "HHMI BioInteractive"
+authors = "HHMI"
+type = "course"
+url = "https://www.biointeractive.org/"
+link_text = "Site"
+
+[[groups.items]]
+id = "drug-discovery"
+title = "Drug Discovery"
+authors = "UC San Diego Skaggs School of Pharmacy (Williams S. Ettouati, Joseph D. Ma)"
+type = "course"
+url = "https://www.coursera.org/learn/drug-discovery"
+link_text = "Course"
+description = "The discovery process up to filing an IND — pharma-process context, not computational chemistry. Part of UCSD's Drug Development Product Management Specialization; the Drug Discovery Specialization linked here before no longer exists"
+
+[[groups.items]]
+id = "mit-6-s897-machine-learning-for"
+title = "MIT 6.S897 Machine Learning for Healthcare"
+authors = "MIT"
+type = "course"
+url = "https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/"
+link_text = "Course"

@@ -1,0 +1,119 @@
+# Resources for: Optimization
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "convex-optimization"
+title = "Convex Optimization"
+authors = "Stephen Boyd, Lieven Vandenberghe"
+year = "2004"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://web.stanford.edu/~boyd/cvxbook/"
+link_text = "Link"
+description = "The definitive text on convex optimization. Covers convex sets, functions, duality, interior-point methods, and applications. Free PDF and lecture slides available."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "stanford-ee364a-convex-optimization"
+title = "Stanford EE364a: Convex Optimization"
+authors = "Stephen Boyd"
+type = "course"
+access = "free"
+marks = ["core"]
+url = "https://web.stanford.edu/class/ee364a/"
+link_text = "Link"
+description = "The current course site: lecture slides, homework, and exams that accompany the textbook. Its lecture recordings are for enrolled students only — for free videos use the Stanford Engineering Everywhere recordings below."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "numerical-optimization"
+title = "Numerical Optimization"
+authors = "Jorge Nocedal, Stephen Wright"
+year = "2006"
+type = "book"
+description = "Comprehensive treatment of numerical methods: line search, trust region, conjugate gradient, quasi-Newton methods. Essential reference for algorithm design."
+
+[[groups.items]]
+id = "mathematics-for-machine-learning-ch-7"
+title = "Mathematics for Machine Learning (Ch. 7)"
+authors = "Deisenroth, Faisal, Ong"
+year = "2020"
+type = "book"
+access = "free"
+level = "beginner"
+url = "https://mml-book.github.io/"
+link_text = "Link"
+description = "Chapter 7 covers continuous optimization with ML focus: gradient descent, momentum, constrained optimization. Good bridge from theory to practice."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an-overview-of-gradient-descent"
+title = "An Overview of Gradient Descent Optimization Algorithms"
+authors = "Sebastian Ruder"
+year = "2016"
+type = "article"
+label = "Blog Post"
+url = "https://www.ruder.io/optimizing-gradient-descent/"
+link_text = "Link"
+description = "Excellent survey of SGD variants: momentum, Nesterov, Adagrad, RMSprop, Adam. Essential reading for understanding modern training."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "stanford-engineering-everywhere-ee364a"
+title = "Stanford Engineering Everywhere — EE364A Convex Optimization I (video lectures)"
+authors = "Stephen Boyd"
+year = "2008"
+type = "course"
+access = "free"
+url = "https://see.stanford.edu/Course/EE364A"
+link_text = "Link"
+description = "Boyd's complete set of 19 recorded lectures with transcripts and handouts, free and self-paced. These are the videos to watch alongside the textbook. (MIT's 6.079 by Boyd & Parrilo covers the same material in notes only.)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introductory-lectures-on-stochastic"
+title = "Introductory Lectures on Stochastic Optimization"
+authors = "John C. Duchi"
+year = "2018"
+type = "book"
+access = "free"
+url = "https://web.stanford.edu/~jduchi/pcmi.html"
+link_text = "Link"
+description = "Lecture notes covering stochastic gradient methods with convergence analysis. Bridges theory and practice. Published in *The Mathematics of Data* (IAS/Park City Mathematics Series, AMS, 2018); the author's page has the free manuscript PDF plus the exercise data and MATLAB/Julia starter code."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "adam-a-method-for-stochastic"
+title = "Adam: A Method for Stochastic Optimization"
+authors = "Diederik Kingma, Jimmy Ba"
+year = "2014"
+type = "paper"
+url = "https://arxiv.org/abs/1412.6980"
+link_text = "Link"
+description = "The Adam optimizer paper — the most widely used optimizer in deep learning. Understanding its design illuminates optimization in practice."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "first-order-methods-in-optimization"
+title = "First-Order Methods in Optimization"
+authors = "Amir Beck"
+year = "2017"
+type = "book"
+description = "Rigorous treatment of proximal methods, ADMM, and first-order algorithms. Advanced but essential for optimization research."
+
+[[groups.items]]
+id = "algorithms-for-optimization"
+title = "Algorithms for Optimization"
+authors = "Mykel Kochenderfer, Tim Wheeler"
+year = "2019"
+type = "book"
+access = "free"
+url = "https://algorithmsbook.com/optimization/"
+link_text = "Link"
+description = "Broad, code-first survey (Julia) of the methods engineers reach for when problems aren't convex or differentiable: derivative-free and stochastic search, population methods, surrogate models, multi-objective optimization, and optimization under uncertainty. Free PDF (CC BY-NC-ND). The book site also links a PDF of the 2nd edition, whose print release it lists for 5 January 2027 (checked October 2026)."
+verified = 2026-10-13

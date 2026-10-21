@@ -1,0 +1,134 @@
+# Resources for: Security and Reliability Engineering
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "owasp-top-10"
+title = "OWASP Top 10"
+authors = "OWASP Foundation"
+type = "website"
+label = "Web Resource"
+marks = ["core"]
+url = "https://owasp.org/www-project-top-ten/"
+link_text = "Link"
+description = "THE web vulnerability reference. Understand these ten categories and you'll catch the majority of web security issues in review. The 2025 edition adds Software Supply Chain Failures (A03) and Mishandling of Exceptional Conditions (A10)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-web-application-hacker-s-handbook"
+title = "The Web Application Hacker's Handbook (2nd ed, 2011)"
+authors = "Dafydd Stuttard, Marcus Pinto"
+year = "2011"
+type = "book"
+description = "Practical web security from the attacker's perspective. Teaches you to think like an adversary when reviewing code. Dated: lead author Stuttard's company, PortSwigger, chose to build the free, continuously updated [Web Security Academy](https://portswigger.net/web-security) instead of a 3rd edition, so use that for hands-on labs."
+
+[[groups.items]]
+id = "reviewing-ai-generated-code-for-security"
+title = "Reviewing AI-generated code for security"
+type = "concept"
+marks = ["ai"]
+description = "AI often introduces: hardcoded secrets, SQL injection, improper input validation, unsafe deserialization. Build a mental checklist for every AI-generated PR."
+
+[[groups.items]]
+id = "secure-c-programming"
+title = "Secure C programming"
+type = "concept"
+description = "Buffer overflows, format string vulnerabilities, integer overflow. The classic low-level attack surface — critical for embedded work."
+
+[[groups.items]]
+id = "python-security-pitfalls"
+title = "Python security pitfalls"
+type = "concept"
+description = "`eval()`, `pickle`, SSRF, path traversal. Python's dynamic nature makes it easy to write insecure code that *looks* clean."
+
+[[groups.items]]
+id = "bandit"
+title = "Bandit"
+authors = "PyCQA"
+type = "tool"
+url = "https://bandit.readthedocs.io/"
+link_text = "Link"
+description = "Python security linter. Run it on every AI-generated Python file before review."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "semgrep"
+title = "Semgrep"
+authors = "Semgrep, Inc."
+type = "tool"
+url = "https://semgrep.dev/"
+link_text = "Link"
+description = "Static analysis for security patterns. Write custom rules to enforce your project's security policies."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "threat-modeling"
+title = "Threat modeling"
+type = "concept"
+description = "STRIDE methodology for systematic security review. Ask: what can go wrong? before writing a line of code."
+
+[[groups.items]]
+id = "site-reliability-engineering-google-sre"
+title = "Site Reliability Engineering (Google SRE Book)"
+authors = "Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy"
+type = "book"
+access = "free"
+url = "https://sre.google/sre-book/table-of-contents/"
+link_text = "Link"
+description = "Production reliability practices from Google. Error budgets, SLOs, incident management — the operational side of quality."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "incident-response-and-post-mortems"
+title = "Incident response and post-mortems"
+type = "concept"
+description = "Blameless post-mortems, root cause analysis, and building a culture that learns from failures rather than hiding them."
+
+[[groups.items]]
+id = "sei-cert-c-coding-standard"
+title = "SEI CERT C Coding Standard"
+authors = "Carnegie Mellon SEI (CERT)"
+type = "standard"
+access = "free"
+marks = ["core"]
+url = "https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard"
+link_text = "Link"
+description = "Rules and recommendations, each with noncompliant and compliant code, for the C vulnerabilities listed under \"Secure C programming\" above. Static analyzers commonly report findings against CERT rule IDs."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "we-have-a-package-for-you-a"
+title = "We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs"
+authors = "Joseph Spracklen et al. (USENIX Security 2025)"
+type = "paper"
+marks = ["ai"]
+url = "https://arxiv.org/abs/2406.10279"
+link_text = "Link"
+description = "576,000 samples from 16 code LLMs: at least 5.2% (commercial models) and 21.7% (open-source models) of suggested packages did not exist, names an attacker can register. Verify every dependency an agent adds."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "eu-cyber-resilience-act"
+title = "EU Cyber Resilience Act"
+authors = "European Commission"
+type = "standard"
+label = "Regulation"
+url = "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act"
+link_text = "Link"
+description = "Mandatory cybersecurity requirements for hardware and software \"products with digital elements\" sold in the EU. In force since 10 Dec 2024; vulnerability-reporting obligations apply from 11 Sep 2026, main obligations from 11 Dec 2027. Required reading for anyone shipping connected devices."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "threat-modeling-manifesto"
+title = "Threat Modeling Manifesto"
+authors = "Zoe Braiterman, Adam Shostack, et al."
+type = "tool"
+label = "Framework"
+access = "free"
+marks = ["core"]
+url = "https://www.threatmodelingmanifesto.org/"
+link_text = "Link"
+description = "The four questions (What are we working on? What can go wrong? What are we going to do about it? Did we do a good enough job?) plus values and anti-patterns. A methodology-agnostic frame to use before reaching for STRIDE."
+verified = 2026-10-13

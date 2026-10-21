@@ -1,0 +1,147 @@
+# Resources for: RNNs, Sequences, and Memory
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "long-short-term-memory"
+title = "Long Short-Term Memory"
+authors = "Hochreiter, Schmidhuber"
+year = "1997"
+type = "paper"
+marks = ["core"]
+url = "https://www.bioinf.jku.at/publications/older/2604.pdf"
+link_text = "Paper"
+description = "The original LSTM paper. Introduced gated memory cells to solve the vanishing gradient problem, enabling learning over long time dependencies."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-unreasonable-effectiveness-of"
+title = "The Unreasonable Effectiveness of Recurrent Neural Networks"
+authors = "Karpathy"
+year = "2015"
+type = "blog"
+marks = ["core", "canon"]
+url = "https://karpathy.github.io/2015/05/21/rnn-effectiveness/"
+link_text = "Blog"
+more_links = [{ text = "Code", url = "https://github.com/karpathy/char-rnn" }]
+description = "Legendary blog post showing char-level RNNs generating Shakespeare, Wikipedia, LaTeX, and C code. The best intuition-builder for what RNNs can learn."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "understanding-lstm-networks"
+title = "Understanding LSTM Networks"
+authors = "Olah"
+year = "2015"
+type = "blog"
+marks = ["core", "canon"]
+url = "https://colah.github.io/posts/2015-08-Understanding-LSTMs/"
+link_text = "Blog"
+description = "The clearest visual explanation of LSTM internals. Walks through forget, input, and output gates with excellent diagrams. Read this before or alongside the original paper."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "recurrent-neural-network-regularization"
+title = "Recurrent Neural Network Regularization"
+authors = "Zaremba, Sutskever, Vinyals"
+year = "2014"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1409.2329"
+link_text = "Paper"
+description = "Showed how to correctly apply dropout to RNNs (only on non-recurrent connections). Essential for training RNNs that generalize."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neural-turing-machines"
+title = "Neural Turing Machines"
+authors = "Graves, Wayne, Danihelka"
+year = "2014"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1410.5401"
+link_text = "Paper"
+description = "Extended neural networks with external memory and attention-based read/write heads. A landmark paper bridging neural networks and classical computation."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "relational-recurrent-neural-networks"
+title = "Relational Recurrent Neural Networks"
+authors = "Santoro et al."
+year = "2018"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1806.01822"
+link_text = "Paper"
+description = "Adds multi-head self-attention between memory slots (the \"Relational Memory Core\") so a recurrent model can reason about relationships between the things it has stored. A bridge from NTM-style memory to transformer-style attention."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pointer-networks"
+title = "Pointer Networks"
+authors = "Vinyals, Fortunato, Jaitly"
+year = "2015"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1506.03134"
+link_text = "Paper"
+description = "Used attention as a pointer to input elements, solving combinatorial problems where output size depends on input. An influential repurposing of (Bahdanau-style) attention as a selection mechanism, and the basis of later copy/pointer mechanisms."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "order-matters-sequence-to-sequence-for"
+title = "Order Matters: Sequence to Sequence for Sets"
+authors = "Vinyals, Bengio, Kudlur"
+year = "2015"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1511.06391"
+link_text = "Paper"
+description = "Shows that the order in which inputs and outputs are presented significantly changes what seq2seq models learn, and extends seq2seq to handle unordered input and output sets."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "generating-sequences-with-recurrent"
+title = "Generating Sequences With Recurrent Neural Networks"
+authors = "Graves"
+year = "2013"
+type = "paper"
+url = "https://arxiv.org/abs/1308.0850"
+link_text = "Paper"
+description = "Deep dive into sequence generation with RNNs, including handwriting generation and synthesis. Demonstrates the power of recurrent models for complex sequential outputs. (Often listed with Ilya's papers, but not on the list itself.)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learning-phrase-representations-using"
+title = "Learning Phrase Representations using RNN Encoder–Decoder (GRU)"
+authors = "Cho et al."
+year = "2014"
+type = "paper"
+url = "https://arxiv.org/abs/1406.1078"
+link_text = "Paper"
+description = "Introduced the GRU — a simpler alternative to LSTM with comparable performance. Also introduced the encoder-decoder framework for sequence-to-sequence tasks."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "sequence-to-sequence-learning-with"
+title = "Sequence to Sequence Learning with Neural Networks"
+authors = "Sutskever, Vinyals, Le"
+year = "2014"
+type = "paper"
+url = "https://arxiv.org/abs/1409.3215"
+link_text = "Paper"
+description = "The foundational seq2seq paper. Showed an LSTM encoder-decoder could learn to translate between languages end-to-end, sparking the neural machine translation revolution."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "deep-speech-2-end-to-end-speech"
+title = "Deep Speech 2: End-to-End Speech Recognition in English and Mandarin"
+authors = "Amodei et al."
+year = "2015"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1512.02595"
+link_text = "Paper"
+description = "One end-to-end recurrent network trained with CTC loss replaces hand-engineered speech pipelines in two very different languages. Also an early lesson in how much scale and high-performance-computing engineering matter."
+verified = 2026-10-13

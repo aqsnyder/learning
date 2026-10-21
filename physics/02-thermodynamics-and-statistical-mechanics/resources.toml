@@ -1,0 +1,66 @@
+# Resources for: Thermodynamics and Statistical Mechanics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "an-introduction-to-thermal-physics"
+title = "An Introduction to Thermal Physics"
+authors = "Daniel V. Schroeder"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "concepts-in-thermal-physics"
+title = "Concepts in Thermal Physics"
+authors = "Blundell & Blundell"
+type = "book"
+
+[[groups.items]]
+id = "the-feynman-lectures-on-physics"
+title = "The Feynman Lectures on Physics — Thermodynamics chapters (Vol. 1, Ch. 39–46)"
+type = "book"
+marks = ["core"]
+url = "https://www.feynmanlectures.caltech.edu/"
+link_text = "feynmanlectures.caltech.edu"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-8-333-statistical-mechanics"
+title = "MIT 8.333 Statistical Mechanics"
+authors = "Mehran Kardar"
+type = "course"
+url = "https://ocw.mit.edu/courses/8-333-statistical-mechanics-i-statistical-mechanics-of-particles-fall-2013/"
+link_text = "MIT OCW"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-modern-statistical"
+title = "Introduction to Modern Statistical Mechanics"
+authors = "David Chandler"
+type = "book"
+
+[[groups.items]]
+id = "statistical-mechanics-entropy-order"
+title = "Statistical Mechanics: Entropy, Order Parameters, and Complexity"
+authors = "James Sethna"
+type = "book"
+url = "http://sethna.lassp.cornell.edu/StatMech/"
+link_text = "sethna.lassp.cornell.edu"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fundamentals-of-statistical-and-thermal"
+title = "Fundamentals of Statistical and Thermal Physics"
+authors = "Frederick Reif"
+type = "book"
+
+[[groups.items]]
+id = "thermal-agitation-of-electric-charge-in"
+title = "Thermal Agitation of Electric Charge in Conductors — Harry Nyquist (1928), with J. B. Johnson's companion measurement paper"
+type = "paper"
+url = "https://doi.org/10.1103/PhysRev.32.110"
+link_text = "Nyquist"
+more_links = [{ text = "Johnson", url = "https://doi.org/10.1103/PhysRev.32.97" }]
+verified = 2026-10-13

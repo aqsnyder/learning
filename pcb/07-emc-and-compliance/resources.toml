@@ -1,0 +1,129 @@
+# Resources for: EMC and Compliance
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "electromagnetic-compatibility"
+title = "Electromagnetic Compatibility Engineering (2009)"
+authors = "Henry W. Ott"
+year = "2009"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core", "canon"]
+url = "https://doi.org/10.1002/9780470508510"
+link_text = "DOI"
+description = "The definitive EMC reference. Comprehensive, rigorous, and practical. Every serious PCB designer should own this."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rick-hartley-emc-lectures"
+title = "Rick Hartley — EMC Lectures"
+authors = "Rick Hartley"
+type = "video-series"
+url = "https://www.youtube.com/results?search_query=Rick+Hartley+EMC"
+link_text = "Search YouTube"
+description = "Foundational EMC thinking from Altium Academy, Sierra Circuits, and conference talks. Rick connects grounding, SI, and EMC into one coherent framework."
+
+[[groups.items]]
+id = "learnemc"
+title = "LearnEMC"
+authors = "Todd Hubing"
+type = "course"
+marks = ["core"]
+url = "https://learnemc.com/"
+link_text = "learnemc.com"
+description = "Free, structured EMC curriculum (levels K–12) by Todd Hubing covering coupling mechanisms, grounding, filtering, shielding, crosstalk and PCB layout, plus a weekly EMC question. The best free self-study path through this section."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "dr-emc"
+title = "Dr. EMC"
+authors = "Anton Tichenko"
+type = "video-series"
+label = "YouTube Channel"
+url = "https://www.youtube.com/@DrEMC-sf8rx"
+link_text = "YouTube"
+description = "Electromagnetics and EM-compliance videos by a practising electronics design engineer (see the Section 06 row). An optional companion to LearnEMC."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "noise-reduction-techniques-in-electronic"
+title = "Noise Reduction Techniques in Electronic Systems"
+authors = "Henry Ott"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "Classic predecessor to EMC Engineering. Foundational noise and interference concepts that remain relevant decades later. Not on Rick's list: his list names Ott's *EMC Engineering*, which grew out of this book."
+
+[[groups.items]]
+id = "pcb-design-for-real-world-emi-control"
+title = "PCB Design for Real-World EMI Control (2002)"
+authors = "Bruce R. Archambeault"
+year = "2002"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["canon"]
+url = "https://link.springer.com/978-1-4020-7130-0"
+link_text = "Springer"
+description = "Board-level EMI from an IBM EMC engineer: what actually drives emissions from real PCBs and which common design \"rules\" hold up."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "digital-design-for-interference"
+title = "Digital Design for Interference Specifications: A Practical Handbook for EMI Suppression (2nd ed., 1999)"
+authors = "David L. Terrell, R. Kenneth Keenan"
+year = "1999"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["canon"]
+url = "https://shop.elsevier.com/books/digital-design-for-interference-specifications/terrell/978-0-08-057379-3"
+link_text = "Elsevier"
+description = "Practical handbook for designing digital products that meet emissions limits the first time."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-electromagnetic"
+title = "Introduction to Electromagnetic Compatibility (2nd ed., 2006)"
+authors = "Clayton R. Paul"
+year = "2006"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["canon"]
+url = "https://gov.wiley.com/WileyCDA/WileyTitle/productCd-0471755001,descCd-description.html"
+link_text = "Wiley"
+description = "The standard university EMC textbook. Reach for it when you want the derivations behind Ott's practical explanations."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "altium-academy-emc-design-guidelines"
+title = "Altium Academy — EMC Design Guidelines"
+authors = "Altium Academy"
+type = "video"
+url = "https://www.youtube.com/@AltiumAcademy"
+link_text = "YouTube"
+description = "EMC-focused design guidelines and best practices in Altium Designer."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "common-mode-vs-differential-mode-noise"
+title = "Common Mode vs Differential Mode Noise"
+type = "concept"
+description = "Understanding the two fundamental noise modes is essential for diagnosing and solving EMC problems."
+
+[[groups.items]]
+id = "shielding-filtering-and-ferrite-bead"
+title = "Shielding, Filtering, and Ferrite Bead Selection"
+type = "concept"
+description = "Practical mitigation techniques: when to shield, how to filter, and choosing the right ferrite bead for your frequency range."
+
+[[groups.items]]
+id = "fcc-ce-compliance-testing-overview"
+title = "FCC/CE Compliance Testing Overview"
+type = "concept"
+description = "What the test process looks like, what standards apply, and how to design for compliance from the start. Test-and-measurement and lab equipment has its own product standards: IEC 61326-1 (EMC for measurement, control and laboratory equipment; current edition 2020) and [IEC 61010-1](https://webstore.iec.ch/en/publication/4279) (safety, including spacing requirements; edition 3.0, 2010, with Amendment 1, 2016). Identify which ones apply before the first layout, not after."

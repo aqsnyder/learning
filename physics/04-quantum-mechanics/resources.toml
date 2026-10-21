@@ -1,0 +1,77 @@
+# Resources for: Quantum Mechanics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "introduction-to-quantum-mechanics-3rd-ed"
+title = "Introduction to Quantum Mechanics (3rd ed., 2018)"
+authors = "David J. Griffiths & Darrell F. Schroeter"
+year = "2018"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "the-feynman-lectures-on-physics-vol-3"
+title = "The Feynman Lectures on Physics, Vol. 3"
+authors = "Feynman, Leighton, Sands"
+type = "book"
+marks = ["core"]
+url = "https://www.feynmanlectures.caltech.edu/"
+link_text = "feynmanlectures.caltech.edu"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-8-04-quantum-physics-i"
+title = "MIT 8.04 Quantum Physics I"
+authors = "Barton Zwiebach"
+type = "course"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/"
+link_text = "MIT OCW"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "quantum-mechanics-the-theoretical"
+title = "Quantum Mechanics (The Theoretical Minimum)"
+authors = "Leonard Susskind"
+type = "course"
+url = "https://www.youtube.com/playlist?list=PL701CD168D02FF56F"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "some-light-quantum-mechanics-3blue1brown"
+title = "Some light quantum mechanics — 3Blue1Brown"
+type = "video"
+url = "https://www.youtube.com/watch?v=MzRCDLre1b4"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "principles-of-quantum-mechanics"
+title = "Principles of Quantum Mechanics"
+authors = "R. Shankar"
+type = "book"
+
+[[groups.items]]
+id = "modern-quantum-mechanics"
+title = "Modern Quantum Mechanics"
+authors = "J.J. Sakurai & Jim Napolitano"
+type = "book"
+
+[[groups.items]]
+id = "quantum-mechanics"
+title = "Quantum Mechanics"
+authors = "Cohen-Tannoudji, Diu, Laloe"
+type = "book"
+
+[[groups.items]]
+id = "quantum-mechanics-for-scientists-and"
+title = "Quantum Mechanics for Scientists and Engineers — David A. B. Miller (2008)"
+year = "2008"
+type = "book"
+url = "https://doi.org/10.1017/CBO9780511813962"
+link_text = "Cambridge"
+verified = 2026-10-13

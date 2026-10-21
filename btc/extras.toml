@@ -1,0 +1,81 @@
+# Books and courses that have no home in a section.
+# Edit this file, then run `python tools/build.py`. Field reference: tools/README.md
+
+[[groups]]
+title = "Books"
+
+[[groups.items]]
+id = "digital-gold"
+title = "Digital Gold"
+authors = "Nathaniel Popper"
+year = "2015"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Historical narrative of Bitcoin's early days"
+
+[[groups.items]]
+id = "little-bitcoin-book"
+title = "The Little Bitcoin Book"
+authors = "Jimmy Song et al"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Short, accessible intro"
+
+[[groups.items]]
+id = "blocksize-war"
+title = "The Blocksize War"
+authors = "Jonathan Bier"
+year = "2021"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "History of Bitcoin's scaling debate"
+
+[[groups.items]]
+id = "inventing-bitcoin"
+title = "Inventing Bitcoin"
+authors = "Yan Pritzker"
+year = "2019"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Concise technical intro for non-programmers"
+
+[[groups]]
+title = "Courses"
+
+[[groups.items]]
+id = "bitcoin-and-cryptocurrency-technologies"
+title = "Bitcoin and Cryptocurrency Technologies"
+authors = "Princeton (Narayanan et al.)"
+type = "course"
+url = "https://www.coursera.org/learn/cryptocurrency"
+link_text = "Coursera"
+description = "Academic foundation; video lectures that follow the Princeton textbook (see books/)"
+
+[[groups.items]]
+id = "blockchain-and-money"
+title = "Blockchain and Money (MIT 15.S12, Fall 2018)"
+authors = "Gary Gensler"
+type = "course"
+url = "https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/"
+link_text = "MIT OCW"
+description = "Academic perspective on Bitcoin and finance (course title corrected from \"Bitcoin and Money\")"
+
+[[groups.items]]
+id = "lightning-labs-channel"
+title = "Lightning Labs channel"
+authors = "Lightning Labs"
+type = "course"
+description = "LN implementation tutorials"
+
+[[groups.items]]
+id = "bitcoin-optech-newsletter"
+title = "Bitcoin Optech Newsletter"
+authors = "Optech"
+type = "course"
+url = "https://bitcoinops.org/"
+link_text = "Optech"
+description = "Weekly protocol development updates"

@@ -1,0 +1,145 @@
+# Resources for: Category Theory and Frontiers
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "seven-sketches-in-compositionality-an"
+title = "Seven Sketches in Compositionality: An Invitation to Applied Category Theory"
+authors = "Brendan Fong, David Spivak"
+year = "2019"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://arxiv.org/abs/1803.05316"
+link_text = "Link"
+description = "The most accessible introduction to applied category theory. Uses real-world examples (databases, circuits, signal flow) to motivate categories, functors, and natural transformations. Free on arXiv."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "category-theory-for-the-sciences"
+title = "Category Theory for the Sciences"
+authors = "David Spivak"
+year = "2014"
+type = "book"
+description = "Applies category theory to science and engineering. More concrete than traditional texts. Good for building intuition about how categorical thinking applies outside pure mathematics."
+
+[[groups.items]]
+id = "category-theory-in-context"
+title = "Category Theory in Context"
+authors = "Emily Riehl"
+year = "2016"
+type = "book"
+url = "https://math.jhu.edu/~eriehl/context/"
+link_text = "Link"
+description = "A modern, well-written introduction to category theory. More rigorous than *Seven Sketches* but still accessible. Free PDF available."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "category-theory-for-programmers"
+title = "Category Theory for Programmers"
+authors = "Bartosz Milewski"
+type = "video-series"
+url = "https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_"
+link_text = "Link"
+description = "Excellent video lectures connecting category theory to programming concepts (types, functors, monads). Great for those with programming background."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "math3ma"
+title = "Math3ma"
+authors = "Tai-Danae Bradley"
+type = "blog"
+url = "https://www.math3ma.com/"
+link_text = "Link"
+description = "Beautiful blog posts making abstract mathematics (including category theory) accessible and visual. Bradley's posts on functors, natural transformations, and applied category theory are exceptional."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "categories-for-the-working-mathematician"
+title = "Categories for the Working Mathematician"
+authors = "Saunders Mac Lane"
+year = "1998"
+type = "book"
+description = "The original category theory textbook by one of its creators (1st ed. 1971; 2nd ed. 1998). Dense but definitive. Use as a reference rather than a first book."
+
+[[groups.items]]
+id = "backprop-as-functor"
+title = "Backprop as Functor"
+authors = "Brendan Fong, David Spivak, Rémy Tuyéras"
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1711.10455"
+link_text = "Link"
+description = "Demonstrates that backpropagation in neural networks can be understood as a functor between categories. A striking connection between category theory and deep learning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "categorical-foundations-of-gradient"
+title = "Categorical Foundations of Gradient-Based Learning"
+authors = "G.S.H. Cruttwell, Bruno Gavranović et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2103.01931"
+link_text = "Link"
+description = "Extends the categorical view of learning, providing a compositional framework for gradient-based optimization. Frontier research."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "homotopy-type-theory"
+title = "Homotopy Type Theory"
+authors = "The Univalent Foundations Program"
+year = "2013"
+type = "book"
+url = "https://homotopytypetheory.org/book/"
+link_text = "Link"
+description = "Free book connecting type theory, category theory, and homotopy theory. Frontier mathematics with deep connections to logic and computer science."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-new-kind-of-science-wolfram-physics"
+title = "A New Kind of Science + Wolfram Physics Project"
+authors = "Stephen Wolfram"
+year = "2002/2020+"
+type = "book"
+label = "Book/Project"
+url = "https://www.wolframphysics.org/"
+link_text = "Link"
+description = "**Speculative — not accepted mathematics or physics; read critically.** NKS argues that simple programs generate much of nature's complexity and popularized \"computational irreducibility\" (many systems can't be predicted faster than by running them — a cousin of classical undecidability results); the Physics Project proposes that spacetime and quantum mechanics emerge from hypergraph rewriting, with the \"ruliad\" as the limit of all possible computations. It has produced no experimentally confirmed prediction that distinguishes it from existing theories and remains outside mainstream physics — pair it with Aaronson's review below."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "book-review-a-new-kind-of-science"
+title = "Book Review: \"A New Kind of Science\""
+authors = "Scott Aaronson"
+year = "2002"
+type = "paper"
+url = "https://arxiv.org/abs/quant-ph/0206089"
+link_text = "Link"
+description = "A complexity theorist's critical review of NKS: applies standard theoretical-CS tools to Wolfram's questions and argues that his deterministic model underlying quantum mechanics cannot be reconciled with both special relativity and Bell-inequality violations. The essential counterweight to the entry above."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mathematics-in-lean"
+title = "Mathematics in Lean"
+authors = "Jeremy Avigad, Patrick Massot"
+year = "2025"
+type = "book"
+access = "free"
+url = "https://leanprover-community.github.io/mathematics_in_lean/"
+link_text = "Link"
+description = "The standard hands-on introduction to formalizing real mathematics in Lean 4 and its Mathlib library, from logic and sets through algebra, topology, and analysis. Continue here after the Lean material in Section 00 — machine-checked proof is where mathematics and AI now meet."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mathematical-exploration-and-discovery"
+title = "Mathematical Exploration and Discovery at Scale"
+authors = "Bogdan Georgiev, Javier Gómez-Serrano, Terence Tao, Adam Zsolt Wagner"
+year = "2025"
+type = "paper"
+url = "https://arxiv.org/abs/2511.02864"
+link_text = "Link"
+description = "Mathematicians including Terence Tao test DeepMind's AlphaEvolve (LLM-guided evolutionary search) on 67 problems in analysis, combinatorics, geometry, and number theory: it matched most best-known results, improved several, and was paired with Deep Think and AlphaProof to generate proofs. A concrete, expert-written picture of what AI currently adds to mathematical research."
+verified = 2026-10-13

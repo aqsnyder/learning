@@ -1,0 +1,119 @@
+# Resources for: Philosophy of Mind
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "philosophy-of-mind-3rd-edition"
+title = "Philosophy of Mind (3rd Edition)"
+authors = "Jaegwon Kim"
+year = "2010"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+description = "The standard textbook. Systematically covers dualism, behaviorism, identity theory, functionalism, and mental causation. Clear, rigorous, and fair to all positions."
+
+[[groups.items]]
+id = "what-is-it-like-to-be-a-bat"
+title = "What Is It Like to Be a Bat?"
+authors = "Thomas Nagel"
+year = "1974"
+type = "paper"
+marks = ["core"]
+url = "https://www.jstor.org/stable/2183914"
+link_text = "Link"
+description = "Argues that consciousness has an irreducibly subjective character that cannot be captured by objective, physical science. One of the most cited papers in all of philosophy."
+
+[[groups.items]]
+id = "meditations-on-first-philosophy"
+title = "Meditations on First Philosophy (Meditation II and VI)"
+authors = "René Descartes"
+year = "1641"
+type = "book"
+url = "https://www.earlymoderntexts.com/assets/pdfs/descartes1641.pdf"
+link_text = "Free"
+description = "The origin of substance dualism. Descartes argues mind and body are fundamentally different kinds of substance. Essential historical context."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-concept-of-mind-selections"
+title = "The Concept of Mind (selections)"
+authors = "Gilbert Ryle"
+year = "1949"
+type = "book"
+description = "Ryle's devastating critique of Cartesian dualism — the idea of mind as a \"ghost in the machine.\" Lays groundwork for behaviorism and functionalism."
+
+[[groups.items]]
+id = "the-nature-of-mental-states"
+title = "The Nature of Mental States"
+authors = "Hilary Putnam"
+year = "1967"
+type = "paper"
+marks = ["core"]
+description = "Introduces machine-state functionalism: mental states are defined by their functional roles, not their physical substrate. Foundational for AI philosophy."
+
+[[groups.items]]
+id = "epiphenomenal-qualia-mary-s-room"
+title = "Epiphenomenal Qualia (Mary's Room)"
+authors = "Frank Jackson"
+year = "1982"
+type = "paper"
+url = "https://doi.org/10.2307/2960077"
+link_text = "Link"
+description = "The famous \"Mary the color scientist\" thought experiment. Argues that physical knowledge leaves out subjective experience."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "functionalism"
+title = "Functionalism"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/functionalism/"
+link_text = "SEP"
+description = "Comprehensive entry on the view that mental states are constituted by their functional relations. Key bridge to philosophy of AI."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "qualia"
+title = "Qualia"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/qualia/"
+link_text = "SEP"
+description = "The subjective, experiential properties of mental states. Central concept for consciousness debates."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "philosophy-and-the-sciences-introduction"
+title = "Philosophy and the Sciences: Introduction to the Philosophy of Cognitive Sciences"
+authors = "University of Edinburgh (Suilin Lavelle, Mark Sprevak, Andy Clark et al.)"
+type = "course"
+url = "https://www.coursera.org/learn/philosophy-cognitive-sciences"
+link_text = "Coursera"
+description = "Accessible video course with modules on evolution and the mind, what consciousness is, intelligent machines and the brain, and embodied cognition (taught in part by Andy Clark). A video companion for Sections 01, 02 and 04."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "personal-identity"
+title = "Personal Identity"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/identity-personal/"
+link_text = "SEP"
+description = "Eric Olson's entry on what makes you the same person over time: psychological-continuity views, animalism, fission cases, and brain-state transfer. The question every \"mind upload\" or \"copied AI\" scenario turns on."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "reasons-and-persons-part-iii-personal"
+title = "Reasons and Persons (Part III: Personal Identity)"
+authors = "Derek Parfit"
+year = "1984"
+type = "book"
+access = "paid"
+level = "advanced"
+url = "https://doi.org/10.1093/019824908X.001.0001"
+link_text = "Link"
+description = "Parfit's teletransporter and fission cases lead to the conclusion that personal identity is not what matters — psychological continuity is. One of the most important works of 20th-century philosophy, and directly relevant to copying, forking, and uploading minds."
+verified = 2026-10-13

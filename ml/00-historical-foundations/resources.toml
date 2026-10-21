@@ -1,0 +1,106 @@
+# Resources for: Historical Foundations of AI
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "computing-machinery-and-intelligence"
+title = "Computing Machinery and Intelligence"
+authors = "Alan Turing"
+year = "1950"
+type = "paper"
+marks = ["core"]
+url = "https://academic.oup.com/mind/article/LIX/236/433/986238"
+link_text = "Link"
+description = "The foundational paper that posed \"Can machines think?\" and introduced the Turing Test. Essential for understanding where the entire field began."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-logical-calculus-of-the-ideas-immanent"
+title = "A Logical Calculus of the Ideas Immanent in Nervous Activity"
+authors = "Warren McCulloch, Walter Pitts"
+year = "1943"
+type = "paper"
+url = "https://doi.org/10.1007/BF02478259"
+link_text = "Link"
+description = "The first mathematical model of an artificial neuron (*Bulletin of Mathematical Biophysics* 5(4), 115–133). Established the idea that neural activity could be described in logical terms."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-proposal-for-the-dartmouth-summer"
+title = "A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence"
+authors = "John McCarthy, Marvin Minsky, Nathaniel Rochester, Claude Shannon"
+year = "1955"
+type = "paper"
+url = "http://jmc.stanford.edu/articles/dartmouth/dartmouth.pdf"
+link_text = "Link"
+description = "The short funding proposal that coined the term \"artificial intelligence\" and set the field's agenda (language, abstraction, neural nets, self-improvement). Striking to read how many of its goals are still the goals."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-perceptron-a-probabilistic-model-for"
+title = "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"
+authors = "Frank Rosenblatt"
+year = "1958"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1037/h0042519"
+link_text = "Link"
+description = "Introduced the perceptron — the first trainable neural network (*Psychological Review* 65(6), 386–408). Understanding its capabilities and limitations is key to appreciating later advances."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "perceptrons-an-introduction-to"
+title = "Perceptrons: An Introduction to Computational Geometry"
+authors = "Marvin Minsky, Seymour Papert"
+year = "1969"
+type = "book"
+url = "https://doi.org/10.7551/mitpress/11301.001.0001"
+link_text = "Link"
+description = "Demonstrated the limitations of single-layer perceptrons (e.g., inability to learn XOR), contributing to the first \"AI winter.\" A cautionary tale about premature conclusions. The link is MIT Press's 2017 reissue of the 1988 expanded edition, which adds the authors' 1987 chapter and a foreword by Léon Bottou."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learning-representations-by-back"
+title = "Learning Representations by Back-Propagating Errors"
+authors = "David Rumelhart, Geoffrey Hinton, Ronald Williams"
+year = "1986"
+type = "paper"
+marks = ["core"]
+url = "https://www.nature.com/articles/323533a0"
+link_text = "Link"
+description = "The paper that popularized backpropagation for training multi-layer networks. This is the algorithmic backbone of modern deep learning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-brief-history-of-neural-nets-and-deep"
+title = "A Brief History of Neural Nets and Deep Learning"
+authors = "Andrey Kurenkov"
+type = "blog"
+url = "http://www.andreykurenkov.com/writing/ai/a-brief-history-of-neural-nets-and-deep-learning/"
+link_text = "Link"
+description = "An accessible, well-written multi-part blog series covering the full arc from McCulloch–Pitts to deep learning. Great narrative overview."
+
+[[groups.items]]
+id = "deep-learning-nature-review"
+title = "Deep Learning (Nature review)"
+authors = "Yann LeCun, Yoshua Bengio, Geoffrey Hinton"
+year = "2015"
+type = "paper"
+url = "https://www.nature.com/articles/nature14539"
+link_text = "Link"
+description = "The three pioneers' own summary of how representation learning, backprop, CNNs, and RNNs came together into the deep learning revolution. The best single bridge from this history section to the rest of the curriculum."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-bitter-lesson"
+title = "The Bitter Lesson"
+authors = "Rich Sutton"
+year = "2019"
+type = "article"
+label = "Essay"
+url = "http://www.incompleteideas.net/IncIdeas/BitterLesson.html"
+link_text = "Link"
+description = "A two-page argument, drawn from 70 years of AI history, that general methods which scale with computation (search and learning) beat hand-built human knowledge. A widely cited, and debated, lens on modern AI's trajectory."
+verified = 2026-10-13

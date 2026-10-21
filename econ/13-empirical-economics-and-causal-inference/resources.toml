@@ -1,0 +1,121 @@
+# Resources for: Empirical Economics and Causal Inference
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "mastering-metrics-the-path-from-cause-to"
+title = "Mastering 'Metrics: The Path from Cause to Effect"
+authors = "Joshua D. Angrist & Jörn-Steffen Pischke"
+year = "2014"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+url = "https://press.princeton.edu/books/paperback/9780691152844/mastering-metrics"
+link_text = "Link"
+description = "The gentlest rigorous introduction, one chapter per tool: randomized trials, regression, instrumental variables, regression discontinuity, differences-in-differences, then the returns to schooling as a case study. Princeton UP lists it as December 2014 (©2015)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mastering-econometrics"
+title = "Mastering Econometrics"
+authors = "Joshua Angrist (MRU)"
+type = "course"
+url = "https://learn.mru.org/courses/mastering-econometrics"
+link_text = "Link"
+description = "Free video companion to *Mastering 'Metrics* from Marginal Revolution University: units on randomized trials, regression, IV, RD and DiD, plus bonus material on the 2021 Nobel."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "causal-inference-the-mixtape"
+title = "Causal Inference: The Mixtape"
+authors = "Scott Cunningham"
+year = "2021"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://mixtape.scunning.com/"
+link_text = "Link"
+description = "Yale University Press, 2021. The free online edition has been updated as *Causal Inference: The Remix*: DAGs and potential outcomes, unconfoundedness and matching, RD, IV, and panel designs including complex difference-in-differences and synthetic control. R and Stata code; the data are in `causaldata`."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-effect-an-introduction-to-research"
+title = "The Effect: An Introduction to Research Design and Causality (2nd ed.)"
+authors = "Nick Huntington-Klein"
+year = "2025"
+type = "book"
+access = "free"
+level = "beginner"
+url = "https://theeffectbook.net/"
+link_text = "Link"
+description = "Chapman & Hall, 2nd ed. 2025, free to read online. Strongest on research design and causal diagrams before it opens the toolbox: regression, matching, fixed effects, event studies, DiD, IV, RD, partial identification. Code in R, Stata and Python."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mostly-harmless-econometrics-an"
+title = "Mostly Harmless Econometrics: An Empiricist's Companion"
+authors = "Joshua D. Angrist & Jörn-Steffen Pischke"
+year = "2009"
+type = "book"
+url = "https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics"
+link_text = "Link"
+description = "The graduate-level reference behind *Mastering 'Metrics*. Use it after the five tools make sense."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-credibility-revolution-in-empirical"
+title = "The Credibility Revolution in Empirical Economics: How Better Research Design is Taking the Con out of Econometrics"
+authors = "Joshua D. Angrist & Jörn-Steffen Pischke"
+year = "2010"
+type = "paper"
+url = "https://doi.org/10.1257/jep.24.2.3"
+link_text = "Link"
+description = "*Journal of Economic Perspectives* 24(2), free. The manifesto: why design-based empirical work displaced specification searching."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "natural-experiments-help-answer"
+title = "Natural experiments help answer important questions (Nobel 2021 popular background)"
+authors = "Royal Swedish Academy of Sciences"
+year = "2021"
+type = "article"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2021/popular-information/"
+link_text = "Link"
+description = "The credibility revolution in plain language. Card and Krueger's New Jersey–Pennsylvania minimum-wage comparison; quarter of birth as an instrument for schooling (about 9% per extra year, against 7% from the raw correlation); LATE; the Mariel boatlift."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "evaluating-replicability-of-laboratory"
+title = "Evaluating replicability of laboratory experiments in economics"
+authors = "Colin F. Camerer, Anna Dreber, Eskil Forsell et al."
+year = "2016"
+type = "paper"
+url = "https://doi.org/10.1126/science.aaf0918"
+link_text = "Link"
+description = "*Science* 351(6280). A coordinated replication of published economics lab experiments: the calibration point for \"how often does this replicate?\", next to the multi-lab replications in Section 06."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "star-wars-the-empirics-strike-back"
+title = "Star Wars: The Empirics Strike Back"
+authors = "Abel Brodeur, Mathias Lé, Marc Sangnier & Yanos Zylberberg"
+year = "2016"
+type = "paper"
+url = "https://doi.org/10.1257/app.20150044"
+link_text = "Link"
+description = "*AEJ: Applied Economics* 8(1). About 50,000 test statistics from the *AER*, *JPE* and *QJE* form a \"two-humped camel\": p-values missing between 0.25 and 0.10 reappear just past 0.05. The authors estimate that 10–20% of marginally significant results are inflated by specification choices."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "causaldata"
+title = "causaldata"
+authors = "Nick Huntington-Klein"
+year = "2024"
+type = "tool"
+url = "https://pypi.org/project/causaldata/"
+link_text = "Link"
+description = "Example datasets for causal inference in Python, R and Stata, from *The Effect* and *The Mixtape*: NSW/CPS job training, Card's college proximity, close U.S. House elections, castle-doctrine laws, organ-donor registration and more. Every exercise below uses it (v0.1.5, MIT licence)."
+verified = 2026-10-13

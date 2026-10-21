@@ -1,0 +1,96 @@
+# Resources for: Network Economics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "networks-crowds-and-markets"
+title = "Networks, Crowds, and Markets"
+authors = "David Easley & Jon Kleinberg"
+year = "2010"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://www.cs.cornell.edu/home/kleinber/networks-book/"
+link_text = "Link"
+description = "Outstanding interdisciplinary textbook spanning graph theory, game theory on networks, markets, information cascades, and network effects. Free online. The ideal starting point."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "platform-revolution"
+title = "Platform Revolution"
+authors = "Geoffrey Parker, Marshall Van Alstyne, Sangeet Paul Choudary"
+year = "2016"
+type = "book"
+description = "How platforms work, why they win, and how to build them. Accessible business-oriented treatment."
+
+[[groups.items]]
+id = "platform-competition-in-two-sided"
+title = "Platform Competition in Two-Sided Markets"
+authors = "Jean-Charles Rochet & Jean Tirole"
+year = "2003"
+type = "paper"
+url = "https://doi.org/10.1162/154247603322493212"
+link_text = "Link"
+description = "Foundational formal model of two-sided platforms. Tirole won the Nobel Prize partly for this work."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "network-externalities-competition-and"
+title = "Network Externalities, Competition, and Compatibility"
+authors = "Michael Katz & Carl Shapiro"
+year = "1985"
+type = "paper"
+url = "https://www.jstor.org/stable/1814809"
+link_text = "Link"
+description = "Seminal paper on network effects, technology adoption, and compatibility standards."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "information-rules"
+title = "Information Rules"
+authors = "Carl Shapiro & Hal Varian"
+year = "1998"
+type = "book"
+description = "Economics of information goods, network effects, lock-in, and standards wars. Prescient and still relevant."
+
+[[groups.items]]
+id = "social-and-economic-networks"
+title = "Social and Economic Networks"
+authors = "Matthew Jackson, Stanford"
+type = "course"
+url = "https://www.coursera.org/learn/social-economic-networks"
+link_text = "Link"
+description = "Coursera course on network formation, diffusion, learning, and game theory on networks."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "matchmakers-the-new-economics-of"
+title = "Matchmakers: The New Economics of Multisided Platforms"
+authors = "David Evans & Richard Schmalensee"
+year = "2016"
+type = "book"
+description = "Clear treatment of multi-sided platform economics with case studies."
+
+[[groups.items]]
+id = "stratechery"
+title = "Stratechery"
+authors = "Ben Thompson"
+type = "blog"
+url = "https://stratechery.com/"
+link_text = "Link"
+description = "Leading analysis of technology strategy through an economics lens. Developed aggregation theory."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "metcalfe-s-law-is-wrong"
+title = "Metcalfe's Law is Wrong"
+authors = "Bob Briscoe, Andrew Odlyzko & Benjamin Tilly"
+year = "2006"
+type = "article"
+url = "https://spectrum.ieee.org/metcalfes-law-is-wrong"
+link_text = "Link"
+description = "Argues a network's value grows roughly like n·log(n), not n², because not all connections are equally valuable — so Metcalfe's law overstates the value of large networks. A needed corrective to n² claims common in crypto valuation arguments (compare btc Section 09)."
+verified = 2026-10-13

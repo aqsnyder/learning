@@ -1,0 +1,44 @@
+# Books and courses that have no home in a section.
+# Edit this file, then run `python tools/build.py`. Field reference: tools/README.md
+
+[[groups]]
+title = "Books"
+
+[[groups.items]]
+id = "refactoring"
+title = "Refactoring (2nd ed)"
+authors = "Martin Fowler"
+year = "2018"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "Recognize code smells and fix them"
+
+[[groups]]
+title = "Courses"
+
+[[groups.items]]
+id = "arjancodes"
+title = "ArjanCodes"
+type = "course"
+url = "https://www.youtube.com/@ArjanCodes"
+link_text = "Channel"
+description = "Python architecture and design patterns"
+
+[[groups.items]]
+id = "talk-python-to-me"
+title = "Talk Python to Me"
+type = "course"
+url = "https://talkpython.fm/"
+link_text = "Site"
+description = "Python ecosystem deep dives"
+
+[[groups.items]]
+id = "google-engineering-practices"
+title = "Google Engineering Practices"
+authors = "Google"
+type = "course"
+url = "https://google.github.io/eng-practices/"
+link_text = "Site"
+description = "Code review guide"

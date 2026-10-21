@@ -1,0 +1,114 @@
+# Resources for: Security and Privacy
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "lopp-net-bitcoin-security-guide"
+title = "Lopp.net Bitcoin Security Guide"
+authors = "Jameson Lopp"
+type = "website"
+label = "Web Resource"
+marks = ["core"]
+url = "https://www.lopp.net/bitcoin-information/security.html"
+link_text = "lopp.net"
+description = "Comprehensive security best practices"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cold-storage"
+title = "Cold storage"
+type = "concept"
+description = "Air-gapped signing, hardware wallets (Coldcard, Trezor, Ledger)"
+
+[[groups.items]]
+id = "multisig-multi-signature"
+title = "Multisig (multi-signature)"
+type = "concept"
+description = "2-of-3, 3-of-5 setups for security"
+
+[[groups.items]]
+id = "coin-selection-and-utxo-management"
+title = "Coin selection and UTXO management"
+type = "concept"
+description = "Privacy implications of consolidation"
+
+[[groups.items]]
+id = "coinjoin-and-payjoin"
+title = "CoinJoin and PayJoin"
+type = "concept"
+description = "Collaborative transactions for privacy. Note the legal context: in April 2024 two Samourai Wallet developers were arrested on U.S. charges related to their software, and two other companies then announced they would stop serving U.S. customers ([Optech #300](https://bitcoinops.org/en/newsletters/2024/05/01/)); newer designs (Payjoin v2, silent payments) are in Section 11"
+
+[[groups.items]]
+id = "chain-analysis-and-privacy-threats"
+title = "Chain analysis and privacy threats"
+type = "concept"
+description = "How surveillance works"
+
+[[groups.items]]
+id = "bitcoin-privacy-guide"
+title = "Bitcoin Privacy Guide"
+type = "website"
+label = "Web Resource"
+url = "https://bitcoiner.guide/privacy/"
+link_text = "bitcoiner.guide"
+description = "Practical privacy techniques (an online guide, not a book)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "andreas-antonopoulos-on-bitcoin-privacy"
+title = "Andreas Antonopoulos on Bitcoin privacy"
+authors = "Andreas Antonopoulos"
+type = "video"
+url = "https://www.youtube.com/@aantonop"
+link_text = "YouTube"
+description = "Privacy-focused talks"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-174-psbt-partially-signed-bitcoin"
+title = "BIP 174: PSBT (Partially Signed Bitcoin Transactions)"
+authors = "Ava Chow"
+type = "standard"
+marks = ["core"]
+url = "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki"
+link_text = "BIP 174"
+description = "Multi-device signing workflow (PSBT v2 is BIP 370)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mastering-bitcoin-chapter-13-bitcoin"
+title = "Mastering Bitcoin, Chapter 13: Bitcoin Security"
+authors = "Andreas Antonopoulos and David Harding"
+year = "2023"
+type = "book"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch13_security.adoc"
+link_text = "GitHub"
+description = "Bitcoin's decentralized security model and root of trust, then user practice: physical storage, hardware signing devices, multisig and governance, survivability and inheritance"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-core-multisig-and-offline"
+title = "Bitcoin Core multisig and offline-signing tutorials"
+authors = "Bitcoin Core contributors"
+type = "practice"
+url = "https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md"
+link_text = "Multisig"
+more_links = [{ text = "Offline signing", url = "https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md" }]
+description = "Step-by-step on signet: build a descriptor-based multisig wallet, and pass PSBTs between an online watch-only wallet and an air-gapped signer — using only Bitcoin Core"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-wiki-privacy"
+title = "Bitcoin Wiki: Privacy"
+authors = "Bitcoin Wiki contributors"
+year = "2019"
+type = "website"
+label = "Web Resource"
+url = "https://en.bitcoin.it/wiki/Privacy"
+link_text = "en.bitcoin.it"
+description = "A long reference article on how Bitcoin privacy is attacked and defended. Blockchain attacks: the common-input-ownership heuristic, change-address detection, transaction-graph analysis, amount and timing correlation. Non-blockchain attacks: traffic analysis, custodial wallets, wallet-history lookups on third-party servers, eavesdropping. Defenses: avoiding address reuse, coin control, CoinJoin, PayJoin and Lightning, with case studies. Written in 2019 as a community wiki page, so check its tool and service recommendations against the 2024 CoinJoin changes noted in the CoinJoin and PayJoin row"
+verified = 2026-10-13

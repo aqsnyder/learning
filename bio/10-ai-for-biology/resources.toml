@@ -1,0 +1,142 @@
+# Resources for: AI for Biology
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "highly-accurate-protein-structure"
+title = "Highly Accurate Protein Structure Prediction with AlphaFold"
+authors = "Jumper, Evans, Pritzel, Green et al."
+year = "2021"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1038/s41586-021-03819-2"
+link_text = "Paper"
+description = "The AlphaFold 2 paper that solved the protein structure prediction problem, achieving experimental-level accuracy at CASP14"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "accurate-structure-prediction-of"
+title = "Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3"
+authors = "Abramson, Adler, Dunger, Evans et al."
+year = "2024"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1038/s41586-024-07487-w"
+link_text = "Paper"
+description = "AlphaFold 3 extends structure prediction to protein–ligand, protein–DNA/RNA, and multi-chain complexes using diffusion-based architecture"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "improved-protein-structure-prediction"
+title = "Improved Protein Structure Prediction Using Potentials from Deep Learning"
+authors = "Senior, Evans, Jumper, Kirkpatrick et al."
+year = "2020"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-019-1923-7"
+link_text = "Paper"
+description = "AlphaFold 1 — the initial deep learning approach to protein structure prediction that placed first at CASP13"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "diffdock-diffusion-steps-twists-and"
+title = "DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking"
+authors = "Corso, Stärk, Jing, Barzilay & Jaakkola"
+year = "2023"
+type = "paper"
+url = "https://doi.org/10.48550/arXiv.2210.01776"
+link_text = "Paper"
+description = "Generative diffusion model for blind molecular docking that treats docking as a generative problem over poses"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "biobert-a-pre-trained-biomedical"
+title = "BioBERT: A Pre-trained Biomedical Language Representation Model"
+authors = "Lee, Yoon, Kim, Kim, Kim, So & Kang"
+year = "2020"
+type = "paper"
+url = "https://doi.org/10.1093/bioinformatics/btz682"
+link_text = "Paper"
+description = "Domain-specific BERT model pre-trained on biomedical literature, achieving state-of-the-art on biomedical NLP benchmarks"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scgpt-toward-building-a-foundation-model"
+title = "scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics Using Generative AI"
+authors = "Cui, Wang, Maan, Pang, Luo, Duan & Wang"
+year = "2024"
+type = "paper"
+url = "https://doi.org/10.1038/s41592-024-02201-0"
+link_text = "Paper"
+description = "Foundation model for single-cell biology using generative pre-training, enabling cell type annotation, perturbation prediction, and gene network inference"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "3d-infomax-improves-gnns-for-molecular"
+title = "3D Infomax Improves GNNs for Molecular Property Prediction"
+authors = "Stärk, Beaini, Corso, Tossou, Dallago, Günnemann & Liò"
+year = "2022"
+type = "paper"
+url = "https://doi.org/10.48550/arXiv.2110.04126"
+link_text = "Paper"
+description = "Explores how to incorporate 3D geometric information into GNNs for molecular learning and equivariant representations"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "nobel-lecture-building-chemical-and"
+title = "Nobel Lecture: Building Chemical and Biological Intuition into Protein Structure Prediction"
+authors = "John Jumper"
+year = "2024"
+type = "lecture"
+label = "Talk"
+url = "https://www.nobelprize.org/prizes/chemistry/2024/jumper/lecture/"
+link_text = "Lecture"
+description = "Jumper's Nobel lecture on AlphaFold's development, from CASP to the architecture choices that made it work; Demis Hassabis's companion lecture, \"Accelerating scientific discovery with AI,\" is on the same prize site"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "geometric-deep-learning-grids-groups"
+title = "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges"
+authors = "Bronstein, Bruna, Cohen, Veličković"
+year = "2021"
+type = "paper"
+url = "https://doi.org/10.48550/arXiv.2104.13478"
+link_text = "Paper"
+description = "Comprehensive blueprint for geometric deep learning, unifying CNNs, GNNs, and equivariant networks under a common mathematical framework"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "alphafold-3-open-source-inference"
+title = "AlphaFold 3 — Open-Source Inference Implementation"
+authors = "Google DeepMind"
+year = "2024"
+type = "tool"
+label = "Code"
+url = "https://github.com/google-deepmind/alphafold3"
+link_text = "GitHub"
+description = "The AF3 inference pipeline released in November 2024 under a non-commercial licence (unlike AlphaFold 2's Apache-2.0), with model parameters available from Google on request under separate terms of use. Check both before any commercial use — the difference between reading the paper and running the model"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "boltz-1-boltz-2-open-biomolecular"
+title = "Boltz-1 / Boltz-2 — Open Biomolecular Interaction Models"
+authors = "Wohlwend, Corso, Passaro et al. (MIT)"
+year = "2025"
+type = "tool"
+label = "Code"
+url = "https://github.com/jwohlwend/boltz"
+link_text = "GitHub"
+description = "MIT-licensed open models — code *and* weights — that the authors report approach AlphaFold 3 on structure, with Boltz-2 adding binding-affinity prediction; the practical way to run AF3-class predictions without access restrictions"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "dual-use-of-artificial-intelligence"
+title = "Dual Use of Artificial-Intelligence-Powered Drug Discovery"
+authors = "Urbina, Lentzos, Invernizzi & Ekins"
+year = "2022"
+type = "paper"
+url = "https://doi.org/10.1038/s42256-022-00465-9"
+link_text = "Nat. Mach. Intell."
+description = "The field's wake-up call: the same generative models that design drug candidates can be inverted to design toxins — read before you build anything in this space, not after"
+verified = 2026-10-13

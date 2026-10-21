@@ -1,0 +1,75 @@
+# Resources for: Numerical Methods and Scientific Computing
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "what-every-computer-scientist-should"
+title = "What Every Computer Scientist Should Know About Floating-Point Arithmetic"
+authors = "David Goldberg"
+year = "1991"
+type = "paper"
+marks = ["core"]
+url = "https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html"
+link_text = "Link"
+description = "The classic tutorial on IEEE-754 (ACM *Computing Surveys*): rounding, ulps and relative error, guard digits, cancellation, and why \"obvious\" formulas fail. Required reading before writing numeric firmware; free reprint in Oracle's *Numerical Computation Guide*."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fundamentals-of-numerical-computation"
+title = "Fundamentals of Numerical Computation"
+authors = "Tobin A. Driscoll, Richard J. Braun"
+year = "2022"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://fncbook.com/"
+link_text = "Link"
+description = "Free online textbook with complete Julia, MATLAB, and Python versions: floating point and conditioning, linear systems and least squares, root finding, interpolation, quadrature, and initial-value problems including stiffness. The best hands-on first course. Print editions are SIAM's MATLAB (2017) and Julia (2022) editions; the online text has updated exercises, so take exercise numbers from it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-18-335j-introduction-to-numerical"
+title = "MIT 18.335J Introduction to Numerical Methods"
+authors = "Steven G. Johnson"
+year = "2019"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/"
+link_text = "Link"
+description = "Graduate numerical analysis: floating point, backward error analysis, conditioning and stability, and dense and iterative linear algebra, with a brief survey of integration and optimization (notes, problem sets and exams; no videos)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "numerical-linear-algebra"
+title = "Numerical Linear Algebra"
+authors = "Lloyd N. Trefethen, David Bau III"
+year = "2022"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "The classic on how linear algebra is actually computed (25th-anniversary edition of the 1997 text): conditioning, floating-point stability, QR, SVD, eigenvalue algorithms, and iterative Krylov methods in 40 short lectures. Essential once you rely on NumPy/LAPACK results in real work."
+
+[[groups.items]]
+id = "scientific-computing-an-introductory"
+title = "Scientific Computing: An Introductory Survey"
+authors = "Michael T. Heath"
+year = "2018"
+type = "book"
+url = "https://doi.org/10.1137/1.9781611975581"
+link_text = "Link"
+description = "A broad, readable survey of the whole field (revised 2nd edition, SIAM Classics): error analysis, linear and nonlinear equations, optimization, interpolation, quadrature, ODEs and PDEs, and the FFT. A good single reference."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "accuracy-and-stability-of-numerical"
+title = "Accuracy and Stability of Numerical Algorithms"
+authors = "Nicholas J. Higham"
+year = "2002"
+type = "book"
+url = "https://doi.org/10.1137/1.9780898718027"
+link_text = "Link"
+description = "The definitive reference on rounding-error analysis (2nd edition): floating point, summation, polynomial evaluation, linear systems, and condition estimation. Dip into the chapter you need."
+verified = 2026-10-13

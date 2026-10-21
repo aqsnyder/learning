@@ -1,0 +1,128 @@
+# Resources for: Computational Chemistry and Drug Discovery
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "molecular-modelling-principles-and"
+title = "Molecular Modelling: Principles and Applications (2nd Edition)"
+authors = "Leach, A. R."
+year = "2001"
+type = "book"
+label = "Textbook"
+marks = ["core"]
+url = "https://openlibrary.org/books/OL7880866M/Molecular_Modelling"
+link_text = "Open Library"
+description = "The standard textbook for computational chemistry — covers force fields, energy minimization, molecular dynamics, Monte Carlo methods, docking, and QSAR with clear mathematical exposition. Prentice Hall/Pearson, ISBN 9780582382107; Pearson's old product page now serves an unrelated book, so this links the catalogue record"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "experimental-and-computational"
+title = "Experimental and Computational Approaches to Estimate Solubility and Permeability in Drug Discovery and Development Settings"
+authors = "Lipinski, C. A., Lombardo, F., Dominy, B. W., Feeney, P. J."
+year = "1997"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1016/S0169-409X(96)00423-1"
+link_text = "Adv. Drug Deliv. Rev."
+description = "The \"Rule of Five\" paper — established the physicochemical guidelines (MW ≤ 500, logP ≤ 5, HBD ≤ 5, HBA ≤ 10) that still anchor oral drug design and ADMET screening"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "autodock-vina-documentation-v1-2-0"
+title = "AutoDock Vina Documentation (v1.2.0)"
+authors = "Forli Lab / CCSB, Scripps Research (original program by Oleg Trott)"
+year = "2021"
+type = "tutorial"
+url = "https://autodock-vina.readthedocs.io/"
+link_text = "AutoDock Vina"
+description = "Official documentation for the widely-used open-source docking program, with tutorials on basic docking, flexible docking, docking multiple ligands, and Python scripting"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rdkit-open-source-cheminformatics"
+title = "RDKit: Open-Source Cheminformatics"
+authors = "Landrum, G."
+year = "2024"
+type = "tutorial"
+url = "https://www.rdkit.org/docs/GettingStartedInPython.html"
+link_text = "RDKit"
+description = "The standard Python toolkit for cheminformatics — tutorials cover molecular representation (SMILES, fingerprints), substructure searching, property calculation, and chemical similarity"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "zinc-database-free-library-of"
+title = "ZINC Database — Free Library of Commercially Available Compounds"
+authors = "Irwin, J. J. & Shoichet, B. K."
+year = "2024"
+type = "database"
+url = "https://zinc.docking.org/"
+link_text = "ZINC"
+description = "Curated database of over 230 million purchasable compounds in ready-to-dock 3D formats — the go-to resource for virtual screening campaigns"
+
+[[groups.items]]
+id = "docking-and-scoring-in-virtual-screening"
+title = "Docking and Scoring in Virtual Screening for Drug Discovery: Methods and Applications"
+authors = "Kitchen, D. B., Decornez, H., Furr, J. R., Bajorath, J."
+year = "2004"
+type = "paper"
+url = "https://doi.org/10.1038/nrd1549"
+link_text = "Nat. Rev. Drug Discov."
+description = "Comprehensive review of molecular docking algorithms, scoring functions, and their real-world application in pharmaceutical virtual screening pipelines"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "automating-drug-discovery"
+title = "Automating Drug Discovery"
+authors = "Schneider, G."
+year = "2018"
+type = "paper"
+url = "https://doi.org/10.1038/nrd.2017.232"
+link_text = "Nat. Rev. Drug Discov."
+description = "Forward-looking review covering AI and automation in drug design — de novo molecular generation, reinforcement learning for molecular optimization, and closed-loop discovery platforms"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "virtual-screening-of-chemical-libraries"
+title = "Virtual Screening of Chemical Libraries"
+authors = "Shoichet, B. K."
+year = "2004"
+type = "paper"
+url = "https://doi.org/10.1038/nature03197"
+link_text = "Nature"
+description = "Concise and influential overview of structure-based and ligand-based virtual screening — discusses what works, what fails, and how to design rigorous virtual screening experiments"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "teachopencadd-open-source-computer-aided"
+title = "TeachOpenCADD — Open-Source Computer-Aided Drug Design"
+authors = "Volkamer Lab"
+year = "2024"
+type = "course"
+url = "https://projects.volkamerlab.org/teachopencadd/"
+link_text = "TeachOpenCADD"
+description = "Free, hands-on Jupyter notebook tutorials covering the full CADD pipeline — from querying ChEMBL to pharmacophore modeling, molecular docking, and ADMET prediction using Python"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ultra-large-library-docking-for"
+title = "Ultra-Large Library Docking for Discovering New Chemotypes"
+authors = "Lyu, J. et al. (… Irwin, J. J.)"
+year = "2019"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-019-0917-9"
+link_text = "Nature"
+description = "Docked ~170 million make-on-demand compounds against AmpC β-lactamase and the D4 dopamine receptor, then synthesized and tested the top hits — the empirical answer to what happens to hit rates when virtual libraries grow by orders of magnitude"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "drug-design-methodology-concepts-and"
+title = "Drug Design: Methodology, Concepts, and Mode-of-Action"
+authors = "Klebe, G."
+year = "2013"
+type = "book"
+label = "Textbook"
+url = "https://link.springer.com/book/10.1007/978-3-642-17907-5"
+link_text = "Springer"
+description = "Detailed textbook on structure-based drug design — covers thermodynamics of binding, pharmacophore models, fragment-based design, and lead optimization with case studies from real drug programs"
