@@ -28,9 +28,9 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book | Spacetime Physics (2nd ed., 1992) | Taylor & Wheeler | 1992 | [eftaylor.com (free, CC BY)](https://www.eftaylor.com/spacetimephysics/) | — |
-| | 🎓 Course | Special Relativity (The Theoretical Minimum) | Leonard Susskind | — | [YouTube](https://www.youtube.com/playlist?list=PLD9DDFBDC338226CA) | — |
+| | 🎓 Course (free) | Special Relativity (The Theoretical Minimum) | Leonard Susskind | — | [YouTube](https://www.youtube.com/playlist?list=PLD9DDFBDC338226CA) | — |
 | 🔑 | 📄 Paper | On the Electrodynamics of Moving Bodies | Albert Einstein | 1905 | [Link](https://www.fourmilab.ch/etexts/einstein/specrel/specrel.pdf) | — |
-| 🔑 | 📕 Book | Spacetime and Geometry | Sean Carroll | — | [free 1997 lecture notes (arXiv)](https://arxiv.org/abs/gr-qc/9712019) | — |
+| 🔑 | 📕 Book (free) | Spacetime and Geometry | Sean Carroll | — | [free 1997 lecture notes (arXiv)](https://arxiv.org/abs/gr-qc/9712019) | — |
 | | 📕 Book | Gravity: An Introduction to Einstein's General Relativity | James Hartle | — | — | — |
 | | 📕 Book | A First Course in General Relativity | Bernard Schutz | — | — | — |
 | | 📕 Book | Gravitation | Misner, Thorne & Wheeler | — | — | — |

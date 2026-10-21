@@ -34,12 +34,12 @@ After this section you can:
 | 🔑 | 🌐 Fab House | JLCPCB | — | — | [Capabilities](https://jlcpcb.com/capabilities/pcb-capabilities) | Affordable prototyping. The capabilities page lists the limits your DRC should match: trace/space, via drill, layer counts, impedance-control tolerance |
 | | 🌐 Fab House | PCBWay | — | — | [Link](https://www.pcbway.com/) | Prototyping and small batch |
 | | 🌐 Fab House | OSH Park | — | — | [Link](https://oshpark.com/) | US-based prototyping |
-| | 🎥 Video | Phil's Lab Gerber generation tutorials | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Step-by-step output file generation |
+| | 🎥 Video (free) | Phil's Lab Gerber generation tutorials | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Step-by-step output file generation |
 | | 🔧 Tool | KiCad Gerber viewer | — | — | — | Built-in output verification |
 | | 📘 Reference | Gerber Layer Format Specification (rev. 2024.05) | Ucamco | — | [ucamco.com/en/gerber](https://www.ucamco.com/en/gerber) | The official Gerber spec. Output Gerber X2 so the files carry attributes (pad/via/fiducial functions, net names) and the fab gets your intent, not just shapes |
-| | 🔧 Tool | kicad-cli | KiCad Project | — | [Docs](https://docs.kicad.org/10.0/en/cli/cli.html) | KiCad's command-line interface: scripted ERC/DRC and exports (Gerbers, drill, positions, BOM, PDFs, 3D), so outputs are reproducible rather than click-generated |
-| | 🔧 Tool | KiBot | INTI-CMNB | — | [GitHub](https://github.com/INTI-CMNB/KiBot) | Config-driven generation of fab and documentation outputs, with an official GitHub Action. Every commit or tag can produce a complete release package (hardware CI) |
-| | 🔧 Tool | KiKit | yaqwsx | — | [Docs](https://yaqwsx.github.io/KiKit/latest/) | Panelization (tabs, mouse bites, V-cuts), fab-house output presets, and stencil generation for KiCad boards |
+| | 🔧 Tool (free) | kicad-cli | KiCad Project | — | [Docs](https://docs.kicad.org/10.0/en/cli/cli.html) | KiCad's command-line interface: scripted ERC/DRC and exports (Gerbers, drill, positions, BOM, PDFs, 3D), so outputs are reproducible rather than click-generated |
+| | 🔧 Tool (free) | KiBot | INTI-CMNB | — | [GitHub](https://github.com/INTI-CMNB/KiBot) | Config-driven generation of fab and documentation outputs, with an official GitHub Action. Every commit or tag can produce a complete release package (hardware CI) |
+| | 🔧 Tool (free) | KiKit | yaqwsx | — | [Docs](https://yaqwsx.github.io/KiKit/latest/) | Panelization (tabs, mouse bites, V-cuts), fab-house output presets, and stencil generation for KiCad boards |
 
 <!-- resources:end -->
 

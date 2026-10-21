@@ -28,5 +28,5 @@ Do not read cover-to-cover. Use as companions to the section READMEs. Start with
 | 21 | ⭐ | Kolmogorov Complexity and Algorithmic Randomness | A. Shen, V. A. Uspensky, N. Vereshchagin | 2017 | — | — | [Link](https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf) | [01](../01-math-foundations/README.md) |
 | 22 | | Superintelligence: Paths, Dangers, Strategies | Bostrom | 2014 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
 | 23 | | Human Compatible: Artificial Intelligence and the Problem of Control | Russell | 2019 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
-| 24 | 🔑 | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein et al. | 2021 | — | — | [arxiv.org/abs/2104.13478](https://arxiv.org/abs/2104.13478) | [13](../13-graphs-geometry-and-science/README.md) |
+| 24 | 🔑 | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein et al. | 2021 | Free | — | [arxiv.org/abs/2104.13478](https://arxiv.org/abs/2104.13478) | [13](../13-graphs-geometry-and-science/README.md) |
 <!-- books:end -->

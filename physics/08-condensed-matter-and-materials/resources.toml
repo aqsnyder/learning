@@ -28,6 +28,7 @@ type = "book"
 id = "mit-8-231-physics-of-solids-i-fall-2006"
 title = "MIT 8.231 Physics of Solids I (Fall 2006) — Xiao-Gang Wen (problem sets only)"
 type = "course"
+access = "free"
 url = "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
 link_text = "MIT OCW"
 verified = 2026-10-13

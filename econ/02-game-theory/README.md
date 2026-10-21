@@ -30,7 +30,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book | Game Theory: An Introduction | Steven Tadelis | 2013 | [Link](https://press.princeton.edu/books/hardcover/9780691129082/game-theory) | The best modern game theory textbook. Clear exposition, excellent exercises. Covers strategic form, extensive form, repeated games, and incomplete information. |
-| 🔑 | 🎓 Course | Game Theory (ECON 159) | Ben Polak, Yale | — | [Link](https://oyc.yale.edu/economics/econ-159) | Outstanding open course. Polak is an exceptional lecturer. Covers Nash equilibrium, mixed strategies, sequential games, repeated games, evolution. |
+| 🔑 | 🎓 Course (free) | Game Theory (ECON 159) | Ben Polak, Yale | — | [Link](https://oyc.yale.edu/economics/econ-159) | Outstanding open course. Polak is an exceptional lecturer. Covers Nash equilibrium, mixed strategies, sequential games, repeated games, evolution. |
 | | 📕 Book | Strategy: An Introduction to Game Theory | Joel Watson | 2013 | — | Excellent alternative textbook with emphasis on contract and mechanism design applications. |
 | | 📕 Book (free) | A Course in Game Theory | Martin Osborne & Ariel Rubinstein | 1994 | [Link](https://www.economics.utoronto.ca/osborne/cgt/) | Concise, mathematically precise treatment. Free PDF available from the authors. |
 | | 📕 Book | The Strategy of Conflict | Thomas Schelling | 1960 | — | Nobel laureate's classic on focal points, credible commitments, and strategic interaction. Brilliant insights without formal math. |

@@ -28,7 +28,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book | Nonlinear Dynamics and Chaos (3rd ed., 2024) | Steven Strogatz | 2024 | — | — |
-| 🔑 | 🎓 Course | Nonlinear Dynamics and Chaos — Strogatz (Cornell lectures) | — | — | [YouTube](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V) | — |
+| 🔑 | 🎓 Course (free) | Nonlinear Dynamics and Chaos — Strogatz (Cornell lectures) | — | — | [YouTube](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V) | — |
 | | 📕 Book | Chaos: Making a New Science | James Gleick | — | — | — |
 | | 📄 Paper | Deterministic Nonperiodic Flow | Edward Lorenz | 1963 | [DOI](https://doi.org/10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2) | — |
 | | 📄 Paper | Simple Mathematical Models with Very Complicated Dynamics | Robert May | 1976 | [DOI](https://doi.org/10.1038/261459a0) | — |

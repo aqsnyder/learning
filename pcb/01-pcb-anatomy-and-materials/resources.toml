@@ -33,6 +33,7 @@ verified = 2026-10-13
 id = "altium-academy-basics"
 title = "Altium Academy Basics"
 type = "video-series"
+access = "free"
 url = "https://www.youtube.com/@AltiumAcademy"
 link_text = "youtube.com/@AltiumAcademy"
 description = "PCB fundamentals and stackup intro"

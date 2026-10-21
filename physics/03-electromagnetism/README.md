@@ -28,13 +28,13 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book | Introduction to Electrodynamics (5th ed., 2023) | David J. Griffiths | 2023 | — | — |
-| 🔑 | 📕 Book | The Feynman Lectures on Physics, Vol. 2 | Feynman, Leighton, Sands | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
-| 🔑 | 🎓 Course | Fundamentals of Physics II (Yale PHYS 201, 2010) | Ramamurti Shankar | 2010 | [Open Yale Courses](https://oyc.yale.edu/physics/phys-201) | — |
+| 🔑 | 📕 Book (free) | The Feynman Lectures on Physics, Vol. 2 | Feynman, Leighton, Sands | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
+| 🔑 | 🎓 Course (free) | Fundamentals of Physics II (Yale PHYS 201, 2010) | Ramamurti Shankar | 2010 | [Open Yale Courses](https://oyc.yale.edu/physics/phys-201) | — |
 | | 📕 Book | Electricity and Magnetism | Purcell & Morin | — | — | — |
-| | 🎥 Video | Divergence and Curl — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=rB83DpBJQsE) | — |
+| | 🎥 Video (free) | Divergence and Curl — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=rB83DpBJQsE) | — |
 | | 📕 Book | Classical Electrodynamics | J.D. Jackson | — | — | — |
 | | 📕 Book | Electromagnetics, Vol. 1 (2018) & Vol. 2 (2020) | Steven W. Ellingson (open textbook, CC BY-SA) | 2020 | [Vol. 1](https://doi.org/10.21061/electromagnetics-vol-1) · [Vol. 2](https://doi.org/10.21061/electromagnetics-vol-2) | — |
-| | 📕 Book | Electromagnetic Fields and Energy | Hermann A. Haus & James R. Melcher | 1989 | [MIT OCW](https://ocw.mit.edu/courses/res-6-001-electromagnetic-fields-and-energy-spring-2008/) | — |
+| | 📕 Book (free) | Electromagnetic Fields and Energy | Hermann A. Haus & James R. Melcher | 1989 | [MIT OCW](https://ocw.mit.edu/courses/res-6-001-electromagnetic-fields-and-energy-spring-2008/) | — |
 
 <!-- resources:end -->
 

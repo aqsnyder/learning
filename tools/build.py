@@ -15,6 +15,10 @@ Generated (never edit by hand; run this script instead):
 
 Usage:  python tools/build.py           # regenerate
         python tools/build.py --check   # exit 1 if anything is stale or invalid (CI runs this)
+        python tools/build.py --only pcb            # regenerate one curriculum only
+        python tools/build.py --only pcb/05,pcb/06  # regenerate only these sections' resource blocks
+  --only exists so that several people (or agents) can edit different parts of the repo at once without one
+  build overwriting another's work in progress. Run the plain command before committing.
 
 Needs Python 3.11+ (for tomllib) and nothing else. The data format is documented in tools/README.md.
 """
@@ -436,11 +440,26 @@ def render_index(kind, cur, order, secs, data_by_nn, extras):
 
 
 # ------------------------------------------------------------------ main
+def parse_only():
+    if "--only" not in sys.argv:
+        return None
+    i = sys.argv.index("--only")
+    if i + 1 >= len(sys.argv):
+        sys.exit("--only needs a value, e.g. --only pcb or --only pcb/05,pcb/06")
+    return [x.strip().strip("/") for x in sys.argv[i + 1].split(",") if x.strip()]
+
+
 def main():
     check = "--check" in sys.argv
+    only = parse_only()
+    whole = None if only is None else {o for o in only if "/" not in o}
+    secs_only = None if only is None else {o for o in only if "/" in o}
     stale = []
     index_parts = []
     for cur in CURRICULA:
+        if only is not None and cur not in whole and not any(s.startswith(cur + "/") for s in secs_only):
+            continue
+        cur_level = only is None or cur in whole
         cdir = os.path.join(ROOT, cur)
         sec_dirs = sorted(d for d in os.listdir(cdir) if SECTION_RE.match(d))
         secs = {d[:2]: section_facts(cur, d) for d in sec_dirs}
@@ -452,11 +471,15 @@ def main():
                 validate_item(it, f"{cur}/extras.toml: item '{it.get('id', '?')}'")
         # section READMEs
         for d in sec_dirs:
+            if not cur_level and f"{cur}/{d[:2]}" not in secs_only:
+                continue
             p = os.path.join(cdir, d, "README.md")
             text = secs[d[:2]]["text"]
             new = replace_block(text, "<!-- resources:start", RES_END, render_resources(cur, data_by_nn[d[:2]]),
                                 os.path.relpath(p, ROOT))
             write_if_changed(p, new, check, stale)
+        if not cur_level:
+            continue
         # learning path
         rp = os.path.join(cdir, "README.md")
         readme = read(rp)
@@ -484,12 +507,17 @@ def main():
             items.append(f"- [{nn} — {s['title']}]({cur}/{s['dir']}/){note}")
         index_parts.append(f"<details>\n<summary><b>{name}</b> · {len(order)} sections · "
                            f"<a href=\"{cur}/\">curriculum page</a></summary>\n\n" + "\n".join(items) + "\n\n</details>\n")
+    if only is not None:
+        return finish(check, stale)
     root_path = os.path.join(ROOT, "README.md")
     root = read(root_path)
     new = replace_block(root, "<!-- section-index:start", IX_END, IX_START + "\n" + "\n".join(index_parts) + IX_END,
                         "README.md")
     write_if_changed(root_path, new, check, stale)
+    finish(check, stale)
 
+
+def finish(check, stale):
     if errors:
         for e in errors:
             print("  " + e, file=sys.stderr)

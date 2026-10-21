@@ -103,6 +103,7 @@ id = "we-have-a-package-for-you-a"
 title = "We Have a Package for You! A Comprehensive Analysis of Package Hallucinations by Code Generating LLMs"
 authors = "Joseph Spracklen et al. (USENIX Security 2025)"
 type = "paper"
+access = "free"
 marks = ["ai"]
 url = "https://arxiv.org/abs/2406.10279"
 link_text = "Link"

@@ -28,7 +28,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 🎥 Video | The Extreme Importance of PC Board Stack-Up (AltiumLive, 2018) | Rick Hartley | 2018 | [Altium](https://resources.altium.com/p/the-extreme-importance-of-pc-board-stack-up-rick-hartley) | Hartley's talk, with downloadable slides, on why the stackup sets SI and EMC performance. His other stackup talks: [search YouTube](https://www.youtube.com/results?search_query=rick+hartley+stackup) |
-| 🔑 | 📺 Video series | Robert Feranec multi-layer PCB design | Robert Feranec | — | [YouTube](https://www.youtube.com/@RobertFeranec) | Complex multi-layer layout techniques |
+| 🔑 | 📺 Video series (free) | Robert Feranec multi-layer PCB design | Robert Feranec | — | [YouTube](https://www.youtube.com/@RobertFeranec) | Complex multi-layer layout techniques |
 | ⭐ | 📕 Book | Right the First Time | Lee Ritchey | — | [Speeding Edge](https://speedingedge.com/product-category/handbook/) | Detailed stackup engineering (Rick's reading list) |
 | 🔑 | 🔧 Tool | Saturn PCB Toolkit stackup calculator | — | — | [Link](https://saturnpcb.com/saturn-pcb-toolkit/) | Impedance and stackup calculation tool |
 | | 💡 Concept | 4-layer vs 6-layer vs 8-layer tradeoffs | — | — | — | Understanding when to add layers and the cost/performance implications |

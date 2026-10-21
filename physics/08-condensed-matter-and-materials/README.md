@@ -30,7 +30,7 @@ After this section you can:
 | 🔑 | 📕 Book | Introduction to Solid State Physics | Charles Kittel | — | — | — |
 | 🔑 | 📕 Book | The Oxford Solid State Basics | Steven H. Simon | — | — | — |
 | | 📕 Book | Solid State Physics | Ashcroft & Mermin | — | — | — |
-| | 🎓 Course | MIT 8.231 Physics of Solids I (Fall 2006) — Xiao-Gang Wen (problem sets only) | — | — | [MIT OCW](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/) | — |
+| | 🎓 Course (free) | MIT 8.231 Physics of Solids I (Fall 2006) — Xiao-Gang Wen (problem sets only) | — | — | [MIT OCW](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/) | — |
 | | 📕 Book | Modern Condensed Matter Physics | Girvin & Yang | — | — | — |
 | 🔑 | 📄 Paper | More Is Different | P.W. Anderson | 1972 | [Link](https://www.science.org/doi/10.1126/science.177.4047.393) | — |
 | | 🎓 Course | The Oxford Solid State Basics (lecture videos, 2014) | Steven H. Simon | 2014 | [Oxford Podcasts](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) | — |

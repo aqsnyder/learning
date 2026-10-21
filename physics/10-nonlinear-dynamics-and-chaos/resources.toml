@@ -16,6 +16,7 @@ marks = ["core"]
 id = "nonlinear-dynamics-and-chaos-strogatz"
 title = "Nonlinear Dynamics and Chaos — Strogatz (Cornell lectures)"
 type = "course"
+access = "free"
 marks = ["core"]
 url = "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
 link_text = "YouTube"

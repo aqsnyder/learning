@@ -6,41 +6,41 @@ Watch these alongside the corresponding section READMEs, not as a separate track
 | # | Priority | Course or lecture | Instructor / Source | Year | Access | Level | Link | Used in |
 |---|---|---|---|---|---|---|---|---|
 | 1 | | Introduction to Mathematical Thinking | Keith Devlin | — | Free | — | [Link](https://www.coursera.org/learn/mathematical-thinking) | [00](../00-mathematical-thinking/README.md) |
-| 2 | | Discrete Math (Full Course) | Trefor Bazett | — | — | — | [Link](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS) | [00](../00-mathematical-thinking/README.md) |
+| 2 | | Discrete Math (Full Course) | Trefor Bazett | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS) | [00](../00-mathematical-thinking/README.md) |
 | 3 | | Natural Number Game (Lean 4) | Kevin Buzzard, Jon Eugster | 2023 | Free | — | [Link](https://adam.math.hhu.de/#/g/leanprover-community/nng4) | [00](../00-mathematical-thinking/README.md) |
 | 4 | | MIT 6.042J Mathematics for Computer Science | Albert Meyer, Adam Chlipala (text: Lehman, Leighton & Meyer) | 2015 | Free | — | [Link](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/) | [00](../00-mathematical-thinking/README.md) |
-| 5 | 🔑 | Essence of Linear Algebra | 3Blue1Brown | — | — | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) | [01](../01-linear-algebra/README.md) |
+| 5 | 🔑 | Essence of Linear Algebra | 3Blue1Brown | — | Free | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) | [01](../01-linear-algebra/README.md) |
 | 6 | 🔑 | MIT 18.06 Linear Algebra | Gilbert Strang | — | Free | — | [Link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | [01](../01-linear-algebra/README.md) |
-| 7 | | Linear Algebra | Khan Academy | — | — | — | [Link](https://www.khanacademy.org/math/linear-algebra) | [01](../01-linear-algebra/README.md) |
+| 7 | | Linear Algebra | Khan Academy | — | Free | — | [Link](https://www.khanacademy.org/math/linear-algebra) | [01](../01-linear-algebra/README.md) |
 | 8 | | MIT 18.065 Matrix Methods in Data Analysis | Gilbert Strang | 2018 | Free | — | [Link](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) | [01](../01-linear-algebra/README.md) |
-| 9 | 🔑 | Essence of Calculus | 3Blue1Brown | — | — | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) | [02](../02-calculus-and-analysis/README.md) |
+| 9 | 🔑 | Essence of Calculus | 3Blue1Brown | — | Free | — | [Link](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) | [02](../02-calculus-and-analysis/README.md) |
 | 10 | | MIT 18.01 Single Variable Calculus | David Jerison | — | Free | — | [Link](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) | [02](../02-calculus-and-analysis/README.md) |
 | 11 | | MIT 18.02 Multivariable Calculus | Denis Auroux | — | Free | — | [Link](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/) | [02](../02-calculus-and-analysis/README.md) |
-| 12 | | Multivariable Calculus | Khan Academy | — | — | — | [Link](https://www.khanacademy.org/math/multivariable-calculus) | [02](../02-calculus-and-analysis/README.md) |
+| 12 | | Multivariable Calculus | Khan Academy | — | Free | — | [Link](https://www.khanacademy.org/math/multivariable-calculus) | [02](../02-calculus-and-analysis/README.md) |
 | 13 | | MIT 18.04 Complex Variables with Applications | Jeremy Orloff | 2018 | Free | — | [Link](https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/) | [02](../02-calculus-and-analysis/README.md) |
 | 14 | 🔑 | Statistics 110: Probability | Joe Blitzstein | — | Free | — | [Link](https://projects.iq.harvard.edu/stat110) | [03](../03-probability-and-statistics/README.md) |
-| 15 | | StatQuest | Josh Starmer | — | — | — | [Link](https://www.youtube.com/@statquest) | [03](../03-probability-and-statistics/README.md) |
+| 15 | | StatQuest | Josh Starmer | — | Free | — | [Link](https://www.youtube.com/@statquest) | [03](../03-probability-and-statistics/README.md) |
 | 16 | | MIT 6.041 Probabilistic Systems Analysis | John Tsitsiklis | — | Free | — | [Link](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/) | [03](../03-probability-and-statistics/README.md) |
 | 17 | | Statistical Rethinking (2024 course) | Richard McElreath | 2024 | Free | — | [Link](https://github.com/rmcelreath/stat_rethinking_2024) | [03](../03-probability-and-statistics/README.md) |
 | 18 | 🔑 | Stanford EE364a: Convex Optimization | Stephen Boyd | — | Free | — | [Link](https://web.stanford.edu/class/ee364a/) | [04](../04-optimization/README.md) |
 | 19 | | Stanford Engineering Everywhere — EE364A Convex Optimization I (video lectures) | Stephen Boyd | 2008 | Free | — | [Link](https://see.stanford.edu/Course/EE364A) | [04](../04-optimization/README.md) |
-| 20 | | Information Theory (playlist) | mathematicalmonk | — | — | — | [Link](https://www.youtube.com/playlist?list=PLE125425EC837021F) | [05](../05-information-theory/README.md) |
+| 20 | | Information Theory (playlist) | mathematicalmonk | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLE125425EC837021F) | [05](../05-information-theory/README.md) |
 | 21 | | MIT 6.441: Information Theory | Yury Polyanskiy | 2016 | Free | — | [Link](https://ocw.mit.edu/courses/6-441-information-theory-spring-2016/) | [05](../05-information-theory/README.md) |
 | 22 | | Spectral Graph Theory | Daniel Spielman | 2025 | Free | — | [Link](https://www.cs.yale.edu/homes/spielman/462/462schedule.html) | [06](../06-graph-theory-and-combinatorics/README.md) |
-| 23 | | Graph Theory (Full Course) | Sarada Herke | — | — | — | [Link](https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg) | [06](../06-graph-theory-and-combinatorics/README.md) |
+| 23 | | Graph Theory (Full Course) | Sarada Herke | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg) | [06](../06-graph-theory-and-combinatorics/README.md) |
 | 24 | | MIT 18.03 Differential Equations | Arthur Mattuck | — | Free | — | [Link](https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/) | [07](../07-differential-equations/README.md) |
-| 25 | | Differential Equations | 3Blue1Brown | — | — | — | [Link](https://www.youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6) | [07](../07-differential-equations/README.md) |
+| 25 | | Differential Equations | 3Blue1Brown | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6) | [07](../07-differential-equations/README.md) |
 | 26 | | Nonlinear Dynamics and Chaos | Steven Strogatz | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V) | [07](../07-differential-equations/README.md) |
 | 27 | 🔑 | MIT RES.6-007 Signals and Systems | Alan V. Oppenheim | 2011 | Free | — | [Link](https://ocw.mit.edu/courses/res-6-007-signals-and-systems-spring-2011/) | [12](../12-fourier-analysis-signals-and-systems/README.md) |
 | 28 | | Stanford EE261 The Fourier Transform and its Applications | Brad Osgood | 2007 | Free | — | [Link](https://see.stanford.edu/Course/EE261) | [12](../12-fourier-analysis-signals-and-systems/README.md) |
 | 29 | | MIT 6.341 Discrete-Time Signal Processing | Alan V. Oppenheim | 2005 | Free | — | [Link](https://ocw.mit.edu/courses/6-341-discrete-time-signal-processing-fall-2005/) | [12](../12-fourier-analysis-signals-and-systems/README.md) |
 | 30 | | MIT 6.011 Signals, Systems and Inference | George Verghese, Alan V. Oppenheim, Peter Hagelstein | 2018 | Free | — | [Link](https://ocw.mit.edu/courses/6-011-signals-systems-and-inference-spring-2018/) | [12](../12-fourier-analysis-signals-and-systems/README.md) |
 | 31 | | MIT 18.335J Introduction to Numerical Methods | Steven G. Johnson | 2019 | Free | — | [Link](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/) | [14](../14-numerical-methods-and-scientific-computing/README.md) |
-| 32 | | Visual Group Theory | Matthew Macauley | — | — | — | [Link](https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv) | [08](../08-abstract-algebra/README.md) |
+| 32 | | Visual Group Theory | Matthew Macauley | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv) | [08](../08-abstract-algebra/README.md) |
 | 33 | | Harvard Abstract Algebra | Benedict Gross | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLelIK3uylPMGzHBuR3hLMHrYfMqWWsmx5) | [08](../08-abstract-algebra/README.md) |
 | 34 | | Algebraic Topology | Pierre Albin | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLpRLWqLFLVTCL15U6N3o35g4uhMSBVA2b) | [09](../09-topology-and-geometry/README.md) |
-| 35 | | Topology & Geometry | Tadashi Tokieda | — | — | — | [Link](https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ) | [09](../09-topology-and-geometry/README.md) |
+| 35 | | Topology & Geometry | Tadashi Tokieda | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ) | [09](../09-topology-and-geometry/README.md) |
 | 36 | | Introduction to Causal Inference | Brady Neal | — | Free | — | [Link](https://www.bradyneal.com/causal-inference-course) | [10](../10-causal-inference/README.md) |
-| 37 | | Category Theory for Programmers | Bartosz Milewski | — | — | — | [Link](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_) | [11](../11-category-theory-and-frontiers/README.md) |
-| 38 | | Khan Academy Mathematics | Khan Academy | — | — | — | [Link](https://www.khanacademy.org/math) | Further reading |
+| 37 | | Category Theory for Programmers | Bartosz Milewski | — | Free | — | [Link](https://www.youtube.com/playlist?list=PLbgaMIhjbmEnaH_LTkxLI7FMa2HsnawM_) | [11](../11-category-theory-and-frontiers/README.md) |
+| 38 | | Khan Academy Mathematics | Khan Academy | — | Free | — | [Link](https://www.khanacademy.org/math) | Further reading |
 <!-- courses:end -->

@@ -25,9 +25,9 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 🎥 Video | How to Achieve Proper Grounding | Rick Hartley | — | [YouTube](https://www.youtube.com/watch?v=ySuUZEjARPY) | THE definitive lecture on grounding (Altium "Expert Live Training"). If you watch one video on PCB design, make it this one. |
-| 🔑 | 🎥 Video | Power Distribution Networks | Rick Hartley | — | [YouTube](https://www.youtube.com/watch?v=WnLRHuvl6Eg) | PDN design fundamentals — understanding impedance, decoupling, and energy delivery. (Posted on the NineDotConnects channel.) |
-| 🔑 | 📺 Video series | Phil's Lab — Power Design Tutorials | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Practical power supply layout with hands-on KiCad examples. |
+| 🔑 | 🎥 Video (free) | How to Achieve Proper Grounding | Rick Hartley | — | [YouTube](https://www.youtube.com/watch?v=ySuUZEjARPY) | THE definitive lecture on grounding (Altium "Expert Live Training"). If you watch one video on PCB design, make it this one. |
+| 🔑 | 🎥 Video (free) | Power Distribution Networks | Rick Hartley | — | [YouTube](https://www.youtube.com/watch?v=WnLRHuvl6Eg) | PDN design fundamentals — understanding impedance, decoupling, and energy delivery. (Posted on the NineDotConnects channel.) |
+| 🔑 | 📺 Video series (free) | Phil's Lab — Power Design Tutorials | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Practical power supply layout with hands-on KiCad examples. |
 | ⭐ | 📕 Book | Fast Circuit Boards: Energy Management (2018) | Ralph Morrison | 2018 | [Wiley](https://wiley-vch.e-bookshelf.de/fast-circuit-boards-10620117.html) | How energy travels as fields, not currents. Reframes how you think about power delivery at the physics level. |
 | ⭐ | 📕 Book | Principles of Power Integrity for PDN Design — Simplified (2017) | Larry D. Smith, Eric Bogatin | 2017 | [InformIT](https://www.informit.com/store/principles-of-power-integrity-for-pdn-design-simplified-9780132735551) | PDN theory made accessible. Target impedance, decoupling strategies, and simulation. |
 | ⭐ | 📕 Book | Grounding and Shielding: Circuits and Interference (6th ed., 2016) | Ralph Morrison | 2016 | [Wiley](https://www.wiley-vch.de/en/areas-interest/engineering/grounding-and-shielding-978-1-119-18374-7) | Morrison's classic on grounds, guards and shields in instrumentation and analog circuits, written from the fields point of view. Rick's list cites the 5th edition, *Grounding & Shielding Techniques*. |

@@ -25,7 +25,7 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑⭐ | 📄 Paper | Bitcoin: A Peer-to-Peer Electronic Cash System | Satoshi Nakamoto | 2008 | [bitcoin.pdf](https://bitcoin.org/bitcoin.pdf) | THE whitepaper. Read it first, re-read it last. |
+| 🔑⭐ | 📄 Paper (free) | Bitcoin: A Peer-to-Peer Electronic Cash System | Satoshi Nakamoto | 2008 | [bitcoin.pdf](https://bitcoin.org/bitcoin.pdf) | THE whitepaper. Read it first, re-read it last. |
 | 🔑⭐ | 📝 Manifesto | A Cypherpunk's Manifesto | Eric Hughes | 1993 | [activism.net](https://www.activism.net/cypherpunk/manifesto.html) | The ideological roots of Bitcoin |
 | | 📕 Book | Digital Gold: Bitcoin and the Inside Story of the Misfits and Millionaires Trying to Reinvent Money | Nathaniel Popper | 2015 | — | Best historical narrative of Bitcoin's early days |
 | ⭐ | 📄 Paper | b-money | Wei Dai | 1998 | [weidai.com](http://www.weidai.com/bmoney.txt) | Precursor to Bitcoin, cited in the whitepaper |

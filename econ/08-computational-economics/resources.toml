@@ -115,6 +115,7 @@ title = "Large Language Models as Simulated Economic Agents: What Can We Learn f
 authors = "John J. Horton, Apostolos Filippas & Benjamin S. Manning"
 year = "2023 (rev. 2026)"
 type = "paper"
+access = "free"
 url = "https://www.nber.org/papers/w31122"
 link_text = "Link"
 description = "Treats LLMs as simulated economic agents — given endowments, information, and preferences — and re-runs classic behavioral experiments on them. The starting point for LLM-based economic simulation; read skeptically about how far \"silicon subjects\" generalize to people."

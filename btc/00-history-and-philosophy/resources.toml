@@ -10,6 +10,7 @@ title = "Bitcoin: A Peer-to-Peer Electronic Cash System"
 authors = "Satoshi Nakamoto"
 year = "2008"
 type = "paper"
+access = "free"
 marks = ["core", "canon"]
 url = "https://bitcoin.org/bitcoin.pdf"
 link_text = "bitcoin.pdf"

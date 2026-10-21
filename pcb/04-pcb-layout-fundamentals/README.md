@@ -26,12 +26,12 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📺 Video series | PCB Layout Tutorials | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Step-by-step layout walkthroughs with theory. Excellent for building practical intuition alongside conceptual understanding. |
-| 🔑 | 📺 Video series | Layout and Routing | Robert Feranec | — | [YouTube](https://www.youtube.com/@RobertFeranec) | Professional-grade layout techniques from an experienced PCB designer. |
-| | 🎓 Course | KiCad PCB Editor Guide (KiCad 10) | — | — | [Docs](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html) | Official layout tool documentation. Essential reference for KiCad-based workflows. |
-| | 🎥 Video | KiCad 6 STM32 PCB Design Full Tutorial — Phil's Lab #65 (2022) | — | 2022 | [YouTube](https://www.youtube.com/watch?v=aVUqaB0IMh4) | One complete STM32 board taken from schematic to fab outputs in a single long session. The tool version is older, but the workflow and placement reasoning carry over directly to KiCad 10. |
+| 🔑 | 📺 Video series (free) | PCB Layout Tutorials | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Step-by-step layout walkthroughs with theory. Excellent for building practical intuition alongside conceptual understanding. |
+| 🔑 | 📺 Video series (free) | Layout and Routing | Robert Feranec | — | [YouTube](https://www.youtube.com/@RobertFeranec) | Professional-grade layout techniques from an experienced PCB designer. |
+| | 🎓 Course (free) | KiCad PCB Editor Guide (KiCad 10) | — | — | [Docs](https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html) | Official layout tool documentation. Essential reference for KiCad-based workflows. |
+| | 🎥 Video (free) | KiCad 6 STM32 PCB Design Full Tutorial — Phil's Lab #65 (2022) | — | 2022 | [YouTube](https://www.youtube.com/watch?v=aVUqaB0IMh4) | One complete STM32 board taken from schematic to fab outputs in a single long session. The tool version is older, but the workflow and placement reasoning carry over directly to KiCad 10. |
 | | 📄 App note | AN2867 — Guidelines for oscillator design on STM8 and STM32 MCUs/MPUs (Rev 24, 2026) — STMicroelectronics | — | — | [PDF](https://www.st.com/resource/en/application_note/an2867-guidelines-for-oscillator-design-on-stm8afals-and-stm32-mcusmpus-stmicroelectronics.pdf) | Crystal selection (gain margin, load capacitors) plus PCB layout rules for the oscillator: a compact loop, guard ring and separated ground (Section 7). A crystal that won't start is a classic bring-up failure, and good layout prevents it. |
-| | 🎥 Video | Routing Tutorials | Altium Academy | — | [YouTube](https://www.youtube.com/@AltiumAcademy) | Routing walkthroughs in Altium Designer; concepts transfer to any EDA tool. |
+| | 🎥 Video (free) | Routing Tutorials | Altium Academy | — | [YouTube](https://www.youtube.com/@AltiumAcademy) | Routing walkthroughs in Altium Designer; concepts transfer to any EDA tool. |
 | 🔑 | 💡 Concept | Component Placement Strategy | — | — | — | Place before you route; placement is 90% of the design. Group by function, minimize critical path lengths, and think about thermal and mechanical constraints first. |
 | | 💡 Concept | Design Rule Check (DRC) | — | — | — | Understanding and configuring manufacturer constraints. Your DRC settings should match your fab house's capabilities. |
 | | 💡 Concept | Copper Pours and Fills | — | — | — | Ground planes, power planes, thermal relief. When and how to use polygon pours effectively. |

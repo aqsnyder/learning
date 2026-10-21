@@ -32,13 +32,13 @@ After this section you can:
 | | 🎓 Course | IBM Quantum Learning | — | — | [quantum.cloud.ibm.com/learning](https://quantum.cloud.ibm.com/learning/en) | — |
 | | 📘 Notes | Quantum Computing — John Preskill (Caltech Ph219 lecture notes) | — | — | [theory.caltech.edu](http://theory.caltech.edu/~preskill/ph219/index.html) | — |
 | | 📕 Book | Quantum Computing Since Democritus | Scott Aaronson | — | — | — |
-| | 🎥 Video | Some light quantum mechanics — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=MzRCDLre1b4) | — |
+| | 🎥 Video (free) | Some light quantum mechanics — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=MzRCDLre1b4) | — |
 | | 📕 Book | Quantum Computer Science: An Introduction | N. David Mermin | — | — | — |
 | 🔑 | 📄 Paper | Algorithms for Quantum Computation | Peter Shor | 1994 | [Link](https://ieeexplore.ieee.org/document/365700) · [free expanded version (arXiv)](https://arxiv.org/abs/quant-ph/9508027) | — |
-| | 📄 Paper | Quantum Computing in the NISQ Era and Beyond | John Preskill | 2018 | [arXiv](https://arxiv.org/abs/1801.00862) | — |
-| | 📄 Paper | A Quantum Engineer's Guide to Superconducting Qubits | Krantz, Kjaergaard, Yan, Orlando, Gustavsson & Oliver | 2019 | [arXiv](https://arxiv.org/abs/1904.06560) | — |
-| | 📄 Paper | Quantum Error Correction Below the Surface Code Threshold — Google Quantum AI and Collaborators (Nature, 2024/2025) | — | — | [arXiv](https://arxiv.org/abs/2408.13687) | — |
-| | 📄 Paper | How to Factor 2048 Bit RSA Integers with Less Than a Million Noisy Qubits | Craig Gidney | 2025 | [arXiv](https://arxiv.org/abs/2505.15917) | — |
+| | 📄 Paper (free) | Quantum Computing in the NISQ Era and Beyond | John Preskill | 2018 | [arXiv](https://arxiv.org/abs/1801.00862) | — |
+| | 📄 Paper (free) | A Quantum Engineer's Guide to Superconducting Qubits | Krantz, Kjaergaard, Yan, Orlando, Gustavsson & Oliver | 2019 | [arXiv](https://arxiv.org/abs/1904.06560) | — |
+| | 📄 Paper (free) | Quantum Error Correction Below the Surface Code Threshold — Google Quantum AI and Collaborators (Nature, 2024/2025) | — | — | [arXiv](https://arxiv.org/abs/2408.13687) | — |
+| | 📄 Paper (free) | How to Factor 2048 Bit RSA Integers with Less Than a Million Noisy Qubits | Craig Gidney | 2025 | [arXiv](https://arxiv.org/abs/2505.15917) | — |
 
 <!-- resources:end -->
 

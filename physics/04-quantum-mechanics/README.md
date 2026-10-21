@@ -28,10 +28,10 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book | Introduction to Quantum Mechanics (3rd ed., 2018) | David J. Griffiths & Darrell F. Schroeter | 2018 | — | — |
-| 🔑 | 📕 Book | The Feynman Lectures on Physics, Vol. 3 | Feynman, Leighton, Sands | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
-| 🔑 | 🎓 Course | MIT 8.04 Quantum Physics I | Barton Zwiebach | — | [MIT OCW](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/) | — |
-| | 🎓 Course | Quantum Mechanics (The Theoretical Minimum) | Leonard Susskind | — | [YouTube](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) | — |
-| | 🎥 Video | Some light quantum mechanics — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=MzRCDLre1b4) | — |
+| 🔑 | 📕 Book (free) | The Feynman Lectures on Physics, Vol. 3 | Feynman, Leighton, Sands | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
+| 🔑 | 🎓 Course (free) | MIT 8.04 Quantum Physics I | Barton Zwiebach | — | [MIT OCW](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/) | — |
+| | 🎓 Course (free) | Quantum Mechanics (The Theoretical Minimum) | Leonard Susskind | — | [YouTube](https://www.youtube.com/playlist?list=PL701CD168D02FF56F) | — |
+| | 🎥 Video (free) | Some light quantum mechanics — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=MzRCDLre1b4) | — |
 | | 📕 Book | Principles of Quantum Mechanics | R. Shankar | — | — | — |
 | | 📕 Book | Modern Quantum Mechanics | J.J. Sakurai & Jim Napolitano | — | — | — |
 | | 📕 Book | Quantum Mechanics | Cohen-Tannoudji, Diu, Laloe | — | — | — |

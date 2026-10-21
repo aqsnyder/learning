@@ -27,9 +27,9 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📺 Video series | Robert Feranec BGA routing and escape | Robert Feranec | — | [YouTube](https://www.youtube.com/@RobertFeranec) | BGA fanout strategies |
+| 🔑 | 📺 Video series (free) | Robert Feranec BGA routing and escape | Robert Feranec | — | [YouTube](https://www.youtube.com/@RobertFeranec) | BGA fanout strategies |
 | | 🎓 Course | KiCad Advanced: Design a smart USB thumb drive (KiCad 10, 2026) | Tech Explorations | 2026 | [techexplorations.com](https://app.techexplorations.com/courses/kicad-advanced-bga-signal-integrity-and-high-speed-layout/) | Project course (9 sections, 94 lectures; enrollment required) built around one two-layer USB thumb drive: BGA routing and via-in-pad, USB 2.0 differential pairs and signal integrity, eMMC length matching, stackup and impedance control, and manufacturing outputs. The course page names no instructor. |
-| | 📺 Video series | Phil's Lab advanced designs (STM32, FPGA boards) | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Real complex project walkthroughs |
+| | 📺 Video series (free) | Phil's Lab advanced designs (STM32, FPGA boards) | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Real complex project walkthroughs |
 | | 💡 Concept | BGA escape routing and via-in-pad | — | — | — | Advanced package routing strategies |
 | | 💡 Concept | Thermal management | — | — | — | Thermal vias, copper pours, heatsink integration |
 | | 💡 Concept | Flex and rigid-flex PCB design (IPC-2223) | — | — | — | Flexible circuit design and manufacturing |
@@ -37,7 +37,7 @@ After this section you can:
 | | 🔧 Tool | Open Source Thermal Simulation | — | — | [Link](https://jrainimo.com/build/2024/11/oss-thermal-simulation-of-pcbs/) | Walkthrough of an open-source KiCad → Salome → ElmerFEM flow that simulates DC current density and Joule heating in PCB copper (IR drop and hot spots). It is not part-level thermal modelling; use AN-2020 and the Thermal management concept for that. |
 | 🔑 | 📄 App note | AN-2020: Thermal Design By Insight, Not Hindsight (2013) | Texas Instruments | 2013 | [PDF](https://www.ti.com/lit/pdf/snva419) | Practical PCB thermal design for power ICs: interpreting the package thermal metrics, copper spreading and thermal vias, and estimating junction temperature before layout is frozen |
 | | 🔧 Tool | openEMS + gerber2ems | Thorsten Liebig (openEMS); Antmicro (gerber2ems) | — | [openems.de](https://www.openems.de/) · [gerber2ems](https://github.com/antmicro/gerber2ems) | Free FDTD field solver. Antmicro's gerber2ems drives it from Gerbers, drill files and a stackup description to extract S-parameters and impedance of real PCB traces, making open-source SI verification of KiCad boards practical |
-| | 🔧 Tool | KiCad IPC API + kicad-python | KiCad Project | — | [Docs](https://docs.kicad.org/kicad-python/) | KiCad's new (9.0+) scripting and plugin API. The old SWIG `pcbnew` Python bindings are deprecated and slated for removal in KiCad 11, so write new scripts and plugins against this |
+| | 🔧 Tool (free) | KiCad IPC API + kicad-python | KiCad Project | — | [Docs](https://docs.kicad.org/kicad-python/) | KiCad's new (9.0+) scripting and plugin API. The old SWIG `pcbnew` Python bindings are deprecated and slated for removal in KiCad 11, so write new scripts and plugins against this |
 
 **Also used here (tracked in their home sections):** Saturn PCB Toolkit's via calculator ([Section 05](../05-power-and-grounding/README.md)) for Practice 1.
 

@@ -27,6 +27,7 @@ title = "NCBI BLAST Tutorials and Documentation"
 authors = "NCBI Staff"
 year = "2024"
 type = "tutorial"
+access = "free"
 marks = ["core"]
 url = "https://blast.ncbi.nlm.nih.gov/doc/blast-help/"
 link_text = "BLAST Help"

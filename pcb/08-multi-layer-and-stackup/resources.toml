@@ -24,6 +24,7 @@ id = "robert-feranec-multi-layer-pcb-design"
 title = "Robert Feranec multi-layer PCB design"
 authors = "Robert Feranec"
 type = "video-series"
+access = "free"
 marks = ["core"]
 url = "https://www.youtube.com/@RobertFeranec"
 link_text = "YouTube"

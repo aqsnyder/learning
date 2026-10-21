@@ -31,21 +31,21 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📄 Paper | Neural Ordinary Differential Equations | Chen et al. | 2018 | [arXiv](https://arxiv.org/abs/1806.07366) | — |
+| 🔑 | 📄 Paper (free) | Neural Ordinary Differential Equations | Chen et al. | 2018 | [arXiv](https://arxiv.org/abs/1806.07366) | — |
 | 🔑 | 📄 Paper | Physics-Informed Neural Networks — Raissi, Perdikaris & Karniadakis (J. Comput. Phys., 2019) | — | 2019 | [DOI](https://doi.org/10.1016/j.jcp.2018.10.045) · [arXiv preprint (2017)](https://arxiv.org/abs/1711.10561) | — |
-| | 📄 Paper | Hamiltonian Neural Networks | Greydanus, Dzamba & Yosinski | 2019 | [arXiv](https://arxiv.org/abs/1906.01563) | — |
-| | 📄 Paper | Lagrangian Neural Networks | Cranmer, Greydanus & others | 2020 | [arXiv](https://arxiv.org/abs/2003.04630) | — |
+| | 📄 Paper (free) | Hamiltonian Neural Networks | Greydanus, Dzamba & Yosinski | 2019 | [arXiv](https://arxiv.org/abs/1906.01563) | — |
+| | 📄 Paper (free) | Lagrangian Neural Networks | Cranmer, Greydanus & others | 2020 | [arXiv](https://arxiv.org/abs/2003.04630) | — |
 | 🔑 | 📄 Paper | Physics-Informed Machine Learning (review) | Karniadakis et al. | 2021 | [DOI](https://doi.org/10.1038/s42254-021-00314-5) | — |
 | | 📄 Paper | Highly Accurate Protein Structure Prediction with AlphaFold | Jumper et al. | 2021 | [DOI](https://doi.org/10.1038/s41586-021-03819-2) | — |
-| | 📄 Paper | Message Passing Neural PDE Solvers | Brandstetter, Worrall & Welling | 2022 | [arXiv](https://arxiv.org/abs/2202.03376) | — |
-| | 📄 Paper | Learning to Simulate Complex Physics with Graph Networks | Sanchez-Gonzalez et al. | 2020 | [arXiv](https://arxiv.org/abs/2002.09405) | — |
-| | 📄 Paper | E(n) Equivariant Graph Neural Networks | Satorras, Hoogeboom & Welling | 2021 | [arXiv](https://arxiv.org/abs/2102.09844) | — |
+| | 📄 Paper (free) | Message Passing Neural PDE Solvers | Brandstetter, Worrall & Welling | 2022 | [arXiv](https://arxiv.org/abs/2202.03376) | — |
+| | 📄 Paper (free) | Learning to Simulate Complex Physics with Graph Networks | Sanchez-Gonzalez et al. | 2020 | [arXiv](https://arxiv.org/abs/2002.09405) | — |
+| | 📄 Paper (free) | E(n) Equivariant Graph Neural Networks | Satorras, Hoogeboom & Welling | 2021 | [arXiv](https://arxiv.org/abs/2102.09844) | — |
 | | 📕 Book | Data-Driven Science and Engineering | Brunton & Kutz | — | [databookuw.com](https://databookuw.com/) | — |
 | | 📕 Book | A New Kind of Science | Stephen Wolfram | 2002 | [wolframscience.com](https://www.wolframscience.com/nks/) | — |
 | | 🌐 Project | The Wolfram Physics Project — Stephen Wolfram (2020+; speculative, outside mainstream physics) | — | — | [wolframphysics.org](https://www.wolframphysics.org/) | — |
-| | 📄 Paper | Fourier Neural Operator for Parametric Partial Differential Equations | Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya, Stuart & Anandkumar | 2020 | [arXiv](https://arxiv.org/abs/2010.08895) | — |
-| | 📄 Paper | DeepONet: Learning Nonlinear Operators — Lu et al. (arXiv 2019; Nature Machine Intelligence 2021) | — | — | [arXiv](https://arxiv.org/abs/1910.03193) | — |
-| | 📄 Paper | Book Review: "A New Kind of Science" | Scott Aaronson | 2002 | [arXiv](https://arxiv.org/abs/quant-ph/0206089) | — |
+| | 📄 Paper (free) | Fourier Neural Operator for Parametric Partial Differential Equations | Li, Kovachki, Azizzadenesheli, Liu, Bhattacharya, Stuart & Anandkumar | 2020 | [arXiv](https://arxiv.org/abs/2010.08895) | — |
+| | 📄 Paper (free) | DeepONet: Learning Nonlinear Operators — Lu et al. (arXiv 2019; Nature Machine Intelligence 2021) | — | — | [arXiv](https://arxiv.org/abs/1910.03193) | — |
+| | 📄 Paper (free) | Book Review: "A New Kind of Science" | Scott Aaronson | 2002 | [arXiv](https://arxiv.org/abs/quant-ph/0206089) | — |
 | | 📄 Paper | Weak Baselines and Reporting Biases Lead to Overoptimism in Machine Learning for Fluid-Related Partial Differential Equations — Nick McGreivy & Ammar Hakim (Nature Machine Intelligence, 2024) | — | 2024 | [DOI](https://doi.org/10.1038/s42256-024-00897-5) · [arXiv](https://arxiv.org/abs/2407.07218) | — |
 | | 📄 Paper | Neural General Circulation Models for Weather and Climate — Kochkov et al. (Nature, 2024) | — | 2024 | [DOI](https://doi.org/10.1038/s41586-024-07744-y) · [arXiv](https://arxiv.org/abs/2311.07222) | — |
 

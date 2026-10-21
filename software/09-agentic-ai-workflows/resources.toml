@@ -116,6 +116,7 @@ title = "Measuring the Impact of Early-2025 AI on Experienced Open-Source Develo
 authors = "Joel Becker, Nate Rush, Elizabeth Barnes, David Rein (METR); update: Becker, Rush, Tom Cunningham, Rein, Khalid Mahamud"
 type = "article"
 label = "Research"
+access = "free"
 marks = ["core", "ai"]
 url = "https://arxiv.org/abs/2507.09089"
 link_text = "Paper"

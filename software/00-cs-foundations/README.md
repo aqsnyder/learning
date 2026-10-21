@@ -26,7 +26,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | | 📘 Guide (free) | Teach Yourself Computer Science | — | — | [teachyourselfcs.com](https://teachyourselfcs.com/) | The best curated CS self-study guide |
-| 🔑 | 🎓 Course | MIT 6.006 Introduction to Algorithms (OCW) | — | — | [ocw.mit.edu](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) | Foundational algorithms and data structures |
+| 🔑 | 🎓 Course (free) | MIT 6.006 Introduction to Algorithms (OCW) | — | — | [ocw.mit.edu](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/) | Foundational algorithms and data structures |
 | 🔑 | 📕 Book | *Grokking Algorithms* (2nd ed) | Aditya Bhargava | 2024 | — | Visual, accessible intro to algorithms |
 | | 🎓 Course | CS50 (Harvard) | David Malan | — | [cs50.harvard.edu](https://cs50.harvard.edu/) | Harvard's widely used intro CS course, free online |
 | | 📕 Book (free) | Structure and Interpretation of Computer Programs | — | — | [mitp-content-server.mit.edu](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html) | Classic computational thinking |

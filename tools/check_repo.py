@@ -4,6 +4,7 @@
 Usage:  python tools/check_repo.py            # structural checks; exit 1 on problems
         python tools/check_repo.py --strict   # also fail on incomplete resource data (see "Data completeness")
         python tools/check_repo.py --urls     # also print every external URL (input for a link checker)
+        python tools/check_repo.py --only pcb,btc/05   # report only problems in these paths
 
 Problems (always fail):
   1. Relative links and image paths resolve.
@@ -159,6 +160,12 @@ for cur, g in completeness.items():
 
 if "--urls" in sys.argv:
     print("\n".join(sorted(urls)))
+if "--only" in sys.argv:
+    prefixes = [x.strip().strip("/") for x in sys.argv[sys.argv.index("--only") + 1].split(",") if x.strip()]
+    def in_scope(p):
+        path = p.split(":")[0].strip()
+        return any(path == x or path.startswith(x + "/") or path.startswith(x + "-") for x in prefixes)
+    problems = [p for p in problems if in_scope(p) or not re.match(r"^[\w./-]+", p)]
 print(f"{len(problems)} problem(s); {len(urls)} external URLs found", file=sys.stderr)
 for p in problems:
     print("  " + p, file=sys.stderr)

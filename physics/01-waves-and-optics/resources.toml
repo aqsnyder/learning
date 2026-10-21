@@ -8,6 +8,7 @@
 id = "the-feynman-lectures-on-physics-optics"
 title = "The Feynman Lectures on Physics — Optics and Waves chapters (Vol. 1, Ch. 26–36 and 47–51)"
 type = "book"
+access = "free"
 marks = ["core"]
 url = "https://www.feynmanlectures.caltech.edu/"
 link_text = "feynmanlectures.caltech.edu"
@@ -17,6 +18,7 @@ verified = 2026-10-13
 id = "but-what-is-a-fourier-series-3blue1brown"
 title = "But what is a Fourier series? — 3Blue1Brown"
 type = "video"
+access = "free"
 marks = ["core"]
 url = "https://www.youtube.com/watch?v=r6sGWTCMz2k"
 link_text = "YouTube"
@@ -26,6 +28,7 @@ verified = 2026-10-13
 id = "but-what-is-the-fourier-transform"
 title = "But what is the Fourier Transform? — 3Blue1Brown"
 type = "video"
+access = "free"
 marks = ["core"]
 url = "https://www.youtube.com/watch?v=spUNpyF58BY"
 link_text = "YouTube"
@@ -47,6 +50,7 @@ id = "mit-8-03sc-vibrations-and-waves-fall"
 title = "MIT 8.03SC Vibrations and Waves (Fall 2016)"
 authors = "Yen-Jie Lee"
 type = "course"
+access = "free"
 url = "https://www.youtube.com/playlist?list=PLUl4u3cNGP61R5sPDPKVfcFlu95wSs2Kx"
 link_text = "YouTube"
 verified = 2026-10-13
@@ -62,6 +66,7 @@ id = "mit-2-71-optics-spring-2009"
 title = "MIT 2.71 Optics (Spring 2009)"
 authors = "George Barbastathis, Colin Sheppard & Se Baek Oh"
 type = "course"
+access = "free"
 url = "https://ocw.mit.edu/courses/2-71-optics-spring-2009/"
 link_text = "MIT OCW"
 verified = 2026-10-13

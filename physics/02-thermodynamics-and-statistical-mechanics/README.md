@@ -29,8 +29,8 @@ After this section you can:
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book | An Introduction to Thermal Physics | Daniel V. Schroeder | — | — | — |
 | | 📕 Book | Concepts in Thermal Physics | Blundell & Blundell | — | — | — |
-| 🔑 | 📕 Book | The Feynman Lectures on Physics — Thermodynamics chapters (Vol. 1, Ch. 39–46) | — | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
-| | 🎓 Course | MIT 8.333 Statistical Mechanics | Mehran Kardar | — | [MIT OCW](https://ocw.mit.edu/courses/8-333-statistical-mechanics-i-statistical-mechanics-of-particles-fall-2013/) | — |
+| 🔑 | 📕 Book (free) | The Feynman Lectures on Physics — Thermodynamics chapters (Vol. 1, Ch. 39–46) | — | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
+| | 🎓 Course (free) | MIT 8.333 Statistical Mechanics | Mehran Kardar | — | [MIT OCW](https://ocw.mit.edu/courses/8-333-statistical-mechanics-i-statistical-mechanics-of-particles-fall-2013/) | — |
 | | 📕 Book | Introduction to Modern Statistical Mechanics | David Chandler | — | — | — |
 | | 📕 Book | Statistical Mechanics: Entropy, Order Parameters, and Complexity | James Sethna | — | [sethna.lassp.cornell.edu](http://sethna.lassp.cornell.edu/StatMech/) | — |
 | | 📕 Book | Fundamentals of Statistical and Thermal Physics | Frederick Reif | — | — | — |

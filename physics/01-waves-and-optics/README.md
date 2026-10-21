@@ -27,14 +27,14 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📕 Book | The Feynman Lectures on Physics — Optics and Waves chapters (Vol. 1, Ch. 26–36 and 47–51) | — | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
-| 🔑 | 🎥 Video | But what is a Fourier series? — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=r6sGWTCMz2k) | — |
-| 🔑 | 🎥 Video | But what is the Fourier Transform? — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=spUNpyF58BY) | — |
+| 🔑 | 📕 Book (free) | The Feynman Lectures on Physics — Optics and Waves chapters (Vol. 1, Ch. 26–36 and 47–51) | — | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
+| 🔑 | 🎥 Video (free) | But what is a Fourier series? — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=r6sGWTCMz2k) | — |
+| 🔑 | 🎥 Video (free) | But what is the Fourier Transform? — 3Blue1Brown | — | — | [YouTube](https://www.youtube.com/watch?v=spUNpyF58BY) | — |
 | | 📕 Book | Waves — Frank S. Crawford (Berkeley Physics Course, Vol. 3) | — | — | — | — |
 | | 📕 Book | Optics | Eugene Hecht | — | — | — |
-| | 🎓 Course | MIT 8.03SC Vibrations and Waves (Fall 2016) | Yen-Jie Lee | — | [YouTube](https://www.youtube.com/playlist?list=PLUl4u3cNGP61R5sPDPKVfcFlu95wSs2Kx) | — |
+| | 🎓 Course (free) | MIT 8.03SC Vibrations and Waves (Fall 2016) | Yen-Jie Lee | — | [YouTube](https://www.youtube.com/playlist?list=PLUl4u3cNGP61R5sPDPKVfcFlu95wSs2Kx) | — |
 | | 📕 Book | The Physics of Vibrations and Waves | H.J. Pain | — | — | — |
-| | 🎓 Course | MIT 2.71 Optics (Spring 2009) | George Barbastathis, Colin Sheppard & Se Baek Oh | — | [MIT OCW](https://ocw.mit.edu/courses/2-71-optics-spring-2009/) | — |
+| | 🎓 Course (free) | MIT 2.71 Optics (Spring 2009) | George Barbastathis, Colin Sheppard & Se Baek Oh | — | [MIT OCW](https://ocw.mit.edu/courses/2-71-optics-spring-2009/) | — |
 | | 📕 Book | Fundamentals of Photonics (3rd ed., 2019) | Bahaa E. A. Saleh & Malvin Carl Teich | 2019 | [Wiley](https://www.wiley-vch.de/en/areas-interest/natural-sciences/fundamentals-of-photonics-2-volume-set-978-1-119-50687-4) | — |
 | | 🎓 Course | Optical Engineering Specialization (University of Colorado Boulder, Coursera; paid) | Robert McLeod | — | [Coursera](https://www.coursera.org/specializations/optical-engineering) | — |
 

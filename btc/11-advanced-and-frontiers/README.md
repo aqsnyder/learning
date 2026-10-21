@@ -29,44 +29,44 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 🌐 Website | Bitcoin Optech Topics index | — | — | [bitcoinops.org/en/topics](https://bitcoinops.org/en/topics/) | ~160 topic pages, each with a summary, primary sources, and every newsletter mention in date order — the fastest way to check the current status of anything in this section |
+| 🔑 | 🌐 Website (free) | Bitcoin Optech Topics index | — | — | [bitcoinops.org/en/topics](https://bitcoinops.org/en/topics/) | ~160 topic pages, each with a summary, primary sources, and every newsletter mention in date order — the fastest way to check the current status of anything in this section |
 
 ### Taproot and Schnorr (2021 Upgrade)
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📏 Standard | BIP 340: Schnorr Signatures | — | — | [BIP 340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki) | Schnorr signature scheme for Bitcoin |
-| 🔑 | 📏 Standard | BIP 341: Taproot | — | — | [BIP 341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki) | SegWit v1 spending rules, Merkleized script trees |
-| | 📏 Standard | BIP 342: Tapscript | — | — | [BIP 342](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki) | Script validation rules for Taproot |
-| | 🌐 Website | Learn Me A Bitcoin: Taproot | — | — | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/upgrades/taproot/) | Visual explanations of Taproot concepts: tweaked keys, script trees, key-path and script-path spends, worked examples |
-| | 🛠️ Practice | Optech Schnorr/Taproot workshop | — | — | [GitHub](https://github.com/bitcoinops/taproot-workshop) | Jupyter notebooks (runnable on Google Colab) built on Bitcoin Core's Python test framework: elliptic-curve math, tagged hashes, Schnorr, MuSig, taptweak, tapscript, taptrees, and a degrading-multisig case study |
-| | 📏 Standard | BIP 327: MuSig2 | — | — | [BIP 327](https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki) | n-of-n Schnorr multisignatures that look like an ordinary single-key Taproot spend. Deployed: used in Lightning tooling (e.g. Loop, simple taproot channels), and Bitcoin Core parses `musig()` descriptors (BIP 390) |
-| | 💡 Concept | FROST threshold signatures | — | — | [Optech topic](https://bitcoinops.org/en/topics/threshold-signature/) | k-of-n Schnorr signing that still produces one ordinary signature. A FROST signing BIP was proposed in 2024 and the ChillDKG key-generation protocol is in draft; neither is in the BIPs repository yet, though k-of-n signing devices (Frostsnap) shipped in 2025 |
+| 🔑 | 📏 Standard (free) | BIP 340: Schnorr Signatures | — | — | [BIP 340](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki) | Schnorr signature scheme for Bitcoin |
+| 🔑 | 📏 Standard (free) | BIP 341: Taproot | — | — | [BIP 341](https://github.com/bitcoin/bips/blob/master/bip-0341.mediawiki) | SegWit v1 spending rules, Merkleized script trees |
+| | 📏 Standard (free) | BIP 342: Tapscript | — | — | [BIP 342](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki) | Script validation rules for Taproot |
+| | 🌐 Website (free) | Learn Me A Bitcoin: Taproot | — | — | [learnmeabitcoin.com](https://learnmeabitcoin.com/technical/upgrades/taproot/) | Visual explanations of Taproot concepts: tweaked keys, script trees, key-path and script-path spends, worked examples |
+| | 🛠️ Practice (free) | Optech Schnorr/Taproot workshop | — | — | [GitHub](https://github.com/bitcoinops/taproot-workshop) | Jupyter notebooks (runnable on Google Colab) built on Bitcoin Core's Python test framework: elliptic-curve math, tagged hashes, Schnorr, MuSig, taptweak, tapscript, taptrees, and a degrading-multisig case study |
+| | 📏 Standard (free) | BIP 327: MuSig2 | — | — | [BIP 327](https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki) | n-of-n Schnorr multisignatures that look like an ordinary single-key Taproot spend. Deployed: used in Lightning tooling (e.g. Loop, simple taproot channels), and Bitcoin Core parses `musig()` descriptors (BIP 390) |
+| | 💡 Concept (free) | FROST threshold signatures | — | — | [Optech topic](https://bitcoinops.org/en/topics/threshold-signature/) | k-of-n Schnorr signing that still produces one ordinary signature. A FROST signing BIP was proposed in 2024 and the ChillDKG key-generation protocol is in draft; neither is in the BIPs repository yet, though k-of-n signing devices (Frostsnap) shipped in 2025 |
 
 ### Covenant Proposals
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| | 💡 Concept | OP_CTV (BIP 119: CheckTemplateVerify) | — | — | [BIP 119](https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki) | Transaction covenants — restricting how coins can be spent. BIP status Draft; not activated. Activation is still being debated (a December 2025 meeting discussed conservative BIP 9 parameters), often paired with CSFS (BIP 348) |
-| | 💡 Concept | OP_CAT in Tapscript (BIP 347) | — | — | [BIP 347](https://github.com/bitcoin/bips/blob/master/bip-0347.mediawiki) | Re-enabling concatenation for advanced scripts. The spec is marked Complete in the BIPs repository, but it has not been activated |
-| | 💡 Concept | Vaults | — | — | [Optech topic](https://bitcoinops.org/en/topics/vaults/) | Time-delayed spending for security. OP_VAULT (BIP 345) is Closed; OP_CHECKCONTRACTVERIFY (BIP 443) is its proposed replacement, and CTV-only vault designs are also being explored |
-| | 🌐 Website | Bitcoin Optech: Covenants topic | — | — | [Topic](https://bitcoinops.org/en/topics/covenants/) | The maintained overview of covenant proposals and their history — CTV, CSFS, APO (BIP 118), OP_CAT, OP_VAULT, TXHASH (BIP 346), OP_TEMPLATEHASH (BIP 446), BIP 448 — with links to each debate. Read this before any single proposal |
+| | 💡 Concept (free) | OP_CTV (BIP 119: CheckTemplateVerify) | — | — | [BIP 119](https://github.com/bitcoin/bips/blob/master/bip-0119.mediawiki) | Transaction covenants — restricting how coins can be spent. BIP status Draft; not activated. Activation is still being debated (a December 2025 meeting discussed conservative BIP 9 parameters), often paired with CSFS (BIP 348) |
+| | 💡 Concept (free) | OP_CAT in Tapscript (BIP 347) | — | — | [BIP 347](https://github.com/bitcoin/bips/blob/master/bip-0347.mediawiki) | Re-enabling concatenation for advanced scripts. The spec is marked Complete in the BIPs repository, but it has not been activated |
+| | 💡 Concept (free) | Vaults | — | — | [Optech topic](https://bitcoinops.org/en/topics/vaults/) | Time-delayed spending for security. OP_VAULT (BIP 345) is Closed; OP_CHECKCONTRACTVERIFY (BIP 443) is its proposed replacement, and CTV-only vault designs are also being explored |
+| | 🌐 Website (free) | Bitcoin Optech: Covenants topic | — | — | [Topic](https://bitcoinops.org/en/topics/covenants/) | The maintained overview of covenant proposals and their history — CTV, CSFS, APO (BIP 118), OP_CAT, OP_VAULT, TXHASH (BIP 346), OP_TEMPLATEHASH (BIP 446), BIP 448 — with links to each debate. Read this before any single proposal |
 
 ### Other Open Soft-Fork Proposals
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| | 📏 Standard | BIP 54: Consensus Cleanup | — | — | [BIP 54](https://github.com/bitcoin/bips/blob/master/bip-0054.md) | Bundles fixes for long-standing consensus bugs: the timewarp attack, worst-case slow-to-validate blocks, 64-byte-transaction Merkle weaknesses, and duplicate transactions. Spec Complete (2025); not activated |
-| | 🌐 Website | Bitcoin Optech: Quantum resistance | — | — | [Topic](https://bitcoinops.org/en/topics/quantum-resistance/) | Where post-quantum planning stands: BIP 360 (Pay-to-Merkle-Root, a Taproot-like output without the key-path spend; Draft) and BIP 361 (a phased sunset of legacy ECDSA/Schnorr signatures; Draft, 2026). Useful for separating the real long-term risk from the hype |
+| | 📏 Standard (free) | BIP 54: Consensus Cleanup | — | — | [BIP 54](https://github.com/bitcoin/bips/blob/master/bip-0054.md) | Bundles fixes for long-standing consensus bugs: the timewarp attack, worst-case slow-to-validate blocks, 64-byte-transaction Merkle weaknesses, and duplicate transactions. Spec Complete (2025); not activated |
+| | 🌐 Website (free) | Bitcoin Optech: Quantum resistance | — | — | [Topic](https://bitcoinops.org/en/topics/quantum-resistance/) | Where post-quantum planning stands: BIP 360 (Pay-to-Merkle-Root, a Taproot-like output without the key-path spend; Draft) and BIP 361 (a phased sunset of legacy ECDSA/Schnorr signatures; Draft, 2026). Useful for separating the real long-term risk from the hype |
 
 ### Scaling and Sidechains
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| | 💡 Concept | Fedimint | — | — | [GitHub](https://github.com/fedimint/fedimint) | Federated Chaumian e-cash on Bitcoin |
+| | 💡 Concept (free) | Fedimint | — | — | [GitHub](https://github.com/fedimint/fedimint) | Federated Chaumian e-cash on Bitcoin |
 | | 💡 Concept | Liquid Network | — | — | — | Blockstream's federated sidechain |
 | | 💡 Concept | Ark | — | — | [ark-protocol.org](https://ark-protocol.org/) | Off-chain UTXO sharing protocol: a server coordinates batches of shared "virtual UTXOs" that users can always exit on-chain without it. Implementations: Arkade (Ark Labs, launched late 2025) and Bark (Second, on mainnet since mid-2026) — see the [Optech topic](https://bitcoinops.org/en/topics/ark/) |
-| | 📏 Standard | Cashu (NUTs specification) | — | — | [GitHub](https://github.com/cashubtc/nuts) | Chaumian ecash with a single custodial mint (vs. Fedimint's federation); tokens are minted and melted over Lightning. Strong payer privacy in exchange for trusting the mint |
+| | 📏 Standard (free) | Cashu (NUTs specification) | — | — | [GitHub](https://github.com/cashubtc/nuts) | Chaumian ecash with a single custodial mint (vs. Fedimint's federation); tokens are minted and melted over Lightning. Strong payer privacy in exchange for trusting the mint |
 | | 📄 Paper | BitVM (2023) and BitVM2 (2024) | — | 2024 | [bitvm.org](https://bitvm.org/) | Robin Linus et al.: arbitrary computation verified on Bitcoin through fraud proofs, without a soft fork; BitVM2 applies it to bridges where safety needs only one honest signer from setup. Research-stage — read the papers, not the marketing |
 
 ### Ordinals and Inscriptions
@@ -81,14 +81,14 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| | 💡 Concept | Silent Payments (BIP 352) | — | — | [BIP 352](https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki) | Reusable stealth addresses that need no notification transaction. BIP Complete; wallet support is growing (e.g. Sparrow 2.5 receiving, 2026), libsecp256k1 0.8 ships a silent-payments module, and Bitcoin Core support is being merged (2026) |
-| | 💡 Concept | Payjoin improvements (BIP 77 Async Payjoin, "v2") | — | — | [BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md) | Enhanced collaborative transaction privacy: an untrusted "directory" server relays encrypted messages, so receivers no longer need to run a public endpoint. Draft; reference implementation in [rust-payjoin](https://github.com/payjoin/rust-payjoin) |
+| | 💡 Concept (free) | Silent Payments (BIP 352) | — | — | [BIP 352](https://github.com/bitcoin/bips/blob/master/bip-0352.mediawiki) | Reusable stealth addresses that need no notification transaction. BIP Complete; wallet support is growing (e.g. Sparrow 2.5 receiving, 2026), libsecp256k1 0.8 ships a silent-payments module, and Bitcoin Core support is being merged (2026) |
+| | 💡 Concept (free) | Payjoin improvements (BIP 77 Async Payjoin, "v2") | — | — | [BIP 77](https://github.com/bitcoin/bips/blob/master/bip-0077.md) | Enhanced collaborative transaction privacy: an untrusted "directory" server relays encrypted messages, so receivers no longer need to run a public endpoint. Draft; reference implementation in [rust-payjoin](https://github.com/payjoin/rust-payjoin) |
 
 ### Mining
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| | 💡 Concept | Stratum V2 | — | — | [Spec](https://github.com/stratum-mining/sv2-spec) | Next-gen mining pool protocol: encrypted (Noise) and binary, with a Job Declaration protocol that lets miners build their own block templates. Bitcoin Core 30 added an experimental IPC mining interface for Stratum v2 template providers |
+| | 💡 Concept (free) | Stratum V2 | — | — | [Spec](https://github.com/stratum-mining/sv2-spec) | Next-gen mining pool protocol: encrypted (Noise) and binary, with a Job Declaration protocol that lets miners build their own block templates. Bitcoin Core 30 added an experimental IPC mining interface for Stratum v2 template providers |
 
 <!-- resources:end -->
 

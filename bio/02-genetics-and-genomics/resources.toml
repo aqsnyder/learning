@@ -39,6 +39,7 @@ title = "MIT 7.03 Genetics"
 authors = "Chris Kaiser"
 year = "2004"
 type = "course"
+access = "free"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/7-03-genetics-fall-2004/"
 link_text = "MIT OCW"

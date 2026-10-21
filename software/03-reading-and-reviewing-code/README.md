@@ -29,7 +29,7 @@ After this section you can:
 | 🔑 | 📕 Book | *Code Reading: The Open Source Perspective* | Diomidis Spinellis | — | — | The only book dedicated to reading (not writing) code |
 | 🔑 | 📕 Book | *Refactoring: Improving the Design of Existing Code* (2nd ed) | Martin Fowler | 2018 | — | Recognize code smells and know the fix |
 | 🔑 | 📕 Book | *A Philosophy of Software Design* (2nd ed) | John Ousterhout | 2021 | — | Managing complexity, the #1 code review skill |
-| | 📘 Guide | Google's Engineering Practices: Code Review Guidelines | — | — | [google.github.io](https://google.github.io/eng-practices/review/) | How Google does code reviews |
+| | 📘 Guide (free) | Google's Engineering Practices: Code Review Guidelines | — | — | [google.github.io](https://google.github.io/eng-practices/review/) | How Google does code reviews |
 | 🤖 | 🛠️ Practice | Review AI-generated code critically | — | — | — | Treat every AI output as a PR from a junior developer |
 | | 📕 Book | *The Programmer's Brain* | Felienne Hermans | 2021 | [manning.com](https://www.manning.com/books/the-programmers-brain) | The cognitive science of reading code: why unfamiliar code overloads working memory, and concrete techniques (state tables, dependency graphs, mental models) to read it faster. Trains this section's core skill directly |
 | | 📕 Book | *Your Code as a Crime Scene* (2nd ed) | Adam Tornhill | 2024 | [pragprog.com](https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/) | Read a codebase through its git history: hotspots (complexity × churn), change coupling, knowledge distribution. Tells you where to spend review effort in a large or agent-generated codebase |

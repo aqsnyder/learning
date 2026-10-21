@@ -43,6 +43,7 @@ verified = 2026-10-13
 id = "phil-s-lab-component-selection-guides"
 title = "Phil's Lab component selection guides"
 type = "video"
+access = "free"
 url = "https://www.youtube.com/@PhilsLab"
 link_text = "youtube.com/@PhilsLab"
 description = "Practical selection walkthrough"

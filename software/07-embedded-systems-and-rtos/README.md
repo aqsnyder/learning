@@ -32,7 +32,7 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | | 📕 Book | Making Embedded Systems (2nd ed) | Elecia White | 2024 | — | Architecture and design patterns for embedded — hardware/software interfaces, state machines, power management, and testable firmware design. |
-| 🔑 | 📺 YouTube | Modern Embedded Systems Programming | Quantum Leaps (Miro Samek) | — | [Playlist](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) | Professional embedded practices from bare-metal up. Covers registers, interrupts, state machines, and RTOS concepts with hands-on board demos. |
+| 🔑 | 📺 YouTube (free) | Modern Embedded Systems Programming | Quantum Leaps (Miro Samek) | — | [Playlist](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) | Professional embedded practices from bare-metal up. Covers registers, interrupts, state machines, and RTOS concepts with hands-on board demos. |
 | 🔑 | 🔧 RTOS | FreeRTOS | — | — | [Link](https://www.freertos.org/) | THE open-source RTOS. Start here — tasks, queues, semaphores, timers. Massive community, runs on everything from Cortex-M0 to ESP32. |
 | | 🔧 RTOS | Zephyr Project | Linux Foundation | — | [Link](https://zephyrproject.org/) | Modern, Linux Foundation–backed RTOS. Growing fast with excellent driver support, Bluetooth/networking stacks, and a CMake-based build system. |
 | | 💡 Concept | Task scheduling | — | — | — | Preemptive vs cooperative scheduling, priority inversion, rate-monotonic analysis, and real-time guarantees. |

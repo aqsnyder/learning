@@ -30,7 +30,7 @@ After this section you can:
 | 🔑 | 📕 Book | Computational Physics | Mark Newman | — | — | — |
 | | 📕 Book | Computational Physics | Nicholas Giordano & Hisao Nakanishi | — | — | — |
 | | 📕 Book | Numerical Recipes: The Art of Scientific Computing | Press et al. | — | [numerical.recipes](http://numerical.recipes/) | — |
-| | 🎓 Course | MIT 18.085 Computational Science and Engineering | Gilbert Strang | — | [MIT OCW](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) | — |
+| | 🎓 Course (free) | MIT 18.085 Computational Science and Engineering | Gilbert Strang | — | [MIT OCW](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) | — |
 | | 📕 Book | Computational Physics | Jos Thijssen | — | — | — |
 | | 📕 Book | A Survey of Computational Physics | Landau, Páez & Bordeianu | — | [compadre.org](https://www.compadre.org/PICUP/resources/Course-Materials.cfm) | — |
 | | 📕 Book | A Student's Guide to Python for Physical Modeling | Kinder & Nelson | — | — | — |

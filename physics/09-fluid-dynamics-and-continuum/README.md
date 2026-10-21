@@ -28,14 +28,14 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book | Fluid Mechanics (7th ed., 2024) | Kundu, Cohen, Dowling & Capecelatro | 2024 | — | — |
-| | 📕 Book | The Feynman Lectures on Physics — Elasticity and Fluid Flow chapters (Vol. 2, Ch. 38–41) | — | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
+| | 📕 Book (free) | The Feynman Lectures on Physics — Elasticity and Fluid Flow chapters (Vol. 2, Ch. 38–41) | — | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
 | | 📕 Book | An Introduction to Fluid Dynamics | G.K. Batchelor | — | — | — |
-| | 🎓 Course | MIT 18.085 Computational Science and Engineering | Gilbert Strang | — | [MIT OCW](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) | — |
+| | 🎓 Course (free) | MIT 18.085 Computational Science and Engineering | Gilbert Strang | — | [MIT OCW](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) | — |
 | | 📕 Book | Elementary Fluid Dynamics | D.J. Acheson | — | — | — |
 | | 📕 Book | Fluid Mechanics | Landau & Lifshitz | — | — | — |
 | 🔑 | 📕 Book | Data-Driven Science and Engineering | Brunton & Kutz | — | [databookuw.com](https://databookuw.com/) | — |
 | | 🎥 Video | National Committee for Fluid Mechanics Films | Ascher Shapiro et al. | 1961–1969 | [MIT](http://web.mit.edu/hml/ncfmf.html) | — |
-| | 🎓 Course | CFD Python: 12 Steps to Navier–Stokes — Lorena A. Barba & Gilbert F. Forsyth (2013; JOSE 2018) | — | — | [GitHub](https://github.com/barbagroup/CFDPython) | — |
+| | 🎓 Course (free) | CFD Python: 12 Steps to Navier–Stokes — Lorena A. Barba & Gilbert F. Forsyth (2013; JOSE 2018) | — | — | [GitHub](https://github.com/barbagroup/CFDPython) | — |
 | | 📕 Book | A Heat Transfer Textbook (6th ed., 2024) | John H. Lienhard V & John H. Lienhard IV | 2024 | [ahtt.mit.edu (free PDF)](https://ahtt.mit.edu/) | — |
 
 <!-- resources:end -->

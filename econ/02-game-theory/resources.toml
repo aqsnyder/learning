@@ -23,6 +23,7 @@ id = "game-theory-econ-159"
 title = "Game Theory (ECON 159)"
 authors = "Ben Polak, Yale"
 type = "course"
+access = "free"
 marks = ["core"]
 url = "https://oyc.yale.edu/economics/econ-159"
 link_text = "Link"

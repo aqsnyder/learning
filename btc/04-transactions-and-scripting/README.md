@@ -26,16 +26,16 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book (free) | Mastering Bitcoin, Chapters 6–7: Transactions; Authorization and Authentication | Antonopoulos & Harding | — | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch06_transactions.adoc) | The definitive walkthrough of transaction structure (Ch. 6) and Bitcoin Script (Ch. 7: P2SH, OP_RETURN, flow control, Taproot and Tapscript) |
-| 🔑 | 🌐 Website | Learn Me A Bitcoin: Transactions | Greg Walker | — | [Website](https://learnmeabitcoin.com/technical/transaction/) | Interactive, field-by-field transaction dissection, with built-in transaction splitter and builder tools |
+| 🔑 | 🌐 Website (free) | Learn Me A Bitcoin: Transactions | Greg Walker | — | [Website](https://learnmeabitcoin.com/technical/transaction/) | Interactive, field-by-field transaction dissection, with built-in transaction splitter and builder tools |
 | 🔑 | 📕 Book (free) | Programming Bitcoin, Chapters 5–8 and 13 | Jimmy Song | — | [GitHub](https://github.com/jimmysong/programmingbitcoin) | Build transaction parsing and Script interpreter from scratch; ch. 13 adds SegWit serialization and signing |
-| | 📘 Documentation | Bitcoin Developer Reference: Transactions | — | — | [Reference](https://developer.bitcoin.org/reference/transactions.html) | bitcoin.org's reference for raw transaction fields — community-maintained and frozen around 2020–21, so check BIPs 141/143/341 for SegWit and Taproot details |
+| | 📘 Documentation (free) | Bitcoin Developer Reference: Transactions | — | — | [Reference](https://developer.bitcoin.org/reference/transactions.html) | bitcoin.org's reference for raw transaction fields — community-maintained and frozen around 2020–21, so check BIPs 141/143/341 for SegWit and Taproot details |
 | | 💡 Concept | UTXO model deep dive | — | — | — | Inputs, outputs, change, coin selection |
 | | 💡 Concept | Bitcoin Script | — | — | — | Stack-based, opcodes, P2PKH, P2SH |
-| | 💡 Concept | SegWit (BIP 141) | — | — | [BIP 141](https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki) · [BIP 143](https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki) | Segregated Witness, witness discount, transaction malleability fix; BIP 143 defines the new signature hash (with worked examples) |
+| | 💡 Concept (free) | SegWit (BIP 141) | — | — | [BIP 141](https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki) · [BIP 143](https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki) | Segregated Witness, witness discount, transaction malleability fix; BIP 143 defines the new signature hash (with worked examples) |
 | | 💡 Concept | Timelocks | — | — | — | CLTV (BIP 65), CSV (BIP 112), nLocktime |
 | | 🔧 Tool | Bitcoin Transaction Decoder | — | — | — | Manually decode raw transactions, then check your work with `bitcoin-cli decoderawtransaction` or Learn Me A Bitcoin's transaction splitter |
-| | 🛠️ Practice | bitcoin-tx-tutorial (Jupyter notebooks) | Darius Parvin (Chaincode Labs) | — | [GitHub](https://github.com/chaincodelabs/bitcoin-tx-tutorial) | Build and sign P2PKH, P2SH multisig, P2WPKH, P2WSH and P2TR (key- and script-path) transactions by hand in Python and broadcast them to a local regtest node; extra chapters on sighash flags and timelocks |
-| | 🔧 Tool | btcdeb — Bitcoin Script debugger | kallewoof | — | [GitHub](https://github.com/kallewoof/btcdeb) | Step through Script and Tapscript execution opcode by opcode; used by Learning Bitcoin from the Command Line's scripting chapters (Section 12) |
+| | 🛠️ Practice (free) | bitcoin-tx-tutorial (Jupyter notebooks) | Darius Parvin (Chaincode Labs) | — | [GitHub](https://github.com/chaincodelabs/bitcoin-tx-tutorial) | Build and sign P2PKH, P2SH multisig, P2WPKH, P2WSH and P2TR (key- and script-path) transactions by hand in Python and broadcast them to a local regtest node; extra chapters on sighash flags and timelocks |
+| | 🔧 Tool (free) | btcdeb — Bitcoin Script debugger | kallewoof | — | [GitHub](https://github.com/kallewoof/btcdeb) | Step through Script and Tapscript execution opcode by opcode; used by Learning Bitcoin from the Command Line's scripting chapters (Section 12) |
 
 <!-- resources:end -->
 

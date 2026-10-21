@@ -30,7 +30,7 @@ After this section you can:
 | 🔑 | 📕 Book | *Making Embedded Systems* (2nd ed) | Elecia White | 2024 | — | Best intro to embedded architecture and design patterns |
 | | 📕 Book | *Embedded Software Design* | Jacob Beningo | — | — | Modern firmware architecture and maintainability |
 | | 📕 Book | *Embedded C Coding Standard* | Barr Group | — | [barrgroup.com](https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard) | Minimizing bugs and improving portability |
-| 🔑 | 📺 YouTube | Modern Embedded Systems Programming | Quantum Leaps (Miro Samek) | — | [Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) | Gold standard for embedded concepts and state machines |
+| 🔑 | 📺 YouTube (free) | Modern Embedded Systems Programming | Quantum Leaps (Miro Samek) | — | [Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) | Gold standard for embedded concepts and state machines |
 | | 📰 Blog | Embedded Artistry | — | — | [embeddedartistry.com](https://embeddedartistry.com/) | Modular, testable firmware architecture articles |
 | | 📰 Blog | Jacob Beningo | — | — | [beningo.com](https://beningo.com/) | Firmware architecture best practices |
 | | 🎓 Course | FastBit Embedded Brain Academy (Udemy) | — | — | — | ARM Cortex-M, bare-metal, RTOS |

@@ -40,7 +40,7 @@ After this section you can:
 | | 🎓 Course (free) | Algebraic Topology | Pierre Albin | — | [Link](https://www.youtube.com/playlist?list=PLpRLWqLFLVTCL15U6N3o35g4uhMSBVA2b) | Lecture series covering fundamental groups, covering spaces, and homology. Good visual approach to algebraic topology. |
 | | 📕 Book | Riemannian Geometry | Manfredo do Carmo | 1992 | — | Classic introduction to Riemannian geometry: geodesics, curvature, Gauss-Bonnet theorem. Foundation for understanding optimization on manifolds. |
 | | 📕 Book | Computational Topology: An Introduction | Herbert Edelsbrunner, John Harer | 2010 | — | Introduction to topological data analysis (TDA): simplicial complexes, persistent homology, and Betti numbers. Connects topology to data science. |
-| | 📺 Video series | Topology & Geometry | Tadashi Tokieda | — | [Link](https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ) | Charming, intuitive lectures on topology and geometry by an exceptional communicator. Great for building visual intuition. |
+| | 📺 Video series (free) | Topology & Geometry | Tadashi Tokieda | — | [Link](https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ) | Charming, intuitive lectures on topology and geometry by an exceptional communicator. Great for building visual intuition. |
 | | 📄 Paper | Topology and Data | Gunnar Carlsson | 2009 | [Link](https://doi.org/10.1090/S0273-0979-09-01249-X) | Survey paper on topological data analysis (TDA), *Bulletin of the AMS*. Connects persistent homology to practical data analysis. Bridge from theory to applications. |
 
 <!-- resources:end -->

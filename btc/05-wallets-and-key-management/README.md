@@ -27,16 +27,16 @@ After this section you can:
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | 🔑 | 📕 Book (free) | Mastering Bitcoin, Chapter 5: Wallet Recovery | Antonopoulos & Harding | — | [GitHub](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc) | HD key derivation (BIP 32), BIP 39 recovery codes and passphrases, and what else a backup must capture (derivation paths, output script descriptors) |
-| | 🌐 Website | Learn Me A Bitcoin: HD Wallets | Greg Walker | — | [Website](https://learnmeabitcoin.com/technical/keys/hd-wallets/) | Visual HD wallet derivation |
-| 🔑 | 📏 Standard | BIP 32: Hierarchical Deterministic Wallets | — | — | [BIP 32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) | The HD wallet standard |
-| | 📏 Standard | BIP 39: Mnemonic Seed Phrases | — | — | [BIP 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) | How 12/24 word seeds work |
-| | 📏 Standard | BIP 44: Multi-Account Hierarchy | — | — | [BIP 44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) | Derivation path conventions |
-| | 📏 Standard | BIP 84: Native SegWit Derivation | — | — | [BIP 84](https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki) | bc1q address derivation |
-| | 📏 Standard | BIP 86: Taproot Derivation | — | — | [BIP 86](https://github.com/bitcoin/bips/blob/master/bip-0086.mediawiki) | bc1p address derivation |
+| | 🌐 Website (free) | Learn Me A Bitcoin: HD Wallets | Greg Walker | — | [Website](https://learnmeabitcoin.com/technical/keys/hd-wallets/) | Visual HD wallet derivation |
+| 🔑 | 📏 Standard (free) | BIP 32: Hierarchical Deterministic Wallets | — | — | [BIP 32](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki) | The HD wallet standard |
+| | 📏 Standard (free) | BIP 39: Mnemonic Seed Phrases | — | — | [BIP 39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) | How 12/24 word seeds work |
+| | 📏 Standard (free) | BIP 44: Multi-Account Hierarchy | — | — | [BIP 44](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki) | Derivation path conventions |
+| | 📏 Standard (free) | BIP 84: Native SegWit Derivation | — | — | [BIP 84](https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki) | bc1q address derivation |
+| | 📏 Standard (free) | BIP 86: Taproot Derivation | — | — | [BIP 86](https://github.com/bitcoin/bips/blob/master/bip-0086.mediawiki) | bc1p address derivation |
 | | 💡 Concept | Wallet types | — | — | — | Full node, SPV, hardware, multisig, watch-only |
 | | 💡 Concept | Backup and recovery strategies | — | — | — | Seed storage, passphrase protection, inheritance planning |
-| 🔑 | 📏 Standard | Output Script Descriptors (BIPs 380–387) | Pieter Wuille, Ava Chow | — | [BIP 380](https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki) | The language modern wallets use to state exactly which scripts they own, e.g. `wpkh([fingerprint/84h/0h/0h]xpub…/0/*)`. Bitcoin Core wallets are descriptor-only since v30 removed legacy wallets; practical guide: [Bitcoin Core descriptors doc](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md) |
-| | 📏 Standard | BIP 379: Miniscript (with BIP 388 Wallet Policies) | Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow; Salvatore Ingala | — | [BIP 379](https://github.com/bitcoin/bips/blob/master/bip-0379.md) | A composable, analyzable subset of Script for spending policies (multisig, timelocked recovery, inheritance); BIP 388 adapts descriptors and miniscript for hardware signers. Specs are Draft (379) and Complete (388) — check wallet support before relying on them |
+| 🔑 | 📏 Standard (free) | Output Script Descriptors (BIPs 380–387) | Pieter Wuille, Ava Chow | — | [BIP 380](https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki) | The language modern wallets use to state exactly which scripts they own, e.g. `wpkh([fingerprint/84h/0h/0h]xpub…/0/*)`. Bitcoin Core wallets are descriptor-only since v30 removed legacy wallets; practical guide: [Bitcoin Core descriptors doc](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md) |
+| | 📏 Standard (free) | BIP 379: Miniscript (with BIP 388 Wallet Policies) | Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow; Salvatore Ingala | — | [BIP 379](https://github.com/bitcoin/bips/blob/master/bip-0379.md) | A composable, analyzable subset of Script for spending policies (multisig, timelocked recovery, inheritance); BIP 388 adapts descriptors and miniscript for hardware signers. Specs are Draft (379) and Complete (388) — check wallet support before relying on them |
 
 <!-- resources:end -->
 

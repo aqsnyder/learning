@@ -29,12 +29,12 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📕 Book | The Feynman Lectures on Physics, Vol. 1 | Feynman, Leighton, Sands | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
+| 🔑 | 📕 Book (free) | The Feynman Lectures on Physics, Vol. 1 | Feynman, Leighton, Sands | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
 | 🔑 | 📕 Book | Classical Mechanics | John R. Taylor | — | — | — |
-| 🔑 | 🎓 Course | MIT 8.01SC Classical Mechanics (Fall 2016) | Chakrabarty, Dourmashkin et al. | — | [MIT OCW](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | — |
-| | 🎓 Course | Classical Mechanics (The Theoretical Minimum) | Leonard Susskind | — | [YouTube](https://www.youtube.com/playlist?list=PL47F408D36D4CF129) | — |
+| 🔑 | 🎓 Course (free) | MIT 8.01SC Classical Mechanics (Fall 2016) | Chakrabarty, Dourmashkin et al. | — | [MIT OCW](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | — |
+| | 🎓 Course (free) | Classical Mechanics (The Theoretical Minimum) | Leonard Susskind | — | [YouTube](https://www.youtube.com/playlist?list=PL47F408D36D4CF129) | — |
 | | 📕 Book | Introduction to Classical Mechanics | David Morin | — | — | — |
-| | 🎥 Video | Essence of Calculus — 3Blue1Brown | — | — | [YouTube](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) | — |
+| | 🎥 Video (free) | Essence of Calculus — 3Blue1Brown | — | — | [YouTube](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) | — |
 | | 📕 Book | Mechanics | Landau & Lifshitz | — | — | — |
 | | 📕 Book | Classical Mechanics | Herbert Goldstein | — | — | — |
 

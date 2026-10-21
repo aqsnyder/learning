@@ -19,6 +19,7 @@ verified = 2026-10-13
 id = "mit-6-006-introduction-to-algorithms-ocw"
 title = "MIT 6.006 Introduction to Algorithms (OCW)"
 type = "course"
+access = "free"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
 link_text = "ocw.mit.edu"
