@@ -25,18 +25,18 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| | 📕 Book | *The C Programming Language* (K&R, 2nd ed) | Kernighan and Ritchie | 1988 | — | The classic: short, precise, still worth reading. It covers ANSI C (C89) only, so pair it with *Modern C* or *Effective C* for C99 through C23 |
-| | 📕 Book | *Expert C Programming: Deep Secrets* | Peter van der Linden | 1994 | — | Linking, memory, and advanced C |
-| 🔑 | 📕 Book | *Making Embedded Systems* (2nd ed) | Elecia White | 2024 | — | Best intro to embedded architecture and design patterns |
-| | 📕 Book | *Embedded Software Design* | Jacob Beningo | — | — | Modern firmware architecture and maintainability |
-| | 📕 Book | *Embedded C Coding Standard* | Barr Group | — | [barrgroup.com](https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard) | Minimizing bugs and improving portability |
-| 🔑 | 📺 YouTube (free) | Modern Embedded Systems Programming | Quantum Leaps (Miro Samek) | — | [Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) | Gold standard for embedded concepts and state machines |
-| | 📰 Blog | Embedded Artistry | — | — | [embeddedartistry.com](https://embeddedartistry.com/) | Modular, testable firmware architecture articles |
-| | 📰 Blog | Jacob Beningo | — | — | [beningo.com](https://beningo.com/) | Firmware architecture best practices |
-| | 🎓 Course | FastBit Embedded Brain Academy (Udemy) | — | — | — | ARM Cortex-M, bare-metal, RTOS |
-| 🔑 | 📕 Book | *Modern C* (3rd ed) | Jens Gustedt | 2025 | [gustedt.gitlabpages.inria.fr](https://gustedt.gitlabpages.inria.fr/modern-c/) | C as it is written today, updated for C23 (ISO/IEC 9899:2024). The modern counterpart to K&R; the author also offers a free CC-licensed edition |
-| | 📕 Book | *Effective C* (2nd ed) | Robert C. Seacord | 2024 | [nostarch.com](https://nostarch.com/effective-c-2nd-edition) | Professional, security-minded intro to C23 by the convenor of the C standards committee and author of *The CERT C Coding Standard* |
-| | 📏 Standard | MISRA C:2025 — MISRA | — | — | [MISRA C:2025](https://misra.org.uk/product/misra-c2025/) | The safety-critical C subset most embedded static analyzers check against; supersedes MISRA C:2012 and C:2023. Paid. Even if you never certify, the rules and their rationale sharpen embedded code review |
+| | 📕 Book | *The C Programming Language* (K&R, 2nd ed) | Brian W. Kernighan and Dennis M. Ritchie | 1988 | [Kernighan's page](https://www.cs.princeton.edu/~bwk/cbook.html) | The classic: short, precise, still worth reading. It covers ANSI C (C89) only, so pair it with *Modern C* or *Effective C* for C99 through C23 |
+| | 📕 Book | *Expert C Programming* | Peter van der Linden | 1994 | [oreilly.com](https://www.oreilly.com/library/view/expert-c-programming/0131774298/) | Linking, memory and the dark corners of C, for programmers who already know the language (Prentice Hall, 1994). Ch. 3 "Unscrambling Declarations in C", ch. 5 "Thinking of Linking" and ch. 6 "Poetry in Motion: Runtime Data Structures" serve exercises 1 and 2. Pre-C99: read it for the mental models, not for current syntax. |
+| 🔑 | 📕 Book | *Making Embedded Systems* (2nd ed) | Elecia White | 2024 | [oreilly.com](https://www.oreilly.com/library/view/making-embedded-systems/9781098151539/) | Embedded architecture and design patterns from a working engineer (O'Reilly, March 2024). Ch. 4 "Inputs, Outputs, and Timers" and ch. 5 "Interrupts" back exercises 3 and 4; ch. 2 "Creating a System Architecture" frames the mini-project's layering. |
+| | 📕 Book | *Embedded Software Design: A Practical Approach to Architecture, Processes, and Coding Techniques* | Jacob Beningo | 2022 | [Apress](https://doi.org/10.1007/978-1-4842-8279-3) | Modern firmware architecture, process and coding techniques (Apress, 2022). The chapters "Interfaces, Contracts, and Assertions" and "Comms, Command Processing, and Telemetry Techniques" map onto the mini-project's HAL and command shell. |
+| | 📕 Book (free) | *Embedded C Coding Standard* | Barr Group | — | [barrgroup.com](https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard) | Barr Group's free coding standard (print, PDF and HTML), written to minimize bugs and improve portability. Adopt it as your house style; exercises 2 and 4 and the mini-project check code against it. |
+| 🔑 | 📺 YouTube (free) | Modern Embedded Systems Programming Course, lessons #0–#20 (C, startup code, interrupts) | Quantum Leaps (Miro Samek) | — | [#0 Getting Started](https://www.youtube.com/watch?v=hnj-7XwTYRI&list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM) · [#4 blinking an LED](https://www.youtube.com/watch?v=1Kjh0CAgnl4) · [#5 volatile](https://www.youtube.com/watch?v=5MzilJ2-MGY) · [#13 startup code](https://www.youtube.com/watch?v=zFAnW7Tzu4U) · [#16 interrupts](https://www.youtube.com/watch?v=jP1JymlHUtc) · [#18 Cortex-M interrupts](https://www.youtube.com/watch?v=O0Z1D6p7J5A) · [#20 race conditions](https://www.youtube.com/watch?v=3ha72Y8pyD4) · [Lesson index](https://www.state-machine.com/video-course) | The first part of Samek's free course, on a real Cortex-M board: C from counting and pointers (#1–#12) through startup code (#13–#15), interrupts (#16–#18) and race conditions (#20). Section 07 continues with the course's RTOS and state-machine lessons. |
+| | 📝 Article (free) | A General Overview of What Happens Before main() | Phillip Johnston (Embedded Artistry) | 2019 | [embeddedartistry.com](https://embeddedartistry.com/blog/2019/04/08/a-general-overview-of-what-happens-before-main/) · [Abstraction Layer (field manual)](https://embeddedartistry.com/fieldmanual-terms/abstraction-layer/) | What runs between reset and main(): the entry point, zeroing .bss, global constructors, and the bare-metal, bootloader and OS paths (last updated August 2022). Read it with exercise 1 and Quantum Leaps #13–#15. The site's free field-manual entry on abstraction layers gives the vocabulary for the mini-project's HAL. |
+| | 📝 Article (free) | How to Write Epic Hardware Abstraction Layers (HAL) in C | Jacob Beningo | 2023 | [beningo.com](https://www.beningo.com/how-to-write-epic-hardware-abstraction-layers-hal-in-c/) | A HAL as a struct of function pointers handed to the application, which never touches registers, so the same application builds for the target and runs on a PC against fakes. The pattern for the mini-project's HAL (last updated July 2026). |
+| | 🎓 Course | Embedded Systems Programming on ARM Cortex-M3/M4 Processor (Udemy) | FastBit Embedded Brain Academy (Kiran Nayak) | 2026 | [udemy.com](https://www.udemy.com/course/embedded-system-programming-on-arm-cortex-m3m4/) | Optional paid bare-metal course: memory and bus interfaces, the NVIC and exception handling, the stack and AAPCS, and writing a linker script and startup file from scratch. A guided walkthrough for exercise 3 (last updated October 2026). |
+| 🔑 | 📕 Book (free) | *Modern C* (3rd ed) | Jens Gustedt | 2025 | [author's page](https://gustedt.gitlabpages.inria.fr/modern-c/) · [Manning](https://www.manning.com/books/modern-c-third-edition) | C as it is written today, updated for C23 (ISO/IEC 9899:2024). The modern counterpart to K&R. The author's page links a free CC BY-NC-ND copy of this edition; Manning sells the print and eBook (2025). |
+| | 📕 Book | *Effective C* (2nd ed) | Robert C. Seacord | 2024 | [nostarch.com](https://nostarch.com/effective-c-2nd-edition) | "An Introduction to Professional C Programming": a security-minded introduction to C23 by the author of *The CERT C Coding Standard* (No Starch, September 2024). The alternative to *Modern C* for catching up from C89. |
+| | 📏 Standard | MISRA C:2025 — Guidelines for the use of the C language in critical systems | MISRA (The MISRA Consortium Limited) | 2025 | [misra.org.uk](https://misra.org.uk/product/misra-c2025/) | The safety-critical C subset most embedded static analyzers check against. It supersedes every earlier edition (1998, 2004, 2012, 2019 and 2023) and is the current version as of October 2026; sold as a single-user, on-screen document. Even if you never certify, the rules and their rationale sharpen embedded code review. |
 
 ### Key Concepts
 
@@ -59,11 +59,14 @@ After this section you can:
 ```
 1. K&R (read cover-to-cover, it's short, but remember it stops at C89)
 2. Modern C or Effective C (catch up to C11/C17/C23; pick one)
-3. Making Embedded Systems (embedded architecture and thinking)
-4. Expert C Programming (fill in the deep C knowledge)
-5. Quantum Leaps YouTube (state machines and real-time patterns)
-6. Embedded Artistry blog (ongoing reference for firmware design)
+3. Quantum Leaps lessons #0–#20 (C on a Cortex-M board, startup code,
+   interrupts, race conditions; watch alongside exercises 1–4)
+4. Embedded Artistry, "What Happens Before main()" (with exercise 1)
+5. Making Embedded Systems (embedded architecture and thinking)
+6. Expert C Programming (fill in the deep C knowledge: declarations, linking)
 7. Embedded C Coding Standard (adopt as your style guide); consult MISRA C:2025 for rule rationale
+8. Beningo's HAL article, then Embedded Software Design (before the mini-project)
+9. FastBit's Cortex-M3/M4 course (optional, if you want a guided register-level walkthrough)
 ```
 
 ---
@@ -76,20 +79,20 @@ After this section you can:
    - a string literal and a `malloc`'d block;
    - a `static` function and a `const` array of function pointers.
 
-   Predict the section and address range of each, then verify them with the linker `.map`, `arm-none-eabi-nm -S --size-sort`, `arm-none-eabi-size` and the debugger. Done when your table matches, you can explain why `.data` costs both flash and RAM, and you can say what the startup code does before `main()`. *(~2 h · K&R ch. 4 "Functions and Program Structure" and ch. 5 "Pointers and Arrays"; Expert C Programming on linking and runtime data structures; Quantum Leaps #13–15 on startup code)*
+   Predict the section and address range of each, then verify them with the linker `.map`, `arm-none-eabi-nm -S --size-sort`, `arm-none-eabi-size` and the debugger. Done when your table matches, you can explain why `.data` costs both flash and RAM, and you can say what the startup code does before `main()`. *(~2 h · K&R ch. 4 "Functions and Program Structure" and ch. 5 "Pointers and Arrays"; Expert C Programming ch. 5 "Thinking of Linking" and ch. 6 "Poetry in Motion: Runtime Data Structures"; Quantum Leaps #13–15 on startup code; Embedded Artistry, "A General Overview of What Happens Before main()")*
 2. **`volatile` at `-O2`** — In Compiler Explorer (ARM GCC, `-mcpu=cortex-m33`), compile two loops: a busy-wait on a flag set by an ISR, and a poll of a memory-mapped status register. Build each with and without `volatile`, at `-O0` and `-O2`, and annotate where the load is hoisted out of the loop. Then decode eight declarations with van der Linden's precedence rule, for example:
    - `void (*signal(int, void (*)(int)))(int);`
    - `const volatile uint32_t * const p;`
    - `char *(*(*x[3])(void))[5];`
 
-   Done when you can predict the `-O2` loop shape before compiling, and read each declaration aloud correctly the first time. *(~2 h · Quantum Leaps #5 "Preprocessor and the 'volatile' keyword in C"; Expert C Programming on unscrambling declarations; Barr Group standard's rules on `volatile`)*
+   Done when you can predict the `-O2` loop shape before compiling, and read each declaration aloud correctly the first time. *(~2 h · Quantum Leaps #5 "Preprocessor and the 'volatile' keyword in C"; Expert C Programming ch. 3 "Unscrambling Declarations in C"; Barr Group standard's rules on `volatile`)*
 3. **Registers, no HAL** — Blink an LED from a hardware-timer interrupt using only the CMSIS device header:
    - enable the clocks in RCC;
    - configure the pin in `MODER` and drive it through `BSRR`;
    - set the timer's `PSC`/`ARR`/`DIER`;
    - call `NVIC_SetPriority`/`NVIC_EnableIRQ`.
 
-   On a scope, check the period against your `PSC`/`ARR` arithmetic (within the datasheet tolerance of your clock source) and measure the interrupt-to-toggle latency. Rebuild with the vendor HAL and compare `arm-none-eabi-size` output and latency. *(~4 h · Quantum Leaps #4 (blinking an LED) and #16–18 (interrupts on Cortex-M); Making Embedded Systems ch. 4 "Inputs, Outputs, and Timers" and ch. 5 "Interrupts"; FastBit's bare-metal Cortex-M course; your MCU's reference manual)*
+   On a scope, check the period against your `PSC`/`ARR` arithmetic (within the datasheet tolerance of your clock source) and measure the interrupt-to-toggle latency. Rebuild with the vendor HAL and compare `arm-none-eabi-size` output and latency. *(~4 h · Quantum Leaps #4 (blinking an LED) and #16–18 (interrupts on Cortex-M); Making Embedded Systems ch. 4 "Inputs, Outputs, and Timers" and ch. 5 "Interrupts"; optionally FastBit's *Embedded Systems Programming on ARM Cortex-M3/M4 Processor*; your MCU's reference manual)*
 4. **Seeded-defect ISR review** — The STM32 USART receive path below has at least six defects. List each one, classify it (optimization, race, real-time, robustness or design) and write the fix.
 
    ```c
@@ -142,7 +145,7 @@ After this section you can:
 - a line parser;
 - five commands: `ver`, `uptime`, `led on|off`, `adc <ch>` and `peek <addr>` (which must reject unmapped addresses instead of faulting).
 
-Put it all behind a HAL of no more than 10 functions (`hal_uart.h`, `hal_gpio.h`, `hal_adc.h`). The parser and ring buffer must also compile and run on your PC against a fake HAL. Build with `-Wall -Wextra -Werror` and record any deviations from the Barr Group standard. Write a one-page memory-and-ISR budget from the map file and your scope measurements. For the HAL boundary, draw on Beningo's *Embedded Software Design* and Embedded Artistry's articles on modular, testable firmware.
+Put it all behind a HAL of no more than 10 functions (`hal_uart.h`, `hal_gpio.h`, `hal_adc.h`). The parser and ring buffer must also compile and run on your PC against a fake HAL. Build with `-Wall -Wextra -Werror` and record any deviations from the Barr Group standard. Write a one-page memory-and-ISR budget from the map file and your scope measurements. For the HAL boundary, draw on Beningo's "How to Write Epic Hardware Abstraction Layers (HAL) in C", the "Interfaces, Contracts, and Assertions" chapter of his *Embedded Software Design*, and Embedded Artistry's field-manual entry on abstraction layers.
 
 Deliverable: `projects/software/02-uart-shell/`. Success: a Python script sends 10,000 random commands, including garbage, overlong lines and bursts. Every reply is either correct or a defined error, and the board never resets. *(~12 h)*
 

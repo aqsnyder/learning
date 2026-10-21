@@ -12,9 +12,9 @@ pass are ticked. Everything else is there for going deeper.
 
 - [ ] 🔑 *The Art of Electronics* (3rd ed.) — Horowitz & Hill <!-- id:pcb/00/the-art-of-electronics-3rd-ed -->
 - [ ] 🔑 *Learning the Art of Electronics* — Hayes & Horowitz <!-- id:pcb/00/learning-the-art-of-electronics -->
-- [ ] EEVblog — Dave Jones <!-- id:pcb/00/eevblog -->
-- [ ] GreatScott! <!-- id:pcb/00/greatscott -->
-- [ ] Khan Academy Electrical Engineering <!-- id:pcb/00/khan-academy-electrical-engineering -->
+- [ ] EEVblog #859, #33 and #453 — Dave Jones <!-- id:pcb/00/eevblog -->
+- [ ] Electronic Basics — GreatScott! <!-- id:pcb/00/greatscott -->
+- [ ] Khan Academy Electrical Engineering — Khan Academy <!-- id:pcb/00/khan-academy-electrical-engineering -->
 - [ ] MIT 6.002 Circuits and Electronics (OCW) — Anant Agarwal (with Jeffrey Lang) <!-- id:pcb/00/mit-6-002-circuits-and-electronics-ocw -->
 - [ ] *Practical Electronics for Inventors* — Scherz & Monk <!-- id:pcb/00/practical-electronics-for-inventors -->
 - [ ] TI Precision Labs — Op Amps — Texas Instruments <!-- id:pcb/00/ti-precision-labs-op-amps -->
@@ -31,17 +31,20 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 01 — PCB Anatomy and Materials
 
-- [ ] 🔑 PCB Design Tutorial Rev A (2004) — David L. Jones (EEVblog) <!-- id:pcb/01/pcb-design-tutorial-rev-a-2004 -->
-- [ ] 🔑 Nine Dot Connects <!-- id:pcb/01/nine-dot-connects -->
-- [ ] Altium Academy Basics <!-- id:pcb/01/altium-academy-basics -->
+- [ ] 🔑 *PCB Design Tutorial*, Revision A — David L. Jones <!-- id:pcb/01/pcb-design-tutorial-rev-a-2004 -->
+- [ ] 🔑 PCB Material Selection: Electrical and Manufacturing Considerations — Milan Yogendrappa (Sierra Circuits) <!-- id:pcb/01/pcb-materials-guide-fr-4-rogers-etc -->
+- [ ] 🔑 Laminate data sheets: Isola 370HR (high-Tg FR-4) · Rogers RO4350B (hydrocarbon/ceramic) — Isola Group; Rogers Corporation <!-- id:pcb/01/laminate-data-sheets-370hr-ro4350b -->
+- [ ] Copper for PCBs — Sierra Circuits <!-- id:pcb/01/sierra-circuits-pcb-knowledge-base -->
+- [ ] How to Choose PCB Laminates Based on IPC Standards — Sushmitha V (Sierra Circuits) <!-- id:pcb/01/ipc-4101-slash-sheets-sierra -->
+- [ ] How to Choose PCB Laminates and Materials for Fabrication — Amit Bahl (Sierra Circuits) <!-- id:pcb/01/sierra-laminates-for-fabrication -->
+- [ ] Do You Need Low Dk PCB Materials? — Altium Academy <!-- id:pcb/01/altium-academy-basics -->
+- [ ] KiCad 10 manual — Calculator Tools — Heitor de Bittencourt, Mathias Neumann (KiCad Documentation Contributors) <!-- id:pcb/01/kicad-calculator-tools -->
 - [ ] IPC-2221 Generic Standard on Printed Board Design — IPC <!-- id:pcb/01/ipc-2221-generic-standard-on-printed -->
-- [ ] Sierra Circuits PCB Knowledge Base <!-- id:pcb/01/sierra-circuits-pcb-knowledge-base -->
-- [ ] PCB Materials Guide (FR-4, Rogers, etc.) <!-- id:pcb/01/pcb-materials-guide-fr-4-rogers-etc -->
 - [ ] 🛠️ Exercise 1: Copper arithmetic, checked 4-wire <!-- id:pcb/01/ex-1 -->
 - [ ] 🛠️ Exercise 2: IPC-2221 vs IPC-2152 <!-- id:pcb/01/ex-2 -->
 - [ ] 🛠️ Exercise 3: Laminate datasheets → design numbers <!-- id:pcb/01/ex-3 -->
 - [ ] 🛠️ Exercise 4: Red-pen the 2004 tutorial <!-- id:pcb/01/ex-4 -->
-- [ ] 🏗️ Mini-project: Fab Notes for Your Template <!-- id:pcb/01/mini-project -->
+- [ ] 🏗️ Mini-project: Fab Notes for a Project Template <!-- id:pcb/01/mini-project -->
 - [ ] ✅ Check Yourself, answered from memory <!-- id:pcb/01/check-1 -->
 - [ ] ✅ Check Yourself again, a week later <!-- id:pcb/01/check-2 -->
 - [ ] ✅ Check Yourself again, a month later <!-- id:pcb/01/check-3 -->
@@ -49,14 +52,15 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 02 — Schematic Capture and Library Management
 
-- [ ] 🔑 Phil's Lab Schematic Design tutorials — Phil <!-- id:pcb/02/phil-s-lab-schematic-design-tutorials -->
-- [ ] 🔑 KiCad Getting Started Guide (KiCad 10) — KiCad Project <!-- id:pcb/02/kicad-getting-started-guide-kicad-10 -->
-- [ ] SnapEDA component library <!-- id:pcb/02/snapeda-component-library -->
-- [ ] Ultra Librarian <!-- id:pcb/02/ultra-librarian -->
-- [ ] SamacSys <!-- id:pcb/02/samacsys -->
-- [ ] KiCad Template with Altium Theme — aqsnyder <!-- id:pcb/02/kicad-template-with-altium-theme -->
-- [ ] Robert Feranec schematic review series — Robert Feranec <!-- id:pcb/02/robert-feranec-schematic-review-series -->
+- [ ] 🔑 Getting Started in KiCad (KiCad 10) — The KiCad Team (Graham Keeth, Jon Evans, Glenn Peterson) <!-- id:pcb/02/kicad-getting-started-guide-kicad-10 -->
+- [ ] 🔑 Phil's Lab #165 — KiCad 9 schematic <!-- id:pcb/02/phil-s-lab-schematic-design-tutorials -->
 - [ ] 🔑 KiCad Library Conventions (KLC) — KiCad Library Team <!-- id:pcb/02/kicad-library-conventions-klc -->
+- [ ] KiCad 10 manual — Schematic Editor — The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh, Graham Keeth) <!-- id:pcb/02/kicad-schematic-editor-manual -->
+- [ ] KiCad 10 manual — Project templates — The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Jon Evans, Graham Keeth) <!-- id:pcb/02/kicad-project-templates -->
+- [ ] SnapEDA component library — SnapEDA <!-- id:pcb/02/snapeda-component-library -->
+- [ ] Ultra Librarian — Ultra Librarian <!-- id:pcb/02/ultra-librarian -->
+- [ ] SamacSys — Supplyframe <!-- id:pcb/02/samacsys -->
+- [ ] How to Draw Schematic & Tips to Improve Schematic (Parts 1–3) — Robert Feranec <!-- id:pcb/02/robert-feranec-schematic-review-series -->
 - [ ] AN4488 — Getting started with STM32F4xxxx MCU hardware development (Rev 7, 2018) — STMicroelectronics <!-- id:pcb/02/an4488-getting-started-with-stm32f4xxxx -->
 - [ ] 🛠️ Exercise 1: Vendor-model audit <!-- id:pcb/02/ex-1 -->
 - [ ] 🛠️ Exercise 2: ERC that means something <!-- id:pcb/02/ex-2 -->
@@ -70,14 +74,13 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 03 — Component Selection and Sourcing
 
-- [ ] 🔑 DigiKey / Mouser parametric search <!-- id:pcb/03/digikey-mouser-parametric-search -->
-- [ ] Octopart <!-- id:pcb/03/octopart -->
-- [ ] JLCPCB Parts Library <!-- id:pcb/03/jlcpcb-parts-library -->
-- [ ] Phil's Lab component selection guides <!-- id:pcb/03/phil-s-lab-component-selection-guides -->
-- [ ] JEDEC standards overview <!-- id:pcb/03/jedec-standards-overview -->
-- [ ] 🔑 Design for Supply Chain <!-- id:pcb/03/design-for-supply-chain -->
-- [ ] Temperature and Voltage Variation of Ceramic Capacitors, or Why Your 4.7µF Capacitor Becomes a 0.33µF Capacitor (Maxim AN5527, 2012) <!-- id:pcb/03/temperature-and-voltage-variation-of -->
-- [ ] J-STD-048A Notification Standard for Product Discontinuance · J-STD-046A Customer Notification Standard for Product/Process Changes by Electronic Product Suppliers (both 2025) <!-- id:pcb/03/j-std-048a-notification-standard-for -->
+- [ ] 🔑 DigiKey / Mouser parametric search — DigiKey; Mouser Electronics <!-- id:pcb/03/digikey-mouser-parametric-search -->
+- [ ] 🔑 Temperature and Voltage Variation of Ceramic Capacitors, or Why Your 4.7µF Capacitor Becomes a 0.33µF Capacitor (Maxim AN5527, 2012) — Maxim Integrated (now Analog Devices) <!-- id:pcb/03/temperature-and-voltage-variation-of -->
+- [ ] 🔑 J-STD-048A Notification Standard for Product Discontinuance · J-STD-046A Customer Notification Standard for Product/Process Changes by Electronic Product Suppliers (both 2025) — JEDEC (J-STD-048A jointly with ECIA and IPC) <!-- id:pcb/03/j-std-048a-notification-standard-for -->
+- [ ] Octopart — Octopart <!-- id:pcb/03/octopart -->
+- [ ] JLCPCB Parts Library — JLCPCB <!-- id:pcb/03/jlcpcb-parts-library -->
+- [ ] Phil's Lab #114 and #71 <!-- id:pcb/03/phil-s-lab-component-selection-guides -->
+- [ ] QFN PCB Design Tips & Tricks — Phil's Lab #144 — Phil's Lab <!-- id:pcb/03/phil-s-lab-qfn-pcb-design-tips -->
 - [ ] 🛠️ Exercise 1: Package literacy drill <!-- id:pcb/03/ex-1 -->
 - [ ] 🛠️ Exercise 2: MLCC derating, quantified <!-- id:pcb/03/ex-2 -->
 - [ ] 🛠️ Exercise 3: Op-amp shoot-out for a high-Z buffer <!-- id:pcb/03/ex-3 -->
@@ -90,15 +93,13 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 04 — PCB Layout Fundamentals
 
-- [ ] 🔑 PCB Layout Tutorials — Phil's Lab <!-- id:pcb/04/phil-s-lab -->
-- [ ] 🔑 Layout and Routing — Robert Feranec <!-- id:pcb/04/robert-feranec -->
-- [ ] KiCad PCB Editor Guide (KiCad 10) <!-- id:pcb/04/kicad-pcb-editor-guide-kicad-10 -->
-- [ ] KiCad 6 STM32 PCB Design Full Tutorial — Phil's Lab #65 (2022) <!-- id:pcb/04/kicad-6-stm32-pcb-design-full-tutorial -->
-- [ ] AN2867 — Guidelines for oscillator design on STM8 and STM32 MCUs/MPUs (Rev 24, 2026) — STMicroelectronics <!-- id:pcb/04/an2867-guidelines-for-oscillator-design -->
-- [ ] Routing Tutorials — Altium Academy <!-- id:pcb/04/altium-academy -->
-- [ ] 🔑 Component Placement Strategy <!-- id:pcb/04/component-placement-strategy -->
-- [ ] Design Rule Check (DRC) <!-- id:pcb/04/design-rule-check-drc -->
-- [ ] Copper Pours and Fills <!-- id:pcb/04/copper-pours-and-fills -->
+- [ ] 🔑 Phil's Lab #166 — KiCad 9 PCB layout <!-- id:pcb/04/phil-s-lab -->
+- [ ] 🔑 Feranec — layout and routing videos <!-- id:pcb/04/robert-feranec -->
+- [ ] 🔑 KiCad 10 manual — PCB Editor — The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh, Cirilo Bernardo, Jon Evans, Graham Keeth) <!-- id:pcb/04/kicad-pcb-editor-guide-kicad-10 -->
+- [ ] KiCad 6 STM32 PCB Design Full Tutorial — Phil's Lab #65 — Phil's Lab <!-- id:pcb/04/kicad-6-stm32-pcb-design-full-tutorial -->
+- [ ] AN2867 — Guidelines for oscillator design on STM8 and STM32 MCUs/MPUs (Rev 24) — STMicroelectronics <!-- id:pcb/04/an2867-guidelines-for-oscillator-design -->
+- [ ] Using an IPC-2221 PCB Clearance Calculator for High Voltage Design — Zachariah Peterson (Altium) <!-- id:pcb/04/ipc-2221-clearance-calculator-peterson -->
+- [ ] Microcontroller-Based Hardware Design With Altium Designer — #9 PCB Routing Tips — Altium Academy <!-- id:pcb/04/altium-academy -->
 - [ ] 🛠️ Exercise 1: Pours vs controlled impedance <!-- id:pcb/04/ex-1 -->
 - [ ] 🛠️ Exercise 2: Fab rules as code <!-- id:pcb/04/ex-2 -->
 - [ ] 🛠️ Exercise 3: Place-only study <!-- id:pcb/04/ex-3 -->
@@ -112,16 +113,14 @@ pass are ticked. Everything else is there for going deeper.
 ## Section 05 — Power Distribution and Grounding
 
 - [ ] 🔑 How to Achieve Proper Grounding — Rick Hartley <!-- id:pcb/05/how-to-achieve-proper-grounding -->
-- [ ] 🔑 Power Distribution Networks — Rick Hartley <!-- id:pcb/05/power-distribution-networks -->
-- [ ] 🔑 Phil's Lab — Power Design Tutorials — Phil's Lab <!-- id:pcb/05/phil-s-lab-power-design-tutorials -->
+- [ ] 🔑 Power Distribution Network — Rick Hartley <!-- id:pcb/05/power-distribution-networks -->
+- [ ] 🔑 Switching Regulator PCB Design — Phil's Lab #60 — Phil's Lab <!-- id:pcb/05/phil-s-lab-power-design-tutorials -->
 - [ ] Fast Circuit Boards: Energy Management (2018) — Ralph Morrison <!-- id:pcb/05/fast-circuit-boards-energy-management -->
 - [ ] Principles of Power Integrity for PDN Design — Simplified (2017) — Larry D. Smith, Eric Bogatin <!-- id:pcb/05/principles-of-power-integrity-for-pdn -->
 - [ ] Grounding and Shielding: Circuits and Interference (6th ed., 2016) — Ralph Morrison <!-- id:pcb/05/grounding-and-shielding-circuits-and -->
-- [ ] Saturn PCB Design Toolkit <!-- id:pcb/05/saturn-pcb-design-toolkit -->
+- [ ] Saturn PCB Design Toolkit — Saturn PCB Design <!-- id:pcb/05/saturn-pcb-design-toolkit -->
 - [ ] IPC-2152 — Standard for Determining Current-Carrying Capacity in Printed Board Design (2009) — IPC <!-- id:pcb/05/ipc-2152-standard-for-determining -->
-- [ ] Decoupling Capacitor Placement and Selection <!-- id:pcb/05/decoupling-capacitor-placement-and -->
 - [ ] MT-101: Decoupling Techniques (2009) — Analog Devices <!-- id:pcb/05/mt-101-decoupling-techniques-2009 -->
-- [ ] Ground Plane Splits <!-- id:pcb/05/ground-plane-splits -->
 - [ ] MT-031: Grounding Data Converters and Solving the Mystery of "AGND" and "DGND" (2008) — Walt Kester, James Bryant, Mike Byrne (Analog Devices) <!-- id:pcb/05/mt-031-grounding-data-converters-and -->
 - [ ] AN-136: PCB Layout Considerations for Non-Isolated Switching Power Supplies — Henry Zhang (Analog Devices) <!-- id:pcb/05/an-136-pcb-layout-considerations-for-non -->
 - [ ] FastHenry2 — Mattan Kamon (MIT, original FastHenry); FastFieldSolvers S.R.L. (Windows port) <!-- id:pcb/05/fasthenry2 -->
@@ -165,14 +164,10 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] High-Speed Signal Propagation: Advanced Black Magic (2003) — Howard Johnson, Martin Graham <!-- id:pcb/06/high-speed-signal-propagation-advanced -->
 - [ ] High-Speed Digital System Design: A Handbook of Interconnect Theory and Design Practices (2000) — Stephen H. Hall, Garrett W. Hall, James A. McCall <!-- id:pcb/06/high-speed-digital-system-design-a -->
 - [ ] Right the First Time, Vols I and II (2003, 2007) — Lee Ritchey <!-- id:pcb/06/right-the-first-time-vols-i-and-ii-2003 -->
-- [ ] 🔑 Robert Feranec — Signal Integrity and High-Speed Design — Robert Feranec <!-- id:pcb/06/robert-feranec-signal-integrity-and-high -->
-- [ ] Dr. EMC — Anton Tichenko <!-- id:pcb/06/dr-emc -->
-- [ ] UltraCAD Calculators <!-- id:pcb/06/ultracad-calculators -->
-- [ ] Controlled Impedance <!-- id:pcb/06/controlled-impedance -->
-- [ ] Differential Pairs <!-- id:pcb/06/differential-pairs -->
+- [ ] 🔑 Bogatin on Feranec's channel — reflections, crosstalk, differential pairs <!-- id:pcb/06/robert-feranec-signal-integrity-and-high -->
 - [ ] High-Speed Interface Layout Guidelines (SPRAAR7J, 2023) — Texas Instruments <!-- id:pcb/06/high-speed-interface-layout-guidelines -->
 - [ ] Ethernet PHY PCB Design Layout Checklist (SNLA387, 2021) — Lysny Woodahl (Texas Instruments) <!-- id:pcb/06/ethernet-phy-pcb-design-layout-checklist -->
-- [ ] Return Paths and Reference Planes <!-- id:pcb/06/return-paths-and-reference-planes -->
+- [ ] UltraCAD Calculators — UltraCAD <!-- id:pcb/06/ultracad-calculators -->
 - [ ] 🛠️ Exercise 1: Bounce diagram vs SPICE <!-- id:pcb/06/ex-1 -->
 - [ ] 🛠️ Exercise 2: Write a 2D field solver <!-- id:pcb/06/ex-2 -->
 - [ ] 🛠️ Exercise 3: Crosstalk vs spacing <!-- id:pcb/06/ex-3 -->

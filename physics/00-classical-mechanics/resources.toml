@@ -6,32 +6,42 @@
 
 [[groups.items]]
 id = "the-feynman-lectures-on-physics-vol-1"
-title = "The Feynman Lectures on Physics, Vol. 1"
-authors = "Feynman, Leighton, Sands"
+title = "The Feynman Lectures on Physics, Volume I"
+authors = "Feynman, Leighton & Sands"
+year = "2013"
 type = "book"
 access = "free"
+level = "beginner"
 marks = ["core"]
-url = "https://www.feynmanlectures.caltech.edu/"
-link_text = "feynmanlectures.caltech.edu"
-verified = 2026-10-13
+url = "https://www.feynmanlectures.caltech.edu/I_toc.html"
+link_text = "Caltech (Vol. I contents)"
+description = "Caltech's free online New Millennium Edition of the first volume, \"mainly mechanics, radiation, and heat\". This section reads the mechanics chapters, Ch. 1–14 and 18–25; Ch. 21–25 (from the harmonic oscillator to linear systems) map directly onto circuits. Sections 01 and 02 use its optics, waves and thermodynamics chapters."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "classical-mechanics"
 title = "Classical Mechanics"
 authors = "John R. Taylor"
+year = "2005"
 type = "book"
 marks = ["core"]
+description = "The primary textbook for this section (University Science Books): Newtonian mechanics with air resistance, oscillations, the calculus of variations, Lagrangian and Hamiltonian mechanics, with graded problems. Exercises 1–5 cite its chapters."
+access = "paid"
+level = "intermediate"
 
 [[groups.items]]
 id = "mit-8-01sc-classical-mechanics-fall-2016"
 title = "MIT 8.01SC Classical Mechanics (Fall 2016)"
-authors = "Chakrabarty, Dourmashkin et al."
+authors = "Deepto Chakrabarty, Peter Dourmashkin, Michelle Tomasik, Anna Frebel & Vladan Vuletic"
+year = "2016"
 type = "course"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/"
 link_text = "MIT OCW"
-verified = 2026-10-13
+description = "MIT's first physics course on OpenCourseWare, with lecture videos and problem sets: space, time, mass, force, momentum, torque and angular momentum, built up toward planetary motion. Watch it beside Feynman for problem-solving technique; exercise 4 uses its oscillator material."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "classical-mechanics-the-theoretical"
@@ -45,9 +55,16 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "introduction-to-classical-mechanics"
-title = "Introduction to Classical Mechanics"
+title = "Introduction to Classical Mechanics: With Problems and Solutions"
 authors = "David Morin"
+year = "2008"
 type = "book"
+url = "https://doi.org/10.1017/CBO9780511808951"
+link_text = "Cambridge"
+description = "A problem-centred text with full solutions, harder than Taylor and strong on dimensional analysis, limiting cases and checking answers. Its first chapter is the source for exercise 1's scaling arguments; use the rest to stretch Taylor's problems."
+access = "paid"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "essence-of-calculus-3blue1brown"

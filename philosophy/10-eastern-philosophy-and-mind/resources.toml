@@ -3,17 +3,24 @@
 # Field reference: tools/README.md
 
 [[groups]]
+title = "Buddhist philosophy of mind"
+outro = '''
+**Also used here (tracked in its home section):** Varela, Thompson & Rosch, *The Embodied Mind: Cognitive Science and Human Experience* ([Section 04](../04-intelligence-and-understanding/README.md)) for its integration of Buddhist mindfulness/awareness practice and the no-self analysis with cognitive science.
+'''
 
 [[groups.items]]
 id = "what-the-buddha-taught"
 title = "What the Buddha Taught"
 authors = "Walpola Rahula"
-year = "1959"
+year = "1969"
 type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "The clearest, most authoritative introduction to Buddhist philosophy. Covers the Four Noble Truths, dependent origination, and anattā (non-self) with precision and accessibility."
+url = "https://groveatlantic.com/book/what-the-buddha-taught/"
+link_text = "Grove"
+description = "A classic, widely used introduction to Buddhist philosophy. Covers the Four Noble Truths, dependent origination, and anattā (non-self) with precision and accessibility. The link is Grove Press's paperback (1969), with a foreword by Paul Demiéville and selected texts from the Suttas and the Dhammapada."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "buddhism-as-philosophy-an-introduction"
@@ -21,41 +28,49 @@ title = "Buddhism as Philosophy: An Introduction"
 authors = "Mark Siderits"
 year = "2007 (2nd ed. 2021)"
 type = "book"
+access = "paid"
+level = "beginner"
 description = "Presents Buddhist thought using the tools of analytic philosophy. Bridges the gap between Eastern and Western philosophical traditions. Excellent for philosophers approaching Buddhism for the first time. Get the revised, expanded second edition (Hackett, 2021)."
 
 [[groups.items]]
-id = "waking-dreaming-being-self-and"
-title = "Waking, Dreaming, Being: Self and Consciousness in Neuroscience, Meditation, and Philosophy"
-authors = "Evan Thompson"
-year = "2014"
-type = "book"
-description = "Integrates neuroscience, phenomenology, and Buddhist philosophy to explore consciousness. Examines lucid dreaming, meditation, and dying as windows into the nature of awareness."
+id = "buddha"
+title = "Buddha"
+authors = "Mark Siderits"
+year = "2011 (rev. 2023)"
+type = "encyclopedia"
+access = "free"
+url = "https://plato.stanford.edu/entries/buddha/"
+link_text = "SEP"
+description = "Stanford Encyclopedia of Philosophy entry (first published 2011, substantively revised March 2023): the Buddha as philosopher, the core teachings (including the chariot and the two truths), non-self, karma and rebirth, and the Buddha's attitude toward reason."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "mind-in-indian-buddhist-philosophy"
+title = "Mind in Indian Buddhist Philosophy"
+authors = "Christian Coseru"
+year = "2009 (rev. 2012)"
+type = "encyclopedia"
+access = "free"
+url = "https://plato.stanford.edu/entries/mind-indian-buddhism/"
+link_text = "SEP"
+description = "Stanford Encyclopedia of Philosophy entry (first published 2009, substantively revised 2012) on Buddhist theories of mind proper: the not-self doctrine, the five aggregates, Abhidharma analyses of perception, attention and intentionality, \"repository consciousness,\" and reflexive awareness. Much closer to this curriculum's questions than the general \"Buddha\" entry."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-fundamental-wisdom-of-the-middle-way"
 title = "The Fundamental Wisdom of the Middle Way: Nāgārjuna's Mūlamadhyamakakārikā"
-authors = "Nāgārjuna (trans. Jay Garfield)"
+authors = "Nāgārjuna (trans. Jay L. Garfield)"
 year = "1995"
 type = "book"
-description = "Nāgārjuna's foundational text on emptiness (śūnyatā) — the most influential work in Mahāyāna Buddhist philosophy. Garfield's translation includes excellent philosophical commentary."
-
-[[groups.items]]
-id = "the-bodhisattva-s-brain-buddhism"
-title = "The Bodhisattva's Brain: Buddhism Naturalized"
-authors = "Owen Flanagan"
-year = "2011"
-type = "book"
-description = "Attempts to extract the philosophically defensible core of Buddhism, separated from supernatural elements. A naturalist philosopher engages seriously with Buddhist metaphysics and ethics."
-
-[[groups.items]]
-id = "the-embodied-mind-revisited"
-title = "The Embodied Mind (revisited)"
-authors = "Varela, Thompson, Rosch"
-year = "1991"
-type = "book"
 access = "paid"
-level = "intermediate"
-description = "Returns here because its integration of Buddhist mindfulness with cognitive science is central to this section's themes. Tracked once, under Section 04 in PROGRESS."
+level = "advanced"
+url = "https://doi.org/10.1093/oso/9780195103175.001.0001"
+link_text = "OUP"
+description = "Nāgārjuna's foundational text on emptiness (śūnyatā) — the most influential work in Mahāyāna Buddhist philosophy. Garfield's translation includes a philosophical commentary."
+verified = 2026-10-21
+
+[[groups]]
+title = "Indian rivals: the self in Nyāya and Advaita Vedānta"
 
 [[groups.items]]
 id = "classical-indian-philosophy-a-history-of"
@@ -63,18 +78,89 @@ title = "Classical Indian Philosophy (A History of Philosophy without any gaps, 
 authors = "Peter Adamson, Jonardon Ganeri"
 year = "2020"
 type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
 url = "https://global.oup.com/academic/product/classical-indian-philosophy-9780198851769"
 link_text = "Link"
 description = "Short, readable chapters from the Vedas and Upaniṣads through the Buddha and Jainism to the classical schools — Nyāya, Sāṃkhya, Vaiśeṣika, Yoga, Advaita Vedānta — and later Buddhist thinkers such as Nāgārjuna and Dignāga. Supplies the non-Buddhist Indian views, above all Nyāya's arguments for a self, that this section's no-self arguments need as opponents. The book version of the podcast's India series (see blogs-and-references)."
 verified = 2026-10-13
 
 [[groups.items]]
-id = "why-i-am-not-a-buddhist"
-title = "Why I Am Not a Buddhist"
+id = "nyaya-iep"
+title = "Nyāya"
+authors = "Matthew R. Dasti"
+type = "encyclopedia"
+access = "free"
+url = "https://iep.utm.edu/nyaya/"
+link_text = "IEP"
+description = "Internet Encyclopedia of Philosophy article on the Nyāya school: its epistemology (perception, inference, testimony) and its metaphysics of substance, including the self (§2.a). There Nyāya argues that desire, cognition, pleasure, pain and volition are qualities that need a substrate, that recognition (\"that is the very man I saw a week ago\") needs a subject who lasts from one experience to the next, and that combining what different senses report needs a single experiencer: the classical case for a self against the Buddhists."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "advaita-vedanta-iep"
+title = "Advaita Vedanta"
+authors = "Sangeetha Menon"
+type = "encyclopedia"
+access = "free"
+url = "https://iep.utm.edu/advaita-vedanta/"
+link_text = "IEP"
+description = "Internet Encyclopedia of Philosophy article on Advaita Vedānta: the identity of the individual self (ātman) with brahman, māyā, the states of waking, dreaming and deep sleep that point to a fourth state of pure consciousness (turīya), and superimposition (adhyāsa) as the root of error. The view that the self is consciousness itself, \"self-luminous\", not a thing that has consciousness, which sets it apart from both Nyāya and the Buddhists."
+verified = 2026-10-21
+
+[[groups]]
+title = "Chinese philosophy: the heart-mind and agency"
+
+[[groups.items]]
+id = "mind-heart-mind-in-chinese-philosophy"
+title = "Mind (Heart-Mind) in Chinese Philosophy"
+authors = "David Wong"
+year = "2023"
+type = "encyclopedia"
+access = "free"
+marks = ["core"]
+url = "https://plato.stanford.edu/entries/chinese-mind/"
+link_text = "SEP"
+description = "Stanford Encyclopedia of Philosophy entry (first published July 2023) on *xin*, the heart-mind that thinks, feels and intends: whether early Chinese thinkers separated mind from body, and the pictures of the person in the *Analects*, the Mohists, the *Daodejing*, the *Mengzi*, the *Zhuangzi* and the *Xunzi*, from Mencius's heart-mind that leads the person by cultivating innate moral \"sprouts\" to the *Zhuangzi*'s skilled, non-deliberative know-how."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "zhuangzi-sep"
+title = "Zhuangzi"
+authors = "Chad Hansen"
+year = "2014 (rev. 2024)"
+type = "encyclopedia"
+access = "free"
+url = "https://plato.stanford.edu/entries/zhuangzi/"
+link_text = "SEP"
+description = "Stanford Encyclopedia of Philosophy entry (first published 2014, substantively revised March 2024): the text, its competing interpretations, and Zhuangzi's relativism, views on language, skepticism and \"perspectives on perspectives\". Read it for the *Zhuangzi*'s challenge to any fixed point of view, including the speaker's own sense of self."
+verified = 2026-10-21
+
+[[groups]]
+title = "Buddhism and the sciences of mind"
+
+[[groups.items]]
+id = "waking-dreaming-being-self-and"
+title = "Waking, Dreaming, Being: Self and Consciousness in Neuroscience, Meditation, and Philosophy"
 authors = "Evan Thompson"
-year = "2020"
+year = "2014"
 type = "book"
-description = "A critique by a co-author of *The Embodied Mind*: Thompson rejects \"Buddhist exceptionalism\" — the idea that Buddhism is uniquely rational, empirical or a \"mind science\" — argues that Buddhist modernism is philosophically unsound, and resists naturalized readings such as treating enlightenment as a brain state, while defending a cosmopolitan engagement with Buddhist ideas. The counterweight to this section's sympathetic readings."
+access = "paid"
+level = "intermediate"
+url = "https://doi.org/10.7312/thom13709"
+link_text = "Columbia UP"
+description = "Integrates neuroscience, phenomenology, and Buddhist philosophy to explore consciousness. Examines lucid dreaming, meditation, and dying as windows into the nature of awareness."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "the-bodhisattva-s-brain-buddhism"
+title = "The Bodhisattva's Brain: Buddhism Naturalized"
+authors = "Owen Flanagan"
+year = "2011"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "Attempts to extract the philosophically defensible core of Buddhism, separated from supernatural elements. A naturalist philosopher engages seriously with Buddhist metaphysics and ethics."
 
 [[groups.items]]
 id = "why-buddhism-is-true-the-science-and"
@@ -82,26 +168,19 @@ title = "Why Buddhism Is True: The Science and Philosophy of Meditation and Enli
 authors = "Robert Wright"
 year = "2017"
 type = "book"
+access = "paid"
+level = "beginner"
+url = "https://www.simonandschuster.com/books/Why-Buddhism-is-True/Robert-Wright/9781439195475"
+link_text = "Simon & Schuster"
 description = "The popular case that Buddhist claims about the self, suffering and perception are borne out by modern psychology and evolutionary theory. Read it alongside Thompson's *Why I Am Not a Buddhist* in this section, which argues against treating Buddhism as uniquely scientific."
+verified = 2026-10-21
 
 [[groups.items]]
-id = "buddha"
-title = "Buddha"
-authors = "SEP"
-type = "encyclopedia"
-access = "free"
-url = "https://plato.stanford.edu/entries/buddha/"
-link_text = "SEP"
-description = "Philosophical treatment of the Buddha's core teachings and their enduring philosophical significance."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "mind-in-indian-buddhist-philosophy"
-title = "Mind in Indian Buddhist Philosophy"
-authors = "SEP"
-type = "encyclopedia"
-access = "free"
-url = "https://plato.stanford.edu/entries/mind-indian-buddhism/"
-link_text = "SEP"
-description = "Christian Coseru's entry on Buddhist theories of mind proper: the not-self doctrine, the five aggregates, Abhidharma analyses of perception, attention and intentionality, \"repository consciousness,\" and reflexive awareness. Much closer to this curriculum's questions than the general \"Buddha\" entry."
-verified = 2026-10-13
+id = "why-i-am-not-a-buddhist"
+title = "Why I Am Not a Buddhist"
+authors = "Evan Thompson"
+year = "2020"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "A critique by a co-author of *The Embodied Mind*: Thompson rejects \"Buddhist exceptionalism\" — the idea that Buddhism is uniquely rational, empirical or a \"mind science\" — argues that Buddhist modernism is philosophically unsound, and resists naturalized readings such as treating enlightenment as a brain state, while defending a cosmopolitan engagement with Buddhist ideas. The counterweight to this section's sympathetic readings."

@@ -92,16 +92,31 @@ description = "The original ESM paper — demonstrated that transformer language
 verified = 2026-10-13
 
 [[groups.items]]
+id = "proteingym"
+title = "ProteinGym: Large-Scale Benchmarks for Protein Design and Fitness Prediction"
+authors = "Notin, P., Kollasch, A. W., Ritter, D., van Niekerk, L., Paul, S., Spinner, H., ... Gal, Y., Marks, D. S."
+year = "2023"
+type = "paper"
+label = "Benchmark (preprint)"
+access = "free"
+url = "https://doi.org/10.1101/2023.12.07.570727"
+link_text = "bioRxiv"
+more_links = [{ text = "ProteinGym site", url = "https://proteingym.org/" }]
+description = "Over 250 standardized deep mutational scanning assays, spanning millions of mutated sequences, plus curated clinical variant sets, with zero-shot and supervised results for over 70 models — the measured fitness data and the baselines that Practice 1 calibrates ESM against. The site serves the datasets"
+verified = 2026-10-21
+
+[[groups.items]]
 id = "rosetta-commons-macromolecular-modeling"
 title = "Rosetta Commons — Macromolecular Modeling Suite"
-authors = "Baker Lab & Rosetta Commons"
-year = "2024"
+authors = "Rosetta Commons"
 type = "tool"
 label = "Software"
+access = "partial"
 url = "https://www.rosettacommons.org/"
 link_text = "Rosetta Commons"
-description = "The foundational software for computational protein design — includes tools for structure prediction, protein-protein docking, enzyme design, and de novo structure generation"
-verified = 2026-10-13
+more_links = [{ text = "Licensing FAQ", url = "https://rosettacommons.org/software/licensing-faq/" }]
+description = "The foundational software for computational protein design — includes tools for structure prediction, protein-protein docking, enzyme design, and de novo structure generation. Free of charge for academic, non-profit and government users; commercial users pay an annual licence fee, and the code is not open source (Licensing FAQ, as of October 2026)"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "hallucinating-symmetric-protein"

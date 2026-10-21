@@ -16,7 +16,10 @@ type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "The best single-volume introduction to philosophy. Covers knowledge, mind, free will, ethics, and God with clarity and wit. Start here."
+url = "https://global.oup.com/academic/product/think-9780192854254"
+link_text = "OUP"
+description = "A single-volume introduction that works through arguments about knowledge, mind, free will, reasoning, ethics and God. The spine of this section: Practice 1 takes its arguments from the chapters on knowledge, mind and free will, and Practice 5 uses the chapter on reasoning. The link is OUP's 320-page paperback, which OUP now lists with a 2013 publication date."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "epistemology"
@@ -37,7 +40,12 @@ title = "What Does It All Mean? A Very Short Introduction to Philosophy"
 authors = "Thomas Nagel"
 year = "1987"
 type = "book"
-description = "Ultra-concise introduction — 101 pages covering the big questions. Good warmup before Blackburn."
+access = "paid"
+level = "beginner"
+url = "https://global.oup.com/academic/product/what-does-it-all-mean-9780195052169"
+link_text = "OUP"
+description = "A 112-page introduction in ten short chapters, from \"How Do We Know Anything?\", \"Other Minds\" and \"The Mind-Body Problem\" to free will, right and wrong, death and the meaning of life. A warm-up before Blackburn that previews Sections 01, 09 and 06."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "meditations-on-first-philosophy"
@@ -45,9 +53,11 @@ title = "Meditations on First Philosophy"
 authors = "René Descartes"
 year = "1641"
 type = "book"
+access = "free"
+level = "intermediate"
 url = "https://www.earlymoderntexts.com/assets/pdfs/descartes1641.pdf"
 link_text = "Free"
-description = "The foundational text of modern philosophy. Introduces radical doubt and the cogito (\"I think, therefore I am\"). The free link is Jonathan Bennett's lightly modernized translation (Early Modern Texts)."
+description = "The foundational text of modern philosophy: radical doubt, the dream and evil-demon arguments, and the cogito. Practice 3 uses Meditations I–II; [Section 01](../01-philosophy-of-mind/README.md) uses Meditations II and VI for the argument that mind and body are distinct. The free link is Jonathan Bennett's lightly modernized translation (Early Modern Texts)."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -95,6 +105,7 @@ label = "Essays"
 url = "https://1000wordphilosophy.com/ethics/"
 link_text = "Link"
 description = "Short, free introductions to the main normative theories. The curriculum otherwise has no ethics primer before Section 06 — these give you the vocabulary that AI-ethics and alignment debates assume."
+access = "free"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -115,6 +126,8 @@ title = "An Enquiry Concerning Human Understanding"
 authors = "David Hume"
 year = "1748"
 type = "book"
+access = "free"
+level = "intermediate"
 url = "https://www.gutenberg.org/ebooks/9662"
 link_text = "Free"
 description = "Empiricism, causation, the problem of induction. Read at least Sections 2-5 and 7 for foundations."

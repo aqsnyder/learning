@@ -3,6 +3,7 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Design-based causal inference lives in the econ curriculum.** Randomized trials, instrumental variables, regression discontinuity and difference-in-differences, with *Mastering 'Metrics*, *Causal Inference: The Mixtape* and *The Effect*, are taught in [econ Section 13 — Empirical Economics and Causal Inference](../../econ/13-empirical-economics-and-causal-inference/README.md). This section is its graphical companion (DAGs, the do-calculus, inverse-probability weighting); take the two side by side.'''
 
 [[groups.items]]
 id = "the-book-of-why-the-new-science-of-cause"
@@ -10,8 +11,12 @@ title = "The Book of Why: The New Science of Cause and Effect"
 authors = "Judea Pearl, Dana Mackenzie"
 year = "2018"
 type = "book"
-marks = ["core"]
-description = "The accessible introduction to causal reasoning. Pearl explains causal graphs, interventions, and counterfactuals through vivid examples. Read this first to understand the conceptual revolution."
+access = "partial"
+level = "beginner"
+url = "http://bayes.cs.ucla.edu/WHY/"
+link_text = "Authors' page"
+description = "Non-technical introduction to causal reasoning (Basic Books, May 2018): the ladder of association, intervention and counterfactuals, causal diagrams, and the paradoxes they resolve. The on-ramp before the Primer. Pearl's companion page has the preface, table of contents, excerpts of the Introduction and Chapters 1–2, and errata."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "causality-models-reasoning-and-inference"
@@ -19,15 +24,26 @@ title = "Causality: Models, Reasoning, and Inference"
 authors = "Judea Pearl"
 year = "2009"
 type = "book"
-description = "The technical bible of causal inference. Covers structural causal models (SCMs), do-calculus, counterfactuals, and identification theory rigorously. The definitive reference."
+access = "paid"
+level = "advanced"
+url = "https://doi.org/10.1017/CBO9780511803161"
+link_text = "Cambridge UP"
+description = "The technical reference (2nd edition, Cambridge University Press, 2009): structural causal models, the do-calculus, counterfactuals, and identification. Use it for the do-calculus behind Practice 4, not as a first read."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "causal-inference-in-statistics-a-primer"
 title = "Causal Inference in Statistics: A Primer"
-authors = "Judea Pearl, Madelyn Glymour, Nicholas Jewell"
+authors = "Judea Pearl, Madelyn Glymour, Nicholas P. Jewell"
 year = "2016"
 type = "book"
-description = "A shorter, more accessible technical introduction than *Causality*. Good bridge between *The Book of Why* and the full technical treatment."
+access = "partial"
+level = "intermediate"
+marks = ["core"]
+url = "http://bayes.cs.ucla.edu/PRIMER/"
+link_text = "Authors' page"
+description = "Short technical introduction (Wiley, 2016): causal models and graphs, d-separation, interventions with the backdoor and front-door criteria, and counterfactuals. The core text for Practice 1, 2 and 4. The authors' page has previews of Chapters 1–4, sample homework with solutions, and errata."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "causal-inference-what-if"
@@ -36,6 +52,8 @@ authors = "Miguel Hernán, James Robins"
 year = "2020"
 type = "book"
 access = "free"
+level = "intermediate"
+marks = ["core"]
 url = "https://miguelhernan.org/whatifbook"
 link_text = "Link"
 description = "Free textbook from the epidemiology perspective. Covers potential outcomes, inverse probability weighting, and g-methods. Complements Pearl's graphical approach. The authors' book page has the latest free PDF (revised in place, so re-download it), the NHEFS data with its codebook, and code in Python, R, SAS, Stata and Julia."
@@ -45,12 +63,14 @@ verified = 2026-10-13
 id = "introduction-to-causal-inference"
 title = "Introduction to Causal Inference"
 authors = "Brady Neal"
+year = "2020"
 type = "course"
 access = "free"
+level = "intermediate"
 url = "https://www.bradyneal.com/causal-inference-course"
 link_text = "Link"
-description = "Free online course with video lectures, slides, and exercises. Excellent modern introduction covering both potential outcomes and graphical approaches."
-verified = 2026-10-13
+description = "Free course (Fall 2020) from a machine-learning perspective, with video lectures, slides, and a draft course book: potential outcomes, graphical models, backdoor and front-door adjustment and the do-calculus, unobserved confounding, instrumental variables, difference-in-differences, causal discovery, and counterfactuals and mediation."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "causal-reasoning-from-meta-reinforcement"
@@ -83,7 +103,22 @@ authors = "Jonas Peters, Dominik Janzing, Bernhard Schölkopf"
 year = "2017"
 type = "book"
 access = "free"
+level = "intermediate"
+marks = ["core"]
 url = "https://library.oapen.org/bitstream/20.500.12657/26040/1/11283.pdf"
 link_text = "Link"
 description = "Machine-learning-oriented treatment of causal inference. Covers causal discovery from data and connections to transfer learning. Open access: the link is the free PDF (CC BY-NC-ND 4.0) in the [OAPEN library](https://library.oapen.org/handle/20.500.12657/26040); the print edition is from [MIT Press](https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/)."
 verified = 2026-10-13
+
+[[groups.items]]
+id = "applied-causal-inference-powered-by-ml"
+title = "Applied Causal Inference Powered by ML and AI"
+authors = "Victor Chernozhukov, Christian Hansen, Nathan Kallus, Martin Spindler, Vasilis Syrgkanis"
+year = "2024"
+type = "book"
+access = "free"
+level = "advanced"
+url = "https://arxiv.org/abs/2403.02467"
+link_text = "arXiv"
+description = "Free book (arXiv, March 2024) on combining machine learning with causal inference: structural equation models, DAGs and structural causal models, and double/debiased machine learning for estimating effects with flexible predictors. The current reference for judging causal-ML estimation claims; read it after *What If* (Practice 3e)."
+verified = 2026-10-21

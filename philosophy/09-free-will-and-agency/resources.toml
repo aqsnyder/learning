@@ -7,13 +7,16 @@
 [[groups.items]]
 id = "elbow-room-the-varieties-of-free-will"
 title = "Elbow Room: The Varieties of Free Will Worth Wanting"
-authors = "Daniel Dennett"
-year = "1984"
+authors = "Daniel C. Dennett"
+year = "1984 (new ed. 2015)"
 type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "The best defense of compatibilism — the view that free will is compatible with determinism. Dennett (1942–2024) argues we should stop worrying about metaphysical free will and focus on the kinds of freedom that actually matter."
+url = "https://doi.org/10.7551/mitpress/10470.001.0001"
+link_text = "MIT Press"
+description = "The best-known defense of compatibilism — the view that free will is compatible with determinism. Dennett (1942–2024) argues we should stop worrying about metaphysical free will and focus on the kinds of freedom that actually matter. The link is MIT Press's 2015 new edition."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "freedom-evolves"
@@ -37,8 +40,8 @@ type = "paper"
 access = "paid"
 url = "https://doi.org/10.1093/brain/106.3.623"
 link_text = "Link"
-description = "Famous experiment showing brain activity precedes conscious awareness of the decision to act. Widely cited as evidence against free will (though interpretations vary — see Schurger et al. 2012 below for the leading reinterpretation of the readiness potential)."
-verified = 2026-10-13
+description = "Famous experiment showing brain activity precedes conscious awareness of the decision to act. Widely cited as evidence against free will (though interpretations vary — see Schurger et al. 2012 below for the leading reinterpretation of the readiness potential). *Brain* 106(3): 623–642."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "alternate-possibilities-and-moral"
@@ -58,7 +61,11 @@ title = "Freedom and Resentment"
 authors = "P. F. Strawson"
 year = "1962"
 type = "paper"
-description = "Moves the debate from metaphysics to practice: holding people responsible consists in the \"reactive attitudes\" (resentment, gratitude, indignation) built into ordinary relationships, and Strawson argues that no general theoretical thesis such as determinism could rationally require us to give them up. The source of the reactive-attitudes criterion in this section's mini-project. Published in *Proceedings of the British Academy* 48; reprinted in Strawson's *Freedom and Resentment and Other Essays* (1974)."
+access = "paid"
+url = "https://doi.org/10.4324/9780203882566"
+link_text = "Routledge (reprint)"
+description = "Moves the debate from metaphysics to practice: holding people responsible consists in the \"reactive attitudes\" (resentment, gratitude, indignation) built into ordinary relationships, and Strawson argues that no general theoretical thesis such as determinism could rationally require us to give them up. The source of the reactive-attitudes criterion in this section's mini-project. Published in *Proceedings of the British Academy* 48 (1962); the link is the title essay of Strawson's *Freedom and Resentment and Other Essays* (Routledge, 2008 edition)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "determined-a-science-of-life-without"
@@ -138,10 +145,12 @@ verified = 2026-10-21
 [[groups.items]]
 id = "human-behavioral-biology"
 title = "Human Behavioral Biology"
-authors = "Robert Sapolsky"
-type = "video"
+authors = "Robert Sapolsky (Stanford University)"
+type = "video-series"
+label = "Lecture series"
 access = "free"
-url = "https://www.youtube.com/playlist?list=PL150326949691B199"
-link_text = "YouTube"
-description = "Stanford lecture series covering neurobiology, behavior, and their implications for free will. Pairs with Sapolsky's books."
-verified = 2026-10-13
+level = "intermediate"
+url = "https://www.youtube.com/playlist?list=PL848F2368C90DDC3D"
+link_text = "YouTube (Stanford)"
+description = "Stanford lecture series covering neurobiology, behavior, and their implications for free will. Pairs with Sapolsky's books. The link is Stanford's own playlist, \"Lecture Collection | Human Behavioral Biology\"."
+verified = 2026-10-21

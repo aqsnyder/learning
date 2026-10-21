@@ -10,6 +10,7 @@ title = "Long Short-Term Memory"
 authors = "Hochreiter, Schmidhuber"
 year = "1997"
 type = "paper"
+access = "free"
 marks = ["core"]
 url = "https://www.bioinf.jku.at/publications/older/2604.pdf"
 link_text = "Paper"

@@ -3,13 +3,21 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**See also:** spectral estimation in depth (windows, scalloping loss, ENBW, Welch averaging) has its home in [math/12 — Fourier Analysis, Signals and Systems](../../math/12-fourier-analysis-signals-and-systems/README.md); floating point, conditioning and general numerical algorithms in [math/14 — Numerical Methods and Scientific Computing](../../math/14-numerical-methods-and-scientific-computing/README.md).'''
 
 [[groups.items]]
 id = "computational-physics"
 title = "Computational Physics"
 authors = "Mark Newman"
+year = "2012"
 type = "book"
 marks = ["core"]
+url = "http://www-personal.umich.edu/~mejn/cp/"
+link_text = "Author's page (sample chapters, programs)"
+description = "A Python-based text (self-published through CreateSpace, 2012) covering numerical integration, linear and nonlinear equations, Fourier transforms, ordinary and partial differential equations, and Monte Carlo methods. The section's primary textbook; the author's page has sample chapters, the example programs and data."
+access = "partial"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "computational-physics-2"
@@ -24,31 +32,46 @@ authors = "Press et al."
 type = "book"
 url = "http://numerical.recipes/"
 link_text = "numerical.recipes"
+description = "The classic algorithms reference, each method explained and then implemented. Use single chapters as needed: ODE integration for exercise 1 and power-spectrum estimation for exercise 3."
+level = "intermediate"
 verified = 2026-10-13
 
 [[groups.items]]
 id = "mit-18-085-computational-science-and"
-title = "MIT 18.085 Computational Science and Engineering"
+title = "MIT 18.085 Computational Science and Engineering I (Fall 2008)"
 authors = "Gilbert Strang"
+year = "2008"
 type = "course"
 access = "free"
+level = "intermediate"
+marks = ["core"]
 url = "https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/"
 link_text = "MIT OCW"
-verified = 2026-10-13
+description = "Strang's applied-math course on OpenCourseWare, with lecture videos, problem sets, programming assignments and exams: linear algebra applied to networks and structures, Laplace's equation and boundary-value problems, Fourier series and the DFT. Its AᵀCA framework drives exercise 2 and the mini-project."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "computational-physics-3"
-title = "Computational Physics"
+title = "Computational Physics (2nd ed., 2007)"
 authors = "Jos Thijssen"
+year = "2007"
 type = "book"
+url = "https://doi.org/10.1017/CBO9781139171397"
+link_text = "Cambridge"
+description = "A graduate text on the methods behind quantum and statistical computation, including quantum Monte Carlo and density functional theory. Optional: reach for it after Newman if you want those methods."
+access = "paid"
+level = "advanced"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "a-survey-of-computational-physics"
-title = "A Survey of Computational Physics"
-authors = "Landau, Páez & Bordeianu"
+title = "A Survey of Computational Physics: Introductory Computational Science"
+authors = "Rubin H. Landau, José Páez & Cristian C. Bordeianu"
+year = "2008"
 type = "book"
-url = "https://www.compadre.org/PICUP/resources/Course-Materials.cfm"
-link_text = "compadre.org"
+description = "A broad survey (Princeton University Press, 2008) with exercises across all areas of computational physics; exercise 3 uses its Fourier-analysis material. Optional beside Newman."
+access = "paid"
+level = "intermediate"
 
 [[groups.items]]
 id = "a-student-s-guide-to-python-for-physical"
@@ -58,8 +81,13 @@ type = "book"
 
 [[groups.items]]
 id = "the-fenicsx-tutorial-jrgen-s-dokken"
-title = "The FEniCSx Tutorial — Jørgen S. Dokken (online book, CC BY 4.0)"
-type = "book"
+title = "The FEniCSx Tutorial"
+authors = "Jørgen S. Dokken"
+type = "tutorial"
+label = "Online book"
 url = "https://jsdokken.com/dolfinx-tutorial/"
 link_text = "jsdokken.com"
+description = "A free online book (CC BY 4.0) on the finite-element method in Python with DOLFINx: Poisson, heat, linear elasticity, Navier–Stokes, Helmholtz and an electromagnetics example. It turns 18.085's theory into working thermal, electrostatic and structural simulations."
+access = "free"
+level = "intermediate"
 verified = 2026-10-13

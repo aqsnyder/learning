@@ -3,6 +3,7 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Also used here (tracked in its home section):** Shapiro & Varian, *Information Rules* ([Section 05](../05-information-economics/README.md)) for lock-in, switching costs, compatibility and standards wars (Objective 5 and the mini-project).'''
 
 [[groups.items]]
 id = "networks-crowds-and-markets"
@@ -56,22 +57,17 @@ description = "Seminal paper on network effects, technology adoption, and compat
 verified = 2026-10-13
 
 [[groups.items]]
-id = "information-rules"
-title = "Information Rules"
-authors = "Carl Shapiro & Hal Varian"
-year = "1998"
-type = "book"
-description = "Economics of information goods, network effects, lock-in, and standards wars. Prescient and still relevant."
-
-[[groups.items]]
 id = "social-and-economic-networks"
-title = "Social and Economic Networks"
-authors = "Matthew Jackson, Stanford"
+title = "Social and Economic Networks: Models and Analysis"
+authors = "Matthew O. Jackson, Stanford"
+year = "undated (checked Oct 2026)"
 type = "course"
+access = "partial"
+level = "advanced"
 url = "https://www.coursera.org/learn/social-economic-networks"
 link_text = "Link"
-description = "Coursera course on network formation, diffusion, learning, and game theory on networks."
-verified = 2026-10-13
+description = "Eight-module Coursera course (rated advanced) on network formation, diffusion, learning, and game theory on networks; free to enroll, certificate paid. Use its diffusion material for Practice 3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "matchmakers-the-new-economics-of"
@@ -79,17 +75,20 @@ title = "Matchmakers: The New Economics of Multisided Platforms"
 authors = "David Evans & Richard Schmalensee"
 year = "2016"
 type = "book"
-description = "Clear treatment of multi-sided platform economics with case studies."
+access = "paid"
+level = "beginner"
+description = "Clear treatment of multi-sided platform economics with case studies. Read it with Rochet & Tirole for Practice 4."
 
 [[groups.items]]
 id = "stratechery"
 title = "Stratechery"
 authors = "Ben Thompson"
 type = "blog"
+access = "partial"
 url = "https://stratechery.com/"
 link_text = "Link"
-description = "Leading analysis of technology strategy through an economics lens. Developed aggregation theory."
-verified = 2026-10-13
+description = "Ben Thompson's analysis of technology strategy through an economics lens, home of \"Aggregation Theory\" (the lens the mini-project's memo uses). Some articles are free; daily updates and podcasts need a paid Stratechery Plus subscription. Commentary, not peer-reviewed research."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "metcalfe-s-law-is-wrong"

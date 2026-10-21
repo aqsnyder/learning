@@ -11,28 +11,40 @@ authors = "David J. Griffiths & Darrell F. Schroeter"
 year = "2018"
 type = "book"
 marks = ["core"]
+url = "https://doi.org/10.1017/9781316995433"
+link_text = "Cambridge"
+description = "The standard undergraduate text, in the third edition co-authored with Schroeter: wavefunctions and the Schrödinger equation, the formalism, angular momentum and spin, perturbation theory and the WKB approximation. The section's primary textbook and the analytic reference for exercises 1 and 4."
+access = "paid"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-feynman-lectures-on-physics-vol-3"
-title = "The Feynman Lectures on Physics, Vol. 3"
-authors = "Feynman, Leighton, Sands"
+title = "The Feynman Lectures on Physics, Volume III"
+authors = "Feynman, Leighton & Sands"
+year = "2013"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
-url = "https://www.feynmanlectures.caltech.edu/"
-link_text = "feynmanlectures.caltech.edu"
-verified = 2026-10-13
+url = "https://www.feynmanlectures.caltech.edu/III_toc.html"
+link_text = "Caltech (Vol. III contents)"
+description = "Caltech's free online New Millennium Edition of the quantum-mechanics volume. Feynman starts from probability amplitudes and two-state systems rather than wave mechanics; Ch. 8–9 (the Hamiltonian matrix, the ammonia maser) and Ch. 11 (more two-state systems, including photon polarization) carry exercises 2 and 3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mit-8-04-quantum-physics-i"
-title = "MIT 8.04 Quantum Physics I"
+title = "MIT 8.04 Quantum Physics I (Spring 2016)"
 authors = "Barton Zwiebach"
+year = "2016"
 type = "course"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/"
 link_text = "MIT OCW"
-verified = 2026-10-13
+description = "Zwiebach's first undergraduate quantum course on MIT OpenCourseWare, with lecture videos, lecture notes, problem sets and exams: the experimental basis of quantum physics, wave mechanics, and the Schrödinger equation in one and three dimensions. Its lectures became his textbook *Mastering Quantum Mechanics* (MIT Press, 2022)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "quantum-mechanics-the-theoretical"
@@ -46,24 +58,40 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "some-light-quantum-mechanics-3blue1brown"
-title = "Some light quantum mechanics — 3Blue1Brown"
+title = "Some light quantum mechanics (with minutephysics)"
+authors = "3Blue1Brown"
 type = "video"
 access = "free"
 url = "https://www.youtube.com/watch?v=MzRCDLre1b4"
 link_text = "YouTube"
+description = "A 3Blue1Brown video made with minutephysics: polarized light introduces quantum states as vectors, measurement as projection onto a basis, and the puzzle of a third polarizer between two crossed ones, which is the setup of exercise 3. Also used in physics/07."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "principles-of-quantum-mechanics"
 title = "Principles of Quantum Mechanics"
 authors = "R. Shankar"
+year = "1994"
 type = "book"
+url = "https://doi.org/10.1007/978-1-4757-0576-8"
+link_text = "Springer"
+description = "A graduate-level text that sets up the mathematics first (vector spaces and Dirac notation) and then the postulates. Turn to it when you want the formalism behind Griffiths done carefully, including the measurement postulate and the generalized uncertainty relation."
+access = "paid"
+level = "advanced"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "modern-quantum-mechanics"
-title = "Modern Quantum Mechanics"
-authors = "J.J. Sakurai & Jim Napolitano"
+title = "Modern Quantum Mechanics (3rd ed., 2020)"
+authors = "J. J. Sakurai & Jim Napolitano"
+year = "2020"
 type = "book"
+url = "https://doi.org/10.1017/9781108587280"
+link_text = "Cambridge"
+description = "The standard first-year graduate text, which builds the formalism from Stern–Gerlach experiments. Read its spin, angular-momentum and time-evolution chapters once Griffiths is done; exercises 2 and 3 borrow its two-state examples and its opening polarizer analogy."
+access = "paid"
+level = "advanced"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "quantum-mechanics"
@@ -73,9 +101,13 @@ type = "book"
 
 [[groups.items]]
 id = "quantum-mechanics-for-scientists-and"
-title = "Quantum Mechanics for Scientists and Engineers — David A. B. Miller (2008)"
+title = "Quantum Mechanics for Scientists and Engineers"
+authors = "David A. B. Miller"
 year = "2008"
 type = "book"
 url = "https://doi.org/10.1017/CBO9780511813962"
 link_text = "Cambridge"
-verified = 2026-10-13
+description = "Written by a Stanford electrical-engineering professor for engineers and applied physicists. Use it beside or after Griffiths for the device-oriented topics (tunneling, electrons in crystals, optical absorption) that lead into semiconductors and photodetectors in Section 08."
+access = "paid"
+level = "intermediate"
+verified = 2026-10-21

@@ -8,78 +8,32 @@ outro = '''
 '''
 
 [[groups.items]]
-id = "phil-s-lab-schematic-design-tutorials"
-title = "Phil's Lab Schematic Design tutorials"
-authors = "Phil"
-type = "video-series"
-access = "free"
-marks = ["core"]
-url = "https://www.youtube.com/@PhilsLab"
-link_text = "youtube.com/@PhilsLab"
-description = "Practical schematic capture walkthroughs"
-verified = 2026-10-13
-
-[[groups.items]]
 id = "kicad-getting-started-guide-kicad-10"
-title = "KiCad Getting Started Guide (KiCad 10)"
-authors = "KiCad Project"
-type = "course"
+title = "Getting Started in KiCad (KiCad 10)"
+authors = "The KiCad Team (Graham Keeth, Jon Evans, Glenn Peterson)"
+year = "2026"
+type = "tutorial"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://docs.kicad.org/10.0/en/getting_started_in_kicad/getting_started_in_kicad.html"
 link_text = "docs.kicad.org/10.0"
-description = "Official documentation. KiCad 10.0 (March 2026) is the current release; it adds design variants (one schematic, several BOM variants) and a graphical DRC rule editor; reusable design blocks arrived in 9.0"
-verified = 2026-10-13
+description = "The official KiCad 10 tutorial: one project taken from schematic through circuit board to fabrication outputs, then custom symbols and footprints. KiCad 10.0 was released on 20 March 2026 and is the current version (10.0.7 as of October 2026); it adds design variants (several versions of one project), a graphical design-rule editor and time-domain tuning constraints, and extends design blocks (introduced in 9.0) to the PCB editor."
+verified = 2026-10-21
 
 [[groups.items]]
-id = "snapeda-component-library"
-title = "SnapEDA component library"
-type = "tool"
-url = "https://www.snapeda.com/"
-link_text = "snapeda.com"
-description = "Verified symbols and footprints"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "ultra-librarian"
-title = "Ultra Librarian"
-type = "tool"
-url = "https://www.ultralibrarian.com/"
-link_text = "ultralibrarian.com"
-description = "CAD model downloads"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "samacsys"
-title = "SamacSys"
-type = "tool"
-url = "https://supplyframe.com/samacsys"
-link_text = "supplyframe.com/samacsys"
-description = "Free component libraries"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "kicad-template-with-altium-theme"
-title = "KiCad Template with Altium Theme"
-authors = "aqsnyder"
-type = "docs"
-label = "Reference"
-access = "free"
-url = "https://github.com/aqsnyder/KiCAD_Template_Snyder"
-link_text = "github.com/aqsnyder/KiCAD_Template_Snyder"
-description = "Personal design starting point (private repo: the link works only when signed in to GitHub as its owner)"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "robert-feranec-schematic-review-series"
-title = "Robert Feranec schematic review series"
-authors = "Robert Feranec"
+id = "phil-s-lab-schematic-design-tutorials"
+title = "KiCad 9 Hardware Design Tutorial (TI MSPM0) (1/2 Schematic) — Phil's Lab #165"
+authors = "Phil's Lab"
 type = "video"
 access = "free"
-url = "https://www.youtube.com/@RobertFeranec"
-link_text = "youtube.com/@RobertFeranec"
-description = "Learn from real design reviews"
-verified = 2026-10-13
+level = "beginner"
+marks = ["core"]
+url = "https://www.youtube.com/watch?v=O-zNn5k5Bn4"
+link_text = "YouTube"
+description = "Phil's Lab captures the full schematic of a small TI MSPM0 microcontroller board in KiCad 9 (part 1 of 2; part 2, the layout, is Section 04's core video). Watch it end to end for the capture workflow; it carries over to KiCad 10."
+verified = 2026-10-21
+short = "Phil's Lab #165 — KiCad 9 schematic"
 
 [[groups.items]]
 id = "kicad-library-conventions-klc"
@@ -95,11 +49,93 @@ description = "The official rules for symbols, footprints and 3D models: naming,
 verified = 2026-10-13
 
 [[groups.items]]
+id = "kicad-schematic-editor-manual"
+title = "KiCad 10 manual — Schematic Editor"
+authors = "The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh, Graham Keeth)"
+year = "2026"
+type = "docs"
+access = "free"
+url = "https://docs.kicad.org/10.0/en/eeschema/eeschema.html"
+link_text = "docs.kicad.org"
+more_links = [
+  { text = "Electrical rules checking", url = "https://docs.kicad.org/10.0/en/eeschema/eeschema.html#erc" },
+  { text = "Power symbols", url = "https://docs.kicad.org/10.0/en/eeschema/eeschema.html#power-symbols" },
+  { text = "Labels", url = "https://docs.kicad.org/10.0/en/eeschema/eeschema.html#labels" },
+  { text = "Hierarchical schematics", url = "https://docs.kicad.org/10.0/en/eeschema/eeschema.html#hierarchical-schematics" },
+]
+description = "The reference behind Practice 2 and Objectives 2 and 4: electrical rules checking, power symbols, local, global and hierarchical labels, and hierarchical sheets, plus BOM and netlist generation."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "kicad-project-templates"
+title = "KiCad 10 manual — Project templates"
+authors = "The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Jon Evans, Graham Keeth)"
+year = "2026"
+type = "docs"
+access = "free"
+url = "https://docs.kicad.org/10.0/en/kicad/kicad.html#project-templates"
+link_text = "docs.kicad.org"
+description = "How KiCad creates a project from a system or user template, where user templates live (KICAD_USER_TEMPLATE_DIR), what a template holds (the project files plus a meta/info.html description) and how to make one by saving a project into your template folder. Build your own with your title block, board setup, design rules and fab-note layers, so that every project starts the same way."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "snapeda-component-library"
+title = "SnapEDA component library"
+authors = "SnapEDA"
+type = "tool"
+access = "free"
+url = "https://www.snapeda.com/"
+link_text = "snapeda.com"
+description = "Free symbols, footprints and 3D models for many parts. Quality varies from part to part, so audit every model against the datasheet before first use (Practice 1)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ultra-librarian"
+title = "Ultra Librarian"
+authors = "Ultra Librarian"
+type = "tool"
+access = "free"
+url = "https://www.ultralibrarian.com/"
+link_text = "ultralibrarian.com"
+description = "CAD-model downloads (symbols, footprints, 3D models) for many EDA tools. Audit each model against the datasheet before use (Practice 1)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "samacsys"
+title = "SamacSys"
+authors = "Supplyframe"
+type = "tool"
+access = "free"
+url = "https://supplyframe.com/samacsys"
+link_text = "supplyframe.com/samacsys"
+description = "Supplyframe's free component libraries (symbols, footprints, 3D models). Audit each model against the datasheet before use (Practice 1)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "robert-feranec-schematic-review-series"
+title = "How to Draw Schematic & Tips to Improve Schematic (Parts 1–3)"
+authors = "Robert Feranec"
+year = "2019"
+type = "video-series"
+access = "free"
+level = "intermediate"
+url = "https://www.youtube.com/watch?v=lF0UgVQnZ5M"
+link_text = "Part 1"
+more_links = [
+  { text = "Part 2", url = "https://www.youtube.com/watch?v=Rfsq0EwJ5Xs" },
+  { text = "Part 3", url = "https://www.youtube.com/watch?v=qJd_BMDNfrk" },
+  { text = "10 Tips for Better Schematic Checking — Processor Boards", url = "https://www.youtube.com/watch?v=LzlAmPy0VNQ" },
+]
+description = "Feranec's three-part series from June 2019 (visual improvements, checking pin connections, being careful), each part also posted with notes on his FEDEVEL blog, plus his *10 Tips for Better Schematic Checking — Processor Boards*. Turn them into Practice 3's checklist."
+verified = 2026-10-21
+
+[[groups.items]]
 id = "an4488-getting-started-with-stm32f4xxxx"
 title = "AN4488 — Getting started with STM32F4xxxx MCU hardware development (Rev 7, 2018)"
 authors = "STMicroelectronics"
 year = "2018"
 type = "app-note"
+access = "free"
 url = "https://www.st.com/resource/en/application_note/an4488-getting-started-with-stm32f4xxxx-mcu-hardware-development-stmicroelectronics.pdf"
 link_text = "PDF"
 description = "Schematic checklist for an STM32 board: supplies and decoupling, VDDA/VREF+, reset, clocks, boot pins, SWD/JTAG, plus a reference schematic and layout notes. ST publishes an equivalent \"Getting started with … hardware development\" note for each family, so use the one for yours"

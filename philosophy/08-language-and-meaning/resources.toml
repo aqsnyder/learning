@@ -24,6 +24,8 @@ title = "How to Do Things with Words"
 authors = "J.L. Austin"
 year = "1962"
 type = "book"
+access = "paid"
+level = "intermediate"
 description = "Introduces speech act theory: language isn't just about describing the world but performing actions (promising, requesting, asserting). Foundational for pragmatics."
 
 [[groups.items]]

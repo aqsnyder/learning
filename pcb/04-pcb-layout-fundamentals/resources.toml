@@ -4,89 +4,105 @@
 
 [[groups]]
 outro = '''
-**Also used here (tracked in their home sections):** Saturn PCB Toolkit ([Section 05](../05-power-and-grounding/README.md)) for Practice 1; the JLCPCB capabilities page ([Section 09](../09-dfm-and-fabrication/README.md)) and IPC-2221A Table 6-1 ([Section 01](../01-pcb-anatomy-and-materials/README.md)) for Practice 2.
+**Also used here (tracked in their home sections):** KiCad Calculator Tools ([Section 01](../01-pcb-anatomy-and-materials/README.md)) for Practice 1 (coplanar waveguide with ground) and Practice 2 (electrical spacing); Saturn PCB Toolkit's impedance calculator ([Section 08](../08-multi-layer-and-stackup/README.md)) as a cross-check in Practice 1; the JLCPCB capabilities page ([Section 09](../09-dfm-and-fabrication/README.md)) and IPC-2221 ([Section 01](../01-pcb-anatomy-and-materials/README.md); Table 6-1 in Rev A, paid) for Practice 2; AN-136's hot-loop placement ([Section 05](../05-power-and-grounding/README.md)) for Practice 3; for guarding, leakage and Kelvin connections (Practice 4 and the mini-project), *The Art of Electronics* Ch. 5 ([Section 00](../00-electronics-fundamentals/README.md)) and the precision-measurement resources of [Section 12](../12-analog-mixed-signal-and-precision-measurement/README.md).
 '''
 
 [[groups.items]]
 id = "phil-s-lab"
-title = "PCB Layout Tutorials"
+title = "KiCad 9 Hardware Design Tutorial (TI MSPM0) (2/2 PCB) — Phil's Lab #166"
 authors = "Phil's Lab"
-type = "video-series"
+type = "video"
 access = "free"
+level = "beginner"
 marks = ["core"]
-url = "https://www.youtube.com/@PhilsLab"
+url = "https://www.youtube.com/watch?v=igQWdVGZGpI"
 link_text = "YouTube"
-description = "Step-by-step layout walkthroughs with theory. Excellent for building practical intuition alongside conceptual understanding."
-verified = 2026-10-13
+description = "Part 2 of the KiCad 9 board whose schematic is Section 02's core video: the PCB layout of the same design. Watch how placement is settled before routing starts, then compare with the larger board in #65 below."
+verified = 2026-10-21
+short = "Phil's Lab #166 — KiCad 9 PCB layout"
 
 [[groups.items]]
 id = "robert-feranec"
-title = "Layout and Routing"
+title = "How To Improve Your PCB Layout - Routing & Space"
 authors = "Robert Feranec"
 type = "video-series"
+label = "Videos"
 access = "free"
+level = "intermediate"
 marks = ["core"]
-url = "https://www.youtube.com/@RobertFeranec"
-link_text = "YouTube"
-description = "Professional-grade layout techniques from an experienced PCB designer."
-verified = 2026-10-13
+url = "https://www.youtube.com/watch?v=YRDZ2Vn_6J4"
+link_text = "Routing & Space"
+more_links = [{ text = "Review of a PCB Layout: Do you do same mistakes? (Part 1 of 4)", url = "https://www.youtube.com/watch?v=HZVod5AFrVI" }]
+description = "Feranec on routing and on using board space well, plus the first part of his four-part review of a beginner's layout and its mistakes. Watch both before Practice 3's placement study."
+verified = 2026-10-21
+short = "Feranec — layout and routing videos"
 
 [[groups.items]]
 id = "kicad-pcb-editor-guide-kicad-10"
-title = "KiCad PCB Editor Guide (KiCad 10)"
-type = "course"
+title = "KiCad 10 manual — PCB Editor"
+authors = "The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh, Cirilo Bernardo, Jon Evans, Graham Keeth)"
+year = "2026"
+type = "docs"
 access = "free"
+marks = ["core"]
 url = "https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html"
-link_text = "Docs"
-description = "Official layout tool documentation. Essential reference for KiCad-based workflows."
-verified = 2026-10-13
+link_text = "docs.kicad.org"
+more_links = [
+  { text = "Configuring design rules", url = "https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#configuring_design_rules" },
+  { text = "Custom design rules", url = "https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#custom-design-rules" },
+  { text = "Design rules checking", url = "https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#design-rule-checking" },
+  { text = "Working with zones", url = "https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#working-with-zones" },
+  { text = "Routing differential pairs", url = "https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#routing-differential-pairs" },
+  { text = "Length tuning", url = "https://docs.kicad.org/10.0/en/pcbnew/pcbnew.html#length-tuning" },
+]
+description = "The reference for everything this section configures: Board Setup and net classes (\"Configuring design rules\"), the custom-rule language and KiCad 10's graphical rule editor (\"Custom design rules\"), DRC, and copper zones (\"Working with zones\"). Read those chapters before Practices 1, 2 and 4; the differential-pair and length-tuning chapters serve Section 06."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "kicad-6-stm32-pcb-design-full-tutorial"
-title = "KiCad 6 STM32 PCB Design Full Tutorial — Phil's Lab #65 (2022)"
+title = "KiCad 6 STM32 PCB Design Full Tutorial — Phil's Lab #65"
+authors = "Phil's Lab"
 year = "2022"
 type = "video"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/watch?v=aVUqaB0IMh4"
 link_text = "YouTube"
 description = "One complete STM32 board taken from schematic to fab outputs in a single long session. The tool version is older, but the workflow and placement reasoning carry over directly to KiCad 10."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "an2867-guidelines-for-oscillator-design"
-title = "AN2867 — Guidelines for oscillator design on STM8 and STM32 MCUs/MPUs (Rev 24, 2026) — STMicroelectronics"
+title = "AN2867 — Guidelines for oscillator design on STM8 and STM32 MCUs/MPUs (Rev 24)"
+authors = "STMicroelectronics"
+year = "2026"
 type = "app-note"
+access = "free"
 url = "https://www.st.com/resource/en/application_note/an2867-guidelines-for-oscillator-design-on-stm8afals-and-stm32-mcusmpus-stmicroelectronics.pdf"
 link_text = "PDF"
 description = "Crystal selection (gain margin, load capacitors) plus PCB layout rules for the oscillator: a compact loop, guard ring and separated ground (Section 7). A crystal that won't start is a classic bring-up failure, and good layout prevents it."
 verified = 2026-10-13
 
 [[groups.items]]
+id = "ipc-2221-clearance-calculator-peterson"
+title = "Using an IPC-2221 PCB Clearance Calculator for High Voltage Design"
+authors = "Zachariah Peterson (Altium)"
+year = "2020, updated 2025"
+type = "article"
+access = "free"
+url = "https://resources.altium.com/p/using-an-ipc-2221-calculator-for-high-voltage-design"
+link_text = "resources.altium.com"
+description = "A free route to IPC-2221's conductor-spacing table (Table 6-1 in Rev A; the article shows it as an image): the categories for internal, external uncoated, coated and assembled conductors, the per-volt rule above 500 V with a worked example, and the column definitions in Rev B and Rev C (2023), with a calculator. Use it for Practice 2's high-voltage netclass, and remember that it is a design guideline, not a safety rating."
+verified = 2026-10-21
+
+[[groups.items]]
 id = "altium-academy"
-title = "Routing Tutorials"
+title = "Microcontroller-Based Hardware Design With Altium Designer — #9 PCB Routing Tips"
 authors = "Altium Academy"
 type = "video"
 access = "free"
-url = "https://www.youtube.com/@AltiumAcademy"
+level = "beginner"
+url = "https://www.youtube.com/watch?v=CaGzxD0jCKM"
 link_text = "YouTube"
-description = "Routing walkthroughs in Altium Designer; concepts transfer to any EDA tool."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "component-placement-strategy"
-title = "Component Placement Strategy"
-type = "concept"
-marks = ["core"]
-description = "Place before you route; placement is 90% of the design. Group by function, minimize critical path lengths, and think about thermal and mechanical constraints first."
-
-[[groups.items]]
-id = "design-rule-check-drc"
-title = "Design Rule Check (DRC)"
-type = "concept"
-description = "Understanding and configuring manufacturer constraints. Your DRC settings should match your fab house's capabilities."
-
-[[groups.items]]
-id = "copper-pours-and-fills"
-title = "Copper Pours and Fills"
-type = "concept"
-description = "Ground planes, power planes, thermal relief. When and how to use polygon pours effectively."
+description = "Lesson 9 of Altium Academy's microcontroller hardware-design course: routing tips, shown in Altium Designer. The ideas carry over to KiCad."
+verified = 2026-10-21

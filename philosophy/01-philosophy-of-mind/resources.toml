@@ -11,12 +11,15 @@ outro = '''
 id = "philosophy-of-mind-3rd-edition"
 title = "Philosophy of Mind (3rd Edition)"
 authors = "Jaegwon Kim"
-year = "2010"
+year = "2011"
 type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "The standard textbook. Systematically covers dualism, behaviorism, identity theory, functionalism, and mental causation. Clear, rigorous, and fair to all positions."
+url = "https://www.routledge.com/Philosophy-of-Mind/Kim/p/book/9780813344584"
+link_text = "Routledge"
+description = "The standard textbook, one position per chapter: mind as immaterial substance, behaviorism, the identity theory (\"Mind as the Brain\"), machine and causal-role functionalism, then mental causation, mental content and consciousness. Chapters 1–5 are the core path; Practices 1–4 use the chapters on dualism, behaviorism, the identity theory, mental causation and consciousness. Routledge lists the third edition as released in December 2010, copyright 2011."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "what-is-it-like-to-be-a-bat"
@@ -35,18 +38,27 @@ verified = 2026-10-21
 id = "the-concept-of-mind-selections"
 title = "The Concept of Mind (selections)"
 authors = "Gilbert Ryle"
-year = "1949"
+year = "1949 (60th anniversary ed. 2009)"
 type = "book"
-description = "Ryle's devastating critique of Cartesian dualism — the idea of mind as a \"ghost in the machine.\" Lays groundwork for behaviorism and functionalism."
+access = "paid"
+level = "intermediate"
+url = "https://doi.org/10.4324/9780203875858"
+link_text = "Routledge"
+description = "Ryle's attack on the Cartesian \"official doctrine\" of the mind as a \"ghost in the machine\": a category mistake, to be replaced by a dispositional account of mental concepts. Groundwork for behaviorism and functionalism. Practice 1 uses the category-mistake passage in the opening chapter (the visitor who asks where \"the University\" is). The link is Routledge's 60th anniversary edition."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-nature-of-mental-states"
 title = "The Nature of Mental States"
 authors = "Hilary Putnam"
-year = "1967"
+year = "1967 (repr. 1975)"
 type = "paper"
+access = "paid"
 marks = ["core"]
-description = "Introduces machine-state functionalism: mental states are defined by their functional roles, not their physical substrate. Foundational for AI philosophy."
+url = "https://doi.org/10.1017/CBO9780511625251.023"
+link_text = "CUP"
+description = "Introduces machine-state functionalism: mental states are defined by their functional roles, not their physical substrate, and the multiple realizability of pain counts against the brain-state identity theory. Foundational for the philosophy of AI and the source for Practice 2. First published in 1967 under a different title in *Art, Mind, and Religion* (eds. Capitan and Merrill); the link is the reprint in Putnam's *Mind, Language and Reality* (Cambridge University Press, 1975), pp. 429–440."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "epiphenomenal-qualia-mary-s-room"

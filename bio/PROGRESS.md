@@ -67,8 +67,10 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 1000 Genomes Project — The 1000 Genomes Project Consortium <!-- id:bio/02/1000-genomes-project -->
 - [ ] A Brief Guide to Genomics — National Human Genome Research Institute <!-- id:bio/02/a-brief-guide-to-genomics -->
 - [ ] Genome-Wide Association Studies — Emil Uffelmann, Qin Qin Huang, Nchangwi Syntia Munung, Jantina de Vries, Yukinori Okada, Alicia R. Martin, Hilary C. Martin, Tuuli Lappalainen et al. (… Danielle Posthuma) <!-- id:bio/02/genome-wide-association-studies -->
+- [ ] GWAS Catalog — NHGRI-EBI <!-- id:bio/02/gwas-catalog -->
 - [ ] An Integrated Map of Genetic Variation from 1,092 Human Genomes — The 1000 Genomes Project Consortium <!-- id:bio/02/an-integrated-map-of-genetic-variation -->
 - [ ] Coming of Age: Ten Years of Next-Generation Sequencing Technologies — Sara Goodwin, John D. McPherson, W. Richard McCombie <!-- id:bio/02/coming-of-age-ten-years-of-next -->
+- [ ] DNA Sequencing Costs: Data — National Human Genome Research Institute <!-- id:bio/02/dna-sequencing-costs-data -->
 - [ ] The Complete Sequence of a Human Genome — Sergey Nurk et al. (Telomere-to-Telomere Consortium) <!-- id:bio/02/the-complete-sequence-of-a-human-genome -->
 - [ ] The Mutational Constraint Spectrum Quantified from Variation in 141,456 Humans (gnomAD) — Konrad J. Karczewski et al. <!-- id:bio/02/the-mutational-constraint-spectrum -->
 - [ ] 🛠️ Exercise 1: Three-point cross, by hand <!-- id:bio/02/ex-1 -->
@@ -173,7 +175,7 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 04 — Bioinformatics and Sequence Analysis
 
-- [ ] 🔑 Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids — Durbin, Eddy, Krogh, Mitchison <!-- id:bio/04/biological-sequence-analysis -->
+- [ ] 🔑 Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids — Richard Durbin, Sean R. Eddy, Anders Krogh, Graeme Mitchison <!-- id:bio/04/biological-sequence-analysis -->
 - [ ] 🔑 NCBI BLAST Tutorials and Documentation — NCBI Staff <!-- id:bio/04/ncbi-blast-tutorials-and-documentation -->
 - [ ] 🔑 What Is a Hidden Markov Model? — Eddy, S. R. <!-- id:bio/04/what-is-a-hidden-markov-model -->
 - [ ] Bioinformatics: Sequence and Genome Analysis — Mount, D. W. <!-- id:bio/04/bioinformatics-sequence-and-genome -->
@@ -203,10 +205,12 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 Network Motifs: Simple Building Blocks of Complex Networks — Milo, R., Shen-Orr, S., Itzkovitz, S., Kashtan, N., Chklovskii, D., Alon, U. <!-- id:bio/05/network-motifs-simple-building-blocks-of -->
 - [ ] Systems Biology: A Textbook (2nd Edition) — Klipp, E., Liebermeister, W., Wierling, C., Kowald, A. <!-- id:bio/05/systems-biology-a-textbook-2nd-edition -->
 - [ ] Network Biology: Understanding the Cell's Functional Organization — Barabási, A.-L. & Oltvai, Z. N. <!-- id:bio/05/network-biology-understanding-the-cell-s -->
+- [ ] Scale-Free Networks Are Rare — Broido, A. D. & Clauset, A. <!-- id:bio/05/scale-free-networks-are-rare -->
 - [ ] KEGG: Kyoto Encyclopedia of Genes and Genomes — Kanehisa, M. & Goto, S. <!-- id:bio/05/kegg-kyoto-encyclopedia-of-genes-and -->
 - [ ] Systems Biology: A Brief Overview — Kitano, H. <!-- id:bio/05/systems-biology-a-brief-overview -->
 - [ ] A New Approach to Decoding Life: Systems Biology — Ideker, T., Galitski, T., Hood, L. <!-- id:bio/05/a-new-approach-to-decoding-life-systems -->
 - [ ] Network Motifs in the Transcriptional Regulation Network of *Escherichia coli* — Shen-Orr, S. S., Milo, R., Mangan, S., Alon, U. <!-- id:bio/05/network-motifs-in-the-transcriptional -->
+- [ ] RegulonDB — RegulonDB team, CCG–UNAM <!-- id:bio/05/regulondb -->
 - [ ] MIT 8.591J — Systems Biology (OCW) — Gore, J. <!-- id:bio/05/mit-8-591j-systems-biology-ocw -->
 - [ ] CellDesigner — Modeling Biological Networks — Systems Biology Institute <!-- id:bio/05/celldesigner-modeling-biological -->
 - [ ] A Synthetic Oscillatory Network of Transcriptional Regulators (the Repressilator) — Elowitz, M. B. & Leibler, S. <!-- id:bio/05/a-synthetic-oscillatory-network-of -->
@@ -230,6 +234,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 Experimental and Computational Approaches to Estimate Solubility and Permeability in Drug Discovery and Development Settings — Lipinski, C. A., Lombardo, F., Dominy, B. W., Feeney, P. J. <!-- id:bio/06/experimental-and-computational -->
 - [ ] AutoDock Vina Documentation (v1.2.0) — Forli Lab / CCSB, Scripps Research (original program by Oleg Trott) <!-- id:bio/06/autodock-vina-documentation-v1-2-0 -->
 - [ ] RDKit: Open-Source Cheminformatics — Landrum, G. <!-- id:bio/06/rdkit-open-source-cheminformatics -->
+- [ ] OpenMM — OpenMM developers <!-- id:bio/06/openmm -->
 - [ ] ZINC-22 — A Free Multi-Billion-Scale Database of Tangible Compounds for Ligand Discovery — Tingle, B. I., Tang, K. G., Castanon, M., Gutierrez, J. J., Khurelbaatar, M., Dandarchuluun, C., Moroz, Y. S., Irwin, J. J. <!-- id:bio/06/zinc-database-free-library-of -->
 - [ ] ChEMBL — EMBL-EBI (ChEMBL team) <!-- id:bio/06/chembl -->
 - [ ] Docking and Scoring in Virtual Screening for Drug Discovery: Methods and Applications — Kitchen, D. B., Decornez, H., Furr, J. R., Bajorath, J. <!-- id:bio/06/docking-and-scoring-in-virtual-screening -->
@@ -237,7 +242,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] Virtual Screening of Chemical Libraries — Shoichet, B. K. <!-- id:bio/06/virtual-screening-of-chemical-libraries -->
 - [ ] TeachOpenCADD — Open-Source Computer-Aided Drug Design — Volkamer Lab <!-- id:bio/06/teachopencadd-open-source-computer-aided -->
 - [ ] Ultra-Large Library Docking for Discovering New Chemotypes — Lyu, J. et al. (… Irwin, J. J.) <!-- id:bio/06/ultra-large-library-docking-for -->
-- [ ] Drug Design: Methodology, Concepts, and Mode-of-Action — Klebe, G. <!-- id:bio/06/drug-design-methodology-concepts-and -->
+- [ ] Drug Design: Methodology, Concepts, and Mode-of-Action — Klebe, G. (ed.) <!-- id:bio/06/drug-design-methodology-concepts-and -->
 - [ ] 🛠️ Exercise 1: Descriptor audit of real drugs <!-- id:bio/06/ex-1 -->
 - [ ] 🛠️ Exercise 2: Force field by hand, then by engine <!-- id:bio/06/ex-2 -->
 - [ ] 🛠️ Exercise 3: Redock, then cross-dock <!-- id:bio/06/ex-3 -->
@@ -259,7 +264,8 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] The Coming of Age of De Novo Protein Design — Huang, P.-S., Boyken, S. E., Baker, D. <!-- id:bio/07/the-coming-of-age-of-de-novo-protein -->
 - [ ] Large Language Models Generate Functional Protein Sequences Across Diverse Families — Madani, A., Krause, B., Greene, E. R., Subramanian, S., Mohr, B. P., ... Fraser, J. S., Naik, N. <!-- id:bio/07/large-language-models-generate -->
 - [ ] Biological Structure and Function Emerge from Scaling Unsupervised Learning to 250 Million Protein Sequences — Rives, A., Meier, J., Sercu, T., Goyal, S., Lin, Z., ... Fergus, R. <!-- id:bio/07/biological-structure-and-function-emerge -->
-- [ ] Rosetta Commons — Macromolecular Modeling Suite — Baker Lab & Rosetta Commons <!-- id:bio/07/rosetta-commons-macromolecular-modeling -->
+- [ ] ProteinGym: Large-Scale Benchmarks for Protein Design and Fitness Prediction — Notin, P., Kollasch, A. W., Ritter, D., van Niekerk, L., Paul, S., Spinner, H., ... Gal, Y., Marks, D. S. <!-- id:bio/07/proteingym -->
+- [ ] Rosetta Commons — Macromolecular Modeling Suite — Rosetta Commons <!-- id:bio/07/rosetta-commons-macromolecular-modeling -->
 - [ ] Hallucinating Symmetric Protein Assemblies — Wicky, B. I. M., Milles, L. F., Courbet, A., Ragotte, R. J., Dauparas, J., ... Baker, D. <!-- id:bio/07/hallucinating-symmetric-protein -->
 - [ ] Nobel Lecture: De Novo Protein Design — Baker, D. <!-- id:bio/07/nobel-lecture-de-novo-protein-design -->
 - [ ] Scientific Background to the Nobel Prize in Chemistry 2024: Computational Protein Design and Protein Structure Prediction — The Nobel Committee for Chemistry <!-- id:bio/07/scientific-background-to-the-nobel-prize -->
@@ -360,7 +366,7 @@ pass are ticked. Everything else is there for going deeper.
 
 - [ ] 🔑 Genetic Circuit Design Automation — Nielsen, Voigt et al. <!-- id:bio/11/genetic-circuit-design-automation -->
 - [ ] Complete Biosynthesis of Opioids in Yeast — Galanie, Thodey, Trenchard, Interrante & Smolke <!-- id:bio/11/complete-biosynthesis-of-opioids-in -->
-- [ ] iGEM — International Genetically Engineered Machine Competition — iGEM Foundation <!-- id:bio/11/igem-international-genetically -->
+- [ ] iGEM — International Genetically Engineered Machine Competition — iGEM <!-- id:bio/11/igem-international-genetically -->
 - [ ] 🔑 A High-Performance Speech Neuroprosthesis — Willett, Kunz, Fan, Avansino et al. <!-- id:bio/11/a-high-performance-speech -->
 - [ ] Neuronal Ensemble Control of Prosthetic Devices by a Human with Tetraplegia — Hochberg, Serruya, Friehs, Mukand et al. <!-- id:bio/11/neuronal-ensemble-control-of-prosthetic -->
 - [ ] Neuralink — Brain-Computer Interface Technology — Neuralink <!-- id:bio/11/neuralink -->

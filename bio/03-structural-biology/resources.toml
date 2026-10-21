@@ -30,7 +30,7 @@ access = "free"
 marks = ["core"]
 url = "https://pdb101.rcsb.org/"
 link_text = "PDB-101"
-description = "Authoritative educational resource from the Protein Data Bank with Molecule of the Month, structural biology guides, and interactive tutorials"
+description = "Authoritative educational resource from the Protein Data Bank with Molecule of the Month, structural biology guides, and interactive tutorials. This is its home in the curriculum; Section 01 uses its Molecule of the Month enzyme articles for a mechanism write-up"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -153,10 +153,11 @@ verified = 2026-10-13
 id = "ucsf-chimerax"
 title = "UCSF ChimeraX"
 authors = "RBVI, University of California San Francisco"
-year = "2026"
+year = "2025"
 type = "tool"
 label = "Software"
+access = "free"
 url = "https://www.rbvi.ucsf.edu/chimerax/"
 link_text = "ChimeraX"
-description = "The successor to Chimera and the practical tool for this section: open a PDB entry or an AlphaFold model, inspect the fold, color by confidence, and measure contacts yourself — free for academic use"
-verified = 2026-10-13
+description = "The successor to Chimera and the practical tool for this section: open a PDB entry or an AlphaFold model, inspect the fold, color by confidence, and measure contacts yourself. Free of charge for academic, government, nonprofit and personal use (commercial use needs a licence); current production release 1.11, December 2025 (as of October 2026). Section 01's Practice 5 uses it too"
+verified = 2026-10-21

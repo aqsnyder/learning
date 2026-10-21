@@ -6,50 +6,65 @@
 
 [[groups.items]]
 id = "visual-differential-geometry-and-forms"
-title = "Visual Differential Geometry and Forms"
+title = "Visual Differential Geometry and Forms: A Mathematical Drama in Five Acts"
 authors = "Tristan Needham"
 year = "2021"
 type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "A revolutionary visual approach to differential geometry. Needham makes curvature, geodesics, and forms intuitive through geometric reasoning rather than coordinate computations. Beautiful and deep."
+url = "https://press.princeton.edu/books/paperback/9780691203706/visual-differential-geometry-and-forms"
+link_text = "Princeton UP"
+description = "A geometric, picture-first route through differential geometry (Princeton, July 2021): curvature, parallel transport and geodesics, with a geometrical proof of the Theorema Egregium and four proofs of the global Gauss–Bonnet theorem, ending with differential forms. The core text for curvature and geodesics (Practice 3, 5 and the mini-project)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "topology"
 title = "Topology"
-authors = "James Munkres"
+authors = "James R. Munkres"
 year = "2000"
 type = "book"
 access = "paid"
 level = "intermediate"
-description = "The standard introduction to point-set topology. Covers topological spaces, continuity, compactness, connectedness, and the fundamental group. Rigorous and well-written."
+url = "https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299/9780137848669"
+link_text = "Pearson"
+description = "The standard undergraduate text (2nd edition, Prentice Hall 2000; in print as Pearson's Classic Version). Part I is point-set topology (Ch. 2 spaces and continuous functions, Ch. 3 connectedness and compactness, Ch. 4 countability and separation axioms); Part II is algebraic topology, from the fundamental group to covering spaces. Rigorous; read Part I after Morris."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "topology-without-tears"
 title = "Topology Without Tears"
-authors = "Sidney Morris"
+authors = "Sidney A. Morris"
+year = "2024"
 type = "book"
 access = "free"
+level = "beginner"
+marks = ["core"]
 url = "https://www.topologywithouttears.net/"
-link_text = "Link"
-description = "Free, accessible introduction to topology. Good for building intuition before Munkres."
-verified = 2026-10-13
+link_text = "topologywithouttears.net"
+description = "Free textbook (PDF, version of 6 August 2024; revised by the author since 1985): topological spaces and bases, limit points and connectedness, homeomorphisms, continuous mappings, metric spaces, compactness, products and quotient spaces. The approachable entry point and core text for Practice 1–2; the site adds the author's videos on topology and on writing proofs. Download it from this site, which keeps the latest version."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-smooth-manifolds"
 title = "Introduction to Smooth Manifolds"
-authors = "John Lee"
+authors = "John M. Lee"
 year = "2012"
 type = "book"
-description = "The standard graduate text on smooth manifolds. Covers tangent spaces, differential forms, de Rham cohomology, and Lie groups. Thorough and rigorous."
+access = "paid"
+level = "advanced"
+url = "https://link.springer.com/book/10.1007/978-1-4419-9982-5"
+link_text = "Springer"
+description = "The standard graduate text on smooth manifolds (2nd edition, Springer GTM 218, 2012): differential forms, de Rham cohomology and Lie groups among its 22 chapters. Optional: the rigorous framework behind Needham's pictures, for when you want proofs in n dimensions."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "algebraic-topology"
 title = "Algebraic Topology"
 authors = "Pierre Albin"
-type = "course"
+type = "video-series"
 access = "free"
+level = "advanced"
 url = "https://www.youtube.com/playlist?list=PLpRLWqLFLVTCL15U6N3o35g4uhMSBVA2b"
 link_text = "Link"
 description = "Lecture series covering fundamental groups, covering spaces, and homology. Good visual approach to algebraic topology."
@@ -58,18 +73,28 @@ verified = 2026-10-13
 [[groups.items]]
 id = "riemannian-geometry"
 title = "Riemannian Geometry"
-authors = "Manfredo do Carmo"
+authors = "Manfredo P. do Carmo"
 year = "1992"
 type = "book"
-description = "Classic introduction to Riemannian geometry: geodesics, curvature, Gauss-Bonnet theorem. Foundation for understanding optimization on manifolds."
+access = "paid"
+level = "advanced"
+url = "https://link.springer.com/book/9780817634902"
+link_text = "Springer (Birkhäuser)"
+description = "Graduate text (Birkhäuser, 1992; originally published in Portuguese) that runs from the definition of a differentiable manifold to a proof of the Sphere Theorem. Use it for the geodesic equation and Christoffel symbols in Practice 5."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "computational-topology-an-introduction"
 title = "Computational Topology: An Introduction"
-authors = "Herbert Edelsbrunner, John Harer"
+authors = "Herbert Edelsbrunner, John L. Harer"
 year = "2010"
 type = "book"
-description = "Introduction to topological data analysis (TDA): simplicial complexes, persistent homology, and Betti numbers. Connects topology to data science."
+access = "paid"
+level = "advanced"
+url = "https://bookstore.ams.org/mbk-69"
+link_text = "AMS"
+description = "Topology discovered through algorithms (AMS, 2010): graphs, surfaces and complexes; homology, duality and Morse functions; then persistence, its stability, and applications. The reference behind Practice 4 (Ch. VII–VIII on persistence and stability)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "topology-geometry"
@@ -77,6 +102,7 @@ title = "Topology & Geometry"
 authors = "Tadashi Tokieda"
 type = "video-series"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/playlist?list=PLTBqohhFNBE_09L0i-lf3fYXF5woAbrzJ"
 link_text = "Link"
 description = "Charming, intuitive lectures on topology and geometry by an exceptional communicator. Great for building visual intuition."
@@ -88,7 +114,22 @@ title = "Topology and Data"
 authors = "Gunnar Carlsson"
 year = "2009"
 type = "paper"
+access = "free"
 url = "https://doi.org/10.1090/S0273-0979-09-01249-X"
 link_text = "Link"
 description = "Survey paper on topological data analysis (TDA), *Bulletin of the AMS*. Connects persistent homology to practical data analysis. Bridge from theory to applications."
 verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-topological-data-analysis"
+title = "An Introduction to Topological Data Analysis: Fundamental and Practical Aspects for Data Scientists"
+authors = "Frédéric Chazal, Bertrand Michel"
+year = "2021"
+type = "paper"
+access = "free"
+marks = ["core"]
+url = "https://doi.org/10.3389/frai.2021.667963"
+link_text = "Frontiers in AI"
+more_links = [{ text = "arXiv", url = "https://arxiv.org/abs/1710.04019" }]
+description = "Open-access tutorial survey written for non-experts (*Frontiers in Artificial Intelligence* 4, 2021; CC BY 4.0): simplicial complexes, persistent homology and persistence diagrams, the bottleneck distance and the stability theorem, confidence regions for telling topological signal from noise, and a practical introduction to the GUDHI Python library. The approachable core reading for Practice 4."
+verified = 2026-10-21

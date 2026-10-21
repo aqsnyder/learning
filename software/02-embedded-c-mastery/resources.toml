@@ -7,22 +7,28 @@
 [[groups.items]]
 id = "the-c-programming-language-k-r-2nd-ed"
 title = "*The C Programming Language* (K&R, 2nd ed)"
-authors = "Kernighan and Ritchie"
+authors = "Brian W. Kernighan and Dennis M. Ritchie"
 year = "1988"
 type = "book"
 access = "paid"
 level = "beginner"
+url = "https://www.cs.princeton.edu/~bwk/cbook.html"
+link_text = "Kernighan's page"
 description = "The classic: short, precise, still worth reading. It covers ANSI C (C89) only, so pair it with *Modern C* or *Effective C* for C99 through C23"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "expert-c-programming-deep-secrets"
-title = "*Expert C Programming: Deep Secrets*"
+title = "*Expert C Programming*"
 authors = "Peter van der Linden"
 year = "1994"
 type = "book"
 access = "paid"
 level = "intermediate"
-description = "Linking, memory, and advanced C"
+url = "https://www.oreilly.com/library/view/expert-c-programming/0131774298/"
+link_text = "oreilly.com"
+description = "Linking, memory and the dark corners of C, for programmers who already know the language (Prentice Hall, 1994). Ch. 3 \"Unscrambling Declarations in C\", ch. 5 \"Thinking of Linking\" and ch. 6 \"Poetry in Motion: Runtime Data Structures\" serve exercises 1 and 2. Pre-C99: read it for the mental models, not for current syntax."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "making-embedded-systems-2nd-ed"
@@ -33,61 +39,96 @@ type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "Best intro to embedded architecture and design patterns"
+url = "https://www.oreilly.com/library/view/making-embedded-systems/9781098151539/"
+link_text = "oreilly.com"
+description = "Embedded architecture and design patterns from a working engineer (O'Reilly, March 2024). Ch. 4 \"Inputs, Outputs, and Timers\" and ch. 5 \"Interrupts\" back exercises 3 and 4; ch. 2 \"Creating a System Architecture\" frames the mini-project's layering."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "embedded-software-design"
-title = "*Embedded Software Design*"
+title = "*Embedded Software Design: A Practical Approach to Architecture, Processes, and Coding Techniques*"
 authors = "Jacob Beningo"
+year = "2022"
 type = "book"
-description = "Modern firmware architecture and maintainability"
+access = "paid"
+level = "intermediate"
+url = "https://doi.org/10.1007/978-1-4842-8279-3"
+link_text = "Apress"
+description = "Modern firmware architecture, process and coding techniques (Apress, 2022). The chapters \"Interfaces, Contracts, and Assertions\" and \"Comms, Command Processing, and Telemetry Techniques\" map onto the mini-project's HAL and command shell."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "embedded-c-coding-standard"
 title = "*Embedded C Coding Standard*"
 authors = "Barr Group"
 type = "book"
+access = "free"
+level = "beginner"
 url = "https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard"
 link_text = "barrgroup.com"
-description = "Minimizing bugs and improving portability"
+description = "Barr Group's free coding standard (print, PDF and HTML), written to minimize bugs and improve portability. Adopt it as your house style; exercises 2 and 4 and the mini-project check code against it."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "modern-embedded-systems-programming"
-title = "Modern Embedded Systems Programming"
+title = "Modern Embedded Systems Programming Course, lessons #0–#20 (C, startup code, interrupts)"
 authors = "Quantum Leaps (Miro Samek)"
 type = "video-series"
 label = "YouTube"
 access = "free"
+level = "beginner"
 marks = ["core"]
-url = "https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM"
-link_text = "Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)"
-description = "Gold standard for embedded concepts and state machines"
-verified = 2026-10-13
+url = "https://www.youtube.com/watch?v=hnj-7XwTYRI&list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM"
+link_text = "#0 Getting Started"
+more_links = [
+  { text = "#4 blinking an LED", url = "https://www.youtube.com/watch?v=1Kjh0CAgnl4" },
+  { text = "#5 volatile", url = "https://www.youtube.com/watch?v=5MzilJ2-MGY" },
+  { text = "#13 startup code", url = "https://www.youtube.com/watch?v=zFAnW7Tzu4U" },
+  { text = "#16 interrupts", url = "https://www.youtube.com/watch?v=jP1JymlHUtc" },
+  { text = "#18 Cortex-M interrupts", url = "https://www.youtube.com/watch?v=O0Z1D6p7J5A" },
+  { text = "#20 race conditions", url = "https://www.youtube.com/watch?v=3ha72Y8pyD4" },
+  { text = "Lesson index", url = "https://www.state-machine.com/video-course" },
+]
+description = "The first part of Samek's free course, on a real Cortex-M board: C from counting and pointers (#1–#12) through startup code (#13–#15), interrupts (#16–#18) and race conditions (#20). Section 07 continues with the course's RTOS and state-machine lessons."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "embedded-artistry"
-title = "Embedded Artistry"
-type = "blog"
-url = "https://embeddedartistry.com/"
+title = "A General Overview of What Happens Before main()"
+authors = "Phillip Johnston (Embedded Artistry)"
+year = "2019"
+type = "article"
+access = "free"
+url = "https://embeddedartistry.com/blog/2019/04/08/a-general-overview-of-what-happens-before-main/"
 link_text = "embeddedartistry.com"
-description = "Modular, testable firmware architecture articles"
-verified = 2026-10-13
+more_links = [{ text = "Abstraction Layer (field manual)", url = "https://embeddedartistry.com/fieldmanual-terms/abstraction-layer/" }]
+description = "What runs between reset and main(): the entry point, zeroing .bss, global constructors, and the bare-metal, bootloader and OS paths (last updated August 2022). Read it with exercise 1 and Quantum Leaps #13–#15. The site's free field-manual entry on abstraction layers gives the vocabulary for the mini-project's HAL."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "jacob-beningo"
-title = "Jacob Beningo"
-type = "blog"
-url = "https://beningo.com/"
+title = "How to Write Epic Hardware Abstraction Layers (HAL) in C"
+authors = "Jacob Beningo"
+year = "2023"
+type = "article"
+access = "free"
+url = "https://www.beningo.com/how-to-write-epic-hardware-abstraction-layers-hal-in-c/"
 link_text = "beningo.com"
-description = "Firmware architecture best practices"
-verified = 2026-10-13
+description = "A HAL as a struct of function pointers handed to the application, which never touches registers, so the same application builds for the target and runs on a PC against fakes. The pattern for the mini-project's HAL (last updated July 2026)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "fastbit-embedded-brain-academy-udemy"
-title = "FastBit Embedded Brain Academy (Udemy)"
+title = "Embedded Systems Programming on ARM Cortex-M3/M4 Processor (Udemy)"
+authors = "FastBit Embedded Brain Academy (Kiran Nayak)"
+year = "2026"
 type = "course"
-description = "ARM Cortex-M, bare-metal, RTOS"
+access = "paid"
+level = "beginner"
+url = "https://www.udemy.com/course/embedded-system-programming-on-arm-cortex-m3m4/"
+link_text = "udemy.com"
+description = "Optional paid bare-metal course: memory and bus interfaces, the NVIC and exception handling, the stack and AAPCS, and writing a linker script and startup file from scratch. A guided walkthrough for exercise 3 (last updated October 2026)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "modern-c-3rd-ed"
@@ -95,12 +136,14 @@ title = "*Modern C* (3rd ed)"
 authors = "Jens Gustedt"
 year = "2025"
 type = "book"
+access = "free"
 level = "intermediate"
 marks = ["core"]
 url = "https://gustedt.gitlabpages.inria.fr/modern-c/"
-link_text = "gustedt.gitlabpages.inria.fr"
-description = "C as it is written today, updated for C23 (ISO/IEC 9899:2024). The modern counterpart to K&R; the author also offers a free CC-licensed edition"
-verified = 2026-10-13
+link_text = "author's page"
+more_links = [{ text = "Manning", url = "https://www.manning.com/books/modern-c-third-edition" }]
+description = "C as it is written today, updated for C23 (ISO/IEC 9899:2024). The modern counterpart to K&R. The author's page links a free CC BY-NC-ND copy of this edition; Manning sells the print and eBook (2025)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "effective-c-2nd-ed"
@@ -108,19 +151,24 @@ title = "*Effective C* (2nd ed)"
 authors = "Robert C. Seacord"
 year = "2024"
 type = "book"
+access = "paid"
+level = "beginner"
 url = "https://nostarch.com/effective-c-2nd-edition"
 link_text = "nostarch.com"
-description = "Professional, security-minded intro to C23 by the convenor of the C standards committee and author of *The CERT C Coding Standard*"
-verified = 2026-10-13
+description = "\"An Introduction to Professional C Programming\": a security-minded introduction to C23 by the author of *The CERT C Coding Standard* (No Starch, September 2024). The alternative to *Modern C* for catching up from C89."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "misra-c-2025-misra"
-title = "MISRA C:2025 — MISRA"
+title = "MISRA C:2025 — Guidelines for the use of the C language in critical systems"
+authors = "MISRA (The MISRA Consortium Limited)"
+year = "2025"
 type = "standard"
+access = "paid"
 url = "https://misra.org.uk/product/misra-c2025/"
-link_text = "MISRA C:2025"
-description = "The safety-critical C subset most embedded static analyzers check against; supersedes MISRA C:2012 and C:2023. Paid. Even if you never certify, the rules and their rationale sharpen embedded code review"
-verified = 2026-10-13
+link_text = "misra.org.uk"
+description = "The safety-critical C subset most embedded static analyzers check against. It supersedes every earlier edition (1998, 2004, 2012, 2019 and 2023) and is the current version as of October 2026; sold as a single-user, on-screen document. Even if you never certify, the rules and their rationale sharpen embedded code review."
+verified = 2026-10-21
 
 [[groups]]
 title = "Key Concepts"

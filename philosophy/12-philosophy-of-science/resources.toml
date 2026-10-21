@@ -24,13 +24,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "karl-popper"
 title = "Karl Popper"
-authors = "SEP"
+authors = "Stephen Thornton"
+year = "1997 (rev. 2026)"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/popper/"
 link_text = "SEP"
-description = "Stephen Thornton's entry: the problem of demarcation, basic statements, falsifiability and convention, the growth of knowledge, verisimilitude, and a critical evaluation. Read §§3–5 before (or instead of) the book."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry (first published 1997, substantively revised July 2026): the problem of demarcation, basic statements, falsifiability and convention, the growth of knowledge, verisimilitude, and a critical evaluation. Read §§3–5 before (or instead of) the book."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-logic-of-scientific-discovery"
@@ -38,7 +39,12 @@ title = "The Logic of Scientific Discovery"
 authors = "Karl Popper"
 year = "1959"
 type = "book"
-description = "Popper's own translation of *Logik der Forschung* (1935); Routledge Classics reprint 2002. Falsifiability as the criterion of demarcation, the asymmetry between verification and falsification, and the problem of the empirical basis. The opening chapters on demarcation and falsifiability are enough."
+access = "paid"
+level = "advanced"
+url = "https://doi.org/10.4324/9780203994627"
+link_text = "Routledge"
+description = "Popper's own translation of *Logik der Forschung* (1935), first published in English in 1959; the link is Routledge's current edition (reprinted 2002; ebook 2005). Falsifiability as the criterion of demarcation, the asymmetry between verification and falsification, and the problem of the empirical basis. The opening chapters on demarcation and falsifiability are enough."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-structure-of-scientific-revolutions"
@@ -46,6 +52,8 @@ title = "The Structure of Scientific Revolutions (50th Anniversary Edition)"
 authors = "Thomas S. Kuhn"
 year = "1962 (4th ed. 2012)"
 type = "book"
+access = "paid"
+level = "intermediate"
 url = "https://press.uchicago.edu/ucp/books/book/chicago/S/bo13179781.html"
 link_text = "Link"
 description = "Normal science as puzzle-solving within a paradigm; anomaly, crisis and revolution; incommensurability. The 50th-anniversary edition opens with an introductory essay by Ian Hacking — read that first. Kuhn's puzzle-solving test is one of the demarcation criteria in the Practice."
@@ -57,6 +65,7 @@ title = "Falsification and the Methodology of Scientific Research Programmes"
 authors = "Imre Lakatos"
 year = "1970"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1017/CBO9781139171434.009"
 link_text = "Link"
 description = "In Lakatos & Musgrave (eds.), *Criticism and the Growth of Knowledge* (Cambridge UP), pp. 91–196. Lakatos's synthesis of Popper and Kuhn: what gets judged is a research programme — a hard core protected by a belt of auxiliary hypotheses — which is progressive if its changes predict novel facts and degenerating if they only accommodate. The most usable tool here for IIT vs. GNWT or for Wolfram's project."
@@ -65,36 +74,39 @@ verified = 2026-10-13
 [[groups.items]]
 id = "science-and-pseudo-science"
 title = "Science and Pseudo-Science"
-authors = "SEP"
+authors = "Sven Ove Hansson"
+year = "2008 (rev. 2025)"
 type = "encyclopedia"
 access = "free"
 marks = ["core"]
 url = "https://plato.stanford.edu/entries/pseudo-science/"
 link_text = "SEP"
-description = "Sven Ove Hansson's entry on the demarcation problem: the logical positivists, Popper's falsificationism, Kuhn's puzzle-solving criterion, progress-based criteria (Lakatos, Thagard), multicriterial approaches, science denialism, and Hansson's own definition of pseudoscience. The checklist for the demarcation casebook."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry on the demarcation problem (first published 2008, substantively revised July 2025): the logical positivists, Popper's falsificationism, Kuhn's puzzle-solving criterion, progress-based criteria (Lakatos, Thagard), multicriterial approaches, science denialism, and Hansson's own definition of pseudoscience. The checklist for the demarcation casebook."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bayesian-epistemology"
 title = "Bayesian Epistemology"
-authors = "SEP"
+authors = "Hanti Lin"
+year = "2022"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/epistemology-bayesian/"
 link_text = "SEP"
-description = "Hanti Lin's entry: the two core norms (probabilism and conditionalization), Dutch book arguments, the problem of the priors, old evidence, and idealization. Its opening tutorial (§1) is the fastest route into the Bayesian framework, with confirmation among its applications (§1.3)."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry (first published June 2022): the two core norms (probabilism and conditionalization), Dutch book arguments, the problem of the priors, old evidence, and idealization. Its opening tutorial (§1) is the fastest route into the Bayesian framework, with confirmation among its applications (§1.3)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "philosophy-of-statistics"
 title = "Philosophy of Statistics"
-authors = "SEP"
+authors = "Jan-Willem Romeijn"
+year = "2014 (rev. 2025)"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/statistics/"
 link_text = "SEP"
-description = "Jan-Willem Romeijn's entry: classical (Fisher, Neyman–Pearson) vs. Bayesian statistics, the problems each faces — optional stopping, the choice of prior — error statistics and severe testing, and model comparison (AIC, Bayesian model evaluation). The map of the \"statistics wars\"."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry (first published 2014, substantively revised October 2025): classical (Fisher, Neyman–Pearson) vs. Bayesian statistics, the problems each faces — optional stopping (§3.2.3), the choice of prior — error statistics and severe testing (§3.3), and model comparison (AIC, Bayesian model evaluation). The map of the \"statistics wars\"."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "statistical-inference-as-severe-testing"
@@ -102,6 +114,8 @@ title = "Statistical Inference as Severe Testing: How to Get Beyond the Statisti
 authors = "Deborah G. Mayo"
 year = "2018"
 type = "book"
+access = "paid"
+level = "advanced"
 url = "https://doi.org/10.1017/9781107286184"
 link_text = "Link"
 description = "The case for error statistics: data are good evidence for a claim only if the claim has passed a test that would probably have caught it were it false. Excursion 2 (\"Taboos of Induction and Falsification\") revisits Popper and pseudoscience; Excursion 4 audits biasing selection effects. The strongest non-Bayesian voice here — read it against the SEP Bayesian entry."
@@ -113,10 +127,11 @@ title = "Why Most Published Research Findings Are False"
 authors = "John P. A. Ioannidis"
 year = "2005"
 type = "paper"
+access = "free"
 url = "https://doi.org/10.1371/journal.pmed.0020124"
 link_text = "Link"
-description = "*PLOS Medicine* essay that models the probability that a \"significant\" finding is true (its PPV) from pre-study odds, power and α, with corollaries on small studies, small effects, flexible designs and analyses, financial interests, and hot fields. A model of conditions, not a measurement — the corollaries say when the title holds."
-verified = 2026-10-13
+description = "*PLoS Medicine* 2(8): e124 (open access). An essay that models the probability that a \"significant\" finding is true (its PPV) from pre-study odds, power and α, with corollaries on small studies, small effects, flexible designs and analyses, financial interests, and hot fields. A model of conditions, not a measurement — the corollaries say when the title holds. Also used in bio/12."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "estimating-the-reproducibility-of"
@@ -158,7 +173,9 @@ id = "philosophy-and-the-sciences-introduction"
 title = "Philosophy and the Sciences: Introduction to the Philosophy of Physical Sciences"
 authors = "University of Edinburgh (Michela Massimi et al.)"
 type = "course"
+access = "partial"
+level = "beginner"
 url = "https://www.coursera.org/learn/philosophy-physical-sciences"
 link_text = "Coursera"
-description = "Companion to the Edinburgh cognitive-sciences course in Section 01: \"What is this thing called science?\" (Massimi and Duncan Pritchard), then the origins of the universe, dark matter and dark energy, and the anthropic principle and multiverse cosmology — philosophy of science applied to live physics. About 12 hours."
+description = "Companion to the Edinburgh cognitive-sciences course in Section 01: \"What is this thing called science?\" (Massimi and Duncan Pritchard), then the origins of the universe, dark matter and dark energy, and the anthropic principle and multiverse cosmology — philosophy of science applied to live physics. About 12 hours. Free to enroll; the certificate is paid (checked October 2026)."
 verified = 2026-10-13

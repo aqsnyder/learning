@@ -7,23 +7,29 @@
 [[groups.items]]
 id = "how-to-prove-it-a-structured-approach"
 title = "How to Prove It: A Structured Approach"
-authors = "Daniel Velleman"
+authors = "Daniel J. Velleman"
 year = "2019"
 type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "The definitive guide to learning mathematical proof. Covers logic, sets, relations, functions, and proof techniques (direct, contradiction, induction). Work through this cover-to-cover."
+url = "https://www.cambridge.org/highereducation/books/how-to-prove-it/6D2965D625C6836CD4A785A2C843B3DA"
+link_text = "Cambridge UP"
+description = "Velleman's step-by-step course in reading and writing proofs, 3rd edition (Cambridge University Press, 2019): sentential and quantificational logic, proof strategies, relations, functions, induction, number theory and infinite sets. The section's core text; Practice 1–4 cite its chapters, so work its exercises rather than just reading."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "how-to-solve-it"
-title = "How to Solve It"
+title = "How to Solve It: A New Aspect of Mathematical Method"
 authors = "George Pólya"
 year = "1945"
 type = "book"
 access = "paid"
 level = "beginner"
-description = "The classic guide to mathematical problem-solving heuristics. Pólya's four-step method (understand, plan, execute, review) applies far beyond mathematics."
+url = "https://press.princeton.edu/books/paperback/9780691164076/how-to-solve-it"
+link_text = "Princeton UP"
+description = "Pólya's classic on problem-solving heuristics, built around four phases (understand the problem, devise a plan, carry it out, look back) and the questions to ask in each when you are stuck. © 1945; the link is the Princeton Science Library paperback (2014) with a foreword by John H. Conway."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "book-of-proof"
@@ -45,18 +51,22 @@ title = "An Introduction to Mathematical Reasoning"
 authors = "Peter Eccles"
 year = "1997"
 type = "book"
+access = "paid"
+level = "beginner"
 description = "Bridges the gap between computational math and proof-based math. Good for building confidence before tackling Velleman."
 
 [[groups.items]]
 id = "introduction-to-mathematical-thinking"
 title = "Introduction to Mathematical Thinking"
 authors = "Keith Devlin"
+year = "undated (checked Oct 2026)"
 type = "course"
-access = "free"
+access = "partial"
+level = "beginner"
 url = "https://www.coursera.org/learn/mathematical-thinking"
-link_text = "Link"
-description = "Stanford professor's Coursera course focused on the transition from school math to university math. Emphasizes thinking over calculating."
-verified = 2026-10-13
+link_text = "Coursera"
+description = "Keith Devlin's Coursera course, offered by Stanford Online: nine modules on logical statements, implication, quantifiers and proofs, short units on number theory and real analysis, and a final module on evaluating other people's proofs. A gentle bridge from school mathematics to proof. Enrolling is free, but as of October 2026 Coursera's FAQ says graded work may need the paid certificate."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "discrete-mathematics-with-applications"
@@ -64,6 +74,8 @@ title = "Discrete Mathematics with Applications"
 authors = "Susanna Epp"
 year = "2019"
 type = "book"
+access = "paid"
+level = "beginner"
 description = "Comprehensive coverage of logic, proof, sets, combinatorics, and graph theory. Excellent problem sets for building proof fluency."
 
 [[groups.items]]
@@ -72,6 +84,7 @@ title = "Discrete Math (Full Course)"
 authors = "Trefor Bazett"
 type = "video-series"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS"
 link_text = "Link"
 description = "Clear, well-paced video lectures covering logic, proofs, sets, relations, and combinatorics. Good visual supplement."
@@ -79,11 +92,16 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "naive-set-theory"
-title = "Naïve Set Theory"
-authors = "Paul Halmos"
-year = "1960"
+title = "Naive Set Theory"
+authors = "Paul R. Halmos"
+year = "1974"
 type = "book"
-description = "A slim, elegant introduction to set theory that builds mathematical maturity. Teaches you to read and write mathematics precisely."
+access = "paid"
+level = "intermediate"
+url = "https://link.springer.com/book/10.1007/978-1-4757-1645-0"
+link_text = "Springer"
+description = "A slim, terse introduction to set theory that trains you to read and write mathematics precisely; optional depth for Practice 4 (functions, the Schröder–Bernstein theorem, countable sets). The link is Springer's Undergraduate Texts in Mathematics edition (1974)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "natural-number-game-lean-4"
@@ -92,6 +110,7 @@ authors = "Kevin Buzzard, Jon Eugster"
 year = "2023"
 type = "course"
 access = "free"
+level = "beginner"
 url = "https://adam.math.hhu.de/#/g/leanprover-community/nng4"
 link_text = "Link"
 description = "Browser-based puzzle game that builds addition, multiplication, and ≤ on the natural numbers from the axioms, one machine-checked proof at a time. The quickest way to try a proof assistant — instant feedback on whether your proof is actually correct."
@@ -104,6 +123,7 @@ authors = "Heather Macbeth"
 year = "2024"
 type = "book"
 access = "free"
+level = "beginner"
 url = "https://hrmacbeth.github.io/math2001/"
 link_text = "Link"
 description = "An intro-to-proof textbook (Fordham Math 2001) written alongside Lean 4 code, so every exercise can be checked by the computer. Gentler than *Mathematics in Lean*; a good companion or alternative to Velleman for an engineer who likes tight feedback loops."
@@ -112,14 +132,15 @@ verified = 2026-10-13
 [[groups.items]]
 id = "mit-6-042j-mathematics-for-computer"
 title = "MIT 6.042J Mathematics for Computer Science"
-authors = "Albert Meyer, Adam Chlipala (text: Lehman, Leighton & Meyer)"
+authors = "Albert R. Meyer, Adam Chlipala (text: Eric Lehman, F. Thomson Leighton, Albert R. Meyer)"
 year = "2015"
 type = "course"
 access = "free"
+level = "beginner"
 url = "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/"
-link_text = "Link"
-description = "MIT's discrete-math course for engineers, with lecture videos, problem sets, and a free open textbook: proofs and induction, number theory (modular arithmetic, RSA), graphs, counting, and discrete probability. A free, engineering-flavored alternative to Epp that also sets up the btc curriculum's cryptography."
-verified = 2026-10-13
+link_text = "MIT OCW"
+description = "MIT's discrete-math course for engineers (Spring 2015), with lecture videos, problem sets, exams and a free open textbook: proofs and induction, the well-ordering principle and state machines, number theory (modular arithmetic, RSA), graphs, counting, and discrete probability. A free, engineering-flavored alternative to Epp; the mini-project uses the textbook's Ch. 2 and §5.4, and its counting chapters are a core resource in Section 06."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "how-to-prove-it-with-lean"
@@ -128,6 +149,7 @@ authors = "Daniel J. Velleman"
 year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 url = "https://djvelleman.github.io/HTPIwL/"
 link_text = "Link"
 description = "Velleman's own free online companion to the 3rd edition of *How to Prove It* (CC BY-SA 4.0, with a PDF download; © 2023–2025). It follows the book's chapters — logic, proofs, relations, functions, induction, number theory, infinite sets — with the proofs written in Lean 4 (a customized setup the book explains), so the computer checks every step. Use it alongside the book once the Natural Number Game has given you a first taste of Lean."

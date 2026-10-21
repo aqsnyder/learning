@@ -72,7 +72,9 @@ title = "Information Rules"
 authors = "Carl Shapiro & Hal Varian"
 year = "1998"
 type = "book"
-description = "How information economics applies to technology strategy — network effects, lock-in, versioning, bundling."
+access = "paid"
+level = "beginner"
+description = "How information economics applies to technology strategy — network effects, lock-in, versioning, bundling. Its versioning chapter backs Practice 3 here; Section 07 uses its chapters on lock-in, switching costs and standards wars."
 
 [[groups.items]]
 id = "writing-the-the-market-for-lemons-a"

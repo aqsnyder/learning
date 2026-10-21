@@ -7,9 +7,9 @@
 | Priority | Name | Link | Notes |
 |----------|------|------|-------|
 | 🔑 | Nine Dot Connects | [ninedotconnects.com](https://www.ninedotconnects.com/) | Professional PCB design education |
-| 🔑 | Altium Resources / Blog | [resources.altium.com](https://resources.altium.com/) | Technical articles and design guides |
+| 🔑 | Altium Learning Hub | [resources.altium.com](https://resources.altium.com/) | Technical articles, videos and design guides from the EDA vendor Altium (Zach Peterson's articles are here) |
 | | Sierra Circuits Blog | [protoexpress.com/blog](https://www.protoexpress.com/blog/) | Manufacturing perspective on design |
-| | FEDEVEL Academy | [fedevel.com](https://www.fedevel.com/) | Robert Feranec's educational platform |
+| | FEDEVEL Platform | [courses.fedevel.com](https://courses.fedevel.com/) | Robert Feranec's platform: hardware-design courses (schematic and PCB, EMC, SI/PI), a knowledge base and a forum; courses and membership are paid, many of his videos are free on YouTube |
 | | Zach Peterson articles (Altium) | — | Signal integrity deep dives |
 | 🔑 | LearnEMC (Todd Hubing) | [learnemc.com](https://learnemc.com/) | Free structured EMC tutorials and a weekly EMC question |
 | | Analog Devices technical books and MT tutorials | [analog.com](https://www.analog.com/en/resources/technical-books/op-amp-applications-handbook.html) | Free handbooks and tutorials (Op Amp Applications Handbook, MT-031 grounding, MT-101 decoupling) for analog and mixed-signal design |
@@ -20,9 +20,9 @@
 
 | Priority | Tool | Link | Notes |
 |----------|------|------|-------|
-| 🔑 | KiCad | [kicad.org](https://www.kicad.org/) | Free, open-source, industry-standard EDA |
-| | Your KiCad Template | [github.com/aqsnyder/KiCAD_Template_Snyder](https://github.com/aqsnyder/KiCAD_Template_Snyder) | Personal KiCad project template (private repo: the link works only when signed in to GitHub as its owner) |
-| | Saturn PCB Toolkit | [saturnpcb.com](https://saturnpcb.com/saturn-pcb-toolkit/) | Essential calculators (conductor current per IPC-2152) |
+| 🔑 | KiCad | [kicad.org](https://www.kicad.org/) | Free, open-source PCB design suite; 10.0.7 is the current release (as of October 2026) |
+| | KiCad project templates | [docs.kicad.org](https://docs.kicad.org/10.0/en/kicad/kicad.html#project-templates) | How to build your own project template (Section 02) |
+| | Saturn PCB Toolkit | [saturnpcb.com](https://saturnpcb.com/saturn-pcb-toolkit/) | Free Windows calculators: conductor current per IPC-2152 (Section 05), impedance (Section 08) |
 | | UltraCAD Calculators | [ultracad.com/calc.htm](https://www.ultracad.com/calc.htm) | Impedance and trace calculators |
 | | Open Source Thermal Sim | [jrainimo.com](https://jrainimo.com/build/2024/11/oss-thermal-simulation-of-pcbs/) | OSS thermal simulation of PCBs |
 | | LTspice | [analog.com](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html) | Free SPICE simulator |
@@ -59,7 +59,7 @@
 
 | Standard | Notes |
 |----------|-------|
-| IPC standards (2221, 7351, 2581) | Industry design and manufacturing standards. IPC-2221 is now at Rev C (2023); this curriculum cites Rev A (2003) section numbers |
+| IPC standards (2221, 7351, 2581) | Industry design and manufacturing standards. IPC-2221 is at Rev C (2023) as of October 2026; this curriculum cites Rev A (2003) section numbers |
 | IPC-2152 (2009) | Current-carrying capacity; replaces the old IPC-2221 conductor-sizing charts |
 | Gerber Layer Format Specification ([Ucamco](https://www.ucamco.com/en/gerber)) | The official Gerber spec (rev. 2024.05); use X2 attributes |
 | IEC 61326-1 (2020) / [IEC 61010-1](https://webstore.iec.ch/en/publication/4279) (2010 + Amd 1, 2016) | EMC and safety standards for measurement, control and laboratory equipment |

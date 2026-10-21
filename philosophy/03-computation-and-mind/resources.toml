@@ -10,13 +10,16 @@ outro = '''
 [[groups.items]]
 id = "godel-escher-bach-an-eternal-golden"
 title = "Gödel, Escher, Bach: An Eternal Golden Braid"
-authors = "Douglas Hofstadter"
+authors = "Douglas R. Hofstadter"
 year = "1979"
 type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["masterwork"]
-description = "Pulitzer Prize-winning exploration of how self-reference and formal systems give rise to meaning, mind, and consciousness. Dense but endlessly rewarding. The single most important book in this curriculum."
+url = "https://www.hachettebookgroup.com/titles/douglas-r-hofstadter/godel-escher-bach/9780465026562/?lens=basic-books"
+link_text = "Basic Books"
+description = "Pulitzer Prize-winning exploration of how self-reference and formal systems give rise to meaning, mind and consciousness, through the MIU puzzle, Gödel numbering and the \"strange loop\". Dense but rewarding, and the book this curriculum is built around; Practices 1, 2 and 5 and the mini-project draw on it. The link is Basic Books' 824-page trade paperback (1999)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "minds-brains-and-programs"
@@ -27,7 +30,8 @@ type = "paper"
 marks = ["core"]
 url = "https://doi.org/10.1017/S0140525X00005756"
 link_text = "Link"
-description = "The Chinese Room argument: a computer manipulating symbols according to rules doesn't understand Chinese, so computation alone can't produce understanding. One of the most debated thought experiments in philosophy."
+description = "*Behavioral and Brain Sciences* 3: 417–457, with open peer commentary. The Chinese Room argument: a computer manipulating symbols according to rules doesn't understand Chinese, so running a program can't by itself produce understanding; includes Searle's answers to the systems and robot replies. One of the most debated thought experiments in philosophy, and the home entry for [Section 05](../05-philosophy-of-ai/README.md), which uses it too."
+access = "paid"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -76,12 +80,15 @@ description = "Argues (controversially) that consciousness requires non-computab
 [[groups.items]]
 id = "i-am-a-strange-loop"
 title = "I Am a Strange Loop"
-authors = "Douglas Hofstadter"
+authors = "Douglas R. Hofstadter"
 year = "2007"
 type = "book"
 access = "paid"
 level = "intermediate"
-description = "Hofstadter's more focused sequel to GEB. Argues that consciousness arises from self-referential \"strange loops\" in the brain."
+url = "https://www.hachettebookgroup.com/titles/douglas-r-hofstadter/i-am-a-strange-loop/9780465030798/?lens=basic-books"
+link_text = "Basic Books"
+description = "Hofstadter's more focused sequel to GEB. Argues that the self — the \"I\" — is a self-referential \"strange loop\" in the brain's patterns of symbols. Used in the mini-project's section on the strange-loop alternative. The link is the Basic Books trade paperback (2008)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-computational-theory-of-mind"
@@ -120,13 +127,16 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "the-mind-s-i-fantasies-and-reflections"
-title = "The Mind's I: Fantasies and Reflections on Self & Soul"
-authors = "Hofstadter & Dennett (eds.)"
+title = "The Mind's I: Fantasies and Reflections on Self and Soul"
+authors = "Douglas R. Hofstadter, Daniel C. Dennett (eds.)"
 year = "1981"
 type = "book"
 access = "paid"
 level = "beginner"
-description = "Anthology of thought experiments and stories about minds, consciousness, and identity. Accessible entry point to many of the themes in this section."
+url = "https://www.hachettebookgroup.com/titles/douglas-r-hofstadter/the-minds-i/9780465030910/?lens=basic-books"
+link_text = "Basic Books"
+description = "Anthology of thought experiments and stories about minds, consciousness and identity, each followed by the editors' reflections — including Hofstadter's reflection on Searle's Chinese Room, which Practice 3 asks you to classify. An accessible entry point to many of this section's themes. The link is the Basic Books trade paperback (2001)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "a-new-kind-of-science-ch-12-the"
@@ -160,5 +170,6 @@ type = "website"
 label = "Project"
 url = "https://writings.stephenwolfram.com/2021/11/the-concept-of-the-ruliad/"
 link_text = "Link"
+access = "free"
 description = "Wolfram's essay defining the \"ruliad\" — the entangled limit of all possible computations — and arguing that bounded observers embedded in it perceive coherent physical laws. **A speculative research program, not established physics:** the Physics Project (2020–) has no experimentally confirmed predictions and is not accepted by mainstream physics (Wolfram himself writes that \"we're still only at the very beginning of nailing down those technical details\"), and the step from \"physics is computation\" to claims about mind is philosophical speculation. Optional; read as a provocation about computationalism."
 verified = 2026-10-13

@@ -86,7 +86,7 @@ Source: [dzyim/ilya-sutskever-recommended-reading](https://github.com/dzyim/ilya
 | 21 | Neural Turing Machines (Graves et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
 | 22 | Deep Speech 2: End-to-End Speech Recognition in English and Mandarin (Amodei et al.) | [05 — RNNs](05-rnns-sequences-and-memory/) |
 | 23 | Scaling Laws for Neural Language Models (Kaplan et al.) | [08 — Scaling](08-scaling-and-training/) |
-| 24 | A Tutorial Introduction to the Minimum Description Length Principle (Grünwald) | [01 — Math](01-math-foundations/) / [03 — NN Fundamentals](03-neural-network-fundamentals/) |
+| 24 | A Tutorial Introduction to the Minimum Description Length Principle (Grünwald) | [01 — Math Foundations](01-math-foundations/) (cross-linked from [03](03-neural-network-fundamentals/)) |
 | 25 | Machine Super Intelligence (Legg, PhD thesis) | [01 — Math Foundations](01-math-foundations/) |
 | 26 | Kolmogorov Complexity and Algorithmic Randomness (Shen, Uspensky & Vereshchagin) | [01 — Math Foundations](01-math-foundations/) |
 | 27 | Stanford CS231n: Convolutional Neural Networks for Visual Recognition | [04 — CNNs](04-cnns-and-computer-vision/) |

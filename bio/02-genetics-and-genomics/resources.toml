@@ -125,6 +125,17 @@ description = "The current standard primer on how a GWAS is designed, run and mi
 verified = 2026-10-13
 
 [[groups.items]]
+id = "gwas-catalog"
+title = "GWAS Catalog"
+authors = "NHGRI-EBI"
+type = "database"
+access = "free"
+url = "https://www.ebi.ac.uk/gwas/"
+link_text = "GWAS Catalog"
+description = "The NHGRI-EBI curated catalogue of published human genome-wide association studies, run at EMBL-EBI — where Practice 4 picks the association it follows down to a gene"
+verified = 2026-10-21
+
+[[groups.items]]
 id = "an-integrated-map-of-genetic-variation"
 title = "An Integrated Map of Genetic Variation from 1,092 Human Genomes"
 authors = "The 1000 Genomes Project Consortium"
@@ -147,6 +158,19 @@ url = "https://doi.org/10.1038/nrg.2016.49"
 link_text = "Nat. Rev. Genet."
 description = "How the instruments actually work — Illumina short reads versus PacBio and Nanopore long reads — and why each platform's error profile decides what downstream analysis is even possible"
 verified = 2026-10-13
+
+[[groups.items]]
+id = "dna-sequencing-costs-data"
+title = "DNA Sequencing Costs: Data"
+authors = "National Human Genome Research Institute"
+year = "2023"
+type = "website"
+label = "Data"
+access = "free"
+url = "https://www.genome.gov/about-genomics/fact-sheets/DNA-Sequencing-Costs-Data"
+link_text = "NHGRI"
+description = "NHGRI's cost-per-megabase and cost-per-genome graphs, each drawn against a hypothetical Moore's-law line, with the underlying table downloadable as an Excel file — the data for Practice 6. Last updated 16 May 2023 and its table file is labelled 2022, so take today's price from a dated current source"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-complete-sequence-of-a-human-genome"

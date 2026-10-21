@@ -27,7 +27,8 @@ type = "paper"
 marks = ["core"]
 url = "https://doi.org/10.1093/analys/58.1.7"
 link_text = "Link"
-description = "Argues that cognitive processes extend beyond the brain into the environment (notebooks, phones, tools). If true, the boundary between mind and world is permeable."
+description = "*Analysis* 58(1): 7–19. Argues that cognitive processes extend beyond the brain into the environment: by the parity principle, Otto's notebook plays the role Inga's memory plays, so it is part of his mind. If true, the boundary between mind and world is permeable. The source for Practice 2 and the mini-project."
+access = "paid"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -87,7 +88,12 @@ title = "Supersizing the Mind: Embodiment, Action, and Cognitive Extension"
 authors = "Andy Clark"
 year = "2008"
 type = "book"
-description = "Clark's full development of the extended mind thesis. Argues that our minds are not brain-bound but extend into our tools and environment."
+access = "paid"
+level = "advanced"
+url = "https://academic.oup.com/book/6746"
+link_text = "OUP"
+description = "Clark's full development of the extended mind thesis (with a foreword by David Chalmers): our minds are not brain-bound but extend into our tools and environment, defended against the main objections, including the coupling–constitution charge that Practice 2 asks you to answer."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "whatever-next-predictive-brains-situated"
@@ -97,7 +103,8 @@ year = "2013"
 type = "paper"
 url = "https://doi.org/10.1017/S0140525X12000477"
 link_text = "Link"
-description = "The landmark statement of predictive processing: brains as hierarchical prediction machines that minimize prediction error, tied to action and embodiment. One of the most influential unifying frameworks in cognitive science — and an obvious point of comparison with next-token-predicting language models."
+description = "*Behavioral and Brain Sciences* target article, with commentaries. The landmark statement of predictive processing: brains as hierarchical prediction machines that minimize precision-weighted prediction error, tied to action and embodiment. One of the most influential unifying frameworks in cognitive science — and an obvious point of comparison with next-token-predicting language models (Practice 5)."
+access = "paid"
 verified = 2026-10-13
 
 [[groups.items]]

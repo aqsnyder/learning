@@ -35,11 +35,14 @@ verified = 2026-10-13
 id = "the-undercover-economist"
 title = "The Undercover Economist"
 authors = "Tim Harford"
-year = "2005"
+year = "2005 (new ed. 2011)"
 type = "book"
 access = "paid"
 level = "beginner"
-description = "Accessible popular introduction to economic reasoning in everyday life. Great for building intuition before tackling formal models."
+url = "https://timharford.com/books/undercovereconomist/"
+link_text = "Author's page"
+description = "Accessible popular introduction to economic reasoning in everyday life. Great for building intuition before tackling formal models; Practice 2 uses its chapters on scarcity power and margins. The 2011 new edition adds a chapter on the financial crisis."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "khan-academy-microeconomics"
@@ -72,9 +75,14 @@ verified = 2026-10-21
 id = "economics-in-one-lesson"
 title = "Economics in One Lesson"
 authors = "Henry Hazlitt"
-year = "1946"
+year = "1946 (FEE printing 1952)"
 type = "book"
-description = "Classic short book on the seen and unseen effects of economic policies. Trains you to think about second-order consequences."
+access = "free"
+level = "beginner"
+url = "https://fee.org/resources/economics-in-one-lesson/"
+link_text = "FEE (free)"
+description = "Classic short book on the seen and unseen effects of economic policies, free to read at the Foundation for Economic Education (the text of the original 1946 Harper & Brothers edition, from FEE's 1952 printing). Trains you to think about second-order consequences; Practice 3 uses its broken-window and tariff chapters. One economist's argument, not a balanced survey: Practice 3 asks you to steelman the cases it handles badly."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "i-pencil"

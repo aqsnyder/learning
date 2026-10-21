@@ -29,11 +29,11 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📕 Book (free) | The Feynman Lectures on Physics, Vol. 1 | Feynman, Leighton, Sands | — | [feynmanlectures.caltech.edu](https://www.feynmanlectures.caltech.edu/) | — |
-| 🔑 | 📕 Book | Classical Mechanics | John R. Taylor | — | — | — |
-| 🔑 | 🎓 Course (free) | MIT 8.01SC Classical Mechanics (Fall 2016) | Chakrabarty, Dourmashkin et al. | — | [MIT OCW](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | — |
+| 🔑 | 📕 Book (free) | The Feynman Lectures on Physics, Volume I | Feynman, Leighton & Sands | 2013 | [Caltech (Vol. I contents)](https://www.feynmanlectures.caltech.edu/I_toc.html) | Caltech's free online New Millennium Edition of the first volume, "mainly mechanics, radiation, and heat". This section reads the mechanics chapters, Ch. 1–14 and 18–25; Ch. 21–25 (from the harmonic oscillator to linear systems) map directly onto circuits. Sections 01 and 02 use its optics, waves and thermodynamics chapters. |
+| 🔑 | 📕 Book | Classical Mechanics | John R. Taylor | 2005 | — | The primary textbook for this section (University Science Books): Newtonian mechanics with air resistance, oscillations, the calculus of variations, Lagrangian and Hamiltonian mechanics, with graded problems. Exercises 1–5 cite its chapters. |
+| 🔑 | 🎓 Course (free) | MIT 8.01SC Classical Mechanics (Fall 2016) | Deepto Chakrabarty, Peter Dourmashkin, Michelle Tomasik, Anna Frebel & Vladan Vuletic | 2016 | [MIT OCW](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/) | MIT's first physics course on OpenCourseWare, with lecture videos and problem sets: space, time, mass, force, momentum, torque and angular momentum, built up toward planetary motion. Watch it beside Feynman for problem-solving technique; exercise 4 uses its oscillator material. |
 | | 🎓 Course (free) | Classical Mechanics (The Theoretical Minimum) | Leonard Susskind | — | [YouTube](https://www.youtube.com/playlist?list=PL47F408D36D4CF129) | — |
-| | 📕 Book | Introduction to Classical Mechanics | David Morin | — | — | — |
+| | 📕 Book | Introduction to Classical Mechanics: With Problems and Solutions | David Morin | 2008 | [Cambridge](https://doi.org/10.1017/CBO9780511808951) | A problem-centred text with full solutions, harder than Taylor and strong on dimensional analysis, limiting cases and checking answers. Its first chapter is the source for exercise 1's scaling arguments; use the rest to stretch Taylor's problems. |
 | | 🎥 Video (free) | Essence of Calculus — 3Blue1Brown | — | — | [YouTube](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) | — |
 | | 📕 Book | Mechanics | Landau & Lifshitz | — | — | — |
 | | 📕 Book | Classical Mechanics | Herbert Goldstein | — | — | — |

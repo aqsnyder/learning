@@ -3,6 +3,9 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** *Data-Driven Science and Engineering*, Brunton & Kutz ([Section 09](../09-fluid-dynamics-and-continuum/README.md)) for SINDy and sparse identification of dynamics in Practice 3.
+'''
 
 [[groups.items]]
 id = "neural-ordinary-differential-equations"
@@ -101,15 +104,6 @@ type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2102.09844"
 link_text = "arXiv"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "data-driven-science-and-engineering"
-title = "Data-Driven Science and Engineering"
-authors = "Brunton & Kutz"
-type = "book"
-url = "https://databookuw.com/"
-link_text = "databookuw.com"
 verified = 2026-10-13
 
 [[groups.items]]

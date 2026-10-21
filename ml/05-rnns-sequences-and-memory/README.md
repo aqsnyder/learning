@@ -25,7 +25,7 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📄 Paper | Long Short-Term Memory | Hochreiter, Schmidhuber | 1997 | [Paper](https://www.bioinf.jku.at/publications/older/2604.pdf) | The original LSTM paper. Introduced gated memory cells to solve the vanishing gradient problem, enabling learning over long time dependencies. |
+| 🔑 | 📄 Paper (free) | Long Short-Term Memory | Hochreiter, Schmidhuber | 1997 | [Paper](https://www.bioinf.jku.at/publications/older/2604.pdf) | The original LSTM paper. Introduced gated memory cells to solve the vanishing gradient problem, enabling learning over long time dependencies. |
 | 🔑⭐ | 📰 Blog (free) | The Unreasonable Effectiveness of Recurrent Neural Networks | Karpathy | 2015 | [Blog](https://karpathy.github.io/2015/05/21/rnn-effectiveness/) · [Code](https://github.com/karpathy/char-rnn) | Legendary blog post showing char-level RNNs generating Shakespeare, Wikipedia, LaTeX, and C code. The best intuition-builder for what RNNs can learn. |
 | 🔑⭐ | 📰 Blog (free) | Understanding LSTM Networks | Olah | 2015 | [Blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) | The clearest visual explanation of LSTM internals. Walks through forget, input, and output gates with excellent diagrams. Read this before or alongside the original paper. |
 | ⭐ | 📄 Paper (free) | Recurrent Neural Network Regularization | Zaremba, Sutskever, Vinyals | 2014 | [Paper](https://arxiv.org/abs/1409.2329) | Showed how to correctly apply dropout to RNNs (only on non-recurrent connections). Essential for training RNNs that generalize. |

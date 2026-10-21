@@ -39,7 +39,7 @@ The core arc: **early circuits** → **superposition** → **monosemanticity** �
 | | 📄 Paper (free) | On the Biology of a Large Language Model | Lindsey et al. | 2025 | [transformer-circuits.pub](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) | Applies attribution graphs to Claude 3.5 Haiku: multi-step reasoning, planning rhymes in poems, multilingual circuits, arithmetic, hallucinations and refusals. Case studies of the method. |
 | | 📄 Paper (free) | Verbalizable Representations Form a Global Workspace in Language Models | Gurnee, Sofroniew et al. | 2026 | [transformer-circuits.pub](https://transformer-circuits.pub/2026/workspace/index.html) | Introduces the J-lens, an averaged-Jacobian refinement of the logit lens, and argues the subspace it reads (J-space) acts as a global workspace in Claude models. |
 | | 📄 Paper (free) | Softmax Linear Units | Elhage et al. | 2022 | [transformer-circuits.pub](https://transformer-circuits.pub/2022/solu/) | Replaces the MLP activation with SoLU, x·softmax(x), raising the share of interpretable neurons at little performance cost. Shows architecture can aid interpretability. |
-| | 📄 Paper (free) | Representation Engineering | Zou et al. | 2023 | [arxiv.org/abs/2310.01405](https://arxiv.org/abs/2310.01405) | Monitors and steers population-level representations (honesty, harmlessness, power-seeking) instead of neurons or circuits. A top-down complement to circuit analysis. |
+| | 📄 Paper (free) | Representation Engineering: A Top-Down Approach to AI Transparency | Zou et al. | 2023 | [arxiv.org/abs/2310.01405](https://arxiv.org/abs/2310.01405) | Monitors and steers population-level representations (honesty, harmlessness, power-seeking) instead of neurons or circuits. A top-down complement to circuit analysis. |
 | | 🧭 Tutorial | TransformerLens & Mech Interp tutorials | Neel Nanda | ongoing | [neelnanda.io](https://www.neelnanda.io/mechanistic-interpretability) | Neel Nanda's resources: TransformerLens, the library he created for inspecting and editing activations, plus demos, a getting-started guide and a glossary. Practice 2's toolkit. |
 | | 🎓 Course | ARENA (Alignment Research Engineer Accelerator) — self-study curriculum: transformer interpretability, RL/RLHF, LLM evals, alignment science | Callum McDougall / ARENA | ongoing | [learn.arena.education](https://learn.arena.education) | ARENA's online course: fundamentals, then interpretability (probes, SAEs, circuits, toy models), RL, evals and alignment science, taught through coding exercises. This section's hands-on companion. |
 
@@ -64,13 +64,13 @@ Alignment research aims to ensure AI systems act in accordance with human values
 
 ### Evaluation
 
-How do we know if models are truly improving, or if our benchmarks are misleading us? Schaeffer et al. argues that many "emergent abilities" are artifacts of metric choice, Chatbot Arena provides a continuously-updated Elo ranking from real user votes, and METR's time-horizon work measures capability as the length of real software tasks an agent can complete — a metric that has been doubling roughly every seven months. (For agent benchmarks such as SWE-bench, see [Section 11](../11-frontiers/README.md).)
+How do we know if models are truly improving, or if our benchmarks are misleading us? Schaeffer et al. argues that many "emergent abilities" are artifacts of metric choice, Chatbot Arena ranks models from crowdsourced pairwise votes with Bradley–Terry statistics, and METR's time-horizon work measures capability as the length of real software tasks an agent can complete — a horizon its authors found doubling about every seven months from 2019 (abstract checked October 2026). (For agent benchmarks such as SWE-bench, see [Section 11](../11-frontiers/README.md).)
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
 | | 📄 Paper (free) | Are Emergent Abilities of Large Language Models a Mirage? | Schaeffer et al. | 2023 | [arxiv.org/abs/2304.15004](https://arxiv.org/abs/2304.15004) | Argues many 'emergent abilities' come from nonlinear or discontinuous metrics; continuous metrics show smooth, predictable improvement with scale. Basis for Practice 5a. |
 | | 📄 Paper (free) | Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference | Chiang et al. | 2024 | [arxiv.org/abs/2403.04132](https://arxiv.org/abs/2403.04132) | Crowdsourced pairwise battles between anonymous chatbots, ranked with Bradley-Terry statistics from user votes. Learn how its leaderboard is built before trusting it. |
-| | 📄 Paper (free) | Measuring AI Ability to Complete Long Software Tasks (METR time horizons) | Kwa et al. | 2025 | [arxiv.org/abs/2503.14499](https://arxiv.org/abs/2503.14499) | Measures a model's 50% time horizon, the human duration of tasks it completes half the time, finding it doubled about every seven months since 2019. |
+| | 📄 Paper (free) | METR time horizons — Measuring AI Ability to Complete Long Software Tasks | Kwa et al. | 2025 | [arxiv.org/abs/2503.14499](https://arxiv.org/abs/2503.14499) | Measures a model's 50% time horizon, the human duration of tasks it completes half the time. The abstract (v4, July 2026) reports frontier horizons doubling about every seven months since 2019, possibly faster in 2024. |
 
 <!-- resources:end -->
 
@@ -118,7 +118,8 @@ Answer from memory first, then check against the sources — or paste this secti
 3. Why does feature sparsity make superposition worthwhile, what does the model pay for it, and how does a sparse autoencoder try to undo it?
 4. What is the J-lens, how does it generalize the logit lens, and what is "J-space" claimed to be?
 5. In Constitutional AI, what replaces human harmlessness labels in each of the two training stages?
-6. How can a smooth improvement in per-token accuracy show up as a sudden "emergent" jump on a benchmark?
+6. How can a smooth improvement in per-token accuracy show up as a sudden "emergent" jump on a benchmark? And why fit a Bradley–Terry model to all of Chatbot Arena's votes, with bootstrap intervals on the ranks, rather than trust one online-Elo ordering?
 7. Misconception probe: "Sleeper Agents shows that safety training makes models deceptive." What did the paper actually show, and what did adversarial training do to the backdoors?
 8. Explain to a smart friend in 3 sentences why chain-of-thought monitoring is called a "new and fragile" safety opportunity.
 9. RLHF from human preferences, Constitutional AI and DPO all turn preferences into a policy. For each, where do the preferences come from, and is there an explicit reward model?
+10. You find a GPT-2 neuron that fires on every Python `def`. Why is that correlation not yet a mechanism, and what activation-patching or ablation experiment could show it is (or isn't) used for the model's prediction?

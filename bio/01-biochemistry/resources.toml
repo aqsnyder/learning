@@ -113,6 +113,7 @@ year = "2012"
 type = "paper"
 label = "Review"
 access = "paid"
+marks = ["core"]
 url = "https://doi.org/10.1126/science.1219021"
 link_text = "Science"
 description = "Accessible overview of the protein folding problem — essential context before studying structural biology and computational approaches. *Science* 338:1042–1046"

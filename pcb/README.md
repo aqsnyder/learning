@@ -28,13 +28,13 @@ This repository is a structured curriculum for self-studying PCB (Printed Circui
 | Section | When | Core path (🔑) |
 |---|---|---|
 | [Section 00 — Electronics Fundamentals](00-electronics-fundamentals/) | Start here | *The Art of Electronics* (3rd ed.) Ch. 1 Foundations, Ch. 4 Operational Amplifiers, Ch. 5 Precision Circuits and Ch. 8 Low-Noise Techniques → *Learning the Art of Electronics* labs alongside |
-| [Section 01 — PCB Anatomy and Materials](01-pcb-anatomy-and-materials/) |  | Dave Jones's *PCB Design Tutorial* (2004) → Nine Dot Connects |
-| [Section 02 — Schematic Capture and Library Management](02-schematic-capture/) |  | KiCad 10 Getting Started Guide → Phil's Lab schematic tutorials → KiCad Library Conventions (KLC) |
-| [Section 03 — Component Selection and Sourcing](03-component-selection/) |  | DigiKey / Mouser parametric search → Design for Supply Chain |
-| [Section 04 — PCB Layout Fundamentals](04-pcb-layout-fundamentals/) |  | Phil's Lab layout tutorials → component placement strategy → Feranec layout and routing |
-| [Section 05 — Power Distribution and Grounding](05-power-and-grounding/) |  | Hartley's *How to Achieve Proper Grounding* → *Power Distribution Networks* talk → Phil's Lab power tutorials |
+| [Section 01 — PCB Anatomy and Materials](01-pcb-anatomy-and-materials/) |  | Dave Jones's *PCB Design Tutorial* (2004) → Sierra Circuits' *PCB Material Selection* → the Isola 370HR and Rogers RO4350B data sheets |
+| [Section 02 — Schematic Capture and Library Management](02-schematic-capture/) |  | *Getting Started in KiCad* (KiCad 10) → Phil's Lab #165 (KiCad 9 schematic) → KiCad Library Conventions (KLC) |
+| [Section 03 — Component Selection and Sourcing](03-component-selection/) |  | DigiKey / Mouser parametric search → Maxim AN5527 (MLCC derating) → J-STD-048A / J-STD-046A |
+| [Section 04 — PCB Layout Fundamentals](04-pcb-layout-fundamentals/) |  | Phil's Lab #166 (KiCad 9 PCB layout) → Feranec's layout and routing videos → KiCad 10 PCB Editor manual |
+| [Section 05 — Power Distribution and Grounding](05-power-and-grounding/) |  | Hartley's *How to Achieve Proper Grounding* → the *Power Distribution Network* talk → Phil's Lab #60 (switching-regulator layout) |
 | [Section 12 — Analog, Mixed-Signal and Precision Measurement](12-analog-mixed-signal-and-precision-measurement/) | After 05 | *Op Amp Applications Handbook* Section 7 → Keithley *Low Level Measurements Handbook* |
-| [Section 06 — Signal Integrity](06-signal-integrity/) |  | Bogatin's *Signal and Power Integrity — Simplified* → Feranec SI and high-speed videos → Johnson & Graham's *Black Magic* |
+| [Section 06 — Signal Integrity](06-signal-integrity/) |  | Bogatin's *Signal and Power Integrity — Simplified* → Bogatin's videos on Feranec's channel (reflections, crosstalk, differential pairs) → Johnson & Graham's *Black Magic* |
 | [Section 07 — EMC and Compliance](07-emc-and-compliance/) |  | LearnEMC → Ott's *Electromagnetic Compatibility Engineering* |
 | [Section 08 — Multi-Layer Design and Stackup](08-multi-layer-and-stackup/) |  | Hartley, *The Extreme Importance of PC Board Stack-Up* → Saturn PCB Toolkit → Feranec multi-layer series |
 | [Section 09 — Design for Manufacturing (DFM) and Fabrication](09-dfm-and-fabrication/) |  | DFM rules → DFA (Design for Assembly) → JLCPCB capabilities page |
@@ -56,9 +56,9 @@ This repository is a structured curriculum for self-studying PCB (Printed Circui
 
 ## ⭐ Rick Hartley's Reading List — Cross-Reference
 
-> Rick Hartley is widely regarded as a legend in signal integrity and EMC design. His reading list (12 books, distributed by Nine Dot Connects) is a widely shared core library for SI/EMC-minded PCB designers. Rick groups the books under *Signal Integrity Control* (1–6) and *EMI & Noise Control* (7–12).
+> Rick Hartley teaches signal integrity, EMC and grounding to PCB designers; his grounding talk opens [Section 05](05-power-and-grounding/). His reading list (12 books, distributed by Nine Dot Connects) is this curriculum's ⭐ list. Rick groups the books under *Signal Integrity Control* (1–6) and *EMI & Noise Control* (7–12).
 
-Source: *Rick Hartley's Reading Recommendation*, a one-page handout distributed by Nine Dot Connects. It is not reproduced here; the table below lists its twelve books.
+Source: *Rick Hartley's Reading Recommendation*, a one-page handout distributed by Nine Dot Connects. The handout is no longer kept in this repository, so the table below is the reference for the ⭐ marks: it lists the handout's twelve books in its order (checked against the handout in October 2026). Never add a ⭐ to anything that is not in this table.
 
 | # | Book / Resource | Section |
 |---|-----------------|---------|
@@ -95,7 +95,7 @@ Channels and people to follow alongside the sections. This is a highlights list,
 ## How to Use with NotebookLM
 
 1. **Section-by-section**: Upload a section's README for study guidance
-2. **Standards**: Upload the included IPC-2221A PDF (2003 revision, since superseded by IPC-2221B/C; use IPC-2152 for current capacity) for interactive Q&A
+2. **Standards**: IPC standards are licensed and not included in this repository (see [Section 01](01-pcb-anatomy-and-materials/)). If you own a copy, upload it for your own Q&A; otherwise use the free routes each section names (calculators, app notes, fab guides)
 3. **Datasheets**: Upload component datasheets for design assistance
 4. **Progress tracking**: run `python tools/progress.py init` once from the repo root, then tick items in your private copy, `my/progress/pcb.md`. [PROGRESS.md](PROGRESS.md) is the blank template it copies from
 

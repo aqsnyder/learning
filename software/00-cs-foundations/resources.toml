@@ -7,55 +7,69 @@
 [[groups.items]]
 id = "teach-yourself-computer-science"
 title = "Teach Yourself Computer Science"
+authors = "Oz Nova and Myles Byrne"
+year = "2020"
 type = "docs"
 label = "Guide"
 access = "free"
 url = "https://teachyourselfcs.com/"
 link_text = "teachyourselfcs.com"
-description = "The best curated CS self-study guide"
-verified = 2026-10-13
+description = "A curated roadmap for teaching yourself the core computer-science subjects, with recommended books and lectures for each. Use it to plan this section's reading. First written in 2016; extensively updated in May 2020."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mit-6-006-introduction-to-algorithms-ocw"
-title = "MIT 6.006 Introduction to Algorithms (OCW)"
+title = "MIT 6.006 Introduction to Algorithms (Spring 2020, OCW)"
+authors = "Erik Demaine, Jason Ku, Justin Solomon"
+year = "2020"
 type = "course"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
 link_text = "ocw.mit.edu"
-description = "Foundational algorithms and data structures"
-verified = 2026-10-13
+description = "MIT's undergraduate algorithms course, free on OpenCourseWare with lecture videos, lecture notes, problem sets and exams (all with solutions). The deep pass on data structures, graph search and dynamic programming after Grokking."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "grokking-algorithms-2nd-ed"
 title = "*Grokking Algorithms* (2nd ed)"
-authors = "Aditya Bhargava"
+authors = "Aditya Y. Bhargava"
 year = "2024"
 type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "Visual, accessible intro to algorithms"
+url = "https://www.manning.com/books/grokking-algorithms-second-edition"
+link_text = "manning.com"
+description = "An illustrated, beginner-friendly introduction to algorithms and data structures (Manning, February 2024). The gentlest way into Big O, hash tables and dynamic programming before MIT 6.006."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "cs50-harvard"
-title = "CS50 (Harvard)"
-authors = "David Malan"
+title = "CS50x 2026: CS50's Introduction to Computer Science (Harvard)"
+authors = "David J. Malan"
+year = "2026"
 type = "course"
-url = "https://cs50.harvard.edu/"
-link_text = "cs50.harvard.edu"
-description = "Harvard's widely used intro CS course, free online"
-verified = 2026-10-13
+access = "free"
+level = "beginner"
+url = "https://cs50.harvard.edu/x/"
+link_text = "cs50.harvard.edu/x"
+description = "Harvard's introductory CS course, free as OpenCourseWare (edX certificates are optional and paid). Week 4 (Memory) and Week 5 (Data Structures), whose Speller problem set builds a hash-table spell-checker in C, are the weeks this section uses."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "structure-and-interpretation-of-computer"
-title = "Structure and Interpretation of Computer Programs"
+title = "*Structure and Interpretation of Computer Programs* (2nd ed)"
+authors = "Harold Abelson and Gerald Jay Sussman, with Julie Sussman"
+year = "1996"
 type = "book"
 access = "free"
+level = "advanced"
 url = "https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html"
 link_text = "mitp-content-server.mit.edu"
-description = "Classic computational thinking"
-verified = 2026-10-13
+description = "The classic on abstraction and computational processes, free online from MIT Press (CC BY-SA 4.0). Chapter 1's treatment of recursion and its cost is the starting point of exercise 3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "computer-systems-a-programmer-s"
@@ -73,10 +87,12 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "operating-systems-three-easy-pieces"
-title = "*Operating Systems: Three Easy Pieces* — Remzi and Andrea Arpaci-Dusseau (v1.10, 2023)"
+title = "*Operating Systems: Three Easy Pieces* (v1.10, 2023)"
+authors = "Remzi Arpaci-Dusseau and Andrea Arpaci-Dusseau"
 year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 url = "https://pages.cs.wisc.edu/~remzi/OSTEP/"
 link_text = "pages.cs.wisc.edu"
 description = "Virtualization, concurrency, persistence. The concurrency chapters (threads, locks, condition variables, semaphores, common bugs) are the groundwork for the RTOS material in Section 07"
@@ -85,13 +101,16 @@ verified = 2026-10-13
 [[groups.items]]
 id = "the-algorithm-design-manual-3rd-ed"
 title = "*The Algorithm Design Manual* (3rd ed)"
-authors = "Steven Skiena"
+authors = "Steven S. Skiena"
 year = "2020"
 type = "book"
-url = "https://www.algorist.com/"
-link_text = "algorist.com"
-description = "Practitioner's algorithms: model the real problem, then pick from a catalog of known solutions. Teach Yourself CS's main algorithms text, and better data-structures practice than puzzle grinding"
-verified = 2026-10-13
+access = "paid"
+level = "intermediate"
+url = "https://doi.org/10.1007/978-3-030-54256-6"
+link_text = "Springer"
+more_links = [{ text = "Author's site", url = "https://www.algorist.com/" }]
+description = "Practitioner's algorithms: model the real problem, then pick from a catalog of known solutions (Springer, Texts in Computer Science, 2020). Teach Yourself CS's main algorithms text, and better data-structures practice than puzzle grinding"
+verified = 2026-10-21
 
 [[groups]]
 title = "Key Concepts"

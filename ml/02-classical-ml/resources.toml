@@ -7,15 +7,17 @@
 [[groups.items]]
 id = "machine-learning-specialization"
 title = "Machine Learning Specialization"
-authors = "Andrew Ng"
+authors = "Andrew Ng, Eddy Shyu, Aarti Bagul, Geoff Ladwig"
 year = "2022"
 type = "course"
 label = "Online Course"
+access = "partial"
+level = "beginner"
 marks = ["core"]
 url = "https://www.coursera.org/specializations/machine-learning-introduction"
 link_text = "Link"
-description = "The most popular ML course ever made, now updated. Covers supervised learning, unsupervised learning, and recommender systems with hands-on labs. The ideal starting point."
-verified = 2026-10-13
+description = "Ng's three-course introduction from Stanford Online and DeepLearning.AI: supervised learning (regression and classification), advanced learning algorithms, and unsupervised learning, recommenders and reinforcement learning, with hands-on labs. The best-structured first pass at this section. Free to audit without a certificate; graded work needs a Coursera subscription (as of October 2026)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "stanford-cs229-machine-learning"
@@ -25,6 +27,7 @@ year = "2018"
 type = "video-series"
 label = "Video Lectures"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU"
 link_text = "Link"
@@ -77,6 +80,7 @@ title = "A Few Useful Things to Know About Machine Learning"
 authors = "Pedro Domingos"
 year = "2012"
 type = "paper"
+access = "free"
 url = "https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf"
 link_text = "Link"
 description = "Twelve hard-won lessons in one short article: generalization is what counts, overfitting has many faces, intuition fails in high dimensions, feature engineering is key, more data beats a cleverer algorithm. Practical wisdom no textbook chapter gives you."
@@ -112,10 +116,11 @@ title = "Accurate Predictions on Small Data with a Tabular Foundation Model (Tab
 authors = "Noah Hollmann et al."
 year = "2025"
 type = "paper"
+access = "free"
 url = "https://doi.org/10.1038/s41586-024-08328-6"
 link_text = "Link"
-description = "A transformer pretrained on millions of synthetic datasets that makes predictions on a new small table in seconds (*Nature*, 2025). On datasets of up to 10,000 samples it outperforms previous methods; in classification it beats an ensemble of strong baselines tuned for four hours. The serious challenger to \"start with boosted trees\" when your dataset is small — its claims stop at 10,000 samples."
-verified = 2026-10-13
+description = "A transformer pretrained on millions of synthetic datasets that makes predictions on a new small table in seconds (*Nature* 637, 319–326, 2025; open access under CC BY 4.0). On datasets of up to 10,000 samples it outperforms previous methods; in classification it beats an ensemble of strong baselines tuned for four hours. The serious challenger to \"start with boosted trees\" when your dataset is small — its claims stop at 10,000 samples."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-elements-of-statistical-learning-esl"
@@ -127,26 +132,31 @@ access = "free"
 level = "advanced"
 url = "https://hastie.su.domains/ElemStatLearn/"
 link_text = "Link"
+more_links = [{ text = "Springer (DOI)", url = "https://doi.org/10.1007/978-0-387-84858-7" }]
 description = "The graduate-level companion to ISLR. Covers the same topics in much greater mathematical depth. Best used as a reference once you've worked through ISLR."
 
 [[groups.items]]
 id = "scikit-learn-user-guide"
-title = "Scikit-learn User Guide"
-authors = "Scikit-learn developers"
+title = "scikit-learn User Guide"
+authors = "scikit-learn developers"
 type = "docs"
 label = "Documentation"
-url = "https://scikit-learn.org/"
-link_text = "Link"
-description = "The go-to Python library for classical ML. The documentation doubles as an excellent learning resource with clear explanations, examples, and algorithm guides."
-verified = 2026-10-13
+access = "free"
+url = "https://scikit-learn.org/stable/user_guide.html"
+link_text = "User Guide"
+description = "The User Guide of the standard Python library for classical ML (version 1.9.1 as of October 2026): each estimator's objective, parameters and worked examples, plus chapters on model selection and evaluation and on common pitfalls and recommended practices. Practice 1 and 3–5 check your own code against it."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "google-machine-learning-crash-course"
 title = "Google Machine Learning Crash Course"
 authors = "Google"
+year = "2024"
 type = "course"
 label = "Online Course"
+access = "free"
+level = "beginner"
 url = "https://developers.google.com/machine-learning/crash-course"
 link_text = "Link"
-description = "A fast-paced, practical introduction to ML concepts with TensorFlow exercises. Good for a quick overview or as a supplement."
-verified = 2026-10-13
+description = "Google's free, self-paced introduction, rebuilt in November 2024 from the 2018 original: linear and logistic regression, classification, working with data, overfitting, neural networks, embeddings and an introduction to LLMs, with video explainers, interactive visualizations and exercises. A quick refresher or a gentler first pass."
+verified = 2026-10-21

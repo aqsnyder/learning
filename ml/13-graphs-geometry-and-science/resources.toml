@@ -79,6 +79,7 @@ year = "2021"
 type = "book"
 label = "Monograph"
 access = "free"
+level = "advanced"
 marks = ["core"]
 url = "https://arxiv.org/abs/2104.13478"
 link_text = "arxiv.org/abs/2104.13478"
@@ -118,30 +119,33 @@ verified = 2026-10-13
 [[groups]]
 title = "AI for Science"
 intro = '''
-Deep learning is accelerating scientific discovery at an unprecedented pace. AlphaFold 2 solved protein structure prediction — a 50-year grand challenge in biology. AlphaFold 3 extends to general biomolecular complexes. GraphCast produces 10-day global weather forecasts in under a minute, GNoME identified 2.2 million crystal structures below the known stability convex hull (381,000 of them new stable entries; 736 already independently synthesized), RFdiffusion generates novel proteins, AlphaGeometry and AlphaProof reached olympiad-level mathematical reasoning, and AlphaEvolve turns an LLM coding agent plus evolutionary search into a tool for discovering new algorithms.
+Deep learning now contributes to several sciences, and each headline claim below is worth auditing (Practice 5). AlphaFold 2 predicted protein structures with accuracy competitive with experiment in most CASP14 cases, on a problem open for more than 50 years; AlphaFold 3 extends prediction to complexes with nucleic acids, small molecules and ions. GraphCast produces 10-day global weather forecasts in under a minute, GNoME identified 2.2 million crystal structures below the known stability convex hull (381,000 of them new stable entries; 736 already independently synthesized), RFdiffusion generates novel proteins, AlphaGeometry and AlphaProof reached olympiad-level mathematical reasoning, and AlphaEvolve turns an LLM coding agent plus evolutionary search into a tool for discovering new algorithms.
 '''
 
 [[groups.items]]
 id = "highly-accurate-protein-structure"
-title = "Highly Accurate Protein Structure Prediction with AlphaFold (AlphaFold 2)"
+title = "AlphaFold 2 — Highly accurate protein structure prediction with AlphaFold"
 authors = "Jumper et al."
 year = "2021"
 type = "paper"
+access = "free"
 marks = ["core"]
 url = "https://www.nature.com/articles/s41586-021-03819-2"
 link_text = "nature.com"
 description = "Predicts protein structure from sequence and multiple sequence alignments, often at experimental accuracy (CASP14), via the Evoformer and an invariant-point-attention structure module."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "accurate-structure-prediction-of"
-title = "Accurate Structure Prediction of Biomolecular Interactions with AlphaFold 3"
+title = "Accurate structure prediction of biomolecular interactions with AlphaFold 3"
 authors = "Abramson et al."
 year = "2024"
 type = "paper"
+access = "free"
 url = "https://www.nature.com/articles/s41586-024-07487-w"
 link_text = "nature.com"
 description = "Replaces AF2's structure module with diffusion over atom coordinates (Pairformer trunk), predicting complexes of proteins, nucleic acids, small molecules, ions and modified residues."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "graphcast-learning-skillful-medium-range"
@@ -157,37 +161,40 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "scaling-deep-learning-for-materials"
-title = "Scaling Deep Learning for Materials Discovery (GNoME)"
+title = "GNoME — Scaling deep learning for materials discovery"
 authors = "Merchant et al."
 year = "2023"
 type = "paper"
+access = "free"
 url = "https://www.nature.com/articles/s41586-023-06735-9"
 link_text = "nature.com"
 description = "Graph networks trained at scale, with active learning and DFT checks, find 2.2 million structures below the known convex hull. Practice 5 audits the claim."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "de-novo-design-of-protein-structure-and"
-title = "De Novo Design of Protein Structure and Function with RFdiffusion"
+title = "De novo design of protein structure and function with RFdiffusion"
 authors = "Watson et al."
 year = "2023"
 type = "paper"
+access = "free"
 url = "https://www.nature.com/articles/s41586-023-06415-8"
 link_text = "nature.com"
 description = "Fine-tunes the RoseTTAFold structure network as a denoising diffusion model of protein backbones, designing binders, symmetric assemblies and enzyme-site scaffolds; hundreds characterized experimentally."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "alphageometry-solving-olympiad-geometry"
-title = "AlphaGeometry (Solving Olympiad Geometry without Human Demonstrations) & AlphaProof (Olympiad-Level Formal Mathematical Reasoning with Reinforcement Learning)"
-authors = "Trinh et al. (AlphaGeometry); Hubert et al. (AlphaProof) — Google DeepMind"
-year = "2024 / 2025"
+title = "AlphaGeometry — Solving olympiad geometry without human demonstrations; AlphaProof — Olympiad-level formal mathematical reasoning with reinforcement learning"
+authors = "Trinh et al.; Hubert et al. (Google DeepMind)"
+year = "2024, 2025"
 type = "paper"
+access = "free"
 url = "https://www.nature.com/articles/s41586-023-06747-5"
 link_text = "AlphaGeometry"
 more_links = [{ text = "AlphaProof", url = "https://www.nature.com/articles/s41586-025-09833-y" }]
 description = "AlphaGeometry: a language model trained on synthetic data steers a symbolic engine. AlphaProof: AlphaZero-style RL for formal proofs, scoring IMO 2024 silver with AlphaGeometry 2."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "alphaevolve-a-coding-agent-for"

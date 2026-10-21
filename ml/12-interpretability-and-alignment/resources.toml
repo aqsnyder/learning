@@ -132,7 +132,7 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "representation-engineering"
-title = "Representation Engineering"
+title = "Representation Engineering: A Top-Down Approach to AI Transparency"
 authors = "Zou et al."
 year = "2023"
 type = "paper"
@@ -140,7 +140,7 @@ access = "free"
 url = "https://arxiv.org/abs/2310.01405"
 link_text = "arxiv.org/abs/2310.01405"
 description = "Monitors and steers population-level representations (honesty, harmlessness, power-seeking) instead of neurons or circuits. A top-down complement to circuit analysis."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "transformerlens-mech-interp-tutorials"
@@ -266,7 +266,7 @@ description = "Russell argues that AI built to optimize fixed objectives is unsa
 [[groups]]
 title = "Evaluation"
 intro = '''
-How do we know if models are truly improving, or if our benchmarks are misleading us? Schaeffer et al. argues that many "emergent abilities" are artifacts of metric choice, Chatbot Arena provides a continuously-updated Elo ranking from real user votes, and METR's time-horizon work measures capability as the length of real software tasks an agent can complete — a metric that has been doubling roughly every seven months. (For agent benchmarks such as SWE-bench, see [Section 11](../11-frontiers/README.md).)
+How do we know if models are truly improving, or if our benchmarks are misleading us? Schaeffer et al. argues that many "emergent abilities" are artifacts of metric choice, Chatbot Arena ranks models from crowdsourced pairwise votes with Bradley–Terry statistics, and METR's time-horizon work measures capability as the length of real software tasks an agent can complete — a horizon its authors found doubling about every seven months from 2019 (abstract checked October 2026). (For agent benchmarks such as SWE-bench, see [Section 11](../11-frontiers/README.md).)
 '''
 
 [[groups.items]]
@@ -295,12 +295,12 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "measuring-ai-ability-to-complete-long"
-title = "Measuring AI Ability to Complete Long Software Tasks (METR time horizons)"
+title = "METR time horizons — Measuring AI Ability to Complete Long Software Tasks"
 authors = "Kwa et al."
 year = "2025"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2503.14499"
 link_text = "arxiv.org/abs/2503.14499"
-description = "Measures a model's 50% time horizon, the human duration of tasks it completes half the time, finding it doubled about every seven months since 2019."
-verified = 2026-10-13
+description = "Measures a model's 50% time horizon, the human duration of tasks it completes half the time. The abstract (v4, July 2026) reports frontier horizons doubling about every seven months since 2019, possibly faster in 2024."
+verified = 2026-10-21

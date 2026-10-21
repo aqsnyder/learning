@@ -3,6 +3,9 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** 3Blue1Brown, *Neural Networks* ([Section 03](../03-neural-network-fundamentals/README.md)) for the gradient-descent video that Practice 3 pairs with its step-size analysis.
+'''
 
 [[groups.items]]
 id = "essence-of-linear-algebra"
@@ -10,10 +13,11 @@ title = "Essence of Linear Algebra"
 authors = "3Blue1Brown"
 type = "video-series"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
 link_text = "Link"
-description = "Beautiful visual explanations of vectors, matrices, transformations, eigenvalues, and more. The gold standard for building geometric intuition."
+description = "Visual explanations of vectors, matrices as linear maps, determinants, change of basis and eigenvectors. Here it builds the geometric picture behind objective 1; watch the change-of-basis and eigenvector videos before Practice 1's SVD. Also used in math/01."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -22,21 +26,11 @@ title = "Essence of Calculus"
 authors = "3Blue1Brown"
 type = "video-series"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
 link_text = "Link"
-description = "Visual, intuition-first approach to derivatives, integrals, and the chain rule — all essential for understanding backpropagation."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "neural-networks"
-title = "Neural Networks"
-authors = "3Blue1Brown"
-type = "video-series"
-access = "free"
-url = "https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
-link_text = "Link"
-description = "Bridges the math foundations into neural networks. Covers gradient descent and backpropagation with stunning visualizations."
+description = "Intuition-first derivatives, integrals and the chain rule. Here the chain-rule video is the base for Practice 2's gradient derivations and for backpropagation (objective 2). Also used in math/02 and physics/00."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -50,7 +44,7 @@ level = "beginner"
 marks = ["core"]
 url = "https://mml-book.github.io/"
 link_text = "Link"
-description = "Comprehensive textbook covering linear algebra, calculus, probability, and optimization — all targeted specifically at ML applications."
+description = "Linear algebra, matrix decompositions, vector calculus, probability and continuous optimization, written for ML applications. Here it is the rigorous companion to every exercise (each one names the chapter to read) and the text behind objectives 1–4. Also used in math/01 and math/04."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -76,31 +70,36 @@ label = "Blog Post"
 access = "free"
 url = "https://colah.github.io/posts/2015-09-Visual-Information/"
 link_text = "Link"
-description = "Builds entropy, cross-entropy, KL divergence, and mutual information from pictures of optimal codes. After this, \"minimize cross-entropy loss\" means something concrete."
+description = "Builds entropy, cross-entropy, KL divergence and mutual information from pictures of optimal codes. Here it grounds objective 3 (why minimizing cross-entropy is maximizing likelihood, Practice 4b) and the code-length intuition the compression cluster below relies on. Also used in math/05."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "khan-academy-linear-algebra-calculus"
 title = "Khan Academy — Linear Algebra, Calculus, Statistics"
 authors = "Khan Academy"
-type = "course"
-label = "Online Course"
+type = "website"
 access = "free"
+level = "beginner"
 url = "https://www.khanacademy.org/"
 link_text = "Link"
-description = "Excellent for filling gaps. Use as a supplementary reference when you need extra practice on a specific topic."
+description = "Free drill with instant feedback. Use its linear algebra, calculus and statistics courses when an exercise here exposes a gap: the videos above give the intuition, Khan Academy the practice."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "statquest"
-title = "StatQuest"
+title = "StatQuest — Maximum Likelihood, clearly explained!!!"
 authors = "Josh Starmer"
-type = "video-series"
+year = "2017"
+type = "video"
+label = "Videos"
 access = "free"
-url = "https://www.youtube.com/@statquest"
-link_text = "Link"
-description = "Fun, clear, no-nonsense explanations of statistics and ML concepts. Great for probability and statistics foundations."
-verified = 2026-10-13
+level = "beginner"
+url = "https://www.youtube.com/watch?v=XepXtl9YKwc"
+link_text = "YouTube"
+more_links = [{ text = "MLE for the normal distribution (2018)", url = "https://www.youtube.com/watch?v=Dn6b9fCIUpM" }, { text = "Bayes' theorem", url = "https://www.youtube.com/watch?v=9wCnvr7Xw4E" }]
+description = "Three short StatQuest videos for objective 3: what a likelihood is and why maximizing it gives an estimate; the step-by-step Gaussian MLE that Practice 4(a) asks you to derive; and Bayes' theorem for its base-rate problem. Also used in math/03."
+verified = 2026-10-21
+short = "StatQuest — maximum likelihood and Bayes' theorem videos (Josh Starmer)"
 
 [[groups]]
 title = "Compression, Complexity, and Intelligence (Ilya list theory cluster)"
@@ -115,6 +114,7 @@ authors = "Scott Aaronson"
 year = "2011"
 type = "article"
 label = "Blog Post"
+access = "free"
 marks = ["canon"]
 url = "https://scottaaronson.blog/?p=762"
 link_text = "Link"
@@ -144,7 +144,7 @@ access = "free"
 marks = ["canon"]
 url = "https://arxiv.org/abs/math/0406077"
 link_text = "Link"
-description = "From the Ilya Sutskever reading list. Formalizes Occam's Razor mathematically — the best model is the one that compresses the data most. Grünwald's 2007 MIT Press book *The Minimum Description Length Principle* is the full-length follow-up."
+description = "From the Ilya Sutskever reading list. Formalizes Occam's razor as compression: pick the hypothesis H that minimizes L(H) + L(D|H), the bits to describe the model plus the bits to describe the data with its help. Its running example chooses the degree of a polynomial (Example 1.2), the \"crude\" two-part code that this section's mini-project implements; Section 03's Practice 5 uses it too. Grünwald's 2007 MIT Press book *The Minimum Description Length Principle* is the full-length follow-up."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -153,6 +153,8 @@ title = "Kolmogorov Complexity and Algorithmic Randomness"
 authors = "A. Shen, V. A. Uspensky, N. Vereshchagin"
 year = "2017"
 type = "book"
+access = "free"
+level = "advanced"
 marks = ["canon"]
 url = "https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf"
 link_text = "Link"
@@ -166,8 +168,9 @@ authors = "Shane Legg"
 year = "2008"
 type = "paper"
 label = "Thesis"
+access = "free"
 marks = ["canon"]
 url = "https://pdf.stafforini.com/legg-2008-machine-super-intelligence.pdf"
 link_text = "Link"
-description = "From the Ilya Sutskever reading list. Legg's PhD thesis (University of Lugano, supervised by Marcus Hutter): surveys definitions and tests of machine intelligence, studies Hutter's AIXI model of an optimal universal agent (Solomonoff induction + sequential decision theory), relates achievable performance to Kolmogorov complexity, and ends with speculation about future highly intelligent machines."
+description = "From the Ilya Sutskever reading list. Legg's PhD thesis (University of Lugano, supervised by Marcus Hutter): surveys definitions and tests of machine intelligence, studies Hutter's AIXI model of an optimal universal agent (Solomonoff induction + sequential decision theory), relates achievable performance to Kolmogorov complexity, and ends with speculation about future highly intelligent machines. The link is a third-party mirror (pdf.stafforini.com), checked against the thesis's metadata; the author's own copy on vetta.org could not be reached by the link checker (its robots.txt blocks it, October 2026)."
 verified = 2026-10-13

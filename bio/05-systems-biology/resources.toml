@@ -120,6 +120,17 @@ description = "Companion to the Science motifs paper — maps the complete *E. c
 verified = 2026-10-13
 
 [[groups.items]]
+id = "regulondb"
+title = "RegulonDB"
+authors = "RegulonDB team, CCG–UNAM"
+type = "database"
+access = "free"
+url = "https://regulondb.ccg.unam.mx/"
+link_text = "RegulonDB"
+description = "The primary database on transcriptional regulation in *E. coli* K-12, curated from original publications and supplemented by high-throughput data and computational predictions — the current network for Practice 3's motif counts (Shen-Orr et al.'s 2002 network is the historical baseline)"
+verified = 2026-10-21
+
+[[groups.items]]
 id = "mit-8-591j-systems-biology-ocw"
 title = "MIT 8.591J — Systems Biology (OCW)"
 authors = "Gore, J."

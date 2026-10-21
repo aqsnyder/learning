@@ -13,35 +13,38 @@ title = "How to Achieve Proper Grounding"
 authors = "Rick Hartley"
 type = "video"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://www.youtube.com/watch?v=ySuUZEjARPY"
 link_text = "YouTube"
-description = "THE definitive lecture on grounding (Altium \"Expert Live Training\"). If you watch one video on PCB design, make it this one."
-verified = 2026-10-13
+description = "Rick Hartley's Altium *Expert Live Training* talk on grounding and return-current paths, posted on Altium's YouTube channel. Start the section with it; Practice 1 and the mini-project's grounding memo apply it."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "power-distribution-networks"
-title = "Power Distribution Networks"
+title = "Power Distribution Network"
 authors = "Rick Hartley"
 type = "video"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://www.youtube.com/watch?v=WnLRHuvl6Eg"
 link_text = "YouTube"
-description = "PDN design fundamentals — understanding impedance, decoupling, and energy delivery. (Posted on the NineDotConnects channel.)"
+description = "PDN design fundamentals: impedance, decoupling and energy delivery. Posted on the NineDotConnects YouTube channel."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "phil-s-lab-power-design-tutorials"
-title = "Phil's Lab — Power Design Tutorials"
+title = "Switching Regulator PCB Design — Phil's Lab #60"
 authors = "Phil's Lab"
-type = "video-series"
+type = "video"
 access = "free"
+level = "beginner"
 marks = ["core"]
-url = "https://www.youtube.com/@PhilsLab"
+url = "https://www.youtube.com/watch?v=AmfLhT5SntE"
 link_text = "YouTube"
-description = "Practical power supply layout with hands-on KiCad examples."
-verified = 2026-10-13
+description = "Phil's Lab on switching-regulator PCB layout. Watch it with AN-136 before Practice 4."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "fast-circuit-boards-energy-management"
@@ -88,10 +91,12 @@ verified = 2026-10-13
 [[groups.items]]
 id = "saturn-pcb-design-toolkit"
 title = "Saturn PCB Design Toolkit"
+authors = "Saturn PCB Design"
 type = "tool"
+access = "free"
 url = "https://saturnpcb.com/saturn-pcb-toolkit/"
 link_text = "Website"
-description = "Free (Windows) calculators for trace width, via current, impedance, thermal resistance, and more. Its conductor-current calculator follows IPC-2152, and the vendor notes that calculators built on the old IPC-2221 formula are obsolete. Essential desktop tool."
+description = "Free (Windows) calculator suite. This section uses two of its calculators: the conductor-current calculator, which follows IPC-2152 (the vendor notes that calculators built on the old IPC-2221 formula are obsolete), to size traces and planes for current, and the via calculator for Practice 3's via inductance. Section 08 lists the same toolkit for its impedance calculators."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -100,16 +105,11 @@ title = "IPC-2152 — Standard for Determining Current-Carrying Capacity in Prin
 authors = "IPC"
 year = "2009"
 type = "standard"
+access = "paid"
 url = "https://pcdandf.com/pcdesign/index.php/editorial/menu-new-indust-prod/5545-ipc-releases-ipc-2152-standard"
 link_text = "PCD&F release note"
-description = "Replaced the IPC-2221 conductor-sizing charts (which date to 1956) with new test data for internal and external conductors, in air and in vacuum. Use it, for example through Saturn, whenever you size traces or planes for current."
+description = "Replaced the IPC-2221 conductor-sizing charts (which date to 1956) with new test data for internal and external conductors, in air and in vacuum. IPC sells the standard (the link is PCD&F's release announcement); you can apply it for free through Saturn's conductor-current calculator whenever you size traces or planes for current."
 verified = 2026-10-13
-
-[[groups.items]]
-id = "decoupling-capacitor-placement-and"
-title = "Decoupling Capacitor Placement and Selection"
-type = "concept"
-description = "Strategy for choosing values, quantities, and placement of decoupling caps relative to IC power pins."
 
 [[groups.items]]
 id = "mt-101-decoupling-techniques-2009"
@@ -117,16 +117,11 @@ title = "MT-101: Decoupling Techniques (2009)"
 authors = "Analog Devices"
 year = "2009"
 type = "app-note"
+access = "free"
 url = "https://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf"
 link_text = "PDF"
-description = "ADI's free tutorial on choosing and placing decoupling capacitors and on the parasitics that limit them. A concrete companion to the concept row above."
+description = "ADI's free tutorial on choosing and placing decoupling capacitors and on the parasitics that limit them: the worked reference for decoupling placement and selection in Practices 2 and 3."
 verified = 2026-10-13
-
-[[groups.items]]
-id = "ground-plane-splits"
-title = "Ground Plane Splits"
-type = "concept"
-description = "When and why to split ground planes (usually: don't). Understand the consequences before you cut a plane."
 
 [[groups.items]]
 id = "mt-031-grounding-data-converters-and"
@@ -134,9 +129,10 @@ title = "MT-031: Grounding Data Converters and Solving the Mystery of \"AGND\" a
 authors = "Walt Kester, James Bryant, Mike Byrne (Analog Devices)"
 year = "2008"
 type = "app-note"
+access = "free"
 url = "https://www.analog.com/media/en/training-seminars/tutorials/mt-031.pdf"
 link_text = "PDF"
-description = "The canonical answer to \"what do I do with AGND and DGND?\". For converters with low digital currents, tie both pins to the analog ground plane right at the part. Read it before splitting any plane on a mixed-signal board."
+description = "The canonical answer to \"what do I do with AGND and DGND?\". For converters with low digital currents, tie both pins to the analog ground plane right at the part. Read it, with Hartley's grounding talk, before splitting any plane on a mixed-signal board: a split is rarely the answer."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -144,6 +140,7 @@ id = "an-136-pcb-layout-considerations-for-non"
 title = "AN-136: PCB Layout Considerations for Non-Isolated Switching Power Supplies"
 authors = "Henry Zhang (Analog Devices)"
 type = "app-note"
+access = "free"
 url = "https://www.analog.com/en/resources/app-notes/an-136.html"
 link_text = "App note"
 description = "The standard reference for buck/boost converter layout: power-stage placement, the high-di/dt \"hot loop\", and grounding of the power and control sections."
@@ -154,6 +151,7 @@ id = "fasthenry2"
 title = "FastHenry2"
 authors = "Mattan Kamon (MIT, original FastHenry); FastFieldSolvers S.R.L. (Windows port)"
 type = "tool"
+access = "free"
 url = "https://www.fastfieldsolvers.com/software.htm"
 link_text = "fastfieldsolvers.com"
 description = "Free, open-source 3D inductance extractor. It computes the frequency-dependent self and mutual inductance and resistance of an arbitrary conductor geometry (magnetoquasistatic) and can export a SPICE equivalent circuit. Use it to check hand estimates of capacitor-mounting, via and plane-pair loop inductance (Practice 3). The FastFieldSolvers build is a Windows port; binaries and source are on its download page."

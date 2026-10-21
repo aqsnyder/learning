@@ -27,14 +27,16 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📕 Book | Computational Physics | Mark Newman | — | — | — |
+| 🔑 | 📕 Book (partly free) | Computational Physics | Mark Newman | 2012 | [Author's page (sample chapters, programs)](http://www-personal.umich.edu/~mejn/cp/) | A Python-based text (self-published through CreateSpace, 2012) covering numerical integration, linear and nonlinear equations, Fourier transforms, ordinary and partial differential equations, and Monte Carlo methods. The section's primary textbook; the author's page has sample chapters, the example programs and data. |
 | | 📕 Book | Computational Physics | Nicholas Giordano & Hisao Nakanishi | — | — | — |
-| | 📕 Book | Numerical Recipes: The Art of Scientific Computing | Press et al. | — | [numerical.recipes](http://numerical.recipes/) | — |
-| | 🎓 Course (free) | MIT 18.085 Computational Science and Engineering | Gilbert Strang | — | [MIT OCW](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) | — |
-| | 📕 Book | Computational Physics | Jos Thijssen | — | — | — |
-| | 📕 Book | A Survey of Computational Physics | Landau, Páez & Bordeianu | — | [compadre.org](https://www.compadre.org/PICUP/resources/Course-Materials.cfm) | — |
+| | 📕 Book | Numerical Recipes: The Art of Scientific Computing | Press et al. | — | [numerical.recipes](http://numerical.recipes/) | The classic algorithms reference, each method explained and then implemented. Use single chapters as needed: ODE integration for exercise 1 and power-spectrum estimation for exercise 3. |
+| 🔑 | 🎓 Course (free) | MIT 18.085 Computational Science and Engineering I (Fall 2008) | Gilbert Strang | 2008 | [MIT OCW](https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/) | Strang's applied-math course on OpenCourseWare, with lecture videos, problem sets, programming assignments and exams: linear algebra applied to networks and structures, Laplace's equation and boundary-value problems, Fourier series and the DFT. Its AᵀCA framework drives exercise 2 and the mini-project. |
+| | 📕 Book | Computational Physics (2nd ed., 2007) | Jos Thijssen | 2007 | [Cambridge](https://doi.org/10.1017/CBO9781139171397) | A graduate text on the methods behind quantum and statistical computation, including quantum Monte Carlo and density functional theory. Optional: reach for it after Newman if you want those methods. |
+| | 📕 Book | A Survey of Computational Physics: Introductory Computational Science | Rubin H. Landau, José Páez & Cristian C. Bordeianu | 2008 | — | A broad survey (Princeton University Press, 2008) with exercises across all areas of computational physics; exercise 3 uses its Fourier-analysis material. Optional beside Newman. |
 | | 📕 Book | A Student's Guide to Python for Physical Modeling | Kinder & Nelson | — | — | — |
-| | 📕 Book | The FEniCSx Tutorial — Jørgen S. Dokken (online book, CC BY 4.0) | — | — | [jsdokken.com](https://jsdokken.com/dolfinx-tutorial/) | — |
+| | 🧭 Online book (free) | The FEniCSx Tutorial | Jørgen S. Dokken | — | [jsdokken.com](https://jsdokken.com/dolfinx-tutorial/) | A free online book (CC BY 4.0) on the finite-element method in Python with DOLFINx: Poisson, heat, linear elasticity, Navier–Stokes, Helmholtz and an electromagnetics example. It turns 18.085's theory into working thermal, electrostatic and structural simulations. |
+
+**See also:** spectral estimation in depth (windows, scalloping loss, ENBW, Welch averaging) has its home in [math/12 — Fourier Analysis, Signals and Systems](../../math/12-fourier-analysis-signals-and-systems/README.md); floating point, conditioning and general numerical algorithms in [math/14 — Numerical Methods and Scientific Computing](../../math/14-numerical-methods-and-scientific-computing/README.md).
 
 <!-- resources:end -->
 
@@ -42,16 +44,16 @@ After this section you can:
 
 ## Suggested Order
 
-**Core path (🔑):** Newman, *Computational Physics*
+**Core path (🔑):** Newman, *Computational Physics* → Strang's MIT 18.085 lectures
 
 1. **Kinder & Nelson — Python for Physical Modeling** — Get comfortable with Python, NumPy, and matplotlib for physics computations.
 2. **Newman — Computational Physics** — Your primary textbook. Covers integration, ODEs, PDEs, Monte Carlo methods, and molecular dynamics with Python.
 3. **Giordano & Nakanishi — Computational Physics** — Alternative textbook with good coverage of chaos, fractals, and computational fluid dynamics.
-4. **MIT 18.085 (Strang)** — Lectures on the mathematical foundations: linear algebra, Fourier methods, and finite elements.
+4. **MIT 18.085 (Strang)** — The second core item: lectures on the mathematical foundations, from linear algebra applied to networks and structures (the AᵀCA framework behind exercise 2) through Laplace's equation, boundary-value problems, Fourier series and the DFT.
 5. **Dokken — The FEniCSx Tutorial** — Hands-on finite elements in Python (DOLFINx): Poisson, heat, linear elasticity, Navier–Stokes, Helmholtz, and an electromagnetics example. Turns 18.085's theory into working thermal, electrostatic, and structural simulations. It grew out of Langtangen & Logg's open-access *Solving PDEs in Python: The FEniCS Tutorial I* (Springer, 2016), which targets the older legacy FEniCS.
 6. **Press et al. — Numerical Recipes** — The classic reference for numerical algorithms. Use specific chapters as needed.
 7. **Thijssen — Computational Physics** — Advanced topics including quantum Monte Carlo and density functional theory.
-8. **Landau, Páez & Bordeianu** — Comprehensive survey with exercises spanning all areas of computational physics.
+8. **Landau, Páez & Bordeianu — A Survey of Computational Physics** — Comprehensive survey with exercises spanning all areas of computational physics.
 
 ---
 
@@ -63,7 +65,7 @@ After this section you can:
 4. **Monte Carlo uncertainty budget** — Model a PT1000 RTD in a bridge read by an instrumentation amp and a 16-bit ADC: 0.1% resistors (uniform), 25 ppm/K TCR, ±0.1% gain error, ADC noise, reference error. Propagate to temperature uncertainty two ways: first-order linear propagation with partial derivatives, and Monte Carlo with 10⁶ draws. Show the Monte Carlo standard error falling as 1/√N, rank the inputs by contribution, and widen the tolerances until linear propagation visibly fails (skewed output). Success: the two methods agree within ~5% at small tolerances, and you produce a ranked error-budget table. *(~3 h · Newman Ch. 10; Kinder & Nelson (random numbers and random walks in NumPy))*
 5. **FDTD and the CFL limit** — Implement 1D FDTD (Yee-staggered V and I) for the telegrapher's equations with a 50 Ω Thevenin source, an impedance step, and a resistive load. Show (a) exact, dispersion-free propagation at Courant number S = 1, (b) numerical dispersion on a sharp edge at S = 0.5, (c) exponential blow-up at S = 1.01. Compare reflection coefficients with Γ = (Z₂ − Z₁)/(Z₂ + Z₁), and if you built the Section 03 coupon, overlay a measured TDR trace. Success: Γ within 1% of theory and instability onset exactly above S = 1. *(~3 h · Newman Ch. 9 (PDE methods; stability analysis); Strang, MIT 18.085 (finite differences))*
 
-**🏗️ Mini-project — Thermal Model of a Real PCB:** Solve the 2D heat equation for a board treated as a thin sheet: in-plane conductance from its copper (k ≈ 390 W/m·K) and FR-4 (≈ 0.3 W/m·K) weighted by copper coverage per layer, heat sources at component footprints, and losses from both faces — natural convection h ≈ 5–10 W/m²K plus linearized radiation 4εσT³ ≈ 5.5 W/m²K. Use your sparse-matrix machinery for steady state and Crank–Nicolson for transients. Validate first against an analytic fin (a strip losing heat by convection, insulated tip: T − T_∞ ∝ cosh(m(L − x)), m = √(hP/kA)), then against a real board: dissipate 0.5–2 W in a resistor or LDO and log 3–5 thermocouples or NTCs (or use a thermal camera) to steady state. Deliverable: notebook and one-page memo in `projects/physics/06-pcb-thermal/` with predicted vs measured temperature rise and time constant, plus one design change (pour, thermal vias, or placement) quantified by the model. Success: hot-spot ΔT within 15% and time constant within 25% of measurement. *(~12 h)*
+**🏗️ Mini-project — Thermal Model of a Real PCB:** Solve the 2D heat equation for a board treated as a thin sheet: in-plane conductance from its copper (k ≈ 390 W/m·K) and FR-4 (≈ 0.3 W/m·K) weighted by copper coverage per layer, heat sources at component footprints, and losses from both faces — natural convection h ≈ 5–10 W/m²K plus linearized radiation 4εσT³ ≈ 5.5 W/m²K. Use your sparse-matrix machinery for steady state and Crank–Nicolson for transients. Validate first against an analytic fin (a strip losing heat by convection, insulated tip: T − T_∞ ∝ cosh(m(L − x)), m = √(hP/kA)), then against a real board: dissipate 0.5–2 W in a resistor or LDO and log 3–5 thermocouples or NTCs (or use a thermal camera) to steady state. Deliverable: notebook and one-page memo in `projects/physics/06-pcb-thermal/` with predicted vs measured temperature rise and time constant, plus one design change (pour, thermal vias, or placement) quantified by the model. Success: hot-spot ΔT within 15% and time constant within 25% of measurement. *(~12 h · Newman Ch. 9; Strang, MIT 18.085 (AᵀCA; finite differences); Dokken, The FEniCSx Tutorial (the heat equation))*
 
 ## ✅ Check Yourself
 

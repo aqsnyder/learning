@@ -10,6 +10,7 @@ title = "Gradient-Based Learning Applied to Document Recognition (LeNet-5)"
 authors = "LeCun, Bottou, Bengio, Haffner"
 year = "1998"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1109/5.726791"
 link_text = "Paper"
 description = "The canonical early CNN: stacked convolution and subsampling layers trained end-to-end with backprop, deployed commercially to read bank cheques. Almost every idea in AlexNet is already recognizable here."
@@ -21,6 +22,7 @@ title = "ImageNet Classification with Deep Convolutional Neural Networks (AlexNe
 authors = "Krizhevsky, Sutskever, Hinton"
 year = "2012"
 type = "paper"
+access = "free"
 marks = ["canon"]
 url = "https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks"
 link_text = "Paper"
@@ -60,10 +62,11 @@ authors = "Fei-Fei Li, Justin Johnson, Serena Yeung"
 year = "2017"
 type = "course"
 access = "free"
+level = "intermediate"
 marks = ["core", "canon"]
 url = "https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv"
 link_text = "YouTube"
-description = "The gold-standard course on CNNs (Spring 2017 lectures; also on the Ilya Sutskever reading list). Covers backprop, convolutions, architectures, detection, segmentation, and generative models."
+description = "Stanford's course on CNNs for vision (the Spring 2017 lectures; also on the Ilya Sutskever reading list): backprop, convolutions, architectures, detection, segmentation and generative models. Lectures 1–9 carry this section's core path."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -167,7 +170,7 @@ access = "free"
 marks = ["core"]
 url = "https://arxiv.org/abs/2010.11929"
 link_text = "Paper"
-description = "THE must-read. Proved transformers could match/beat CNNs on vision by treating image patches as tokens."
+description = "Showed that a plain transformer applied to 16×16 image patches, treated as tokens, matches or beats CNNs on image classification when pre-trained on enough data. The anchor paper for objective 4 and Practice 4."
 verified = 2026-10-13
 
 [[groups.items]]

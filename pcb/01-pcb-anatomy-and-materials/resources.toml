@@ -4,40 +4,114 @@
 
 [[groups]]
 outro = '''
-**Also used here (tracked in their home sections):** Saturn PCB Toolkit and IPC-2152 ([Section 05](../05-power-and-grounding/README.md)) for Practice 2; Rick Hartley's grounding lecture ([Section 05](../05-power-and-grounding/README.md)) as evidence in Practice 4.
+**Also used here (tracked in their home sections):** Saturn PCB Toolkit and IPC-2152 ([Section 05](../05-power-and-grounding/README.md)) for Practice 2; Rick Hartley's grounding lecture and ADI's MT-031 ([Section 05](../05-power-and-grounding/README.md)) as evidence in Practice 4.
 '''
 
 [[groups.items]]
 id = "pcb-design-tutorial-rev-a-2004"
-title = "PCB Design Tutorial Rev A (2004)"
-authors = "David L. Jones (EEVblog)"
+title = "*PCB Design Tutorial*, Revision A"
+authors = "David L. Jones"
 year = "2004"
 type = "tutorial"
+access = "free"
 marks = ["core"]
 url = "../documents/PCBDesignTutorialRevA.pdf"
 link_text = "documents/PCBDesignTutorialRevA.pdf"
-description = "Comprehensive intro to PCB structure. It is a 2004, Protel-era snapshot, and some advice is outdated: its split-plane \"star grounding\" (see Section 05) and \"avoid generating Gerbers\" (see Section 09). Its track-width table comes from the old IPC-2221 charts (use IPC-2152; see Section 05)"
+description = "A 25-page introduction to what a PCB is and how one is designed and made: layers, tracks, pads, vias, placement, routing, design rules, substrates and prepreg, surface finishes and electrical test. It is a June 2004, Protel-era snapshot, bundled here under its own terms (\"freely distributable for educational and personal use\"). Some advice is outdated: its split-plane \"star grounding\" (see Section 05) and \"avoid generating Gerbers\" (see Section 09). Its track-width table comes from the old IPC-2221 charts (use IPC-2152; see Section 05)"
+verified = 2026-10-21
 
 [[groups.items]]
-id = "nine-dot-connects"
-title = "Nine Dot Connects"
-type = "website"
-label = "Web Resource"
+id = "pcb-materials-guide-fr-4-rogers-etc"
+title = "PCB Material Selection: Electrical and Manufacturing Considerations"
+authors = "Milan Yogendrappa (Sierra Circuits)"
+year = "2021"
+type = "article"
+access = "free"
 marks = ["core"]
-url = "https://www.ninedotconnects.com/"
-link_text = "ninedotconnects.com"
-description = "Professional PCB design education"
-verified = 2026-10-13
+url = "https://www.protoexpress.com/blog/pcb-material-selection-electrical-manufacturing-considerations/"
+link_text = "protoexpress.com"
+description = "A fab's guide to the laminate properties that decide a material: Tg, Td, CTE and thermal conductivity, Dk and Df, moisture absorption and CAF resistance, with standard FR-4, low-loss and Rogers materials compared by category. Read it before Practice 3."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "laminate-data-sheets-370hr-ro4350b"
+title = "Laminate data sheets: Isola 370HR (high-Tg FR-4) · Rogers RO4350B (hydrocarbon/ceramic)"
+authors = "Isola Group; Rogers Corporation"
+type = "docs"
+label = "Data sheets"
+access = "free"
+marks = ["core"]
+url = "https://www.isola-group.com/wp-content/uploads/data-sheets/370hr.pdf"
+link_text = "370HR (PDF)"
+more_links = [{ text = "RO4350B", url = "https://www.rogerscorp.com/advanced-electronics-solutions/ro4000-series-laminates/ro4350b-laminates" }]
+description = "Worked examples of the numbers Practice 3 asks for. 370HR (data sheet updated April 2021): Tg 180 °C (DSC), Td 340 °C, z-axis CTE 45 ppm/°C below Tg and 230 ppm/°C above it (2.8 % from 50 to 260 °C), Dk falling from 4.24 at 100 MHz to 3.92 at 10 GHz while Df rises from 0.015 to 0.025, moisture absorption 0.15 %, listed against IPC-4101 /98, /99, /101 and /126. RO4350B: woven-glass hydrocarbon/ceramic that processes like FR-4, with Dk 3.48 ± 0.05 (process) or 3.66 (design) and Df 0.0037 at 10 GHz, and z-axis CTE 32 ppm/°C. Compare both with your fab's standard FR-4 data sheet."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "sierra-circuits-pcb-knowledge-base"
+title = "Copper for PCBs"
+authors = "Sierra Circuits"
+type = "docs"
+label = "Knowledge base"
+access = "free"
+url = "https://www.protoexpress.com/kb/copper-for-pcbs/"
+link_text = "protoexpress.com"
+description = "Sierra Circuits' knowledge-base entry on PCB copper: weight in oz/ft² and the resulting thickness (1 oz ≈ 1.4 mil), electro-deposited vs rolled-annealed foil, low-profile foil for lower high-frequency loss, and the IPC-2221 current-capacity constants (k = 0.048 external, 0.024 internal). Use it for Practices 1 and 2. The page names no author and shows no date."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "ipc-4101-slash-sheets-sierra"
+title = "How to Choose PCB Laminates Based on IPC Standards"
+authors = "Sushmitha V (Sierra Circuits)"
+year = "2025"
+type = "article"
+access = "free"
+url = "https://www.protoexpress.com/blog/how-to-choose-pcb-laminates-based-on-ipc-standards/"
+link_text = "protoexpress.com"
+more_links = [{ text = "Isola materials certified to /126", url = "https://www.isola-group.com/pcb-laminates-prepreg/slash-sheets/126-2/" }]
+description = "Explains IPC-4101's slash-sheet system, which lets a fab note name a laminate class instead of a brand: each sheet fixes the resin system, filler and minimum Tg and Td, e.g. /101 and /121 (Tg ≥ 110 °C, Td ≥ 310 °C), /99 and /124 (Tg ≥ 150 °C, Td ≥ 325 °C), /126 and /129 (Tg ≥ 170 °C, Td ≥ 340 °C). IPC-4101 itself is a paid IPC standard; where the article's comparison table and a data sheet disagree, trust the data sheet and the standard. A laminate maker's list of materials per slash sheet (the Isola link) shows how a class maps to products. Used in the mini-project."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "sierra-laminates-for-fabrication"
+title = "How to Choose PCB Laminates and Materials for Fabrication"
+authors = "Amit Bahl (Sierra Circuits)"
+year = "2020"
+type = "article"
+access = "free"
+url = "https://www.protoexpress.com/blog/comparing-the-manufacturability-of-pcb-laminates/"
+link_text = "protoexpress.com"
+description = "How the laminate changes fabrication: lamination temperatures and pressures, drill wear (Rogers material wears bits faster, which adds cost), desmear and plasma tuned to each material before electroless copper, and CTE mismatch in mixed stack-ups. Use it for Objective 1: what each process step implies for your design and its cost."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "altium-academy-basics"
-title = "Altium Academy Basics"
-type = "video-series"
+title = "Do You Need Low Dk PCB Materials?"
+authors = "Altium Academy"
+type = "video"
 access = "free"
-url = "https://www.youtube.com/@AltiumAcademy"
-link_text = "youtube.com/@AltiumAcademy"
-description = "PCB fundamentals and stackup intro"
-verified = 2026-10-13
+level = "intermediate"
+url = "https://www.youtube.com/watch?v=F-CIJDsTwwE"
+link_text = "YouTube"
+description = "Altium Academy video on when a low-Dk material is worth choosing over standard FR-4. Watch it before you write Practice 3's memo."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "kicad-calculator-tools"
+title = "KiCad 10 manual — Calculator Tools"
+authors = "Heitor de Bittencourt, Mathias Neumann (KiCad Documentation Contributors)"
+year = "2026"
+type = "docs"
+access = "free"
+url = "https://docs.kicad.org/10.0/en/pcb_calculator/pcb_calculator.html"
+link_text = "docs.kicad.org"
+more_links = [
+  { text = "Track Width", url = "https://docs.kicad.org/10.0/en/pcb_calculator/pcb_calculator.html#track-width" },
+  { text = "Electrical Spacing", url = "https://docs.kicad.org/10.0/en/pcb_calculator/pcb_calculator.html#electrical-spacing" },
+  { text = "TransLine", url = "https://docs.kicad.org/10.0/en/pcb_calculator/pcb_calculator.html#transline" },
+]
+description = "The manual for KiCad's free PCB Calculator, a free route to the IPC-2221 numbers this curriculum uses. Its Track Width tool \"uses formulas from IPC-2221\" (check Practice 2's code against it), its Electrical Spacing table gives a minimum conductor spacing for each voltage range (Section 04, Practice 2), and its TransLine tool solves microstrip, stripline and coplanar waveguide with ground (Sections 04 and 06)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ipc-2221-generic-standard-on-printed"
@@ -48,21 +122,5 @@ type = "standard"
 access = "paid"
 url = "https://shop.electronics.org/ipc-2221/ipc-2221-standard-only/Revision-c/english"
 link_text = "IPC store (Rev C)"
-description = "THE foundational IPC design standard, sold by IPC (current revision C, 2023; earlier: B, 2012, and A, 2003). Section, table and figure numbers in this curriculum follow Rev A; in a later revision, find the same topic by name. Its conductor current charts (Fig. 6-4) date from a 1956 NBS report, and the internal-layer curve was never tested (it is just half the external one; see Appendix B of Rev A). IPC-2152 (2009) replaced those charts, so size traces for current with IPC-2152 (Section 05), not Fig. 6-4"
+description = "The foundational IPC design standard, sold by IPC (current revision C, 2023, as of October 2026; earlier: B, 2012, and A, 2003). Section, table and figure numbers in this curriculum follow Rev A; in a later revision, find the same topic by name. Its conductor current charts (Fig. 6-4) date from a 1956 NBS report, and the internal-layer curve was never tested (it is just half the external one; see Appendix B of Rev A). IPC-2152 (2009) replaced those charts, so size traces for current with IPC-2152 (Section 05), not Fig. 6-4. No copy is included in this repository: every exercise that cites it names a free route, or says when only the paid standard will do."
 verified = 2026-10-21
-
-[[groups.items]]
-id = "sierra-circuits-pcb-knowledge-base"
-title = "Sierra Circuits PCB Knowledge Base"
-type = "website"
-label = "Web Resource"
-url = "https://www.protoexpress.com/blog/"
-link_text = "protoexpress.com/blog"
-description = "Manufacturing constraints reference"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "pcb-materials-guide-fr-4-rogers-etc"
-title = "PCB Materials Guide (FR-4, Rogers, etc.)"
-type = "article"
-description = "Understanding substrate choices"

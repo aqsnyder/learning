@@ -13,6 +13,9 @@ type = "book"
 marks = ["core"]
 url = "https://www.eftaylor.com/spacetimephysics/"
 link_text = "eftaylor.com (free, CC BY)"
+description = "An introduction to special relativity built on the invariant interval and spacetime diagrams rather than on transformation formulas, with many worked paradoxes and a momenergy treatment of collisions. The full second edition is a free download under CC BY 4.0; it carries exercises 1 and 2."
+access = "free"
+level = "beginner"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -33,19 +36,25 @@ year = "1905"
 type = "paper"
 marks = ["core"]
 url = "https://www.fourmilab.ch/etexts/einstein/specrel/specrel.pdf"
-link_text = "Link"
+link_text = "English translation (Fourmilab PDF)"
+description = "Einstein's 1905 special-relativity paper in English translation: it opens with the magnet-and-conductor asymmetry, defines simultaneity operationally with light signals (§1), derives the Lorentz transformation and transforms the fields. Exercise 2 is a close reading of it."
+access = "free"
 verified = 2026-10-13
 
 [[groups.items]]
 id = "spacetime-and-geometry"
-title = "Spacetime and Geometry"
-authors = "Sean Carroll"
+title = "Spacetime and Geometry: An Introduction to General Relativity"
+authors = "Sean M. Carroll"
+year = "2019"
 type = "book"
-access = "free"
+access = "partial"
+level = "advanced"
 marks = ["core"]
-url = "https://arxiv.org/abs/gr-qc/9712019"
-link_text = "free 1997 lecture notes (arXiv)"
-verified = 2026-10-13
+url = "https://doi.org/10.1017/9781108770385"
+link_text = "Cambridge"
+more_links = [{ text = "free 1997 lecture notes (arXiv)", url = "https://arxiv.org/abs/gr-qc/9712019" }]
+description = "The standard graduate introduction to general relativity, now published by Cambridge University Press: manifolds, curvature, Einstein's equations, black holes and cosmology; Ch. 3 and 5 carry exercise 4. Carroll's free 1997 lecture notes cover much of the same ground if you want to start before buying the book."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "gravity-an-introduction-to-einstein-s"
@@ -73,14 +82,17 @@ year = "2003"
 type = "paper"
 url = "https://doi.org/10.12942/lrr-2003-1"
 link_text = "Living Reviews"
-verified = 2026-10-13
+description = "A review in *Living Reviews in Relativity* of every relativistic effect GPS must handle: the net ≈ 38 µs/day satellite clock rate, the Sagnac effect and smaller corrections. The source for exercise 3's clock budget."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "observation-of-gravitational-waves-from"
 title = "Observation of Gravitational Waves from a Binary Black Hole Merger"
-authors = "LIGO Scientific & Virgo Collaborations"
+authors = "B. P. Abbott et al. (LIGO Scientific & Virgo Collaborations)"
 year = "2016"
 type = "paper"
 url = "https://doi.org/10.1103/PhysRevLett.116.061102"
 link_text = "DOI"
-verified = 2026-10-13
+description = "The open-access *Physical Review Letters* paper announcing GW150914, the first direct detection of gravitational waves. Read it as a precision-measurement case study: a strain of order 10⁻²¹ pulled out of interferometer noise and matched to general relativity's waveform."
+access = "free"
+verified = 2026-10-21

@@ -7,26 +7,29 @@
 [[groups.items]]
 id = "essence-of-linear-algebra"
 title = "Essence of Linear Algebra"
-authors = "3Blue1Brown"
+authors = "3Blue1Brown (Grant Sanderson)"
 type = "video-series"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
-link_text = "Link"
-description = "The gold standard for geometric intuition. Visualizes vectors, transformations, determinants, eigenvalues, and change of basis. Watch this first."
-verified = 2026-10-13
+link_text = "YouTube"
+description = "The 3Blue1Brown playlist that builds geometric intuition before formalism: vectors, linear maps as transformations, determinants, eigenvalues, and change of basis. Watch it first. Also used in ml/01."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mit-18-06-linear-algebra"
 title = "MIT 18.06 Linear Algebra"
 authors = "Gilbert Strang"
+year = "2010"
 type = "course"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
-link_text = "Link"
-description = "The legendary MIT course. Strang's teaching is unmatched for building computational and conceptual understanding simultaneously."
-verified = 2026-10-13
+link_text = "MIT OCW"
+description = "Strang's Spring 2010 course on MIT OpenCourseWare: 34 video lectures, ten problem sets with solutions, and exams with solutions. It builds computational skill and the conceptual picture (the four fundamental subspaces, projections, eigenvalues, the SVD) together. The problem sets cite sections of the 4th edition of Strang's textbook."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "linear-algebra-done-right"
@@ -50,7 +53,10 @@ year = "2023"
 type = "book"
 access = "paid"
 level = "beginner"
-description = "Strang's textbook companion to 18.06. More computational than Axler, excellent for applications."
+url = "https://math.mit.edu/~gs/linearalgebra/ila6/indexila6.html"
+link_text = "Author's page"
+description = "Strang's textbook for 18.06, 6th edition (Wellesley-Cambridge Press, 2023). More computational than Axler and strong on applications. The 2010 18.06 problem sets use the 4th edition's section numbers, so match them by topic."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "linear-algebra"
@@ -70,6 +76,8 @@ title = "Matrix Analysis and Applied Linear Algebra (2nd ed.)"
 authors = "Carl D. Meyer"
 year = "2023"
 type = "book"
+access = "paid"
+level = "advanced"
 url = "https://doi.org/10.1137/1.9781611977448"
 link_text = "Link"
 description = "Advanced reference for matrix decompositions, norms, and numerical linear algebra. Useful when you need depth on SVD, pseudoinverses, or matrix perturbation theory. Second edition (SIAM, 2023; 1st ed. 2000), with a separate *Study and Solutions Guide*."
@@ -81,20 +89,22 @@ title = "Linear Algebra"
 authors = "Khan Academy"
 type = "video-series"
 access = "free"
+level = "beginner"
 url = "https://www.khanacademy.org/math/linear-algebra"
 link_text = "Link"
 description = "Gap-filler for specific topics. Good for extra practice on matrix operations, transformations, and eigenvalues."
 
 [[groups.items]]
 id = "mit-18-065-matrix-methods-in-data"
-title = "MIT 18.065 Matrix Methods in Data Analysis"
+title = "MIT 18.065 Matrix Methods in Data Analysis, Signal Processing, and Machine Learning"
 authors = "Gilbert Strang"
 year = "2018"
 type = "course"
 access = "free"
+level = "intermediate"
 url = "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/"
-link_text = "Link"
-description = "Strang's follow-up course connecting linear algebra to data science, deep learning, and signal processing. Bridge to ML applications."
+link_text = "MIT OCW"
+description = "Strang's Spring 2018 follow-up course connecting linear algebra to data analysis, signal processing, and deep learning. Practice 3–4 and the mini-project use its Lectures 7 (Eckart–Young), 9 (four ways to solve least squares) and 30–31 (circulants and the Fourier matrix)."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -107,18 +117,20 @@ access = "free"
 level = "beginner"
 url = "https://mml-book.github.io/"
 link_text = "Link"
-description = "Chapters 2–4 cover linear algebra, analytic geometry, and matrix decompositions specifically targeted at ML. Good for connecting theory to practice."
+description = "Chapters 2–4 cover linear algebra, analytic geometry, and matrix decompositions specifically targeted at ML. Good for connecting theory to practice. Section 04 uses the same book's Ch. 7 (continuous optimization). Also used in ml/01."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "the-matrix-cookbook"
 title = "The Matrix Cookbook"
-authors = "Kaare Brandt Petersen, Michael Pedersen"
+authors = "Kaare Brandt Petersen, Michael Syskind Pedersen"
 year = "2012"
-type = "paper"
+type = "report"
+label = "Reference"
+access = "free"
 url = "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf"
-link_text = "Link"
-description = "Essential reference sheet for matrix identities, derivatives, and decompositions. Keep this bookmarked."
+link_text = "PDF"
+description = "A free compendium of matrix identities, derivatives, and decompositions (version of November 2012). Practice 3 uses its derivative identities to derive the normal equations; keep it as a lookup table, not a textbook."
 verified = 2026-10-13
 
 [[groups.items]]

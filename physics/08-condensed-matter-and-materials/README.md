@@ -27,14 +27,14 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📕 Book | Introduction to Solid State Physics | Charles Kittel | — | — | — |
-| 🔑 | 📕 Book | The Oxford Solid State Basics | Steven H. Simon | — | — | — |
-| | 📕 Book | Solid State Physics | Ashcroft & Mermin | — | — | — |
-| | 🎓 Course (free) | MIT 8.231 Physics of Solids I (Fall 2006) — Xiao-Gang Wen (problem sets only) | — | — | [MIT OCW](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/) | — |
-| | 📕 Book | Modern Condensed Matter Physics | Girvin & Yang | — | — | — |
-| 🔑 | 📄 Paper | More Is Different | P.W. Anderson | 1972 | [Link](https://www.science.org/doi/10.1126/science.177.4047.393) | — |
-| | 🎓 Course | The Oxford Solid State Basics (lecture videos, 2014) | Steven H. Simon | 2014 | [Oxford Podcasts](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) | — |
-| | 📕 Book | Modern Semiconductor Devices for Integrated Circuits | Chenming Hu | 2010 | [chu.berkeley.edu (free chapters)](https://www.chu.berkeley.edu/modern-semiconductor-devices-for-integrated-circuits-chenming-calvin-hu-2010/) | — |
+| 🔑 | 📕 Book | Introduction to Solid State Physics | Charles Kittel | — | — | The classic undergraduate text: crystal structure, phonons, the free-electron Fermi gas, energy bands and semiconductor crystals, plus the chapter on dielectrics and ferroelectrics behind Practice 4. Read it after Simon, for breadth and for its problems. |
+| 🔑 | 📕 Book | The Oxford Solid State Basics | Steven H. Simon | — | — | A clear modern first course: the Drude and Sommerfeld models, vibrations and electrons in one-dimensional chains, tight binding, semiconductor physics and devices, and magnetism with mean-field theory. The first pass through objectives 1–3, before Kittel. |
+| | 📕 Book | Solid State Physics | Ashcroft & Mermin | — | — | The standard graduate reference, more advanced and complete than Kittel: the Drude and Sommerfeld theories and their failures (Ch. 1–2, used in Practice 2), semiclassical transport, magnetism and superconductivity. |
+| | 🎓 Course (free) | MIT 8.231 Physics of Solids I (Fall 2006) | Xiao-Gang Wen | 2006 | [MIT OCW](https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/) | Problem sets (the OCW site has no lecture notes or videos) from Wen's MIT course introducing the quantum theory of solids. Use them for extra practice after Simon and Kittel. |
+| | 📕 Book | Modern Condensed Matter Physics | Girvin & Yang | — | — | A modern graduate text that reaches topological phases and the quantum Hall effect; the source for Practice 1's stretch goal, the winding number of the dimerized chain. |
+| 🔑 | 📄 Paper | More Is Different: Broken Symmetry and the Nature of the Hierarchical Structure of Science | P. W. Anderson | 1972 | [DOI (Science)](https://doi.org/10.1126/science.177.4047.393) | Anderson's short essay in *Science* arguing that each level of complexity has its own laws, which can't be derived in practice from the level below, with broken symmetry (crystals, superconductivity, ammonia inversion) as the mechanism. The text behind objective 5 and Practice 5. |
+| | 🎓 Course (free) | The Oxford Solid State Basics (lecture videos, 2014) | Steven H. Simon | 2014 | [Oxford Podcasts](https://podcasts.ox.ac.uk/series/oxford-solid-state-basics) | Simon's own lecture course on the book, recorded at Oxford and free on the university's podcast site. Watch it alongside the book as a first pass through the core material. |
+| | 📕 Book (free) | Modern Semiconductor Devices for Integrated Circuits | Chenming Hu | 2010 | [chu.berkeley.edu (free chapters)](https://www.chu.berkeley.edu/modern-semiconductor-devices-for-integrated-circuits-chenming-calvin-hu-2010/) | Hu's device textbook (Pearson Prentice Hall, 2010), all eight chapters free on the author's site: carriers, drift and diffusion, pn and metal–semiconductor junctions, MOS capacitors, MOSFETs and bipolar transistors. The bridge from band theory to the devices in objective 3 and the mini-project. |
 
 <!-- resources:end -->
 

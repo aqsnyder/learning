@@ -57,6 +57,18 @@ description = "The standard Python toolkit for cheminformatics — tutorials cov
 verified = 2026-10-13
 
 [[groups.items]]
+id = "openmm"
+title = "OpenMM"
+authors = "OpenMM developers"
+type = "tool"
+label = "Software"
+access = "free"
+url = "https://openmm.org/"
+link_text = "OpenMM"
+description = "A high-performance toolkit for molecular simulation, open source under the MIT and LGPL licences and scriptable from Python — the MD engine Practice 2 uses to check your hand-computed force-field energy term by term"
+verified = 2026-10-21
+
+[[groups.items]]
 id = "zinc-database-free-library-of"
 title = "ZINC-22 — A Free Multi-Billion-Scale Database of Tangible Compounds for Ligand Discovery"
 authors = "Tingle, B. I., Tang, K. G., Castanon, M., Gutierrez, J. J., Khurelbaatar, M., Dandarchuluun, C., Moroz, Y. S., Irwin, J. J."

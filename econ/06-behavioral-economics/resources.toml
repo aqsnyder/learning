@@ -71,10 +71,15 @@ verified = 2026-10-13
 [[groups.items]]
 id = "noise-a-flaw-in-human-judgment"
 title = "Noise: A Flaw in Human Judgment"
-authors = "Daniel Kahneman, Olivier Sibony, Cass Sunstein"
+authors = "Daniel Kahneman, Olivier Sibony & Cass R. Sunstein"
 year = "2021"
 type = "book"
-description = "Companion to Thinking, Fast and Slow, focusing on variability (noise) rather than bias in human judgments."
+access = "paid"
+level = "beginner"
+url = "https://www.hachettebookgroup.com/titles/daniel-kahneman/noise/9780316451406/?lens=little-brown"
+link_text = "Little, Brown Spark"
+description = "Companion to *Thinking, Fast and Slow*, focusing on variability (noise) rather than bias in human judgments: system, level and pattern noise, noise audits, and decision hygiene. The method behind Practice 3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-undoing-project"
@@ -92,11 +97,13 @@ verified = 2026-10-21
 [[groups.items]]
 id = "behavioral-scientist"
 title = "Behavioral Scientist"
+authors = "Behavioral Scientist (magazine)"
 type = "blog"
+access = "partial"
 url = "https://behavioralscientist.org/"
 link_text = "Link"
-description = "Leading online magazine for behavioral science research and practical applications."
-verified = 2026-10-13
+description = "Online magazine on behavioral science research and its applications, with paid print, digital and event subscription tiers. Use its coverage of nudge replication for Practice 4, and check the underlying studies before trusting a headline effect."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "psychology-and-economics-evidence-from"
