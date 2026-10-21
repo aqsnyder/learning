@@ -4,7 +4,7 @@
 > ✔ = fixed in this review · ✱ = suggested only. Scorecards rate each section **as found**, before the fixes.
 
 ## Verdict
-The curriculum has the right skeleton: a sensible 00→11 arc, the right educators (Hartley, Bogatin, Ott, Phil's Lab, Feranec), a KiCad-centred workflow, and Rick Hartley's reading list as its intellectual spine. Against a professional bar it falls well short. Most rows are channel-level links ("Phil's Lab — Power Design Tutorials" → channel home) or link-less "Concept" rows. The ⭐ list was wrong: only 6 of Rick's 12 books were present, ⭐ sat on a book that is not on the list and on four of Rick's own talks, and the README table therefore showed 7 entries, one of them wrong. Two key files had broken links, and currency had lapsed: KiCad 8 docs while KiCad 10 is current, and the 2003 IPC-2221A presented as "THE" standard with no word that its current charts were replaced by IPC-2152. Most importantly, the topics that make up Aaron's actual job are almost absent: analog/mixed-signal and precision measurement, bring-up/test/DFT, interface layout (USB, Ethernet), switching-regulator layout, and release automation. **Overall grade: C as found (about B− after this pass).** **Single most important improvement:** add an *Analog, Mixed-Signal & Precision Measurement* section. Today the curriculum trains a digital-board designer, not a designer of precision test-and-measurement hardware. *Update: both proposed sections (Analog/Mixed-Signal & Precision Measurement, and Bring-up/Test & Debug) were approved and created as Sections 12 and 13; see below.*
+The curriculum has the right skeleton: a sensible 00→11 arc, the right educators (Hartley, Bogatin, Ott, Phil's Lab, Feranec), a KiCad-centred workflow, and Rick Hartley's reading list as its intellectual spine. Against a professional bar it falls well short. Most rows are channel-level links ("Phil's Lab — Power Design Tutorials" → channel home) or link-less "Concept" rows. The ⭐ list was wrong: only 6 of Rick's 12 books were present, ⭐ sat on a book that is not on the list and on four of Rick's own talks, and the README table therefore showed 7 entries, one of them wrong. Two key files had broken links, and currency had lapsed: KiCad 8 docs while KiCad 10 is current, and the 2003 IPC-2221A presented as "THE" standard with no word that its current charts were replaced by IPC-2152. Most importantly, the topics an embedded-hardware engineer works on daily are almost absent: analog/mixed-signal and precision measurement, bring-up/test/DFT, interface layout (USB, Ethernet), switching-regulator layout, and release automation. **Overall grade: C as found (about B− after this pass).** **Single most important improvement:** add an *Analog, Mixed-Signal & Precision Measurement* section. Today the curriculum trains a digital-board designer, not a designer of precision test-and-measurement hardware. *Update: both proposed sections (Analog/Mixed-Signal & Precision Measurement, and Bring-up/Test & Debug) were approved and created as Sections 12 and 13; see below.*
 
 ## Scorecard
 Scores reflect the curriculum **as found**, before this pass.
@@ -58,7 +58,7 @@ Scores reflect the curriculum **as found**, before this pass.
 - **Added:** nothing (corrections only). The IPC-2221C reference link is inline.
 
 ### 02 — Schematic Capture and Library Management
-- **Strengths:** KiCad-first; Aaron's own template is wired in; library sources listed.
+- **Strengths:** KiCad-first; the owner's own KiCad template was wired in (a private repository; the A+ program replaced it with a public resource); library sources listed.
 - **Problems:**
   - ✔ KiCad 8 docs → KiCad 10 Getting Started (10.0 released 2026-03-20; adds design variants and a graphical DRC rule editor; design blocks arrived in 9.0).
   - ✔ The suggested order now warns to verify third-party footprints and pin maps against the datasheet.
@@ -429,7 +429,7 @@ Both were appended without renumbering. `pcb/README.md`'s learning path lists th
 
   The PDN video's presenter could not be confirmed either (YouTube HTTP 429).
 
-## Top 5 priorities for Aaron in this curriculum
+## Top 5 priorities in this curriculum
 1. **Work through the new Section 12 (Analog, Mixed-Signal & Precision Measurement; take it after 05).** Start with ADI's *Op Amp Applications Handbook* Section 7, then the Keithley *Low Level Measurements Handbook* (guarding, leakage, Kelvin, SMUs) and MT-031. The calibrated error budget (Practice 1) and the characterized precision channel (mini-project) target the day job directly. This was the curriculum's biggest blind spot.
 2. **Use the new Section 13 (Bring-up, Test & Debug; take it after 09) on your next board.** Write the bring-up plan before the boards arrive, build the MCU first-contact runbook, and turn the Section 09 DFT plan into the pilot-run test station. Fill its "to verify" gaps (probing primer, fixture reference, PyVISA, boundary-scan tooling) next. software/07 covers the firmware-debugging side.
 3. **Treat KiCad as a pipeline, not just an editor.**
@@ -474,12 +474,12 @@ Both were appended without renumbering. `pcb/README.md`'s learning path lists th
   - independent-check STUDY-GUIDE.md:121 (inconsistent "(unverified…)" markers, pcb only) — pcb no longer carries any such marker; STUDY-GUIDE itself was out of scope
   - pcb/07:43, pcb/blogs-and-references/README.md:65 — IEC 61326/61010 statements — confirmed at the IEC webstore: IEC 61326-1 "Electrical equipment for measurement, control and laboratory use – EMC requirements – Part 1" (2012 ed. withdrawn 2020-10-26 for the 2020 ed.); IEC 61010-1:2010 ed. 3.0 (+AMD1:2016) "Safety requirements for electrical equipment for measurement, control, and laboratory use – Part 1" — statements correct; Wikipedia link replaced with the IEC page and editions added — https://webstore.iec.ch/en/publication/5275 ; https://webstore.iec.ch/en/publication/4279
   - This file's "To verify" lists (Proposed new sections A and B, and the Section 03 note) — ABCs of Probes, a production-fixture reference (JJS), a boundary-scan tool (Viveris) and PyVISA (cross-reference) went to 13; the ADI/Maxim MLCC article went to 03, the home for derating, which 12 already lists as a prerequisite; an open SMU design (J-SMU) went to 11, the home for open designs, with cross-references from 12
-  - pcb/02:29, pcb/blogs-and-references/README.md:24 — KiCAD_Template_Snyder returns 404 publicly — "(private repo — link works when signed in)" added; this session couldn't query the GitHub API for it
+  - pcb/02:29, pcb/blogs-and-references/README.md:24 — the owner's KiCad template repository returns 404 publicly — "(private repo — link works when signed in)" added; this session couldn't query the GitHub API for it
 - **Still unverified:**
   - J-STD-048A's current notice windows — only the superseded JESD48C (6 months to final order, 12 months to final shipment) was readable; 048A needs JEDEC registration. The row says so.
   - Author of Maxim AN5527 — not named on the ADI page.
   - Presenter of the PDN video WnLRHuvl6Eg (Section 05) — oEmbed gives "Power Distribution Network" on NineDotConnects; the watch page returned HTTP 429, so Rick Hartley as presenter is still unconfirmed.
-  - KiCAD_Template_Snyder — private vs renamed is for Aaron to confirm.
+  - The owner's KiCad template repository: private or renamed was for the owner to confirm (it is private).
   - Considered, not added: UrJTAG (urjtag.org and SourceForge code pages block automated fetches, so BSDL and cable support couldn't be confirmed); ADALM1000 (verified at analog.com as an open-source-hardware SMU-style learning module, 0–5 V / ±200 mA, but J-SMU is closer to precision SMU work); OpenFixture (exists, but its README cites OpenSCAD ≥ 2015.03 and Ubuntu 14.04 and drives KiCad's old Python scripting interface).
   - Not attempted (outside this pass's backlog): ST BSDL availability for the STM32 families in use; Brooks & Adam; Bogatin's *Practical Guide to Prototype Breadboard and PCB Design*; Wyatt & André; Ossmann's RF talk; Coombs; Holden; InteractiveHtmlBom; IPC-7352 status; USB-C layout notes; ST Nucleo design files; the GreatScott! handle.
   - Rate limits: the Crossref works query for *Fast Circuit Boards* and the YouTube watch page above returned HTTP 429 and were not refetched.
@@ -501,11 +501,11 @@ No pcb section had more than 3 🔑 resource rows (36 in all; 04 and 09 were tri
 - pcb/README.md legend: 🔑⭐ row now says "a core-path item" instead of "a must-read"
 - pcb/README.md Key Educators: Dr. EMC removed (not core in any section; unmarked in 06 and 07)
 - pcb/README.md Key Educators: Altium Academy removed (not core in any section; unmarked in 01, 04 and 07)
-- Not changed, for Aaron: courses/README.md #8 KiCad Official Documentation stays unmarked. No section lists the docs as a whole, but one part, the KiCad Getting Started Guide, is core in 02. Add 🔑 if a part counts.
+- Not changed, for the owner: courses/README.md #8 KiCad Official Documentation stays unmarked. No section lists the docs as a whole, but one part, the KiCad Getting Started Guide, is core in 02. Add 🔑 if a part counts.
 - Second check (2026-10-13): `books/README.md` #12 Rick Hartley's Reading Recommendations: 🔑 removed (index-only; the ⭐ marks on the 12 books carry his list).
 - Final decisions (2026-10-13):
   - 02: the KiCad Library Conventions (KLC) made core in place of the private KiCad template, which stays as a personal reference.
-  - The template repo is private: anonymous requests get 404 with no redirect, and the account's only public repo is `isi_openmv`.
+  - The template repo is private: anonymous requests get 404 with no redirect, and no public repository of that name exists.
   - The template's 🔑 in blogs-and-references was removed.
   - The update skill now says "at most 3".
 - Final pass: `pcb/README.md`'s "Key Educators" is renamed "Educators Worth Following" and marked as a highlights list, separate from the core paths. EEVblog stays on it, although it is no longer core in Section 00: Section 00's core path now names the four *Art of Electronics* chapters its objectives use (1, 4, 5 and 8).

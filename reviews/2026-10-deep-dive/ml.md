@@ -67,7 +67,7 @@ It falls short in three ways:
 ### 02 — Classical Machine Learning
 - **Strengths:** Ng plus ISLR plus scikit-learn is the right practical core. ESL and PRML serve as references.
 - **Problems:**
-  - ✔ ISLR was listed as the 2013 first edition. It is now the 2nd ed. (2021) plus ISLP, the Python edition (2023). Python labs suit Aaron's tooling.
+  - ✔ ISLR was listed as the 2013 first edition. It is now the 2nd ed. (2021) plus ISLP, the Python edition (2023). Python labs suit a Python toolchain.
   - ✔ PRML was marked paid with no link. It is a free PDF from Microsoft Research.
   - ✱ The Google ML Crash Course is redundant with Ng's course.
 - **Missing:**
@@ -409,7 +409,7 @@ It falls short in three ways:
 
 ### Section 14 — Edge & Embedded ML (TinyML)
 - **Position:** Section 14, after 13, so nothing is renumbered. Conceptually it follows 08 (quantization and distillation). Prerequisites: 02, 04, and 08.
-- **Why:** Aaron builds STM32 and embedded-C test-and-measurement hardware. The curriculum stops at datacenter-scale deployment. Nothing covers running a model in kilobytes of SRAM, toolchains for Cortex-M, sensor and time-series ML, or measuring on-target latency and energy. This is where ML meets his products, and his instrumentation skills are an advantage there.
+- **Why:** The intended learner builds STM32 and embedded-C test-and-measurement hardware. The curriculum stops at datacenter-scale deployment. Nothing covers running a model in kilobytes of SRAM, toolchains for Cortex-M, sensor and time-series ML, or measuring on-target latency and energy. This is where ML meets embedded products, and instrumentation skills are an advantage there.
 - **Outline:**
   1. Why on-device: latency, power, privacy, bandwidth. MCU constraints: SRAM/flash budgets, fixed-point, DSP and NPU blocks.
   2. Classical first: feature extraction from sensor and time-series signals (filters, FFT, statistics) plus small tree ensembles. When a model of a few kilobytes is enough.
@@ -498,7 +498,7 @@ It falls short in three ways:
     - O'Reilly *TinyML* and arXiv 2010.08678 (rate-limited).
   - YouTube oEmbed for the CS224n, CS229, and CS234 playlists returned client errors; flagged to the URL audit.
 
-## Top 5 priorities for Aaron in this curriculum
+## Top 5 priorities in this curriculum
 1. **Walk a lean core path first.**
    - 3Blue1Brown → Karpathy Zero to Hero with Prince's *UDL* as the text (03).
    - ResNet and CS231n (04).
@@ -553,7 +553,7 @@ It falls short in three ways:
   - ml/01-math-foundations/README.md:51, Legg thesis via the author's own copy — vetta.org is closed to WebFetch (robots.txt) and to this sandbox's proxy. An institutional copy appears in search results at folia.unifr.ch (`…/documents/317954/files/2008INFO002.pdf`), but WebFetch returned only binary and the proxy blocks direct download. USI's defence announcement (https://www.inf.usi.ch/en/node/8625: 17 June 2008, advisor Marcus Hutter) matches the row's metadata. The verified stafforini mirror stays.
   - MLPerf Tiny's reference models, datasets and energy-measurement rig — neither the abstract nor the repository README states them, so the row doesn't name them.
   - Husain's LLM-eval posts — not checked. Their natural home is software/09, outside this curriculum.
-- **Open decisions (not verification items):** 🔑 inflation (independent check) — the skill rule is now "aim for ~3"; pruning is Aaron's call (the review's suggestion for 08: Kaplan, Chinchilla, Adam, FlashAttention). Repo-level files outside `ml/` still describe Section 14 as proposed: root `README.md` (120 sections; "ml: 00–13"; the ml highlights row), `STUDY-GUIDE.md:52` (Track B item 4), and `reviews/2026-10-deep-dive/README.md:106`.
+- **Open decisions (not verification items):** 🔑 inflation (independent check) — the skill rule is now "aim for ~3"; pruning is the owner's call (the review's suggestion for 08: Kaplan, Chinchilla, Adam, FlashAttention). Repo-level files outside `ml/` still describe Section 14 as proposed: root `README.md` (120 sections; "ml: 00–13"; the ml highlights row), `STUDY-GUIDE.md:52` (Track B item 4), and `reviews/2026-10-deep-dive/README.md:106`.
 
 ## Link-audit fixes (2026-10-13)
 | File:line | Was | Now | Evidence URL |
@@ -585,7 +585,7 @@ It falls short in three ways:
 | 13 | Kipf & Welling GCN; Bronstein et al. *Geometric Deep Learning*; AlphaFold 2 | AlphaGeometry & AlphaProof (claim-audit reading; Practice 5 covers it) |
 - ml/11: the AI Index paragraph's "Essential for staying calibrated" now reads "Useful for staying calibrated", to match the demotion.
 - Sections 11–13: no index or README-list changes. None of the demoted items has a 🔑 row in `books/`, `courses/` or `blogs-and-references/`.
-- ml/12 now has no 🔑 in its Safety and Alignment or Evaluation tables (Christiano and DPO are core in Section 10). If Aaron wants one alignment item on the core path, Constitutional AI is the natural swap for Scaling Monosemanticity.
+- ml/12 now has no 🔑 in its Safety and Alignment or Evaluation tables (Christiano and DPO are core in Section 10). If the owner wants one alignment item on the core path, Constitutional AI is the natural swap for Scaling Monosemanticity.
 - Sections 07–10: no README-list changes, and no index file edited in this pass. The two index rows these demotions affect, `ml/courses/README.md` #10 *Intro to Large Language Models* (09) and #12 *RL Course* by David Silver (10), are covered by the `ml/courses/README.md` line below. Sutton & Barto (`books/` #8) and *Deep Dive into LLMs* (`courses/` #11) stay 🔑.
 - ml/10 keeps DPO 🔑, which the Section 12 demotion relies on. Christiano et al. is no longer core in 10, so the "ml/12 now has no 🔑" line's parenthetical holds only for DPO: InstructGPT, core in 09, carries the reward-model idea.
 - Sections 07–10 also gained a Description column (≤25 words per row); nothing else in those tables changed. Abstracts or pages fetched to confirm them: arXiv 2210.02747, 2303.01469, 1611.02731, 2506.02070, 1811.06965, 1909.08053, 2406.17557, 2412.19437, 2407.21783, 2401.01335, 2411.15124; diffusion.csail.mit.edu/2025, distill.pub, Weng's diffusion post, the Ultra-Scale Playbook, cs336.stanford.edu/spring2025, github.com/karpathy/build-nanogpt, anthropic.com/research, the "Deep Dive into LLMs" video page, rlhfbook.com, spinningup.openai.com.

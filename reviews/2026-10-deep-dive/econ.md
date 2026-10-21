@@ -278,7 +278,7 @@ The URLs below were fetched and confirmed this run (✔). Items marked ⧗ are s
 
 ### P1 · Economics of AI (labor, productivity, growth, agents)
 - **Position:** Split current 11 into "11 — Economics of AI" and "12 — AI Alignment through an Economic Lens", or replace 11's generic alignment items with cross-references to philosophy/07 and ml/12.
-- **Why:** The section title promises economics but delivers none. 2023–2026 produced the first credible causal evidence on generative AI and work. This is the most decision-relevant economics for Aaron, who runs a company and develops with AI assistance.
+- **Why:** The section title promises economics but delivers none. 2023–2026 produced the first credible causal evidence on generative AI and work. This is the most decision-relevant economics for an engineer who builds products and develops with AI assistance.
 - **Outline:**
   1. Frameworks: task-based automation (displacement vs. reinstatement) and AI as cheap prediction.
   2. Micro evidence: RCTs and field studies of productivity (writing, customer support, consulting, software developers), including null and negative results.
@@ -299,7 +299,7 @@ The URLs below were fetched and confirmed this run (✔). Items marked ⧗ are s
   - ⧗ Acemoglu — "The Simple Macroeconomics of AI" (NBER WP 2024)
   - ⧗ Humlum & Vestergaard — "Large Language Models, Small Labor Market Effects" (2025)
   - ⧗ Brynjolfsson, Chandar & Chen — "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence" (Stanford Digital Economy Lab, 2025)
-  - ⧗ Becker et al. (METR) — "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity" (2025). Especially relevant to Aaron's AI-assisted workflow.
+  - ⧗ Becker et al. (METR) — "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity" (2025). Especially relevant to an AI-assisted workflow.
   - ⧗ Handa et al. (Anthropic) — "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations" (Anthropic Economic Index, 2025)
   - ⧗ Hadfield-Menell & Hadfield — "Incomplete Contracting and AI Alignment" (AIES 2019)
 
@@ -426,9 +426,9 @@ Other gaps checked, and where they now live:
   
   Dependencies still outside the lists: **Budish (2018, "The Economic Limits of Bitcoin and the Blockchain"; the scaffold cites NBER WP 24717, which I could not verify) should be verified and added to Section 10**, and Calvano et al. (2020, *AER*) to Section 08. Other unlisted papers (Gode & Sunder in 01, Miller & Sanjurjo in 03, Gao et al. in 11) are attributions only; those exercises are fully specified without them.
 
-## Top 5 priorities for Aaron in this curriculum
+## Top 5 priorities in this curriculum
 
-1. **Read the economics of AI, not just alignment.** Approve P1, starting with the task-based framework and the 2023–26 productivity and labor studies. The METR developer RCT and the Anthropic Economic Index bear directly on his AI-assisted engineering workflow.
+1. **Read the economics of AI, not just alignment.** Approve P1, starting with the task-based framework and the 2023–26 productivity and labor studies. The METR developer RCT and the Anthropic Economic Index bear directly on an AI-assisted engineering workflow.
 2. **Build evidence literacy before the behavioral sections.** Read the "Train Wreck" audit, DellaVigna & Linos, and Data Colada alongside Kahneman, Thaler and Ariely. Add the econometrics track (P2) so empirical claims can be judged, not just collected.
 3. **Fix the order in practice.** Do normative decision theory (SEP *Decision Theory*, the vNM appendix) before game theory, and information economics before mechanism design. Then add Axelrod and the bargaining book before Section 11.
 4. **Get a macro, money and finance base before Section 10.** Start now with CORE's macro volume, then P3 (Mehrling, Shiller). Read crypto through mainstream analyses as well as Ammous.

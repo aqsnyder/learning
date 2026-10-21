@@ -4,7 +4,7 @@
 > ✔ = fixed in this review · ✱ = suggested only. Scorecards rate each section **as found**, before the fixes.
 
 ## Verdict
-The physics curriculum is a clean, conventional physics-major sequence (mechanics → waves → thermo → E&M → QM → relativity → computation → quantum computing → solids → fluids → chaos → physics-ML). Its canonical textbook choices are sound (Feynman, Taylor, Schroeder, Griffiths, Carroll, Strogatz, Newman), and every section has a usable suggested order. It falls short in three ways. (1) **Citation accuracy:** the video courses were the weakest spot. Three MIT courses were attributed to Walter Lewin: two pointed at YouTube playlist IDs that do not resolve, and MIT has not hosted Lewin's lectures since 2014. Strogatz's Cornell lectures were labelled "Yale", two Susskind links pointed at the wrong playlists, the Qiskit Textbook had been archived, and the HNN paper credited Schmidhuber instead of Yosinski. (2) **Currency:** the fast-moving sections stopped around 2018–2022 (quantum computing had nothing after 2018; physics-ML nothing after 2022). (3) **Fit to Aaron:** for an embedded/sensor/precision-measurement engineer, the physics behind his daily work was almost absent: noise, measurement, device physics, engineering EM, heat transfer, and optics for sensors. Separately, the July 2026 Wolfram material was marked 🔑 and described as "deriving" GR and QM, with no caveat. **Grade: C+ as found, roughly B after this pass.** The single most important improvement was a dedicated **Measurement, Noise & Sensor Physics** section. The reviewer approved it, and it now exists as `physics/12-measurement-noise-and-sensor-physics/` (see below). The bridging pieces that fit inside existing sections were added there.
+The physics curriculum is a clean, conventional physics-major sequence (mechanics → waves → thermo → E&M → QM → relativity → computation → quantum computing → solids → fluids → chaos → physics-ML). Its canonical textbook choices are sound (Feynman, Taylor, Schroeder, Griffiths, Carroll, Strogatz, Newman), and every section has a usable suggested order. It falls short in three ways. (1) **Citation accuracy:** the video courses were the weakest spot. Three MIT courses were attributed to Walter Lewin: two pointed at YouTube playlist IDs that do not resolve, and MIT has not hosted Lewin's lectures since 2014. Strogatz's Cornell lectures were labelled "Yale", two Susskind links pointed at the wrong playlists, the Qiskit Textbook had been archived, and the HNN paper credited Schmidhuber instead of Yosinski. (2) **Currency:** the fast-moving sections stopped around 2018–2022 (quantum computing had nothing after 2018; physics-ML nothing after 2022). (3) **Fit to the intended learner:** for an embedded/sensor/precision-measurement engineer, the physics behind their daily work was almost absent: noise, measurement, device physics, engineering EM, heat transfer, and optics for sensors. Separately, the July 2026 Wolfram material was marked 🔑 and described as "deriving" GR and QM, with no caveat. **Grade: C+ as found, roughly B after this pass.** The single most important improvement was a dedicated **Measurement, Noise & Sensor Physics** section. The reviewer approved it, and it now exists as `physics/12-measurement-noise-and-sensor-physics/` (see below). The bridging pieces that fit inside existing sections were added there.
 
 ## Scorecard
 Scores reflect the files **as found** (1–5); the fixes made are listed per section below.
@@ -182,7 +182,7 @@ Scores reflect the files **as found** (1–5); the fixes made are listed per sec
 ### blogs-and-references/README.md
 - **Strengths:** A reasonable mix of Q&A, magazine, blogs and reference.
 - **Problems:**
-  - ✱ The n-Category Café is far off Aaron's path.
+  - ✱ The n-Category Café is far off this curriculum's path.
   - ✱ Brilliant is paid and generic.
   - ✱ Sean Carroll's activity has largely moved to his *Mindscape* podcast (not verified; worth checking).
   - ✱ The `ocw.mit.edu/courses/physics/` URL pattern predates OCW's 2022 redesign; the audit should check it.
@@ -198,7 +198,7 @@ Scores reflect the files **as found** (1–5); the fixes made are listed per sec
 
 ### README.md
 - **Strengths:** Clear learning path and NotebookLM guidance; it is consistent with the folders.
-- **Problems:** None factual. ✱ The purpose statement ("physical principles underlying simulation, modeling, and AI for science") ignores Aaron's actual use case (hardware, sensors, measurement). See Structural observations.
+- **Problems:** None factual. ✱ The purpose statement ("physical principles underlying simulation, modeling, and AI for science") ignores the intended learner's actual use case (hardware, sensors, measurement). See Structural observations.
 - **Added:** nothing (not restructured in this review).
 
 ## Corrections made
@@ -272,7 +272,7 @@ Scores reflect the files **as found** (1–5); the fixes made are listed per sec
 The original proposal follows for reference.
 
 - **Position:** Add as **Section 12** (appended, so no existing folder is renumbered; pcb/06 already links to `physics/03-electromagnetism/`). The README learning path should say "take after 08 (needs 02, 03, 04/08)". For an engineer's core path it belongs right after 08, before 05/07/11.
-- **Why:** Aaron designs sensor and precision-measurement hardware. The physics that limits his products (noise floors, drift, uncertainty, transducer physics, thermal-IR radiometry, optics) is scattered or absent. Currently it appears only in the pieces I added to 02/05/08/09, and in no other curriculum (grep found no GUM, error-analysis, Johnson-noise, radiometry, sensor or device-physics coverage anywhere in the repo; pcb covers EMC, not measurement physics). A dedicated section would turn this from a generic physics-major track into his professional backbone.
+- **Why:** The intended learner designs sensor and precision-measurement hardware. The physics that limits such products (noise floors, drift, uncertainty, transducer physics, thermal-IR radiometry, optics) is scattered or absent. Currently it appears only in the pieces I added to 02/05/08/09, and in no other curriculum (grep found no GUM, error-analysis, Johnson-noise, radiometry, sensor or device-physics coverage anywhere in the repo; pcb covers EMC, not measurement physics). A dedicated section would turn this from a generic physics-major track into a measurement engineer's professional backbone.
 - **Outline:**
   1. Units and constants: the 2019 SI redefinition (fixed h, e, k, N_A), traceability and calibration.
   2. Measurement uncertainty: Type A/B evaluation, propagation, coverage factors, the GUM.
@@ -324,7 +324,7 @@ The original proposal follows for reference.
 - **Sequencing:**
   - Computation (06) should start alongside 00.
   - Optics (in 01) depends on E&M (03); split "Waves" before 03 and "Optics" after, or move 01 after 03.
-  - Relativity (05) and quantum computing (07) are optional detours for Aaron; condensed matter/devices (08) and the proposed measurement section are core.
+  - Relativity (05) and quantum computing (07) are optional detours for the intended learner; condensed matter/devices (08) and the proposed measurement section are core.
 - **README tracks:** I suggest adding two named tracks to README:
   - *Engineer's core:* 00 → 02 → 03 → 04 → 08 → [new 12] → 01 (optics) → 09 (heat transfer), with 06 running in parallel.
   - *AI-for-science:* 06 → 10 → 11 (with ml/13).
@@ -340,8 +340,8 @@ The original proposal follows for reference.
   - Pages that could not be read: api.crossref.org for 10.1007/978-3-319-52462-7 and 10.21061/electromagnetics-vol-1 (both verified by other routes); the Wiley *Fundamentals of Photonics* page; arXiv 2407.07218 and 2311.07222; nature.com NeuralGCM; ocw.mit.edu 2.71; bipm.org JCGM page; uscibooks.com Taylor; link.springer.com Fraden; nist.gov TN 1297; the Stanford Online Miller course; crossref for Sze & Ng.
   - None of these were added.
 
-## Top 5 priorities for Aaron in this curriculum
-1. **Work through the new Section 12 (Measurement, Noise, and Sensor Physics) right after Section 08.** It is the physics of his job: noise floors, signal recovery, drift/Allan deviation, detection thresholds, and thermal-IR radiometry. Complete it with Taylor's *Error Analysis*, the GUM, Fraden and a radiometry text once they are verified.
+## Top 5 priorities in this curriculum
+1. **Work through the new Section 12 (Measurement, Noise, and Sensor Physics) right after Section 08.** It is the physics of sensor and measurement work: noise floors, signal recovery, drift/Allan deviation, detection thresholds, and thermal-IR radiometry. Complete it with Taylor's *Error Analysis*, the GUM, Fraden and a radiometry text once they are verified.
 2. **Do the "engineer's bridge" items first:**
    - Johnson–Nyquist (§02)
    - Ellingson and Haus & Melcher (§03)

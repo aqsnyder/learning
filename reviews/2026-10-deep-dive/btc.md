@@ -389,7 +389,7 @@ Scores are for the curriculum **as found**. The verdicts note what was done.
   - Lab 4: RBF/CPFP and package relay on regtest
   - Lab 5: a Lightning network in Polar; open, pay and close channels
   - Lab 6: Schnorr/MuSig/Taptree notebooks
-  - Lab 7: optional MicroPython signer on a dev board (embit) — fits Aaron's embedded background
+  - Lab 7: optional MicroPython signer on a dev board (embit) — fits an embedded background
 - **Resources (all verified):**
   1. Mastering Bitcoin Ch 3 — https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch03_bitcoin-core.adoc
   2. Learning Bitcoin from the Command Line v2.2.2 — https://github.com/BlockchainCommons/Learning-Bitcoin-from-the-Command-Line
@@ -453,7 +453,7 @@ Scores are for the curriculum **as found**. The verdicts note what was done.
 - **Overlap with math:**
   - math has no number-theory or ECC section. However, during this run the math agent added Hoffstein–Pipher–Silverman, *An Introduction to Mathematical Cryptography*, to math/08, explicitly for btc's keys and signatures.
   - btc/01 now links to math/08. Programming Bitcoin Ch 1–3 and Corbellini cover the practical math, so the gap is closed for self-study.
-- **⭐ canon:** Bit Gold and *Bitcoin's Academic Pedigree* are natural canon candidates (Szabo; Haber–Stornetta lineage). I did not mark them ⭐, because the canon list in README is the authority — Aaron's call.
+- **⭐ canon:** Bit Gold and *Bitcoin's Academic Pedigree* are natural canon candidates (Szabo; Haber–Stornetta lineage). I did not mark them ⭐, because the canon list in README is the authority — the owner's call.
 - **Root README needs a follow-up.** The repository's top-level `README.md` (outside `btc/`, so not edited here) still lists twelve btc sections. Add "Hands-on Labs" (parallel from 02) and "Governance" (between 10 and 11) to its btc Sections line.
 - **The agent skill caused the drift.** It gave no instruction to verify links, authors or years and had wrong paths. Paths are fixed and a status rule added; it still needs a rule like "fetch and confirm before adding".
 - **Pages I could not read** (WebFetch HTTP 429 rate limits, or robots.txt):
@@ -469,8 +469,8 @@ Scores are for the curriculum **as found**. The verdicts note what was done.
   - btrust.builders (robots) — used pathways.btrust.tech instead
   - Also: the shared WebSearch budget ran out early, so later checks used primary sources fetched from raw GitHub (BIPs index, Bitcoin Core docs, Optech site source).
 
-## Top 5 priorities for Aaron in this curriculum
-1. **Start the lab track now — Section 12, Lab 0 — in parallel with Section 02.** Run Bitcoin Core on regtest/signet (MB Ch 3), work through Learning Bitcoin from the Command Line, then hand-build and sign legacy, SegWit and Taproot transactions in Python with bitcoin-tx-tutorial. Use embit to experiment on a microcontroller; it is a natural bridge to your embedded work.
+## Top 5 priorities in this curriculum
+1. **Start the lab track now — Section 12, Lab 0 — in parallel with Section 02.** Run Bitcoin Core on regtest/signet (MB Ch 3), work through Learning Bitcoin from the Command Line, then hand-build and sign legacy, SegWit and Taproot transactions in Python with bitcoin-tx-tutorial. Use embit to experiment on a microcontroller; it is a natural bridge to embedded work.
 2. **Make Mastering Bitcoin 3rd ed. (2023) the spine,** now mapped chapter by chapter across the sections. Use the BIPs and the official bitcoincore.org docs, not developer.bitcoin.org (unmaintained since about 2021), for anything current.
 3. **Before holding meaningful funds, do Sections 05 and 08 hands-on.** Learn descriptors, then descriptor multisig with PSBTs and air-gapped signing on signet using Bitcoin Core's own tutorials. Back up descriptors, not just seeds.
 4. **Read Section 13 (governance) before Section 11, and use the Optech Topics index as the source of truth for anything in Section 11.** No soft fork has activated since Taproot; covenants, Consensus Cleanup and post-quantum proposals are all still proposals as of October 2026. Read primary sources, not crypto-media takes.
@@ -544,7 +544,7 @@ Eight audit entries in btc/ were not `ok`. Applied 2, already fixed 0, annotated
 - books/: *The Bitcoin Standard*: 🔑 removed (now unmarked in 00 and 09, the only sections that list it). This supersedes the "keeps its 🔑 in Section 00 and books/" note in the follow-up pass.
 - courses/: 3Blue1Brown, "But how does bitcoin actually work?": 🔑 removed (now unmarked in 01 and 02).
 - courses/: Btrust Builders Mastering Bitcoin Pathway: 🔑 removed (now unmarked in 10, its only section).
-- Index rows left unchanged: every other index 🔑 is either still core in some section (*Mastering Bitcoin*, *Programming Bitcoin*, *Grokking Bitcoin*, *Mastering the Lightning Network*, the Antonopoulos channel, the Chaincode curriculum, *Learning Bitcoin from the Command Line*, Learn Me A Bitcoin, Bitcoin Optech, Bitcoin Core) or index-only (MIT 15.S12, the Lopp.net hub). Three more keep their blogs-and-references 🔑 although no section marks them 🔑: Mempool.space, the Satoshi Nakamoto Institute and Bitcoin Developer Documentation. They never had a section 🔑, so the index rule doesn't remove them; Aaron to decide.
+- Index rows left unchanged: every other index 🔑 is either still core in some section (*Mastering Bitcoin*, *Programming Bitcoin*, *Grokking Bitcoin*, *Mastering the Lightning Network*, the Antonopoulos channel, the Chaincode curriculum, *Learning Bitcoin from the Command Line*, Learn Me A Bitcoin, Bitcoin Optech, Bitcoin Core) or index-only (MIT 15.S12, the Lopp.net hub). Three more keep their blogs-and-references 🔑 although no section marks them 🔑: Mempool.space, the Satoshi Nakamoto Institute and Bitcoin Developer Documentation. They never had a section 🔑, so the index rule doesn't remove them; the owner to decide.
 - PROGRESS.md has no 🔑 markers, so it needed no sync.
 - btc/.agents/skills/update-curriculum/SKILL.md was not edited in this pass. Rule 6's "(many sections still exceed this; trim when you touch them rather than adding more)" is now stale. Suggested wording: "🔑 marks the core path: at most 3 per section, listed in the **Core path (🔑)** line that opens Suggested Order. When you add or remove a 🔑, update that line and the books/courses/blogs index 🔑 (index 🔑 = core in some section)."
 - courses/README.md #10 Bitcoin Core PR Review Club: 🔑 added (core in 10)
@@ -552,7 +552,7 @@ Eight audit entries in btc/ were not `ok`. Applied 2, already fixed 0, annotated
 - btc/README.md legend: 🔑⭐ row now says "a core-path item" instead of "a must-read"
 - btc/README.md Key Resources: Mempool.space removed (not core in any section; unmarked in 03 and 06)
 - btc/README.md Key Resources: 3Blue1Brown: Bitcoin removed (not core in any section; unmarked in 01 and 02)
-- Not changed, for Aaron: btc/README.md Key Resources keeps Learn Me A Bitcoin and Lopp.net. Neither site is 🔑 as a whole (Learn Me A Bitcoin is unmarked in 02 and 07), but a page of each is core: Learn Me A Bitcoin: Transactions (04) and the Lopp.net Bitcoin Security Guide (08). If only the listed page counts, remove both.
+- Not changed, for the owner: btc/README.md Key Resources keeps Learn Me A Bitcoin and Lopp.net. Neither site is 🔑 as a whole (Learn Me A Bitcoin is unmarked in 02 and 07), but a page of each is core: Learn Me A Bitcoin: Transactions (04) and the Lopp.net Bitcoin Security Guide (08). If only the listed page counts, remove both.
 - Second check (2026-10-13), from `independent-check.md` "Second check":
   - 03: 🔑 removed from the Antonopoulos channel row. The Chaincode row is renamed "Mining section" (the curriculum has no "Proof of Work" section). Core path is now *Mastering Bitcoin* Ch. 12 → Chaincode Mining.
   - 06: 🔑 moved from "Run your own full node" (a sourceless practice row) to *Mastering Bitcoin* Ch. 9.

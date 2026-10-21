@@ -5,7 +5,7 @@ This audit covers every external link that was in the repo **before** the Octobe
 | Batch | Links | How they were checked | Result |
 |---|---|---|---|
 | arXiv | 116 | `arxiv.org/abs/<id>` against title and authors | 8 citation mismatches, all fixed ([details](link-audit-arxiv.md)) |
-| GitHub | 33 | Fetched from Aaron's machine (github.com is reachable there) | 32 ok. `aqsnyder/KiCAD_Template_Snyder` returns 404 to an anonymous request: private or renamed. **Aaron to confirm**; pcb notes it as a private repo. |
+| GitHub | 33 | Fetched from the owner's machine (github.com is reachable there) | 32 ok. The owner's own KiCad template repository returns 404 to an anonymous request: it is private. The A+ program replaced that row with a public resource. |
 | Everything else | 555 | Three paced auditors, 2026-10-13. DOIs were checked through Crossref (DataCite as fallback), YouTube through oEmbed, and all other pages by fetching them. | ok 440 · moved 16 · mismatch 21 · broken 18 · unverifiable 60 |
 
 Every link added during the review was opened when it was added, so it is not part of this audit.

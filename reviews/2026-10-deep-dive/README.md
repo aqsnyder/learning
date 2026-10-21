@@ -82,7 +82,7 @@ Repo-level additions:
 3. **The fastest-moving sections were the most out of date:** ml/09–10, software/09, btc/11, bio/08, physics/07.
 4. **Advocacy and speculation were presented as settled.** Examples: Stock-to-Flow and Ammous as 🔑, Wolfram's physics as 🔑, priming and ego depletion without caveats, and the LLM-understanding debate cited only from one side.
 5. **Input-only design.** Learning requires retrieval and production; the repo offered neither.
-6. **Generic, not yours.** The content suited a generic learner. The topics that run through your work (signal chains, noise and measurement, precision layout, bring-up, firmware debug, HIL and instrument automation) were the thinnest.
+6. **Generic, not engineering-shaped.** The content suited a generic learner. The topics an embedded-hardware engineer works with daily (signal chains, noise and measurement, precision layout, bring-up, firmware debug, HIL and instrument automation) were the thinnest.
 7. **Inconsistent formats.** There were at least four table schemas and three legend styles. 🔑 was inflated (8 of 16 items in ml/08). PROGRESS was out of sync with the sections.
 
 ---
@@ -93,7 +93,7 @@ Repo-level additions:
 
 - **Same anatomy in every section:** Why → Prerequisites → 🎯 Objectives → Resources → Suggested Order → 🛠️ Practice + 🏗️ Mini-project → ✅ Check Yourself. PROGRESS now tracks practice, not just reading.
 - **New sections appended**, with "take after NN" positions given in each learning path, so existing links and NotebookLM sources keep working.
-- **[Study Guide](../../STUDY-GUIDE.md):** the study loop, tracks (A, precision hardware and instruments, is your core), a cross-curriculum map, and a one-home-per-topic table. Your own output lives in `notes/` and `projects/`, beside the curated material.
+- **[Study Guide](../../STUDY-GUIDE.md):** the study loop, tracks (A, precision hardware and instruments, is the core track), a cross-curriculum map, and a one-home-per-topic table. A learner's own output lived in `notes/` and `projects/` (the A+ program moved it to the private `my/` folder).
 - **Tier lists (your choice, done in the follow-up):** at most 3 🔑 per section, chosen by what the 🎯 objectives and 🛠️ exercises actually use, never advocacy or vendor claims. Each Suggested Order opens with a `**Core path (🔑):**` line, and the books and courses indexes mark 🔑 only on items that are core in some section. ml/07–13 gained the Description column they lacked. Every 🔑 change is logged, with reasons, under "Tier lists" in each curriculum's review file, so you can reverse any call.
 - **Maintenance:** `tools/check_repo.py` (0 problems on this branch) and a repo-wide `audit-curriculum` skill. Every update skill now requires opening each link before adding it, citing people rather than organizations, "when in doubt, leave it out", closed ⭐ lists, and honest labels for speculation.
 
@@ -108,7 +108,7 @@ Repo-level additions:
 7. **One update skill.** Fold the four per-curriculum `update-curriculum` skills into a single root skill with per-curriculum config (sources, markers, section map). The 5 curricula without a skill are then covered too.
 8. **Before ever making the repo public:**
    - `pcb/documents/IPC-2221A(L).pdf` is a licensed "no reproduction" copy. That's fine while the repo is private, which it is. Remove it before going public. The curriculum now notes that IPC-2221C (2023) and IPC-2152 supersede it.
-   - Several pcb and software exercises are tailored to the kind of hardware you build (STM32U5, 4–6-layer boards with USB-C/Ethernet, precision source-measure front ends). No company, product, or customer is named anywhere, but skim them with confidentiality in mind first.
+   - Several pcb and software exercises are written around a concrete embedded stack (STM32U5, 4–6-layer boards with USB-C/Ethernet, precision front ends). No company, product, or customer is named anywhere.
 
 ---
 
@@ -149,7 +149,7 @@ You asked for my best calls on the open questions. Here is what was done:
 - **Core paths:**
   - **ml/08:** Adam replaces FlashAttention. Practice 2 implements Adam, and the mini-project trains with AdamW.
   - **ml/12:** Constitutional AI replaces Scaling Monosemanticity, so the core path now covers alignment (objective 4) as well as interpretability.
-  - **pcb/02:** the KiCad Library Conventions replace your private template. The template stays in the section as a personal reference.
+  - **pcb/02:** the KiCad Library Conventions replace the owner's private template, which stayed in the section as a personal reference (the A+ program removed it before the repo went public).
   - **Kept as they were:** DPO over Silver's course (ml/10), the Bitcoin Core source over *Programming Bitcoin* (btc/10), *Modern C* over K&R (software/02), and *The Conscious Mind* (philosophy/02).
 - **More concrete core paths:**
   - **pcb/00** names the four *Art of Electronics* chapters its objectives use, and its prerequisites now list the bench gear the exercises need.
@@ -165,7 +165,7 @@ You asked for my best calls on the open questions. Here is what was done:
 - **Dead rows:**
   - The two retired Coursera courses in econ/03 and econ/06 are removed.
   - In philosophy/10, Robert Wright's retired course is replaced by his book *Why Buddhism Is True* (2017, checked against a library catalogue). It is placed right before Thompson's critique of it.
-- **Your KiCad template repo** is private. It returns 404 to anonymous requests with no redirect, and your only public repo is `isi_openmv`, so it wasn't renamed. The link stays, labelled as private.
+- **The owner's KiCad template repo** is private (it returns 404 to anonymous requests with no redirect, and no public repository of that name exists). The link stayed, labelled as private, until the A+ program removed it.
 - **Update skills:** all four (ml, pcb, btc, software) now say "at most 3 🔑", keep the Core path line in sync, and run `tools/build_index.py`. The ml skill also says to update the books, courses and blogs indexes.
 - **Vendor and tool notes worth knowing** (no action needed):
   - ST now marks X-CUBE-AI as not recommended for new designs (noted in ml/04 and ml/14).

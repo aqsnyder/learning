@@ -4,16 +4,16 @@
 > ✔ = fixed in this review · ✱ = suggested only. Scorecards rate each section **as found**, before the fixes.
 
 ## Verdict
-The curriculum has the right spine for Aaron: Python plus embedded C, reading and reviewing code over typing it, architecture, and human-in-the-loop AI. Its core picks are sound: *Fluent Python*, *Making Embedded Systems*, *Refactoring*, *A Philosophy of Software Design*, and Samek's videos.
+The curriculum has the right spine for its intended learner: Python plus embedded C, reading and reviewing code over typing it, architecture, and human-in-the-loop AI. Its core picks are sound: *Fluent Python*, *Making Embedded Systems*, *Refactoring*, *A Philosophy of Software Design*, and Samek's videos.
 
 It fell short in three ways:
 - **It was stale.** Five flagship books were an edition behind, K&R was billed as "THE definitive C reference", and the "future-facing" Section 09 had nothing from 2024–2026.
-- **It was thin exactly where Aaron works every day.** Debugging, CMake, bootloaders, ADRs and documentation were "Concept" rows with no source. There was no Cortex-M reference, no embedded TDD book, no networking, and no CERT C.
+- **It was thin exactly where an embedded engineer works every day.** Debugging, CMake, bootloaders, ADRs and documentation were "Concept" rows with no source. There was no Cortex-M reference, no embedded TDD book, no networking, and no CERT C.
 - **Its wiring was broken.** 12 internal links pointed at directories that never existed, and so did the agent skill's section map.
 
 It also leans toward web/SaaS-backend and interview-prep material (System Design Interview, Terraform, *The Web Application Hacker's Handbook* as 🔑). None of that matters much to someone who builds firmware and test instruments.
 
-**Grade as found: C+** (roughly B after this pass). The single most important improvement is to re-center on the bench. The two proposed sections were approved and now exist as Section 12 (firmware toolchain, debug and observability) and Section 13 (hardware-in-the-loop testing and lab automation). What remains is for Aaron to take them in their marked positions and run Section 09 as a parallel, evidence-based track from day one.
+**Grade as found: C+** (roughly B after this pass). The single most important improvement is to re-center on the bench. The two proposed sections were approved and now exist as Section 12 (firmware toolchain, debug and observability) and Section 13 (hardware-in-the-loop testing and lab automation). What remains is for the learner to take them in their marked positions and run Section 09 as a parallel, evidence-based track from day one.
 
 ## Scorecard
 Scores are for the curriculum **as found**, before my edits.
@@ -212,7 +212,7 @@ Scores are for the curriculum **as found**, before my edits.
   - ✔ *The Web Application Hacker's Handbook* (2011) was 🔑. Its lead author's company built the free Web Security Academy instead of a 3rd edition; I removed the 🔑, dated the entry and linked the Academy.
   - ✔ The OWASP Top 10 entry didn't reflect the 2025 edition, which added Software Supply Chain Failures at A03.
   - ✔ "Secure C programming" had no source (SEI CERT C added).
-  - ✱ The section is web-app security first, but Aaron ships firmware and host tools.
+  - ✱ The section is web-app security first, but the intended learner ships firmware and host tools.
 - **Missing:**
   - Embedded security (secure boot, key storage, debug-port lockdown/readout protection, TrustZone)
   - Software supply chain (SBOM, pinning, provenance)
@@ -235,7 +235,7 @@ Scores are for the curriculum **as found**, before my edits.
   - ✔ "If the AI can't pass your tests, the prompt was unclear" was oversimplified. Corrected to check the spec, the tests and the task size, and to watch for weakened or special-cased tests.
   - ✔ Zero 2024–2026 sources (9 added).
   - ✱ "Cursor/Copilot best practices" is a placeholder row with no author or link.
-  - ✱ The section is gated behind 01–06, although Aaron uses agents daily. I added a note to run it in parallel.
+  - ✱ The section is gated behind 01–06, although the intended learner uses agents daily. I added a note to run it in parallel.
   - ✱ 12 of the 13 original rows had no source: 10 "Concept" rows, the capstone practice row, and the Cursor/Copilot placeholder.
 - **Missing:**
   - How to measure your own agent workflow (cycle time, rework, escaped defects)
@@ -460,7 +460,7 @@ Totals:
   - Change from the proposal: Grenning stays in 05. The section builds on the merged 01, 04 and 05 mini-projects instead of repeating them.
 - **Position (as proposed):** after Section 05 (Testing) or directly after A.
 - **Why:**
-  - Aaron runs a test-and-measurement hardware company. Instrument command sets (SCPI over USB/Ethernet), Python host software, and automated bench tests are the product itself, not side topics.
+  - For an engineer who builds test-and-measurement hardware, instrument command sets (SCPI over USB/Ethernet), Python host software, and automated bench tests are the product itself, not side topics.
   - Verifying agent-written firmware needs automated checks on real hardware.
   - Today software/05 stops at host-side unit tests and pcb stops at fabrication, so this layer belongs to neither.
 - **Outline:**
@@ -509,7 +509,7 @@ Totals:
   - In 09, 12 of 13 original rows had no source; 06, 07, 10 and 11 had several.
   - Each concept row should point to one canonical source, or move to a "Key Concepts" table without a checkbox.
 - **Sequencing:**
-  - The learning path is strictly linear, but 09 (agents) and 10 (git) are day-one skills for Aaron.
+  - The learning path is strictly linear, but 09 (agents) and 10 (git) are day-one skills for the intended learner.
   - Recommend presenting 09 and 10 as parallel tracks (I added a "run in parallel" note to 09).
   - 06 is web-backend-centric. Now that Sections 12 and 13 exist, consider shrinking 06 to "Networking, Protocols & Data" for instruments.
   - Sections 12 and 13 are numbered last but belong mid-path (after 07, and after 05 or right after 12). The README learning path now says so.
@@ -535,7 +535,7 @@ Totals:
 - **Missing standard parts:**
   - No per-section "core path" line.
   - No glossary.
-  - There is still no explicit capstone. However, 05's Bench HIL Rig, 12's Agent-Ready Firmware Harness and 13's Hardware CI Pipeline now form a de facto capstone track tied to Aaron's work.
+  - There is still no explicit capstone. However, 05's Bench HIL Rig, 12's Agent-Ready Firmware Harness and 13's Hardware CI Pipeline now form a de facto capstone track tied to bench work.
 - **Verification limits:** the shared WebSearch and WebFetch budgets ran out near the end of this pass. Three candidates I wanted were therefore not added:
   - McConnell's *Software Estimation* or Brooks's *Mythical Man-Month* (for 11)
   - A 3rd edition of *High Performance Python* (for profiling)
@@ -562,7 +562,7 @@ Totals:
   - Renode support for the exact STM32U5 part. The text only tells the reader to check.
   - The HiSLIP 2.0 spec PDF (IVI-6.1, linked from IVI's SCPI page; not fetched).
 
-## Top 5 priorities for Aaron in this curriculum
+## Top 5 priorities in this curriculum
 1. **Run Section 09 now, in parallel, and make it evidence-based.**
    - Read METR (2025 RCT plus the Feb 2026 update) and DORA 2025 first. Then *Building effective agents*, the Claude Code best practices, and the lethal trifecta.
    - Start measuring your own agent workflow (time to merged change, rework, escaped defects). Your sense of speed is not evidence.
@@ -592,7 +592,7 @@ Totals:
 - **Removed (confirmed nonexistent):** none.
 - **Flags resolved:**
   - 12-firmware-toolchain-debug-and-observability/README.md:33 — *Professional CMake* author and edition (to-verify list) — confirmed: Craig Scott, "a CMake co-maintainer… also the author of the book Professional CMake: A Practical Guide"; "the 22nd Edition, which covers up to CMake 4.2"; the toolchain chapter is Ch. 24 "Toolchains And Cross Compiling", now cited by number — https://crascit.com/about/ ; https://crascit.com/professional-cmake/
-  - 12/README.md:96–99 (Practice 5) — MCUboot revert and power-fail behavior (to-verify list) — the design doc confirms that a test swap is reverted on the next boot unless the new image marks itself "OK", that an image's integrity is checked immediately before it is copied into the primary slot (an invalid image's slot is erased), and that "the swap status region allows the bootloader to recover in case it restarts in the middle of an image swap operation". It doesn't discuss power failure as such. The exercise now asks for a swap-based mode with signature checking enabled, says "marks itself OK", and presents the power-cut test as checking that documented reset recovery on his own flash — https://docs.mcuboot.com/design.html
+  - 12/README.md:96–99 (Practice 5) — MCUboot revert and power-fail behavior (to-verify list) — the design doc confirms that a test swap is reverted on the next boot unless the new image marks itself "OK", that an image's integrity is checked immediately before it is copied into the primary slot (an invalid image's slot is erased), and that "the swap status region allows the bootloader to recover in case it restarts in the middle of an image swap operation". It doesn't discuss power failure as such. The exercise now asks for a swap-based mode with signature checking enabled, says "marks itself OK", and presents the power-cut test as checking that documented reset recovery on the learner's own flash — https://docs.mcuboot.com/design.html
   - 12/README.md:35, :86, :105 — RTT with probes other than J-Link (to-verify list) — OpenOCD documents RTT ("15.6 Real Time Transfer (RTT)": `rtt setup`, `rtt start`, `rtt server start`…), usable on any target that supports background memory access. The RTT row, Practice 3 and the mini-project now say so — https://openocd.org/doc-release/html/General-Commands.html
   - 13-hil-testing-and-lab-automation/README.md:39, :82 — Renode support for the STM32U5 (to-verify list) — Renode's own (incomplete) list of supported targets has STM32F0/F1/F4/F7, G0, H7, L0/L1, L552, W108 and WBA52 platforms but no STM32U5. The row now says so, and Practice 3 falls back to the STM32L552 (also a Cortex-M33) — https://renode.readthedocs.io/en/latest/introduction/supported-boards.html
   - 13/README.md:52 — found while verifying HiSLIP: Suggested Order step 2 sent the reader to "the spec it links to", but the only PDF IVI's SCPI page links is the HiSLIP spec. Step 2 now points to the SCPI specification on IVI's specifications page — https://www.ivifoundation.org/About-IVI/scpi.html ; https://www.ivifoundation.org/specifications/default.html
@@ -602,7 +602,7 @@ Totals:
   - 09/README.md:56 — DORA 2025 wording — confirmed: "nearly 5,000 technology professionals"; "90% of survey respondents report using AI at work"; a positive relationship with throughput, while AI adoption "does continue to have a negative relationship with software delivery stability"; "AI doesn't fix a team; it amplifies what's already there". Added "30% report little or no trust in the code generated by AI". The dora.dev page itself carries only the amplifier sentence; the figures come from the launch post (Harvey & DeBellis, 23 Sep 2025) — https://cloud.google.com/blog/products/ai-machine-learning/announcing-the-2025-dora-report ; https://dora.dev/research/2025/dora-report/
   - 09/README.md:55 — METR RCT and Feb 2026 update wording — paper confirmed (Becker, Rush, Barnes, Rein; 16 developers, 246 tasks; +19% completion time; developers estimated a 20% speedup). The update is "We are Changing our Developer Productivity Experiment Design" (24 Feb 2026; Becker, Rush, Tom Cunningham, Rein, Khalid Mahamud): a follow-up started August 2025 with 57 developers and 800+ tasks. Developers increasingly declined to take part, or withheld tasks (30–50% said so), because they didn't want to work without AI, which makes the central estimate "challenging to interpret" and likely a lower bound. METR believes developers are likely more sped up in early 2026 but calls its data "only very weak evidence" of how much. The row's wording now follows the post, and the update's authors are added — https://arxiv.org/abs/2507.09089 ; https://metr.org/blog/2026-02-24-uplift-update/
   - 09/README.md:57 (+ PROGRESS.md:196) — "Anthropic Applied AI team" as author (V5) — the post (29 Sep 2025) is written by Prithvi Rajasekaran, Ethan Dixon, Carly Ryan and Jeremy Hadfield; they are now named — https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
-  - 09/README.md:5, :126; 03-reading-and-reviewing-code/README.md:109 — "AI agents will write most of the code" stated as fact (V5 tone) — now framed as the curriculum's bet, grounded in DORA's 90% adoption figure and the contested METR evidence (sources as above). Both "smart friend" questions now say "as AI/agents write more of the code", and 09's also asks what he'd measure. `software/README.md:7` is Aaron's own philosophy statement and was left unchanged.
+  - 09/README.md:5, :126; 03-reading-and-reviewing-code/README.md:109 — "AI agents will write most of the code" stated as fact (V5 tone) — now framed as the curriculum's bet, grounded in DORA's 90% adoption figure and the contested METR evidence (sources as above). Both "smart friend" questions now say "as AI/agents write more of the code", and 09's also asks what the learner would measure. `software/README.md:7` is the owner's own philosophy statement and was left unchanged.
   - .agents/skills/update-curriculum/SKILL.md:82 — the skill never said to update books/, courses/ or blogs/ (V5) — added step 4 (cross-cutting pages plus the README title count) and applied it to this pass's two books: books/ #25–26 and `software/README.md:54` 24 → 26 titles. The "append-only" note was left as is, because rule 4 already defines append-only as "don't silently delete".
   - 01-python-mastery/README.md:80 — `pyright --strict` (V5) — already reworded before this pass to `typeCheckingMode = "strict"`; no change needed.
 - **Still unverified:**
@@ -610,7 +610,7 @@ Totals:
   - The wording of FoSA 2e's third law — only its existence is confirmed, so the repo doesn't quote it.
   - MCUboot under real power loss — the docs cover a restart in the middle of a swap, not power failure explicitly. Practice 5 now tests this instead of asserting it.
   - Brooks, *The Mythical Man-Month* — not pursued; McConnell fills the estimation gap.
-- **For Aaron to decide:**
+- **For the owner to decide:**
   - 🔑 inflation (V5, "a curation call") — not changed. Software has 9 🔑 in 09, 7 in 04, 6 in 02, 5 each in 01, 03 and 07, and 4 each in 00, 05, 06 and 11, against the ~3 rule. Suggestion for 09, following this review's priority 1: keep 🔑 on METR and *Building effective agents*, move one to the Claude Code best practices, and demote the six unsourced concept, practice and blog rows.
   - The cut candidates above (e.g., the source-less "Cursor/Copilot best practices" row) are still in place; nothing was deleted.
 

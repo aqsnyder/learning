@@ -5,7 +5,7 @@
 
 ## Verdict
 
-The math curriculum lists canonical texts in a sensible order that builds intuition first: 3Blue1Brown, then MIT/Harvard courses, then Axler, Abbott, Boyd, Cover & Thomas and Strogatz. Many entries are free, and most metadata is correct. Its weakness is that it was written as "math for ML plus pure-math electives", not as math for an electrical/embedded engineer. Before this pass it had no complex analysis, no Fourier analysis or signals and systems, no numerical methods, no estimation or filtering, no number theory for the Bitcoin cryptography, and no proof assistants. A handful of rows were plainly wrong: a course row that mixed three different courses, misattributed videos, a wrong first author, wrong titles, and a "free" book that isn't free. The "Frontiers" section claimed to cover the math–AI boundary but had nothing after 2022, and it described Wolfram's speculative program as an established "fundamental mathematical concept". **Overall grade: B− as found, about B after this pass.** The single most important improvement is to give Aaron an engineering-math spine: complex analysis, then signals and systems, then random signals and estimation, then numerics. This meant creating a Signals & Systems section and splitting the README path into core and elective sections. **Update:** both are now done — Sections 12–14 were created in this review, and the README has a Core/Elective route.
+The math curriculum lists canonical texts in a sensible order that builds intuition first: 3Blue1Brown, then MIT/Harvard courses, then Axler, Abbott, Boyd, Cover & Thomas and Strogatz. Many entries are free, and most metadata is correct. Its weakness is that it was written as "math for ML plus pure-math electives", not as math for an electrical/embedded engineer. Before this pass it had no complex analysis, no Fourier analysis or signals and systems, no numerical methods, no estimation or filtering, no number theory for the Bitcoin cryptography, and no proof assistants. A handful of rows were plainly wrong: a course row that mixed three different courses, misattributed videos, a wrong first author, wrong titles, and a "free" book that isn't free. The "Frontiers" section claimed to cover the math–AI boundary but had nothing after 2022, and it described Wolfram's speculative program as an established "fundamental mathematical concept". **Overall grade: B− as found, about B after this pass.** The single most important improvement is to give the curriculum an engineering-math spine: complex analysis, then signals and systems, then random signals and estimation, then numerics. This meant creating a Signals & Systems section and splitting the README path into core and elective sections. **Update:** both are now done — Sections 12–14 were created in this review, and the README has a Core/Elective route.
 
 ## Scorecard
 
@@ -24,7 +24,7 @@ Scores reflect the state as found (before this pass).
 | 08 Abstract Algebra | 3 | 2 | 4 | 4 | 4 | C+ | Good core (Pinter); misattributed videos, authorless placeholder row, no number theory |
 | 09 Topology and Geometry | 4 | 4 | 4 | 3 | 3 | B | Inspired picks (Needham VDGF, Tokieda); wrong paper title; heavy for this learner |
 | 10 Causal Inference | 4 | 4 | 3 | 4 | 4 | B | Well-balanced Pearl + potential outcomes; nothing after 2021 |
-| 11 Category Theory and Frontiers | 2 | 2 | 2 | 3 | 2 | C− | "Frontiers" had no AI-for-math; Wolfram oversold; two metadata errors; low priority for Aaron |
+| 11 Category Theory and Frontiers | 2 | 2 | 2 | 3 | 2 | C− | "Frontiers" had no AI-for-math; Wolfram oversold; two metadata errors; low priority for the intended learner |
 
 ## Section-by-section
 
@@ -90,7 +90,7 @@ Scores reflect the state as found (before this pass).
 ### 06 — Graph Theory and Combinatorics
 - **Strengths:** Diestel, West, Godsil & Royle and Spielman are solid, and the spectral angle is good for ML.
 - **Problems:** ✔ Diestel 5th ed. (2017) → 6th ed. (Springer GTM 173, ©2025). The online version is a free *preview* of the main text, now worded accordingly. ✔ West was missing from PROGRESS. ✱ West is not in the order. ✱ The GCN and Geometric Deep Learning papers duplicate ml/13.
-- **Missing:** Combinatorics is thin (no generating functions, nothing like *Concrete Mathematics*). Low priority for Aaron.
+- **Missing:** Combinatorics is thin (no generating functions, nothing like *Concrete Mathematics*). Low priority for the intended learner.
 - **Added:** nothing needed (edition fix only).
 
 ### 07 — Differential Equations
@@ -116,13 +116,13 @@ Scores reflect the state as found (before this pass).
 ### 09 — Topology and Geometry
 - **Strengths:** Needham's VDGF as 🔑 is an inspired choice. Tokieda's lectures and the TDA connection are good.
 - **Problems:** ✔ Carlsson's paper is "Topology and Data" (Bull. AMS 46(2), 2009), not "Topological Data Analysis". ✔ The Albin lectures were missing from PROGRESS. ✱ Albin is not in the order, and its playlist is a third-party upload. ✱ Lee and do Carmo are heavy for this learner.
-- **Missing:** Nothing essential for Aaron. physics/05 (general relativity) depends on this section.
+- **Missing:** Nothing essential for the intended learner. physics/05 (general relativity) depends on this section.
 - **Added:** nothing needed.
 
 ### 10 — Causal Inference
 - **Strengths:** The path from popular book (Book of Why) to primer to *Causality*, plus Hernán & Robins and Brady Neal, is well balanced between the graph and potential-outcomes schools.
 - **Problems:** ✔ "Hernan" → "Hernán" (table, order, PROGRESS). ✔ Dasgupta was missing from PROGRESS. ✱ Dasgupta et al. (2019, meta-RL) is a weak, niche pick. ✱ Peters et al. may be open access (it has an OAPEN record), but I couldn't confirm a PDF/licence, so it is unchanged.
-- **Missing:** Post-2021 work (e.g., double/debiased ML) and quasi-experimental designs (difference-in-differences, regression discontinuity, instrumental variables). Low priority for Aaron.
+- **Missing:** Post-2021 work (e.g., double/debiased ML) and quasi-experimental designs (difference-in-differences, regression discontinuity, instrumental variables). Low priority for the intended learner.
 - **Added:** nothing needed.
 
 ### 11 — Category Theory and Frontiers
@@ -135,7 +135,7 @@ Scores reflect the state as found (before this pass).
   - ✱ The README says this section "covers the latest developments at the math–AI boundary"; before this pass it had nothing after 2022.
   - ✱ The working copy has a single baseline commit, so I assessed the July 2026 change as it stands rather than through git history.
 - **Missing:** AI-for-math: machine-checked proof (Lean/Mathlib) and AI-driven discovery (AlphaProof/AlphaEvolve). This is the actual frontier for a learner who uses AI tools daily.
-- **Positioning:** Category theory is correctly placed last, but for Aaron it should be explicitly **elective / low priority**. It has little payoff for embedded work, and the ML connections (Backprop as Functor, Cruttwell et al.) are research-level. The most useful items in this section are now Mathematics in Lean and the 2025 discovery paper.
+- **Positioning:** Category theory is correctly placed last, but for the intended learner it should be explicitly **elective / low priority**. It has little payoff for embedded work, and the ML connections (Backprop as Functor, Cruttwell et al.) are research-level. The most useful items in this section are now Mathematics in Lean and the 2025 discovery paper.
 - **Added:**
   - Book Review: "A New Kind of Science" — Scott Aaronson — 2002
   - Mathematics in Lean — Jeremy Avigad, Patrick Massot — 2025
@@ -163,7 +163,7 @@ Scores reflect the state as found (before this pass).
 
 ### README.md
 - **Problems:**
-  - ✱ "Work through the numbered sections in order" treats 12 sections as equal. Aaron needs a core/elective split (see Structural observations).
+  - ✱ "Work through the numbered sections in order" treats 12 sections as equal. The intended learner needs a core/elective split (see Structural observations).
   - ✔ "Connections to Other Curricula" omitted Bitcoin and PCB; I added rows for Bitcoin (08, 13, 03) and PCB (02, 07, 12, 14) when creating 12–14. ✱ A Philosophy row (→ 00, 11) is still missing.
   - ✱ The "Keeping Current" claim was overstated; it is now supported by the 2025 additions.
   - No verified errors needed fixing. The learning-path list is unchanged because no sections were created.
@@ -250,8 +250,8 @@ The original proposal text follows for reference.
 
 ### A. Fourier Analysis, Signals & Systems (highest priority)
 - **Status:** ✔ created as `math/12-fourier-analysis-signals-and-systems/README.md`.
-- **Position:** Directly after 07 Differential Equations. It needs 01, 02 (now including complex analysis) and 07 (Laplace, LTI ODEs); the random-signals part also needs 03. For Aaron this belongs on the core path, not as an elective. The reviewer can either renumber 08–11 or append it as 12 and mark it core in the README.
-- **Why:** Aaron's daily work is analog front ends, ADC sampling, filtering, sensor signal chains, and test-and-measurement hardware. Fourier analysis, sampling and aliasing, LTI systems, z-transforms, filter design, noise power spectral density, and detection theory (the trade-off between false triggers and missed detections) are the math he uses most. Today the whole repo has only two 3Blue1Brown Fourier videos (physics/01), plus Laplace transforms inside 18.03.
+- **Position:** Directly after 07 Differential Equations. It needs 01, 02 (now including complex analysis) and 07 (Laplace, LTI ODEs); the random-signals part also needs 03. For the intended learner this belongs on the core path, not as an elective. The reviewer can either renumber 08–11 or append it as 12 and mark it core in the README.
+- **Why:** The intended learner's daily work is analog front ends, ADC sampling, filtering, sensor signal chains, and test-and-measurement hardware. Fourier analysis, sampling and aliasing, LTI systems, z-transforms, filter design, noise power spectral density, and detection theory (the trade-off between false triggers and missed detections) are the math such an engineer uses most. Today the whole repo has only two 3Blue1Brown Fourier videos (physics/01), plus Laplace transforms inside 18.03.
 - **Outline:**
   1. Fourier series and transform (intuition, then theory)
   2. LTI systems, convolution, impulse and frequency response, Laplace/Bode
@@ -296,7 +296,7 @@ The original proposal text follows for reference.
 ### C. Numerical Methods & Scientific Computing
 - **Status:** ✔ created as `math/14-numerical-methods-and-scientific-computing/README.md` (Trefethen & Bau moved here from 01; physics/06 cross-linked).
 - **Position:** After 07, or after the proposed Signals section (needs 01, 02, 07). Coordinate with physics/06 Computational Physics (Newman, Numerical Recipes, 18.085, and now FEniCSx). The math section should own floating point, conditioning and stability, and generic algorithms; physics/06 should keep the physics applications.
-- **Why:** Aaron writes firmware (fixed and floating point on MCUs), Python tooling, calibration fits and simulations. Numerical error and stable algorithms matter to him more often than topology does. Coverage was only Nocedal & Wright (04), plus Trefethen & Bau, which I added to 01.
+- **Why:** The intended learner writes firmware (fixed and floating point on MCUs), Python tooling, calibration fits and simulations. Numerical error and stable algorithms matter to them more often than topology does. Coverage was only Nocedal & Wright (04), plus Trefethen & Bau, which I added to 01.
 - **Outline:**
   1. Floating point and error analysis (including fixed-point on MCUs)
   2. Conditioning and backward stability
@@ -327,7 +327,7 @@ The original proposal text follows for reference.
 - **05:** Jordan et al. 1999 is a dated variational-inference entry point; a modern VI review belongs in ml.
 - **06:** Kipf & Welling (GCN) and Bronstein et al. (GDL) duplicate ml/13; a cross-link would do.
 - **07:** Neural ODE and S4 papers are also in physics/11 and ml. They are fine as connectors, but they are duplicates.
-- **08:** Herstein and Lang (encyclopedic or advanced) and Aluffi (category-theoretic): low value for Aaron. The Gross playlist is an unofficial re-upload.
+- **08:** Herstein and Lang (encyclopedic or advanced) and Aluffi (category-theoretic): low value for the intended learner. The Gross playlist is an unofficial re-upload.
 - **09:** do Carmo and Lee are graduate-level for an elective. The Albin playlist is an unofficial re-upload.
 - **10:** Dasgupta et al. 2019 (meta-RL causal reasoning) is niche and weak.
 - **11:**
@@ -340,7 +340,7 @@ The original proposal text follows for reference.
 
 ## Structural observations
 
-- **Missing engineering spine / core-vs-elective.** The README path runs 00→11 with equal weight and frames everything as "math for ML". For Aaron, a better structure is:
+- **Missing engineering spine / core-vs-elective.** The README path runs 00→11 with equal weight and frames everything as "math for ML". For the intended learner, a better structure is:
   - *Core:* 00 → 01 (+VMLS) → 02 (+complex) → 07 (+Feedback Systems) → **12 Signals & Systems (created)** → 03 (+Rethinking, Kalman) → 14 Numerics (created) → 04 → 05.
   - *Electives:* 06, 08 (+ **13 Number Theory/Crypto, created**, which is core if doing btc), 09, 10, 11.
   - **Done:** this route is now a "Recommended Route (engineering focus)" table in `math/README.md`.
@@ -367,9 +367,9 @@ The original proposal text follows for reference.
   - Duchi notes' year (PCMI volume)
   - The print year of Polyanskiy & Wu: I list 2024 for the free draft, and the print edition is from Cambridge UP
 
-## Top 5 priorities for Aaron in this curriculum
+## Top 5 priorities in this curriculum
 
-1. **Build the EE spine first.** Do complex analysis (Needham VCA + MIT 18.04), then Åström & Murray's *Feedback Systems*, then the new Section 12 Signals & Systems section (Oppenheim RES.6-007, Osgood EE261, Smith's DSP guide, MIT 6.011 for noise, PSD and detection). This is the math behind his sensor signal chains and test equipment.
+1. **Build the EE spine first.** Do complex analysis (Needham VCA + MIT 18.04), then Åström & Murray's *Feedback Systems*, then the new Section 12 Signals & Systems section (Oppenheim RES.6-007, Osgood EE261, Smith's DSP guide, MIT 6.011 for noise, PSD and detection). This is the math behind sensor signal chains and test equipment.
 2. **Linear algebra, applied and numerical.** Do 18.06 alongside Boyd & Vandenberghe's VMLS (least squares, estimation, control), then Trefethen & Bau (now in Section 14, with Goldberg and Driscoll & Braun) so computed results can be trusted. Treat Axler as the elective for proof maturity.
 3. **Probability for real measurements.** Do Stat 110, then Labbe's *Kalman and Bayesian Filters* (sensor fusion), then McElreath's *Statistical Rethinking* (applied Bayes; good for ML). Keep BDA and Jaynes as references.
 4. **Number theory and finite fields for Bitcoin.** Work through Section 13. Warm up with MIT 6.042J's number-theory chapters, then study Silverman's *Friendly Introduction* and Hoffstein/Pipher/Silverman, with Song's *Programming Bitcoin* Ch. 1–3 (btc Section 01) alongside. Finish with the secp256k1 + BIP-340 mini-project. This turns the btc curriculum's "Concept: ECDSA" rows into understanding.

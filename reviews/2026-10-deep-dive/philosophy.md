@@ -14,7 +14,7 @@ The curriculum has a sound arc (foundations, then mind and consciousness, then c
   - The Wolfram material was presented as quasi-established science.
 - **Coverage.** Section 00 promised logic and offered no logic resource. There was no ethics primer, no personal identity, no account of what "intelligence" means, and no philosophy of science.
 
-Overall grade as found: **C+**. After this pass (31 corrections, 32 verified additions, a complete PROGRESS tracker) it is roughly a **B**. The single most important remaining improvement is to **add a Philosophy of Science & Scientific Reasoning section** (proposed below). It is the missing hub between this curriculum and Aaron's physics, ML and bio curricula, and it is what lets him judge IIT vs. GNWT, Wolfram, or an ML benchmark claim on the merits.
+Overall grade as found: **C+**. After this pass (31 corrections, 32 verified additions, a complete PROGRESS tracker) it is roughly a **B**. The single most important remaining improvement is to **add a Philosophy of Science & Scientific Reasoning section** (proposed below). It is the missing hub between this curriculum and the physics, ML and bio curricula, and it is what lets a learner judge IIT vs. GNWT, Wolfram, or an ML benchmark claim on the merits.
 
 > **Verification limits this session:** the shared WebSearch budget (200 per turn) and then the shared WebFetch budget (800 per hour) ran out partway through. These pages could not be read because of rate limiting (HTTP 429): `api.crossref.org/works/10.2307/2181485` (Frege), `plato.stanford.edu/entries/popper/`, and `coursera.org/learn/philosophy-physical-sciences`. Every resource I added was fetched and verified. Strong candidates I could not verify are listed as "recommended next (verify first)" and were **not** added.
 
@@ -271,7 +271,7 @@ Scores are 1–5 for the curriculum as found. The grade column gives the grade a
 
 ### Philosophy of Science & Scientific Reasoning
 - **Position:** immediately after Section 00. Either insert it as a new 01 and renumber, or, to avoid renumbering, add it as Section 12 with a README note to "take after 00."
-- **Why:** Aaron studies physics, ML and biology, and this curriculum keeps asking scientific-method questions without the tools to answer them:
+- **Why:** The intended learner studies physics, ML and biology, and this curriculum keeps asking scientific-method questions without the tools to answer them:
   - Is IIT pseudoscience? Who "won" the Cogitate test?
   - Is Wolfram's program science?
   - What would count as evidence that an LLM understands?
@@ -336,7 +336,7 @@ Scores are 1–5 for the curriculum as found. The grade column gives the grade a
 - **Agent skill.** philosophy/ has no `.agents/skills/update-curriculum/SKILL.md` (pcb, btc, ml and software do). If one is added, it should require fetching every citation (author, year, venue) before adding, since that is exactly where this curriculum's errors came from.
 - **Missing standard parts.** No glossary or "positions map" for a domain that is mostly named positions (physicalism, functionalism, illusionism, panpsychism, compatibilism); a one-page map would help orientation.
 
-## Top 5 priorities for Aaron in this curriculum
+## Top 5 priorities in this curriculum
 1. **Approve the Philosophy of Science section** (Popper, Kuhn, Lakatos, Bayesian epistemology, philosophy of statistics and ML). It is the tool for judging every "is this real science?" question in 02, 03 and 11, and it ties together the physics, ML and bio curricula.
 2. **Read the now-balanced LLM-understanding cluster in order:**
    1. Bender & Koller
@@ -410,9 +410,9 @@ Scores are 1–5 for the curriculum as found. The grade column gives the grade a
   - ✱ Schema: table items missing from Suggested Order — added steps for the Edinburgh course (00:52), *The Mind's I* (03:56), Coeckelbergh (06:52), 80,000 Hours (07:59) and SEP Wittgenstein (08:49).
   - ✱ `blogs-and-references/README.md:53` — the "Philosophy of Science" journal now points to Section 12.
 - **Still unverified:**
-  - Strawson, "Freedom and Resentment" — page range left out because the sources conflict: SEP "Peter Frederick Strawson" (Snowdon & Gomes) gives 1962, *Proceedings of the British Academy* 48: 1–25; PhilPapers gives PBA 48: 187–211 (1963). No link was added: the free full text on Ted Honderich's UCL site (https://www.homepages.ucl.ac.uk/~uctytho/dfwstrawson1.htm) states no licence, so linking it is Aaron's call.
+  - Strawson, "Freedom and Resentment" — page range left out because the sources conflict: SEP "Peter Frederick Strawson" (Snowdon & Gomes) gives 1962, *Proceedings of the British Academy* 48: 1–25; PhilPapers gives PBA 48: 187–211 (1963). No link was added: the free full text on Ted Honderich's UCL site (https://www.homepages.ucl.ac.uk/~uctytho/dfwstrawson1.htm) states no licence, so linking it is the owner's call.
   - Pages not readable this run: one Crossref query for the Lakatos chapter (HTTP 429; verified instead on the Cambridge Core chapter page), MIT Press for *The Intentional Stance* (robots-disallowed; verified via the CiNii library catalog, so no link), JSTOR (bot challenge) and PubMed (reCAPTCHA) — both replaced by Crossref and Europe PMC.
-  - Not attempted (not in this backlog): SEP "Zhuangzi" for Section 10; the README "debates map"; the cut candidates and 🔑 questions above, which remain Aaron's decisions.
+  - Not attempted (not in this backlog): SEP "Zhuangzi" for Section 10; the README "debates map"; the cut candidates and 🔑 questions above, which remain the owner's decisions.
   - Outside this curriculum's edit scope: `STUDY-GUIDE.md:67` (Track E) still calls the philosophy-of-science section "proposed"; it should now link `philosophy/12-philosophy-of-science/`. The one-home table could add a row for "Philosophy of science, replication, benchmark validity → philosophy/12 (also econ/06, ml/12)".
 
 ## Link-audit fixes (2026-10-13)
@@ -433,7 +433,7 @@ Scores are 1–5 for the curriculum as found. The grade column gives the grade a
 - 🔑 resource rows across Sections 00–12: 30 → 27. The three demoted PROGRESS lines lost their 🔑.
 - README "🔑 Core Reading List — Cross-Reference": no change. All 12 items are still 🔑 in the sections they point to.
 - Index files (books/, courses/, blogs-and-references/): no change. None of the three demoted items is listed there.
-- For Aaron, 02: "Facing Up" is free, short and Suggested Order step 1, so it would make the shorter core path. The book kept its 🔑 because README core item #2 is *The Conscious Mind*, and dropping it would leave Dennett without Chalmers in the README list. To swap, move the 🔑 to "Facing Up" in 02 and in PROGRESS, replace README item #2, and drop *The Conscious Mind*'s 🔑 in `books/README.md` (#4) and in PROGRESS "Books (supplementary)".
+- For the owner, 02: "Facing Up" is free, short and Suggested Order step 1, so it would make the shorter core path. The book kept its 🔑 because README core item #2 is *The Conscious Mind*, and dropping it would leave Dennett without Chalmers in the README list. To swap, move the 🔑 to "Facing Up" in 02 and in PROGRESS, replace README item #2, and drop *The Conscious Mind*'s 🔑 in `books/README.md` (#4) and in PROGRESS "Books (supplementary)".
 - books/README.md #9 Varela, Thompson & Rosch, *The Embodied Mind*: 🔑 added (core in 04)
 - books/README.md #10 O'Neil, *Weapons of Math Destruction*: 🔑 added (core in 06)
 - books/README.md #11 Rahula, *What the Buddha Taught*: 🔑 added (core in 10)
