@@ -79,7 +79,7 @@ label = "Source code"
 access = "free"
 url = "https://github.com/bitcoin/bitcoin/blob/v31.1/src/pow.cpp"
 link_text = "pow.cpp (v31.1)"
-description = "The consensus rule itself, in one short file: GetNextWorkRequired and CalculateNextWorkRequired measure the timespan from the first to the last block of the period (the 2015-interval off-by-one), clamp it to between a quarter and four times the target timespan, cap the target at powLimit, and include the BIP 94 timewarp fix that testnet4 enforces. Exercise 2 must match it bit for bit. Linked at the v31.1 tag (July 2026); unchanged on master as of October 2026."
+description = "The consensus rule itself, in one short file: GetNextWorkRequired and CalculateNextWorkRequired measure the timespan from the first to the last block of the period (the 2015-interval off-by-one), clamp it to between a quarter and four times the target timespan, and cap the target at powLimit; a testnet4-only branch (BIP 94) bases the new target on the period's first block so the minimum-difficulty exception cannot drag it down. BIP 94's timewarp rule is a header check in validation.cpp (\"time-timewarp-attack\"). Exercise 2 must match this file bit for bit. Linked at the v31.1 tag (July 2026); unchanged on master as of October 2026."
 verified = 2026-10-21
 
 [[groups.items]]
