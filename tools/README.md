@@ -45,7 +45,8 @@ outro = '''Optional text after the table, e.g. cross-links to resources tracked 
 id = "hartley-grounding"               # required: a-z, 0-9 and hyphens; unique in the section; never change it
 title = "How to Achieve Proper Grounding"   # required; Markdown is allowed (e.g. *Book Title*)
 authors = "Rick Hartley"               # people or the publishing organization
-year = "2016"                          # a string: "2016", "2003, 2007", "1961–1969"
+year = "2016"                          # a string: "2016", "2003, 2007", "1961–1969", "1962 (2nd ed. 1975)";
+                                       # "n.d." only when the source itself shows no date
 type = "video"                         # required; see the list below
 label = "Talk"                         # optional: overrides the type's display name
 marks = ["core"]                       # optional: core (🔑), masterwork (🔑🔑), canon (⭐), ai (🤖)
