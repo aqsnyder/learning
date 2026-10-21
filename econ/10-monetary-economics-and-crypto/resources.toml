@@ -85,8 +85,8 @@ type = "report"
 access = "free"
 url = "https://www.bis.org/publ/arpdf/ar2025e3.htm"
 link_text = "Link"
-description = "The central banks' view, and the bridge to Part 2. Any money that is to be the mainstay of the monetary system must pass three tests: singleness (it trades at par with other forms of money), elasticity (supply can expand when payments need it) and integrity (it resists financial crime). Stablecoins fall short on all three; the chapter proposes a unified ledger of tokenised central-bank reserves, commercial-bank money and government bonds instead. Read it as one side of the argument, not the last word."
-verified = 2026-10-13
+description = "Published 29 June 2025. The central banks' view, and the bridge to Part 2. The mainstay of a monetary system must pass three tests: singleness (settlement at par, so one unit of money is always worth one unit of account), elasticity (money supplied flexibly to meet large-value payments) and integrity (resistance to illicit activity). Stablecoins fall short on all three; the chapter proposes a unified ledger of tokenised central-bank reserves, commercial-bank money and government bonds instead. Read it as one side of the argument, not the last word."
+verified = 2026-10-21
 
 [[groups]]
 title = "Part 2: Crypto, read as monetary economics"

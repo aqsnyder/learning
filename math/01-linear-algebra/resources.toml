@@ -123,15 +123,15 @@ verified = 2026-10-13
 [[groups.items]]
 id = "the-matrix-cookbook"
 title = "The Matrix Cookbook"
-authors = "Kaare Brandt Petersen, Michael Pedersen"
+authors = "Kaare Brandt Petersen, Michael Syskind Pedersen"
 year = "2012"
 type = "report"
 label = "Reference"
 access = "free"
 url = "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf"
 link_text = "PDF"
-description = "A free compendium of matrix identities, derivatives, and decompositions. Practice 3 uses its derivative identities to derive the normal equations; keep it as a lookup table, not a textbook."
-verified = 2026-10-13
+description = "A free compendium of matrix identities, derivatives, inverses, decompositions and Gaussian identities (version of November 15, 2012). Practice 3 uses its derivative identities to derive the normal equations; keep it as a lookup table, not a textbook."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-applied-linear-algebra"

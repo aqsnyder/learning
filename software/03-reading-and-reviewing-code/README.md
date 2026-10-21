@@ -59,7 +59,7 @@ After this section you can:
 5. Refactoring (catalog of smells and systematic fixes)
 6. Your Code as a Crime Scene (use git history to decide where to look first)
 7. Google Code Review Guidelines (professional review process)
-8. Practice: review AI-generated code on every project
+8. GitHub's "Review AI-generated code" checklist, then review AI-generated code on every project
 ```
 
 ---
@@ -80,7 +80,7 @@ After this section you can:
    - every Ousterhout red flag (shallow module, information leakage, pass-through method, …);
    - every naming or comment problem from *The Art of Readable Code*.
 
-   Then write characterization tests and apply the three highest-value refactorings by their catalog names (e.g., Split Phase, Extract Function, Replace Primitive with Object), keeping the tests green throughout. *(~3 h · Refactoring ch. 3 "Bad Smells in Code" and the refactoring catalog; A Philosophy of Software Design on deep modules, information hiding and red flags; The Art of Readable Code)*
+   Then write characterization tests and apply the three highest-value refactorings by their catalog names (e.g., Split Phase, Extract Function, Replace Primitive with Object), keeping the tests green throughout. *(~3 h · Refactoring ch. 3 "Bad Smells in Code" and the online Catalog of Refactorings; A Philosophy of Software Design on deep modules, information hiding and red flags; The Art of Readable Code)*
 5. **Seeded-defect PR review** — Have one agent session implement a real change in one of your repos, e.g., "add retries with exponential backoff and a per-command timeout to the instrument driver". Have a second, separate session inject three subtle defects into that branch and record them in a sealed file, for example:
    - an off-by-one in the retry loop;
    - a swallowed exception;
@@ -91,7 +91,7 @@ After this section you can:
    - a security section: injection, unsafe deserialization and path traversal in Python; bounds, integer overflow and use-after-free in C;
    - AI-specific checks: invented APIs, unrelated edits, tests that mirror the implementation.
 
-   Done when you've scored your recall and added a checklist line for every defect you missed. Keep the checklist; Sections 05, 08, 09 and 10 extend it. *(~3 h · Google review guide; this section's "Review AI-generated code critically" practice; for the security part, OWASP Top 10 and the SEI CERT C Coding Standard, listed in Section 08)*
+   Done when you've scored your recall and added a checklist line for every defect you missed. Keep the checklist; Sections 05, 08, 09 and 10 extend it. *(~3 h · Google review guide; GitHub Docs, "Review AI-generated code"; for the security part, OWASP Top 10 and the SEI CERT C Coding Standard, listed in [Section 08](../08-security-and-reliability/README.md))*
 
 **🏗️ Mini-project — ARCHITECTURE.md for a Dependency:** Write an `ARCHITECTURE.md` of at most two pages for a mid-size library you rely on (PyVISA, pyserial or pyOCD). Cover:
 - its purpose;

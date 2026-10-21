@@ -3,29 +3,35 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Where the incentives go next:** what happens to security as fees replace the shrinking subsidy is [Section 09](../09-economics-and-game-theory/README.md)'s topic (Budish; Carlsten et al.).'''
 
 [[groups.items]]
 id = "mastering-bitcoin-chapter-12-mining-and"
 title = "Mastering Bitcoin, Chapter 12: Mining and Consensus"
-authors = "Andreas Antonopoulos and David Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
 link_text = "ch12_mining.adoc"
-description = "Coinbase and subsidy, proof-of-work and difficulty retargeting, chain selection, mining pools, hashrate attacks, and how consensus rules change (hard vs. soft forks)"
-verified = 2026-10-13
+description = "The coinbase transaction, subsidy and fees, the proof-of-work algorithm, target representation and retargeting, the extra-nonce solution, mining pools (managed pools using Stratum v1 or v2, and P2Pool), hashrate attacks, and how consensus rules change (hard and soft forks). 3rd edition (O'Reilly, December 2023). Section 13 re-reads its last part."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "andreas-antonopoulos-bitcoin-q-a-on"
-title = "Andreas Antonopoulos: Bitcoin Q&A on Mining"
-authors = "Andreas Antonopoulos"
+title = "Bitcoin Q&A: How Is the Number of Zeros in the Target Hash Determined? (with \"Why Can't Bitcoin Mining Difficulty Adjust a Little Quicker?\")"
+authors = "Andreas M. Antonopoulos"
+year = "2020"
 type = "video"
 access = "free"
-url = "https://www.youtube.com/@aantonop"
-link_text = "@aantonop"
-description = "Clear explanations of mining mechanics"
-verified = 2026-10-13
+level = "beginner"
+url = "https://www.youtube.com/watch?v=_LPaIL6AqSQ"
+link_text = "YouTube"
+more_links = [{ text = "Why can't difficulty adjust quicker?", url = "https://www.youtube.com/watch?v=6Lm_8vLtiAI" }]
+description = "Two short answers from the aantonop channel (July and May 2020): how the target — the \"number of zeros\" — is set and agreed by every node, and why Bitcoin retargets only every 2,016 blocks. Intuition for exercises 1–2."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "learn-me-a-bitcoin-mining"
@@ -40,64 +46,67 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "chaincode-labs-mining-section"
-title = "Chaincode Labs: Mining section"
+title = "Chaincode Labs seminar: Mining and Network Block Propagation"
+authors = "Chaincode Labs"
+year = "2021–2023"
 type = "course"
 label = "Curriculum"
 access = "free"
+level = "intermediate"
 marks = ["core"]
-url = "https://github.com/chaincodelabs/bitcoin-curriculum"
-link_text = "bitcoin-curriculum"
-description = "Protocol-level deep dive"
-verified = 2026-10-13
+url = "https://chaincode.gitbook.io/seminars/bitcoin-protocol-development/mining-network-prop"
+link_text = "Session 3"
+description = "Week 3 of Chaincode's Bitcoin Protocol Development seminar, the study-group half of its bitcoin-curriculum: readings with discussion questions on block propagation (Maxwell's \"Advances in Block Propagation\", compact blocks, FIBRE), the history of the Stratum protocol, pool rewards, \"Majority is not Enough\" and the selfish-mining bet, and the covert AsicBoost allegation, plus Larry Ruane's minesim simulator as an optional exercise. Published May 2021, last revised June 2023. Section 06 uses session 4; Section 10 lists the whole seminar."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mempool-space"
 title = "Mempool.space"
+authors = "The Mempool Open Source Project"
 type = "tool"
+access = "free"
 url = "https://mempool.space/"
 link_text = "mempool.space"
-description = "Live blockchain explorer, fee estimation, mining pool stats"
-verified = 2026-10-13
+description = "Open-source, self-hostable explorer and API: live fee rates, mempool statistics and recent replacements, difficulty-adjustment progress, and hashrate and mining-pool pages. Exercise 1 takes its hashrate and pool distribution from here; Sections 00, 02 and 06 use its API and mempool views."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "difficulty-adjustment-algorithm"
-title = "Difficulty adjustment algorithm"
-type = "concept"
-description = "How Bitcoin self-regulates every 2016 blocks"
+title = "Bitcoin Core source: src/pow.cpp (difficulty retargeting)"
+authors = "Bitcoin Core contributors"
+type = "docs"
+label = "Source code"
+access = "free"
+url = "https://github.com/bitcoin/bitcoin/blob/v31.1/src/pow.cpp"
+link_text = "pow.cpp (v31.1)"
+description = "The consensus rule itself, in one short file: GetNextWorkRequired and CalculateNextWorkRequired measure the timespan from the first to the last block of the period (the 2015-interval off-by-one), clamp it to between a quarter and four times the target timespan, cap the target at powLimit, and include the BIP 94 timewarp fix that testnet4 enforces. Exercise 2 must match it bit for bit. Linked at the v31.1 tag (July 2026); unchanged on master as of October 2026."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "selfish-mining-and-mining-game-theory"
-title = "Selfish mining and mining game theory"
-type = "concept"
+title = "Majority is not Enough: Bitcoin Mining is Vulnerable"
+authors = "Ittay Eyal, Emin Gün Sirer"
+year = "2013"
+type = "paper"
 access = "free"
-url = "https://bitcoinops.org/en/topics/selfish-mining/"
-link_text = "Optech topic"
-description = "Block withholding and selfish mining: under minimal assumptions a miner with about 1/3 of the hashrate can earn more than its fair share, so the honest-majority \"51%\" framing is too optimistic. The Optech page links the original \"Majority is not Enough\" paper (Eyal & Sirer, 2013) and 2025–26 follow-ups"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "mining-pools-and-hashrate-distribution"
-title = "Mining pools and hashrate distribution"
-type = "concept"
-description = "Pool payout schemes, hashrate concentration, and who chooses the transactions in a block (see Stratum V2 in Section 11)"
-
-[[groups.items]]
-id = "energy-and-incentive-structure"
-title = "Energy and incentive structure"
-type = "concept"
-description = "Block rewards, halving schedule, fee market. What happens to security as fees replace the subsidy is covered in [Section 09](../09-economics-and-game-theory/README.md) (Budish; Carlsten et al.)"
+url = "https://arxiv.org/abs/1311.0243"
+link_text = "arXiv:1311.0243"
+more_links = [{ text = "Optech topic", url = "https://bitcoinops.org/en/topics/selfish-mining/" }]
+description = "The selfish-mining paper: a pool that withholds blocks and publishes them strategically earns more than its share of the hashrate once that share exceeds (1−γ)/(3−2γ) — a third if it loses every tie, less if it wins some — so an honest majority is not enough. The proposed fix (random tie-breaking) raises the bar to 1/4. Exercise 5 reproduces the threshold; the Optech topic follows later work through 2026."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-and-cryptocurrency-technologies"
-title = "Bitcoin and Cryptocurrency Technologies, Ch. 2 and 5"
+title = "Bitcoin and Cryptocurrency Technologies, Chs. 2 and 5: How Bitcoin Achieves Decentralization; Bitcoin Mining"
 authors = "Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, Steven Goldfeder"
+year = "2016"
 type = "book"
 access = "free"
 level = "intermediate"
 url = "https://bitcoinbook.cs.princeton.edu/"
 link_text = "bitcoinbook.cs.princeton.edu"
-description = "Princeton's textbook (2016): \"How Bitcoin Achieves Decentralization\" and \"Bitcoin Mining\", including mining incentives and strategies. Pre-SegWit, but the most rigorous textbook treatment of Nakamoto consensus; free pre-publication PDF and lectures on the site"
-verified = 2026-10-13
+description = "Princeton University Press (July 2016; pre-SegWit): ch. 2 on how Nakamoto consensus achieves decentralization, ch. 5 on mining, including incentives and strategies — the most rigorous textbook treatment. The book site has a free pre-publication draft PDF and twelve video lectures."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "learn-me-a-bitcoin-block-reward"

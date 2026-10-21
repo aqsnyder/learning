@@ -6,20 +6,29 @@
 
 [[groups.items]]
 id = "nonlinear-dynamics-and-chaos-3rd-ed-2024"
-title = "Nonlinear Dynamics and Chaos (3rd ed., 2024)"
-authors = "Steven Strogatz"
+title = "Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering (3rd ed., 2024)"
+authors = "Steven H. Strogatz"
 year = "2024"
 type = "book"
 marks = ["core"]
+url = "https://www.routledge.com/Nonlinear-Dynamics-and-Chaos-With-Applications-to-Physics-Biology-Chemistry-and-Engineering/Strogatz/p/book/9780367026509"
+link_text = "Routledge / CRC Press"
+description = "The standard first textbook, the backbone of every objective here: one-dimensional flows and bifurcations (Ch. 2–4), two-dimensional flows, limit cycles and Hopf bifurcations (Ch. 5–8), and chaos through the Lorenz equations, one-dimensional maps, fractals and strange attractors (Ch. 9–12). The 3rd edition adds Ch. 13 on the Kuramoto model of synchronization."
+access = "paid"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "nonlinear-dynamics-and-chaos-strogatz"
 title = "Nonlinear Dynamics and Chaos — Strogatz (Cornell lectures)"
+authors = "Steven Strogatz"
 type = "course"
 access = "free"
 marks = ["core"]
 url = "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
 link_text = "YouTube"
+description = "Strogatz's own lecture course at Cornell, which follows the book closely; watch each lecture alongside the matching chapter. Also used in math/07."
+level = "intermediate"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -27,6 +36,9 @@ id = "chaos-making-a-new-science"
 title = "Chaos: Making a New Science"
 authors = "James Gleick"
 type = "book"
+description = "The popular history of chaos theory and the people who built it. Read it for motivation, and for the account of Lorenz's rounded-restart discovery (\"The Butterfly Effect\") that Practice 3 recreates."
+access = "paid"
+level = "beginner"
 
 [[groups.items]]
 id = "deterministic-nonperiodic-flow"
@@ -36,6 +48,7 @@ year = "1963"
 type = "paper"
 url = "https://doi.org/10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2"
 link_text = "DOI"
+description = "Lorenz's paper in the *Journal of the Atmospheric Sciences* that found sensitive dependence on initial conditions in a three-variable convection model, including the map of successive maxima that Practice 3 reproduces. Read it after Strogatz Ch. 9."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -46,6 +59,8 @@ year = "1976"
 type = "paper"
 url = "https://doi.org/10.1038/261459a0"
 link_text = "DOI"
+description = "May's short review in *Nature* of the logistic map: the period-doubling cascade, chaos and periodic windows in a one-line difference equation, and why that matters for population models. Practice 2 checks which of its claims you can reproduce."
+access = "paid"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -53,15 +68,24 @@ id = "chaotic-dynamics-an-introduction"
 title = "Chaotic Dynamics: An Introduction"
 authors = "Baker & Gollub"
 type = "book"
+description = "A concise, physics-oriented introduction that links the theory to experiment; Practice 4 uses it alongside Strogatz for attractor reconstruction and dimension."
+access = "paid"
+level = "intermediate"
 
 [[groups.items]]
 id = "the-essence-of-chaos"
 title = "The Essence of Chaos"
-authors = "Edward Lorenz"
+authors = "Edward N. Lorenz"
 type = "book"
+description = "Lorenz's own account of chaos for a broad audience: a short, careful companion to Gleick's history by the scientist at its centre."
+access = "paid"
+level = "beginner"
 
 [[groups.items]]
 id = "chaos-and-fractals"
 title = "Chaos and Fractals"
 authors = "Peitgen, Jürgens & Saupe"
 type = "book"
+description = "A large, illustrated treatment of fractal geometry, iterated function systems and the Mandelbrot set, alongside the logistic map. Use it with Practice 2 for the geometry behind the orbit diagram."
+access = "paid"
+level = "intermediate"

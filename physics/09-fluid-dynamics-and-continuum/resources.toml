@@ -10,66 +10,109 @@ outro = '''
 [[groups.items]]
 id = "fluid-mechanics-7th-ed-2024"
 title = "Fluid Mechanics (7th ed., 2024)"
-authors = "Kundu, Cohen, Dowling & Capecelatro"
+authors = "Pijush K. Kundu, Ira M. Cohen, David R. Dowling & Jesse Capecelatro"
 year = "2024"
 type = "book"
 marks = ["core"]
+url = "https://shop.elsevier.com/books/fluid-mechanics/kundu/978-0-12-819807-0"
+link_text = "Elsevier"
+description = "The section's primary textbook, revised in this edition with new examples, exercises and MATLAB worked examples. Its fifteen chapters run from the fundamentals to turbulence, gravity waves, compressible flow, aerodynamics and geophysical fluid dynamics; read it for objectives 1–3."
+access = "paid"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-feynman-lectures-on-physics"
-title = "The Feynman Lectures on Physics — Elasticity and Fluid Flow chapters (Vol. 2, Ch. 38–41)"
+title = "The Feynman Lectures on Physics, Vol. II, Ch. 38–41: Elasticity; Elastic Materials; The Flow of Dry Water; The Flow of Wet Water"
+authors = "Feynman, Leighton & Sands"
+year = "1964, 2013"
 type = "book"
 access = "free"
-url = "https://www.feynmanlectures.caltech.edu/"
-link_text = "feynmanlectures.caltech.edu"
-verified = 2026-10-13
+url = "https://www.feynmanlectures.caltech.edu/II_38.html"
+link_text = "Ch. 38"
+more_links = [{ text = "Ch. 39", url = "https://www.feynmanlectures.caltech.edu/II_39.html" }, { text = "Ch. 40", url = "https://www.feynmanlectures.caltech.edu/II_40.html" }, { text = "Ch. 41", url = "https://www.feynmanlectures.caltech.edu/II_41.html" }]
+description = "Feynman's four continuum chapters, free in the online New Millennium Edition. Ch. 38–39 cover elasticity (Hooke's law, the strain and elasticity tensors), the only solid-mechanics reading in this section; Ch. 40 treats inviscid \"dry water\" (Bernoulli, circulation, vortex lines) and Ch. 41 viscous \"wet water\" (viscosity, the Reynolds number, flow past a cylinder, the zero-viscosity limit, Couette flow), the intuitive entry to objectives 1 and 3."
+level = "beginner"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "an-introduction-to-fluid-dynamics"
 title = "An Introduction to Fluid Dynamics"
-authors = "G.K. Batchelor"
+authors = "G. K. Batchelor"
+year = "2000"
 type = "book"
+url = "https://doi.org/10.1017/CBO9780511800955"
+link_text = "Cambridge University Press (DOI)"
+description = "The classic, mathematically careful treatment (linked: Cambridge's 2000 printing). Use it for the exact viscous-flow solutions behind Practice 2 and for deeper theory than Kundu."
+access = "paid"
+level = "advanced"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "elementary-fluid-dynamics"
 title = "Elementary Fluid Dynamics"
-authors = "D.J. Acheson"
+authors = "D. J. Acheson"
+year = "1990"
 type = "book"
+url = "https://global.oup.com/academic/product/elementary-fluid-dynamics-9780198596790"
+link_text = "Oxford University Press"
+description = "A gentle introduction in nine chapters: elementary viscous flow, waves, aerofoils, vortex motion, the Navier–Stokes equations, very viscous flow, boundary layers and instability. Read it before Kundu for objectives 1–3."
+access = "paid"
+level = "beginner"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "fluid-mechanics"
-title = "Fluid Mechanics"
-authors = "Landau & Lifshitz"
+title = "Fluid Mechanics (Course of Theoretical Physics, Vol. 6; 2nd ed.)"
+authors = "L. D. Landau & E. M. Lifshitz"
+year = "1987"
 type = "book"
+url = "https://doi.org/10.1016/C2013-0-03799-1"
+link_text = "Elsevier (DOI)"
+description = "The concise, demanding reference volume of Landau and Lifshitz's course (English translation by J. B. Sykes and W. H. Reid). Use it for advanced topics after Kundu and Batchelor."
+access = "paid"
+level = "advanced"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "data-driven-science-and-engineering"
-title = "Data-Driven Science and Engineering"
-authors = "Brunton & Kutz"
+title = "Data-Driven Science and Engineering: Machine Learning, Dynamical Systems, and Control"
+authors = "Steven L. Brunton & J. Nathan Kutz"
+year = "2019"
 type = "book"
 marks = ["core"]
 url = "https://databookuw.com/"
 link_text = "databookuw.com"
-verified = 2026-10-13
+description = "Brunton and Kutz's textbook on data-driven methods, from the singular value decomposition (Ch. 1) to data-driven dynamical systems such as dynamic mode decomposition (Ch. 7). The book is paid; its site gives the MATLAB and Python code and the data, including the cylinder-wake snapshots that Practice 4 analyses. Section 11 uses it too, for SINDy."
+access = "partial"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "national-committee-for-fluid-mechanics"
 title = "National Committee for Fluid Mechanics Films"
-authors = "Ascher Shapiro et al."
+authors = "National Committee for Fluid Mechanics Films (founded by Ascher Shapiro), with Education Development Center"
 year = "1961–1969"
-type = "video"
+type = "video-series"
 url = "http://web.mit.edu/hml/ncfmf.html"
 link_text = "MIT"
-verified = 2026-10-13
+description = "The classic film series of real flow experiments, including Fundamental Boundary Layers, Low Reynolds Number Flow, Vorticity, Turbulence and Waves in Fluids. MIT's iFluids program has put a number of the 39 films online free; watch the relevant one before each textbook topic."
+access = "partial"
+level = "beginner"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "cfd-python-12-steps-to-navierstokes"
-title = "CFD Python: 12 Steps to Navier–Stokes — Lorena A. Barba & Gilbert F. Forsyth (2013; JOSE 2018)"
+title = "CFD Python: 12 Steps to Navier–Stokes"
+authors = "Lorena A. Barba & Gilbert F. Forsyth"
+year = "2013, 2018"
 type = "course"
 access = "free"
 url = "https://github.com/barbagroup/CFDPython"
 link_text = "GitHub"
-verified = 2026-10-13
+description = "Twelve Jupyter notebooks (written in 2013 for a Boston University course; published in the *Journal of Open Source Education*, 2018) that build from 1D linear convection through Burgers' equation and the Laplace and Poisson equations to 2D cavity and channel flow. Steps 10–11 are the warm-up for Practice 3's solver."
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "a-heat-transfer-textbook-6th-ed-2024"
@@ -79,4 +122,7 @@ year = "2024"
 type = "book"
 url = "https://ahtt.mit.edu/"
 link_text = "ahtt.mit.edu (free PDF)"
-verified = 2026-10-13
+description = "An 810-page engineering text (version 6.00, April 2024), free to download for personal and non-profit teaching use: conduction, convection and thermal radiation, with more than 560 exercises. The heat-transfer side of Practice 1(d) and the mini-project, and the radiation chapter Section 12 uses."
+access = "free"
+level = "intermediate"
+verified = 2026-10-21

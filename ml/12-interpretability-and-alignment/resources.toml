@@ -144,24 +144,29 @@ verified = 2026-10-21
 
 [[groups.items]]
 id = "transformerlens-mech-interp-tutorials"
-title = "TransformerLens & Mech Interp tutorials"
+title = "TransformerLens Documentation"
 authors = "Neel Nanda"
 year = "ongoing"
 type = "tutorial"
-url = "https://www.neelnanda.io/mechanistic-interpretability"
-link_text = "neelnanda.io"
-description = "Neel Nanda's resources: TransformerLens, the library he created for inspecting and editing activations, plus demos, a getting-started guide and a glossary. Practice 2's toolkit."
+access = "free"
+url = "https://transformerlensorg.github.io/TransformerLens/"
+link_text = "transformerlensorg.github.io"
+more_links = [{ text = "Exploratory Analysis Demo", url = "https://transformerlensorg.github.io/TransformerLens/generated/demos/Exploratory_Analysis_Demo.html" }, { text = "Neel Nanda's guides", url = "https://www.neelnanda.io/mechanistic-interpretability" }]
+description = "Docs for TransformerLens, Neel Nanda's library for inspecting and editing a model's activations: getting-started guides, the Main Demo, and the Exploratory Analysis Demo that Practice 2 checks against (it also has Jacobian-lens demos for Practice 3). Nanda's own page adds a getting-started guide, a prerequisites list and a glossary."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "arena-alignment-research-engineer"
-title = "ARENA (Alignment Research Engineer Accelerator) — self-study curriculum: transformer interpretability, RL/RLHF, LLM evals, alignment science"
-authors = "Callum McDougall / ARENA"
+title = "ARENA — AI Safety Curriculum"
+authors = "ARENA (Alignment Research Engineer Accelerator)"
 year = "ongoing"
 type = "course"
+access = "free"
+level = "advanced"
 url = "https://learn.arena.education"
 link_text = "learn.arena.education"
-description = "ARENA's online course: fundamentals, then interpretability (probes, SAEs, circuits, toy models), RL, evals and alignment science, taught through coding exercises. This section's hands-on companion."
-verified = 2026-10-13
+description = "ARENA's online course in five chapters: fundamentals, transformer interpretability, reinforcement learning, LLM evaluations and alignment science, taught through coding exercises. This section's hands-on companion."
+verified = 2026-10-21
 
 [[groups]]
 title = "Safety and Alignment"
@@ -250,17 +255,26 @@ verified = 2026-10-13
 [[groups.items]]
 id = "superintelligence-paths-dangers"
 title = "Superintelligence: Paths, Dangers, Strategies"
-authors = "Bostrom"
+authors = "Nick Bostrom"
 year = "2014"
 type = "book"
-description = "Bostrom's argument that superintelligent AI could be hard to control: takeoff dynamics, orthogonality, instrumental convergence, the treacherous turn. Philosophical context, not technique."
+access = "paid"
+level = "beginner"
+url = "https://nickbostrom.com/"
+link_text = "Author's page"
+description = "Bostrom's argument (Oxford University Press, 2014) that superintelligent AI could be hard to control: takeoff dynamics, orthogonality, instrumental convergence, the treacherous turn. Philosophical context, not technique."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "human-compatible-artificial-intelligence"
 title = "Human Compatible: Artificial Intelligence and the Problem of Control"
-authors = "Russell"
+authors = "Stuart Russell"
 year = "2019"
 type = "book"
+access = "paid"
+level = "beginner"
+url = "https://people.eecs.berkeley.edu/~russell/hc.html"
+link_text = "Author's page"
 description = "Russell argues that AI built to optimize fixed objectives is unsafe, and proposes machines uncertain about human preferences that learn them from behavior."
 
 [[groups]]

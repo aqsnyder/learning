@@ -3,94 +3,50 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** BIP 379: Miniscript ([Section 05](../05-wallets-and-key-management/README.md)) for the inheritance policy in Practice 4; embit and Bitcoin Dev Kit ([Section 10](../10-development-and-programming/README.md)) as second signers and policy compilers in Practices 3 and 4.
+'''
 
 [[groups.items]]
 id = "lopp-net-bitcoin-security-guide"
-title = "Lopp.net Bitcoin Security Guide"
+title = "Lopp.net: Bitcoin Security & Resources"
 authors = "Jameson Lopp"
 type = "website"
 label = "Web Resource"
+access = "free"
 marks = ["core"]
 url = "https://www.lopp.net/bitcoin-information/security.html"
 link_text = "lopp.net"
-description = "Comprehensive security best practices"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "cold-storage"
-title = "Cold storage"
-type = "concept"
-description = "Air-gapped signing, hardware wallets (Coldcard, Trezor, Ledger)"
-
-[[groups.items]]
-id = "multisig-multi-signature"
-title = "Multisig (multi-signature)"
-type = "concept"
-description = "2-of-3, 3-of-5 setups for security"
-
-[[groups.items]]
-id = "coin-selection-and-utxo-management"
-title = "Coin selection and UTXO management"
-type = "concept"
-description = "Privacy implications of consolidation"
-
-[[groups.items]]
-id = "coinjoin-and-payjoin"
-title = "CoinJoin and PayJoin"
-type = "concept"
-description = "Collaborative transactions for privacy. Note the legal context: in April 2024 two Samourai Wallet developers were arrested on U.S. charges related to their software, and two other companies then announced they would stop serving U.S. customers ([Optech #300](https://bitcoinops.org/en/newsletters/2024/05/01/)); newer designs (Payjoin v2, silent payments) are in Section 11"
-
-[[groups.items]]
-id = "chain-analysis-and-privacy-threats"
-title = "Chain analysis and privacy threats"
-type = "concept"
-description = "How surveillance works"
-
-[[groups.items]]
-id = "bitcoin-privacy-guide"
-title = "Bitcoin Privacy Guide"
-type = "website"
-label = "Web Resource"
-url = "https://bitcoiner.guide/privacy/"
-link_text = "bitcoiner.guide"
-description = "Practical privacy techniques (an online guide, not a book)"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "andreas-antonopoulos-on-bitcoin-privacy"
-title = "Andreas Antonopoulos on Bitcoin privacy"
-authors = "Andreas Antonopoulos"
-type = "video"
-access = "free"
-url = "https://www.youtube.com/@aantonop"
-link_text = "YouTube"
-description = "Privacy-focused talks"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "bip-174-psbt-partially-signed-bitcoin"
-title = "BIP 174: PSBT (Partially Signed Bitcoin Transactions)"
-authors = "Ava Chow"
-type = "standard"
-access = "free"
-marks = ["core"]
-url = "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki"
-link_text = "BIP 174"
-description = "Multi-device signing workflow (PSBT v2 is BIP 370)"
+description = "A curated, sectioned link collection rather than a single guide: general security (including Lopp's essay \"Bitcoin's Security Model: A Deep Dive\", a timeline of hardware-wallet hacks and a list of documented physical attacks), security guides, wallet backups, cold-storage and multisig set-up guides, security disclosures and known scams. Use it to source the threat models in Practices 1 and 2."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "mastering-bitcoin-chapter-13-bitcoin"
 title = "Mastering Bitcoin, Chapter 13: Bitcoin Security"
-authors = "Andreas Antonopoulos and David Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
 year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch13_security.adoc"
 link_text = "GitHub"
-description = "Bitcoin's decentralized security model and root of trust, then user practice: physical storage, hardware signing devices, multisig and governance, survivability and inheritance"
-verified = 2026-10-13
+description = "Third edition (O'Reilly, December 2023; CC BY-SA 4.0). Bitcoin's decentralized security model and root of trust, then user practice: physical storage and cold storage (keys generated and kept offline), hardware signing devices, ensuring access, diversifying risk, multisig and governance, survivability and inheritance."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "bip-174-psbt-partially-signed-bitcoin"
+title = "BIP 174: PSBT (Partially Signed Bitcoin Transactions)"
+authors = "Ava Chow"
+year = "2017"
+type = "standard"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki"
+link_text = "BIP 174"
+more_links = [{ text = "BIP 370 (PSBT v2)", url = "https://github.com/bitcoin/bips/blob/master/bip-0370.mediawiki" }]
+description = "The PSBT format and its six roles (Creator, Updater, Signer, Combiner, Input Finalizer, Transaction Extractor), including what a signer should check before signing. Deployed. Version 2 is BIP 370 (also Deployed), and Bitcoin Core 32.0 (tagged 21 October 2026) creates version 2 PSBTs by default, so expect BIP 370's fields when you decode one."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-core-multisig-and-offline"
@@ -101,8 +57,43 @@ access = "free"
 url = "https://github.com/bitcoin/bitcoin/blob/master/doc/multisig-tutorial.md"
 link_text = "Multisig"
 more_links = [{ text = "Offline signing", url = "https://github.com/bitcoin/bitcoin/blob/master/doc/offline-signing-tutorial.md" }]
-description = "Step-by-step on signet: build a descriptor-based multisig wallet, and pass PSBTs between an online watch-only wallet and an air-gapped signer — using only Bitcoin Core"
-verified = 2026-10-13
+description = "Step-by-step on signet, using only Bitcoin Core: build a descriptor-based 2-of-3 multisig wallet (`wsh(sortedmulti(…))`), and pass PSBTs between an online watch-only wallet and an air-gapped signer. The copies on `master` use RPCs added in Bitcoin Core 32.0 (`derivehdkey`, `exportwatchonlywallet`; tagged October 2026). With an older release, follow the copy in that release's `doc/` folder."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "cold-storage"
+title = "Bitcoin Optech: Exfiltration-resistant signing"
+authors = "Bitcoin Optech"
+type = "website"
+access = "free"
+url = "https://bitcoinops.org/en/topics/exfiltration-resistant-signing/"
+link_text = "bitcoinops.org"
+description = "How a malicious signing device can leak your keys through the nonces in its signatures, and the countermeasures: anti-exfiltration signing protocols (used in the BitBox02 and Jade signers, Optech 2021) and, since September 2026, the Draft BIP 461 for deterministic ECDSA. Its mentions include the August 2024 \"Dark Skippy\" disclosure that Practice 2 dissects."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "coin-selection-and-utxo-management"
+title = "Bitcoin Optech: Coin selection"
+authors = "Bitcoin Optech"
+type = "website"
+access = "free"
+url = "https://bitcoinops.org/en/topics/coin-selection/"
+link_text = "bitcoinops.org"
+description = "How a wallet chooses which UTXOs to spend: smaller transactions to save fees, versus not merging coins with unrelated histories to protect privacy. Newsletter mentions run from 2018 to July 2026. Background for the consolidation habits you simulate in Practice 5."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "chain-analysis-and-privacy-threats"
+title = "A Fistful of Bitcoins: Characterizing Payments Among Men with No Names"
+authors = "Sarah Meiklejohn, Marjori Pomarole, Grant Jordan, Kirill Levchenko, Damon McCoy, Geoffrey M. Voelker, Stefan Savage"
+year = "2013"
+type = "paper"
+access = "free"
+url = "https://doi.org/10.1145/2504730.2504747"
+link_text = "IMC '13 (DOI)"
+more_links = [{ text = "PDF (authors' copy)", url = "https://cseweb.ucsd.edu/~savage/papers/IMC13.pdf" }]
+description = "The study that turned chain analysis into a method: it clustered addresses by evidence of shared spending authority, then named the clusters by transacting with merchants and services itself (Proceedings of IMC '13, pp. 127–140). It won the IMC Test of Time award in 2024. Practice 5 builds a small version of this analyzer."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-wiki-privacy"
@@ -111,7 +102,44 @@ authors = "Bitcoin Wiki contributors"
 year = "2019"
 type = "website"
 label = "Web Resource"
+access = "free"
 url = "https://en.bitcoin.it/wiki/Privacy"
 link_text = "en.bitcoin.it"
-description = "A long reference article on how Bitcoin privacy is attacked and defended. Blockchain attacks: the common-input-ownership heuristic, change-address detection, transaction-graph analysis, amount and timing correlation. Non-blockchain attacks: traffic analysis, custodial wallets, wallet-history lookups on third-party servers, eavesdropping. Defenses: avoiding address reuse, coin control, CoinJoin, PayJoin and Lightning, with case studies. Written in 2019 as a community wiki page, so check its tool and service recommendations against the 2024 CoinJoin changes noted in the CoinJoin and PayJoin row"
+description = "A long reference article on how Bitcoin privacy is attacked and defended. Blockchain attacks: the common-input-ownership heuristic, change-address detection, transaction-graph analysis, amount and timing correlation. Non-blockchain attacks: traffic analysis, custodial wallets, wallet-history lookups on third-party servers, eavesdropping. Defenses: avoiding address reuse, coin control, CoinJoin, PayJoin and Lightning, with case studies. Written in 2019 as a community wiki page, so check its tool and service recommendations against the 2024 changes noted in the Coinjoin and Payjoin row."
 verified = 2026-10-13
+
+[[groups.items]]
+id = "coinjoin-and-payjoin"
+title = "Bitcoin Optech: Coinjoin and Payjoin"
+authors = "Bitcoin Optech"
+type = "website"
+access = "free"
+url = "https://bitcoinops.org/en/topics/coinjoin/"
+link_text = "Coinjoin"
+more_links = [{ text = "Payjoin", url = "https://bitcoinops.org/en/topics/payjoin/" }]
+description = "Collaborative transactions for privacy, each topic with its primary sources (the 2013 coinjoin proposal, ZeroLink, WabiSabi; BIPs 78 and 77) and dated mentions, including 2025 deanonymization attacks against centralized coinjoin coordinators. Legal context: in April 2024 two Samourai Wallet developers were arrested on U.S. charges related to their software, and two other companies then announced they would stop serving U.S. customers ([Optech #300](https://bitcoinops.org/en/newsletters/2024/05/01/)). Payjoin v2 (BIP 77) is in Section 11."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "bitcoin-privacy-guide"
+title = "Bitcoin Privacy Guide"
+authors = "QnA (Bitcoiner.Guide)"
+type = "website"
+label = "Web Resource"
+access = "free"
+url = "https://bitcoiner.guide/privacy/"
+link_text = "bitcoiner.guide"
+description = "Practical privacy techniques from the Bitcoiner.Guide site (an online guide, not a book). The site still linked a Samourai coinjoin walkthrough in October 2026, after the April 2024 case in the Coinjoin and Payjoin row, so check each tool recommendation before you use it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "andreas-antonopoulos-on-bitcoin-privacy"
+title = "Bitcoin Q&A: How is Fungibility Tied to Privacy?"
+authors = "Andreas M. Antonopoulos"
+year = "2017"
+type = "video"
+access = "free"
+url = "https://www.youtube.com/watch?v=VuI-8EwqIS8"
+link_text = "YouTube"
+description = "Why privacy matters for money at all: fungibility, traceable coin histories and the risk of \"tainted\" coins being frozen. Recorded at the Merkle conference in Paris in October 2016 and published in June 2017; the why behind this section's techniques."
+verified = 2026-10-21

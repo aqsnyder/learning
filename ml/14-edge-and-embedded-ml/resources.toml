@@ -43,7 +43,7 @@ access = "free"
 level = "intermediate"
 url = "https://mlsysbook.ai/"
 link_text = "Link"
-description = "Harvard's open-access textbook (CC BY-NC-SA 4.0; MIT Press edition 2026), actively maintained online. It comes in two volumes, *Foundations* and *At Scale*, and companion hardware kits deploy to Arduino, Seeed and Raspberry Pi boards. The current systems reference to pair with Warden & Situnayake's 2019 book."
+description = "Harvard's open-access textbook (CC BY-NC-SA 4.0; MIT Press edition 2026), maintained online (last updated September 2026 when checked in October 2026). It comes in two volumes, *Foundations* and *At Scale*, and companion hardware kits deploy to Arduino, Seeed, Grove and Raspberry Pi boards. The systems reference to pair with Warden & Situnayake's 2019 book."
 verified = 2026-10-13
 
 [[groups]]
@@ -72,7 +72,7 @@ access = "free"
 url = "https://arxiv.org/abs/1801.06601"
 link_text = "Paper"
 more_links = [{ text = "Code", url = "https://github.com/ARM-software/CMSIS-NN" }]
-description = "Hand-optimized neural-network kernels for Cortex-M; the paper reports a 4.6× improvement in runtime/throughput and a 4.9× improvement in energy efficiency. Today's library follows TFLM's int8/int16 quantization specification, is bit-exact with TFLite's reference kernels, and has SIMD paths for cores with the DSP extension (Cortex-M4, Cortex-M33 with DSP) and for Helium (Cortex-M55/M85)."
+description = "Hand-optimized neural-network kernels for Cortex-M; the paper reports a 4.6× improvement in runtime/throughput and a 4.9× improvement in energy efficiency. As of October 2026 the library's README says it follows TFLM's int8/int16 quantization specification, is bit-exact with TFLite's reference kernels (following TFLM's where the two differ), and has SIMD paths for cores with the DSP extension (Cortex-M4, Cortex-M33 with DSP) and for Helium (Cortex-M55/M85)."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -83,8 +83,8 @@ type = "tool"
 access = "free"
 url = "https://www.st.com/en/development-tools/stedgeai-core.html"
 link_text = "Link"
-description = "ST's free model compiler and command-line tool. Imports Keras, TFLite and ONNX models (including scikit-learn models via ONNX), generates optimized C for STM32, reports RAM and flash, and validates and benchmarks the converted model on the host and on the target. ST's STM32CubeMX expansion pack, X-CUBE-AI (part of the same ST Edge AI Suite), is now marked NRND on st.com with STEDGEAI-CUBEAI listed as its replacement, so check which one your toolchain uses."
-verified = 2026-10-13
+description = "ST's free model compiler and command-line tool. Imports Keras, TFLite and ONNX models (including scikit-learn models via ONNX), generates optimized C for STM32, reports RAM and flash, and validates and benchmarks the converted model on the host and on the target. ST's STM32CubeMX expansion pack, X-CUBE-AI (part of the same ST Edge AI Suite), is marked NRND on st.com as of October 2026, with STEDGEAI-CUBEAI listed as its replacement, so check which one your toolchain uses."
+verified = 2026-10-21
 
 [[groups]]
 title = "Compression and hardware-aware design"

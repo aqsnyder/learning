@@ -7,99 +7,139 @@
 [[groups.items]]
 id = "mastering-bitcoin-chapter-4-keys-and"
 title = "Mastering Bitcoin, Chapter 4: Keys and Addresses"
-authors = "Andreas Antonopoulos and David Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch04_keys.adoc"
 link_text = "ch04_keys.adoc"
-description = "Private and public keys on secp256k1 and how they become addresses (Base58Check, P2PKH/P2SH, bech32/bech32m) — 3rd edition (2023)"
-verified = 2026-10-13
+description = "Public key cryptography on secp256k1 and how keys become addresses: P2PK, P2PKH and Base58Check, compressed keys, P2SH (with a sidebar on P2SH collision attacks and 160-bit vs 256-bit hashes), and bech32/bech32m. 3rd edition (O'Reilly, December 2023); free on GitHub under CC BY-SA 4.0."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "learn-me-a-bitcoin-keys-and-addresses"
-title = "Learn Me A Bitcoin: Keys and Addresses"
+title = "Learn Me A Bitcoin: Keys"
 authors = "Greg Walker"
 type = "website"
 access = "free"
 url = "https://learnmeabitcoin.com/technical/keys/"
 link_text = "learnmeabitcoin.com"
-description = "Visual, interactive explanations"
-verified = 2026-10-13
+description = "Diagram-led walk-through from a private key (a random 256-bit number) to a compressed public key, HASH160, and a Base58Check (P2PKH) or bech32 (P2WPKH) address — and why addresses never appear on the blockchain itself."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "3blue1brown-but-how-does-bitcoin"
 title = "3Blue1Brown: But how does bitcoin actually work?"
 authors = "3Blue1Brown"
+year = "2017"
 type = "video"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/watch?v=bBC-nXj3Ng4"
 link_text = "YouTube"
-description = "Beautiful visual explanation of hashing and digital signatures in Bitcoin"
-verified = 2026-10-13
+description = "Visual explanation of how digital signatures and SHA-256 proof-of-work turn a shared ledger into a cryptocurrency (published July 2017): the intuition before this section's math. Section 02 re-watches it as a protocol overview."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "khan-academy-cryptography"
 title = "Khan Academy: Cryptography"
 type = "course"
 access = "free"
+level = "beginner"
 url = "https://www.khanacademy.org/computing/computer-science/cryptography"
 link_text = "khanacademy.org"
-description = "Free fundamentals of crypto"
+description = "Free introductory course; use its modular-arithmetic material as background for exercise 2."
 
 [[groups.items]]
 id = "sha-256-hashing"
-title = "SHA-256 hashing"
-type = "concept"
-description = "One-way functions, collision resistance, mining"
+title = "FIPS 180-4: Secure Hash Standard (SHS)"
+authors = "National Institute of Standards and Technology (NIST)"
+year = "2015"
+type = "standard"
+access = "free"
+url = "https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf"
+link_text = "NIST PDF"
+description = "The SHA-256 specification (August 2015): padding and parsing (§5.1.1), the 64-word message schedule and 64-round compression function (§6.2). Exercise 1 implements SHA-256 from it and checks the result against hashlib."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "elliptic-curve-cryptography-secp256k1"
-title = "Elliptic Curve Cryptography (secp256k1)"
-type = "concept"
-description = "How Bitcoin generates keys"
+title = "libsecp256k1"
+authors = "Pieter Wuille and contributors"
+year = "2013–2026"
+type = "tool"
+label = "Library"
+access = "free"
+url = "https://github.com/bitcoin-core/secp256k1"
+link_text = "GitHub"
+description = "The secp256k1 library Bitcoin Core uses: field arithmetic modulo 2^256 − 0x1000003D1 on the curve y² = x³ + 7, constant-time and constant-memory-access signing and key generation, RFC 6979 nonces, and modules for BIP 340 Schnorr and BIP 327 MuSig2 (v0.8.0, August 2026). Read its implementation notes after exercise 2's timing experiment; the mini-project compiles it for a microcontroller."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "digital-signatures-ecdsa-and-schnorr"
-title = "Digital Signatures (ECDSA and Schnorr)"
-type = "concept"
+title = "BIP 340: Schnorr Signatures for secp256k1"
+authors = "Pieter Wuille, Jonas Nick, Tim Ruffing"
+year = "2020"
+type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki"
 link_text = "BIP 340"
-description = "Proving ownership without revealing private keys. Schnorr spec and test vectors: BIP 340; MuSig2 key aggregation: [BIP 327](https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki) (both also in Section 11)"
-verified = 2026-10-13
+more_links = [{ text = "test vectors", url = "https://github.com/bitcoin/bips/blob/master/bip-0340/test-vectors.csv" }, { text = "BIP 327 (MuSig2)", url = "https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki" }]
+description = "Bitcoin's Schnorr signature scheme (Deployed with Taproot): tagged hashes, x-only public keys with an even Y coordinate, and a motivation section comparing Schnorr with ECDSA on provable security, non-malleability, linearity and batch verification. Exercise 5 implements it against the official test vectors; BIP 327 (MuSig2; Jonas Nick, Tim Ruffing, Elliott Jin, 2022) gives the key-aggregation coefficients that stop the rogue-key attack. Section 11 reads both again as Taproot specs."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "programming-bitcoin-chapters-1-3"
-title = "Programming Bitcoin, Chapters 1-3"
+title = "Programming Bitcoin, Chapters 1–3: Finite Fields; Elliptic Curves; Elliptic Curve Cryptography"
 authors = "Jimmy Song"
+year = "2019"
 type = "book"
 access = "free"
 level = "intermediate"
 marks = ["core"]
-url = "https://github.com/jimmysong/programmingbitcoin"
-link_text = "GitHub"
-description = "Build elliptic curve crypto from scratch in Python (finite fields, elliptic curves, ECDSA). Full text free on GitHub (CC BY-NC-ND)"
-verified = 2026-10-13
+url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch01.asciidoc"
+link_text = "Ch. 1"
+more_links = [{ text = "Ch. 2", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch02.asciidoc" }, { text = "Ch. 3", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch03.asciidoc" }]
+description = "Build finite fields, elliptic curves, secp256k1 and ECDSA in Python, test-first; ch. 3's sidebar \"Importance of a Unique k\" and its RFC 6979 deterministic-k code drive exercise 4. O'Reilly, March 2019 (1st ed.); full text free on GitHub (CC BY-NC-ND)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mastering-bitcoin-chapter-8-digital"
 title = "Mastering Bitcoin, Chapter 8: Digital Signatures"
-authors = "Andreas Antonopoulos and David Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch08_signatures.adoc"
 link_text = "ch08_signatures.adoc"
-description = "How Schnorr (BIP 340) and ECDSA signatures work in Bitcoin, why nonce randomness is critical, and SegWit's signature-hash algorithm — the chapter this section's signature concepts point to"
-verified = 2026-10-13
+description = "How digital signatures work, Schnorr (BIP 340) and ECDSA as Bitcoin uses them, why nonce randomness matters (with RFC 6979 and BIP 340 deterministic nonces), and SegWit's new signature-hash algorithm."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "elliptic-curve-cryptography-a-gentle"
 title = "Elliptic Curve Cryptography: a gentle introduction (4 parts)"
 authors = "Andrea Corbellini"
+year = "2015"
 type = "article"
+access = "free"
 url = "https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/"
 link_text = "andrea.corbellini.name"
-description = "Curves over finite fields, the discrete-log problem, ECDH/ECDSA, and how ECC is attacked — the math behind secp256k1 at exactly the right depth (2015)"
+description = "Four-part series: curves over finite fields, the discrete-log problem, ECDH and ECDSA, and how ECC is attacked — the math behind secp256k1 at the depth this section needs."
 verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-173-bech32-addresses"
+title = "BIP 173: Base32 address format for native v0-16 witness outputs (with BIP 350: Bech32m)"
+authors = "Pieter Wuille, Greg Maxwell; Pieter Wuille (BIP 350)"
+year = "2017; 2020"
+type = "standard"
+access = "free"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki"
+link_text = "BIP 173"
+more_links = [{ text = "BIP 350", url = "https://github.com/bitcoin/bips/blob/master/bip-0350.mediawiki" }]
+description = "The bech32 address spec: human-readable part, witness version and program, and a BCH checksum that guarantees detection of any error affecting at most 4 characters; its examples include the P2WPKH address exercise 3 must reproduce. BIP 350 explains bech32's insertion weakness (a final \"p\" tolerates added or removed \"q\"s) and the bech32m checksum used for Taproot (v1+) addresses."
+verified = 2026-10-21

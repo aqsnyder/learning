@@ -7,28 +7,44 @@
 [[groups.items]]
 id = "the-art-of-readable-code"
 title = "*The Art of Readable Code*"
-authors = "Boswell and Foucher"
+authors = "Dustin Boswell and Trevor Foucher"
+year = "2011"
 type = "book"
-description = "How to evaluate whether code is clear and maintainable"
+access = "paid"
+level = "beginner"
+url = "https://www.oreilly.com/library/view/the-art-of/9781449318482/"
+link_text = "oreilly.com"
+description = "How to judge whether code is clear: names, comments, control flow, giant expressions, and splitting code into one task at a time (O'Reilly, November 2011). A quick read that gives you the vocabulary for exercise 4's naming-and-comments pass."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "code-reading-the-open-source-perspective"
 title = "*Code Reading: The Open Source Perspective*"
 authors = "Diomidis Spinellis"
+year = "2003"
 type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "The only book dedicated to reading (not writing) code"
+url = "https://www.spinellis.gr/codereading/"
+link_text = "author's page"
+description = "The book on reading, rather than writing, code, from basic programming elements to ch. 9 \"Tackling Large Projects\" (Addison-Wesley, 2003). The examples are dated; the method is not. The author's page has ch. 2 as a free PDF."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "refactoring-improving-the-design-of"
 title = "*Refactoring: Improving the Design of Existing Code* (2nd ed)"
-authors = "Martin Fowler"
+authors = "Martin Fowler, with Kent Beck"
 year = "2018"
 type = "book"
+access = "paid"
+level = "intermediate"
 marks = ["core"]
-description = "Recognize code smells and know the fix"
+url = "https://martinfowler.com/books/refactoring.html"
+link_text = "martinfowler.com"
+more_links = [{ text = "Catalog of Refactorings", url = "https://refactoring.com/catalog" }]
+description = "Code smells and the named refactorings that remove them. The free online catalog summarizes every refactoring in the book (Extract Function, Split Phase, Replace Primitive with Object…): keep it open during exercise 4."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "a-philosophy-of-software-design-2nd-ed"
@@ -39,25 +55,38 @@ type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "Managing complexity, the #1 code review skill"
+url = "https://web.stanford.edu/~ouster/cgi-bin/aposd.php"
+link_text = "author's page"
+description = "Complexity as the thing to fight in review: its symptoms and causes, deep versus shallow modules, information hiding and leakage, and a list of red flags (2nd ed, July 2021, which adds \"Decide What Matters\" and a comparison with *Clean Code*). Section 04 uses it again for \"design it twice\"."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "google-s-engineering-practices-code"
 title = "Google's Engineering Practices: Code Review Guidelines"
+authors = "Google"
 type = "docs"
 label = "Guide"
 access = "free"
 url = "https://google.github.io/eng-practices/review/"
 link_text = "google.github.io"
-description = "How Google does code reviews"
-verified = 2026-10-13
+more_links = [
+  { text = "What to Look For", url = "https://google.github.io/eng-practices/review/reviewer/looking-for.html" },
+  { text = "CL Author's Guide", url = "https://google.github.io/eng-practices/review/developer/" },
+]
+description = "How Google reviews code, in two open-source guides. \"How To Do A Code Review\" covers the standard a change must meet, what to look for, navigating a change, speed, writing comments and handling pushback; \"The CL Author's Guide\" covers the other side. Exercise 3 and the review checklist follow it."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "review-ai-generated-code-critically"
-title = "Review AI-generated code critically"
-type = "practice"
+title = "Review AI-generated code (GitHub Docs)"
+authors = "GitHub"
+type = "docs"
 marks = ["ai"]
-description = "Treat every AI output as a PR from a junior developer"
+access = "free"
+url = "https://docs.github.com/en/copilot/tutorials/review-ai-generated-code"
+link_text = "docs.github.com"
+description = "A short checklist for code an assistant wrote: start with functional checks, verify context and intent, assess quality, scrutinize dependencies, spot AI-specific pitfalls, review collaboratively, automate what you can. Use it as the skeleton of exercise 5's AI-specific checks, and treat every AI output as a PR from a new contributor. Vendor guidance: it says what to check, not how often AI code fails."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-programmer-s-brain"
@@ -65,10 +94,12 @@ title = "*The Programmer's Brain*"
 authors = "Felienne Hermans"
 year = "2021"
 type = "book"
+access = "paid"
+level = "intermediate"
 url = "https://www.manning.com/books/the-programmers-brain"
 link_text = "manning.com"
-description = "The cognitive science of reading code: why unfamiliar code overloads working memory, and concrete techniques (state tables, dependency graphs, mental models) to read it faster. Trains this section's core skill directly"
-verified = 2026-10-13
+description = "The cognitive science of reading code (Manning, August 2021): why unfamiliar code overloads working memory, and concrete techniques (state tables, dependency graphs, mental models) to read it faster. Trains this section's core skill directly"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "your-code-as-a-crime-scene-2nd-ed"
@@ -76,10 +107,12 @@ title = "*Your Code as a Crime Scene* (2nd ed)"
 authors = "Adam Tornhill"
 year = "2024"
 type = "book"
+access = "paid"
+level = "intermediate"
 url = "https://pragprog.com/titles/atcrime2/your-code-as-a-crime-scene-second-edition/"
 link_text = "pragprog.com"
-description = "Read a codebase through its git history: hotspots (complexity × churn), change coupling, knowledge distribution. Tells you where to spend review effort in a large or agent-generated codebase"
-verified = 2026-10-13
+description = "Read a codebase through its git history: hotspots (complexity × churn), change coupling, knowledge distribution (Pragmatic Bookshelf, February 2024). Tells you where to spend review effort in a large or agent-generated codebase"
+verified = 2026-10-21
 
 [[groups]]
 title = "Key Concepts"

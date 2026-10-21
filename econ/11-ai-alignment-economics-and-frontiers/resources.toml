@@ -14,7 +14,7 @@ access = "free"
 marks = ["core"]
 url = "https://arxiv.org/abs/1803.04585"
 link_text = "Link"
-description = "Taxonomizes four types of Goodhart's Law failure (regressional, causal, extremal, adversarial). Essential for understanding AI alignment through an economics lens."
+description = "Sorts Goodhart's Law failures into four variants (regressional, causal, extremal, adversarial), each with its own mechanism. The taxonomy that Practices 1 and 3 and the mini-project use to classify metric failures."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -27,20 +27,20 @@ access = "free"
 marks = ["core"]
 url = "https://arxiv.org/abs/2012.08630"
 link_text = "Link"
-description = "Foundational paper on building AI systems that cooperate with humans and each other. Draws on game theory, mechanism design, and social choice."
+description = "Sets out cooperative AI as a research agenda: AI systems that cooperate with humans and with each other, organized around four capabilities (understanding, communication, commitment, institutions) and drawing on game theory, mechanism design and social choice. Practice 5 uses its framing."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "the-off-switch-game"
 title = "The Off-Switch Game"
-authors = "Dylan Hadfield-Menell et al."
-year = "2017"
+authors = "Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel & Stuart Russell"
+year = "2016 (rev. 2017)"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1611.08219"
 link_text = "Link"
-description = "Game-theoretic analysis of the AI shutdown problem. Shows why corrigibility is hard from an incentive perspective."
-verified = 2026-10-13
+description = "Game-theoretic analysis of the shutdown problem: a robot that is uncertain about the human's objective, and treats the human's choice to switch it off as information, has an incentive to defer; the incentive shrinks as the robot grows more certain or the human less rational. Practice 2 reproduces the core result. arXiv, November 2016; revised June 2017."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "incomplete-contracting-and-ai-alignment"
@@ -57,14 +57,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "concrete-problems-in-ai-safety"
 title = "Concrete Problems in AI Safety"
-authors = "Dario Amodei et al."
+authors = "Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, Dan Mané"
 year = "2016"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1606.06565"
 link_text = "Link"
-description = "Taxonomizes practical safety problems including reward hacking — Goodhart's Law applied to reinforcement learning."
-verified = 2026-10-13
+description = "Five practical research problems in AI safety: avoiding side effects, avoiding reward hacking, scalable supervision, safe exploration, and robustness to distributional shift. Reward hacking is Goodhart's Law applied to reinforcement learning; Practice 3 recasts these problems as incentive problems. Also used in philosophy/07."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-alignment-problem"
@@ -90,28 +90,36 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "bluedot-impact-ai-safety-courses"
-title = "BlueDot Impact AI safety courses (formerly AI Safety Fundamentals)"
+title = "Online AI safety courses and project sprints"
 authors = "BlueDot Impact"
+year = "2026"
 type = "course"
-url = "https://bluedot.org/"
-link_text = "Link"
-description = "Structured curriculum on AI safety including governance, alignment, and the economic dimensions of AI risk. The old aisafetyfundamentals.com address now redirects to BlueDot's homepage."
-verified = 2026-10-13
+access = "free"
+level = "beginner"
+url = "https://bluedot.org/courses"
+link_text = "BlueDot"
+description = "Course catalog of BlueDot Impact (formerly \"AI Safety Fundamentals\"). As of October 2026 it runs from a free, two-hour self-paced introduction, *The Future of AI*, to multi-week courses and project sprints on AI safety and governance. Structured background for Practice 5. Also used in philosophy/07."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ai-alignment-forum"
 title = "AI Alignment Forum"
-type = "blog"
+authors = "LessWrong team (maintainers)"
+year = "2018"
+type = "website"
+label = "Forum"
+access = "free"
 url = "https://www.alignmentforum.org/"
 link_text = "Link"
-description = "Community hub for AI alignment research. Heavy overlap with mechanism design, incentives, and game theory."
-verified = 2026-10-13
+description = "Research forum on AI alignment, launched in 2018 and run by the LessWrong team; direct posting is limited to established researchers, and others' submissions go through review. Much of the discussion is about incentives, mechanism design and game theory; the mini-project draws on its posts on mild optimization. Also used in philosophy/11."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "goodhart-s-law"
 title = "Goodhart's Law"
 authors = "LessWrong"
-type = "article"
+type = "encyclopedia"
+access = "free"
 url = "https://www.lesswrong.com/tag/goodhart-s-law"
 link_text = "Link"
 description = "Community wiki with extensive discussion, examples, and formalizations of Goodhart's Law."

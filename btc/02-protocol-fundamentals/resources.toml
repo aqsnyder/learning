@@ -3,92 +3,93 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Also used here (tracked in its home section):** 3Blue1Brown, "But how does bitcoin actually work?" ([Section 01](../01-cryptography-foundations/README.md)) for a protocol-level re-watch before *Grokking Bitcoin*; Mempool.space ([Section 03](../03-mining-and-consensus/README.md)) for live block sizes and its block API in exercises 2–4.'''
 
 [[groups.items]]
 id = "mastering-bitcoin-full-book"
-title = "Mastering Bitcoin (full book)"
-authors = "Andreas Antonopoulos and David Harding"
+title = "Mastering Bitcoin, Chapters 2 and 11: How Bitcoin Works; The Blockchain"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
-url = "https://github.com/bitcoinbook/bitcoinbook"
-link_text = "bitcoinbook"
-description = "THE technical Bitcoin reference (3rd edition, Dec 2023; covers Taproot)"
-verified = 2026-10-13
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch02_overview.adoc"
+link_text = "Ch. 2"
+more_links = [{ text = "Ch. 11", url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch11_blockchain.adoc" }]
+description = "Ch. 2 follows one payment end to end — transaction inputs and outputs, transaction chains, making change, coin selection, mining and spending — the UTXO model in action. Ch. 11 covers the structure of a block, the block header and its hash, the genesis block, Merkle trees and lightweight clients, and the test chains (testnet, signet, regtest). 3rd edition (O'Reilly, December 2023); free on GitHub under CC BY-SA 4.0. The other chapters are read in Sections 01 and 03–10."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "learn-me-a-bitcoin"
-title = "Learn Me A Bitcoin"
+title = "Learn Me A Bitcoin: Block"
 authors = "Greg Walker"
 type = "website"
 access = "free"
-url = "https://learnmeabitcoin.com/"
+url = "https://learnmeabitcoin.com/technical/block/"
 link_text = "learnmeabitcoin.com"
-description = "Interactive exploration of blocks, transactions, Merkle trees"
-verified = 2026-10-13
+description = "The 80-byte block header field by field — version, previous block, Merkle root, time, bits, nonce — with sizes and byte order, the block hash as the double SHA-256 of the header, and how bits encodes the target. The reference for exercise 2."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "grokking-bitcoin"
 title = "Grokking Bitcoin"
 authors = "Kalle Rosenbaum"
+year = "2019"
 type = "book"
 access = "free"
 level = "beginner"
 marks = ["core"]
 url = "https://rosenbaum.se/book/"
 link_text = "rosenbaum.se"
-description = "Best visual explanations of the protocol (Manning, 2019; free to read online under CC BY-NC-SA)"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "but-how-does-bitcoin-actually-work"
-title = "But how does bitcoin actually work?"
-authors = "3Blue1Brown"
-type = "video"
-access = "free"
-url = "https://www.youtube.com/watch?v=bBC-nXj3Ng4"
-link_text = "YouTube"
-description = "High-level protocol overview"
+description = "Builds the protocol up step by step with diagrams (Manning, 2019; the open version is free to read online under CC BY-NC-SA 4.0). Ch. 6, \"The blockchain\", introduces Merkle roots; appendix A, \"Using bitcoin-cli\", supports exercise 1."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "bitcoin-developer-guide"
 title = "Bitcoin Developer Guide"
+authors = "Bitcoin Project (bitcoin.org)"
 type = "docs"
 label = "Documentation"
 access = "free"
 url = "https://developer.bitcoin.org/devguide/"
 link_text = "developer.bitcoin.org"
-description = "Community-written guide from bitcoin.org — not an official spec, and no longer maintained (© 2009–2020; its RPC reference stops at Bitcoin Core 0.21). Clear conceptual reference, but check BIPs for SegWit/Taproot details"
-verified = 2026-10-13
+description = "Community-written guide from bitcoin.org (© Bitcoin Project 2009–2020) — not an official spec, and no longer maintained (its RPC reference stops at Bitcoin Core 0.21). Clear conceptual chapters (Block Chain, Transactions, Wallets, P2P Network, Mining), but check BIPs for SegWit and Taproot details."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "programming-bitcoin"
-title = "Programming Bitcoin"
+title = "Programming Bitcoin, Chapters 9–11: Blocks; Networking; Simplified Payment Verification"
 authors = "Jimmy Song"
+year = "2019"
 type = "book"
 access = "free"
 level = "intermediate"
 marks = ["core"]
-url = "https://github.com/jimmysong/programmingbitcoin"
-link_text = "GitHub"
-description = "Build a Bitcoin library from scratch in Python (O'Reilly, 2019; pre-Taproot)"
-verified = 2026-10-13
+url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch09.asciidoc"
+link_text = "Ch. 9"
+more_links = [{ text = "Ch. 10", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch10.asciidoc" }, { text = "Ch. 11", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch11.asciidoc" }]
+description = "In Python, test-first: parse block headers and check proof-of-work, targets, difficulty and the 2,016-block adjustment (ch. 9); speak the P2P protocol and download headers (ch. 10); build Merkle trees and verify merkleblock proofs (ch. 11). O'Reilly, March 2019 (pre-Taproot); free on GitHub (CC BY-NC-ND). Chs. 1–3 are in Section 01, chs. 5–8 and 13 in Section 04."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "utxo-model"
-title = "UTXO model"
-type = "concept"
-description = "How Bitcoin tracks ownership (vs account model)"
+title = "Learn Me A Bitcoin: UTXO"
+authors = "Greg Walker"
+type = "website"
+access = "free"
+url = "https://learnmeabitcoin.com/technical/transaction/utxo/"
+link_text = "learnmeabitcoin.com"
+description = "What an unspent transaction output is, the UTXO set every node checks new transactions against, and how Bitcoin Core stores it (the chainstate database, keyed by TXID:VOUT). Read it with Mastering Bitcoin ch. 2's payment walk-through for objective 1."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "merkle-trees"
-title = "Merkle trees"
-type = "concept"
-description = "How transactions are efficiently verified"
-
-[[groups.items]]
-id = "block-structure"
-title = "Block structure"
-type = "concept"
-description = "Header, nonce, difficulty target, timestamp"
+title = "Learn Me A Bitcoin: Merkle Root"
+authors = "Greg Walker"
+type = "website"
+access = "free"
+url = "https://learnmeabitcoin.com/technical/block/merkle-root/"
+link_text = "learnmeabitcoin.com"
+description = "How txids are hashed in pairs up to the root, the natural vs reverse byte-order trap, the odd-count rule (a leftover hash is paired with itself), and how a Merkle proof lets a lightweight wallet check that a transaction is in a block using only headers. The reference for exercise 4."
+verified = 2026-10-21
