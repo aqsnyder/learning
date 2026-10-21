@@ -1,0 +1,189 @@
+# Resources for: Embedded Systems and RTOS
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "making-embedded-systems-2nd-ed"
+title = "Making Embedded Systems (2nd ed)"
+authors = "Elecia White"
+year = "2024"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Architecture and design patterns for embedded — hardware/software interfaces, state machines, power management, and testable firmware design."
+
+[[groups.items]]
+id = "modern-embedded-systems-programming"
+title = "Modern Embedded Systems Programming"
+authors = "Quantum Leaps (Miro Samek)"
+type = "video-series"
+label = "YouTube"
+marks = ["core"]
+url = "https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM"
+link_text = "Playlist"
+description = "Professional embedded practices from bare-metal up. Covers registers, interrupts, state machines, and RTOS concepts with hands-on board demos."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "freertos"
+title = "FreeRTOS"
+type = "tool"
+label = "RTOS"
+marks = ["core"]
+url = "https://www.freertos.org/"
+link_text = "Link"
+description = "THE open-source RTOS. Start here — tasks, queues, semaphores, timers. Massive community, runs on everything from Cortex-M0 to ESP32."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "zephyr-project"
+title = "Zephyr Project"
+authors = "Linux Foundation"
+type = "tool"
+label = "RTOS"
+url = "https://zephyrproject.org/"
+link_text = "Link"
+description = "Modern, Linux Foundation–backed RTOS. Growing fast with excellent driver support, Bluetooth/networking stacks, and a CMake-based build system."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "task-scheduling"
+title = "Task scheduling"
+type = "concept"
+description = "Preemptive vs cooperative scheduling, priority inversion, rate-monotonic analysis, and real-time guarantees."
+
+[[groups.items]]
+id = "mutexes-semaphores-and-queues"
+title = "Mutexes, semaphores, and queues"
+type = "concept"
+description = "Inter-task communication and synchronization primitives. Understand when to use each and the pitfalls (deadlocks, priority inversion)."
+
+[[groups.items]]
+id = "state-machines-and-event-driven-firmware"
+title = "State machines and event-driven firmware"
+type = "concept"
+description = "The Samek approach — hierarchical state machines (UML statecharts) as the backbone of robust, maintainable firmware architecture."
+
+[[groups.items]]
+id = "dma-interrupts-and-peripheral-drivers"
+title = "DMA, interrupts, and peripheral drivers"
+type = "concept"
+description = "Hardware-software boundary: interrupt priorities (NVIC), DMA transfers, and writing clean peripheral abstraction layers."
+
+[[groups.items]]
+id = "bootloaders-and-ota-updates"
+title = "Bootloaders and OTA updates"
+type = "concept"
+description = "Field-updatable firmware: dual-bank architectures, secure boot, image signing, and rollback strategies."
+
+[[groups.items]]
+id = "debugging-embedded-systems"
+title = "Debugging embedded systems"
+type = "concept"
+description = "JTAG/SWD debugging, logic analyzers, oscilloscopes, and printf-over-RTT. The tools and techniques for when things go wrong at the hardware level."
+
+[[groups.items]]
+id = "embedded-artistry"
+title = "Embedded Artistry"
+authors = "Phillip Johnston"
+type = "blog"
+url = "https://embeddedartistry.com/"
+link_text = "Link"
+description = "Testable, modular firmware — clean C architecture, build systems, testing strategies, and professional embedded development practices."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "interrupt-memfault"
+title = "Interrupt (Memfault)"
+authors = "Memfault team"
+type = "blog"
+url = "https://interrupt.memfault.com/"
+link_text = "Link"
+description = "Professional firmware engineering articles covering debugging, RTOS internals, OTA, fault handling, and embedded best practices."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cmake-for-embedded"
+title = "CMake for embedded"
+type = "tool"
+description = "Cross-compilation toolchains, toolchain files, and managing multi-target embedded builds with modern CMake."
+
+[[groups.items]]
+id = "gdb-for-embedded"
+title = "GDB for embedded"
+type = "tool"
+description = "JTAG/SWD debugging with GDB — connecting via OpenOCD/J-Link, setting hardware breakpoints, and inspecting registers."
+
+[[groups.items]]
+id = "definitive-guide-to-arm-cortex-m23-and"
+title = "Definitive Guide to Arm Cortex-M23 and Cortex-M33 Processors"
+authors = "Joseph Yiu"
+year = "2020"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["core"]
+url = "https://shop.elsevier.com/books/definitive-guide-to-arm-cortex-m23-and-cortex-m33-processors/yiu/978-0-12-820735-2"
+link_text = "Link"
+description = "The architecture reference for Armv8-M cores such as the Cortex-M33 in STM32U5 parts: exception and interrupt model, MPU, fault handling, FPU/DSP, debug and trace, and TrustZone security. Read it alongside your part's reference manual."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mastering-the-freertos-real-time-kernel"
+title = "Mastering the FreeRTOS Real Time Kernel: A Hands-On Tutorial Guide"
+authors = "Richard Barry and the FreeRTOS team"
+year = "2023"
+type = "book"
+access = "free"
+url = "https://github.com/FreeRTOS/FreeRTOS-Kernel-Book"
+link_text = "Link"
+description = "The official FreeRTOS tutorial book, now maintained openly on GitHub (CC BY-SA): tasks, queues, software timers, interrupt management, resource management, event groups, task notifications."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "practical-uml-statecharts-in-c-c-2nd-ed"
+title = "Practical UML Statecharts in C/C++ (2nd ed)"
+authors = "Miro Samek"
+year = "2008"
+type = "book"
+access = "free"
+url = "https://www.state-machine.com/psicc2"
+link_text = "Link"
+description = "The book behind \"the Samek approach\" above: hierarchical state machines and active objects for event-driven embedded C, and the design of the QP framework. Free PDF from the author."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "how-to-debug-a-hardfault-on-an-arm"
+title = "How to debug a HardFault on an ARM Cortex-M MCU"
+authors = "Chris Coleman (Memfault)"
+year = "2019"
+type = "article"
+url = "https://interrupt.memfault.com/blog/cortex-m-hardfault-debug"
+link_text = "Link"
+description = "Decode CFSR/HFSR/BFAR, recover the stacked registers and call stack, and capture fault data for post-mortem analysis, with worked examples. Keep it open the first time a board faults."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "from-zero-to-main-bare-metal-c"
+title = "From Zero to main(): Bare metal C"
+authors = "François Baldassari (Memfault)"
+year = "2019"
+type = "article"
+label = "Article series"
+url = "https://interrupt.memfault.com/blog/zero-to-main-1"
+link_text = "Link"
+description = "What runs between reset and `main()`: vector table, startup code, `.data`/`.bss` initialization. Follow-up parts demystify linker scripts and bootstrapping newlib. Read before editing a linker script or CMake toolchain file."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-embedded-rust-book"
+title = "The Embedded Rust Book"
+authors = "Rust Embedded WG (resources team)"
+type = "book"
+access = "free"
+url = "https://docs.rust-embedded.org/book/"
+link_text = "Link"
+description = "Optional: embedded Rust on Cortex-M (examples on an STM32F3DISCOVERY), written for people who already know Rust basics and embedded C. Use it to evaluate Rust for new firmware; vendor HALs and RTOSes remain C-first."
+verified = 2026-10-13

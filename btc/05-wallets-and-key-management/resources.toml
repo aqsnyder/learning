@@ -1,0 +1,106 @@
+# Resources for: Wallets and Key Management
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "mastering-bitcoin-chapter-5-wallet"
+title = "Mastering Bitcoin, Chapter 5: Wallet Recovery"
+authors = "Antonopoulos & Harding"
+type = "book"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc"
+link_text = "GitHub"
+description = "HD key derivation (BIP 32), BIP 39 recovery codes and passphrases, and what else a backup must capture (derivation paths, output script descriptors)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learn-me-a-bitcoin-hd-wallets"
+title = "Learn Me A Bitcoin: HD Wallets"
+authors = "Greg Walker"
+type = "website"
+url = "https://learnmeabitcoin.com/technical/keys/hd-wallets/"
+link_text = "Website"
+description = "Visual HD wallet derivation"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-32-hierarchical-deterministic"
+title = "BIP 32: Hierarchical Deterministic Wallets"
+type = "standard"
+marks = ["core"]
+url = "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki"
+link_text = "BIP 32"
+description = "The HD wallet standard"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-39-mnemonic-seed-phrases"
+title = "BIP 39: Mnemonic Seed Phrases"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
+link_text = "BIP 39"
+description = "How 12/24 word seeds work"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-44-multi-account-hierarchy"
+title = "BIP 44: Multi-Account Hierarchy"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki"
+link_text = "BIP 44"
+description = "Derivation path conventions"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-84-native-segwit-derivation"
+title = "BIP 84: Native SegWit Derivation"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki"
+link_text = "BIP 84"
+description = "bc1q address derivation"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-86-taproot-derivation"
+title = "BIP 86: Taproot Derivation"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0086.mediawiki"
+link_text = "BIP 86"
+description = "bc1p address derivation"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "wallet-types"
+title = "Wallet types"
+type = "concept"
+description = "Full node, SPV, hardware, multisig, watch-only"
+
+[[groups.items]]
+id = "backup-and-recovery-strategies"
+title = "Backup and recovery strategies"
+type = "concept"
+description = "Seed storage, passphrase protection, inheritance planning"
+
+[[groups.items]]
+id = "output-script-descriptors-bips-380387"
+title = "Output Script Descriptors (BIPs 380–387)"
+authors = "Pieter Wuille, Ava Chow"
+type = "standard"
+marks = ["core"]
+url = "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki"
+link_text = "BIP 380"
+description = "The language modern wallets use to state exactly which scripts they own, e.g. `wpkh([fingerprint/84h/0h/0h]xpub…/0/*)`. Bitcoin Core wallets are descriptor-only since v30 removed legacy wallets; practical guide: [Bitcoin Core descriptors doc](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-379-miniscript-with-bip-388-wallet"
+title = "BIP 379: Miniscript (with BIP 388 Wallet Policies)"
+authors = "Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow; Salvatore Ingala"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0379.md"
+link_text = "BIP 379"
+description = "A composable, analyzable subset of Script for spending policies (multisig, timelocked recovery, inheritance); BIP 388 adapts descriptors and miniscript for hardware signers. Specs are Draft (379) and Complete (388) — check wallet support before relying on them"
+verified = 2026-10-13

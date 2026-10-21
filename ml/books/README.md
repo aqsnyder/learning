@@ -2,27 +2,31 @@
 
 Do not read cover-to-cover. Use as companions to the section READMEs. Start with Nielsen (or Prince's *Understanding Deep Learning* for a fuller modern treatment) and ISLR, then work through as needed.
 
-| # | Priority | Title | Author(s) | Year | Free? | Level | Link | Notes |
-|---|----------|-------|-----------|------|-------|-------|------|-------|
-| 1 | 🔑 | Neural Networks and Deep Learning | Michael Nielsen | 2015 | Free | Beginner | [neuralnetworksanddeeplearning.com](http://neuralnetworksanddeeplearning.com/) | Code: [GitHub](https://github.com/mnielsen/neural-networks-and-deep-learning) |
-| 2 | 🔑 | An Introduction to Statistical Learning (ISLR 2nd ed. / ISLP) | James, Witten, Hastie, Tibshirani (+ Taylor for ISLP) | 2021 / 2023 | Free | Beginner | [statlearning.com](https://www.statlearning.com/) | Prefer ISLP (2023) for Python labs |
-| 3 | 🔑 | Mathematics for Machine Learning | Deisenroth, Faisal, Ong | 2020 | Free | Beginner | [mml-book.github.io](https://mml-book.github.io/) | |
-| 4 | | Deep Learning: Foundations and Concepts | Bishop and Bishop | 2024 | Free (online) | Intermediate | [bishopbook.com](https://www.bishopbook.com/) | Free to read online; print/eBook from Springer |
-| 5 | | Deep Learning | Goodfellow, Bengio, Courville | 2016 | Free | Intermediate | [deeplearningbook.org](https://www.deeplearningbook.org/) | |
-| 6 | | Probabilistic Machine Learning: An Introduction | Kevin Murphy | 2022 | Free | Intermediate | [PML Book 1](https://probml.github.io/pml-book/book1.html) | |
-| 7 | | Probabilistic Machine Learning: Advanced Topics | Kevin Murphy | 2023 | Free | Advanced | [PML Book 2](https://probml.github.io/pml-book/book2.html) | |
-| 8 | 🔑 | Reinforcement Learning: An Introduction | Sutton, Barto | 2018 (2nd ed.) | Free | Intermediate | [incompleteideas.net](http://incompleteideas.net/book/the-book-2nd.html) | |
-| 9 | | Deep Learning with Python (3rd ed.) | François Chollet, Matthew Watson | 2025 | Free (online) | Beginner | [deeplearningwithpython.io](https://deeplearningwithpython.io/) | 3rd edition is free to read online; print from Manning |
-| 10 | | Hands-On Machine Learning with Scikit-Learn and PyTorch | Aurélien Géron | 2025 | Paid | Beginner | [O'Reilly](https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/) | New PyTorch edition (Oct 2025); earlier editions use Keras/TensorFlow |
-| 11 | | Pattern Recognition and Machine Learning (PRML) | Christopher Bishop | 2006 | Free | Advanced | [Microsoft Research](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) | Free PDF |
-| 12 | | The Elements of Statistical Learning (ESL) | Hastie, Tibshirani, Friedman | 2009 | Free | Advanced | [ElemStatLearn](https://hastie.su.domains/ElemStatLearn/) | |
-| 13 | 🔑 | Understanding Deep Learning | Simon J. D. Prince | 2023 | Free | Intermediate | [udlbook](https://udlbook.github.io/udlbook/) | Best modern DL text (MIT Press); Python notebooks; Sections 03–07 |
-| 14 | | Dive into Deep Learning | Zhang, Lipton, Li, Smola | 2023 | Free | Intermediate | [d2l.ai](https://d2l.ai/) | Every chapter is runnable code (PyTorch, JAX, TensorFlow, MXNet) |
-| 15 | | Gaussian Processes for Machine Learning | Rasmussen, Williams | 2006 | Free | Advanced | [gaussianprocess.org/gpml](https://gaussianprocess.org/gpml/) | Kernels and Bayesian non-parametrics; Section 02 |
-| 16 | | Speech and Language Processing (3rd ed. draft) | Jurafsky, Martin | 2026 (draft) | Free | Intermediate | [web.stanford.edu/~jurafsky/slp3](https://web.stanford.edu/~jurafsky/slp3/) | The standard NLP text, continuously updated for LLMs; Sections 06/09 |
-| 17 | | Build a Large Language Model (From Scratch) | Sebastian Raschka | 2024 | Paid | Intermediate | [Manning](https://www.manning.com/books/build-a-large-language-model-from-scratch) | Code a GPT-style model, pretraining, and fine-tuning in PyTorch; Section 09 |
-| 18 | | Reinforcement Learning from Human Feedback (RLHF Book) | Nathan Lambert | 2025 | Free | Advanced | [rlhfbook.com](https://rlhfbook.com/) | LLM post-training reference; Section 10 |
-| 19 | 🔑 | TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers | Pete Warden, Daniel Situnayake | 2019 | Paid | Beginner | [O'Reilly](https://www.oreilly.com/library/view/tinyml/9781492052036/) | Hands-on TFLM projects plus chapters on optimizing latency, energy and size; the 2019 toolchain has aged; Section 14 |
-| 20 | | Machine Learning Systems | Vijay Janapa Reddi | 2026 | Free | Intermediate | [mlsysbook.ai](https://mlsysbook.ai/) | Open textbook from Harvard (CC BY-NC-SA 4.0; MIT Press 2026), actively maintained; Section 14 |
-| 21 | | Designing Machine Learning Systems | Chip Huyen | 2022 | Paid | Intermediate | [O'Reilly](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) | ML in production: data, features, deployment, distribution shift and monitoring, MLOps; Section 14 |
-| 22 | | AI Engineering | Chip Huyen | 2024 | Paid | Intermediate | [O'Reilly](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) | Building applications on foundation models: evaluation, prompt engineering, RAG and agents, finetuning, dataset engineering, inference optimization; Sections 09/11 |
+<!-- books:start — generated by tools/build.py from the section data; do not edit by hand -->
+| # | Priority | Title | Author(s) | Year | Access | Level | Link | Used in |
+|---|---|---|---|---|---|---|---|---|
+| 1 | 🔑 | Mathematics for Machine Learning | Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong | 2020 | Free | Beginner | [Link](https://mml-book.github.io/) | [01](../01-math-foundations/README.md) |
+| 2 | 🔑 | An Introduction to Statistical Learning (ISLR 2nd ed. / ISLP Python ed.) | Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani (+ Jonathan Taylor for ISLP) | 2021 / 2023 | Free | Beginner | [Link](https://www.statlearning.com/) | [02](../02-classical-ml/README.md) |
+| 3 | 🔑 | Neural Networks and Deep Learning | Michael Nielsen | 2015 | Free | Beginner | [Book](http://neuralnetworksanddeeplearning.com/) · [Code](https://github.com/mnielsen/neural-networks-and-deep-learning) | [03](../03-neural-network-fundamentals/README.md) |
+| 4 | 🔑 | TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers | Pete Warden, Daniel Situnayake | 2019 | Paid | Beginner | [Link](https://www.oreilly.com/library/view/tinyml/9781492052036/) | [14](../14-edge-and-embedded-ml/README.md) |
+| 5 | | Hands-On Machine Learning with Scikit-Learn and PyTorch | Aurélien Géron | 2025 | Paid | Beginner | [O'Reilly](https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/) | Further reading |
+| 6 | 🔑 | Understanding Deep Learning | Simon J. D. Prince | 2023 | Free | Intermediate | [Link](https://udlbook.github.io/udlbook/) | [03](../03-neural-network-fundamentals/README.md) |
+| 7 | | Deep Learning (Chapters 6–8) | Ian Goodfellow, Yoshua Bengio, Aaron Courville | 2016 | Free | Intermediate | [Link](https://www.deeplearningbook.org/) | [03](../03-neural-network-fundamentals/README.md) |
+| 8 | | Machine Learning Systems | Vijay Janapa Reddi | 2026 | Free | Intermediate | [Link](https://mlsysbook.ai/) | [14](../14-edge-and-embedded-ml/README.md) |
+| 9 | | Designing Machine Learning Systems | Chip Huyen | 2022 | Paid | Intermediate | [Link](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) | [14](../14-edge-and-embedded-ml/README.md) |
+| 10 | 🔑 | Reinforcement Learning: An Introduction – Sutton & Barto (2nd ed.) | — | — | Free | Intermediate | [incompleteideas.net](http://incompleteideas.net/book/the-book-2nd.html) | [10](../10-reinforcement-learning/README.md) |
+| 11 | | Probabilistic Machine Learning: An Introduction | Kevin Murphy | 2022 | Free | Intermediate | [PML Book 1](https://probml.github.io/pml-book/book1.html) | Further reading |
+| 12 | | Dive into Deep Learning | Zhang, Lipton, Li, Smola | 2023 | Free | Intermediate | [d2l.ai](https://d2l.ai/) | Further reading |
+| 13 | | Speech and Language Processing (3rd ed. draft) | Jurafsky, Martin | 2026 (draft) | Free | Intermediate | [web.stanford.edu/~jurafsky/slp3](https://web.stanford.edu/~jurafsky/slp3/) | Further reading |
+| 14 | | Build a Large Language Model (From Scratch) | Sebastian Raschka | 2024 | Paid | Intermediate | [Manning](https://www.manning.com/books/build-a-large-language-model-from-scratch) | Further reading |
+| 15 | | AI Engineering | Chip Huyen | 2024 | Paid | Intermediate | [O'Reilly](https://www.oreilly.com/library/view/ai-engineering/9781098166298/) | Further reading |
+| 16 | | Pattern Recognition and Machine Learning (PRML) | Christopher Bishop | 2006 | Free | Advanced | [Link](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) | [02](../02-classical-ml/README.md) |
+| 17 | | Gaussian Processes for Machine Learning | Carl Edward Rasmussen, Christopher K. I. Williams | 2006 | Free | Advanced | [Link](https://gaussianprocess.org/gpml/) | [02](../02-classical-ml/README.md) |
+| 18 | | The Elements of Statistical Learning (ESL) | Trevor Hastie, Robert Tibshirani, Jerome Friedman | 2009 | Free | Advanced | [Link](https://hastie.su.domains/ElemStatLearn/) | [02](../02-classical-ml/README.md) |
+| 19 | | Reinforcement Learning from Human Feedback (RLHF Book) | Nathan Lambert | 2025 | Free | Advanced | [rlhfbook.com](https://rlhfbook.com/) | [10](../10-reinforcement-learning/README.md) |
+| 20 | | Perceptrons: An Introduction to Computational Geometry | Marvin Minsky, Seymour Papert | 1969 | — | — | [Link](https://doi.org/10.7551/mitpress/11301.001.0001) | [00](../00-historical-foundations/README.md) |
+| 21 | ⭐ | Kolmogorov Complexity and Algorithmic Randomness | A. Shen, V. A. Uspensky, N. Vereshchagin | 2017 | — | — | [Link](https://www.lirmm.fr/~ashen/kolmbook-eng-scan.pdf) | [01](../01-math-foundations/README.md) |
+| 22 | | Superintelligence: Paths, Dangers, Strategies | Bostrom | 2014 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
+| 23 | | Human Compatible: Artificial Intelligence and the Problem of Control | Russell | 2019 | — | — | — | [12](../12-interpretability-and-alignment/README.md) |
+| 24 | 🔑 | Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges | Bronstein et al. | 2021 | — | — | [arxiv.org/abs/2104.13478](https://arxiv.org/abs/2104.13478) | [13](../13-graphs-geometry-and-science/README.md) |
+<!-- books:end -->

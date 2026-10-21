@@ -1,0 +1,64 @@
+# Resources for: Computational Physics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "computational-physics"
+title = "Computational Physics"
+authors = "Mark Newman"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "computational-physics-2"
+title = "Computational Physics"
+authors = "Nicholas Giordano & Hisao Nakanishi"
+type = "book"
+
+[[groups.items]]
+id = "numerical-recipes-the-art-of-scientific"
+title = "Numerical Recipes: The Art of Scientific Computing"
+authors = "Press et al."
+type = "book"
+url = "http://numerical.recipes/"
+link_text = "numerical.recipes"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-18-085-computational-science-and"
+title = "MIT 18.085 Computational Science and Engineering"
+authors = "Gilbert Strang"
+type = "course"
+url = "https://ocw.mit.edu/courses/18-085-computational-science-and-engineering-i-fall-2008/"
+link_text = "MIT OCW"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "computational-physics-3"
+title = "Computational Physics"
+authors = "Jos Thijssen"
+type = "book"
+
+[[groups.items]]
+id = "a-survey-of-computational-physics"
+title = "A Survey of Computational Physics"
+authors = "Landau, Páez & Bordeianu"
+type = "book"
+url = "https://www.compadre.org/PICUP/resources/Course-Materials.cfm"
+link_text = "compadre.org"
+
+[[groups.items]]
+id = "a-student-s-guide-to-python-for-physical"
+title = "A Student's Guide to Python for Physical Modeling"
+authors = "Kinder & Nelson"
+type = "book"
+
+[[groups.items]]
+id = "the-fenicsx-tutorial-jrgen-s-dokken"
+title = "The FEniCSx Tutorial — Jørgen S. Dokken (online book, CC BY 4.0)"
+type = "book"
+url = "https://jsdokken.com/dolfinx-tutorial/"
+link_text = "jsdokken.com"
+verified = 2026-10-13

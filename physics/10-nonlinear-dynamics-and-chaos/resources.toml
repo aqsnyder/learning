@@ -1,0 +1,66 @@
+# Resources for: Nonlinear Dynamics and Chaos
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "nonlinear-dynamics-and-chaos-3rd-ed-2024"
+title = "Nonlinear Dynamics and Chaos (3rd ed., 2024)"
+authors = "Steven Strogatz"
+year = "2024"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "nonlinear-dynamics-and-chaos-strogatz"
+title = "Nonlinear Dynamics and Chaos — Strogatz (Cornell lectures)"
+type = "course"
+marks = ["core"]
+url = "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chaos-making-a-new-science"
+title = "Chaos: Making a New Science"
+authors = "James Gleick"
+type = "book"
+
+[[groups.items]]
+id = "deterministic-nonperiodic-flow"
+title = "Deterministic Nonperiodic Flow"
+authors = "Edward Lorenz"
+year = "1963"
+type = "paper"
+url = "https://doi.org/10.1175/1520-0469(1963)020<0130:DNF>2.0.CO;2"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "simple-mathematical-models-with-very"
+title = "Simple Mathematical Models with Very Complicated Dynamics"
+authors = "Robert May"
+year = "1976"
+type = "paper"
+url = "https://doi.org/10.1038/261459a0"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chaotic-dynamics-an-introduction"
+title = "Chaotic Dynamics: An Introduction"
+authors = "Baker & Gollub"
+type = "book"
+
+[[groups.items]]
+id = "the-essence-of-chaos"
+title = "The Essence of Chaos"
+authors = "Edward Lorenz"
+type = "book"
+
+[[groups.items]]
+id = "chaos-and-fractals"
+title = "Chaos and Fractals"
+authors = "Peitgen, Jürgens & Saupe"
+type = "book"

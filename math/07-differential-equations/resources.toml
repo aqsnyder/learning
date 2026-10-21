@@ -1,0 +1,129 @@
+# Resources for: Differential Equations
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "nonlinear-dynamics-and-chaos"
+title = "Nonlinear Dynamics and Chaos"
+authors = "Steven Strogatz"
+year = "2024"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "The best introduction to dynamical systems and chaos theory (3rd edition; the 2015 2nd edition is equally usable). Strogatz writes with exceptional clarity and intuition. Covers phase portraits, bifurcations, limit cycles, and chaos. Essential."
+
+[[groups.items]]
+id = "mit-18-03-differential-equations"
+title = "MIT 18.03 Differential Equations"
+authors = "Arthur Mattuck"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/"
+link_text = "Link"
+description = "MIT's comprehensive ODE course. Covers first-order, second-order, Laplace transforms, and systems of ODEs with excellent problem sets."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "differential-equations"
+title = "Differential Equations"
+authors = "3Blue1Brown"
+type = "video-series"
+url = "https://www.youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6"
+link_text = "Link"
+description = "Beautiful visual explanations of differential equations, phase space, and dynamical systems. Classic 3Blue1Brown quality."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "elementary-differential-equations-and"
+title = "Elementary Differential Equations and Boundary Value Problems"
+authors = "Boyce, DiPrima, Meade"
+year = "2021"
+type = "book"
+description = "The standard undergraduate ODE textbook. Comprehensive coverage with applications. Good computational reference."
+
+[[groups.items]]
+id = "partial-differential-equations-an"
+title = "Partial Differential Equations: An Introduction"
+authors = "Walter Strauss"
+year = "2007"
+type = "book"
+description = "Accessible introduction to PDEs: wave equation, heat equation, Laplace equation, Fourier methods. Foundation for understanding physics simulations and neural PDE solvers."
+
+[[groups.items]]
+id = "ordinary-differential-equations"
+title = "Ordinary Differential Equations"
+authors = "Vladimir Arnold"
+year = "1992"
+type = "book"
+description = "A geometric approach to ODEs by one of the greatest mathematicians. Emphasis on qualitative behavior and phase space. Elegant and insightful."
+
+[[groups.items]]
+id = "neural-ordinary-differential-equations"
+title = "Neural Ordinary Differential Equations"
+authors = "Ricky Chen et al."
+year = "2018"
+type = "paper"
+url = "https://arxiv.org/abs/1806.07366"
+link_text = "Link"
+description = "The paper that introduced neural ODEs — treating neural networks as continuous dynamical systems. Seeing the math here connects this section directly to ML."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "nonlinear-dynamics-and-chaos-2"
+title = "Nonlinear Dynamics and Chaos"
+authors = "Steven Strogatz"
+type = "course"
+access = "free"
+url = "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
+link_text = "Link"
+description = "Strogatz's own lectures on nonlinear dynamics. Watch alongside the textbook for the full experience."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "efficiently-modeling-long-sequences-with"
+title = "Efficiently Modeling Long Sequences with Structured State Spaces (S4)"
+authors = "Albert Gu, Karan Goel, Christopher Ré"
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2111.00396"
+link_text = "Link"
+description = "State-space models for sequence processing — the mathematics of continuous-time dynamics applied to deep learning. Connects ODEs to modern architectures."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "stochastic-differential-equations"
+title = "Stochastic Differential Equations"
+authors = "Bernt Øksendal"
+year = "2003"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "Introduction to SDEs, Itô calculus, and stochastic analysis. Foundation for diffusion models (DDPM, score-based generative models). Advanced but increasingly relevant."
+
+[[groups.items]]
+id = "feedback-systems-an-introduction-for"
+title = "Feedback Systems: An Introduction for Scientists and Engineers"
+authors = "Karl J. Åström, Richard M. Murray"
+year = "2021"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://fbswiki.org/wiki/index.php/Feedback_Systems:_An_Introduction_for_Scientists_and_Engineers"
+link_text = "Link"
+description = "Where linear ODEs become engineering: state-space models, stability, transfer functions, frequency response, PID, and robustness. Free 2nd-edition PDF from the authors; the bridge from 18.03 to control and to the state-space view behind S4-style models."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "applied-stochastic-differential"
+title = "Applied Stochastic Differential Equations"
+authors = "Simo Särkkä, Arno Solin"
+year = "2019"
+type = "book"
+access = "free"
+url = "https://users.aalto.fi/~asolin/sde-book/sde-book.pdf"
+link_text = "Link"
+description = "Accessible, applied introduction to SDEs and Itô calculus with numerical solution methods (Cambridge University Press). Much gentler than Øksendal and a better first book before diffusion models; free PDF and example code from the authors."
+verified = 2026-10-13

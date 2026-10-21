@@ -1,0 +1,106 @@
+# Resources for: Mining and Consensus
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "mastering-bitcoin-chapter-12-mining-and"
+title = "Mastering Bitcoin, Chapter 12: Mining and Consensus"
+authors = "Andreas Antonopoulos and David Harding"
+type = "book"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
+link_text = "ch12_mining.adoc"
+description = "Coinbase and subsidy, proof-of-work and difficulty retargeting, chain selection, mining pools, hashrate attacks, and how consensus rules change (hard vs. soft forks)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "andreas-antonopoulos-bitcoin-q-a-on"
+title = "Andreas Antonopoulos: Bitcoin Q&A on Mining"
+authors = "Andreas Antonopoulos"
+type = "video"
+url = "https://www.youtube.com/@aantonop"
+link_text = "@aantonop"
+description = "Clear explanations of mining mechanics"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learn-me-a-bitcoin-mining"
+title = "Learn Me A Bitcoin: Mining"
+authors = "Greg Walker"
+type = "website"
+url = "https://learnmeabitcoin.com/technical/mining/"
+link_text = "learnmeabitcoin.com"
+description = "Interactive mining visualizations"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chaincode-labs-mining-section"
+title = "Chaincode Labs: Mining section"
+type = "course"
+label = "Curriculum"
+marks = ["core"]
+url = "https://github.com/chaincodelabs/bitcoin-curriculum"
+link_text = "bitcoin-curriculum"
+description = "Protocol-level deep dive"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mempool-space"
+title = "Mempool.space"
+type = "tool"
+url = "https://mempool.space/"
+link_text = "mempool.space"
+description = "Live blockchain explorer, fee estimation, mining pool stats"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "difficulty-adjustment-algorithm"
+title = "Difficulty adjustment algorithm"
+type = "concept"
+description = "How Bitcoin self-regulates every 2016 blocks"
+
+[[groups.items]]
+id = "selfish-mining-and-mining-game-theory"
+title = "Selfish mining and mining game theory"
+type = "concept"
+url = "https://bitcoinops.org/en/topics/selfish-mining/"
+link_text = "Optech topic"
+description = "Block withholding and selfish mining: under minimal assumptions a miner with about 1/3 of the hashrate can earn more than its fair share, so the honest-majority \"51%\" framing is too optimistic. The Optech page links the original \"Majority is not Enough\" paper (Eyal & Sirer, 2013) and 2025–26 follow-ups"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mining-pools-and-hashrate-distribution"
+title = "Mining pools and hashrate distribution"
+type = "concept"
+description = "Pool payout schemes, hashrate concentration, and who chooses the transactions in a block (see Stratum V2 in Section 11)"
+
+[[groups.items]]
+id = "energy-and-incentive-structure"
+title = "Energy and incentive structure"
+type = "concept"
+description = "Block rewards, halving schedule, fee market. What happens to security as fees replace the subsidy is covered in [Section 09](../09-economics-and-game-theory/README.md) (Budish; Carlsten et al.)"
+
+[[groups.items]]
+id = "bitcoin-and-cryptocurrency-technologies"
+title = "Bitcoin and Cryptocurrency Technologies, Ch. 2 and 5"
+authors = "Arvind Narayanan, Joseph Bonneau, Edward Felten, Andrew Miller, Steven Goldfeder"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://bitcoinbook.cs.princeton.edu/"
+link_text = "bitcoinbook.cs.princeton.edu"
+description = "Princeton's textbook (2016): \"How Bitcoin Achieves Decentralization\" and \"Bitcoin Mining\", including mining incentives and strategies. Pre-SegWit, but the most rigorous textbook treatment of Nakamoto consensus; free pre-publication PDF and lectures on the site"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learn-me-a-bitcoin-block-reward"
+title = "Learn Me A Bitcoin: Block Reward"
+authors = "Greg Walker"
+type = "website"
+url = "https://learnmeabitcoin.com/technical/mining/block-reward/"
+link_text = "learnmeabitcoin.com"
+description = "The subsidy schedule in detail: halving every 210,000 blocks (3.125 BTC since the 2024 halving at block 840,000), bit-shift rounding, and why total supply ends just under 21 million"
+verified = 2026-10-13

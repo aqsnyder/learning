@@ -1,0 +1,99 @@
+# Resources for: Firmware Toolchain, Debug, and Observability
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "professional-cmake-a-practical-guide"
+title = "Professional CMake: A Practical Guide (22nd ed)"
+authors = "Craig Scott"
+type = "book"
+marks = ["core"]
+url = "https://crascit.com/professional-cmake/"
+link_text = "Link"
+description = "Written by a CMake co-maintainer and revised continually; the 22nd edition covers CMake 4.2. For firmware, read Ch. 24 \"Toolchains And Cross Compiling\" first and use the rest as a reference. Digital only (PDF/EPUB)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "openocd-open-on-chip-debugger"
+title = "OpenOCD (Open On-Chip Debugger)"
+authors = "OpenOCD project"
+year = "2023 (0.12.0)"
+type = "tool"
+marks = ["core"]
+url = "https://openocd.org/"
+link_text = "Link"
+description = "Open-source debug server: drives ST-LINK, J-Link and CMSIS-DAP probes over SWD/JTAG, programs flash, and serves GDB. Release 0.12.0 added flash support for STM32U57x/U58x; check that your exact part is supported. Many IDE debug configurations run OpenOCD or a vendor GDB server underneath."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "segger-rtt-real-time-transfer"
+title = "SEGGER RTT (Real Time Transfer)"
+authors = "SEGGER"
+type = "tool"
+url = "https://kb.segger.com/RTT"
+link_text = "Link"
+description = "Bidirectional I/O through ring buffers in target RAM, read by a J-Link over SWD while the core runs. It needs no extra pins, is far faster than semihosting, and works on parts with no SWO pin. In non-blocking mode the firmware keeps its real-time behavior with no host attached. SEGGER documents it for J-Link probes. OpenOCD also implements RTT for any target whose memory it can read in the background (`rtt setup`, `rtt start`, and `rtt server start` to expose a channel on a TCP port; see its [General Commands](https://openocd.org/doc-release/html/General-Commands.html) chapter), so you don't need a J-Link to use it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "sigrok-pulseview"
+title = "sigrok / PulseView"
+authors = "sigrok project"
+type = "tool"
+url = "https://sigrok.org/"
+link_text = "Link"
+description = "Open-source (GPL) signal-analysis suite for logic analyzers, scopes, multimeters and other bench gear, with stackable protocol decoders written in Python. PulseView is the GUI; the command-line frontend lets test scripts capture and decode."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mcuboot"
+title = "MCUboot"
+authors = "MCUboot project (mcu-tools)"
+type = "tool"
+url = "https://docs.mcuboot.com/"
+link_text = "Link"
+description = "Open-governance secure bootloader for 32-bit MCUs: a common flash layout for updates, image signing and key management with `imgtool`, optional encrypted images, and serial recovery via MCUmgr. Runs under Zephyr, NuttX, Mynewt and others. Worth reading even if you keep your own bootloader."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "linker-scripts-map-files-and-memory"
+title = "Linker scripts, map files, and memory budgets"
+type = "concept"
+url = "../07-embedded-systems-and-rtos/README.md"
+link_text = "Sec 07"
+description = "Memory regions and output sections, how `.data` is copied and `.bss` zeroed, `.noinit` RAM, bootloader and application slots, code in RAM, and reading a map file to see what is eating flash. Start from the linker-script and newlib parts of *From Zero to main()* in Section 07."
+
+[[groups.items]]
+id = "swo-itm-tracing-and-dwt-cycle-counting"
+title = "SWO/ITM tracing and DWT cycle counting"
+type = "concept"
+url = "../07-embedded-systems-and-rtos/README.md"
+link_text = "Sec 07"
+description = "printf-style tracing and timestamps over the single-wire output pin, and the DWT cycle counter for timing code in clock cycles. Yiu's Cortex-M33 guide (Section 07) introduces the debug and trace hardware."
+
+[[groups.items]]
+id = "reset-cause-and-fault-telemetry"
+title = "Reset-cause and fault telemetry"
+type = "concept"
+url = "../07-embedded-systems-and-rtos/README.md"
+link_text = "Sec 07"
+description = "Fault registers, the stacked frame, reset-cause flags, watchdog and assert information saved across a reset, then reported and symbolized on the host. Builds on Section 07's HardFault article and the Interrupt blog."
+
+[[groups.items]]
+id = "trustzone-m-builds-and-debugging"
+title = "TrustZone-M builds and debugging"
+type = "concept"
+url = "../07-embedded-systems-and-rtos/README.md"
+link_text = "Sec 07"
+description = "Separate secure and non-secure images, non-secure-callable entry points, and what a debugger can see in each security state. Yiu's guide (Section 07) covers TrustZone in depth."
+
+[[groups.items]]
+id = "firmware-an-agent-can-verify"
+title = "Firmware an agent can verify"
+type = "concept"
+marks = ["ai"]
+url = "../09-agentic-ai-workflows/README.md"
+link_text = "Sec 09"
+description = "A one-command build, a flash-and-run script that exits non-zero on failure, and machine-readable logs over RTT or UART. Without them a coding agent can only claim the firmware works; with them it can check."

@@ -1,0 +1,37 @@
+name: links
+
+# Monthly external-link check. If any link is broken, it opens an issue with the report.
+# Bot walls (403) and rate limits (429) count as "probably fine"; the quarterly audit re-checks those by hand.
+on:
+  schedule:
+    - cron: "17 6 1 * *"   # 06:17 UTC on the 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress --max-concurrency 8 --timeout 30 --max-retries 2
+            --accept '200..=299,403,429'
+            --exclude-path reviews
+            './**/*.md'
+          format: markdown
+          output: ./lychee/out.md
+          fail: false
+      - name: Open an issue with the report
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v6
+        with:
+          title: Broken links (monthly check)
+          content-filepath: ./lychee/out.md
+          labels: links

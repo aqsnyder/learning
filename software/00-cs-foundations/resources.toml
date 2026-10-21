@@ -1,0 +1,103 @@
+# Resources for: Computer Science Foundations
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "teach-yourself-computer-science"
+title = "Teach Yourself Computer Science"
+type = "docs"
+label = "Guide"
+access = "free"
+url = "https://teachyourselfcs.com/"
+link_text = "teachyourselfcs.com"
+description = "The best curated CS self-study guide"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-6-006-introduction-to-algorithms-ocw"
+title = "MIT 6.006 Introduction to Algorithms (OCW)"
+type = "course"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+link_text = "ocw.mit.edu"
+description = "Foundational algorithms and data structures"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "grokking-algorithms-2nd-ed"
+title = "*Grokking Algorithms* (2nd ed)"
+authors = "Aditya Bhargava"
+year = "2024"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+description = "Visual, accessible intro to algorithms"
+
+[[groups.items]]
+id = "cs50-harvard"
+title = "CS50 (Harvard)"
+authors = "David Malan"
+type = "course"
+url = "https://cs50.harvard.edu/"
+link_text = "cs50.harvard.edu"
+description = "Harvard's widely used intro CS course, free online"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "structure-and-interpretation-of-computer"
+title = "Structure and Interpretation of Computer Programs"
+type = "book"
+access = "free"
+url = "https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html"
+link_text = "mitp-content-server.mit.edu"
+description = "Classic computational thinking"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "computer-systems-a-programmer-s"
+title = "*Computer Systems: A Programmer's Perspective* (3rd ed)"
+authors = "Randal Bryant and David O'Hallaron"
+year = "2015"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://csapp.cs.cmu.edu/"
+link_text = "csapp.cs.cmu.edu"
+description = "How C becomes machine behavior: integer and floating-point representation, assembly, linking, caches, exceptions, concurrency. Teach Yourself CS's pick for architecture and the CS book closest to embedded C work"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "operating-systems-three-easy-pieces"
+title = "*Operating Systems: Three Easy Pieces* — Remzi and Andrea Arpaci-Dusseau (v1.10, 2023)"
+year = "2023"
+type = "book"
+access = "free"
+url = "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+link_text = "pages.cs.wisc.edu"
+description = "Virtualization, concurrency, persistence. The concurrency chapters (threads, locks, condition variables, semaphores, common bugs) are the groundwork for the RTOS material in Section 07"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-algorithm-design-manual-3rd-ed"
+title = "*The Algorithm Design Manual* (3rd ed)"
+authors = "Steven Skiena"
+year = "2020"
+type = "book"
+url = "https://www.algorist.com/"
+link_text = "algorist.com"
+description = "Practitioner's algorithms: model the real problem, then pick from a catalog of known solutions. Teach Yourself CS's main algorithms text, and better data-structures practice than puzzle grinding"
+verified = 2026-10-13
+
+[[groups]]
+title = "Key Concepts"
+intro = '''
+| Concept | Why It Matters |
+|---------|---------------|
+| Big-O complexity analysis | Read code and assess performance without running it |
+| Data structures recognition | Arrays, hash maps, trees, graphs, heaps — know when code uses the wrong one |
+| Recursion and dynamic programming | Pattern recognition in code review |
+'''

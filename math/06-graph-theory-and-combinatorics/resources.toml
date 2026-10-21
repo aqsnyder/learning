@@ -1,0 +1,95 @@
+# Resources for: Graph Theory and Combinatorics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "graph-theory"
+title = "Graph Theory"
+authors = "Reinhard Diestel"
+year = "2025"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://diestel-graph-theory.com/"
+link_text = "Link"
+description = "The standard graduate text (6th edition, Springer GTM 173). Comprehensive and rigorous; the main text is free to read online as a preview. Covers connectivity, matching, coloring, planarity, flows, and more."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-graph-theory"
+title = "Introduction to Graph Theory"
+authors = "Douglas West"
+year = "2001"
+type = "book"
+description = "More accessible than Diestel with extensive exercises. Good first book for graph theory with emphasis on combinatorial proofs."
+
+[[groups.items]]
+id = "algebraic-graph-theory"
+title = "Algebraic Graph Theory"
+authors = "Chris Godsil, Gordon Royle"
+year = "2001"
+type = "book"
+description = "Connects graph theory to linear algebra: adjacency matrices, Laplacians, spectral properties. Essential foundation for spectral graph theory and GNNs."
+
+[[groups.items]]
+id = "spectral-graph-theory"
+title = "Spectral Graph Theory"
+authors = "Daniel Spielman"
+year = "2025"
+type = "course"
+access = "free"
+url = "https://www.cs.yale.edu/homes/spielman/462/462schedule.html"
+link_text = "Link"
+description = "Spielman's Yale course (Spring 2025 offering): a lecture schedule with notes for most lectures, and readings from his draft book *Spectral and Algebraic Graph Theory*. Covers the Laplacian, graph partitioning and Cheeger's inequality, random walks, resistor networks and effective resistance, expanders, and Laplacian solvers — the mathematics behind spectral clustering."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "semi-supervised-classification-with"
+title = "Semi-Supervised Classification with Graph Convolutional Networks"
+authors = "Thomas Kipf, Max Welling"
+year = "2016"
+type = "paper"
+url = "https://arxiv.org/abs/1609.02907"
+link_text = "Link"
+description = "The GCN paper. Understanding this requires spectral graph theory — seeing the math behind it deepens appreciation of both."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "combinatorics-and-graph-theory"
+title = "Combinatorics and Graph Theory"
+authors = "John Harris, Jeffry Hirst, Michael Mossinghoff"
+year = "2008"
+type = "book"
+description = "Accessible introduction covering both combinatorics and graph theory with good problem sets. Good starting point."
+
+[[groups.items]]
+id = "graph-theory-full-course"
+title = "Graph Theory (Full Course)"
+authors = "Sarada Herke"
+type = "video-series"
+url = "https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg"
+link_text = "Link"
+description = "Clear, methodical video lectures covering fundamental graph theory. Good visual supplement."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "geometric-deep-learning-grids-groups"
+title = "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges"
+authors = "Bronstein et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2104.13478"
+link_text = "Link"
+description = "The manifesto connecting graph theory, group theory, and geometry to deep learning. Seeing the mathematical unification is powerful."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "networks"
+title = "Networks"
+authors = "Mark Newman"
+year = "2018"
+type = "book"
+description = "Comprehensive treatment of network science: random graphs, small worlds, community detection, spreading processes. Bridges theory and real-world applications."

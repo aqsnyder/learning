@@ -17,33 +17,32 @@ After this section you can:
 - Lay out a switching regulator's hot loop and predict its parasitic inductance, switch-node overshoot, and ringing frequency.
 - Decide when, if ever, to split or partition a ground plane, and lay out mixed-signal grounding on one unbroken reference.
 
-## Marking Convention
-
-| Symbol | Meaning |
-|--------|---------|
-| 🔑 | Must-read / must-watch — essential for understanding this topic |
-| ⭐ | On the Rick Hartley recommended reading list |
-
 ## Resources
 
-| Priority | Type | Resource | Author(s) | Link | Description |
-|----------|------|----------|-----------|------|-------------|
-| 🔑 | 🎥 Video | How to Achieve Proper Grounding | Rick Hartley | [YouTube](https://www.youtube.com/watch?v=ySuUZEjARPY) | THE definitive lecture on grounding (Altium "Expert Live Training"). If you watch one video on PCB design, make it this one. |
-| 🔑 | 🎥 Video | Power Distribution Networks | Rick Hartley | [YouTube](https://www.youtube.com/watch?v=WnLRHuvl6Eg) | PDN design fundamentals — understanding impedance, decoupling, and energy delivery. (Posted on the NineDotConnects channel.) |
-| 🔑 | 🎥 Video Series | Phil's Lab — Power Design Tutorials | Phil's Lab | [YouTube](https://www.youtube.com/@PhilsLab) | Practical power supply layout with hands-on KiCad examples. |
-| ⭐ | 📕 Book | Fast Circuit Boards: Energy Management (2018) | Ralph Morrison | [Wiley](https://wiley-vch.e-bookshelf.de/fast-circuit-boards-10620117.html) | How energy travels as fields, not currents. Reframes how you think about power delivery at the physics level. |
-| ⭐ | 📕 Book | Principles of Power Integrity for PDN Design — Simplified (2017) | Larry D. Smith, Eric Bogatin | [InformIT](https://www.informit.com/store/principles-of-power-integrity-for-pdn-design-simplified-9780132735551) | PDN theory made accessible. Target impedance, decoupling strategies, and simulation. |
-| ⭐ | 📕 Book | Grounding and Shielding: Circuits and Interference (6th ed., 2016) | Ralph Morrison | [Wiley](https://www.wiley-vch.de/en/areas-interest/engineering/grounding-and-shielding-978-1-119-18374-7) | Morrison's classic on grounds, guards and shields in instrumentation and analog circuits, written from the fields point of view. Rick's list cites the 5th edition, *Grounding & Shielding Techniques*. |
-| | 🔧 Tool | Saturn PCB Design Toolkit | — | [Website](https://saturnpcb.com/saturn-pcb-toolkit/) | Free (Windows) calculators for trace width, via current, impedance, thermal resistance, and more. Its conductor-current calculator follows IPC-2152, and the vendor notes that calculators built on the old IPC-2221 formula are obsolete. Essential desktop tool. |
-| | 📄 Standard | IPC-2152 — Standard for Determining Current-Carrying Capacity in Printed Board Design (2009) | IPC | [PCD&F release note](https://pcdandf.com/pcdesign/index.php/editorial/menu-new-indust-prod/5545-ipc-releases-ipc-2152-standard) | Replaced the IPC-2221 conductor-sizing charts (which date to 1956) with new test data for internal and external conductors, in air and in vacuum. Use it, for example through Saturn, whenever you size traces or planes for current. |
-| | 💡 Concept | Decoupling Capacitor Placement and Selection | — | — | Strategy for choosing values, quantities, and placement of decoupling caps relative to IC power pins. |
-| | 📄 App Note | MT-101: Decoupling Techniques (2009) | Analog Devices | [PDF](https://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf) | ADI's free tutorial on choosing and placing decoupling capacitors and on the parasitics that limit them. A concrete companion to the concept row above. |
-| | 💡 Concept | Ground Plane Splits | — | — | When and why to split ground planes (usually: don't). Understand the consequences before you cut a plane. |
-| | 📄 App Note | MT-031: Grounding Data Converters and Solving the Mystery of "AGND" and "DGND" (2008) | Walt Kester, James Bryant, Mike Byrne (Analog Devices) | [PDF](https://www.analog.com/media/en/training-seminars/tutorials/mt-031.pdf) | The canonical answer to "what do I do with AGND and DGND?". For converters with low digital currents, tie both pins to the analog ground plane right at the part. Read it before splitting any plane on a mixed-signal board. |
-| | 📄 App Note | AN-136: PCB Layout Considerations for Non-Isolated Switching Power Supplies | Henry Zhang (Analog Devices) | [App note](https://www.analog.com/en/resources/app-notes/an-136.html) | The standard reference for buck/boost converter layout: power-stage placement, the high-di/dt "hot loop", and grounding of the power and control sections. |
-| | 🔧 Tool | FastHenry2 | Mattan Kamon (MIT, original FastHenry); FastFieldSolvers S.R.L. (Windows port) | [fastfieldsolvers.com](https://www.fastfieldsolvers.com/software.htm) | Free, open-source 3D inductance extractor. It computes the frequency-dependent self and mutual inductance and resistance of an arbitrary conductor geometry (magnetoquasistatic) and can export a SPICE equivalent circuit. Use it to check hand estimates of capacitor-mounting, via and plane-pair loop inductance (Practice 3). The FastFieldSolvers build is a Windows port; binaries and source are on its download page. |
+<!-- resources:start — generated by tools/build.py from resources.toml in this folder; edit that file, then run the script -->
+
+*🔑 core path (read these first) · ⭐ on Rick Hartley's reading list*
+
+| Priority | Type | Resource | Author(s) | Year | Link | Description |
+|---|---|---|---|---|---|---|
+| 🔑 | 🎥 Video | How to Achieve Proper Grounding | Rick Hartley | — | [YouTube](https://www.youtube.com/watch?v=ySuUZEjARPY) | THE definitive lecture on grounding (Altium "Expert Live Training"). If you watch one video on PCB design, make it this one. |
+| 🔑 | 🎥 Video | Power Distribution Networks | Rick Hartley | — | [YouTube](https://www.youtube.com/watch?v=WnLRHuvl6Eg) | PDN design fundamentals — understanding impedance, decoupling, and energy delivery. (Posted on the NineDotConnects channel.) |
+| 🔑 | 📺 Video series | Phil's Lab — Power Design Tutorials | Phil's Lab | — | [YouTube](https://www.youtube.com/@PhilsLab) | Practical power supply layout with hands-on KiCad examples. |
+| ⭐ | 📕 Book | Fast Circuit Boards: Energy Management (2018) | Ralph Morrison | 2018 | [Wiley](https://wiley-vch.e-bookshelf.de/fast-circuit-boards-10620117.html) | How energy travels as fields, not currents. Reframes how you think about power delivery at the physics level. |
+| ⭐ | 📕 Book | Principles of Power Integrity for PDN Design — Simplified (2017) | Larry D. Smith, Eric Bogatin | 2017 | [InformIT](https://www.informit.com/store/principles-of-power-integrity-for-pdn-design-simplified-9780132735551) | PDN theory made accessible. Target impedance, decoupling strategies, and simulation. |
+| ⭐ | 📕 Book | Grounding and Shielding: Circuits and Interference (6th ed., 2016) | Ralph Morrison | 2016 | [Wiley](https://www.wiley-vch.de/en/areas-interest/engineering/grounding-and-shielding-978-1-119-18374-7) | Morrison's classic on grounds, guards and shields in instrumentation and analog circuits, written from the fields point of view. Rick's list cites the 5th edition, *Grounding & Shielding Techniques*. |
+| | 🔧 Tool | Saturn PCB Design Toolkit | — | — | [Website](https://saturnpcb.com/saturn-pcb-toolkit/) | Free (Windows) calculators for trace width, via current, impedance, thermal resistance, and more. Its conductor-current calculator follows IPC-2152, and the vendor notes that calculators built on the old IPC-2221 formula are obsolete. Essential desktop tool. |
+| | 📏 Standard | IPC-2152 — Standard for Determining Current-Carrying Capacity in Printed Board Design (2009) | IPC | 2009 | [PCD&F release note](https://pcdandf.com/pcdesign/index.php/editorial/menu-new-indust-prod/5545-ipc-releases-ipc-2152-standard) | Replaced the IPC-2221 conductor-sizing charts (which date to 1956) with new test data for internal and external conductors, in air and in vacuum. Use it, for example through Saturn, whenever you size traces or planes for current. |
+| | 💡 Concept | Decoupling Capacitor Placement and Selection | — | — | — | Strategy for choosing values, quantities, and placement of decoupling caps relative to IC power pins. |
+| | 📄 App note | MT-101: Decoupling Techniques (2009) | Analog Devices | 2009 | [PDF](https://www.analog.com/media/en/training-seminars/tutorials/MT-101.pdf) | ADI's free tutorial on choosing and placing decoupling capacitors and on the parasitics that limit them. A concrete companion to the concept row above. |
+| | 💡 Concept | Ground Plane Splits | — | — | — | When and why to split ground planes (usually: don't). Understand the consequences before you cut a plane. |
+| | 📄 App note | MT-031: Grounding Data Converters and Solving the Mystery of "AGND" and "DGND" (2008) | Walt Kester, James Bryant, Mike Byrne (Analog Devices) | 2008 | [PDF](https://www.analog.com/media/en/training-seminars/tutorials/mt-031.pdf) | The canonical answer to "what do I do with AGND and DGND?". For converters with low digital currents, tie both pins to the analog ground plane right at the part. Read it before splitting any plane on a mixed-signal board. |
+| | 📄 App note | AN-136: PCB Layout Considerations for Non-Isolated Switching Power Supplies | Henry Zhang (Analog Devices) | — | [App note](https://www.analog.com/en/resources/app-notes/an-136.html) | The standard reference for buck/boost converter layout: power-stage placement, the high-di/dt "hot loop", and grounding of the power and control sections. |
+| | 🔧 Tool | FastHenry2 | Mattan Kamon (MIT, original FastHenry); FastFieldSolvers S.R.L. (Windows port) | — | [fastfieldsolvers.com](https://www.fastfieldsolvers.com/software.htm) | Free, open-source 3D inductance extractor. It computes the frequency-dependent self and mutual inductance and resistance of an arbitrary conductor geometry (magnetoquasistatic) and can export a SPICE equivalent circuit. Use it to check hand estimates of capacitor-mounting, via and plane-pair loop inductance (Practice 3). The FastFieldSolvers build is a Windows port; binaries and source are on its download page. |
 
 **Also used here (tracked in their home sections):** LTspice ([Section 00](../00-electronics-fundamentals/README.md)) for Practice 2, and your Section 00 impedance rig for the mini-project.
+
+<!-- resources:end -->
 
 ## Suggested Order
 

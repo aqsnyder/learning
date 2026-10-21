@@ -1,0 +1,201 @@
+# Resources for: Edge and Embedded ML (TinyML)
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+title = "Core texts and course"
+
+[[groups.items]]
+id = "tinyml-machine-learning-with-tensorflow"
+title = "TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers"
+authors = "Pete Warden, Daniel Situnayake"
+year = "2019"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+url = "https://www.oreilly.com/library/view/tinyml/9781492052036/"
+link_text = "Link"
+description = "The hands-on introduction, co-written by one of TFLM's authors. A \"Hello World\" model taken from training to a microcontroller, then three end-to-end projects (wake-word detection, person detection, and the \"Magic Wand\" gesture project), then chapters on TFLM itself, designing your own application, optimizing latency, energy, and model and binary size, debugging, and privacy and deployment. The 2019 Arduino toolchain and TensorFlow APIs have aged; the engineering chapters still apply."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-6-5940-tinyml-and-efficient-deep"
+title = "MIT 6.5940: TinyML and Efficient Deep Learning Computing"
+authors = "Song Han"
+year = "2024"
+type = "course"
+access = "free"
+marks = ["core"]
+url = "https://hanlab.mit.edu/courses/2024-fall-65940"
+link_text = "Link"
+description = "Fall 2024 lectures (recorded on YouTube), slides and Colab labs. The efficient-inference chapter is this section's spine: pruning and sparsity, quantization (two lectures), neural architecture search, knowledge distillation, \"MCUNet: TinyML on Microcontrollers\" and \"TinyEngine and Parallel Processing\". Later lectures cover on-device training. The pruning, quantization and NAS labs give guided, hands-on compression practice."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "machine-learning-systems"
+title = "Machine Learning Systems"
+authors = "Vijay Janapa Reddi"
+year = "2026"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://mlsysbook.ai/"
+link_text = "Link"
+description = "Harvard's open-access textbook (CC BY-NC-SA 4.0; MIT Press edition 2026), actively maintained online. It comes in two volumes, *Foundations* and *At Scale*, and companion hardware kits deploy to Arduino, Seeed and Raspberry Pi boards. The current systems reference to pair with Warden & Situnayake's 2019 book."
+verified = 2026-10-13
+
+[[groups]]
+title = "Runtimes, kernels, and vendor tools"
+
+[[groups.items]]
+id = "tensorflow-lite-micro-embedded-machine"
+title = "TensorFlow Lite Micro: Embedded Machine Learning on TinyML Systems"
+authors = "Robert David et al."
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2010.08678"
+link_text = "Paper"
+more_links = [{ text = "Code", url = "https://github.com/tensorflow/tflite-micro" }]
+description = "Why TFLM is an interpreter, and how it keeps memory use and runtime overhead small enough for devices with kilobytes of RAM while staying portable across very different embedded hardware. The repository's memory-management, profiling and optimized-kernel guides are the practical companions: read them before you size a tensor arena."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cmsis-nn-efficient-neural-network"
+title = "CMSIS-NN: Efficient Neural Network Kernels for Arm Cortex-M CPUs"
+authors = "Liangzhen Lai, Naveen Suda, Vikas Chandra"
+year = "2018"
+type = "paper"
+url = "https://arxiv.org/abs/1801.06601"
+link_text = "Paper"
+more_links = [{ text = "Code", url = "https://github.com/ARM-software/CMSIS-NN" }]
+description = "Hand-optimized neural-network kernels for Cortex-M; the paper reports a 4.6× improvement in runtime/throughput and a 4.9× improvement in energy efficiency. Today's library follows TFLM's int8/int16 quantization specification, is bit-exact with TFLite's reference kernels, and has SIMD paths for cores with the DSP extension (Cortex-M4, Cortex-M33 with DSP) and for Helium (Cortex-M55/M85)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "st-edge-ai-core-stedgeai-core"
+title = "ST Edge AI Core (STEdgeAI-Core)"
+authors = "STMicroelectronics"
+type = "tool"
+url = "https://www.st.com/en/development-tools/stedgeai-core.html"
+link_text = "Link"
+description = "ST's free model compiler and command-line tool. Imports Keras, TFLite and ONNX models (including scikit-learn models via ONNX), generates optimized C for STM32, reports RAM and flash, and validates and benchmarks the converted model on the host and on the target. ST's STM32CubeMX expansion pack, X-CUBE-AI (part of the same ST Edge AI Suite), is now marked NRND on st.com with STEDGEAI-CUBEAI listed as its replacement, so check which one your toolchain uses."
+verified = 2026-10-13
+
+[[groups]]
+title = "Compression and hardware-aware design"
+
+[[groups.items]]
+id = "a-white-paper-on-neural-network"
+title = "A White Paper on Neural Network Quantization"
+authors = "Markus Nagel, Marios Fournarakis, Rana Ali Amjad, Yelysei Bondarenko, Mart van Baalen, Tijmen Blankevoort"
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2106.08295"
+link_text = "Link"
+description = "The practitioner's guide, with tested pipelines for both routes: post-training quantization (no retraining or labels; 8-bit typically lands near float accuracy) and quantization-aware training (fine-tuning with labels, which reaches lower bit widths). Read it after Jacob et al. in Section 08."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-survey-of-quantization-methods-for"
+title = "A Survey of Quantization Methods for Efficient Neural Network Inference"
+authors = "Amir Gholami, Sehoon Kim, Zhen Dong, Zhewei Yao, Michael W. Mahoney, Kurt Keutzer"
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2103.13630"
+link_text = "Link"
+description = "A broad survey that organizes the quantization literature and weighs the tradeoffs between approaches. Use it as the reference map when a paper or tool names a method you don't recognize."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "hello-edge-keyword-spotting-on"
+title = "Hello Edge: Keyword Spotting on Microcontrollers"
+authors = "Yundong Zhang, Naveen Suda, Liangzhen Lai, Vikas Chandra"
+year = "2017"
+type = "paper"
+url = "https://arxiv.org/abs/1711.07128"
+link_text = "Link"
+description = "Trains published keyword-spotting architectures under microcontroller memory and compute limits and compares their accuracy against their memory and compute needs. A depthwise-separable CNN (DS-CNN) wins with 95.4% accuracy, about 10% higher than a fully connected network with a similar parameter count. The template for this section's mini-project."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mcunet-tiny-deep-learning-on-iot-devices"
+title = "MCUNet: Tiny Deep Learning on IoT Devices"
+authors = "Ji Lin, Wei-Ming Chen, Yujun Lin, John Cohn, Chuang Gan, Song Han"
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2007.10319"
+link_text = "Link"
+description = "Designs the network (TinyNAS) and the inference engine (TinyEngine) together under an MCU's SRAM and flash limits. It reaches more than 70% ImageNet top-1 on an off-the-shelf microcontroller with 3.5× less SRAM and 5.7× less flash than quantized MobileNetV2 and ResNet-18. Read it for why peak activation memory, not parameter count, is the constraint to design around."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "emlearn"
+title = "emlearn"
+authors = "Jon Nordby et al."
+type = "tool"
+url = "https://github.com/emlearn/emlearn"
+link_text = "Link"
+description = "Converts scikit-learn models (decision trees, random forests, extra trees, Gaussian naive Bayes, MLPs) and Keras fully connected networks into portable C99 with no dynamic allocation, and includes IIR filters and an FFT for feature extraction. The shortest path from a Section 02 random forest to firmware."
+verified = 2026-10-13
+
+[[groups]]
+title = "Benchmarking, data, and shipping it"
+
+[[groups.items]]
+id = "mlperf-tiny-benchmark"
+title = "MLPerf Tiny Benchmark"
+authors = "Colby Banbury et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2106.07597"
+link_text = "Paper"
+more_links = [{ text = "Code", url = "https://github.com/mlcommons/tiny" }]
+description = "The industry-standard benchmark for tiny ML systems, built by more than 50 organizations. Four tasks (keyword spotting, visual wake words, image classification, anomaly detection) are scored on accuracy, latency and energy, under rules that keep results comparable across hardware and software stacks. Copy its reporting discipline for your own boards; the repository holds the reference models and benchmark code, built on TFLM."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "speech-commands-a-dataset-for-limited"
+title = "Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition"
+authors = "Pete Warden"
+year = "2018"
+type = "paper"
+url = "https://arxiv.org/abs/1804.03209"
+link_text = "Link"
+description = "A dataset of spoken words built for training and evaluating keyword spotters, with a method for producing reproducible, comparable accuracy numbers. The data for the mini-project's keyword-spotting track."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "hidden-technical-debt-in-machine"
+title = "Hidden Technical Debt in Machine Learning Systems"
+authors = "D. Sculley et al."
+year = "2015"
+type = "paper"
+url = "https://proceedings.neurips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html"
+link_text = "Link"
+description = "The classic warning that ML systems accrue maintenance costs ordinary software doesn't: boundary erosion, entanglement, hidden feedback loops, undeclared consumers, data dependencies, configuration issues, and changes in the external world. Read it as a checklist for a model that ships inside an instrument and has to keep working as sensors age and conditions drift."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rules-of-machine-learning-best-practices"
+title = "Rules of Machine Learning: Best Practices for ML Engineering"
+authors = "Martin Zinkevich"
+type = "docs"
+label = "Guide"
+url = "https://developers.google.com/machine-learning/guides/rules-of-ml"
+link_text = "Link"
+description = "Forty-three rules for shipping ML in a product, from Google. Start with Rule #1 (\"Don't be afraid to launch a product without machine learning\") and Rule #4 (\"Keep the first model simple and get the infrastructure right\"). For embedded work the training–serving skew rules (#29, #32, #37) matter most: the C feature code on the MCU must compute exactly what your Python features computed."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "designing-machine-learning-systems"
+title = "Designing Machine Learning Systems"
+authors = "Chip Huyen"
+year = "2022"
+type = "book"
+access = "paid"
+level = "intermediate"
+url = "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/"
+link_text = "Link"
+description = "The book-length treatment of ML in production: training data, feature engineering, deployment, data distribution shifts and monitoring, continual learning, and MLOps infrastructure. It is mostly about the cloud side, but its chapter on distribution shifts and monitoring is exactly the problem of a fielded sensor model."
+verified = 2026-10-13

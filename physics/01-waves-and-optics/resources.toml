@@ -1,0 +1,86 @@
+# Resources for: Waves and Optics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-feynman-lectures-on-physics-optics"
+title = "The Feynman Lectures on Physics — Optics and Waves chapters (Vol. 1, Ch. 26–36 and 47–51)"
+type = "book"
+marks = ["core"]
+url = "https://www.feynmanlectures.caltech.edu/"
+link_text = "feynmanlectures.caltech.edu"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "but-what-is-a-fourier-series-3blue1brown"
+title = "But what is a Fourier series? — 3Blue1Brown"
+type = "video"
+marks = ["core"]
+url = "https://www.youtube.com/watch?v=r6sGWTCMz2k"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "but-what-is-the-fourier-transform"
+title = "But what is the Fourier Transform? — 3Blue1Brown"
+type = "video"
+marks = ["core"]
+url = "https://www.youtube.com/watch?v=spUNpyF58BY"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "waves-frank-s-crawford-berkeley-physics"
+title = "Waves — Frank S. Crawford (Berkeley Physics Course, Vol. 3)"
+type = "book"
+
+[[groups.items]]
+id = "optics"
+title = "Optics"
+authors = "Eugene Hecht"
+type = "book"
+
+[[groups.items]]
+id = "mit-8-03sc-vibrations-and-waves-fall"
+title = "MIT 8.03SC Vibrations and Waves (Fall 2016)"
+authors = "Yen-Jie Lee"
+type = "course"
+url = "https://www.youtube.com/playlist?list=PLUl4u3cNGP61R5sPDPKVfcFlu95wSs2Kx"
+link_text = "YouTube"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-physics-of-vibrations-and-waves"
+title = "The Physics of Vibrations and Waves"
+authors = "H.J. Pain"
+type = "book"
+
+[[groups.items]]
+id = "mit-2-71-optics-spring-2009"
+title = "MIT 2.71 Optics (Spring 2009)"
+authors = "George Barbastathis, Colin Sheppard & Se Baek Oh"
+type = "course"
+url = "https://ocw.mit.edu/courses/2-71-optics-spring-2009/"
+link_text = "MIT OCW"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fundamentals-of-photonics-3rd-ed-2019"
+title = "Fundamentals of Photonics (3rd ed., 2019)"
+authors = "Bahaa E. A. Saleh & Malvin Carl Teich"
+year = "2019"
+type = "book"
+url = "https://www.wiley-vch.de/en/areas-interest/natural-sciences/fundamentals-of-photonics-2-volume-set-978-1-119-50687-4"
+link_text = "Wiley"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "optical-engineering-specialization"
+title = "Optical Engineering Specialization (University of Colorado Boulder, Coursera; paid)"
+authors = "Robert McLeod"
+type = "course"
+url = "https://www.coursera.org/specializations/optical-engineering"
+link_text = "Coursera"
+verified = 2026-10-13

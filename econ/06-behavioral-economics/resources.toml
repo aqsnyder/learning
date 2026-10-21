@@ -1,0 +1,116 @@
+# Resources for: Behavioral Economics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "misbehaving-the-making-of-behavioral"
+title = "Misbehaving: The Making of Behavioral Economics"
+authors = "Richard Thaler"
+year = "2015"
+type = "book"
+marks = ["core"]
+description = "The autobiographical account of behavioral economics by one of its founders. Covers mental accounting, endowment effect, fairness, and nudges through engaging stories. Essential."
+
+[[groups.items]]
+id = "nudge-improving-decisions-about-health"
+title = "Nudge: Improving Decisions About Health, Wealth, and Happiness"
+authors = "Richard Thaler & Cass Sunstein"
+year = "2008 (Final Edition 2021)"
+type = "book"
+marks = ["core"]
+url = "https://www.penguinrandomhouse.com/books/304634/nudge-by-richard-h-thaler-and-cass-r-sunstein/"
+link_text = "Link"
+description = "The influential book on choice architecture and libertarian paternalism. Shaped public policy worldwide."
+
+[[groups.items]]
+id = "mental-accounting-matters"
+title = "Mental Accounting Matters"
+authors = "Richard Thaler"
+year = "1999"
+type = "paper"
+url = "https://doi.org/10.1002/(SICI)1099-0771(199909)12:3%3C183::AID-BDM318%3E3.0.CO;2-F"
+link_text = "Link"
+description = "How people mentally categorize and track money, leading to systematic deviations from rational behavior."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "anomalies-series"
+title = "Anomalies Series"
+authors = "Richard Thaler"
+year = "1987–1991"
+type = "paper"
+url = "https://www.aeaweb.org/articles?id=10.1257/jep.1.1.197"
+link_text = "Link"
+description = "Thaler's famous Journal of Economic Perspectives column documenting violations of standard economic theory."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "libertarian-paternalism"
+title = "Libertarian Paternalism"
+authors = "Richard Thaler & Cass Sunstein"
+year = "2003"
+type = "paper"
+url = "https://www.aeaweb.org/articles?id=10.1257/000282803321947001"
+link_text = "Link"
+description = "The intellectual foundation for nudge theory. Argues for preserving freedom of choice while steering toward better outcomes."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "noise-a-flaw-in-human-judgment"
+title = "Noise: A Flaw in Human Judgment"
+authors = "Daniel Kahneman, Olivier Sibony, Cass Sunstein"
+year = "2021"
+type = "book"
+description = "Companion to Thinking, Fast and Slow, focusing on variability (noise) rather than bias in human judgments."
+
+[[groups.items]]
+id = "the-undoing-project"
+title = "The Undoing Project"
+authors = "Michael Lewis"
+year = "2016"
+type = "book"
+description = "Narrative of the Kahneman–Tversky collaboration that created behavioral economics. Reads like a novel."
+
+[[groups.items]]
+id = "behavioral-scientist"
+title = "Behavioral Scientist"
+type = "blog"
+url = "https://behavioralscientist.org/"
+link_text = "Link"
+description = "Leading online magazine for behavioral science research and practical applications."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "psychology-and-economics-evidence-from"
+title = "Psychology and Economics: Evidence from the Field"
+authors = "Stefano DellaVigna"
+year = "2009"
+type = "paper"
+url = "https://www.aeaweb.org/articles?id=10.1257/jel.47.2.315"
+link_text = "Link"
+description = "The standard survey of behavioral economics in the field, organized by nonstandard preferences (self-control, reference dependence, social preferences), beliefs, and decision-making — plus how firms, employers, and markets respond. The rigorous backbone that the popular books lack."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rcts-to-scale-comprehensive-evidence"
+title = "RCTs to Scale: Comprehensive Evidence from Two Nudge Units"
+authors = "Stefano DellaVigna & Elizabeth Linos"
+year = "2022"
+type = "paper"
+url = "https://www.nber.org/papers/w27594"
+link_text = "Link"
+description = "126 RCTs covering 23 million people from two U.S. Nudge Units: average effect 1.4 percentage points (8%) versus 8.7 points (33%) in academic journals, largely due to selective publication. The essential calibration for *Nudge*."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "behavioral-game-theory-experiments-in"
+title = "Behavioral Game Theory: Experiments in Strategic Interaction"
+authors = "Colin Camerer"
+year = "2003"
+type = "book"
+url = "https://press.princeton.edu/books/hardcover/9780691090399/behavioral-game-theory"
+link_text = "Link"
+description = "How real people play games in the lab (ultimatum and trust games, limited strategic reasoning, learning) and the models built to fit them. Bridges Sections 02 and 06, and is directly relevant to modeling humans in multi-agent AI."
+verified = 2026-10-13

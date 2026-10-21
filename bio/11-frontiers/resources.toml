@@ -1,0 +1,232 @@
+# Resources for: Frontiers (2023–2026+)
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+title = "Synthetic Biology"
+outro = '''
+Synthetic biology treats biological systems as programmable — designing genetic circuits with the same logic used for electronic ones. Voigt's Cello compiler automates the design of genetic logic gates, while Smolke's work demonstrated that complete biosynthetic pathways (opioids in yeast) can be engineered from scratch. iGEM remains the global hub where students push the boundaries of what engineered organisms can do.
+'''
+
+[[groups.items]]
+id = "genetic-circuit-design-automation"
+title = "Genetic Circuit Design Automation"
+authors = "Nielsen, Voigt et al."
+year = "2016"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1126/science.aac7341"
+link_text = "Science"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "complete-biosynthesis-of-opioids-in"
+title = "Complete Biosynthesis of Opioids in Yeast"
+authors = "Galanie, Thodey, Trenchard, Interrante & Smolke"
+year = "2015"
+type = "paper"
+url = "https://doi.org/10.1126/science.aac9373"
+link_text = "Science"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "igem-international-genetically"
+title = "iGEM — International Genetically Engineered Machine Competition"
+type = "website"
+label = "Community"
+url = "https://igem.org/"
+link_text = "iGEM"
+verified = 2026-10-13
+
+[[groups]]
+title = "Brain-Computer Interfaces"
+outro = '''
+Brain-computer interfaces are transitioning from laboratory demonstrations to clinical reality. Hochberg's BrainGate trial first showed that a paralyzed human could control a computer cursor with thought alone. Willett et al. achieved a stunning leap in 2023 — decoding attempted speech from neural activity at 62 words per minute, 3.4 times the previous record, with a 9.1% word error rate on a 50-word vocabulary and 23.8% on a 125,000-word one. The paper's own framing is the honest one: that rate *begins to approach* natural conversation, which it puts at 160 words per minute. Neuralink is scaling the hardware side with high-density implantable electrode arrays.
+'''
+
+[[groups.items]]
+id = "a-high-performance-speech"
+title = "A High-Performance Speech Neuroprosthesis"
+authors = "Willett, Kunz, Fan, Avansino et al."
+year = "2023"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1038/s41586-023-06377-x"
+link_text = "Nature"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neuronal-ensemble-control-of-prosthetic"
+title = "Neuronal Ensemble Control of Prosthetic Devices by a Human with Tetraplegia"
+authors = "Hochberg, Serruya, Friehs, Mukand et al."
+year = "2006"
+type = "paper"
+url = "https://doi.org/10.1038/nature04970"
+link_text = "Nature"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neuralink"
+title = "Neuralink — Brain-Computer Interface Technology"
+type = "website"
+label = "Company"
+url = "https://neuralink.com/"
+link_text = "Neuralink"
+verified = 2026-10-13
+
+[[groups]]
+title = "Whole-Cell Modeling"
+outro = '''
+Whole-cell models aim to simulate every molecular process in a living cell simultaneously. Karr et al. built the first complete computational model of *Mycoplasma genitalium*, integrating 28 sub-models spanning DNA replication, metabolism, and cell division. Thornburg et al. simulated JCVI-syn3A — a synthetic minimal cell with a 493-gene genome — in three dimensions, showing that fundamental cellular behaviors emerge from first-principles simulation. Bunne et al. then set out the alternative route: an "AI virtual cell" learned from data rather than assembled from mechanism, and a shared agenda (benchmarks, datasets, open models) for getting there. This is biology's equivalent of a "grand unified theory" — and it's beginning to work.
+'''
+
+[[groups.items]]
+id = "a-whole-cell-computational-model"
+title = "A Whole-Cell Computational Model Predicts Phenotype from Genotype"
+authors = "Karr, Sanghvi, Macklin, Gutschow et al."
+year = "2012"
+type = "paper"
+url = "https://doi.org/10.1016/j.cell.2012.05.044"
+link_text = "Cell"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fundamental-behaviors-emerge-from"
+title = "Fundamental Behaviors Emerge from Simulations of a Living Minimal Cell"
+authors = "Thornburg, Bianchi, Brier, Gilbert et al."
+year = "2022"
+type = "paper"
+url = "https://doi.org/10.1016/j.cell.2021.12.025"
+link_text = "Cell"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "how-to-build-the-virtual-cell-with"
+title = "How to Build the Virtual Cell with Artificial Intelligence: Priorities and Opportunities"
+authors = "Bunne, Roohani, Rosen et al."
+year = "2024"
+type = "paper"
+label = "Perspective"
+url = "https://arxiv.org/abs/2409.11654"
+link_text = "Cell"
+verified = 2026-10-13
+
+[[groups]]
+title = "Longevity and Aging"
+outro = '''
+The biology of aging has been transformed from a descriptive field into a mechanistic one. López-Otín's updated hallmarks framework (2023) provides the canonical taxonomy of aging processes — from genomic instability to altered intercellular communication. Yamanaka's discovery of iPSC reprogramming factors opened the door to cellular rejuvenation. Sinclair's *Lifespan* is included as the field's most influential popular account and as an argument to push against: its central claim — that aging is driven by a loss of epigenetic information, the "information theory of aging" — is Sinclair's own hypothesis, not a settled finding, and several of the book's intervention claims run well ahead of the evidence in the hallmarks review. Practice 4 asks you to find three of those places specifically.
+'''
+
+[[groups.items]]
+id = "hallmarks-of-aging-an-expanding-universe"
+title = "Hallmarks of Aging: An Expanding Universe"
+authors = "López-Otín, Blasco, Partridge, Serrano & Kroemer"
+year = "2023"
+type = "paper"
+url = "https://doi.org/10.1016/j.cell.2022.11.001"
+link_text = "Cell"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "induction-of-pluripotent-stem-cells-from"
+title = "Induction of Pluripotent Stem Cells from Mouse Embryonic and Adult Fibroblast Cultures by Defined Factors"
+authors = "Takahashi & Yamanaka"
+year = "2006"
+type = "paper"
+url = "https://doi.org/10.1016/j.cell.2006.07.024"
+link_text = "Cell"
+
+[[groups.items]]
+id = "lifespan-why-we-age-and-why-we-don-t"
+title = "Lifespan: Why We Age — and Why We Don't Have To"
+authors = "David Sinclair"
+year = "2019"
+type = "book"
+url = "https://lifespanbook.com/"
+link_text = "Atria Books"
+link_note = "*(popular book advocating one contested hypothesis — read against the hallmarks review not instead of it)*"
+verified = 2026-10-13
+
+[[groups]]
+title = "Foundation Models for Biology"
+outro = '''
+Foundation models — large-scale pre-trained models fine-tuned for downstream tasks — are arriving in biology (the dual-use consequences of exactly this capability are the next subsection). Evo is a genomic foundation model trained on 2.7 million prokaryotic and phage genomes that can generate functional DNA sequences and predict fitness effects across scales from single nucleotides to entire genomes. Its successor Evo 2 (7B and 40B parameters, ~9 trillion bases spanning all domains of life, released openly) predicts the functional effects of genetic variation and generates genome-scale sequence. Geneformer learns gene network biology from 30 million single-cell transcriptomes, enabling predictions about disease mechanisms. scGPT applies generative pre-training to single-cell multi-omics. Together, these models represent a paradigm shift: learning biology's language directly from data.
+'''
+
+[[groups.items]]
+id = "sequence-modeling-and-design-from"
+title = "Sequence Modeling and Design from Molecular to Genome Scale with Evo"
+authors = "Nguyen, Poli, Durrant, Kang et al."
+year = "2024"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1126/science.ado9336"
+link_text = "Science"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "transfer-learning-enables-predictions-in"
+title = "Transfer Learning Enables Predictions in Network Biology"
+authors = "Theodoris, Xiao, Chopra, Chaffin et al."
+year = "2023"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-023-06139-9"
+link_text = "Nature"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scgpt-toward-building-a-foundation-model"
+title = "scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics"
+authors = "Cui, Wang, Maan et al."
+year = "2024"
+type = "paper"
+url = "https://doi.org/10.1038/s41592-024-02201-0"
+link_text = "Nature Methods"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "genome-modelling-and-design-across-all"
+title = "Genome Modelling and Design Across All Domains of Life with Evo 2"
+authors = "Brixi, Durrant, Ku, Naghipourfar, Poli et al."
+year = "2026"
+type = "paper"
+url = "https://doi.org/10.1038/s41586-026-10176-5"
+link_text = "Nature"
+verified = 2026-10-13
+
+[[groups]]
+title = "Biosecurity and Dual Use"
+outro = '''
+Every other subsection here is about new capability. This one is about the fact that capability is symmetric. The National Academies report is the baseline framework: it rates synthetic-biology capabilities by level of concern and asks what a defence posture should attend to first — useful precisely because it predates the current generation of models and so reads as an assessment method rather than a reaction. Sandbrink then draws the distinction that most of the debate blurs, between large language models, which mainly lower the *skill* barrier by making dual-use knowledge and protocols easier to obtain, and biological design tools, which raise the capability *ceiling* for people who already have the skills; the two call for different mitigations. Wittmann et al. is the concrete one, and the most interesting for an engineer: nucleic-acid synthesis screening is the real control point between a sequence on a screen and a molecule in a vial, so they tested that pipeline against variants generated by open protein-design models, found the gaps, and patched the screening software — an adversarial evaluation of a biosecurity control, with a fix and a coordinated disclosure.
+
+Read these with Urbina et al. (2022), listed in [Section 10](../10-ai-for-biology/README.md), which is where the Suggested Order there puts it: before you build in this space, not after. The practical reasons for an instrument or tool engineer: screening sits in software you might one day write or integrate; "open weights" decisions are made by people who can be persuaded either way; and the gap between a design that passes *in-silico* filters and a design that works at the bench — [Section 07](../07-protein-engineering-and-design/README.md)'s whole subject — is also the gap that governs how much any of this currently matters. Treat the risk estimates here as contested: Sandbrink's own framing is about differentiating risks rather than asserting one number, and the evidence base is thin enough that confident claims in either direction should be distrusted.
+'''
+
+[[groups.items]]
+id = "biodefense-in-the-age-of-synthetic"
+title = "Biodefense in the Age of Synthetic Biology"
+type = "report"
+url = "https://doi.org/10.17226/24890"
+link_text = "National Academies of Sciences, Engineering, and Medicine (2018)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "artificial-intelligence-and-biological"
+title = "Artificial Intelligence and Biological Misuse: Differentiating Risks of Language Models and Biological Design Tools"
+authors = "Jonas B. Sandbrink"
+year = "2023"
+type = "paper"
+label = "Preprint"
+url = "https://arxiv.org/abs/2306.13952"
+link_text = "arXiv"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "strengthening-nucleic-acid-biosecurity"
+title = "Strengthening Nucleic Acid Biosecurity Screening against Generative Protein Design Tools"
+authors = "Wittmann, Alexanian, Bartling, Beal et al."
+year = "2025"
+type = "paper"
+url = "https://doi.org/10.1126/science.adu8578"
+link_text = "Science"
+verified = 2026-10-13

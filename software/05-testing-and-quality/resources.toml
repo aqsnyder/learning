@@ -1,0 +1,143 @@
+# Resources for: Testing and Quality Assurance
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "python-testing-with-pytest-2nd-ed"
+title = "Python Testing with pytest (2nd ed)"
+authors = "Brian Okken"
+year = "2022"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "THE Python testing reference. Covers fixtures, parametrize, plugins, and real-world testing patterns."
+
+[[groups.items]]
+id = "testing-pyramid"
+title = "Testing pyramid"
+type = "concept"
+description = "Unit, integration, end-to-end — know the right ratio and why most projects get it wrong."
+
+[[groups.items]]
+id = "test-driven-development-by-example"
+title = "Test Driven Development: By Example"
+authors = "Kent Beck"
+year = "2002"
+type = "book"
+description = "TDD philosophy and practice. The red-green-refactor cycle and thinking through tests first."
+
+[[groups.items]]
+id = "working-effectively-with-legacy-code"
+title = "Working Effectively with Legacy Code"
+authors = "Michael Feathers"
+year = "2004"
+type = "book"
+description = "Adding tests to untested code — a skill that's increasingly relevant when reviewing and integrating AI-generated output."
+
+[[groups.items]]
+id = "review-ai-generated-tests"
+title = "Review AI-generated tests"
+type = "practice"
+marks = ["ai"]
+description = "Critical skill: Do they test behavior or implementation? Do they cover edge cases? Are assertions meaningful? Or are they just making the coverage number go up?"
+
+[[groups.items]]
+id = "pytest"
+title = "pytest"
+type = "tool"
+url = "https://docs.pytest.org/"
+link_text = "Link"
+description = "Python testing framework — the standard for Python projects."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pytest-cov"
+title = "pytest-cov"
+type = "tool"
+description = "Code coverage analysis for pytest. Useful, but remember: coverage ≠ correctness."
+
+[[groups.items]]
+id = "unity-test-framework"
+title = "Unity Test Framework"
+authors = "ThrowTheSwitch"
+type = "tool"
+url = "http://www.throwtheswitch.org/unity"
+link_text = "Link"
+description = "Unit testing for embedded C. Lightweight, no stdlib dependency, works on bare-metal targets."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ceedling"
+title = "Ceedling"
+authors = "ThrowTheSwitch"
+type = "tool"
+url = "http://www.throwtheswitch.org/ceedling"
+link_text = "Link"
+description = "Build and test system for C projects. Wraps Unity + CMock into a Ruby-based test runner."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cmock"
+title = "CMock"
+authors = "ThrowTheSwitch"
+type = "tool"
+url = "http://www.throwtheswitch.org/cmock"
+link_text = "Link"
+description = "Mocking framework for C. Auto-generates mock functions from headers."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "property-based-testing-with-hypothesis"
+title = "Property-based testing with Hypothesis"
+type = "concept"
+url = "https://hypothesis.readthedocs.io/"
+link_text = "Link"
+description = "Let the computer find edge cases. Generates random inputs to break your assumptions — catches bugs humans never think of."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mutation-testing"
+title = "Mutation testing"
+type = "concept"
+description = "Verify your tests actually catch bugs by injecting small code changes and checking if tests fail. The ultimate test-quality metric."
+
+[[groups.items]]
+id = "static-analysis-mypy-pylint-cppcheck"
+title = "Static analysis (mypy, pylint, cppcheck, clang-tidy)"
+type = "concept"
+description = "Automated quality gates that catch type errors, style violations, and potential bugs before runtime."
+
+[[groups.items]]
+id = "ci-cd-pipelines"
+title = "CI/CD pipelines"
+type = "concept"
+description = "Automated testing on every commit. Tests only matter if they run automatically and block broken code."
+
+[[groups.items]]
+id = "test-driven-development-for-embedded-c"
+title = "Test-Driven Development for Embedded C"
+authors = "James W. Grenning"
+year = "2011"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://pragprog.com/titles/jgade/test-driven-development-for-embedded-c/"
+link_text = "Link"
+description = "The embedded TDD book, with Unity and CppUTest: test doubles, spies, and mocks for hardware-facing code, testing \"right next to the hardware,\" and adding tests to legacy C. Read it before or while setting up Unity/CMock."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "unit-testing-principles-practices-and"
+title = "Unit Testing Principles, Practices, and Patterns"
+authors = "Vladimir Khorikov"
+year = "2020"
+type = "book"
+marks = ["core"]
+url = "https://www.manning.com/books/unit-testing"
+link_text = "Link"
+description = "Universal guidelines for judging whether a test is worth keeping, spotting test anti-patterns, and when mocks help or hurt (the classical vs. London schools). The best rubric for the \"review AI-generated tests\" practice above."
+verified = 2026-10-13

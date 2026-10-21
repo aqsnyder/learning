@@ -1,0 +1,141 @@
+# Resources for: Existential Risk and Alignment
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "superintelligence-paths-dangers"
+title = "Superintelligence: Paths, Dangers, Strategies"
+authors = "Nick Bostrom"
+year = "2014"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "The book that put AI existential risk on the map. Analyzes paths to superintelligence, the control problem, and strategic considerations. Dense but essential."
+
+[[groups.items]]
+id = "human-compatible-artificial-intelligence"
+title = "Human Compatible: Artificial Intelligence and the Problem of Control"
+authors = "Stuart Russell"
+year = "2019"
+type = "book"
+marks = ["core"]
+description = "Russell argues that the standard model of AI (optimize a fixed objective) is fundamentally flawed. Proposes a new framework based on uncertainty about human preferences. More practical and accessible than Bostrom."
+
+[[groups.items]]
+id = "the-precipice-existential-risk-and-the"
+title = "The Precipice: Existential Risk and the Future of Humanity"
+authors = "Toby Ord"
+year = "2020"
+type = "book"
+description = "Broad treatment of existential risks, with a major focus on unaligned AI. Places AI risk in the context of humanity's long-term trajectory."
+
+[[groups.items]]
+id = "intelligence-explosion-microeconomics"
+title = "Intelligence Explosion Microeconomics"
+authors = "Eliezer Yudkowsky"
+year = "2013"
+type = "paper"
+url = "https://intelligence.org/files/IEM.pdf"
+link_text = "Link"
+description = "Technical analysis of how recursive self-improvement could lead to an intelligence explosion. Core theoretical framework for AI risk thinking."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "what-failure-looks-like"
+title = "What Failure Looks Like"
+authors = "Paul Christiano"
+year = "2019"
+type = "blog"
+url = "https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like"
+link_text = "Link"
+description = "Influential post describing plausible failure modes of advanced AI that don't require dramatic takeover scenarios."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-alignment-problem-from-a-deep"
+title = "The alignment problem from a deep learning perspective"
+authors = "Richard Ngo, Lawrence Chan, Sören Mindermann"
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2209.00626"
+link_text = "Link"
+description = "Analyzes alignment risk specifically in the context of deep learning systems. Bridges theoretical AI safety and practical ML research."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "concrete-problems-in-ai-safety"
+title = "Concrete Problems in AI Safety"
+authors = "Amodei et al."
+year = "2016"
+type = "paper"
+url = "https://arxiv.org/abs/1606.06565"
+link_text = "Link"
+description = "Identifies five practical research problems in AI safety: avoiding negative side effects, scalable oversight, safe exploration, robustness to distributional shift, and reward hacking."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bluedot-impact-ai-safety-courses"
+title = "BlueDot Impact AI safety courses (formerly \"AI Safety Fundamentals\")"
+authors = "BlueDot Impact"
+type = "course"
+url = "https://bluedot.org/"
+link_text = "Course"
+description = "Structured courses covering the core arguments and open problems in AI alignment and governance; the short introductory course is free and self-paced. The old aisafetyfundamentals.com address now redirects here. Good entry point."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "80-000-hours-ai-risk-profile"
+title = "80,000 Hours — AI Risk Profile"
+authors = "80,000 Hours"
+type = "blog"
+url = "https://80000hours.org/problem-profiles/artificial-intelligence/"
+link_text = "Link"
+description = "Comprehensive overview of why AI risk matters and what career paths address it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "is-power-seeking-ai-an-existential-risk"
+title = "Is Power-Seeking AI an Existential Risk?"
+authors = "Joseph Carlsmith"
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2206.13353"
+link_text = "Link"
+description = "The most carefully argued philosophical version of the AI-risk case: six explicit premises, each given a probability, yielding roughly a 5% chance of existential catastrophe by 2070 (later revised by the author to over 10%). Lets you pinpoint exactly which premise you reject."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "artificial-intelligence-values-and"
+title = "Artificial Intelligence, Values, and Alignment"
+authors = "Iason Gabriel"
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2001.09768"
+link_text = "Link"
+description = "Asks \"aligned to what?\": distinguishes aligning AI with instructions, intentions, preferences, interests, and values, and argues the real task is finding fair principles that people with different moral views can reflectively endorse. The bridge between Sections 06 and 07."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ai-as-normal-technology"
+title = "AI as Normal Technology"
+authors = "Arvind Narayanan, Sayash Kapoor"
+year = "2025"
+type = "paper"
+url = "https://knightcolumbia.org/content/ai-as-normal-technology"
+link_text = "Link"
+description = "The most developed skeptical alternative to the superintelligence frame: AI as a transformative but controllable technology, like electricity or the internet, whose effects unfold over decades through institutions. Read it against Bostrom and Carlsmith."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "international-ai-safety-report-2026"
+title = "International AI Safety Report 2026"
+authors = "Yoshua Bengio (lead) et al."
+year = "2026"
+type = "report"
+url = "https://internationalaisafetyreport.org/"
+link_text = "Link"
+description = "Second edition (February 2026) of the government-backed scientific assessment of general-purpose AI capabilities, risks, and safeguards, led by Yoshua Bengio; the first edition (2025) is [arXiv:2501.17805](https://arxiv.org/abs/2501.17805). The best single source for where the evidence actually stands."
+verified = 2026-10-13

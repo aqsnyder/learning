@@ -1,0 +1,87 @@
+# Books and courses that have no home in a section.
+# Edit this file, then run `python tools/build.py`. Field reference: tools/README.md
+
+[[groups]]
+title = "Books"
+
+[[groups.items]]
+id = "probabilistic-machine-learning-an"
+title = "Probabilistic Machine Learning: An Introduction"
+authors = "Kevin Murphy"
+year = "2022"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://probml.github.io/pml-book/book1.html"
+link_text = "PML Book 1"
+
+[[groups.items]]
+id = "probabilistic-machine-learning-advanced"
+title = "Probabilistic Machine Learning: Advanced Topics"
+authors = "Kevin Murphy"
+year = "2023"
+type = "book"
+access = "free"
+level = "advanced"
+url = "https://probml.github.io/pml-book/book2.html"
+link_text = "PML Book 2"
+
+[[groups.items]]
+id = "hands-on-machine-learning-with-scikit"
+title = "Hands-On Machine Learning with Scikit-Learn and PyTorch"
+authors = "Aurélien Géron"
+year = "2025"
+type = "book"
+access = "paid"
+level = "beginner"
+url = "https://www.oreilly.com/library/view/hands-on-machine-learning/9798341607972/"
+link_text = "O'Reilly"
+description = "New PyTorch edition (Oct 2025); earlier editions use Keras/TensorFlow"
+
+[[groups.items]]
+id = "dive-into-deep-learning"
+title = "Dive into Deep Learning"
+authors = "Zhang, Lipton, Li, Smola"
+year = "2023"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://d2l.ai/"
+link_text = "d2l.ai"
+description = "Every chapter is runnable code (PyTorch, JAX, TensorFlow, MXNet)"
+
+[[groups.items]]
+id = "speech-and-language-processing"
+title = "Speech and Language Processing (3rd ed. draft)"
+authors = "Jurafsky, Martin"
+year = "2026 (draft)"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://web.stanford.edu/~jurafsky/slp3/"
+link_text = "web.stanford.edu/~jurafsky/slp3"
+description = "The standard NLP text, continuously updated for LLMs; Sections 06/09"
+
+[[groups.items]]
+id = "build-a-large-language-model"
+title = "Build a Large Language Model (From Scratch)"
+authors = "Sebastian Raschka"
+year = "2024"
+type = "book"
+access = "paid"
+level = "intermediate"
+url = "https://www.manning.com/books/build-a-large-language-model-from-scratch"
+link_text = "Manning"
+description = "Code a GPT-style model, pretraining, and fine-tuning in PyTorch; Section 09"
+
+[[groups.items]]
+id = "ai-engineering"
+title = "AI Engineering"
+authors = "Chip Huyen"
+year = "2024"
+type = "book"
+access = "paid"
+level = "intermediate"
+url = "https://www.oreilly.com/library/view/ai-engineering/9781098166298/"
+link_text = "O'Reilly"
+description = "Building applications on foundation models: evaluation, prompt engineering, RAG and agents, finetuning, dataset engineering, inference optimization; Sections 09/11"

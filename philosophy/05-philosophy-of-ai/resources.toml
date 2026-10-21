@@ -1,0 +1,135 @@
+# Resources for: Philosophy of AI
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **See also:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md), for the methodology behind this section's mini-project: what makes a prediction a real test, severe testing, and whether a benchmark measures the construct it claims to.
+'''
+
+[[groups.items]]
+id = "computing-machinery-and-intelligence"
+title = "Computing Machinery and Intelligence"
+authors = "Alan Turing"
+year = "1950"
+type = "paper"
+marks = ["core"]
+url = "https://academic.oup.com/mind/article/LIX/236/433/986238"
+link_text = "Link"
+description = "The paper that asked \"Can machines think?\" and proposed the imitation game (Turing Test). Still the essential starting point for philosophy of AI. Every argument in this section is in dialogue with Turing."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "minds-brains-and-programs-chinese-room"
+title = "Minds, Brains, and Programs (Chinese Room)"
+authors = "John Searle"
+year = "1980"
+type = "paper"
+url = "https://doi.org/10.1017/S0140525X00005756"
+link_text = "Link"
+description = "Searle's famous argument that syntax is not sufficient for semantics — a computer running a program doesn't understand anything. The most influential objection to strong AI."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-symbol-grounding-problem"
+title = "The Symbol Grounding Problem"
+authors = "Stevan Harnad"
+year = "1990"
+type = "paper"
+url = "https://doi.org/10.1016/0167-2789(90)90087-6"
+link_text = "Link"
+description = "How do symbols in a formal system get their meaning? Harnad argues that symbols must be grounded in sensorimotor experience — a problem AI has yet to fully solve."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "what-computers-still-can-t-do"
+title = "What Computers Still Can't Do"
+authors = "Hubert Dreyfus"
+year = "1992"
+type = "book"
+description = "Updated edition of Dreyfus's critique of AI. Argues that common-sense understanding requires embodied know-how that can't be captured in rules or representations."
+
+[[groups.items]]
+id = "artificial-intelligence"
+title = "Artificial Intelligence"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/artificial-intelligence/"
+link_text = "SEP"
+description = "Comprehensive philosophical survey of AI — strong vs. weak AI, the frame problem, and the role of representation."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-turing-test"
+title = "The Turing Test"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/turing-test/"
+link_text = "SEP"
+description = "Detailed analysis of the Turing Test: what it tests, what it doesn't, and why it matters."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "climbing-towards-nlu-on-meaning-form-and"
+title = "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data"
+authors = "Emily Bender, Alexander Koller"
+year = "2020"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.18653/v1/2020.acl-main.463"
+link_text = "Link"
+description = "The \"Octopus Test\" paper. Argues that language models trained on form alone cannot learn meaning. A modern update to the symbol grounding debate."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "on-the-dangers-of-stochastic-parrots"
+title = "On the Dangers of Stochastic Parrots"
+authors = "Bender, Gebru, McMillan-Major, Shmitchell"
+year = "2021"
+type = "paper"
+url = "https://doi.org/10.1145/3442188.3445922"
+link_text = "Link"
+description = "Mainly a risk paper — environmental and financial costs, biases baked into huge undocumented training sets — that also argues LMs stitch together linguistic form without reference to meaning (\"stochastic parrots\"), so fluent output invites people to ascribe understanding and intent that isn't there. Essential context for contemporary AI philosophy (and Section 06)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-debate-over-understanding-in-ai-s"
+title = "The Debate Over Understanding in AI's Large Language Models"
+authors = "Melanie Mitchell, David C. Krakauer"
+year = "2023"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2210.13966"
+link_text = "Link"
+description = "Even-handed *PNAS* survey of both camps in the \"do LLMs understand?\" debate, arguing that we need a new science of intelligence to say what kinds of understanding different systems have. Read right after Bender & Koller for balance."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-intentional-stance"
+title = "The Intentional Stance"
+authors = "Daniel C. Dennett"
+year = "1987"
+type = "book"
+description = "Dennett's view that to have beliefs and desires is to be a system whose behavior is reliably predictable by treating it as a rational agent — the intentional stance — rather than by its physical makeup or its design. The classic philosophical license, and its limits, for saying an LLM agent \"wants\" or \"believes\" something; read it before Shanahan, who urges restraint."
+
+[[groups.items]]
+id = "talking-about-large-language-models"
+title = "Talking About Large Language Models"
+authors = "Murray Shanahan"
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2212.03551"
+link_text = "Link"
+description = "Argues that words like \"knows,\" \"believes,\" and \"thinks\" mislead when applied to LLMs, and urges us to keep restating what these systems actually do. A practical antidote to anthropomorphism that doesn't dismiss the systems."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-philosophical-introduction-to-language"
+title = "A Philosophical Introduction to Language Models — Part I: Continuity With Classic Debates"
+authors = "Raphaël Millière, Cameron Buckner"
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2401.03910"
+link_text = "Link"
+description = "The best philosophical primer on LLMs: how they work and how their successes bear on long-standing debates about neural networks, compositionality, language acquisition, meaning, grounding, and cultural knowledge. Ties this section back to Sections 03 and 08."
+verified = 2026-10-13

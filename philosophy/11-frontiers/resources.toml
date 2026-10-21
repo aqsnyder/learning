@@ -1,0 +1,118 @@
+# Resources for: Frontiers
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **See also:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md), for judging IIT 4.0's testability (Practice 4's unfolding argument) and for writing predictions that are genuine tests (Practice 5).
+'''
+
+[[groups.items]]
+id = "are-you-living-in-a-computer-simulation"
+title = "Are You Living in a Computer Simulation?"
+authors = "Nick Bostrom"
+year = "2003"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1111/1467-9213.00309"
+link_text = "Link"
+description = "The simulation argument: at least one of three propositions must be true — civilizations go extinct before creating simulations, they choose not to, or we are almost certainly in a simulation. Elegant and unsettling."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "reality-virtual-worlds-and-the-problems"
+title = "Reality+: Virtual Worlds and the Problems of Philosophy"
+authors = "David Chalmers"
+year = "2022"
+type = "book"
+description = "Chalmers argues that virtual worlds are genuine realities, not illusions. Extends the simulation argument into a full philosophical framework. If we're in a simulation, things are still real."
+
+[[groups.items]]
+id = "consciousness-in-artificial-intelligence"
+title = "Consciousness in Artificial Intelligence: Insights from the Science of Consciousness"
+authors = "Patrick Butlin et al."
+year = "2023"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2308.08708"
+link_text = "Link"
+description = "Landmark report that derives \"indicator properties\" from leading scientific theories of consciousness (recurrent processing, global workspace, higher-order, predictive processing, attention schema) and assesses current AI systems against them: none is a strong candidate, but there are no obvious technical barriers to building systems that satisfy the indicators. The most rigorous treatment of AI consciousness to date."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "taking-ai-welfare-seriously"
+title = "Taking AI Welfare Seriously"
+authors = "Robert Long, Jeff Sebo, Patrick Butlin, et al. (incl. Jonathan Birch, David Chalmers)"
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2411.00986"
+link_text = "Link"
+description = "Argues there is a realistic possibility that some AI systems will be conscious or robustly agentic in the near future, so AI companies should start now: acknowledge the issue, assess systems for welfare-relevant features, and prepare policies for treating them with appropriate moral concern. The ethical follow-on to Butlin et al."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-edge-of-sentience-risk-and"
+title = "The Edge of Sentience: Risk and Precaution in Humans, Other Animals, and AI"
+authors = "Jonathan Birch"
+year = "2024"
+type = "book"
+url = "https://academic.oup.com/book/57949"
+link_text = "Free"
+description = "A precautionary framework for evidence-based decisions under deep uncertainty about which beings are sentient: patients with severe brain injury, fetuses, lab-grown brain models, other animals, and AI systems. Free to read online (Oxford University Press). The policy companion to Butlin et al. and *Taking AI Welfare Seriously*."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-weirdness-of-the-world"
+title = "The Weirdness of the World"
+authors = "Eric Schwitzgebel"
+year = "2024"
+type = "book"
+description = "Argues that reality is fundamentally strange — whether materialism or dualism is true, something deeply weird must be going on. Embraces philosophical uncertainty."
+
+[[groups.items]]
+id = "being-you-a-new-science-of-consciousness"
+title = "Being You: A New Science of Consciousness"
+authors = "Anil Seth"
+year = "2021"
+type = "book"
+description = "Predictive processing account of consciousness. Relevant to frontiers because it suggests new ways to think about machine consciousness."
+
+[[groups.items]]
+id = "integrated-information-theory-iit-4-0"
+title = "Integrated Information Theory (IIT) 4.0: Formulating the Properties of Phenomenal Existence in Physical Terms"
+authors = "Larissa Albantakis, …, Giulio Tononi"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2212.14787"
+link_text = "Link"
+description = "The latest formulation of IIT — a mathematical theory of consciousness that makes specific predictions about which systems are conscious. Implications for AI consciousness (IIT implies that conventional digital computers are not conscious, whatever software they run). Contested: see the 2023 \"pseudoscience\" letter and the 2025 adversarial test in Section 02."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "could-a-large-language-model-be"
+title = "Could a Large Language Model be Conscious?"
+authors = "David Chalmers"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2303.07103"
+link_text = "Link"
+description = "Chalmers weighs reasons for thinking LLMs are conscious (self-reports, conversational ability, general intelligence) against reasons against (no recurrent processing, global workspace, or unified agency; doubts about embodiment and world-models), concludes current models are unlikely to be conscious, and asks what extended successors would need. Clear, short, and even-handed."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "life-3-0-being-human-in-the-age-of-ai"
+title = "Life 3.0: Being Human in the Age of AI"
+authors = "Max Tegmark"
+year = "2017"
+type = "book"
+description = "Broad exploration of AI's future impact on society, consciousness, and cosmic endowment. Accessible and wide-ranging."
+
+[[groups.items]]
+id = "the-alignment-forum"
+title = "The Alignment Forum"
+authors = "Various"
+type = "blog"
+url = "https://www.alignmentforum.org/"
+link_text = "Link"
+description = "Ongoing research discussions on AI alignment, consciousness, and the future of intelligence."
+verified = 2026-10-13

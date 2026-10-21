@@ -1,0 +1,153 @@
+# Resources for: Protein Engineering and Design
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "de-novo-design-of-protein-structure-and"
+title = "De Novo Design of Protein Structure and Function with RFdiffusion"
+authors = "Watson, J. L., Juergens, D., Bennett, N. R., Trippe, B. L., Yim, J., Eisenach, H. E., ... Baker, D."
+year = "2023"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1038/s41586-023-06415-8"
+link_text = "Nature"
+description = "Landmark paper introducing denoising diffusion for protein design — generates novel protein structures, binders, symmetric assemblies, and enzyme scaffolds with experimental validation"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "nobel-lecture-innovation-by-evolution"
+title = "Nobel Lecture: Innovation by Evolution — Bringing New Chemistry to Life"
+authors = "Arnold, F. H."
+year = "2018"
+type = "lecture"
+marks = ["core"]
+url = "https://www.nobelprize.org/prizes/chemistry/2018/arnold/lecture/"
+link_text = "Nobel Prize"
+description = "Frances Arnold's Nobel lecture on directed evolution — the intellectual foundation for protein engineering, explaining how iterative rounds of mutation and selection create enzymes with novel function"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "evolutionary-scale-prediction-of-atomic"
+title = "Evolutionary-Scale Prediction of Atomic-Level Protein Structure with a Language Model"
+authors = "Lin, Z., Akin, H., Rao, R., Hie, B., Zhu, Z., Lu, W., ... Rives, A."
+year = "2023"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1126/science.ade2574"
+link_text = "Science"
+description = "ESM-2 and ESMFold — shows that a 15-billion parameter protein language model learns enough evolutionary information to predict 3D structure directly from sequence, rivaling AlphaFold2"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "robust-deep-learningbased-protein"
+title = "Robust Deep Learning–Based Protein Sequence Design Using ProteinMPNN"
+authors = "Dauparas, J., Anishchenko, I., Bennett, N., Bai, H., Ragotte, R. J., ... Baker, D."
+year = "2022"
+type = "paper"
+url = "https://doi.org/10.1126/science.add2187"
+link_text = "Science"
+description = "Introduced ProteinMPNN, a message-passing neural network that designs amino acid sequences to fold into a given backbone structure — dramatically outperforms Rosetta sequence design"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-coming-of-age-of-de-novo-protein"
+title = "The Coming of Age of De Novo Protein Design"
+authors = "Huang, P.-S., Boyken, S. E., Baker, D."
+year = "2016"
+type = "paper"
+url = "https://doi.org/10.1038/nature19946"
+link_text = "Nature"
+description = "Comprehensive review of Rosetta-based de novo design — covers the principles, successes, and challenges of computationally designing proteins from first principles"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "large-language-models-generate"
+title = "Large Language Models Generate Functional Protein Sequences Across Diverse Families"
+authors = "Madani, A., Krause, B., Greene, E. R., Subramanian, S., Mohr, B. P., ... Fraser, J. S., Naik, N."
+year = "2023"
+type = "paper"
+url = "https://doi.org/10.1038/s41587-022-01618-2"
+link_text = "Nat. Biotechnol."
+description = "ProGen — demonstrates that a 1.2B-parameter autoregressive language model trained on 280M protein sequences can generate functional artificial enzymes, validated by wet-lab experiments"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "biological-structure-and-function-emerge"
+title = "Biological Structure and Function Emerge from Scaling Unsupervised Learning to 250 Million Protein Sequences"
+authors = "Rives, A., Meier, J., Sercu, T., Goyal, S., Lin, Z., ... Fergus, R."
+year = "2021"
+type = "paper"
+url = "https://doi.org/10.1073/pnas.2016239118"
+link_text = "PNAS"
+description = "The original ESM paper — demonstrated that transformer language models trained on protein sequences learn biologically meaningful representations of structure, function, and evolution"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rosetta-commons-macromolecular-modeling"
+title = "Rosetta Commons — Macromolecular Modeling Suite"
+authors = "Baker Lab & Rosetta Commons"
+year = "2024"
+type = "tool"
+label = "Software"
+url = "https://www.rosettacommons.org/"
+link_text = "Rosetta Commons"
+description = "The foundational software for computational protein design — includes tools for structure prediction, protein-protein docking, enzyme design, and de novo structure generation"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "hallucinating-symmetric-protein"
+title = "Hallucinating Symmetric Protein Assemblies"
+authors = "Wicky, B. I. M., Milles, L. F., Courbet, A., Ragotte, R. J., Dauparas, J., ... Baker, D."
+year = "2022"
+type = "paper"
+url = "https://doi.org/10.1126/science.add1964"
+link_text = "Science"
+description = "Demonstrates \"hallucination\" — using neural networks to generate symmetric protein oligomers by optimizing sequences to have confident predicted structures, bridging prediction and design"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "nobel-lecture-de-novo-protein-design"
+title = "Nobel Lecture: De Novo Protein Design"
+authors = "Baker, D."
+year = "2024"
+type = "lecture"
+url = "https://www.nobelprize.org/prizes/chemistry/2024/baker/lecture/"
+link_text = "Nobel Prize"
+description = "David Baker's Nobel lecture — the arc from Rosetta energy functions to diffusion-based design, told by the person who built the field; half of the 2024 chemistry prize was awarded to him \"for computational protein design\""
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scientific-background-to-the-nobel-prize"
+title = "Scientific Background to the Nobel Prize in Chemistry 2024: Computational Protein Design and Protein Structure Prediction"
+authors = "The Nobel Committee for Chemistry"
+year = "2024"
+type = "report"
+label = "Background"
+url = "https://www.nobelprize.org/prizes/chemistry/2024/advanced-information/"
+link_text = "Nobel Prize"
+description = "The committee's technical companion to the prize — the best free survey of how physics-based design, structure prediction, and generative design connect, and what evidence earned the award"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "simulating-500-million-years-of"
+title = "Simulating 500 Million Years of Evolution with a Language Model (ESM3)"
+authors = "Hayes, T., Rao, R., Akin, H., Sofroniew, N. J., Oktay, D., Lin, Z. et al. (EvolutionaryScale)"
+year = "2025"
+type = "paper"
+url = "https://doi.org/10.1126/science.ads0018"
+link_text = "Science"
+description = "ESM-2's successor reasons jointly over sequence, structure, and function, and was prompted to generate esmGFP — a working fluorescent protein carrying 96 mutations relative to its closest known natural relative"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "baker-lab-protein-design-lectures-and"
+title = "Baker Lab — Protein Design Lectures and Resources"
+authors = "Baker, D. & Baker Lab"
+year = "2024"
+type = "course"
+url = "https://www.bakerlab.org/"
+link_text = "Baker Lab"
+description = "Hub for the world's leading protein design group — links to lectures, software (RFdiffusion, ProteinMPNN, RoseTTAFold), publications, and tutorials for getting started with AI protein design"
+verified = 2026-10-13

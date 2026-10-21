@@ -1,0 +1,152 @@
+# Resources for: Economics of AI
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "automation-and-new-tasks-how-technology"
+title = "Automation and New Tasks: How Technology Displaces and Reinstates Labor"
+authors = "Daron Acemoglu & Pascual Restrepo"
+year = "2019"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1257/jep.33.2.3"
+link_text = "Link"
+description = "*Journal of Economic Perspectives* 33(2), free. The task-based framework: automation displaces labor from tasks (always reducing the labor share in value added) and can reduce labor demand even as it raises productivity; new tasks reinstate labor. The framework behind most of this section."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "artificial-intelligence-the-ambiguous"
+title = "Artificial Intelligence: The Ambiguous Labor Market Impact of Automating Prediction"
+authors = "Ajay Agrawal, Joshua S. Gans & Avi Goldfarb"
+year = "2019"
+type = "paper"
+url = "https://doi.org/10.1257/jep.33.2.31"
+link_text = "Link"
+description = "*JEP* 33(2), same symposium, free. Machine learning as a prediction technology. Prediction is an input to decisions, so automating it can lead to fully automated decisions or can enhance human decision-making, with different consequences for workers. Hence the \"ambiguous\" labor effect."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "gpts-are-gpts-an-early-look-at-the-labor"
+title = "GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models"
+authors = "Tyna Eloundou, Sam Manning, Pamela Mishkin & Daniel Rock"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2303.10130"
+link_text = "Link"
+description = "The standard exposure measure. Rates each occupational task E0 (no exposure), E1 (an LLM alone halves the time) or E2 (software built on an LLM could), and summarizes them as α = E1, β = E1 + ½E2 (main measure), ζ = E1 + E2. With β, about 80% of U.S. workers have at least 10% of their tasks exposed and about 19% have at least half. Exposure is *potential*, not adoption or job loss. Short version: *Science* 384(6702), 2024."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "which-economic-tasks-are-performed-with"
+title = "Which Economic Tasks are Performed with AI? Evidence from Millions of Claude Conversations"
+authors = "Kunal Handa, Alex Tamkin, Miles McCain et al."
+year = "2025"
+type = "paper"
+url = "https://arxiv.org/abs/2503.04761"
+link_text = "Paper"
+more_links = [{ text = "Data", url = "https://huggingface.co/datasets/Anthropic/EconomicIndex" }]
+description = "The first Anthropic Economic Index report, a usage measure. Conversations are mapped to O*NET tasks: software development and writing are nearly half of usage; about 36% of occupations use AI for at least a quarter of their tasks; 57% of usage looks like augmentation and 43% like automation. Later releases are in the open dataset (data CC-BY). It describes one provider's users, not the workforce."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "generative-ai-at-work"
+title = "Generative AI at Work"
+authors = "Erik Brynjolfsson, Danielle Li & Lindsey Raymond"
+year = "2025"
+type = "paper"
+marks = ["core"]
+url = "https://www.nber.org/papers/w31161"
+link_text = "Link"
+description = "*QJE* 140(2), 2025 (NBER WP 2023, free). An AI assistant rolled out to 5,179 customer-support agents raised issues resolved per hour by 14% on average and by 34% for novice and low-skilled agents, with minimal impact on experienced, highly skilled agents. The most-cited field evidence."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "experimental-evidence-on-the"
+title = "Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence"
+authors = "Shakked Noy & Whitney Zhang"
+year = "2023"
+type = "paper"
+url = "https://doi.org/10.1126/science.adh2586"
+link_text = "Link"
+description = "*Science* 381(6654). A randomized experiment with 453 college-educated professionals doing midlevel, occupation-specific writing tasks: access to ChatGPT cut average time by 40% and raised quality by 18%, and inequality between workers decreased."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "navigating-the-jagged-technological"
+title = "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality"
+authors = "Fabrizio Dell'Acqua, Edward McFowland III, Ethan R. Mollick et al."
+year = "2023"
+type = "paper"
+url = "https://doi.org/10.2139/ssrn.4573321"
+link_text = "Link"
+description = "HBS Working Paper 24-013. A field experiment run with Boston Consulting Group (758 knowledge workers). On 18 tasks inside the AI \"frontier\", AI users completed 12.2% more tasks, 25.1% faster, with higher quality. On a task chosen to lie outside it, they were less likely to get the right answer. The source of the \"jagged frontier\" metaphor."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-impact-of-ai-on-developer"
+title = "The Impact of AI on Developer Productivity: Evidence from GitHub Copilot"
+authors = "Sida Peng, Eirini Kalliamvakou, Peter Cihon & Mert Demirer"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2302.06590"
+link_text = "Link"
+description = "A controlled experiment on a single, well-specified programming task: the group with Copilot finished 55.8% faster. The optimistic anchor for developer productivity. Note how narrow the task is."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "measuring-the-impact-of-early-2025-ai-on"
+title = "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity"
+authors = "Joel Becker, Nate Rush, Elizabeth Barnes & David Rein"
+year = "2025"
+type = "paper"
+url = "https://arxiv.org/abs/2507.09089"
+link_text = "Link"
+description = "METR's randomized trial: 16 experienced open-source developers and 246 tasks. Allowing AI tools made tasks take 19% *longer*; the developers had forecast a 24% speed-up and afterwards believed they had been 20% faster. The skeptical anchor, and a lesson that self-reports are not measurements. Also in software/09, with the 2026 follow-up."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "still-waters-rapid-currents-early-labor"
+title = "Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI"
+authors = "Anders Humlum & Emilie Vestergaard"
+year = "2025"
+type = "paper"
+url = "https://www.nber.org/papers/w33777"
+link_text = "Link"
+description = "NBER WP 33777; first circulated in May 2025 as \"Large Language Models, Small Labor Market Effects\" (BFI WP 2025-56). Danish survey data linked to administrative records, with difference-in-differences: precise null effects on earnings and recorded hours, ruling out effects larger than 2% two years after ChatGPT's launch. Adoption was nonetheless widespread, and work is being reorganized around new tasks (AI oversight and integration). The skeptical labor-market anchor."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "canaries-in-the-coal-mine-six-facts"
+title = "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence"
+authors = "Erik Brynjolfsson, Bharat Chandar & Ruyu Chen"
+year = "2025 (rev. 2026)"
+type = "paper"
+url = "https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/"
+link_text = "Link"
+description = "Stanford Digital Economy Lab, ADP payroll data. There is no economy-wide displacement, but 22–25-year-olds in AI-exposed occupations fell behind less-exposed peers (19% below trend in the August 2026 revision). The gap comes through reduced hiring, concentrated where AI substitutes for rather than complements workers. The authors call these descriptive, not causal: the pattern weakens with education controls, and some trends predate generative AI. Read next to Humlum & Vestergaard."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-simple-macroeconomics-of-ai"
+title = "The Simple Macroeconomics of AI"
+authors = "Daron Acemoglu"
+year = "2024"
+type = "paper"
+marks = ["core"]
+url = "https://www.nber.org/papers/w32487"
+link_text = "Link"
+description = "NBER WP 32487, free (published in *Economic Policy* 40(121), 2025). A Hulten-style aggregation of task-level cost savings: TFP rises no more than 0.66% over ten years, and below 0.53% once harder-to-learn tasks are allowed for. Finds no evidence that AI reduces labor-income inequality. The skeptical macro anchor."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scenarios-for-the-transition-to-agi"
+title = "Scenarios for the Transition to AGI"
+authors = "Anton Korinek & Donghyun Suh"
+year = "2024"
+type = "paper"
+url = "https://www.nber.org/papers/w32255"
+link_text = "Link"
+description = "NBER WP 32255. A task-complexity model of the road to AGI. Wages keep rising if automation is slow, collapse if every task of bounded complexity is automated, and can fall even before full automation if automation is fast; scarce, irreproducible factors make the declines worse. The counterweight to Acemoglu: what changes if AI keeps improving."
+verified = 2026-10-13

@@ -1,0 +1,112 @@
+# Resources for: AI Alignment through an Economic Lens
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "categorizing-variants-of-goodhart-s-law"
+title = "Categorizing Variants of Goodhart's Law"
+authors = "David Manheim & Scott Garrabrant"
+year = "2018"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/1803.04585"
+link_text = "Link"
+description = "Taxonomizes four types of Goodhart's Law failure (regressional, causal, extremal, adversarial). Essential for understanding AI alignment through an economics lens."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "open-problems-in-cooperative-ai"
+title = "Open Problems in Cooperative AI"
+authors = "Allan Dafoe, Edward Hughes, Yoram Bachrach et al."
+year = "2020"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2012.08630"
+link_text = "Link"
+description = "Foundational paper on building AI systems that cooperate with humans and each other. Draws on game theory, mechanism design, and social choice."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-off-switch-game"
+title = "The Off-Switch Game"
+authors = "Dylan Hadfield-Menell et al."
+year = "2017"
+type = "paper"
+url = "https://arxiv.org/abs/1611.08219"
+link_text = "Link"
+description = "Game-theoretic analysis of the AI shutdown problem. Shows why corrigibility is hard from an incentive perspective."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "incomplete-contracting-and-ai-alignment"
+title = "Incomplete Contracting and AI Alignment"
+authors = "Dylan Hadfield-Menell & Gillian K. Hadfield"
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1804.04268"
+link_text = "Link"
+description = "*Proceedings of the 2019 AAAI/ACM Conference on AI, Ethics, and Society* (arXiv 2018). Proposes the law-and-economics analysis of incomplete contracting as a framework for alignment. Human contracts work because external structure (culture, law, institutions) supplies the implied terms that fill their gaps; the paper sets out a research agenda for AI that can draw on that structure. The bridge from Section 05's contract theory to alignment."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "concrete-problems-in-ai-safety"
+title = "Concrete Problems in AI Safety"
+authors = "Dario Amodei et al."
+year = "2016"
+type = "paper"
+url = "https://arxiv.org/abs/1606.06565"
+link_text = "Link"
+description = "Taxonomizes practical safety problems including reward hacking — Goodhart's Law applied to reinforcement learning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-alignment-problem"
+title = "The Alignment Problem"
+authors = "Brian Christian"
+year = "2020"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Accessible narrative covering the AI alignment problem. Connects incentive design, value learning, and fairness."
+
+[[groups.items]]
+id = "multi-principal-assistance-games"
+title = "Multi-Principal Assistance Games"
+authors = "Arnaud Fickinger, Simon Zhuang, Dylan Hadfield-Menell & Stuart Russell"
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2007.09540"
+link_text = "Link"
+description = "Extends cooperative AI to settings with multiple human principals who have conflicting preferences. Connects to social choice theory."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bluedot-impact-ai-safety-courses"
+title = "BlueDot Impact AI safety courses (formerly AI Safety Fundamentals)"
+authors = "BlueDot Impact"
+type = "course"
+url = "https://bluedot.org/"
+link_text = "Link"
+description = "Structured curriculum on AI safety including governance, alignment, and the economic dimensions of AI risk. The old aisafetyfundamentals.com address now redirects to BlueDot's homepage."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ai-alignment-forum"
+title = "AI Alignment Forum"
+type = "blog"
+url = "https://www.alignmentforum.org/"
+link_text = "Link"
+description = "Community hub for AI alignment research. Heavy overlap with mechanism design, incentives, and game theory."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "goodhart-s-law"
+title = "Goodhart's Law"
+authors = "LessWrong"
+type = "article"
+url = "https://www.lesswrong.com/tag/goodhart-s-law"
+link_text = "Link"
+description = "Community wiki with extensive discussion, examples, and formalizations of Goodhart's Law."
+verified = 2026-10-13

@@ -1,0 +1,147 @@
+# Resources for: Neural Network Fundamentals
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "neural-networks-zero-to-hero"
+title = "Neural Networks: Zero to Hero"
+authors = "Andrej Karpathy"
+year = "2022"
+type = "video-series"
+marks = ["core"]
+url = "https://youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ"
+link_text = "Link"
+description = "Build neural networks from scratch in Python — from a simple bigram model to a GPT. The single best resource for developing hands-on intuition for how neural networks learn."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neural-networks"
+title = "Neural Networks"
+authors = "3Blue1Brown"
+type = "video-series"
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi"
+link_text = "Link"
+description = "Stunning visual explanations of how neural networks learn, including gradient descent and backpropagation. Perfect complement to Karpathy's code-first approach."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "neural-networks-and-deep-learning"
+title = "Neural Networks and Deep Learning"
+authors = "Michael Nielsen"
+year = "2015"
+type = "book"
+access = "free"
+level = "beginner"
+marks = ["core"]
+url = "http://neuralnetworksanddeeplearning.com/"
+link_text = "Book"
+more_links = [{ text = "Code", url = "https://github.com/mnielsen/neural-networks-and-deep-learning" }]
+description = "A beautifully written, free online book that builds understanding from first principles. Covers backpropagation, regularization, and universal approximation with clear prose and working code."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "colah-s-blog"
+title = "Colah's Blog"
+authors = "Christopher Olah"
+type = "blog"
+url = "https://colah.github.io/"
+link_text = "Link"
+description = "Legendary blog posts with exceptional visualizations. Key posts on backpropagation, LSTMs, attention, and neural network representations. Well worth reading for building intuition."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "keeping-neural-networks-simple-by"
+title = "Keeping Neural Networks Simple by Minimizing the Description Length of the Weights"
+authors = "Geoffrey Hinton, Drew van Camp"
+year = "1993"
+type = "paper"
+marks = ["canon"]
+url = "https://www.cs.toronto.edu/~hinton/absps/colt93.pdf"
+link_text = "Link"
+description = "From the Ilya Sutskever reading list. Connects MDL theory to neural network training — the idea that simpler weight configurations generalize better. Foundational for understanding regularization and compression in deep learning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-tutorial-introduction-to-the-minimum"
+title = "A Tutorial Introduction to the Minimum Description Length Principle"
+authors = "Peter Grünwald"
+year = "2004"
+type = "tutorial"
+marks = ["canon"]
+url = "https://arxiv.org/abs/math/0406077"
+link_text = "Link"
+description = "From the Ilya Sutskever reading list (also listed in Section 01's theory cluster — read it once). Accessible introduction to MDL theory, which provides a principled framework for model selection and understanding generalization."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "understanding-deep-learning"
+title = "Understanding Deep Learning"
+authors = "Simon J. D. Prince"
+year = "2023"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://udlbook.github.io/udlbook/"
+link_text = "Link"
+description = "The best modern deep learning textbook: clear figures, consistent notation, and coverage from shallow networks, losses, initialization, and regularization through CNNs, transformers, GNNs, generative models, and deep RL, with accompanying Python notebooks. Free PDF; use it as the main text for Sections 03–07."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "practical-deep-learning-for-coders"
+title = "Practical Deep Learning for Coders"
+authors = "Jeremy Howard (fast.ai)"
+year = "2022"
+type = "course"
+label = "Online Course"
+url = "https://course.fast.ai/"
+link_text = "Link"
+description = "Free top-down course: you train a working model in lesson one, then peel back the layers (PyTorch, fastai, Hugging Face). The top-down complement to Karpathy's bottom-up build."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "a-recipe-for-training-neural-networks"
+title = "A Recipe for Training Neural Networks"
+authors = "Andrej Karpathy"
+year = "2019"
+type = "blog"
+url = "https://karpathy.github.io/2019/04/25/recipe/"
+link_text = "Link"
+description = "The practitioner's process: become one with the data, build an end-to-end skeleton with dumb baselines, overfit first, then regularize, tune, and squeeze. The best short guide to why training silently fails and how to debug it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "deep-learning-tuning-playbook"
+title = "Deep Learning Tuning Playbook"
+authors = "Varun Godbole, George E. Dahl, Justin Gilmer, Christopher J. Shallue, Zachary Nado"
+year = "2023"
+type = "tutorial"
+url = "https://github.com/google-research/tuning_playbook"
+link_text = "Link"
+description = "Google's systematic process for choosing architecture, optimizer, batch size, and learning-rate schedule, and for running tuning experiments scientifically. The reference companion to Karpathy's recipe."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-6-s191-introduction-to-deep-learning"
+title = "MIT 6.S191: Introduction to Deep Learning"
+authors = "Alexander Amini, Ava Amini"
+type = "video-series"
+url = "https://www.youtube.com/@AAmini"
+link_text = "Link"
+description = "MIT's introductory deep learning course. Fast-paced lectures covering core architectures with TensorFlow labs. Good for a structured academic perspective."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "deep-learning-chapters-68"
+title = "Deep Learning (Chapters 6–8)"
+authors = "Ian Goodfellow, Yoshua Bengio, Aaron Courville"
+year = "2016"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://www.deeplearningbook.org/"
+link_text = "Link"
+description = "The \"bible\" of deep learning. Chapters 6–8 cover feedforward networks, regularization, and optimization — the theoretical backbone of this section. Dense but comprehensive."
+verified = 2026-10-13

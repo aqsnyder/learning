@@ -1,0 +1,35 @@
+# Books and courses that have no home in a section.
+# Edit this file, then run `python tools/build.py`. Field reference: tools/README.md
+
+[[groups]]
+title = "Books"
+
+[[groups.items]]
+id = "practical-pcb-design-from-breadboard-to"
+title = "Practical PCB Design: From Breadboard to Production"
+authors = "Mike D. Smith"
+year = "2026"
+type = "book"
+access = "paid"
+level = "beginner"
+url = "https://nostarch.com/practical-PCB-design"
+link_text = "nostarch.com"
+description = "No Starch Press, October 2026, 272 pp. ([nostarch.com](https://nostarch.com/practical-PCB-design)). Takes a working breadboard circuit to a production board: component selection and tolerances, symbols and footprints, board structure, placement, routing and vias, design rules, design reviews, assembly files, ordering and testing. Examples use Altium CircuitMaker; the methods carry over to KiCad"
+
+[[groups.items]]
+id = "complete-pcb-design-using-orcad"
+title = "Complete PCB Design Using OrCAD"
+authors = "Kraig Mitzner"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Industry-ready DFM/DFT practices"
+
+[[groups.items]]
+id = "kicad-official-documentation"
+title = "KiCad Official Documentation (KiCad 10)"
+authors = "KiCad"
+type = "course"
+url = "https://docs.kicad.org/"
+link_text = "docs.kicad.org"
+description = "Tool reference, including kicad-cli (10.0 is the current version)"

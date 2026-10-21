@@ -1,0 +1,113 @@
+# Resources for: Biochemistry
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "lehninger-principles-of-biochemistry-8th"
+title = "Lehninger Principles of Biochemistry (8th Edition)"
+authors = "David L. Nelson, Michael M. Cox, Aaron A. Hoskins"
+year = "2021"
+type = "book"
+label = "Textbook"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+url = "https://www.macmillanlearning.com/college/us/product/Lehninger-Principles-of-Biochemistry/p/1319228003"
+link_text = "Book"
+description = "The gold-standard biochemistry textbook — clear writing, excellent figures, and comprehensive coverage of metabolism, protein structure, and enzyme kinetics"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-5-07sc-biological-chemistry-i"
+title = "MIT 5.07SC Biological Chemistry I"
+authors = "JoAnne Stubbe, John Essigmann"
+year = "2013"
+type = "course"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/"
+link_text = "MIT OCW"
+description = "MIT's Scholar Course version with complete problem sets, solutions, and lecture notes — rigorous and well-structured"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "biochemistry-10th-edition"
+title = "Biochemistry (10th Edition)"
+authors = "Jeremy M. Berg, Gregory J. Gatto Jr., Justin Hines, John L. Tymoczko, Lubert Stryer"
+year = "2023"
+type = "book"
+label = "Textbook"
+url = "https://www.macmillanlearning.com/college/us/product/Biochemistry/p/1319333621"
+link_text = "Book"
+description = "Stryer's classic — known for clarity on enzyme mechanisms and metabolic regulation with excellent pathway diagrams"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "biochemistry-4th-edition"
+title = "Biochemistry (4th Edition)"
+authors = "Donald Voet, Judith G. Voet"
+year = "2010"
+type = "book"
+label = "Textbook"
+url = "https://www.wiley.com/en-us/Biochemistry%2C+4th+Edition-p-9780470570951"
+link_text = "Book"
+description = "The most detailed and rigorous of the major biochemistry textbooks — best for deep dives into enzyme mechanisms and thermodynamics"
+
+[[groups.items]]
+id = "pdb-101-structural-biology-educational"
+title = "PDB-101: Structural Biology Educational Resources"
+authors = "RCSB PDB"
+year = "2024"
+type = "website"
+label = "Resource"
+url = "https://pdb101.rcsb.org/"
+link_text = "PDB-101"
+description = "Beautifully illustrated guides to protein structure, molecular machines, and drug design from the Protein Data Bank"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "hhmi-biointeractive-enzyme-resources"
+title = "HHMI BioInteractive: Enzyme Resources (Biochemistry & Molecular Biology)"
+authors = "HHMI"
+type = "video"
+label = "Animations"
+url = "https://www.biointeractive.org/search?keyword=enzyme&type_page=1&topics%5B23%5D=23&sort_bef_combine=search_api_relevance_DESC"
+link_text = "BioInteractive"
+description = "BioInteractive's enzyme resources within its Biochemistry & Molecular Biology topic: molecular animations of enzymes at work — ATP synthase, the electron transport chain, glycolysis, pyruvate dehydrogenase — plus a video of Thomas Cech on discovering that RNA can act as an enzyme, and several classroom activities. Good on mechanism; for kinetics, stay with Lehninger and AK Lectures. (The topic-filter URL given here before returned a generic, unfiltered resource listing)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ak-lectures-biochemistry"
+title = "AK Lectures — Biochemistry"
+authors = "AK Lectures"
+year = "2022"
+type = "video-series"
+label = "Videos"
+url = "https://www.youtube.com/c/AKLECTURES"
+link_text = "YouTube"
+description = "Comprehensive YouTube lecture series covering amino acids, enzyme kinetics, metabolism, and protein structure with clear whiteboard explanations"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-7-05-general-biochemistry"
+title = "MIT 7.05 General Biochemistry"
+authors = "Matthew Vander Heiden"
+year = "2020"
+type = "course"
+url = "https://ocw.mit.edu/courses/7-05-general-biochemistry-spring-2020/"
+link_text = "MIT OCW"
+description = "MIT's biochemistry course for biology majors — strong coverage of metabolic pathways and bioenergetics"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-protein-folding-problem-50-years-on"
+title = "The Protein-Folding Problem, 50 Years On"
+authors = "Ken A. Dill, Justin L. MacCallum"
+year = "2012"
+type = "paper"
+label = "Review"
+url = "https://doi.org/10.1126/science.1219021"
+link_text = "Science"
+description = "Accessible overview of the protein folding problem — essential context before studying structural biology and computational approaches"
+verified = 2026-10-13

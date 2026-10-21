@@ -1,0 +1,126 @@
+# Resources for: Reference Projects and Open-Source Hardware
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** IPC-2221A §3.5 test guidance ([Section 09](../09-dfm-and-fabrication/README.md)) for Practice 1; the IPC-2221A §6.4 equations ([Section 08](../08-multi-layer-and-stackup/README.md)) and Saturn PCB Toolkit ([Section 05](../05-power-and-grounding/README.md)) for Practice 2.
+'''
+
+[[groups.items]]
+id = "hackrf-one"
+title = "HackRF One"
+type = "tool"
+label = "Open Source"
+marks = ["core"]
+url = "https://github.com/greatscottgadgets/hackrf"
+link_text = "GitHub"
+description = "Complex RF design, excellent reference for mixed-signal layout"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "commaai-hardware"
+title = "CommaAI hardware"
+type = "tool"
+label = "Open Source"
+url = "https://github.com/commaai"
+link_text = "GitHub"
+description = "Small vehicle-interface boards, not current automotive designs. comma.ai's published board files are older Eagle-format CAN-interface and harness boards (e.g., the pedal interceptor and giraffe). The [panda](https://github.com/commaai/panda) repo (an STM32H7 CAN/CAN FD interface) holds firmware and software only. Useful for studying input protection and CAN interfacing in a vehicle environment"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "adafruit-open-source-boards"
+title = "Adafruit open-source boards"
+type = "tool"
+label = "Open Source"
+url = "https://github.com/adafruit"
+link_text = "GitHub"
+description = "Massive library of beginner-friendly reference designs"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "sparkfun-open-source-boards"
+title = "SparkFun open-source boards"
+type = "tool"
+label = "Open Source"
+url = "https://github.com/sparkfun"
+link_text = "GitHub"
+description = "Well-documented hobby/pro designs"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "arduino-reference-designs"
+title = "Arduino reference designs"
+type = "tool"
+label = "Open Source"
+url = "https://www.arduino.cc/en/Main/Boards"
+link_text = "Link"
+description = "Simple but well-documented"
+
+[[groups.items]]
+id = "raspberry-pi-hardware"
+title = "Raspberry Pi Hardware"
+type = "tool"
+label = "Open Source"
+marks = ["core"]
+url = "https://pip.raspberrypi.com/"
+link_text = "Datasheets"
+description = "Production-quality reference designs"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "olimex-open-source-hardware"
+title = "OLIMEX open-source hardware"
+type = "tool"
+label = "Open Source"
+url = "https://github.com/OLIMEX"
+link_text = "GitHub"
+description = "European OSHW designs"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "antmicro-open-hardware-portal"
+title = "Antmicro Open Hardware Portal"
+type = "tool"
+label = "Open Source"
+marks = ["core"]
+url = "https://openhardware.antmicro.com/"
+link_text = "openhardware.antmicro.com"
+description = "Professional open boards designed in KiCad, including DDR4/DDR5 RDIMM testers, an LPDDR4 test board, Thunderbolt-to-PCIe and 10GbE adapters, and a USB-C PD adapter. Schematics, BOMs, stackup views and 3D models are browsable. The closest thing to studying a high-speed consultancy's production KiCad work"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "thunderscope"
+title = "ThunderScope"
+type = "tool"
+label = "Open Source"
+url = "https://github.com/EEVengers/ThunderScope"
+link_text = "GitHub"
+description = "Open-source 4-channel, 1 GS/s oscilloscope streaming over Thunderbolt/USB4 (MIT licence). The baseboard is in Altium (KiCad can import it), and the FPGA module is in both Altium and KiCad. A rare open look at a real instrument's front end and high-speed data path"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "glasgow-interface-explorer"
+title = "Glasgow Interface Explorer"
+type = "tool"
+label = "Open Source"
+url = "https://github.com/GlasgowEmbedded/glasgow"
+link_text = "GitHub"
+description = "OSHWA-certified, FPGA-based tool for exploring digital interfaces, designed to survive operator error. Study its I/O protection and how a small USB instrument is partitioned"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "j-smu-diy-source-measure-unit"
+title = "J-SMU (DIY source-measure unit)"
+type = "tool"
+label = "Open Source"
+url = "https://github.com/jaromir-sukuba/J-SMU"
+link_text = "GitHub"
+description = "A complete hobbyist SMU by GitHub user jaromir-sukuba (designed 2020–2021), inspired by the Keithley 236: 12 V and 120 V bipolar voltage ranges, six bipolar current ranges from 1 µA to 100 mA full scale, and a claimed 100 µV / 1 pA resolution. KiCad 5.1 sources, schematic PDFs, Gerbers and interactive BOMs are published. A rare open design that shows a whole source-measure instrument, from the output stage and current ranging down to its control electronics. The repo has no licence file, so study it but don't copy it into a product; its 120 V range is hazardous if you build one"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "design-reviews"
+title = "Design reviews"
+type = "concept"
+description = "Watch Robert Feranec's schematic and layout review videos to learn critical thinking"

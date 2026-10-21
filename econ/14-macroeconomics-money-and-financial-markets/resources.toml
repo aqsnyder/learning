@@ -1,0 +1,125 @@
+# Resources for: Macroeconomics, Money and Financial Markets
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "economics-of-money-and-banking"
+title = "Economics of Money and Banking"
+authors = "Perry G. Mehrling (Columbia University)"
+type = "course"
+marks = ["core"]
+url = "https://www.coursera.org/learn/money-banking"
+link_text = "Link"
+description = "Money and banking seen from the payments side, produced with the Institute for New Economic Thinking. Thirteen modules: banking as a clearing system, banking as market making, international money and banking, money in the real world. Free to enroll; certificates cost extra."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "financial-markets-econ-252"
+title = "Financial Markets (ECON 252)"
+authors = "Robert J. Shiller (Yale)"
+year = "2011"
+type = "course"
+marks = ["core"]
+url = "https://oyc.yale.edu/economics/econ-252"
+link_text = "Link"
+description = "Open Yale Courses, recorded spring 2011 (CC BY-NC-SA). Risk and crises, efficient markets, debt and leverage cycles, behavioral finance, banks, futures, options, monetary policy, and exchanges, brokers, dealers and clearinghouses."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "principles-of-macroeconomics"
+title = "Principles of Macroeconomics"
+authors = "Tyler Cowen & Alex Tabarrok (MRU)"
+type = "course"
+url = "https://learn.mru.org/courses/principles-of-macroeconomics"
+link_text = "Link"
+description = "Free short videos: GDP, growth (capital accumulation and the economics of ideas), the financial system, unemployment, inflation and the quantity theory, business cycles, the Fed, and fiscal policy. Its personal-finance unit is outside this section's scope."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "money-creation-in-the-modern-economy"
+title = "Money creation in the modern economy"
+authors = "Michael McLeay, Amar Radia & Ryland Thomas"
+year = "2014"
+type = "article"
+url = "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+link_text = "Link"
+description = "Bank of England *Quarterly Bulletin* 2014 Q1. Commercial banks create most money by making loans; banks do not \"multiply up\" central-bank money; what ultimately limits money creation is monetary policy, through interest rates and asset purchases (QE). Short and canonical."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-fed-explained-what-the-central-bank"
+title = "The Fed Explained: What the Central Bank Does (11th ed.)"
+authors = "Board of Governors of the Federal Reserve System"
+type = "book"
+access = "free"
+url = "https://www.federalreserve.gov/aboutthefed/the-fed-explained.htm"
+link_text = "Link"
+description = "The Federal Reserve's own guide, formerly *Purposes & Functions*: monetary policy, financial stability, supervision and regulation, payment systems. A primary source, so read it as the institution's description of itself."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-laureates-explained-the-central-role"
+title = "The laureates explained the central role of banks in financial crises (Nobel 2022 popular background)"
+authors = "Royal Swedish Academy of Sciences"
+year = "2022"
+type = "article"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2022/popular-information/"
+link_text = "Link"
+description = "Bernanke, Diamond and Dybvig in plain language. Maturity transformation creates liquidity but makes banks vulnerable to self-fulfilling runs; deposit insurance can stop runs but encourages risk-taking, so capital rules are needed too. Bernanke shows that bank failures deepened the Great Depression."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bank-runs-deposit-insurance-and"
+title = "Bank Runs, Deposit Insurance, and Liquidity"
+authors = "Douglas W. Diamond & Philip H. Dybvig"
+year = "1983"
+type = "paper"
+url = "https://doi.org/10.1086/261155"
+link_text = "Link"
+description = "*Journal of Political Economy* 91(3). The bank-run model behind Practice 2."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "trendspotting-in-asset-markets-nobel"
+title = "Trendspotting in asset markets (Nobel 2013 popular background)"
+authors = "Royal Swedish Academy of Sciences"
+year = "2013"
+type = "article"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2013/popular-information/"
+link_text = "Link"
+description = "Fama, Hansen and Shiller. Asset prices are very hard to predict over days or weeks but somewhat predictable over several years. Whether that reflects changing risk or mispricing is still unsettled. Both sides of the efficient-markets debate in one short document."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bid-ask-and-transaction-prices-in-a"
+title = "Bid, ask and transaction prices in a specialist market with heterogeneously informed traders"
+authors = "Lawrence R. Glosten & Paul R. Milgrom"
+year = "1985"
+type = "paper"
+url = "https://doi.org/10.1016/0304-405X(85)90044-3"
+link_text = "Link"
+description = "*Journal of Financial Economics* 14(1). The adverse-selection theory of the bid–ask spread: Section 05 applied to markets."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-high-frequency-trading-arms-race"
+title = "The High-Frequency Trading Arms Race: Frequent Batch Auctions as a Market Design Response"
+authors = "Eric Budish, Peter Cramton & John Shim"
+year = "2015"
+type = "paper"
+url = "https://doi.org/10.1093/qje/qjv027"
+link_text = "Link"
+description = "*Quarterly Journal of Economics* 130(4). Argues that continuous-time trading creates an arms race for speed, and proposes frequent batch auctions as the market-design fix. Section 04's auction theory applied to exchanges."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fred-federal-reserve-economic-data"
+title = "FRED (Federal Reserve Economic Data)"
+authors = "Federal Reserve Bank of St. Louis"
+type = "tool"
+url = "https://fred.stlouisfed.org/"
+link_text = "Link"
+description = "Free macroeconomic and financial time series (about 850,000) with an API. Used here and in Section 10's Taylor-rule exercise."
+verified = 2026-10-13

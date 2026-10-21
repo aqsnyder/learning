@@ -1,0 +1,148 @@
+# Resources for: Monetary Economics and Crypto
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **Also used here:** Eric Budish, *The Economic Limits of Bitcoin and the Blockchain* (2018; published in the *QJE* in 2025 as "Trust at Scale"). Its home is [btc/09](../../btc/09-economics-and-game-theory/README.md), where it is linked and tracked; objective 4 and Practice 3 in this section build on it.
+'''
+
+[[groups.items]]
+id = "the-bitcoin-standard"
+title = "The Bitcoin Standard"
+authors = "Saifedean Ammous"
+year = "2018"
+type = "book"
+access = "paid"
+level = "beginner"
+url = "https://saifedean.com/thebitcoinstandard/"
+link_text = "Link"
+description = "Accessible case for Bitcoin as sound money, grounded in Austrian monetary economics. Covers the history of money, monetary policy failures, and Bitcoin's economic design. An advocacy book from a heterodox school: read it as a thesis to test against the mainstream sources in this section, not as settled economics."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "money-the-unauthorized-biography"
+title = "Money: The Unauthorized Biography"
+authors = "Felix Martin"
+year = "2013"
+type = "book"
+description = "Engaging history of money from Babylonian clay tablets to modern financial systems. Challenges conventional narratives."
+
+[[groups.items]]
+id = "denationalisation-of-money-the-argument"
+title = "Denationalisation of Money: The Argument Refined"
+authors = "F.A. Hayek"
+year = "1976 (2nd ed. 1978)"
+type = "book"
+url = "https://mises.org/library/denationalisation-money-argument-refined"
+link_text = "Link"
+description = "Hayek's prescient argument for competing private currencies. Intellectual precursor to cryptocurrency. The 1976 first edition was subtitled *An Analysis of the Theory and Practice of Concurrent Currencies*; the link is the expanded *Argument Refined* text (Institute of Economic Affairs, 3rd ed., 1990), hosted by the Mises Institute, an advocacy site."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-a-peer-to-peer-electronic-cash"
+title = "Bitcoin: A Peer-to-Peer Electronic Cash System"
+authors = "Satoshi Nakamoto"
+year = "2008"
+type = "paper"
+marks = ["core"]
+url = "https://bitcoin.org/bitcoin.pdf"
+link_text = "Link"
+description = "The Bitcoin whitepaper. 9 pages that launched a trillion-dollar asset class. Essential reading regardless of your views on crypto."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ethereum-whitepaper"
+title = "Ethereum Whitepaper"
+authors = "Vitalik Buterin"
+year = "2014"
+type = "paper"
+url = "https://ethereum.org/en/whitepaper/"
+link_text = "Link"
+description = "Introduced smart contracts and programmable money. Foundation for DeFi and token economics."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "blockchain-and-money"
+title = "Blockchain and Money"
+authors = "Gary Gensler, MIT"
+year = "2018"
+type = "course"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/15-s12-blockchain-and-money-fall-2018/"
+link_text = "Link"
+description = "Full MIT course on blockchain technology, cryptocurrency, and their economic implications. Gensler later chaired the SEC (2021–2025)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "monetary-theory-and-policy"
+title = "Monetary Theory and Policy"
+authors = "Carl Walsh"
+year = "2017"
+type = "book"
+description = "The standard graduate textbook on monetary economics. Rigorous treatment of money demand, central banking, and optimal monetary policy."
+
+[[groups.items]]
+id = "vitalik-buterin-s-blog"
+title = "Vitalik Buterin's Blog"
+authors = "Vitalik Buterin"
+type = "blog"
+url = "https://vitalik.eth.limo/"
+link_text = "Link"
+description = "Deep technical and economic analysis of mechanism design, governance, and crypto economics by Ethereum's creator."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cryptoeconomics"
+title = "Cryptoeconomics"
+authors = "Eric Voskuil"
+type = "book"
+access = "free"
+url = "https://github.com/libbitcoin/libbitcoin-system/wiki/Cryptoeconomics"
+link_text = "Link"
+description = "Rigorous treatment of the economic principles underlying cryptocurrency systems."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-microeconomics-of-cryptocurrencies"
+title = "The Microeconomics of Cryptocurrencies"
+authors = "Hanna Halaburda, Guillaume Haeringer, Joshua S. Gans & Neil Gandal"
+year = "2022"
+type = "paper"
+url = "https://www.nber.org/papers/w27477"
+link_text = "Link"
+description = "*Journal of Economic Literature* 60(3), 2022 (NBER WP 2020, free). A mainstream survey of the economics of cryptocurrencies: the counterweight to read against Ammous."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "transaction-fee-mechanism-design-for-the"
+title = "Transaction Fee Mechanism Design for the Ethereum Blockchain: An Economic Analysis of EIP-1559"
+authors = "Tim Roughgarden"
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2012.00854"
+link_text = "Link"
+description = "Mechanism design (Section 04) applied to a blockchain fee market: an economic analysis of Ethereum's EIP-1559 transaction-fee mechanism."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "anatomy-of-a-run-the-terra-luna-crash"
+title = "Anatomy of a Run: The Terra Luna Crash"
+authors = "Jiageng Liu, Igor Makarov & Antoinette Schoar"
+year = "2023"
+type = "paper"
+url = "https://www.nber.org/papers/w31160"
+link_text = "Link"
+description = "NBER WP 31160 (published in the *Journal of Financial Economics*, 2026). Terra's collapse in May 2022 erased about $50 billion within three days, centered on a run on UST deposits in the Anchor protocol. Large, sophisticated holders ran first and lost less; public blockchain records let investors watch one another, which sped up the run. The empirical counterpart to Practice 5."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "iii-the-next-generation-monetary-and"
+title = "III. The next-generation monetary and financial system (BIS Annual Economic Report 2025)"
+authors = "Bank for International Settlements"
+year = "2025"
+type = "report"
+url = "https://www.bis.org/publ/arpdf/ar2025e3.htm"
+link_text = "Link"
+description = "The central banks' view. Stablecoins fall short of the requirements to be the mainstay of the monetary system: they fail the tests of singleness, elasticity and integrity. The chapter proposes a unified ledger of tokenised central-bank reserves, commercial-bank money and government bonds instead. Read it as one side of the argument, not the last word."
+verified = 2026-10-13

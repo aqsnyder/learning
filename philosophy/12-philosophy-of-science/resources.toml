@@ -1,0 +1,158 @@
+# Resources for: Philosophy of Science and Scientific Reasoning
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **Already in the curriculum (cross-links, not duplicate rows):** Hume's problem of induction — [Section 00](../00-foundations-of-philosophy/README.md). Aaronson, "Why Philosophers Should Care About Computational Complexity", for its sections on induction (including Goodman's grue) and logical omniscience — [Section 03](../03-computation-and-mind/README.md). The IIT "pseudoscience" letter and the Cogitate adversarial test — [Section 02](../02-consciousness/README.md). Legg & Hutter's simplicity-weighted definition of intelligence, and Chollet's ARC — [Section 04](../04-intelligence-and-understanding/README.md). Causal inference — [Math Section 10](../../math/10-causal-inference/README.md). Goodhart's law, which is why a benchmark that becomes a target stops measuring — [Econ Section 11](../../econ/11-ai-alignment-economics-and-frontiers/README.md).
+'''
+
+[[groups.items]]
+id = "theory-and-reality-an-introduction-to"
+title = "Theory and Reality: An Introduction to the Philosophy of Science (2nd ed.)"
+authors = "Peter Godfrey-Smith"
+year = "2021"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+url = "https://press.uchicago.edu/ucp/books/book/chicago/T/bo37447570.html"
+link_text = "Link"
+description = "The textbook spine of this section. Chapters on empiricism, evidence and induction, Popper, Kuhn, theories and frameworks, the sociology of science, scientific realism, explanation, and Bayesianism and new views of evidence; the second edition adds a chapter on truth, simplicity and models. Read it alongside the primary sources below."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "karl-popper"
+title = "Karl Popper"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/popper/"
+link_text = "SEP"
+description = "Stephen Thornton's entry: the problem of demarcation, basic statements, falsifiability and convention, the growth of knowledge, verisimilitude, and a critical evaluation. Read §§3–5 before (or instead of) the book."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-logic-of-scientific-discovery"
+title = "The Logic of Scientific Discovery"
+authors = "Karl Popper"
+year = "1959"
+type = "book"
+description = "Popper's own translation of *Logik der Forschung* (1935); Routledge Classics reprint 2002. Falsifiability as the criterion of demarcation, the asymmetry between verification and falsification, and the problem of the empirical basis. The opening chapters on demarcation and falsifiability are enough."
+
+[[groups.items]]
+id = "the-structure-of-scientific-revolutions"
+title = "The Structure of Scientific Revolutions (50th Anniversary Edition)"
+authors = "Thomas S. Kuhn"
+year = "1962 (4th ed. 2012)"
+type = "book"
+url = "https://press.uchicago.edu/ucp/books/book/chicago/S/bo13179781.html"
+link_text = "Link"
+description = "Normal science as puzzle-solving within a paradigm; anomaly, crisis and revolution; incommensurability. The 50th-anniversary edition opens with an introductory essay by Ian Hacking — read that first. Kuhn's puzzle-solving test is one of the demarcation criteria in the Practice."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "falsification-and-the-methodology-of"
+title = "Falsification and the Methodology of Scientific Research Programmes"
+authors = "Imre Lakatos"
+year = "1970"
+type = "paper"
+url = "https://doi.org/10.1017/CBO9781139171434.009"
+link_text = "Link"
+description = "In Lakatos & Musgrave (eds.), *Criticism and the Growth of Knowledge* (Cambridge UP), pp. 91–196. Lakatos's synthesis of Popper and Kuhn: what gets judged is a research programme — a hard core protected by a belt of auxiliary hypotheses — which is progressive if its changes predict novel facts and degenerating if they only accommodate. The most usable tool here for IIT vs. GNWT or for Wolfram's project."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "science-and-pseudo-science"
+title = "Science and Pseudo-Science"
+authors = "SEP"
+type = "encyclopedia"
+marks = ["core"]
+url = "https://plato.stanford.edu/entries/pseudo-science/"
+link_text = "SEP"
+description = "Sven Ove Hansson's entry on the demarcation problem: the logical positivists, Popper's falsificationism, Kuhn's puzzle-solving criterion, progress-based criteria (Lakatos, Thagard), multicriterial approaches, science denialism, and Hansson's own definition of pseudoscience. The checklist for the demarcation casebook."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bayesian-epistemology"
+title = "Bayesian Epistemology"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/epistemology-bayesian/"
+link_text = "SEP"
+description = "Hanti Lin's entry: the two core norms (probabilism and conditionalization), Dutch book arguments, the problem of the priors, old evidence, and idealization. Its opening tutorial (§1) is the fastest route into the Bayesian framework, with confirmation among its applications (§1.3)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "philosophy-of-statistics"
+title = "Philosophy of Statistics"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/statistics/"
+link_text = "SEP"
+description = "Jan-Willem Romeijn's entry: classical (Fisher, Neyman–Pearson) vs. Bayesian statistics, the problems each faces — optional stopping, the choice of prior — error statistics and severe testing, and model comparison (AIC, Bayesian model evaluation). The map of the \"statistics wars\"."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "statistical-inference-as-severe-testing"
+title = "Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars"
+authors = "Deborah G. Mayo"
+year = "2018"
+type = "book"
+url = "https://doi.org/10.1017/9781107286184"
+link_text = "Link"
+description = "The case for error statistics: data are good evidence for a claim only if the claim has passed a test that would probably have caught it were it false. Excursion 2 (\"Taboos of Induction and Falsification\") revisits Popper and pseudoscience; Excursion 4 audits biasing selection effects. The strongest non-Bayesian voice here — read it against the SEP Bayesian entry."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "why-most-published-research-findings-are"
+title = "Why Most Published Research Findings Are False"
+authors = "John P. A. Ioannidis"
+year = "2005"
+type = "paper"
+url = "https://doi.org/10.1371/journal.pmed.0020124"
+link_text = "Link"
+description = "*PLOS Medicine* essay that models the probability that a \"significant\" finding is true (its PPV) from pre-study odds, power and α, with corollaries on small studies, small effects, flexible designs and analyses, financial interests, and hot fields. A model of conditions, not a measurement — the corollaries say when the title holds."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "estimating-the-reproducibility-of"
+title = "Estimating the reproducibility of psychological science"
+authors = "Open Science Collaboration"
+year = "2015"
+type = "paper"
+url = "https://doi.org/10.1126/science.aac4716"
+link_text = "Link"
+description = "*Science* report on replications of 100 experimental and correlational studies: 97% of the originals had significant results, 36% of the replications did, and replication effects were about half the size of the originals. The defining data point of the replication crisis; how to score a \"successful\" replication is itself debated."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ai-and-the-everything-in-the-whole-wide"
+title = "AI and the Everything in the Whole Wide World Benchmark"
+authors = "Inioluwa Deborah Raji, Emily M. Bender, Amandalynne Paullada, Emily Denton, Alex Hanna"
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2111.15366"
+link_text = "Link"
+description = "Position paper arguing that a few influential benchmarks are treated as stand-ins for general capability, and that presenting them as broad measures of \"general\" ability has construct-validity problems. The philosophy-of-measurement critique of ML leaderboards."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "do-imagenet-classifiers-generalize-to"
+title = "Do ImageNet Classifiers Generalize to ImageNet?"
+authors = "Benjamin Recht, Rebecca Roelofs, Ludwig Schmidt, Vaishaal Shankar"
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1902.10811"
+link_text = "Link"
+description = "A replication in ML: new CIFAR-10 and ImageNet test sets, built by the original procedures, cost models 3–15% and 11–14% accuracy. The authors attribute the drops to distribution shift (\"harder\" images) rather than adaptive overfitting, since gains on the original test sets carried over to the new ones. A template for testing a benchmark claim."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "philosophy-and-the-sciences-introduction"
+title = "Philosophy and the Sciences: Introduction to the Philosophy of Physical Sciences"
+authors = "University of Edinburgh (Michela Massimi et al.)"
+type = "course"
+url = "https://www.coursera.org/learn/philosophy-physical-sciences"
+link_text = "Coursera"
+description = "Companion to the Edinburgh cognitive-sciences course in Section 01: \"What is this thing called science?\" (Massimi and Duncan Pritchard), then the origins of the universe, dark matter and dark energy, and the anthropic principle and multiverse cosmology — philosophy of science applied to live physics. About 12 hours."
+verified = 2026-10-13

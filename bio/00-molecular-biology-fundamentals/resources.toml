@@ -1,0 +1,125 @@
+# Resources for: Molecular Biology Fundamentals
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "molecular-biology-of-the-cell-7th"
+title = "Molecular Biology of the Cell (7th Edition)"
+authors = "Bruce Alberts, Rebecca Heald, Alexander Johnson, David Morgan, Martin Raff, Keith Roberts, Peter Walter"
+year = "2022"
+type = "book"
+label = "Textbook"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+url = "https://wwnorton.com/books/9780393884821"
+link_text = "Book"
+description = "The definitive molecular biology textbook — comprehensive, beautifully illustrated, and the gold standard for the field"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-7-01sc-fundamentals-of-biology"
+title = "MIT 7.01SC Fundamentals of Biology"
+authors = "Eric Lander, Robert Weinberg, Tyler Jacks, Hazel Sive, Graham Walker, Sallie Chisholm, Michelle Mischke"
+year = "2011"
+type = "course"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/7-01sc-fundamentals-of-biology-fall-2011/"
+link_text = "MIT OCW"
+description = "Structured introductory biology in four units — biochemistry, molecular biology, genetics and recombinant DNA — with lecture videos by MIT faculty, problem sets, exams with solution keys and concept quizzes. Stands in for Lander's MITx 7.00x \"The Secret of Life\", which is no longer in edX's catalogue"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-7-012-introductory-biology"
+title = "MIT 7.012 Introductory Biology"
+authors = "Eric Lander, Robert Weinberg"
+year = "2004"
+type = "video-series"
+label = "Lectures"
+url = "https://ocw.mit.edu/courses/7-012-introduction-to-biology-fall-2004/"
+link_text = "MIT OCW"
+description = "Legendary MIT lectures covering molecular biology fundamentals with two world-class scientists"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "molecular-cell-biology-9th-edition"
+title = "Molecular Cell Biology (9th Edition)"
+authors = "Harvey Lodish, Arnold Berk, Chris A. Kaiser, Monty Krieger, Anthony Bretscher, Hidde Ploegh, Kelsey C. Martin, Michael Yaffe, Angelika Amon"
+year = "2021"
+type = "book"
+label = "Textbook"
+url = "https://www.macmillanlearning.com/college/us/product/Molecular-Cell-Biology/p/1319208525"
+link_text = "Book"
+description = "Rigorous alternative to Alberts with strong emphasis on experimental approaches and signaling pathways"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "what-is-life"
+title = "What Is Life?"
+authors = "Erwin Schrödinger"
+year = "1944"
+type = "book"
+access = "paid"
+level = "beginner"
+url = "https://www.cambridge.org/core/books/what-is-life/A7E1DCFB0E4CDD82C7F8AC85B4D19B96"
+link_text = "Book"
+description = "Prescient classic where a physicist anticipated the molecular basis of heredity before DNA's structure was known"
+
+[[groups.items]]
+id = "molecular-animations"
+title = "Molecular Animations"
+authors = "Drew Berry"
+year = "2012"
+type = "video"
+label = "Animations"
+url = "https://www.ted.com/talks/drew_berry_animations_of_unseeable_biology"
+link_text = "TED Talk"
+description = "Stunning, scientifically accurate 3D animations of molecular processes including DNA replication and mitosis"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ibiology-cell-biology-talks"
+title = "iBiology Cell Biology Talks"
+authors = "Various (iBiology)"
+type = "video-series"
+label = "Videos"
+url = "https://www.ibiology.org/research-talks/cell-biology/"
+link_text = "iBiology"
+description = "Free expert-led video lectures on cell biology topics from leading researchers"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "khan-academy-molecular-biology"
+title = "Khan Academy — Molecular Biology"
+authors = "Sal Khan"
+year = "2020"
+type = "course"
+url = "https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation"
+link_text = "Khan Academy"
+description = "Clear, accessible explanations of gene expression, the central dogma, and regulation — great for filling knowledge gaps"
+
+[[groups.items]]
+id = "mit-7-016-introductory-biology"
+title = "MIT 7.016 Introductory Biology"
+authors = "Barbara Imperiali, Adam Martin"
+year = "2018"
+type = "course"
+url = "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/"
+link_text = "MIT OCW"
+description = "More recent MIT introductory biology with updated content on CRISPR, synthetic biology, and modern techniques"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "cell-biology-by-the-numbers"
+title = "Cell Biology by the Numbers"
+authors = "Ron Milo, Rob Phillips"
+year = "2015"
+type = "book"
+access = "free"
+level = "beginner"
+url = "http://book.bionumbers.org/"
+link_text = "Free online"
+description = "Short quantitative vignettes — how big is a cell, how many proteins does it hold, how fast does an enzyme turn over — that give you order-of-magnitude intuition instead of vocabulary; full draft free online"
+verified = 2026-10-13

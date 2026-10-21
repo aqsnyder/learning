@@ -1,0 +1,205 @@
+# Resources for: Generative Models
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "vae"
+title = "VAE"
+authors = "Kingma & Welling"
+year = "2013"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/1312.6114"
+link_text = "arxiv.org/abs/1312.6114"
+description = "Auto-Encoding Variational Bayes, the VAE paper: a reparameterized lower-bound (ELBO) estimator trained with standard SGD. Master the ELBO and the reparameterization trick here."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "gan"
+title = "GAN"
+authors = "Goodfellow et al."
+year = "2014"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/1406.2661"
+link_text = "arxiv.org/abs/1406.2661"
+description = "The original adversarial framework: generator versus discriminator in a minimax game. Work through its proof that the global optimum recovers the data distribution."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "dcgan"
+title = "DCGAN"
+authors = "Radford et al."
+year = "2015"
+type = "paper"
+url = "https://arxiv.org/abs/1511.06434"
+link_text = "arxiv.org/abs/1511.06434"
+description = "Convolutional GANs made stable through a short list of architecture guidelines; their learned features transfer to other tasks. Follow it for Practice 2's DCGAN."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "normalizing-flows"
+title = "Normalizing Flows"
+authors = "Rezende & Mohamed"
+year = "2015"
+type = "paper"
+url = "https://arxiv.org/abs/1505.05770"
+link_text = "arxiv.org/abs/1505.05770"
+description = "Builds flexible variational posteriors by pushing a simple density through invertible maps. Learn the change-of-variables formula and the planar flow used in Practice 3."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ddpm"
+title = "DDPM"
+authors = "Ho, Jain & Abbeel"
+year = "2020"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2006.11239"
+link_text = "arxiv.org/abs/2006.11239"
+description = "High-quality image synthesis with diffusion probabilistic models, via a link to denoising score matching. Derive its closed-form forward process and simplified noise-prediction loss."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "latent-diffusion"
+title = "Latent Diffusion"
+authors = "Rombach et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2112.10752"
+link_text = "arxiv.org/abs/2112.10752"
+description = "Diffusion in a pretrained autoencoder's latent space, conditioned on text or boxes via cross-attention. The basis of Stable Diffusion; see how latents cut compute."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "what-are-diffusion-models"
+title = "What are Diffusion Models?"
+authors = "Lilian Weng"
+type = "blog"
+url = "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/"
+link_text = "lilianweng.github.io"
+description = "Survey post deriving DDPM's math, then guidance, DDIM, distillation and consistency models, latent diffusion, and U-Net/DiT backbones. Practice 4's source for DDIM."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "distill-pub"
+title = "Distill.pub"
+type = "blog"
+url = "https://distill.pub/"
+link_text = "distill.pub"
+description = "Interactive ML explainer journal, on hiatus since July 2021. Here, read \"Deconvolution and Checkerboard Artifacts\" (Practice 2) and \"Open Questions about Generative Adversarial Networks\"."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "flow-matching-for-generative-modeling"
+title = "Flow Matching for Generative Modeling"
+authors = "Lipman et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2210.02747"
+link_text = "arxiv.org/abs/2210.02747"
+description = "Trains continuous normalizing flows simulation-free by regressing vector fields along fixed noise-to-data paths. See why optimal-transport paths train and sample faster than diffusion paths."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "classifier-free-diffusion-guidance"
+title = "Classifier-Free Diffusion Guidance"
+authors = "Ho & Salimans"
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2207.12598"
+link_text = "arxiv.org/abs/2207.12598"
+description = "Guidance without a separate classifier: jointly train conditional and unconditional diffusion models and mix their scores. Learn the knob trading sample quality against diversity."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "consistency-models"
+title = "Consistency Models"
+authors = "Song et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2303.01469"
+link_text = "arxiv.org/abs/2303.01469"
+description = "Maps noise straight to data for one-step generation, with optional multistep refinement; trained by distilling a diffusion model or standalone. The mini-project's stretch goal."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "dalle-2"
+title = "DALL·E 2"
+authors = "Ramesh et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2204.06125"
+link_text = "arxiv.org/abs/2204.06125"
+description = "Two stages: a prior turns a caption into a CLIP image embedding, then a diffusion decoder generates the image. Compare with Imagen's frozen-T5 conditioning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "imagen"
+title = "Imagen"
+authors = "Saharia et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2205.11487"
+link_text = "arxiv.org/abs/2205.11487"
+description = "Text-to-image diffusion conditioned on a frozen T5 text encoder. Key finding: scaling the language model helps more than scaling the image diffusion model."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "variational-lossy-autoencoder"
+title = "Variational Lossy Autoencoder"
+authors = "Chen et al."
+year = "2016"
+type = "paper"
+marks = ["canon"]
+url = "https://arxiv.org/abs/1611.02731"
+link_text = "arxiv.org/abs/1611.02731"
+description = "Combines a VAE with autoregressive decoders and priors to control what the latent code keeps: global structure, not texture. Lossy compression as representation learning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "vq-vae-neural-discrete-representation"
+title = "VQ-VAE: Neural Discrete Representation Learning"
+authors = "van den Oord, Vinyals & Kavukcuoglu"
+year = "2017"
+type = "paper"
+url = "https://arxiv.org/abs/1711.00937"
+link_text = "arxiv.org/abs/1711.00937"
+description = "Encodes data as discrete codes via vector quantization, with a learned autoregressive prior, avoiding posterior collapse. See how images and audio become tokens."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "score-based-generative-modeling-through"
+title = "Score-Based Generative Modeling through Stochastic Differential Equations"
+authors = "Song et al."
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2011.13456"
+link_text = "arxiv.org/abs/2011.13456"
+description = "Continuous-time view: a noising SDE, its score-driven reverse SDE, and an equivalent ODE with exact likelihood. Unifies score-based models and DDPM."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "dit-scalable-diffusion-models-with"
+title = "DiT: Scalable Diffusion Models with Transformers"
+authors = "Peebles & Xie"
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2212.09748"
+link_text = "arxiv.org/abs/2212.09748"
+description = "Swaps the diffusion U-Net for a transformer on latent patches; FID improves with Gflops. The backbone family behind many current image and video generators."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-6-s184-introduction-to-flow-matching"
+title = "MIT 6.S184: Introduction to Flow Matching and Diffusion Models"
+authors = "Holderrieth & Erives"
+year = "2025"
+type = "course"
+url = "https://diffusion.csail.mit.edu/2025/index.html"
+link_text = "diffusion.csail.mit.edu"
+more_links = [{ text = "Notes", url = "https://arxiv.org/abs/2506.02070" }]
+description = "MIT IAP 2025 course: lectures, self-contained notes and three Colab labs building flow matching and diffusion from ODEs/SDEs to image generators. Start diffusion here."
+verified = 2026-10-13

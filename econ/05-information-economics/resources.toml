@@ -1,0 +1,114 @@
+# Resources for: Information Economics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-market-for-lemons-quality"
+title = "The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism"
+authors = "George Akerlof"
+year = "1970"
+type = "paper"
+marks = ["core"]
+url = "https://www.jstor.org/stable/1879431"
+link_text = "Link"
+description = "The foundational paper on adverse selection. Showed how information asymmetry can cause market collapse. Was rejected three times before publication. Nobel Prize winning."
+
+[[groups.items]]
+id = "job-market-signaling"
+title = "Job Market Signaling"
+authors = "Michael Spence"
+year = "1973"
+type = "paper"
+marks = ["core"]
+url = "https://www.jstor.org/stable/1882010"
+link_text = "Link"
+description = "Introduced signaling theory. Education as a costly signal of ability, even if it teaches nothing useful. Nobel Prize winning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "equilibrium-in-competitive-insurance"
+title = "Equilibrium in Competitive Insurance Markets"
+authors = "Michael Rothschild & Joseph Stiglitz"
+year = "1976"
+type = "paper"
+url = "https://www.jstor.org/stable/1885326"
+link_text = "Link"
+description = "The screening model. How insurers use contract menus to separate high-risk from low-risk customers."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "moral-hazard-and-observability"
+title = "Moral Hazard and Observability"
+authors = "Bengt Holmström"
+year = "1979"
+type = "paper"
+url = "https://www.jstor.org/stable/3003320"
+link_text = "Link"
+description = "The informativeness principle: optimal contracts should condition pay on any informative signal of effort. Nobel Prize work."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "contract-theory"
+title = "Contract Theory"
+authors = "Patrick Bolton & Mathias Dewatripont"
+year = "2004"
+type = "book"
+access = "paid"
+level = "advanced"
+url = "https://mitpress.mit.edu/9780262025768/"
+link_text = "Link"
+description = "Comprehensive graduate textbook covering adverse selection, moral hazard, and incomplete contracts. The definitive reference."
+
+[[groups.items]]
+id = "information-rules"
+title = "Information Rules"
+authors = "Carl Shapiro & Hal Varian"
+year = "1998"
+type = "book"
+description = "How information economics applies to technology strategy — network effects, lock-in, versioning, bundling."
+
+[[groups.items]]
+id = "writing-the-the-market-for-lemons-a"
+title = "Writing the \"The Market for 'Lemons'\": A Personal Interpretive Essay"
+authors = "George Akerlof"
+year = "2003"
+type = "article"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2001/akerlof/article/"
+link_text = "Link"
+description = "Akerlof's own account of how \"Lemons\" was rejected by the *AER*, the *Review of Economic Studies*, and the *JPE* (one referee: \"if this paper was correct, economics would be different\") before the *QJE* accepted it. A short lesson in how new ideas meet resistance."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "information-and-the-change-in-the"
+title = "Information and the Change in the Paradigm in Economics (Nobel Lecture)"
+authors = "Joseph Stiglitz"
+year = "2001"
+type = "paper"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2001/stiglitz/lecture/"
+link_text = "Link"
+description = "Stiglitz's own synthesis of the information-economics revolution — screening, efficiency wages, credit rationing — and why markets with imperfect information are generally not efficient. The best single overview of his contributions."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "contract-theory-popular-science"
+title = "Contract Theory (Popular Science Background)"
+authors = "Royal Swedish Academy of Sciences"
+year = "2016"
+type = "article"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2016/popular-information/"
+link_text = "Link"
+description = "Accessible tour of Hart's and Holmström's work: the insurance-vs-incentives trade-off in performance pay, multitasking (pay for what's measurable and effort shifts away from what isn't — Goodhart's Law in contract form), and incomplete contracts and ownership. Read before Bolton & Dewatripont."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bayesian-persuasion"
+title = "Bayesian Persuasion"
+authors = "Emir Kamenica & Matthew Gentzkow"
+year = "2011"
+type = "paper"
+url = "https://www.aeaweb.org/articles?id=10.1257/aer.101.6.2590"
+link_text = "Link"
+description = "Founded \"information design\": when and how a sender who controls what a receiver learns can profit by choosing the information structure, with applications to lawyers, lobbyists, and salespeople. A major post-2010 development, and a natural lens for thinking about persuasion by recommender systems and AI."
+verified = 2026-10-13

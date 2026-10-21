@@ -14,9 +14,9 @@ Every numbered section follows the same anatomy: **Why → Prerequisites → �
 | 2. **Core path** | Start with the *Core path* line at the top of *Suggested Order*: the 🔑 items, at most three, read first. The numbered list under it is the full-depth order. For each exercise you pick, also read the sources named in its closing *(~time · sources)* note. | 🔑 marks the minimum route; long lists are menus, not obligations. |
 | 3. **Practice** | Do at least two 🛠️ exercises. Do the 🏗️ mini-project when the section is on your track. | You learn by producing things: derivations, code, boards, essays. |
 | 4. **Check yourself** | Answer the ✅ questions *from memory*, in writing, before looking anything up. Then correct your answers against the sources. | Retrieval practice beats rereading. |
-| 5. **Write it down** | Write a one-page note in your own words in `notes/<curriculum>/` (template in [notes/README.md](notes/README.md)), plus a handful of flashcards. | If you can't explain it simply, you've found the gap. |
+| 5. **Write it down** | Write a one-page note in your own words in `my/notes/<curriculum>/` ([template](templates/note.md)), plus a handful of flashcards. | If you can't explain it simply, you've found the gap. |
 | 6. **Review** | Re-answer the ✅ questions after ~1 day, ~1 week and ~1 month. | Spaced recall is what makes it stick. |
-| 7. **Track** | Tick resources *and* the three practice lines in the curriculum's `PROGRESS.md`. | Progress means things you've done, not pages you've read. |
+| 7. **Track** | Tick what you did in your private checklist, `my/progress/<curriculum>.md` (run `python tools/progress.py init` once). It has a box for each resource, each exercise, the mini-project, the three Check Yourself passes and your note. `python tools/progress.py log` records your time. | Progress means things you've done, not pages you've read. Logged hours show where a section is harder or longer than its estimate. |
 
 **Practice blocks are menus.** Exercise times are honest estimates. Pick the exercises that serve your goals, and skip the rest without guilt.
 
@@ -135,24 +135,30 @@ Several topics appear in more than one curriculum. Study each one in its **home*
 
 ## Where your own work goes
 
+Everything of yours lives in `my/`, which git ignores, so it never ends up in the shared repo:
+
 ```
-notes/<curriculum>/<NN>-<slug>.md        ← your explanations, Check Yourself answers, flashcards
-projects/<curriculum>/<NN>-<project>/    ← mini-project deliverables (code, notebooks, KiCad, write-ups)
+my/progress/<curriculum>.md              ← your checklists (python tools/progress.py init creates them)
+my/notes/<curriculum>/<NN>-<slug>.md     ← your explanations, Check Yourself answers, flashcards
+my/projects/<curriculum>/<NN>-<project>/ ← exercise and mini-project work (code, notebooks, KiCad, write-ups)
+my/log.csv                               ← study time and difficulty (python tools/progress.py log)
 ```
 
-See [notes/README.md](notes/README.md) and [projects/README.md](projects/README.md) for templates.
+Templates: [note](templates/note.md) · [project](templates/project.md). To back `my/` up, run `python tools/progress.py init --git` and push it to a private remote. After `git pull`, run `python tools/progress.py sync`: new checklist items appear and your ticks are kept.
 
 ---
 
 ## Keeping it healthy
 
+- Each section's resources are data in its `resources.toml`. `python tools/build.py` regenerates the resource tables, the PROGRESS templates, the book and course indexes, each curriculum's learning path and the main page's section index ([tools/README.md](tools/README.md)). Row order and the *When* notes of a learning path are yours to edit in the curriculum README; the tool keeps them.
 - `python tools/check_repo.py` runs offline. It checks:
   - relative links and table shapes
-  - every section's learning blocks and PROGRESS coverage
-  - the tier lists: at most 3 🔑 and a Core path line per section
-  - that the generated learning paths are current
+  - every section's learning blocks
+  - the tier lists: at most 3 🔑, named in a Core path line
+  - the resource data, and that nothing generated is stale
+  - that nothing personal is committed
 
-  Run it after every edit session. `--urls` dumps every external link for a link checker.
-- `python tools/build_index.py` refreshes each curriculum README's learning-path table and the section index on the main page, using the section titles and Core path lines. Row order and the *When* notes are yours to edit in the curriculum README; the tool keeps them.
-- **Adding material:** each curriculum's `update-curriculum` skill (in `ml`, `pcb`, `btc`, `software`), or the root [`audit-curriculum`](.agents/skills/audit-curriculum/SKILL.md) skill for any curriculum. Both require opening every link before it's added. Unverified, AI-generated citations are how errors got into this repo.
+  GitHub runs it on every push and pull request. `--strict` also fails on incomplete resource data, and `--urls` dumps every external link.
+- A monthly GitHub workflow checks every external link and opens an issue if any broke.
+- **Adding material:** see [CONTRIBUTING.md](CONTRIBUTING.md), or have an AI agent use the [`update-curriculum`](.agents/skills/update-curriculum/SKILL.md) skill. Every link is opened before it's added. Unverified, AI-generated citations are how errors got into this repo.
 - **Periodic audit:** run the `audit-curriculum` skill quarterly. Dated reports live in [`reviews/`](reviews/).

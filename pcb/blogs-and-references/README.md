@@ -59,7 +59,7 @@
 
 | Standard | Notes |
 |----------|-------|
-| IPC standards (2221, 7351, 2581) | Industry design and manufacturing standards. IPC-2221 is now at Rev C (2023); the repo's included copy is Rev A (2003) |
+| IPC standards (2221, 7351, 2581) | Industry design and manufacturing standards. IPC-2221 is now at Rev C (2023); this curriculum cites Rev A (2003) section numbers |
 | IPC-2152 (2009) | Current-carrying capacity; replaces the old IPC-2221 conductor-sizing charts |
 | Gerber Layer Format Specification ([Ucamco](https://www.ucamco.com/en/gerber)) | The official Gerber spec (rev. 2024.05); use X2 attributes |
 | IEC 61326-1 (2020) / [IEC 61010-1](https://webstore.iec.ch/en/publication/4279) (2010 + Amd 1, 2016) | EMC and safety standards for measurement, control and laboratory equipment |

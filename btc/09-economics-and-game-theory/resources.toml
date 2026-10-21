@@ -1,0 +1,133 @@
+# Resources for: Economics and Game Theory
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-bitcoin-standard"
+title = "The Bitcoin Standard"
+authors = "Saifedean Ammous"
+year = "2018"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "History of money and Bitcoin's monetary properties — an Austrian-school advocacy book; balance it with the academic treatments in econ/10 and the Princeton textbook (Section 03)"
+
+[[groups.items]]
+id = "the-internet-of-money-vols-1-3"
+title = "The Internet of Money (Vols 1-3)"
+authors = "Andreas Antonopoulos"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Why Bitcoin matters, accessible talks"
+
+[[groups.items]]
+id = "the-fiat-standard"
+title = "The Fiat Standard"
+authors = "Saifedean Ammous"
+year = "2021"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Companion to The Bitcoin Standard, analyzes fiat system"
+
+[[groups.items]]
+id = "stock-to-flow-model"
+title = "Stock-to-Flow model"
+type = "concept"
+description = "PlanB's 2019 price model built on scarcity (21M cap, halvings). Widely publicized but methodologically criticized — it treats supply as the sole driver of price — so study it as a case of narrative vs. evidence, not as a forecast. The supply schedule itself: Section 03 (Block Reward)"
+
+[[groups.items]]
+id = "game-theory-of-mining"
+title = "Game theory of mining"
+type = "concept"
+description = "Nash equilibrium, selfish mining, fee market dynamics"
+
+[[groups.items]]
+id = "network-effects-and-metcalfe-s-law"
+title = "Network effects and Metcalfe's law"
+type = "concept"
+description = "Metcalfe's law posits network value ∝ users²; empirical fits to Bitcoin are contested and depend heavily on how \"users\" are measured"
+
+[[groups.items]]
+id = "gresham-s-law-and-thiers-law"
+title = "Gresham's Law and Thiers' Law"
+type = "concept"
+description = "Bad money drives out good (and vice versa)"
+
+[[groups.items]]
+id = "the-bullish-case-for-bitcoin"
+title = "The Bullish Case for Bitcoin"
+authors = "Vijay Boyapati"
+year = "2018"
+type = "article"
+url = "https://vijayboyapati.medium.com/the-bullish-case-for-bitcoin-6ecc8bdecc1"
+link_text = "Medium"
+description = "Comprehensive economic thesis — explicitly an investment/advocacy case; read it as an argument to test, not as analysis"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "michael-saylor-bitcoin-talks"
+title = "Michael Saylor Bitcoin talks"
+authors = "Michael Saylor"
+type = "video"
+description = "Corporate-treasury and macro advocacy — promotional rather than analytical; useful for understanding the narrative, not for evaluating it"
+
+[[groups.items]]
+id = "the-sovereign-individual"
+title = "The Sovereign Individual"
+authors = "Davidson and Rees-Mogg"
+year = "1997"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Predicted digital currency"
+
+[[groups.items]]
+id = "bitcoin-optech-fee-sniping"
+title = "Bitcoin Optech: Fee sniping"
+authors = "Bitcoin Optech"
+type = "article"
+url = "https://bitcoinops.org/en/topics/fee-sniping/"
+link_text = "bitcoinops.org"
+description = "The long-run \"security budget\" problem in game-theory terms: once fees dominate the shrinking subsidy, re-mining a lucrative previous block can beat honest mining, and defections can cascade toward a reorg-avoiding mining cartel. Covers mitigations (block weight limit, anti-fee-sniping locktimes) and links the 2022 subsidy debate"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "statement-on-the-approval-of-spot"
+title = "Statement on the Approval of Spot Bitcoin Exchange-Traded Products"
+authors = "Gary Gensler (SEC Chair)"
+year = "2024"
+type = "article"
+url = "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023"
+link_text = "sec.gov"
+description = "Primary source for the January 2024 approval of US spot-bitcoin ETPs — a major step toward custodial, exchange-traded ownership of bitcoin. Read for market structure (who holds the coins and through whom), including the SEC chair's own risk caveats; not an endorsement"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-economic-limits-of-bitcoin-and-the"
+title = "The Economic Limits of Bitcoin and the Blockchain (revised as \"Trust at Scale: The Economic Limits of Cryptocurrencies and Blockchains\")"
+authors = "Eric Budish"
+year = "2018; 2022"
+type = "paper"
+marks = ["core"]
+url = "https://www.nber.org/papers/w24717"
+link_text = "NBER WP 24717"
+more_links = [{ text = "*QJE* 140(1)", url = "https://doi.org/10.1093/qje/qjae033" }]
+description = "The security budget as an economic constraint. Two equilibrium conditions — miners compete away their profits, and a majority attack must not pay — together imply that the recurring (\"flow\") payment to miners must be large relative to the one-off (\"stock\") benefit of attacking the chain: security is bought with what miners are paid per block, not with bitcoin's market value. The 2022 revision was published in the *Quarterly Journal of Economics* (online October 2024). The argument is contested — e.g. whether hashrate can be rented at scale, and what a successful attack does to the price and to the attacker's specialized hardware — so list where you would push back. Derive the core inequality in [econ/10's exercise 3](../../econ/10-monetary-economics-and-crypto/README.md)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "on-the-instability-of-bitcoin-without"
+title = "On the Instability of Bitcoin Without the Block Reward"
+authors = "Miles Carlsten, Harry Kalodner, S. Matthew Weinberg, Arvind Narayanan"
+year = "2016"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1145/2976749.2978408"
+link_text = "ACM CCS 2016"
+more_links = [{ text = "PDF", url = "https://www.cs.princeton.edu/~arvindn/publications/mining_CCS.pdf" }]
+description = "What a fee-only future could look like. With no subsidy, a block is worth only the fees waiting in the mempool, so (1) forking a fee-rich block and leaving part of its fees unclaimed to lure other miners onto your branch can pay (\"undercutting\"); (2) miners may idle right after a block, while few fees are waiting (the \"mining gap\"); and (3) selfish mining becomes more attractive, even for miners with little hashrate. Theory plus a mining simulator. Read it after the Optech fee-sniping page; Practice 4 builds a simple version of the undercutting incentive"
+verified = 2026-10-13

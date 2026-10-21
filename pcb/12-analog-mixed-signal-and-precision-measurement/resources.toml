@@ -1,0 +1,98 @@
+# Resources for: Analog, Mixed-Signal and Precision Measurement
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** TI Precision Labs — Op Amps and LTspice ([Section 00](../00-electronics-fundamentals/README.md)); your STM32 family's hardware getting-started note, for VDDA/VREF+ ([Section 02](../02-schematic-capture/README.md)); MT-031 and ⭐ Morrison, *Grounding and Shielding* ([Section 05](../05-power-and-grounding/README.md)); ThunderScope, an open instrument front end to study, and J-SMU, an open DIY source-measure unit with published schematics and KiCad files ([Section 11](../11-reference-projects/README.md)); PyVISA for instrument control in the mini-project ([Software Section 13](../../software/13-hil-testing-and-lab-automation/README.md)).
+'''
+
+[[groups.items]]
+id = "precision-analog-mixed-signal-layout"
+title = "Precision analog & mixed-signal layout"
+type = "concept"
+description = "Guarding and leakage control, Kelvin (force/sense) routing, thermoelectric and passive-component errors, ADC/reference/driver layout, and partitioning without splitting the ground plane. Most PCB books skip this, so it needs its own study."
+
+[[groups.items]]
+id = "op-amp-applications-handbook-2005"
+title = "*Op Amp Applications Handbook* (2005), especially Section 7 \"Hardware and Housekeeping Techniques\""
+authors = "Walt Jung (ed.), Analog Devices"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://www.analog.com/en/resources/technical-books/op-amp-applications-handbook.html"
+link_text = "analog.com"
+description = "Free ADI handbook, downloadable by section. Section 7 covers passive-component errors (dielectric absorption, tempco, thermocouple effects), Kelvin feedback, return currents and ground planes, AGND/DGND, static leakage and guarding, EMI/RFI and thermal. It is the precision-layout chapter general PCB books lack."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "low-level-measurements-handbook-7th-ed"
+title = "*Low Level Measurements Handbook* (7th ed., 2014)"
+authors = "Keithley (Tektronix)"
+year = "2014"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://download.tek.com/document/LowLevelHandbook_7Ed.pdf"
+link_text = "PDF"
+description = "The reference on precision DC current, voltage and resistance measurement: guarding, leakage, noise, 4-wire (Kelvin) methods, and source-measure unit (SMU) architecture. Essential before designing source/measure or electrometer-grade front ends."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "basic-linear-design-2007-linear-circuit"
+title = "*Basic Linear Design* (2007) / *Linear Circuit Design Handbook* (2008)"
+authors = "Hank Zumbahlen (ed.), Analog Devices"
+year = "2008"
+type = "book"
+access = "partial"
+url = "https://www.analog.com/en/resources/technical-books/linear-circuit-design-handbook.html"
+link_text = "analog.com"
+description = "ADI's broad linear-design reference. The free *Basic Linear Design* chapters on this page include Chapter 12, \"Printed Circuit Board (PCB) Design Issues\". Use it as the second reference when the Op Amp Applications Handbook is too terse."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ti-precision-labs-adcs"
+title = "TI Precision Labs — ADCs"
+authors = "Texas Instruments"
+type = "course"
+url = "https://www.ti.com/video/series/precision-labs/ti-precision-labs-analog-to-digital-converters-adcs.html"
+link_text = "ti.com"
+description = "Video curriculum covering SAR vs delta-sigma, ADC drive topologies, AC/DC specifications, ADC noise and error sources, SAR input-driver design, driving the reference input, EOS protection, PCB design for good EMC, and measuring RTDs with precision ADCs."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mixed-signal-hardware-design-with-kicad"
+title = "Mixed-Signal Hardware Design with KiCad (2022)"
+authors = "Philip Salmony (Phil's Lab)"
+year = "2022"
+type = "course"
+url = "https://fedevel.com/courses/mixed-signal-hardware-design-with-kicad"
+link_text = "FEDEVEL"
+description = "Paid course built around one board: op-amp/filter/ADC-DAC front end, USB-C, SWD, switching and analog supplies, LTspice simulation, and a four-layer mixed-signal KiCad 6 layout with controlled impedance and ESD protection."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "signal-chain-error-budgets-and"
+title = "Signal-chain error budgets and calibration"
+type = "concept"
+description = "Budget every term (offset, gain, nonlinearity, drift, noise, leakage, thermal EMF, reference) over temperature and time. Know which terms a two-point calibration removes and which it cannot (drift, INL, hysteresis, self-heating)."
+
+[[groups.items]]
+id = "adc-drive-references-and-mixed-signal"
+title = "ADC drive, references and mixed-signal partitioning"
+type = "concept"
+description = "The driver and its RC filter must settle the sampling capacitor's charge kick within the acquisition time. The reference input draws dynamic current and needs a low-impedance source. Digital return currents must stay out of the analog and reference return paths (MT-031, Section 05)."
+
+[[groups.items]]
+id = "source-measure-force-sense-architecture"
+title = "Source-measure (force/sense) architecture"
+type = "concept"
+description = "A force amplifier with Kelvin sense at the DUT, current measured across range resistors or with a transimpedance stage, compliance limits, and glitch-free range changes. Loop stability depends on the load, so capacitive DUTs and cables matter."
+
+[[groups.items]]
+id = "high-gain-sensor-front-ends-dynamic"
+title = "High-gain sensor front ends: dynamic range and overload recovery"
+type = "concept"
+description = "AC coupling, gain distribution and filter time constants set how long one large event blinds the channel, and dielectric absorption in the coupling capacitors stretches the tail. Design for recovery as deliberately as for noise."

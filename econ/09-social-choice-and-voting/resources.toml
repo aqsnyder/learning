@@ -1,0 +1,116 @@
+# Resources for: Social Choice and Voting
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "social-choice-and-individual-values"
+title = "Social Choice and Individual Values"
+authors = "Kenneth Arrow"
+year = "1951"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["core"]
+url = "https://yalebooks.yale.edu/book/9780300013641/social-choice-and-individual-values/"
+link_text = "Link"
+description = "The foundational text. Arrow's impossibility theorem proved that no voting system satisfies all desirable properties simultaneously. Short, readable, and historically essential."
+
+[[groups.items]]
+id = "collective-choice-and-social-welfare"
+title = "Collective Choice and Social Welfare"
+authors = "Amartya Sen"
+year = "1970/2017"
+type = "book"
+url = "https://www.hup.harvard.edu/catalog.php?isbn=9780674971608"
+link_text = "Link"
+description = "Sen's 1970 classic, reissued with eleven new chapters. Shows that Arrow's impossibility stems from informational poverty: allowing interpersonal comparisons of welfare opens the way to reasoned, democratic social choice. Also home of the \"liberal paradox.\""
+
+[[groups.items]]
+id = "manipulation-of-voting-schemes-a-general"
+title = "Manipulation of Voting Schemes: A General Result"
+authors = "Allan Gibbard"
+year = "1973"
+type = "paper"
+url = "https://www.jstor.org/stable/1914083"
+link_text = "Link"
+description = "The Gibbard–Satterthwaite theorem: any non-dictatorial voting system with 3+ alternatives is manipulable."
+
+[[groups.items]]
+id = "fair-division-and-collective-welfare"
+title = "Fair Division and Collective Welfare"
+authors = "Hervé Moulin"
+year = "2003"
+type = "book"
+description = "Rigorous treatment of fair division problems: cake-cutting, cost sharing, and resource allocation."
+
+[[groups.items]]
+id = "arrow-s-impossibility-theorem"
+title = "Arrow's Impossibility Theorem"
+authors = "PBS Infinite Series"
+type = "video"
+url = "https://www.youtube.com/watch?v=AhVR7gFMKNg"
+link_text = "Link"
+description = "Accessible 15-minute explanation of Arrow's theorem with clear examples."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "voting-methods"
+title = "Voting Methods"
+authors = "Stanford Encyclopedia of Philosophy"
+type = "article"
+url = "https://plato.stanford.edu/entries/voting-methods/"
+link_text = "Link"
+description = "Excellent philosophical overview of voting methods, their properties, and trade-offs."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "gaming-the-vote"
+title = "Gaming the Vote"
+authors = "William Poundstone"
+year = "2008"
+type = "book"
+description = "Popular account of voting paradoxes, spoiler effects, and alternative voting systems. Engaging and accessible."
+
+[[groups.items]]
+id = "judgment-aggregation-a-survey"
+title = "Judgment Aggregation: A Survey"
+authors = "Christian List & Clemens Puppe"
+year = "2009"
+type = "paper"
+description = "Extends social choice from preference aggregation to judgment aggregation — relevant for AI alignment."
+
+[[groups.items]]
+id = "quadratic-voting-how-mechanism-design"
+title = "Quadratic Voting: How Mechanism Design Can Radicalize Democracy"
+authors = "Steven P. Lalley & E. Glen Weyl"
+year = "2018"
+type = "paper"
+url = "https://www.aeaweb.org/articles?id=10.1257/pandp.20181002"
+link_text = "Link"
+description = "Voters buy votes from a budget of \"voice credits\" at quadratic cost, so outcomes reflect how strongly people care, not just which side they're on. Short and readable; the idea behind quadratic voting and funding experiments in crypto communities (Section 10)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "handbook-of-computational-social-choice"
+title = "Handbook of Computational Social Choice"
+authors = "Felix Brandt, Vincent Conitzer, Ulle Endriss, Jérôme Lang & Ariel D. Procaccia (eds.)"
+year = "2016"
+type = "book"
+access = "free"
+url = "https://cgi.cse.unsw.edu.au/~haziz/comsoc.pdf"
+link_text = "Link"
+description = "Free PDF of the standard reference on the computer-science side of social choice: computing winners, complexity of manipulation, fair division, matching, and judgment aggregation. Pairs with Section 08's algorithmic view."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "social-choice-should-guide-ai-alignment"
+title = "Social Choice Should Guide AI Alignment in Dealing with Diverse Human Feedback"
+authors = "Vincent Conitzer, Rachel Freedman, … Stuart Russell, … William S. Zwicker"
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2404.10271"
+link_text = "Link"
+description = "Position paper arguing that aggregating many people's feedback in RLHF-style alignment is a social choice problem, and that the field's axioms and voting rules should shape how it's done. A direct answer to this section's question about aggregating many humans into one AI objective."
+verified = 2026-10-13

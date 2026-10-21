@@ -1,0 +1,108 @@
+# Resources for: Hardware-in-the-Loop Testing and Lab Automation
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "pyvisa"
+title = "PyVISA"
+authors = "PyVISA developers"
+type = "tool"
+label = "Library"
+marks = ["core"]
+url = "https://pyvisa.readthedocs.io/en/latest/"
+link_text = "Link"
+description = "Controls measurement devices \"independently of the interface\" (GPIB, RS-232, USB, Ethernet), either by wrapping a vendor VISA library or through the pure-Python PyVISA-py backend. The standard first layer for Python instrument code."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scpi-standard-commands-for-programmable"
+title = "SCPI — Standard Commands for Programmable Instrumentation"
+authors = "IVI Foundation"
+type = "standard"
+marks = ["core"]
+url = "https://www.ivifoundation.org/About-IVI/scpi.html"
+link_text = "Link"
+description = "The common command language between computers and test instruments. It is built on IEEE 488.2 and requires conformance to it. The IVI Foundation has maintained it since the SCPI Consortium merged into IVI in late 2003, and the spec is on IVI's specifications page. Read it before you design your own instrument's commands."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pymeasure"
+title = "PyMeasure"
+authors = "PyMeasure developers"
+type = "tool"
+label = "Library"
+url = "https://pymeasure.readthedocs.io/en/latest/"
+link_text = "Link"
+description = "A repository of instrument driver classes plus a system for running measurement procedures, with live-plotting GUIs and experiment queues. Compare its driver classes with your own before you reinvent them."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "labgrid"
+title = "labgrid"
+authors = "Pengutronix and contributors"
+type = "tool"
+label = "Library"
+url = "https://labgrid.readthedocs.io/en/latest/"
+link_text = "Link"
+description = "Embedded board-control library for testing and automation: power switching, serial consoles, USB and SD-card multiplexers, software installation, and a pytest plugin. Its exporter/coordinator layer makes boards attached to one machine usable from another. It isn't a test framework; your pytest tests use it to drive hardware. The examples lean toward Linux boards, but the power, console and remote-access layers apply to MCU targets too."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "renode"
+title = "Renode"
+authors = "Antmicro"
+year = "2026 (1.17.0)"
+type = "tool"
+url = "https://antmicro.com/platforms/renode/"
+link_text = "Link"
+description = "Open-source emulation of CPUs, SoCs, peripherals and multi-node systems, built for running firmware tests in CI before (or instead of) real hardware. Tests are commonly written in Robot Framework. STM32 peripherals are among its models, but the docs' own (incomplete) list of supported targets names no STM32U5 platform; the nearest listed relative is the STM32L552, also a Cortex-M33. Check your exact part before relying on it."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ivi-6-1-ivi-high-speed-lan-instrument"
+title = "IVI-6.1: IVI High-Speed LAN Instrument Protocol (HiSLIP), Revision 2.0"
+authors = "IVI Foundation"
+year = "2020"
+type = "standard"
+access = "free"
+url = "https://www.ivifoundation.org/downloads/Protocol%20Specifications/IVI-6.1_HiSLIP-2.0-2020-04-23.pdf"
+link_text = "PDF"
+description = "The spec behind the LAN half of the \"Instrument transports\" row: TCP-based instrument control on IANA port 4880, with VXI-11 as its primary predecessor. A synchronous channel carries SCPI traffic and an asynchronous channel carries GPIB-like meta-messages, which is how a LAN instrument gets device clear, status-byte reads, service requests, remote/local, trigger, and exclusive or shared locks. Version 2.0 adds TLS-secured connections and SASL client authentication. Read the overview and the meta-message sections before you debug a LAN instrument that hangs."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "instrument-transports-usbtmc-raw-sockets"
+title = "Instrument transports: USBTMC, raw sockets, VXI-11, HiSLIP"
+type = "concept"
+description = "How SCPI actually travels: the USB Test & Measurement Class over USB; plain TCP sockets (commonly port 5025); and VXI-11 (RPC-based) and HiSLIP (IVI's newer LAN protocol) on LAN instruments. The transport decides termination characters, timeouts, device clear and service requests."
+
+[[groups.items]]
+id = "ieee-488-2-status-reporting-and-the-scpi"
+title = "IEEE 488.2 status reporting and the SCPI error queue"
+type = "concept"
+description = "`*IDN?`, `*RST`, `*CLS`, `*OPC?`, `*ESR?` and `SYST:ERR?`: synchronize with slow operations instead of sleeping, and never let an instrument error pass silently. Every driver should drain the error queue."
+
+[[groups.items]]
+id = "the-firmware-test-pyramid"
+title = "The firmware test pyramid"
+type = "concept"
+url = "../05-testing-and-quality/README.md"
+link_text = "Sec 05"
+description = "Host unit tests, then simulation, then HIL, then bench/system tests. Covers which bugs each layer can catch, what a run costs, and how many tests belong at each level. Extends Section 05's testing pyramid onto hardware."
+
+[[groups.items]]
+id = "hil-rigs-as-ci-infrastructure"
+title = "HIL rigs as CI infrastructure"
+type = "concept"
+description = "Self-hosted runners attached to fixtures, exclusive locks on boards, power-cycle recovery from hung targets, archived logs and captures, and quarantine for flaky tests."
+
+[[groups.items]]
+id = "hil-as-the-agent-s-ground-truth"
+title = "HIL as the agent's ground truth"
+type = "concept"
+marks = ["ai"]
+url = "../09-agentic-ai-workflows/README.md"
+link_text = "Sec 09"
+description = "An agent changing firmware or instrument code needs a pass/fail signal from real hardware, not its own claim that the change \"should work\". Expose the HIL suite as one command (or as an MCP tool), and require its report in every agent PR."

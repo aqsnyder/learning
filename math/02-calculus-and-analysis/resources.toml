@@ -1,0 +1,133 @@
+# Resources for: Calculus and Analysis
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "essence-of-calculus"
+title = "Essence of Calculus"
+authors = "3Blue1Brown"
+type = "video-series"
+marks = ["core"]
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr"
+link_text = "Link"
+description = "Visual, intuition-first approach to limits, derivatives, integrals, and Taylor series. The best starting point for building geometric understanding."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "understanding-analysis"
+title = "Understanding Analysis"
+authors = "Stephen Abbott"
+year = "2015"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "The best introduction to real analysis for self-study. Beautifully written, with historical motivation and carefully sequenced exercises. Covers sequences, series, continuity, differentiation, and integration rigorously."
+
+[[groups.items]]
+id = "calculus"
+title = "Calculus"
+authors = "Michael Spivak"
+year = "2008"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "A rigorous calculus text that doubles as an introduction to analysis. Extremely challenging problems that build deep understanding. Bridges computational calculus and proof-based analysis."
+
+[[groups.items]]
+id = "mit-18-01-single-variable-calculus"
+title = "MIT 18.01 Single Variable Calculus"
+authors = "David Jerison"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/"
+link_text = "Link"
+description = "MIT's core calculus course. Excellent for computational fluency in differentiation, integration, and series."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-18-02-multivariable-calculus"
+title = "MIT 18.02 Multivariable Calculus"
+authors = "Denis Auroux"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/"
+link_text = "Link"
+description = "Extends to partial derivatives, gradients, multiple integrals, and vector calculus (Green's, Stokes', divergence theorems). Critical for optimization and physics."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "multivariable-calculus"
+title = "Multivariable Calculus"
+authors = "Khan Academy"
+type = "video-series"
+url = "https://www.khanacademy.org/math/multivariable-calculus"
+link_text = "Link"
+description = "Accessible supplement for partial derivatives, gradients, and multiple integrals. Good for filling gaps."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "measure-integration-real-analysis"
+title = "Measure, Integration & Real Analysis"
+authors = "Sheldon Axler"
+year = "2020"
+type = "book"
+access = "free"
+level = "advanced"
+url = "https://measure.axler.net/"
+link_text = "Link"
+description = "Free, accessible introduction to measure theory. Essential foundation for rigorous probability theory (Section 03) and functional analysis."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "principles-of-mathematical-analysis-baby"
+title = "Principles of Mathematical Analysis (Baby Rudin)"
+authors = "Walter Rudin"
+year = "1976"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "The classic graduate analysis text. Extremely concise and demanding. Not a first book, but a benchmark for mathematical maturity."
+
+[[groups.items]]
+id = "active-calculus"
+title = "Active Calculus"
+authors = "Matt Boelkins"
+type = "book"
+access = "free"
+url = "https://activecalculus.org/"
+link_text = "Link"
+description = "Free, activity-based approach to calculus. Good supplement for hands-on practice with computational techniques."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "vector-calculus-linear-algebra-and"
+title = "Vector Calculus, Linear Algebra, and Differential Forms"
+authors = "Hubbard & Hubbard"
+year = "2015"
+type = "book"
+description = "Unified treatment connecting multivariable calculus with linear algebra and differential forms. Excellent for building a cohesive picture."
+
+[[groups.items]]
+id = "visual-complex-analysis"
+title = "Visual Complex Analysis"
+authors = "Tristan Needham"
+year = "2023"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "Complex analysis made geometric (25th-anniversary edition of the 1997 classic): complex multiplication as rotation-and-scaling, conformal maps, and contour integration. This is the math under phasors, Laplace and z-transforms, and pole-zero plots — essential for an electrical engineer."
+
+[[groups.items]]
+id = "mit-18-04-complex-variables-with"
+title = "MIT 18.04 Complex Variables with Applications"
+authors = "Jeremy Orloff"
+year = "2018"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/"
+link_text = "Link"
+description = "Engineering-oriented complex analysis with complete notes and solved problem sets: analytic and harmonic functions, techniques for hard integrals, Laplace and Fourier transforms, and 2D fluid flow. The structured companion to Needham."
+verified = 2026-10-13

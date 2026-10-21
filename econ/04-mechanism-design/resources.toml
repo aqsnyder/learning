@@ -1,0 +1,103 @@
+# Resources for: Mechanism Design
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "an-introduction-to-the-theory-of"
+title = "An Introduction to the Theory of Mechanism Design"
+authors = "Tilman Börgers"
+year = "2015"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://global.oup.com/academic/product/an-introduction-to-the-theory-of-mechanism-design-9780199734023"
+link_text = "Link"
+description = "The clearest modern textbook on mechanism design. Covers social choice, incentive compatibility, VCG, auctions, and bilateral trade."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "counterspeculation-auctions-and"
+title = "Counterspeculation, Auctions, and Competitive Sealed Tenders"
+authors = "William Vickrey"
+year = "1961"
+type = "paper"
+marks = ["core"]
+url = "https://www.jstor.org/stable/2977633"
+link_text = "Link"
+description = "Introduced the Vickrey (second-price) auction. Foundation of modern auction theory. Nobel Prize work."
+
+[[groups.items]]
+id = "incentive-compatibility-and-the"
+title = "Incentive Compatibility and the Bargaining Problem"
+authors = "Roger Myerson"
+year = "1979"
+type = "paper"
+description = "The revelation principle paper. Shows every mechanism outcome can be replicated by a truthful direct mechanism."
+
+[[groups.items]]
+id = "auction-theory"
+title = "Auction Theory"
+authors = "Vijay Krishna"
+year = "2009"
+type = "book"
+url = "https://shop.elsevier.com/books/auction-theory/krishna/978-0-12-374507-1"
+link_text = "Link"
+description = "The definitive textbook on auction theory. Covers IPV, common value, optimal auctions, multi-unit auctions."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "optimal-auction-design"
+title = "Optimal Auction Design"
+authors = "Roger Myerson"
+year = "1981"
+type = "paper"
+url = "https://www.jstor.org/stable/3689266"
+link_text = "Link"
+description = "Showed how to design revenue-maximizing auctions. One of the most important papers in the field."
+
+[[groups.items]]
+id = "the-lovely-but-lonely-vickrey-auction"
+title = "The Lovely but Lonely Vickrey Auction"
+authors = "Lawrence Ausubel & Paul Milgrom"
+year = "2006"
+type = "paper"
+url = "https://siepr.stanford.edu/publications/working-paper/lovely-lonely-vickrey-auction"
+link_text = "Link"
+description = "Why Vickrey auctions are theoretically beautiful but rarely used in practice. Bridges theory and practice. The link is Stanford SIEPR's page for the free August 2004 working-paper version."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "nobel-prize-lecture-paul-milgrom"
+title = "Nobel Prize Lecture — Paul Milgrom"
+authors = "Paul Milgrom"
+year = "2020"
+type = "video"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2020/milgrom/lecture/"
+link_text = "Link"
+description = "Milgrom's Nobel lecture on improvements to auction theory and new auction formats."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "scientific-background-mechanism-design"
+title = "Scientific Background: Mechanism Design Theory"
+authors = "Royal Swedish Academy of Sciences"
+year = "2007"
+type = "article"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2007/advanced-information/"
+link_text = "Link"
+description = "Free survey written for the 2007 prize to Hurwicz, Maskin, and Myerson: incentive compatibility, the revelation principle, and implementation theory, with their history. A compact map of the field to read before or alongside Börgers."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "stable-matching-theory-evidence-and"
+title = "Stable Matching: Theory, Evidence, and Practical Design"
+authors = "Royal Swedish Academy of Sciences"
+year = "2012"
+type = "article"
+url = "https://www.nobelprize.org/prizes/economic-sciences/2012/popular-information/"
+link_text = "Link"
+description = "Accessible background for the 2012 prize to Shapley and Roth: Gale–Shapley deferred acceptance and stability, and Roth's redesigns of the U.S. medical residency match, New York City school choice, and kidney exchange. Covers market design without prices, which the auction-focused readings here leave out."
+verified = 2026-10-13

@@ -1,0 +1,69 @@
+# Resources for: Condensed Matter and Materials
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "introduction-to-solid-state-physics"
+title = "Introduction to Solid State Physics"
+authors = "Charles Kittel"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "the-oxford-solid-state-basics"
+title = "The Oxford Solid State Basics"
+authors = "Steven H. Simon"
+type = "book"
+marks = ["core"]
+
+[[groups.items]]
+id = "solid-state-physics"
+title = "Solid State Physics"
+authors = "Ashcroft & Mermin"
+type = "book"
+
+[[groups.items]]
+id = "mit-8-231-physics-of-solids-i-fall-2006"
+title = "MIT 8.231 Physics of Solids I (Fall 2006) — Xiao-Gang Wen (problem sets only)"
+type = "course"
+url = "https://ocw.mit.edu/courses/8-231-physics-of-solids-i-fall-2006/"
+link_text = "MIT OCW"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "modern-condensed-matter-physics"
+title = "Modern Condensed Matter Physics"
+authors = "Girvin & Yang"
+type = "book"
+
+[[groups.items]]
+id = "more-is-different"
+title = "More Is Different"
+authors = "P.W. Anderson"
+year = "1972"
+type = "paper"
+marks = ["core"]
+url = "https://www.science.org/doi/10.1126/science.177.4047.393"
+link_text = "Link"
+
+[[groups.items]]
+id = "the-oxford-solid-state-basics-lecture"
+title = "The Oxford Solid State Basics (lecture videos, 2014)"
+authors = "Steven H. Simon"
+year = "2014"
+type = "course"
+url = "https://podcasts.ox.ac.uk/series/oxford-solid-state-basics"
+link_text = "Oxford Podcasts"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "modern-semiconductor-devices-for"
+title = "Modern Semiconductor Devices for Integrated Circuits"
+authors = "Chenming Hu"
+year = "2010"
+type = "book"
+url = "https://www.chu.berkeley.edu/modern-semiconductor-devices-for-integrated-circuits-chenming-calvin-hu-2010/"
+link_text = "chu.berkeley.edu (free chapters)"
+verified = 2026-10-13

@@ -1,0 +1,143 @@
+# Resources for: Software Architecture and Design Patterns
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "fundamentals-of-software-architecture"
+title = "Fundamentals of Software Architecture (2nd ed)"
+authors = "Mark Richards, Neal Ford"
+year = "2025"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "THE architecture primer for transitioning from developer to architect. Covers architecture styles, component design, and the soft skills of architecture."
+
+[[groups.items]]
+id = "software-architecture-the-hard-parts"
+title = "Software Architecture: The Hard Parts"
+authors = "Neal Ford, Mark Richards et al."
+year = "2021"
+type = "book"
+description = "Trade-offs when there's no right answer — service granularity, data decomposition, contracts, and distributed workflows."
+
+[[groups.items]]
+id = "clean-architecture"
+title = "Clean Architecture"
+authors = "Robert C. Martin"
+year = "2017"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "SOLID principles, dependency inversion, and separating business logic from frameworks. The architectural counterpart to Clean Code."
+
+[[groups.items]]
+id = "a-philosophy-of-software-design-2nd-ed"
+title = "A Philosophy of Software Design (2nd ed)"
+authors = "John Ousterhout"
+year = "2021"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "Complexity management through deep modules and strategic programming. Complements and challenges some Clean Code dogma."
+
+[[groups.items]]
+id = "design-patterns-elements-of-reusable"
+title = "Design Patterns: Elements of Reusable Object-Oriented Software"
+authors = "Gamma, Helm, Johnson, Vlissides (Gang of Four)"
+year = "1994"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["core"]
+description = "The classic patterns vocabulary — Strategy, Observer, Factory, Decorator, etc. Read for recognition, not memorization."
+
+[[groups.items]]
+id = "head-first-design-patterns-2nd-ed"
+title = "Head First Design Patterns (2nd ed)"
+authors = "Eric Freeman, Elisabeth Robson"
+year = "2020"
+type = "book"
+description = "A more accessible, visual introduction to design patterns. Good if GoF feels too dense."
+
+[[groups.items]]
+id = "designing-data-intensive-applications"
+title = "Designing Data-Intensive Applications (DDIA, 2nd ed)"
+authors = "Martin Kleppmann, Chris Riccomini"
+year = "2026"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "THE distributed systems bible — replication, partitioning, consistency, batch/stream processing. The 2nd edition (March 2026) revises the 2017 original with newer technologies and trends. Essential for any systems architect."
+
+[[groups.items]]
+id = "bytebytego"
+title = "ByteByteGo"
+authors = "Alex Xu"
+type = "blog"
+label = "Newsletter"
+url = "https://bytebytego.com/"
+link_text = "Link"
+description = "Visual system design explanations. Excellent for building intuition about how real-world systems are built."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "system-design-interview-channel"
+title = "System Design Interview channel"
+authors = "Mikhail Smarshchok"
+type = "video"
+url = "https://www.youtube.com/@SystemDesignInterview"
+link_text = "Link"
+description = "Seven long-form walkthroughs of classic distributed-system design problems. High quality, but the channel is no longer active."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-pragmatic-programmer-20th"
+title = "The Pragmatic Programmer (20th Anniversary)"
+authors = "Andrew Hunt, David Thomas"
+year = "2019"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Engineering mindset — DRY, orthogonality, tracer bullets, and pragmatic thinking about software craft."
+
+[[groups.items]]
+id = "domain-driven-design"
+title = "Domain-Driven Design"
+authors = "Eric Evans"
+year = "2003"
+type = "book"
+description = "Aligning code structure with business domains. Essential vocabulary: bounded contexts, aggregates, ubiquitous language."
+
+[[groups.items]]
+id = "solid-principles"
+title = "SOLID principles"
+type = "concept"
+description = "Recognize violations in code review: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion."
+
+[[groups.items]]
+id = "microservices-vs-monolith-trade-offs"
+title = "Microservices vs monolith trade-offs"
+type = "concept"
+description = "When to decompose, when to stay monolithic, and how to evaluate the distributed systems tax."
+
+[[groups.items]]
+id = "event-driven-architecture-cqrs-and-event"
+title = "Event-driven architecture, CQRS, and event sourcing"
+type = "concept"
+description = "Decoupling through events, separating reads from writes, and using event logs as the source of truth."
+
+[[groups.items]]
+id = "the-c4-model"
+title = "The C4 model"
+authors = "Simon Brown"
+type = "docs"
+label = "Method"
+access = "free"
+url = "https://c4model.com/"
+link_text = "Link"
+description = "Hierarchical architecture diagrams (system context → containers → components → code), notation- and tool-independent. The lightest way to communicate a design to reviewers, and a compact context/container sketch is high-value context for coding agents too."
+verified = 2026-10-13

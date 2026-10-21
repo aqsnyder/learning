@@ -1,0 +1,101 @@
+# Resources for: Electronics Fundamentals
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-art-of-electronics-3rd-ed"
+title = "*The Art of Electronics* (3rd ed.)"
+authors = "Horowitz & Hill"
+year = "2015"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+url = "https://artofelectronics.net/"
+link_text = "artofelectronics.net"
+description = "The industry bible for circuit design. Its advanced companion, *The Art of Electronics: The x-Chapters*, gets an expanded 2nd edition in 2026 that adds a 100+ page chapter on sensors ([x.artofelectronics.net](https://x.artofelectronics.net/))"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learning-the-art-of-electronics"
+title = "*Learning the Art of Electronics*"
+authors = "Hayes & Horowitz"
+type = "book"
+label = "Book (Lab Companion)"
+marks = ["core"]
+url = "https://artofelectronics.net/"
+link_text = "artofelectronics.net"
+description = "Practical lab companion: a paid Cambridge University Press book, not a free one. A 2nd edition is now available"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "eevblog"
+title = "EEVblog"
+authors = "Dave Jones"
+type = "video-series"
+label = "YouTube Channel"
+url = "https://www.youtube.com/@EEVblog"
+link_text = "youtube.com/@EEVblog"
+description = "Electronics tutorials, teardowns, fundamentals"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "greatscott"
+title = "GreatScott!"
+type = "video-series"
+label = "YouTube Channel"
+url = "https://www.youtube.com/@greatscottlab"
+link_text = "youtube.com/@greatscottlab"
+description = "Beginner-friendly electronics projects"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "khan-academy-electrical-engineering"
+title = "Khan Academy Electrical Engineering"
+type = "course"
+url = "https://www.khanacademy.org/science/electrical-engineering"
+link_text = "khanacademy.org"
+description = "Free fundamentals"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-6-002-circuits-and-electronics-ocw"
+title = "MIT 6.002 Circuits and Electronics (OCW)"
+authors = "Anant Agarwal (with Jeffrey Lang)"
+year = "2007"
+type = "course"
+url = "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/"
+link_text = "ocw.mit.edu"
+description = "Rigorous foundations, with full video lectures"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "practical-electronics-for-inventors"
+title = "*Practical Electronics for Inventors*"
+authors = "Scherz & Monk"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Accessible reference"
+
+[[groups.items]]
+id = "ti-precision-labs-op-amps"
+title = "TI Precision Labs — Op Amps"
+authors = "Texas Instruments"
+type = "course"
+url = "https://www.ti.com/video/series/precision-labs/ti-precision-labs-op-amps.html"
+link_text = "ti.com"
+description = "Op-amp video curriculum, from offset and bias current through noise, bandwidth, stability, PCB layout and board-level troubleshooting. The most practical bridge from textbook op amps to real analog front ends"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ltspice"
+title = "LTspice"
+authors = "Analog Devices"
+type = "tool"
+url = "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html"
+link_text = "analog.com"
+description = "Free SPICE simulator with a large library of vendor models. Simulate the circuits you study before you build them; KiCad also has a built-in ngspice simulator"
+verified = 2026-10-13

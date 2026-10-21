@@ -1,0 +1,130 @@
+# Resources for: Game Theory
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "game-theory-an-introduction"
+title = "Game Theory: An Introduction"
+authors = "Steven Tadelis"
+year = "2013"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+url = "https://press.princeton.edu/books/hardcover/9780691129082/game-theory"
+link_text = "Link"
+description = "The best modern game theory textbook. Clear exposition, excellent exercises. Covers strategic form, extensive form, repeated games, and incomplete information."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "game-theory-econ-159"
+title = "Game Theory (ECON 159)"
+authors = "Ben Polak, Yale"
+type = "course"
+marks = ["core"]
+url = "https://oyc.yale.edu/economics/econ-159"
+link_text = "Link"
+description = "Outstanding open course. Polak is an exceptional lecturer. Covers Nash equilibrium, mixed strategies, sequential games, repeated games, evolution."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "strategy-an-introduction-to-game-theory"
+title = "Strategy: An Introduction to Game Theory"
+authors = "Joel Watson"
+year = "2013"
+type = "book"
+description = "Excellent alternative textbook with emphasis on contract and mechanism design applications."
+
+[[groups.items]]
+id = "a-course-in-game-theory"
+title = "A Course in Game Theory"
+authors = "Martin Osborne & Ariel Rubinstein"
+year = "1994"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://www.economics.utoronto.ca/osborne/cgt/"
+link_text = "Link"
+description = "Concise, mathematically precise treatment. Free PDF available from the authors."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-strategy-of-conflict"
+title = "The Strategy of Conflict"
+authors = "Thomas Schelling"
+year = "1960"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "Nobel laureate's classic on focal points, credible commitments, and strategic interaction. Brilliant insights without formal math."
+
+[[groups.items]]
+id = "non-cooperative-games"
+title = "Non-Cooperative Games"
+authors = "John Nash"
+year = "1951"
+type = "paper"
+url = "https://www.jstor.org/stable/1969529"
+link_text = "Link"
+description = "The full statement and existence proof of Nash equilibrium (first announced in a one-page 1950 *PNAS* note). Short, elegant, and historically essential."
+
+[[groups.items]]
+id = "game-theory-coursera"
+title = "Game Theory (Coursera)"
+authors = "Matthew Jackson, Kevin Leyton-Brown & Yoav Shoham (Stanford / UBC)"
+type = "course"
+url = "https://www.coursera.org/learn/game-theory-1"
+link_text = "Link"
+description = "Accessible online course covering normal form, extensive form, repeated, and coalitional games."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "game-theory-101"
+title = "Game Theory 101"
+authors = "William Spaniel"
+type = "blog"
+url = "https://gametheory101.com/"
+link_text = "Link"
+description = "Free video tutorials and textbook companion. Good for reinforcing specific concepts."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "evolution-and-the-theory-of-games"
+title = "Evolution and the Theory of Games"
+authors = "John Maynard Smith"
+year = "1982"
+type = "book"
+description = "The foundational text on evolutionary game theory and evolutionarily stable strategies (ESS)."
+
+[[groups.items]]
+id = "the-art-of-strategy"
+title = "The Art of Strategy"
+authors = "Avinash Dixit & Barry Nalebuff"
+year = "2008"
+type = "book"
+description = "Accessible popular book applying game theory to business and everyday strategic decisions."
+
+[[groups.items]]
+id = "the-evolution-of-cooperation"
+title = "The Evolution of Cooperation"
+authors = "Robert Axelrod & William D. Hamilton"
+year = "1981"
+type = "paper"
+url = "https://websites.umich.edu/~axe/research/Axelrod%20and%20Hamilton%20EC%201981.pdf"
+link_text = "Link"
+description = "Short *Science* paper on how cooperation emerges in the repeated Prisoner's Dilemma, built on computer tournaments won by Tit-for-Tat. Expanded into Axelrod's 1984 book of the same name; the intuitive core of repeated games and essential background for cooperative AI (Section 11)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bargaining-and-markets"
+title = "Bargaining and Markets"
+authors = "Martin J. Osborne & Ariel Rubinstein"
+year = "1990"
+type = "book"
+access = "free"
+url = "https://www.economics.utoronto.ca/osborne/bm/"
+link_text = "Link"
+description = "Free text on bargaining theory — Nash's axiomatic solution and alternating-offers models with time — and how bargaining between traders produces market outcomes. Fills the bargaining gap that Section 11's cooperative-AI papers lean on."
+verified = 2026-10-13

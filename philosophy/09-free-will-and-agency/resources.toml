@@ -1,0 +1,125 @@
+# Resources for: Free Will and Agency
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "elbow-room-the-varieties-of-free-will"
+title = "Elbow Room: The Varieties of Free Will Worth Wanting"
+authors = "Daniel Dennett"
+year = "1984"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "The best defense of compatibilism — the view that free will is compatible with determinism. Dennett (1942–2024) argues we should stop worrying about metaphysical free will and focus on the kinds of freedom that actually matter."
+
+[[groups.items]]
+id = "freedom-evolves"
+title = "Freedom Evolves"
+authors = "Daniel Dennett"
+year = "2003"
+type = "book"
+description = "Sequel to Elbow Room. Argues that free will is an evolved capacity, not a metaphysical mystery. Integrates evolutionary biology with philosophy."
+
+[[groups.items]]
+id = "time-of-conscious-intention-to-act-in"
+title = "Time of Conscious Intention to Act in Relation to Onset of Cerebral Activity (Readiness-Potential): The Unconscious Initiation of a Freely Voluntary Act"
+authors = "Benjamin Libet, Curtis A. Gleason, Elwood W. Wright, Dennis K. Pearl"
+year = "1983"
+type = "paper"
+url = "https://doi.org/10.1093/brain/106.3.623"
+link_text = "Link"
+description = "Famous experiment showing brain activity precedes conscious awareness of the decision to act. Widely cited as evidence against free will (though interpretations vary — see Schurger et al. 2012 below for the leading reinterpretation of the readiness potential)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "alternate-possibilities-and-moral"
+title = "Alternate Possibilities and Moral Responsibility"
+authors = "Harry Frankfurt"
+year = "1969"
+type = "paper"
+url = "https://doi.org/10.2307/2023833"
+link_text = "Link"
+description = "Frankfurt cases: you can be morally responsible even if you couldn't have done otherwise. A landmark paper that reshaped the free will debate."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "freedom-and-resentment"
+title = "Freedom and Resentment"
+authors = "P. F. Strawson"
+year = "1962"
+type = "paper"
+description = "Moves the debate from metaphysics to practice: holding people responsible consists in the \"reactive attitudes\" (resentment, gratitude, indignation) built into ordinary relationships, and Strawson argues that no general theoretical thesis such as determinism could rationally require us to give them up. The source of the reactive-attitudes criterion in this section's mini-project. Published in *Proceedings of the British Academy* 48; reprinted in Strawson's *Freedom and Resentment and Other Essays* (1974)."
+
+[[groups.items]]
+id = "determined-a-science-of-life-without"
+title = "Determined: A Science of Life Without Free Will"
+authors = "Robert Sapolsky"
+year = "2023"
+type = "book"
+description = "Sapolsky argues (against Dennett) that free will is an illusion — biology, upbringing, and circumstance determine everything. The most prominent recent scientific case against free will; read it alongside Mitchell's *Free Agents* (below), a neuroscientist's opposing case."
+
+[[groups.items]]
+id = "an-accumulator-model-for-spontaneous"
+title = "An Accumulator Model for Spontaneous Neural Activity Prior to Self-Initiated Movement"
+authors = "Aaron Schurger, Jacobo D. Sitt, Stanislas Dehaene"
+year = "2012"
+type = "paper"
+url = "https://doi.org/10.1073/pnas.1210467109"
+link_text = "Link"
+description = "Shows that the readiness potential in Libet-style experiments can arise from spontaneous neural fluctuations drifting to a threshold, rather than from an unconscious \"decision.\" The key reinterpretation that undercuts the popular anti-free-will reading of Libet."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "free-agents-how-evolution-gave-us-free"
+title = "Free Agents: How Evolution Gave Us Free Will"
+authors = "Kevin J. Mitchell"
+year = "2023"
+type = "book"
+url = "https://press.princeton.edu/books/hardcover/9780691226231/free-agents"
+link_text = "Link"
+description = "A neuroscientist and geneticist argues that organisms are genuine agents, tracing how evolution built the capacity for choice from the origin of life to nervous systems. The scientific counterweight to Sapolsky's *Determined*, published the same year."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "just-deserts-debating-free-will"
+title = "Just Deserts: Debating Free Will"
+authors = "Daniel C. Dennett, Gregg D. Caruso"
+year = "2021"
+type = "book"
+url = "https://www.wiley-vch.de/en/areas-interest/humanities-social-sciences/just-deserts-978-1-5095-4575-9"
+link_text = "Link"
+description = "A book-length debate in three extended exchanges between a compatibilist (Dennett) and a free-will skeptic who defends hard incompatibilism (Caruso), centered on whether anyone ever deserves blame or punishment. The best single source for practicing both steelmen, in the authors' own words."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "free-will"
+title = "Free Will"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/freewill/"
+link_text = "SEP"
+description = "Comprehensive survey of the free will debate: libertarianism, hard determinism, compatibilism, and beyond."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "compatibilism"
+title = "Compatibilism"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/compatibilism/"
+link_text = "SEP"
+description = "Detailed treatment of the view that free will and determinism can coexist."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "human-behavioral-biology"
+title = "Human Behavioral Biology"
+authors = "Robert Sapolsky"
+type = "video"
+url = "https://www.youtube.com/playlist?list=PL150326949691B199"
+link_text = "YouTube"
+description = "Stanford lecture series covering neurobiology, behavior, and their implications for free will. Pairs with Sapolsky's books."
+verified = 2026-10-13

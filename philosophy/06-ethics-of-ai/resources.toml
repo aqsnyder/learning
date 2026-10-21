@@ -1,0 +1,128 @@
+# Resources for: Ethics of AI
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **Balance note:** the value-laden books here (O'Neil, Crawford, Eubanks, Benjamin) all argue from the critical side. Kleinberg et al. make the opposing case — that audited algorithms can discriminate less than the human decision-makers they replace — and *AI Snake Oil* cuts both ways. Steelman both directions before you take a position.
+'''
+
+[[groups.items]]
+id = "ethics-of-artificial-intelligence"
+title = "Ethics of Artificial Intelligence"
+authors = "S. Matthew Liao (ed.)"
+year = "2020"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "The most comprehensive anthology on AI ethics. Covers moral status of AI, fairness, responsibility, lethal autonomous weapons, and privacy. Systematic and philosophically rigorous."
+
+[[groups.items]]
+id = "weapons-of-math-destruction-how-big-data"
+title = "Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy"
+authors = "Cathy O'Neil"
+year = "2016"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+description = "Vivid, accessible account of how algorithms perpetuate injustice in education, policing, and finance. Makes the abstract concrete."
+
+[[groups.items]]
+id = "ai-ethics-mit-press-essential-knowledge"
+title = "AI Ethics (MIT Press Essential Knowledge series)"
+authors = "Mark Coeckelbergh"
+year = "2020"
+type = "book"
+description = "Short, accessible introduction covering responsibility, justice, privacy, manipulation, and robot rights. Good systematic overview."
+
+[[groups.items]]
+id = "the-global-landscape-of-ai-ethics"
+title = "The global landscape of AI ethics guidelines"
+authors = "Jobin, Ienca, Vayena"
+year = "2019"
+type = "paper"
+url = "https://doi.org/10.1038/s42256-019-0088-2"
+link_text = "Link"
+description = "Meta-analysis of 84 AI ethics guidelines worldwide. Reveals common themes and important gaps."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "atlas-of-ai-power-politics-and-the"
+title = "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence"
+authors = "Kate Crawford"
+year = "2021"
+type = "book"
+description = "Maps the material infrastructure of AI — labor, data, minerals, energy. Shows that AI is not immaterial but deeply embedded in power structures."
+
+[[groups.items]]
+id = "automating-inequality-how-high-tech"
+title = "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor"
+authors = "Virginia Eubanks"
+year = "2018"
+type = "book"
+description = "How automated systems target and harm vulnerable populations. Concrete case studies in welfare, housing, and child protective services."
+
+[[groups.items]]
+id = "fairness-and-machine-learning"
+title = "Fairness and Machine Learning: Limitations and Opportunities"
+authors = "Barocas, Hardt, Narayanan"
+year = "2023"
+type = "book"
+marks = ["core"]
+url = "https://fairmlbook.org/"
+link_text = "Free"
+description = "Free textbook on algorithmic fairness — definitions, impossibility results, and interventions."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "race-after-technology-abolitionist-tools"
+title = "Race After Technology: Abolitionist Tools for the New Jim Code"
+authors = "Ruha Benjamin"
+year = "2019"
+type = "book"
+description = "How technology reinforces racial hierarchies. Essential for understanding the social dimensions of AI bias."
+
+[[groups.items]]
+id = "the-responsibility-gap-ascribing"
+title = "The Responsibility Gap: Ascribing Responsibility for the Actions of Learning Automata"
+authors = "Andreas Matthias"
+year = "2004"
+type = "paper"
+url = "https://doi.org/10.1007/s10676-004-3422-1"
+link_text = "Link"
+description = "Argues that learning systems act in ways their designers cannot foresee, leaving an accountability vacuum that traditional ways of assigning blame cannot fill. The origin of the \"responsibility gap\" debate, and the place to take Section 09's question of who is to blame when an autonomous system errs."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "ai-snake-oil-what-artificial"
+title = "AI Snake Oil: What Artificial Intelligence Can Do, What It Can't, and How to Tell the Difference"
+authors = "Arvind Narayanan, Sayash Kapoor"
+year = "2024"
+type = "book"
+url = "https://press.princeton.edu/books/hardcover/9780691249131/ai-snake-oil"
+link_text = "Link"
+description = "Two Princeton computer scientists separate AI that works from AI that doesn't, with particular scrutiny of predictive AI used to make decisions about people. The up-to-date, evidence-driven successor to O'Neil."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "discrimination-in-the-age-of-algorithms"
+title = "Discrimination in the Age of Algorithms"
+authors = "Jon Kleinberg, Jens Ludwig, Sendhil Mullainathan, Cass R. Sunstein"
+year = "2018"
+type = "paper"
+url = "https://doi.org/10.1093/jla/laz001"
+link_text = "Link"
+description = "The strongest counterweight to this section's critical books. With the right legal requirements in place, algorithms make discrimination easier to *detect* than opaque human decisions do, and they make trade-offs between competing values explicit — so they can be \"a potential positive force for equity\", not only a threat to be regulated. Open access (*Journal of Legal Analysis* 10). Read it against O'Neil, Eubanks and Benjamin."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "justice"
+title = "Justice"
+authors = "Michael Sandel"
+type = "video"
+url = "https://www.youtube.com/playlist?list=PL30C13C91CFFEFEA6"
+link_text = "YouTube"
+description = "Harvard's famous ethics course. Builds the moral reasoning toolkit needed for AI ethics debates."
+verified = 2026-10-13

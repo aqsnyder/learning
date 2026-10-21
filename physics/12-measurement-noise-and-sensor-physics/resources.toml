@@ -1,0 +1,161 @@
+# Resources for: Measurement, Noise, and Sensor Physics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):**
+- Johnson (1928) and Nyquist (1928), Feynman Vol. 1 Ch. 41, and Schroeder's blackbody-radiation section ([Section 02](../02-thermodynamics-and-statistical-mechanics/README.md))
+- Haus & Melcher for quasistatic coupling and guarding ([Section 03](../03-electromagnetism/README.md))
+- Ashby's GPS review and the LIGO GW150914 letter ([Section 05](../05-special-and-general-relativity/README.md))
+- Hu's pn-junction chapter and Kittel's dielectrics and ferroelectrics chapter ([Section 08](../08-condensed-matter-and-materials/README.md))
+- the thermal-radiation chapter of Lienhard & Lienhard ([Section 09](../09-fluid-dynamics-and-continuum/README.md))
+- *The Art of Electronics* low-noise chapter ([PCB Section 00](../../pcb/00-electronics-fundamentals/README.md))
+- Ott's chapters on intrinsic noise sources and active-device noise ([PCB Section 07](../../pcb/07-emc-and-compliance/README.md))
+'''
+
+[[groups.items]]
+id = "low-level-measurements-handbook-7th-ed"
+title = "Low Level Measurements Handbook (7th ed., 2014)"
+authors = "Keithley (Tektronix)"
+year = "2014"
+type = "book"
+marks = ["core"]
+url = "https://download.tek.com/document/LowLevelHandbook_7Ed.pdf"
+link_text = "tek.com (free PDF)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "white-noise-in-mos-transistors-and"
+title = "White Noise in MOS Transistors and Resistors"
+authors = "R. Sarpeshkar, T. Delbrück & C. A. Mead"
+year = "1993"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1109/101.261888"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "low-frequency-fluctuations-in-solids-1-f"
+title = "Low-Frequency Fluctuations in Solids: 1/f Noise"
+authors = "P. Dutta & P. M. Horn"
+year = "1981"
+type = "paper"
+url = "https://doi.org/10.1103/RevModPhys.53.497"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an-introduction-to-error-analysis-the"
+title = "An Introduction to Error Analysis: The Study of Uncertainties in Physical Measurements (2nd ed., 1997)"
+authors = "John R. Taylor"
+year = "1997"
+type = "book"
+url = "https://uscibooks.directfrompublisher.com/9780935702422"
+link_text = "University Science Books"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "about-lock-in-amplifiers-application"
+title = "About Lock-In Amplifiers (Application Note #3)"
+authors = "Stanford Research Systems"
+type = "app-note"
+url = "https://www.thinksrs.com/downloads/pdfs/applicationnotes/AboutLIAs.pdf"
+link_text = "thinksrs.com (free PDF)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "handbook-of-frequency-stability-analysis"
+title = "Handbook of Frequency Stability Analysis (NIST Special Publication 1065, 2008)"
+authors = "W. J. Riley"
+year = "2008"
+type = "book"
+url = "https://doi.org/10.6028/NIST.SP.1065"
+link_text = "DOI (free PDF)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mathematical-analysis-of-random-noise-s"
+title = "Mathematical Analysis of Random Noise — S. O. Rice (Bell System Technical Journal, 1944–45)"
+type = "paper"
+url = "https://doi.org/10.1002/j.1538-7305.1944.tb00874.x"
+link_text = "DOI (1944)"
+more_links = [{ text = "DOI (1945, Part III)", url = "https://doi.org/10.1002/j.1538-7305.1945.tb00453.x" }, { text = "free scan (1945)", url = "https://archive.org/details/bstj24-1-46" }]
+verified = 2026-10-13
+
+[[groups.items]]
+id = "guidelines-for-evaluating-and-expressing"
+title = "Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results (NIST Technical Note 1297, 1994 ed.)"
+authors = "Barry N. Taylor & Chris E. Kuyatt"
+type = "docs"
+label = "Guide"
+url = "https://doi.org/10.6028/NIST.TN.1297"
+link_text = "DOI (free PDF)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "evaluation-of-measurement-data-guide-to"
+title = "Evaluation of Measurement Data — Guide to the Expression of Uncertainty in Measurement (GUM, JCGM 100:2008) — Joint Committee for Guides in Metrology"
+type = "docs"
+label = "Guide"
+url = "https://www.bipm.org/en/committees/jc/jcgm/publications"
+link_text = "BIPM (free PDF)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-international-system-of-units-si-the"
+title = "The International System of Units (SI): the SI Brochure (9th ed., 2019; English text updated 2026) — BIPM"
+type = "docs"
+label = "Reference"
+url = "https://www.bipm.org/en/publications/si-brochure"
+link_text = "bipm.org (free, CC BY 4.0)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "handbook-of-modern-sensors-physics"
+title = "Handbook of Modern Sensors: Physics, Designs, and Applications (5th ed., 2016)"
+authors = "Jacob Fraden"
+year = "2016"
+type = "book"
+url = "https://link.springer.com/book/10.1007/978-3-319-19303-8"
+link_text = "Springer"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pyroelectric-devices-and-materials-r-w"
+title = "Pyroelectric Devices and Materials — R. W. Whatmore (Reports on Progress in Physics, 1986)"
+year = "1986"
+type = "paper"
+url = "https://doi.org/10.1088/0034-4885/49/12/002"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-art-of-radiometry-james-m-palmer"
+title = "The Art of Radiometry — James M. Palmer & Barbara G. Grant (SPIE Press, 2009)"
+year = "2009"
+type = "book"
+url = "https://doi.org/10.1117/3.798237"
+link_text = "DOI"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "building-scientific-apparatus-4th-ed"
+title = "Building Scientific Apparatus (4th ed., 2009)"
+authors = "John H. Moore, Christopher C. Davis & Michael A. Coplan"
+year = "2009"
+type = "book"
+url = "https://www.cambridge.org/9780521878586"
+link_text = "Cambridge"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "quantum-sensing-c-l-degen-f-reinhard-p"
+title = "Quantum Sensing — C. L. Degen, F. Reinhard & P. Cappellaro (Reviews of Modern Physics, 2017)"
+year = "2017"
+type = "paper"
+url = "https://doi.org/10.1103/RevModPhys.89.035002"
+link_text = "DOI"
+more_links = [{ text = "arXiv", url = "https://arxiv.org/abs/1611.02427" }]
+verified = 2026-10-13

@@ -1,0 +1,137 @@
+# Resources for: Probability and Statistics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "statistics-110-probability"
+title = "Statistics 110: Probability"
+authors = "Joe Blitzstein"
+type = "course"
+access = "free"
+marks = ["core"]
+url = "https://projects.iq.harvard.edu/stat110"
+link_text = "Link"
+description = "Harvard's legendary probability course. Blitzstein's teaching is exceptional — builds deep intuition through storytelling and strategic problem-solving. Full lectures, textbook, and problem sets available free."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "all-of-statistics-a-concise-course-in"
+title = "All of Statistics: A Concise Course in Statistical Inference"
+authors = "Larry Wasserman"
+year = "2004"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "Covers probability, statistical inference, Bayesian methods, and nonparametric statistics in one dense but accessible volume. The ideal single reference for a mathematically mature reader."
+
+[[groups.items]]
+id = "introduction-to-probability"
+title = "Introduction to Probability"
+authors = "Joe Blitzstein, Jessica Hwang"
+year = "2019"
+type = "book"
+access = "free"
+level = "beginner"
+url = "https://stat110.hsites.harvard.edu/"
+link_text = "Link"
+description = "The textbook companion to Stat 110. Excellent exposition with strategic exercises. Covers counting, conditioning, distributions, Markov chains, and more."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-probability-and"
+title = "Introduction to Probability and Statistics for Engineers and Scientists"
+authors = "Sheldon Ross"
+year = "2020"
+type = "book"
+access = "free"
+level = "beginner"
+description = "Applied probability and statistics with engineering focus. Good for building computational fluency alongside theory."
+
+[[groups.items]]
+id = "statquest"
+title = "StatQuest"
+authors = "Josh Starmer"
+type = "video-series"
+url = "https://www.youtube.com/@statquest"
+link_text = "Link"
+description = "Fun, clear, no-nonsense visual explanations of probability, distributions, hypothesis testing, Bayesian inference, and more. Excellent gap-filler."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bayesian-data-analysis"
+title = "Bayesian Data Analysis"
+authors = "Andrew Gelman et al."
+year = "2013"
+type = "book"
+access = "free"
+level = "advanced"
+url = "https://sites.stat.columbia.edu/gelman/book/"
+link_text = "Link"
+description = "The definitive reference for applied Bayesian statistics. Covers hierarchical models, MCMC, model checking, and practical Bayesian workflow. The 3rd-edition PDF is free for non-commercial use on the book page."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-probability-models"
+title = "Introduction to Probability Models"
+authors = "Sheldon Ross"
+year = "2023"
+type = "book"
+access = "free"
+level = "beginner"
+description = "Focused treatment of stochastic processes: Markov chains, Poisson processes, queuing theory, and renewal theory (13th edition). Essential for understanding MCMC and diffusion models."
+
+[[groups.items]]
+id = "mit-6-041-probabilistic-systems-analysis"
+title = "MIT 6.041 Probabilistic Systems Analysis"
+authors = "John Tsitsiklis"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/"
+link_text = "Link"
+description = "MIT's rigorous probability course with excellent problem sets. Good complement to Blitzstein for a more engineering-oriented perspective."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "probability-theory-the-logic-of-science"
+title = "Probability Theory: The Logic of Science"
+authors = "E.T. Jaynes"
+year = "2003"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "A philosophical and mathematical defense of Bayesian probability as extended logic. Deeply influential and thought-provoking. Advanced but illuminating."
+
+[[groups.items]]
+id = "introduction-to-stochastic-processes"
+title = "Introduction to Stochastic Processes"
+authors = "Gregory Lawler"
+year = "2006"
+type = "book"
+description = "Rigorous treatment of Markov chains, martingales, and Brownian motion (2nd edition). Foundation for understanding diffusion models and stochastic calculus."
+
+[[groups.items]]
+id = "statistical-rethinking-2024-course"
+title = "Statistical Rethinking (2024 course)"
+authors = "Richard McElreath"
+year = "2024"
+type = "course"
+access = "free"
+url = "https://github.com/rmcelreath/stat_rethinking_2024"
+link_text = "Link"
+description = "The best on-ramp to applied Bayesian modeling: causal DAGs, multilevel models, and MCMC taught through simulation, with free recorded lectures and course materials (pairs with the book's 2nd edition, CRC 2020). Do this before Gelman's BDA."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kalman-and-bayesian-filters-in-python"
+title = "Kalman and Bayesian Filters in Python"
+authors = "Roger Labbe"
+year = "2015"
+type = "book"
+access = "free"
+url = "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python"
+link_text = "Link"
+description = "Free, CC-licensed Jupyter-notebook book that builds the g-h filter, Kalman, extended/unscented Kalman, and particle filters up from Bayes' rule. Bayesian inference applied to noisy sensors — directly usable for sensor fusion and measurement work on embedded systems."
+verified = 2026-10-13

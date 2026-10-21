@@ -1,0 +1,87 @@
+# Resources for: Causal Inference
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-book-of-why-the-new-science-of-cause"
+title = "The Book of Why: The New Science of Cause and Effect"
+authors = "Judea Pearl, Dana Mackenzie"
+year = "2018"
+type = "book"
+marks = ["core"]
+description = "The accessible introduction to causal reasoning. Pearl explains causal graphs, interventions, and counterfactuals through vivid examples. Read this first to understand the conceptual revolution."
+
+[[groups.items]]
+id = "causality-models-reasoning-and-inference"
+title = "Causality: Models, Reasoning, and Inference"
+authors = "Judea Pearl"
+year = "2009"
+type = "book"
+description = "The technical bible of causal inference. Covers structural causal models (SCMs), do-calculus, counterfactuals, and identification theory rigorously. The definitive reference."
+
+[[groups.items]]
+id = "causal-inference-in-statistics-a-primer"
+title = "Causal Inference in Statistics: A Primer"
+authors = "Judea Pearl, Madelyn Glymour, Nicholas Jewell"
+year = "2016"
+type = "book"
+description = "A shorter, more accessible technical introduction than *Causality*. Good bridge between *The Book of Why* and the full technical treatment."
+
+[[groups.items]]
+id = "causal-inference-what-if"
+title = "Causal Inference: What If"
+authors = "Miguel Hernán, James Robins"
+year = "2020"
+type = "book"
+access = "free"
+url = "https://miguelhernan.org/whatifbook"
+link_text = "Link"
+description = "Free textbook from the epidemiology perspective. Covers potential outcomes, inverse probability weighting, and g-methods. Complements Pearl's graphical approach. The authors' book page has the latest free PDF (revised in place, so re-download it), the NHEFS data with its codebook, and code in Python, R, SAS, Stata and Julia."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-causal-inference"
+title = "Introduction to Causal Inference"
+authors = "Brady Neal"
+type = "course"
+access = "free"
+url = "https://www.bradyneal.com/causal-inference-course"
+link_text = "Link"
+description = "Free online course with video lectures, slides, and exercises. Excellent modern introduction covering both potential outcomes and graphical approaches."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "causal-reasoning-from-meta-reinforcement"
+title = "Causal Reasoning from Meta-Reinforcement Learning"
+authors = "Dasgupta et al."
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1901.08162"
+link_text = "Link"
+description = "Connects causal reasoning to reinforcement learning and meta-learning. Bridge from causal theory to ML applications."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "towards-causal-representation-learning"
+title = "Towards Causal Representation Learning"
+authors = "Schölkopf et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2102.11107"
+link_text = "Link"
+description = "Survey connecting causal inference to representation learning in ML. Arguments for why causal reasoning is essential for robust AI."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "elements-of-causal-inference-foundations"
+title = "Elements of Causal Inference: Foundations and Learning Algorithms"
+authors = "Jonas Peters, Dominik Janzing, Bernhard Schölkopf"
+year = "2017"
+type = "book"
+access = "free"
+url = "https://library.oapen.org/bitstream/20.500.12657/26040/1/11283.pdf"
+link_text = "Link"
+description = "Machine-learning-oriented treatment of causal inference. Covers causal discovery from data and connections to transfer learning. Open access: the link is the free PDF (CC BY-NC-ND 4.0) in the [OAPEN library](https://library.oapen.org/handle/20.500.12657/26040); the print edition is from [MIT Press](https://mitpress.mit.edu/9780262037310/elements-of-causal-inference/)."
+verified = 2026-10-13

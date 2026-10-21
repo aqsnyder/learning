@@ -1,0 +1,84 @@
+# Resources for: Multi-Layer Design and Stackup
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** openEMS ([Section 10](../10-advanced-topics/README.md)) for Practice 3, and your Section 06 field solver for Practice 2.
+'''
+
+[[groups.items]]
+id = "the-extreme-importance-of-pc-board-stack"
+title = "The Extreme Importance of PC Board Stack-Up (AltiumLive, 2018)"
+authors = "Rick Hartley"
+year = "2018"
+type = "video"
+marks = ["core"]
+url = "https://resources.altium.com/p/the-extreme-importance-of-pc-board-stack-up-rick-hartley"
+link_text = "Altium"
+description = "Hartley's talk, with downloadable slides, on why the stackup sets SI and EMC performance. His other stackup talks: [search YouTube](https://www.youtube.com/results?search_query=rick+hartley+stackup)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "robert-feranec-multi-layer-pcb-design"
+title = "Robert Feranec multi-layer PCB design"
+authors = "Robert Feranec"
+type = "video-series"
+marks = ["core"]
+url = "https://www.youtube.com/@RobertFeranec"
+link_text = "YouTube"
+description = "Complex multi-layer layout techniques"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "right-the-first-time"
+title = "Right the First Time"
+authors = "Lee Ritchey"
+type = "book"
+access = "paid"
+level = "advanced"
+marks = ["canon"]
+url = "https://speedingedge.com/product-category/handbook/"
+link_text = "Speeding Edge"
+description = "Detailed stackup engineering (Rick's reading list)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "saturn-pcb-toolkit-stackup-calculator"
+title = "Saturn PCB Toolkit stackup calculator"
+type = "tool"
+marks = ["core"]
+url = "https://saturnpcb.com/saturn-pcb-toolkit/"
+link_text = "Link"
+description = "Impedance and stackup calculation tool"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "4-layer-vs-6-layer-vs-8-layer-tradeoffs"
+title = "4-layer vs 6-layer vs 8-layer tradeoffs"
+type = "concept"
+description = "Understanding when to add layers and the cost/performance implications"
+
+[[groups.items]]
+id = "impedance-controlled-stackups"
+title = "Impedance-controlled stackups"
+type = "concept"
+description = "Working with your fab house to achieve target impedances"
+
+[[groups.items]]
+id = "blind-and-buried-vias"
+title = "Blind and buried vias"
+type = "concept"
+description = "When they're worth the cost"
+
+[[groups.items]]
+id = "ipc-2221-stackup-guidelines"
+title = "IPC-2221 stackup guidelines"
+authors = "IPC"
+type = "docs"
+label = "Reference"
+access = "paid"
+url = "https://shop.electronics.org/ipc-2221/ipc-2221-standard-only/Revision-c/english"
+link_text = "IPC store (Rev C)"
+description = "Generic design standard, not a stackup-design guide. Section 4 covers laminates, prepreg and dielectric spacing, and §6.4 gives the classic closed-form microstrip/stripline impedance equations. Section numbers follow Rev A (2003); the current revision is IPC-2221C (2023). Get real stackups and impedance numbers from your fab or a field solver"
+verified = 2026-10-21

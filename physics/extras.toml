@@ -1,0 +1,22 @@
+# Books and courses that have no home in a section.
+# Edit this file, then run `python tools/build.py`. Field reference: tools/README.md
+
+[[groups]]
+title = "Books"
+
+[[groups.items]]
+id = "electromagnetics-vol-12"
+title = "Electromagnetics, Vol. 1–2 (2018, 2020; free, CC BY-SA)"
+authors = "Steven W. Ellingson"
+type = "book"
+
+[[groups]]
+title = "Courses"
+
+[[groups.items]]
+id = "essence-of-linear-algebra"
+title = "Essence of Linear Algebra"
+authors = "3Blue1Brown"
+type = "course"
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+link_text = "YouTube"

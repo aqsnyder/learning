@@ -1,0 +1,106 @@
+# Resources for: Advanced Topics
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+**Also used here (tracked in their home sections):** Saturn PCB Toolkit's via calculator ([Section 05](../05-power-and-grounding/README.md)) for Practice 1.
+'''
+
+[[groups.items]]
+id = "robert-feranec-bga-routing-and-escape"
+title = "Robert Feranec BGA routing and escape"
+authors = "Robert Feranec"
+type = "video-series"
+marks = ["core"]
+url = "https://www.youtube.com/@RobertFeranec"
+link_text = "YouTube"
+description = "BGA fanout strategies"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kicad-advanced-design-a-smart-usb-thumb"
+title = "KiCad Advanced: Design a smart USB thumb drive (KiCad 10, 2026)"
+authors = "Tech Explorations"
+year = "2026"
+type = "course"
+url = "https://app.techexplorations.com/courses/kicad-advanced-bga-signal-integrity-and-high-speed-layout/"
+link_text = "techexplorations.com"
+description = "Project course (9 sections, 94 lectures; enrollment required) built around one two-layer USB thumb drive: BGA routing and via-in-pad, USB 2.0 differential pairs and signal integrity, eMMC length matching, stackup and impedance control, and manufacturing outputs. The course page names no instructor."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "phil-s-lab-advanced-designs-stm32-fpga"
+title = "Phil's Lab advanced designs (STM32, FPGA boards)"
+authors = "Phil's Lab"
+type = "video-series"
+url = "https://www.youtube.com/@PhilsLab"
+link_text = "YouTube"
+description = "Real complex project walkthroughs"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bga-escape-routing-and-via-in-pad"
+title = "BGA escape routing and via-in-pad"
+type = "concept"
+description = "Advanced package routing strategies"
+
+[[groups.items]]
+id = "thermal-management"
+title = "Thermal management"
+type = "concept"
+description = "Thermal vias, copper pours, heatsink integration"
+
+[[groups.items]]
+id = "flex-and-rigid-flex-pcb-design-ipc-2223"
+title = "Flex and rigid-flex PCB design (IPC-2223)"
+type = "concept"
+description = "Flexible circuit design and manufacturing"
+
+[[groups.items]]
+id = "rf-pcb-design-basics"
+title = "RF PCB design basics"
+type = "concept"
+description = "Microstrip, stripline, antenna matching"
+
+[[groups.items]]
+id = "open-source-thermal-simulation"
+title = "Open Source Thermal Simulation"
+type = "tool"
+url = "https://jrainimo.com/build/2024/11/oss-thermal-simulation-of-pcbs/"
+link_text = "Link"
+description = "Walkthrough of an open-source KiCad → Salome → ElmerFEM flow that simulates DC current density and Joule heating in PCB copper (IR drop and hot spots). It is not part-level thermal modelling; use AN-2020 and the Thermal management concept for that."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "an-2020-thermal-design-by-insight-not"
+title = "AN-2020: Thermal Design By Insight, Not Hindsight (2013)"
+authors = "Texas Instruments"
+year = "2013"
+type = "app-note"
+marks = ["core"]
+url = "https://www.ti.com/lit/pdf/snva419"
+link_text = "PDF"
+description = "Practical PCB thermal design for power ICs: interpreting the package thermal metrics, copper spreading and thermal vias, and estimating junction temperature before layout is frozen"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "openems-gerber2ems"
+title = "openEMS + gerber2ems"
+authors = "Thorsten Liebig (openEMS); Antmicro (gerber2ems)"
+type = "tool"
+url = "https://www.openems.de/"
+link_text = "openems.de"
+more_links = [{ text = "gerber2ems", url = "https://github.com/antmicro/gerber2ems" }]
+description = "Free FDTD field solver. Antmicro's gerber2ems drives it from Gerbers, drill files and a stackup description to extract S-parameters and impedance of real PCB traces, making open-source SI verification of KiCad boards practical"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kicad-ipc-api-kicad-python"
+title = "KiCad IPC API + kicad-python"
+authors = "KiCad Project"
+type = "tool"
+url = "https://docs.kicad.org/kicad-python/"
+link_text = "Docs"
+description = "KiCad's new (9.0+) scripting and plugin API. The old SWIG `pcbnew` Python bindings are deprecated and slated for removal in KiCad 11, so write new scripts and plugins against this"
+verified = 2026-10-13

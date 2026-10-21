@@ -1,0 +1,133 @@
+# Resources for: Design for Manufacturing (DFM) and Fabrication
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "gerber-file-generation-and-review"
+title = "Gerber file generation and review"
+type = "concept"
+description = "Output files, drill files, pick-and-place"
+
+[[groups.items]]
+id = "dfm-rules"
+title = "DFM rules"
+type = "concept"
+marks = ["core"]
+description = "Minimum trace/space, annular rings, solder mask dams"
+
+[[groups.items]]
+id = "dfa-design-for-assembly"
+title = "DFA (Design for Assembly)"
+type = "concept"
+marks = ["core"]
+description = "Solder paste stencil, component orientation, panelization, fiducials"
+
+[[groups.items]]
+id = "ipc-2221-manufacturing-guidelines"
+title = "IPC-2221 manufacturing guidelines"
+authors = "IPC"
+type = "docs"
+label = "Reference"
+access = "paid"
+url = "https://shop.electronics.org/ipc-2221/ipc-2221-standard-only/Revision-c/english"
+link_text = "IPC store (Rev C)"
+description = "The design-side rules fabrication depends on (annular rings, hole/land sizes, clearances, test coupons). IPC-2221 is a design standard; fabricated-board acceptance is covered by IPC-6012 / IPC-A-600. Section numbers here follow Rev A (2003); the current revision is IPC-2221C (2023)"
+verified = 2026-10-21
+
+[[groups.items]]
+id = "ipc-7351-land-pattern-standard"
+title = "IPC-7351 land pattern standard"
+authors = "IPC"
+type = "docs"
+label = "Reference"
+description = "Footprint/pad design guidelines"
+
+[[groups.items]]
+id = "jlcpcb"
+title = "JLCPCB"
+type = "website"
+label = "Fab House"
+marks = ["core"]
+url = "https://jlcpcb.com/capabilities/pcb-capabilities"
+link_text = "Capabilities"
+description = "Affordable prototyping. The capabilities page lists the limits your DRC should match: trace/space, via drill, layer counts, impedance-control tolerance"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "pcbway"
+title = "PCBWay"
+type = "website"
+label = "Fab House"
+url = "https://www.pcbway.com/"
+link_text = "Link"
+description = "Prototyping and small batch"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "osh-park"
+title = "OSH Park"
+type = "website"
+label = "Fab House"
+url = "https://oshpark.com/"
+link_text = "Link"
+description = "US-based prototyping"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "phil-s-lab-gerber-generation-tutorials"
+title = "Phil's Lab Gerber generation tutorials"
+authors = "Phil's Lab"
+type = "video"
+url = "https://www.youtube.com/@PhilsLab"
+link_text = "YouTube"
+description = "Step-by-step output file generation"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kicad-gerber-viewer"
+title = "KiCad Gerber viewer"
+type = "tool"
+description = "Built-in output verification"
+
+[[groups.items]]
+id = "gerber-layer-format-specification-rev"
+title = "Gerber Layer Format Specification (rev. 2024.05)"
+authors = "Ucamco"
+type = "docs"
+label = "Reference"
+url = "https://www.ucamco.com/en/gerber"
+link_text = "ucamco.com/en/gerber"
+description = "The official Gerber spec. Output Gerber X2 so the files carry attributes (pad/via/fiducial functions, net names) and the fab gets your intent, not just shapes"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kicad-cli"
+title = "kicad-cli"
+authors = "KiCad Project"
+type = "tool"
+url = "https://docs.kicad.org/10.0/en/cli/cli.html"
+link_text = "Docs"
+description = "KiCad's command-line interface: scripted ERC/DRC and exports (Gerbers, drill, positions, BOM, PDFs, 3D), so outputs are reproducible rather than click-generated"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kibot"
+title = "KiBot"
+authors = "INTI-CMNB"
+type = "tool"
+url = "https://github.com/INTI-CMNB/KiBot"
+link_text = "GitHub"
+description = "Config-driven generation of fab and documentation outputs, with an official GitHub Action. Every commit or tag can produce a complete release package (hardware CI)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "kikit"
+title = "KiKit"
+authors = "yaqwsx"
+type = "tool"
+url = "https://yaqwsx.github.io/KiKit/latest/"
+link_text = "Docs"
+description = "Panelization (tabs, mouse bites, V-cuts), fab-house output presets, and stencil generation for KiCad boards"
+verified = 2026-10-13

@@ -1,0 +1,105 @@
+# Resources for: Governance and Protocol Change
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "mastering-bitcoin-ch-12-changing-the"
+title = "Mastering Bitcoin, Ch. 12 § \"Changing the Consensus Rules\""
+authors = "Antonopoulos & Harding"
+year = "2023"
+type = "book"
+access = "free"
+marks = ["core"]
+url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12_mining.adoc"
+link_text = "GitHub"
+description = "Hard forks (including contentious ones), soft forks and the criticisms of them, signaling and activation from BIP 34 through BIP 9, BIP 8 and Speedy Trial, and how consensus software is developed. Re-read it even if you did the whole chapter in Section 03."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-optech-soft-fork-activation"
+title = "Bitcoin Optech: Soft fork activation"
+authors = "Bitcoin Optech"
+type = "website"
+marks = ["core"]
+url = "https://bitcoinops.org/en/topics/soft-fork-activation/"
+link_text = "bitcoinops.org"
+description = "How consensus rules have actually been changed, case by case: hard-coded heights, IsSuperMajority, BIP 9 version bits, the BIP 148/91 SegWit fight, emergency fixes, and links to later debates such as Speedy Trial for Taproot. (Moved here from Section 03.)"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-9-and-bip-8-version-bits-activation"
+title = "BIP 9 and BIP 8: version-bits activation"
+authors = "Pieter Wuille, Peter Todd, Greg Maxwell, Rusty Russell; Shaolin Fry, Luke Dashjr"
+type = "standard"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0009.mediawiki"
+link_text = "BIP 9"
+more_links = [{ text = "BIP 8", url = "https://github.com/bitcoin/bips/blob/master/bip-0008.mediawiki" }]
+description = "The signaling mechanisms in their own words. BIP 9 is miner signaling with a timeout (Deployed; used for the CSV and SegWit soft forks). BIP 8 is lock-in by height, with optional mandatory lock-in (Complete)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bip-3-updated-bip-process"
+title = "BIP 3: Updated BIP Process"
+authors = "Murch"
+year = "2025"
+type = "standard"
+marks = ["core"]
+url = "https://github.com/bitcoin/bips/blob/master/bip-0003.md"
+link_text = "BIP 3"
+description = "How proposals are drafted, published and moved through Draft → Complete → Deployed, or Closed; it replaces BIP 2 (2016). Read \"What is the Significance of BIPs?\": a BIP is its authors' recommendation, not community consensus, and BIPs \"do not define what Bitcoin is\"."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-core-doc-bips-md"
+title = "Bitcoin Core: `doc/bips.md`"
+authors = "Bitcoin Core contributors"
+type = "docs"
+label = "Documentation"
+url = "https://github.com/bitcoin/bitcoin/blob/master/doc/bips.md"
+link_text = "GitHub"
+description = "The BIPs Bitcoin Core actually implements. BIP 3 points to it as the model for how projects should publish what they adopt. Compare it with the statuses in the BIPs index."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-optech-replace-by-fee-full-rbf"
+title = "Bitcoin Optech: Replace-by-fee (full-RBF history)"
+authors = "Bitcoin Optech"
+type = "website"
+url = "https://bitcoinops.org/en/topics/replace-by-fee/"
+link_text = "bitcoinops.org"
+description = "A policy change that took two years: the 2022 `mempoolfullrbf` option and debate, monitoring of full-RBF replacements, full-RBF on by default in Bitcoin Core 28, and the option removed in 29."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-optech-opchecktemplateverify"
+title = "Bitcoin Optech: OP_CHECKTEMPLATEVERIFY topic"
+authors = "Bitcoin Optech"
+type = "website"
+url = "https://bitcoinops.org/en/topics/op_checktemplateverify/"
+link_text = "bitcoinops.org"
+description = "An activation push in progress, newsletter by newsletter: 2025 criticism of CTV+CSFS, an open letter, OP_TEMPLATEHASH as an alternative, the LNHANCE bundle, a December 2025 activation meeting, and the \"CTV footgun\" discussion."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "bitcoin-optech-newsletter-385-2025-year"
+title = "Bitcoin Optech Newsletter #385: 2025 Year-in-Review"
+authors = "Bitcoin Optech"
+year = "2025"
+type = "article"
+url = "https://bitcoinops.org/en/newsletters/2025/12/19/"
+link_text = "bitcoinops.org"
+description = "The year's governance threads in one document: the OP_RETURN policy debate summarized from both sides; the soft-fork proposal landscape (CTV+CSFS, OP_TEMPLATEHASH, LNHANCE, BIP 54, CCV replacing OP_VAULT, Script Restoration); quantum planning; and more than a dozen vulnerability disclosures."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "chaincode-syllabus-soft-forks-protocol"
+title = "Chaincode syllabus: \"Soft Forks & protocol overview\" and \"Consensus Changes & Hard Forks\""
+authors = "Chaincode Labs"
+type = "course"
+label = "Curriculum"
+url = "https://github.com/chaincodelabs/bitcoin-curriculum"
+link_text = "GitHub"
+description = "Curated mid-2010s readings on fork terminology, flag-day and user-activated soft forks, BIP 9, BIP 148/149 and BIP 91, replay protection, and a history of Bitcoin's consensus forks — the debates that shaped today's caution."
+verified = 2026-10-13

@@ -1,0 +1,134 @@
+# Resources for: Embedded C Mastery
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "the-c-programming-language-k-r-2nd-ed"
+title = "*The C Programming Language* (K&R, 2nd ed)"
+authors = "Kernighan and Ritchie"
+year = "1988"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "The classic: short, precise, still worth reading. It covers ANSI C (C89) only, so pair it with *Modern C* or *Effective C* for C99 through C23"
+
+[[groups.items]]
+id = "expert-c-programming-deep-secrets"
+title = "*Expert C Programming: Deep Secrets*"
+authors = "Peter van der Linden"
+year = "1994"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "Linking, memory, and advanced C"
+
+[[groups.items]]
+id = "making-embedded-systems-2nd-ed"
+title = "*Making Embedded Systems* (2nd ed)"
+authors = "Elecia White"
+year = "2024"
+type = "book"
+access = "paid"
+level = "beginner"
+marks = ["core"]
+description = "Best intro to embedded architecture and design patterns"
+
+[[groups.items]]
+id = "embedded-software-design"
+title = "*Embedded Software Design*"
+authors = "Jacob Beningo"
+type = "book"
+description = "Modern firmware architecture and maintainability"
+
+[[groups.items]]
+id = "embedded-c-coding-standard"
+title = "*Embedded C Coding Standard*"
+authors = "Barr Group"
+type = "book"
+url = "https://barrgroup.com/embedded-systems/books/embedded-c-coding-standard"
+link_text = "barrgroup.com"
+description = "Minimizing bugs and improving portability"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "modern-embedded-systems-programming"
+title = "Modern Embedded Systems Programming"
+authors = "Quantum Leaps (Miro Samek)"
+type = "video-series"
+label = "YouTube"
+marks = ["core"]
+url = "https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM"
+link_text = "Modern Embedded Systems Programming — Quantum Leaps (Miro Samek)"
+description = "Gold standard for embedded concepts and state machines"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "embedded-artistry"
+title = "Embedded Artistry"
+type = "blog"
+url = "https://embeddedartistry.com/"
+link_text = "embeddedartistry.com"
+description = "Modular, testable firmware architecture articles"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "jacob-beningo"
+title = "Jacob Beningo"
+type = "blog"
+url = "https://beningo.com/"
+link_text = "beningo.com"
+description = "Firmware architecture best practices"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "fastbit-embedded-brain-academy-udemy"
+title = "FastBit Embedded Brain Academy (Udemy)"
+type = "course"
+description = "ARM Cortex-M, bare-metal, RTOS"
+
+[[groups.items]]
+id = "modern-c-3rd-ed"
+title = "*Modern C* (3rd ed)"
+authors = "Jens Gustedt"
+year = "2025"
+type = "book"
+level = "intermediate"
+marks = ["core"]
+url = "https://gustedt.gitlabpages.inria.fr/modern-c/"
+link_text = "gustedt.gitlabpages.inria.fr"
+description = "C as it is written today, updated for C23 (ISO/IEC 9899:2024). The modern counterpart to K&R; the author also offers a free CC-licensed edition"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "effective-c-2nd-ed"
+title = "*Effective C* (2nd ed)"
+authors = "Robert C. Seacord"
+year = "2024"
+type = "book"
+url = "https://nostarch.com/effective-c-2nd-edition"
+link_text = "nostarch.com"
+description = "Professional, security-minded intro to C23 by the convenor of the C standards committee and author of *The CERT C Coding Standard*"
+verified = 2026-10-13
+
+[[groups.items]]
+id = "misra-c-2025-misra"
+title = "MISRA C:2025 — MISRA"
+type = "standard"
+url = "https://misra.org.uk/product/misra-c2025/"
+link_text = "MISRA C:2025"
+description = "The safety-critical C subset most embedded static analyzers check against; supersedes MISRA C:2012 and C:2023. Paid. Even if you never certify, the rules and their rationale sharpen embedded code review"
+verified = 2026-10-13
+
+[[groups]]
+title = "Key Concepts"
+intro = '''
+| Concept | Why It Matters |
+|---------|---------------|
+| Pointers, memory layout, and stack vs heap | Read C code without confusion |
+| `volatile`, `const`, and `static` qualifiers | Critical for embedded correctness |
+| Register manipulation and memory-mapped I/O | Hardware-software interface |
+| Interrupt handling and ISR design | Real-time responsiveness |
+| HAL (Hardware Abstraction Layer) design | Decoupling hardware from logic |
+'''

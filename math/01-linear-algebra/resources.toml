@@ -1,0 +1,133 @@
+# Resources for: Linear Algebra
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+
+[[groups.items]]
+id = "essence-of-linear-algebra"
+title = "Essence of Linear Algebra"
+authors = "3Blue1Brown"
+type = "video-series"
+marks = ["core"]
+url = "https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"
+link_text = "Link"
+description = "The gold standard for geometric intuition. Visualizes vectors, transformations, determinants, eigenvalues, and change of basis. Watch this first."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mit-18-06-linear-algebra"
+title = "MIT 18.06 Linear Algebra"
+authors = "Gilbert Strang"
+type = "course"
+access = "free"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/"
+link_text = "Link"
+description = "The legendary MIT course. Strang's teaching is unmatched for building computational and conceptual understanding simultaneously."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "linear-algebra-done-right"
+title = "Linear Algebra Done Right"
+authors = "Sheldon Axler"
+year = "2024"
+type = "book"
+access = "free"
+level = "intermediate"
+marks = ["core"]
+url = "https://linear.axler.net/"
+link_text = "Link"
+description = "The proof-based approach to linear algebra. Focuses on vector spaces and linear maps rather than determinants. Essential for mathematical maturity. Free 4th edition available."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-linear-algebra"
+title = "Introduction to Linear Algebra"
+authors = "Gilbert Strang"
+year = "2023"
+type = "book"
+access = "paid"
+level = "beginner"
+description = "Strang's textbook companion to 18.06. More computational than Axler, excellent for applications."
+
+[[groups.items]]
+id = "linear-algebra"
+title = "Linear Algebra"
+authors = "Jim Hefferon"
+type = "book"
+access = "free"
+level = "intermediate"
+url = "https://hefferon.net/linearalgebra/"
+link_text = "Link"
+description = "A free, well-written textbook with good motivation and exercises. Solid alternative to Strang's text."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "matrix-analysis-and-applied-linear"
+title = "Matrix Analysis and Applied Linear Algebra (2nd ed.)"
+authors = "Carl D. Meyer"
+year = "2023"
+type = "book"
+url = "https://doi.org/10.1137/1.9781611977448"
+link_text = "Link"
+description = "Advanced reference for matrix decompositions, norms, and numerical linear algebra. Useful when you need depth on SVD, pseudoinverses, or matrix perturbation theory. Second edition (SIAM, 2023; 1st ed. 2000), with a separate *Study and Solutions Guide*."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "linear-algebra-2"
+title = "Linear Algebra"
+authors = "Khan Academy"
+type = "video-series"
+url = "https://www.khanacademy.org/math/linear-algebra"
+link_text = "Link"
+description = "Gap-filler for specific topics. Good for extra practice on matrix operations, transformations, and eigenvalues."
+
+[[groups.items]]
+id = "mit-18-065-matrix-methods-in-data"
+title = "MIT 18.065 Matrix Methods in Data Analysis"
+authors = "Gilbert Strang"
+year = "2018"
+type = "course"
+access = "free"
+url = "https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/"
+link_text = "Link"
+description = "Strang's follow-up course connecting linear algebra to data science, deep learning, and signal processing. Bridge to ML applications."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mathematics-for-machine-learning-ch-24"
+title = "Mathematics for Machine Learning (Ch. 2–4)"
+authors = "Deisenroth, Faisal, Ong"
+year = "2020"
+type = "book"
+access = "free"
+level = "beginner"
+url = "https://mml-book.github.io/"
+link_text = "Link"
+description = "Chapters 2–4 cover linear algebra, analytic geometry, and matrix decompositions specifically targeted at ML. Good for connecting theory to practice."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "the-matrix-cookbook"
+title = "The Matrix Cookbook"
+authors = "Kaare Brandt Petersen, Michael Pedersen"
+year = "2012"
+type = "paper"
+url = "https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf"
+link_text = "Link"
+description = "Essential reference sheet for matrix identities, derivatives, and decompositions. Keep this bookmarked."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "introduction-to-applied-linear-algebra"
+title = "Introduction to Applied Linear Algebra: Vectors, Matrices, and Least Squares"
+authors = "Stephen Boyd, Lieven Vandenberghe"
+year = "2018"
+type = "book"
+access = "free"
+level = "beginner"
+url = "https://web.stanford.edu/~boyd/vmls/"
+link_text = "Link"
+description = "Linear algebra from an engineer's point of view: least squares, data fitting, regression, control, and state estimation, with a free PDF, slides, and lecture videos. The bridge from 18.06 to real applications and to *Convex Optimization* (Section 04)."
+verified = 2026-10-13

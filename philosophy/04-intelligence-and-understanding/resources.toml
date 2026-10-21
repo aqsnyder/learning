@@ -1,0 +1,127 @@
+# Resources for: Intelligence and Understanding
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+outro = '''
+> **See also:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md), for whether a benchmark score such as ARC measures the construct it is claimed to measure (Raji et al.; Recht et al.).
+'''
+
+[[groups.items]]
+id = "the-embodied-mind-cognitive-science-and"
+title = "The Embodied Mind: Cognitive Science and Human Experience"
+authors = "Francisco Varela, Evan Thompson, Eleanor Rosch"
+year = "1991"
+type = "book"
+access = "paid"
+level = "intermediate"
+marks = ["core"]
+description = "Foundational text that integrates phenomenology, cognitive science, and Buddhist philosophy. Argues cognition is enacted through bodily engagement with the world, not abstract computation."
+
+[[groups.items]]
+id = "the-extended-mind"
+title = "The Extended Mind"
+authors = "Andy Clark, David Chalmers"
+year = "1998"
+type = "paper"
+marks = ["core"]
+url = "https://doi.org/10.1093/analys/58.1.7"
+link_text = "Link"
+description = "Argues that cognitive processes extend beyond the brain into the environment (notebooks, phones, tools). If true, the boundary between mind and world is permeable."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "intelligence-without-representation"
+title = "Intelligence Without Representation"
+authors = "Rodney Brooks"
+year = "1991"
+type = "paper"
+url = "https://doi.org/10.1016/0004-3702(91)90053-M"
+link_text = "Link"
+description = "Brooks argues that intelligent behavior can emerge from simple interactions with the environment, without internal representations. Inspired subsumption architecture in robotics."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "what-computers-can-t-do-a-critique-of"
+title = "What Computers Can't Do: A Critique of Artificial Reason"
+authors = "Hubert Dreyfus"
+year = "1972"
+type = "book"
+description = "Dreyfus draws on Heidegger and Merleau-Ponty to argue that human intelligence relies on embodied skills and background understanding that resist formalization. Prescient and provocative."
+
+[[groups.items]]
+id = "being-and-time-selections-on-ready-to"
+title = "Being and Time (selections on \"ready-to-hand\")"
+authors = "Martin Heidegger"
+year = "1927"
+type = "book"
+description = "Heidegger's concept of ready-to-hand (Zuhandenheit) — that we primarily engage with the world through skilled use, not detached contemplation — is foundational for embodied cognition."
+
+[[groups.items]]
+id = "embodied-cognition"
+title = "Embodied Cognition"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/embodied-cognition/"
+link_text = "SEP"
+description = "Comprehensive overview of theories that emphasize the role of the body in shaping thought and cognition."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "externalism-about-the-mind-57-extended"
+title = "Externalism About the Mind (§§5–7: Extended Mind)"
+authors = "SEP"
+type = "encyclopedia"
+url = "https://plato.stanford.edu/entries/content-externalism/#ExteMind"
+link_text = "SEP"
+description = "SEP has no standalone \"Extended Mind\" entry; sections 5–7 of this one give a detailed treatment of the thesis that mental processes can extend into the world, its main objections, and its place in \"4E\" cognition."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "supersizing-the-mind-embodiment-action"
+title = "Supersizing the Mind: Embodiment, Action, and Cognitive Extension"
+authors = "Andy Clark"
+year = "2008"
+type = "book"
+description = "Clark's full development of the extended mind thesis. Argues that our minds are not brain-bound but extend into our tools and environment."
+
+[[groups.items]]
+id = "whatever-next-predictive-brains-situated"
+title = "Whatever Next? Predictive Brains, Situated Agents, and the Future of Cognitive Science"
+authors = "Andy Clark"
+year = "2013"
+type = "paper"
+url = "https://doi.org/10.1017/S0140525X12000477"
+link_text = "Link"
+description = "The landmark statement of predictive processing: brains as hierarchical prediction machines that minimize prediction error, tied to action and embodiment. One of the most influential unifying frameworks in cognitive science — and an obvious point of comparison with next-token-predicting language models."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "universal-intelligence-a-definition-of"
+title = "Universal Intelligence: A Definition of Machine Intelligence"
+authors = "Shane Legg, Marcus Hutter"
+year = "2007"
+type = "paper"
+url = "https://arxiv.org/abs/0712.3329"
+link_text = "Link"
+description = "Distils informal definitions of intelligence into a formal measure: an agent's ability to achieve goals across all computable environments, weighted toward simpler ones. The theoretical backdrop to talk of \"general\" intelligence."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "on-the-measure-of-intelligence"
+title = "On the Measure of Intelligence"
+authors = "François Chollet"
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1911.01547"
+link_text = "Link"
+description = "Argues that skill at tasks is a poor proxy for intelligence when priors and training data are unlimited, and defines intelligence as skill-acquisition efficiency. Introduces the ARC benchmark — the counterpoint to Legg & Hutter, and a live test of whether models generalize or memorize."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "other-minds-the-octopus-the-sea-and-the"
+title = "Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness"
+authors = "Peter Godfrey-Smith"
+year = "2016"
+type = "book"
+description = "A philosopher of science uses octopuses and other cephalopods — large-brained animals on an evolutionary branch far from ours — to ask how minds and consciousness arose. Their intelligence is real but alien to our usual concepts: the nearest thing to an independent experiment in building a mind, and a test case for every definition of intelligence and embodiment in this section."

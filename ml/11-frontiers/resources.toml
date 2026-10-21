@@ -1,0 +1,364 @@
+# Resources for: Frontiers (2023-2026+)
+# Edit this file, then run `python tools/build.py` to regenerate README.md, PROGRESS.md and the indexes.
+# Field reference: tools/README.md
+
+[[groups]]
+title = "Reasoning and Test-Time Compute"
+outro = '''
+Reasoning models are trained with large-scale reinforcement learning to think in long chains of thought, and their accuracy keeps improving as they are allowed more inference-time compute. OpenAI's o1 announcement introduced the paradigm. Snell et al. formalizes when test-time compute scaling beats simply training a larger model. DeepSeek-R1 openly demonstrated reinforcement-learning-driven chain-of-thought at scale (for the RL recipes behind it — GRPO and RL with verifiable rewards, plus the process-reward alternative it did not adopt — see [Section 10](../10-reinforcement-learning/README.md)).
+'''
+
+[[groups.items]]
+id = "scaling-llm-test-time-compute"
+title = "Scaling LLM Test-Time Compute"
+authors = "Snell et al."
+year = "2024"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2408.03314"
+link_text = "arxiv.org/abs/2408.03314"
+description = "Compares two uses of inference compute, search against process-reward verifiers and sequential revision, and shows when they beat a bigger model. Basis for Practice 3."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "deepseek-r1-2025"
+title = "DeepSeek-R1 (2025)"
+year = "2025"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2501.12948"
+link_text = "arxiv.org/abs/2501.12948"
+description = "R1-Zero gets long chain-of-thought reasoning from RL alone (GRPO, rule-based rewards); R1 adds cold-start SFT and more stages. The mini-project's recipe."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "learning-to-reason-with-llms-o1-openai"
+title = "Learning to Reason with LLMs (o1) – OpenAI (2024)"
+year = "2024"
+type = "blog"
+url = "https://openai.com/index/learning-to-reason-with-llms/"
+link_text = "openai.com"
+description = "OpenAI's announcement of o1: RL-trained chain-of-thought whose performance improves with both train-time RL and test-time thinking compute. Introduces the paradigm; few technical details."
+verified = 2026-10-13
+
+[[groups]]
+title = "Multimodal Models"
+outro = '''
+Multimodal models unify vision, language, and other modalities into a single architecture. CLIP pioneered contrastive image-text pretraining, SAM brought foundation-model thinking to segmentation, LLaVA showed the simple open recipe (vision encoder + projection + LLM, trained on visual instruction data) that most open vision-language models still follow, and Gemini represented the natively multimodal frontier at its 2023 release.
+'''
+
+[[groups.items]]
+id = "gemini"
+title = "Gemini"
+authors = "Google DeepMind"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2312.11805"
+link_text = "arxiv.org/abs/2312.11805"
+description = "Google's report on the first Gemini models (Ultra, Pro, Nano), multimodal across text, images, audio and video. A snapshot of the 2023 frontier."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "sam"
+title = "SAM"
+authors = "Kirillov et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2304.02643"
+link_text = "arxiv.org/abs/2304.02643"
+description = "Segment Anything: a promptable segmentation model trained on SA-1B, a billion-mask dataset, that transfers zero-shot to new tasks. Foundation-model thinking applied to segmentation."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "clip"
+title = "CLIP"
+authors = "Radford et al."
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2103.00020"
+link_text = "arxiv.org/abs/2103.00020"
+description = "Trains image and text encoders contrastively on 400M web image-text pairs, enabling zero-shot classification from text prompts. The vision-language foundation LLaVA builds on."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "llava-visual-instruction-tuning"
+title = "LLaVA: Visual Instruction Tuning"
+authors = "Liu et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2304.08485"
+link_text = "arxiv.org/abs/2304.08485"
+description = "Joins a CLIP vision encoder to an LLM via a projection layer, tuned on GPT-4-generated visual instruction data. The recipe most open VLMs follow."
+verified = 2026-10-13
+
+[[groups]]
+title = "Self-Supervised Learning"
+intro = '''
+Self-supervised learning extracts rich representations from unlabeled data, dramatically reducing the need for labeled datasets. Contrastive methods (SimCLR, MoCo) learn by comparing augmented views, self-distillation (DINO) learns without negative pairs, and masked prediction (MAE, JEPA) reconstructs missing information. These methods now provide the default initialization for most vision systems.
+'''
+
+[[groups.items]]
+id = "simclr"
+title = "SimCLR"
+authors = "Chen et al."
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2002.05709"
+link_text = "arxiv.org/abs/2002.05709"
+description = "Contrastive learning between two augmented views of each image. Shows that the augmentation mix, a nonlinear projection head and large batches all matter."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "moco-v2"
+title = "MoCo v2"
+authors = "Chen et al."
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2003.04297"
+link_text = "arxiv.org/abs/2003.04297"
+description = "Short note adding SimCLR's MLP projection head and stronger augmentation to MoCo's momentum encoder and negative queue; it outperforms SimCLR without large batches."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "dino-dinov2-caron-et-al-2021-oquab-et-al"
+title = "DINO / DINOv2 – Caron et al. (2021) / Oquab et al. (2023)"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2104.14294"
+link_text = "DINO"
+more_links = [{ text = "DINOv2", url = "https://arxiv.org/abs/2304.07193" }]
+description = "DINO: a student network matches a momentum teacher without negatives; its ViT attention maps outline objects. DINOv2 scales data and model for all-purpose frozen features."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mae-masked-autoencoders-are-scalable"
+title = "MAE — Masked Autoencoders Are Scalable Vision Learners"
+authors = "He et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2111.06377"
+link_text = "arxiv.org/abs/2111.06377"
+description = "Masks a high fraction (e.g. 75%) of image patches and reconstructs the pixels; the encoder sees only visible patches, so pretraining is fast."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "jepa-i-jepa"
+title = "JEPA / I-JEPA"
+authors = "Assran et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2301.08243"
+link_text = "arxiv.org/abs/2301.08243"
+description = "Predicts representations of masked target blocks from one context block, not pixels, and needs no hand-crafted augmentations. Compare with MAE's pixel reconstruction."
+verified = 2026-10-13
+
+[[groups]]
+title = "Alternative Architectures"
+intro = '''
+The transformer's quadratic attention cost has spurred a wave of subquadratic alternatives. State space models (S4, Mamba) achieve linear-time sequence modeling, while RWKV and xLSTM revisit recurrence with modern training tricks. These architectures are particularly compelling for long-context and real-time applications.
+'''
+
+[[groups.items]]
+id = "s4-efficiently-modeling-long-sequences"
+title = "S4 — Efficiently Modeling Long Sequences with Structured State Spaces"
+authors = "Gu, Goel & Ré"
+year = "2021"
+type = "paper"
+url = "https://arxiv.org/abs/2111.00396"
+link_text = "arxiv.org/abs/2111.00396"
+description = "Makes long-range state-space models practical with a structured (normal plus low-rank) parameterization; first to solve LRA's Path-X. Source for Practice 1's recurrence/convolution duality."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "mamba-linear-time-sequence-modeling-with"
+title = "Mamba — Linear-Time Sequence Modeling with Selective State Spaces"
+authors = "Gu & Dao"
+year = "2023"
+type = "paper"
+marks = ["core"]
+url = "https://arxiv.org/abs/2312.00752"
+link_text = "arxiv.org/abs/2312.00752"
+description = "Makes SSM parameters input-dependent ('selection'), giving up the convolution view for a hardware-aware parallel scan. Linear-time and competitive with transformers on language."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rwkv-reinventing-rnns-for-the"
+title = "RWKV — Reinventing RNNs for the Transformer Era"
+authors = "Peng et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2305.13048"
+link_text = "arxiv.org/abs/2305.13048"
+description = "A linear-attention RNN that trains in parallel like a transformer but runs with constant memory and compute per token at inference; scaled to 14B parameters."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "xlstm-extended-long-short-term-memory"
+title = "xLSTM — Extended Long Short-Term Memory"
+authors = "Beck et al."
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2405.04517"
+link_text = "arxiv.org/abs/2405.04517"
+description = "Revives the LSTM with exponential gating and new memory cells (scalar sLSTM, parallelizable matrix mLSTM), stacked into residual blocks. Tests whether scaled recurrence rivals transformers."
+verified = 2026-10-13
+
+[[groups]]
+title = "Agentic AI"
+intro = '''
+LLM-powered agents combine reasoning, tool use, memory, and retrieval to act autonomously. ReAct interleaves reasoning traces with actions, RAG grounds generation in retrieved documents (Sentence-BERT explains the sentence embeddings that semantic retrieval is built on), Tree of Thoughts explores branching reasoning paths, and Toolformer teaches models to call APIs on their own. "Building Effective Agents" distills the practical design patterns (prompt chaining, routing, orchestrator–workers, evaluator–optimizer, autonomous loops), and SWE-bench is the benchmark that made real-world software engineering the standard test of agent capability. (Sparks of AGI is a capabilities-evaluation study of GPT-4 rather than an agents paper; it sits here for historical reasons.)
+'''
+
+[[groups.items]]
+id = "react"
+title = "ReAct"
+authors = "Yao et al."
+year = "2022"
+type = "paper"
+url = "https://arxiv.org/abs/2210.03629"
+link_text = "arxiv.org/abs/2210.03629"
+description = "Interleaves reasoning traces with actions such as Wikipedia lookups, reducing chain-of-thought hallucination and error propagation. The Thought-Action-Observation loop of Practice 4."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "rag-retrieval-augmented-generation"
+title = "RAG — Retrieval-Augmented Generation"
+authors = "Lewis et al."
+year = "2020"
+type = "paper"
+url = "https://arxiv.org/abs/2005.11401"
+link_text = "arxiv.org/abs/2005.11401"
+description = "Pairs a pretrained seq2seq generator with a neural retriever over a dense Wikipedia index, fine-tuned jointly. Grounds generation in retrieved text, not parameters alone."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "tree-of-thoughts"
+title = "Tree of Thoughts"
+authors = "Yao et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2305.10601"
+link_text = "arxiv.org/abs/2305.10601"
+description = "Generalizes chain-of-thought into tree search: the model proposes and self-evaluates intermediate thoughts, with lookahead and backtracking. Prompt-level search, before RL-trained reasoners."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "toolformer"
+title = "Toolformer"
+authors = "Schick et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2302.04761"
+link_text = "arxiv.org/abs/2302.04761"
+description = "A model teaches itself, from a few demonstrations per API, when to call tools (calculator, Q&A, search, translation, calendar) and how to use results."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "sparks-of-agi"
+title = "Sparks of AGI"
+authors = "Bubeck et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2303.12712"
+link_text = "arxiv.org/abs/2303.12712"
+description = "Qualitative probes of an early GPT-4 across math, coding, vision, medicine and law, arguing it is an early, incomplete AGI. Read critically (Practice 5)."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "voyager"
+title = "Voyager"
+authors = "Wang et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2305.16291"
+link_text = "arxiv.org/abs/2305.16291"
+description = "A GPT-4-driven Minecraft agent with an automatic curriculum, a growing library of code skills and self-verification. An example of open-ended lifelong learning."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "sentence-bert-sentence-embeddings-using"
+title = "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks"
+authors = "Reimers & Gurevych"
+year = "2019"
+type = "paper"
+url = "https://arxiv.org/abs/1908.10084"
+link_text = "arxiv.org/abs/1908.10084"
+description = "Fine-tunes BERT with siamese and triplet networks so sentence embeddings compare by cosine similarity. The idea behind Practice 4's embedding retrieval."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "building-effective-agents"
+title = "Building Effective Agents"
+authors = "Schluntz & Zhang, Anthropic"
+year = "2024"
+type = "blog"
+url = "https://www.anthropic.com/engineering/building-effective-agents"
+link_text = "anthropic.com"
+description = "Anthropic's practical guide: start simple, and use composable workflows (prompt chaining, routing, parallelization, orchestrator-workers, evaluator-optimizer) before autonomous agents."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "swe-bench-can-language-models-resolve"
+title = "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?"
+authors = "Jimenez et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2310.06770"
+link_text = "arxiv.org/abs/2310.06770"
+description = "Benchmark of real GitHub issues from popular Python repositories: the model edits the codebase and repository tests judge the fix. Became the standard coding-agent benchmark."
+verified = 2026-10-13
+
+[[groups]]
+title = "Robotics and Embodied AI"
+intro = '''
+Foundation models are increasingly being applied to physical-world reasoning and control. RT-2 connects vision-language models directly to robot actions, π0 pairs a pretrained vision-language model with a flow-matching action head to control many different robots, and World Models learn compressed latent dynamics for planning and imagination.
+'''
+
+[[groups.items]]
+id = "rt-2"
+title = "RT-2"
+authors = "Brohan et al."
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2307.15818"
+link_text = "arxiv.org/abs/2307.15818"
+description = "Co-fine-tunes a vision-language model on web data and robot trajectories, emitting actions as text tokens. Names the class: vision-language-action (VLA) models."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "world-models"
+title = "World Models"
+authors = "Ha & Schmidhuber"
+year = "2018"
+type = "paper"
+url = "https://arxiv.org/abs/1803.10122"
+link_text = "arxiv.org/abs/1803.10122"
+description = "Learns a compressed latent model of an environment (VAE plus mixture-density RNN) and trains a small controller, even entirely inside the model's own 'dream'."
+verified = 2026-10-13
+
+[[groups.items]]
+id = "0-a-vision-language-action-flow-model"
+title = "π0: A Vision-Language-Action Flow Model for General Robot Control"
+authors = "Black et al."
+year = "2024"
+type = "paper"
+url = "https://arxiv.org/abs/2410.24164"
+link_text = "arxiv.org/abs/2410.24164"
+description = "Adds a flow-matching action head to a pretrained vision-language model, trained on many robot platforms. A generalist policy for dexterous tasks like laundry folding."
+verified = 2026-10-13
+
+[[groups]]
+title = "Annual Reports"
+outro = '''
+The AI Index provides a comprehensive yearly snapshot of research trends, industry adoption, policy developments, and societal impact. Useful for staying calibrated on the state of the field.
+'''
+
+[[groups.items]]
+id = "stanford-hai"
+title = "AI Index Report"
+authors = "Stanford HAI"
+type = "report"
+url = "https://hai.stanford.edu/ai-index"
+link_text = "hai.stanford.edu/ai-index"
+description = "Stanford HAI's annual data report on AI: research, technical performance, economy, education and policy. Its trend data calibrates Practice 5's predictions."
+verified = 2026-10-13
