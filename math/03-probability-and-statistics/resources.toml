@@ -8,13 +8,16 @@
 id = "statistics-110-probability"
 title = "Statistics 110: Probability"
 authors = "Joe Blitzstein"
+year = "2006–"
 type = "course"
 access = "free"
+level = "beginner"
 marks = ["core"]
-url = "https://projects.iq.harvard.edu/stat110"
-link_text = "Link"
-description = "Harvard's legendary probability course. Blitzstein's teaching is exceptional — builds deep intuition through storytelling and strategic problem-solving. Full lectures, textbook, and problem sets available free."
-verified = 2026-10-13
+url = "https://stat110.hsites.harvard.edu/"
+link_text = "Course site"
+more_links = [{ text = "Lecture videos (YouTube)", url = "https://www.youtube.com/playlist?list=PLLVplP8OIVc8EktkrD3Q8td0GmId7DjW0" }]
+description = "Joe Blitzstein's Harvard probability course (taught every year since 2006): recorded lectures, strategic practice problems with solutions, handouts, and the free textbook. Covers conditioning and Bayes' rule, random variables and expectation, the main distributions, the law of large numbers and the CLT, and Markov chains, built through stories and strategic problem-solving."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "all-of-statistics-a-concise-course-in"
@@ -30,36 +33,41 @@ description = "Covers probability, statistical inference, Bayesian methods, and 
 [[groups.items]]
 id = "introduction-to-probability"
 title = "Introduction to Probability"
-authors = "Joe Blitzstein, Jessica Hwang"
+authors = "Joseph K. Blitzstein, Jessica Hwang"
 year = "2019"
 type = "book"
 access = "free"
 level = "beginner"
-url = "https://stat110.hsites.harvard.edu/"
-link_text = "Link"
-description = "The textbook companion to Stat 110. Excellent exposition with strategic exercises. Covers counting, conditioning, distributions, Markov chains, and more."
-verified = 2026-10-13
+url = "https://probabilitybook.net"
+link_text = "Free PDF"
+description = "The Stat 110 textbook, 2nd edition (Chapman & Hall/CRC, 2019); the authors host the free PDF at this address (it opens a Google Drive file). Clear exposition with strategic exercises on counting, conditioning, distributions, inequalities and limit theorems, and Markov chains and MCMC, which Practice 1, 2 and 5 cite."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-probability-and"
 title = "Introduction to Probability and Statistics for Engineers and Scientists"
-authors = "Sheldon Ross"
+authors = "Sheldon M. Ross"
 year = "2020"
 type = "book"
-access = "free"
+access = "paid"
 level = "beginner"
-description = "Applied probability and statistics with engineering focus. Good for building computational fluency alongside theory."
+url = "https://shop.elsevier.com/books/introduction-to-probability-and-statistics-for-engineers-and-scientists/ross/978-0-12-824346-6"
+link_text = "Elsevier"
+description = "Applied probability and statistics with an engineering focus, 6th edition (Elsevier, 2020). Good for building computational fluency alongside theory; Practice 3 uses it for characterizing noise."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "statquest"
-title = "StatQuest"
-authors = "Josh Starmer"
+title = "StatQuest — Statistics Fundamentals"
+authors = "Josh Starmer (StatQuest)"
 type = "video-series"
 access = "free"
-url = "https://www.youtube.com/@statquest"
-link_text = "Link"
-description = "Fun, clear, no-nonsense visual explanations of probability, distributions, hypothesis testing, Bayesian inference, and more. Excellent gap-filler."
-verified = 2026-10-13
+level = "beginner"
+url = "https://www.youtube.com/playlist?list=PLblh5JKOoLUK0FLuzwntyYI10UQFUhsY9"
+link_text = "Playlist"
+more_links = [{ text = "Q–Q plots", url = "https://www.youtube.com/watch?v=okjYjClSjOg" }, { text = "Standard deviation vs standard error", url = "https://www.youtube.com/watch?v=A82brFpdr9g" }]
+description = "Josh Starmer's Statistics Fundamentals playlist (62 videos as of October 2026): short, plain visual explanations of core statistics, useful as a gap-filler. Practice 3 uses the two videos linked separately. Also used in ml/01."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bayesian-data-analysis"
@@ -77,41 +85,54 @@ verified = 2026-10-13
 [[groups.items]]
 id = "introduction-to-probability-models"
 title = "Introduction to Probability Models"
-authors = "Sheldon Ross"
+authors = "Sheldon M. Ross"
 year = "2023"
 type = "book"
-access = "free"
-level = "beginner"
-description = "Focused treatment of stochastic processes: Markov chains, Poisson processes, queuing theory, and renewal theory (13th edition). Essential for understanding MCMC and diffusion models."
+access = "paid"
+level = "intermediate"
+url = "https://shop.elsevier.com/books/introduction-to-probability-models/ross/978-0-443-18761-2"
+link_text = "Elsevier"
+description = "A focused treatment of stochastic processes, 13th edition (Elsevier, 2023): Markov chains, Poisson processes, queueing and renewal theory. Practice 5 uses its Markov-chain chapters; the background for MCMC and diffusion models."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mit-6-041-probabilistic-systems-analysis"
-title = "MIT 6.041 Probabilistic Systems Analysis"
+title = "MIT 6.041SC Probabilistic Systems Analysis and Applied Probability"
 authors = "John Tsitsiklis"
+year = "2013"
 type = "course"
 access = "free"
+level = "beginner"
 url = "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/"
-link_text = "Link"
-description = "MIT's rigorous probability course with excellent problem sets. Good complement to Blitzstein for a more engineering-oriented perspective."
-verified = 2026-10-13
+link_text = "MIT OCW"
+description = "MIT's probability course in OCW Scholar format (Fall 2013): lecture videos, problem-solving videos, and problem sets and exams with solutions, in four units (discrete models, general random variables, random processes, laws of large numbers and inference). An engineering-oriented complement to Stat 110."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "probability-theory-the-logic-of-science"
 title = "Probability Theory: The Logic of Science"
-authors = "E.T. Jaynes"
+authors = "E. T. Jaynes (ed. G. Larry Bretthorst)"
 year = "2003"
 type = "book"
 access = "paid"
 level = "advanced"
-description = "A philosophical and mathematical defense of Bayesian probability as extended logic. Deeply influential and thought-provoking. Advanced but illuminating."
+url = "https://www.cambridge.org/core/books/probability-theory/9CA08E224FF30123304E6D8935CF1A99"
+link_text = "Cambridge UP"
+description = "Jaynes's argument for probability as extended logic, edited by G. Larry Bretthorst (Cambridge University Press, 2003). Influential and thought-provoking; read it for perspective on Bayesian reasoning, not as a first text."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-stochastic-processes"
 title = "Introduction to Stochastic Processes"
-authors = "Gregory Lawler"
+authors = "Gregory F. Lawler"
 year = "2006"
 type = "book"
-description = "Rigorous treatment of Markov chains, martingales, and Brownian motion (2nd edition). Foundation for understanding diffusion models and stochastic calculus."
+access = "paid"
+level = "advanced"
+url = "https://www.routledge.com/Introduction-to-Stochastic-Processes/Lawler/p/book/9781584886518"
+link_text = "CRC Press"
+description = "A rigorous short course, 2nd edition (Chapman & Hall/CRC Probability Series, 2006): finite, countable and continuous-time Markov chains, optimal stopping, martingales, renewal processes, reversible chains, Brownian motion and stochastic integration. The step from Ross to diffusion models and stochastic calculus."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "statistical-rethinking-2024-course"
@@ -120,6 +141,7 @@ authors = "Richard McElreath"
 year = "2024"
 type = "course"
 access = "free"
+level = "intermediate"
 url = "https://github.com/rmcelreath/stat_rethinking_2024"
 link_text = "Link"
 description = "The best on-ramp to applied Bayesian modeling: causal DAGs, multilevel models, and MCMC taught through simulation, with free recorded lectures and course materials (pairs with the book's 2nd edition, CRC 2020). Do this before Gelman's BDA."
@@ -132,6 +154,7 @@ authors = "Roger Labbe"
 year = "2015"
 type = "book"
 access = "free"
+level = "intermediate"
 url = "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python"
 link_text = "Link"
 description = "Free, CC-licensed Jupyter-notebook book that builds the g-h filter, Kalman, extended/unscented Kalman, and particle filters up from Bayes' rule. Bayesian inference applied to noisy sensors — directly usable for sensor fusion and measurement work on embedded systems."

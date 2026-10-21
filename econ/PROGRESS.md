@@ -34,11 +34,11 @@ pass are ticked. Everything else is there for going deeper.
 
 - [ ] 🔑 Intermediate Microeconomics: A Modern Approach (10th ed.) — Hal Varian & Marc Melitz <!-- id:econ/01/intermediate-microeconomics-a-modern -->
 - [ ] Intermediate Microeconomics with Calculus (2nd ed.) — Hal Varian & Marc Melitz <!-- id:econ/01/intermediate-microeconomics-with -->
-- [ ] 🔑 MIT 14.01 Principles of Microeconomics (OCW) — Jonathan Gruber <!-- id:econ/01/mit-14-01-principles-of-microeconomics -->
-- [ ] Microeconomic Theory — Mas-Colell, Whinston, Green <!-- id:econ/01/microeconomic-theory -->
+- [ ] 🔑 MIT 14.01SC Principles of Microeconomics (OCW, Fall 2011) — Jonathan Gruber <!-- id:econ/01/mit-14-01-principles-of-microeconomics -->
+- [ ] Microeconomic Theory — Andreu Mas-Colell, Michael D. Whinston & Jerry R. Green <!-- id:econ/01/microeconomic-theory -->
 - [ ] Price Theory — David Friedman <!-- id:econ/01/price-theory -->
-- [ ] Khan Academy Microeconomics — Khan Academy <!-- id:econ/01/khan-academy-microeconomics -->
 - [ ] The Use of Knowledge in Society — F.A. Hayek <!-- id:econ/01/the-use-of-knowledge-in-society -->
+- [ ] Allocative Efficiency of Markets with Zero-Intelligence Traders: Market as a Partial Substitute for Individual Rationality — Dhananjay K. Gode & Shyam Sunder <!-- id:econ/01/allocative-efficiency-of-markets-with -->
 - [ ] The Problem of Social Cost — Ronald Coase <!-- id:econ/01/the-problem-of-social-cost -->
 - [ ] Beyond Markets and States: Polycentric Governance of Complex Economic Systems — Elinor Ostrom <!-- id:econ/01/beyond-markets-and-states-polycentric -->
 - [ ] Models in Microeconomic Theory — Martin J. Osborne & Ariel Rubinstein <!-- id:econ/01/models-in-microeconomic-theory -->
@@ -78,15 +78,15 @@ pass are ticked. Everything else is there for going deeper.
 ## Section 02 — Game Theory
 
 - [ ] 🔑 Game Theory: An Introduction — Steven Tadelis <!-- id:econ/02/game-theory-an-introduction -->
-- [ ] 🔑 Game Theory (ECON 159) — Ben Polak, Yale <!-- id:econ/02/game-theory-econ-159 -->
+- [ ] 🔑 Game Theory (ECON 159, Open Yale Courses, Fall 2007) — Ben Polak, Yale <!-- id:econ/02/game-theory-econ-159 -->
 - [ ] Strategy: An Introduction to Game Theory — Joel Watson <!-- id:econ/02/strategy-an-introduction-to-game-theory -->
 - [ ] A Course in Game Theory — Martin Osborne & Ariel Rubinstein <!-- id:econ/02/a-course-in-game-theory -->
-- [ ] The Strategy of Conflict — Thomas Schelling <!-- id:econ/02/the-strategy-of-conflict -->
+- [ ] The Strategy of Conflict (with a new preface by the author) — Thomas C. Schelling <!-- id:econ/02/the-strategy-of-conflict -->
 - [ ] Non-Cooperative Games — John Nash <!-- id:econ/02/non-cooperative-games -->
-- [ ] Game Theory (Coursera) — Matthew Jackson, Kevin Leyton-Brown & Yoav Shoham (Stanford / UBC) <!-- id:econ/02/game-theory-coursera -->
+- [ ] Game Theory (Coursera) — Matthew O. Jackson, Kevin Leyton-Brown & Yoav Shoham (Stanford / UBC) <!-- id:econ/02/game-theory-coursera -->
 - [ ] Game Theory 101 — William Spaniel <!-- id:econ/02/game-theory-101 -->
 - [ ] Evolution and the Theory of Games — John Maynard Smith <!-- id:econ/02/evolution-and-the-theory-of-games -->
-- [ ] The Art of Strategy — Avinash Dixit & Barry Nalebuff <!-- id:econ/02/the-art-of-strategy -->
+- [ ] The Art of Strategy: A Game Theorist's Guide to Success in Business and Life — Avinash K. Dixit & Barry J. Nalebuff <!-- id:econ/02/the-art-of-strategy -->
 - [ ] The Evolution of Cooperation — Robert Axelrod & William D. Hamilton <!-- id:econ/02/the-evolution-of-cooperation -->
 - [ ] Bargaining and Markets — Martin J. Osborne & Ariel Rubinstein <!-- id:econ/02/bargaining-and-markets -->
 - [ ] 🛠️ Exercise 1: Equilibria by hand, confirmed in code <!-- id:econ/02/ex-1 -->
@@ -105,13 +105,15 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 Thinking, Fast and Slow — Daniel Kahneman <!-- id:econ/03/thinking-fast-and-slow -->
 - [ ] Reconstruction of a Train Wreck: How Priming Research Went off the Rails — Ulrich Schimmack, Moritz Heene & Kamini Kesavan <!-- id:econ/03/reconstruction-of-a-train-wreck-how -->
 - [ ] 🔑 Prospect Theory: An Analysis of Decision under Risk — Daniel Kahneman & Amos Tversky <!-- id:econ/03/prospect-theory-an-analysis-of-decision -->
+- [ ] Advances in Prospect Theory: Cumulative Representation of Uncertainty — Amos Tversky & Daniel Kahneman <!-- id:econ/03/advances-in-prospect-theory -->
 - [ ] Judgment under Uncertainty: Heuristics and Biases — Amos Tversky & Daniel Kahneman <!-- id:econ/03/judgment-under-uncertainty-heuristics -->
-- [ ] The Foundations of Statistics — Leonard Savage <!-- id:econ/03/the-foundations-of-statistics -->
+- [ ] The Foundations of Statistics (2nd rev. ed.) — Leonard J. Savage <!-- id:econ/03/the-foundations-of-statistics -->
 - [ ] Risk, Uncertainty and Profit — Frank Knight <!-- id:econ/03/risk-uncertainty-and-profit -->
-- [ ] Theory of Games and Economic Behavior (Ch. 1 & Appendix) — John von Neumann & Oskar Morgenstern <!-- id:econ/03/theory-of-games-and-economic-behavior-ch -->
+- [ ] Risk, Ambiguity, and the Savage Axioms — Daniel Ellsberg <!-- id:econ/03/risk-ambiguity-and-the-savage-axioms -->
+- [ ] Theory of Games and Economic Behavior: 60th Anniversary Commemorative Edition (Ch. 1 & Appendix) — John von Neumann & Oskar Morgenstern <!-- id:econ/03/theory-of-games-and-economic-behavior-ch -->
 - [ ] 🔑 Decision Theory (Stanford Encyclopedia of Philosophy) — Katie Steele & H. Orri Stefánsson <!-- id:econ/03/decision-theory-stanford-encyclopedia-of -->
-- [ ] Rational Choice in an Uncertain World — Reid Hastie & Robyn Dawes <!-- id:econ/03/rational-choice-in-an-uncertain-world -->
-- [ ] Predictably Irrational — Dan Ariely <!-- id:econ/03/predictably-irrational -->
+- [ ] Rational Choice in an Uncertain World: The Psychology of Judgment and Decision Making (2nd ed.) — Reid Hastie & Robyn M. Dawes <!-- id:econ/03/rational-choice-in-an-uncertain-world -->
+- [ ] Predictably Irrational: The Hidden Forces That Shape Our Decisions — Dan Ariely <!-- id:econ/03/predictably-irrational -->
 - [ ] 🛠️ Exercise 1: Allais by algebra <!-- id:econ/03/ex-1 -->
 - [ ] 🛠️ Exercise 2: Base rates on the production line <!-- id:econ/03/ex-2 -->
 - [ ] 🛠️ Exercise 3: Prospect-theory calculator <!-- id:econ/03/ex-3 -->
@@ -128,7 +130,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 An Introduction to the Theory of Mechanism Design — Tilman Börgers <!-- id:econ/04/an-introduction-to-the-theory-of -->
 - [ ] 🔑 Counterspeculation, Auctions, and Competitive Sealed Tenders — William Vickrey <!-- id:econ/04/counterspeculation-auctions-and -->
 - [ ] Incentive Compatibility and the Bargaining Problem — Roger Myerson <!-- id:econ/04/incentive-compatibility-and-the -->
-- [ ] Auction Theory — Vijay Krishna <!-- id:econ/04/auction-theory -->
+- [ ] Auction Theory (2nd ed.) — Vijay Krishna <!-- id:econ/04/auction-theory -->
 - [ ] Optimal Auction Design — Roger Myerson <!-- id:econ/04/optimal-auction-design -->
 - [ ] The Lovely but Lonely Vickrey Auction — Lawrence Ausubel & Paul Milgrom <!-- id:econ/04/the-lovely-but-lonely-vickrey-auction -->
 - [ ] Nobel Prize Lecture — Paul Milgrom — Paul Milgrom <!-- id:econ/04/nobel-prize-lecture-paul-milgrom -->
@@ -170,14 +172,14 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 06 — Behavioral Economics
 
-- [ ] 🔑 Misbehaving: The Making of Behavioral Economics — Richard Thaler <!-- id:econ/06/misbehaving-the-making-of-behavioral -->
+- [ ] 🔑 Misbehaving: The Making of Behavioral Economics — Richard H. Thaler <!-- id:econ/06/misbehaving-the-making-of-behavioral -->
 - [ ] 🔑 Nudge: Improving Decisions About Health, Wealth, and Happiness — Richard Thaler & Cass Sunstein <!-- id:econ/06/nudge-improving-decisions-about-health -->
 - [ ] Mental Accounting Matters — Richard Thaler <!-- id:econ/06/mental-accounting-matters -->
-- [ ] Anomalies Series — Richard Thaler <!-- id:econ/06/anomalies-series -->
+- [ ] Anomalies (column series in the *Journal of Economic Perspectives*) — Richard H. Thaler, with Daniel Kahneman, Jack L. Knetsch & George Loewenstein <!-- id:econ/06/anomalies-series -->
 - [ ] Libertarian Paternalism — Richard Thaler & Cass Sunstein <!-- id:econ/06/libertarian-paternalism -->
-- [ ] Noise: A Flaw in Human Judgment — Daniel Kahneman, Olivier Sibony, Cass Sunstein <!-- id:econ/06/noise-a-flaw-in-human-judgment -->
-- [ ] The Undoing Project — Michael Lewis <!-- id:econ/06/the-undoing-project -->
-- [ ] Behavioral Scientist <!-- id:econ/06/behavioral-scientist -->
+- [ ] Noise: A Flaw in Human Judgment — Daniel Kahneman, Olivier Sibony & Cass R. Sunstein <!-- id:econ/06/noise-a-flaw-in-human-judgment -->
+- [ ] The Undoing Project: A Friendship That Changed Our Minds — Michael Lewis <!-- id:econ/06/the-undoing-project -->
+- [ ] Behavioral Scientist — Behavioral Scientist (magazine) <!-- id:econ/06/behavioral-scientist -->
 - [ ] Psychology and Economics: Evidence from the Field — Stefano DellaVigna <!-- id:econ/06/psychology-and-economics-evidence-from -->
 - [ ] RCTs to Scale: Comprehensive Evidence from Two Nudge Units — Stefano DellaVigna & Elizabeth Linos <!-- id:econ/06/rcts-to-scale-comprehensive-evidence -->
 - [ ] Behavioral Game Theory: Experiments in Strategic Interaction — Colin Camerer <!-- id:econ/06/behavioral-game-theory-experiments-in -->
@@ -194,11 +196,10 @@ pass are ticked. Everything else is there for going deeper.
 ## Section 07 — Network Economics
 
 - [ ] 🔑 Networks, Crowds, and Markets — David Easley & Jon Kleinberg <!-- id:econ/07/networks-crowds-and-markets -->
-- [ ] Platform Revolution — Geoffrey Parker, Marshall Van Alstyne, Sangeet Paul Choudary <!-- id:econ/07/platform-revolution -->
+- [ ] Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You — Geoffrey G. Parker, Marshall W. Van Alstyne & Sangeet Paul Choudary <!-- id:econ/07/platform-revolution -->
 - [ ] Platform Competition in Two-Sided Markets — Jean-Charles Rochet & Jean Tirole <!-- id:econ/07/platform-competition-in-two-sided -->
 - [ ] Network Externalities, Competition, and Compatibility — Michael Katz & Carl Shapiro <!-- id:econ/07/network-externalities-competition-and -->
-- [ ] Information Rules — Carl Shapiro & Hal Varian <!-- id:econ/07/information-rules -->
-- [ ] Social and Economic Networks — Matthew Jackson, Stanford <!-- id:econ/07/social-and-economic-networks -->
+- [ ] Social and Economic Networks: Models and Analysis — Matthew O. Jackson, Stanford <!-- id:econ/07/social-and-economic-networks -->
 - [ ] Matchmakers: The New Economics of Multisided Platforms — David Evans & Richard Schmalensee <!-- id:econ/07/matchmakers-the-new-economics-of -->
 - [ ] Stratechery — Ben Thompson <!-- id:econ/07/stratechery -->
 - [ ] Metcalfe's Law is Wrong — Bob Briscoe, Andrew Odlyzko & Benjamin Tilly <!-- id:econ/07/metcalfe-s-law-is-wrong -->
@@ -310,19 +311,23 @@ pass are ticked. Everything else is there for going deeper.
 
 ## Section 10 — Monetary Economics and Crypto
 
+- [ ] 🔑 Money in the modern economy: an introduction — Michael McLeay, Amar Radia & Ryland Thomas <!-- id:econ/10/money-in-the-modern-economy -->
+- [ ] Money: The Unauthorised Biography — Felix Martin <!-- id:econ/10/money-the-unauthorized-biography -->
+- [ ] 🔑 The Federal Reserve and the Financial Crisis (Chairman Bernanke's College Lecture Series) — Ben S. Bernanke <!-- id:econ/10/the-federal-reserve-and-the-financial-crisis -->
+- [ ] Monetary Theory and Policy (4th ed.) — Carl E. Walsh <!-- id:econ/10/monetary-theory-and-policy -->
+- [ ] Discretion versus policy rules in practice — John B. Taylor <!-- id:econ/10/discretion-versus-policy-rules-in-practice -->
+- [ ] III. The next-generation monetary and financial system (BIS Annual Economic Report 2025) — Bank for International Settlements <!-- id:econ/10/iii-the-next-generation-monetary-and -->
 - [ ] The Bitcoin Standard — Saifedean Ammous <!-- id:econ/10/the-bitcoin-standard -->
-- [ ] Money: The Unauthorized Biography — Felix Martin <!-- id:econ/10/money-the-unauthorized-biography -->
 - [ ] Denationalisation of Money: The Argument Refined — F.A. Hayek <!-- id:econ/10/denationalisation-of-money-the-argument -->
-- [ ] 🔑 Bitcoin: A Peer-to-Peer Electronic Cash System — Satoshi Nakamoto <!-- id:econ/10/bitcoin-a-peer-to-peer-electronic-cash -->
+- [ ] 🔑 The Microeconomics of Cryptocurrencies — Hanna Halaburda, Guillaume Haeringer, Joshua S. Gans & Neil Gandal <!-- id:econ/10/the-microeconomics-of-cryptocurrencies -->
+- [ ] Bitcoin: A Peer-to-Peer Electronic Cash System — Satoshi Nakamoto <!-- id:econ/10/bitcoin-a-peer-to-peer-electronic-cash -->
 - [ ] Ethereum Whitepaper — Vitalik Buterin <!-- id:econ/10/ethereum-whitepaper -->
-- [ ] 🔑 Blockchain and Money — Gary Gensler, MIT <!-- id:econ/10/blockchain-and-money -->
-- [ ] Monetary Theory and Policy — Carl Walsh <!-- id:econ/10/monetary-theory-and-policy -->
+- [ ] Transaction Fee Mechanism Design for the Ethereum Blockchain: An Economic Analysis of EIP-1559 — Tim Roughgarden <!-- id:econ/10/transaction-fee-mechanism-design-for-the -->
+- [ ] Taming Wildcat Stablecoins — Gary B. Gorton & Jeffery Y. Zhang <!-- id:econ/10/taming-wildcat-stablecoins -->
+- [ ] Anatomy of a Run: The Terra Luna Crash — Jiageng Liu, Igor Makarov & Antoinette Schoar <!-- id:econ/10/anatomy-of-a-run-the-terra-luna-crash -->
+- [ ] Blockchain and Money — Gary Gensler (MIT) <!-- id:econ/10/blockchain-and-money -->
 - [ ] Vitalik Buterin's Blog — Vitalik Buterin <!-- id:econ/10/vitalik-buterin-s-blog -->
 - [ ] Cryptoeconomics — Eric Voskuil <!-- id:econ/10/cryptoeconomics -->
-- [ ] The Microeconomics of Cryptocurrencies — Hanna Halaburda, Guillaume Haeringer, Joshua S. Gans & Neil Gandal <!-- id:econ/10/the-microeconomics-of-cryptocurrencies -->
-- [ ] Transaction Fee Mechanism Design for the Ethereum Blockchain: An Economic Analysis of EIP-1559 — Tim Roughgarden <!-- id:econ/10/transaction-fee-mechanism-design-for-the -->
-- [ ] Anatomy of a Run: The Terra Luna Crash — Jiageng Liu, Igor Makarov & Antoinette Schoar <!-- id:econ/10/anatomy-of-a-run-the-terra-luna-crash -->
-- [ ] III. The next-generation monetary and financial system (BIS Annual Economic Report 2025) — Bank for International Settlements <!-- id:econ/10/iii-the-next-generation-monetary-and -->
 - [ ] 🛠️ Exercise 1: What is money? Yap vs. stock-to-flow <!-- id:econ/10/ex-1 -->
 - [ ] 🛠️ Exercise 2: Nakamoto's attacker calculation, checked <!-- id:econ/10/ex-2 -->
 - [ ] 🛠️ Exercise 3: Security budget and Budish's critique <!-- id:econ/10/ex-3 -->
@@ -338,13 +343,13 @@ pass are ticked. Everything else is there for going deeper.
 
 - [ ] 🔑 Categorizing Variants of Goodhart's Law — David Manheim & Scott Garrabrant <!-- id:econ/11/categorizing-variants-of-goodhart-s-law -->
 - [ ] 🔑 Open Problems in Cooperative AI — Allan Dafoe, Edward Hughes, Yoram Bachrach et al. <!-- id:econ/11/open-problems-in-cooperative-ai -->
-- [ ] The Off-Switch Game — Dylan Hadfield-Menell et al. <!-- id:econ/11/the-off-switch-game -->
+- [ ] The Off-Switch Game — Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel & Stuart Russell <!-- id:econ/11/the-off-switch-game -->
 - [ ] Incomplete Contracting and AI Alignment — Dylan Hadfield-Menell & Gillian K. Hadfield <!-- id:econ/11/incomplete-contracting-and-ai-alignment -->
-- [ ] Concrete Problems in AI Safety — Dario Amodei et al. <!-- id:econ/11/concrete-problems-in-ai-safety -->
+- [ ] Concrete Problems in AI Safety — Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, Dan Mané <!-- id:econ/11/concrete-problems-in-ai-safety -->
 - [ ] The Alignment Problem — Brian Christian <!-- id:econ/11/the-alignment-problem -->
 - [ ] Multi-Principal Assistance Games — Arnaud Fickinger, Simon Zhuang, Dylan Hadfield-Menell & Stuart Russell <!-- id:econ/11/multi-principal-assistance-games -->
-- [ ] BlueDot Impact AI safety courses (formerly AI Safety Fundamentals) — BlueDot Impact <!-- id:econ/11/bluedot-impact-ai-safety-courses -->
-- [ ] AI Alignment Forum <!-- id:econ/11/ai-alignment-forum -->
+- [ ] Online AI safety courses and project sprints — BlueDot Impact <!-- id:econ/11/bluedot-impact-ai-safety-courses -->
+- [ ] AI Alignment Forum — LessWrong team (maintainers) <!-- id:econ/11/ai-alignment-forum -->
 - [ ] Goodhart's Law — LessWrong <!-- id:econ/11/goodhart-s-law -->
 - [ ] 🛠️ Exercise 1: Goodhart in 30 lines <!-- id:econ/11/ex-1 -->
 - [ ] 🛠️ Exercise 2: The Off-Switch Game, reproduced <!-- id:econ/11/ex-2 -->
@@ -382,8 +387,3 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] ✅ Check Yourself again, a week later <!-- id:econ/12/check-2 -->
 - [ ] ✅ Check Yourself again, a month later <!-- id:econ/12/check-3 -->
 - [ ] 📝 One-page note written in `my/notes/` <!-- id:econ/12/note -->
-
-## Further reading (no section home)
-
-- [ ] Misbehaving — Richard Thaler <!-- id:econ/extras/misbehaving -->
-- [ ] Nudge — Richard Thaler & Cass Sunstein <!-- id:econ/extras/nudge -->

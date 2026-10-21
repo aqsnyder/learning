@@ -3,6 +3,9 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Tracked in another curriculum:** Bronstein, Bruna, Cohen & Veličković, *Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges* (2021), is core in [ml/13](../../ml/13-graphs-geometry-and-science/README.md). Read its chapters on graphs there for the unifying view behind Practice 5.
+'''
 
 [[groups.items]]
 id = "graph-theory"
@@ -19,20 +22,18 @@ description = "The standard graduate text (6th edition, Springer GTM 173). Compr
 verified = 2026-10-13
 
 [[groups.items]]
-id = "introduction-to-graph-theory"
-title = "Introduction to Graph Theory"
-authors = "Douglas West"
-year = "2001"
+id = "mcs-part-iii-counting"
+title = "Mathematics for Computer Science — Part III: Counting"
+authors = "Eric Lehman, F. Thomson Leighton, Albert R. Meyer"
+year = "2015"
 type = "book"
-description = "More accessible than Diestel with extensive exercises. Good first book for graph theory with emphasis on combinatorial proofs."
-
-[[groups.items]]
-id = "algebraic-graph-theory"
-title = "Algebraic Graph Theory"
-authors = "Chris Godsil, Gordon Royle"
-year = "2001"
-type = "book"
-description = "Connects graph theory to linear algebra: adjacency matrices, Laplacians, spectral properties. Essential foundation for spectral graph theory and GNNs."
+access = "free"
+level = "beginner"
+marks = ["core"]
+url = "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/mit6_042js15_textbook2.pdf"
+link_text = "PDF (MIT OCW)"
+description = "The open textbook of MIT 6.042J (revision of 18 May 2015, on MIT OpenCourseWare), and the section's combinatorics core. Ch. 14 (Cardinality Rules) covers the bijection rule (\"counting one thing by counting another\"), the pigeonhole principle, inclusion–exclusion and combinatorial proofs; Ch. 15 covers counting with generating functions and solving linear recurrences, with many problems. Its Ch. 11–12 (simple and planar graphs) are a gentler companion to Diestel. The course is listed in Section 00."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "spectral-graph-theory"
@@ -41,30 +42,57 @@ authors = "Daniel Spielman"
 year = "2025"
 type = "course"
 access = "free"
+level = "advanced"
+marks = ["core"]
 url = "https://www.cs.yale.edu/homes/spielman/462/462schedule.html"
 link_text = "Link"
 description = "Spielman's Yale course (Spring 2025 offering): a lecture schedule with notes for most lectures, and readings from his draft book *Spectral and Algebraic Graph Theory*. Covers the Laplacian, graph partitioning and Cheeger's inequality, random walks, resistor networks and effective resistance, expanders, and Laplacian solvers — the mathematics behind spectral clustering."
 verified = 2026-10-13
 
 [[groups.items]]
+id = "introduction-to-graph-theory"
+title = "Introduction to Graph Theory"
+authors = "Douglas West"
+year = "2001"
+type = "book"
+access = "paid"
+level = "intermediate"
+description = "More accessible than Diestel with extensive exercises. Good first book for graph theory with emphasis on combinatorial proofs."
+
+[[groups.items]]
+id = "algebraic-graph-theory"
+title = "Algebraic Graph Theory"
+authors = "Chris Godsil, Gordon Royle"
+year = "2001"
+type = "book"
+access = "paid"
+level = "advanced"
+description = "Connects graph theory to linear algebra: adjacency matrices, Laplacians, spectral properties. Essential foundation for spectral graph theory and GNNs."
+
+[[groups.items]]
 id = "semi-supervised-classification-with"
 title = "Semi-Supervised Classification with Graph Convolutional Networks"
-authors = "Thomas Kipf, Max Welling"
+authors = "Thomas N. Kipf, Max Welling"
 year = "2016"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1609.02907"
-link_text = "Link"
-description = "The GCN paper. Understanding this requires spectral graph theory — seeing the math behind it deepens appreciation of both."
-verified = 2026-10-13
+link_text = "arXiv"
+description = "The GCN paper: a graph convolution derived from a first-order approximation of spectral filters on graphs. Practice 5 re-derives its propagation rule from spectral graph theory and reproduces its random-weight karate-club demo. Also used in ml/13."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "combinatorics-and-graph-theory"
 title = "Combinatorics and Graph Theory"
-authors = "John Harris, Jeffry Hirst, Michael Mossinghoff"
+authors = "John Harris, Jeffry L. Hirst, Michael Mossinghoff"
 year = "2008"
 type = "book"
-description = "Accessible introduction covering both combinatorics and graph theory with good problem sets. Good starting point."
+access = "paid"
+level = "beginner"
+url = "https://link.springer.com/book/10.1007/978-0-387-79711-3"
+link_text = "Springer"
+description = "An accessible introduction to both graph theory and combinatorics with good problem sets, 2nd edition (Springer Undergraduate Texts in Mathematics, 2008). A good starting point; Practice 1 and 2 cite it."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "graph-theory-full-course"
@@ -72,21 +100,10 @@ title = "Graph Theory (Full Course)"
 authors = "Sarada Herke"
 type = "video-series"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/playlist?list=PLoJC20gNfC2gmT_5WgwYwGMvgCjYVsIQg"
 link_text = "Link"
 description = "Clear, methodical video lectures covering fundamental graph theory. Good visual supplement."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "geometric-deep-learning-grids-groups"
-title = "Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges"
-authors = "Bronstein et al."
-year = "2021"
-type = "paper"
-access = "free"
-url = "https://arxiv.org/abs/2104.13478"
-link_text = "Link"
-description = "The manifesto connecting graph theory, group theory, and geometry to deep learning. Seeing the mathematical unification is powerful."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -95,4 +112,17 @@ title = "Networks"
 authors = "Mark Newman"
 year = "2018"
 type = "book"
+access = "paid"
+level = "intermediate"
 description = "Comprehensive treatment of network science: random graphs, small worlds, community detection, spreading processes. Bridges theory and real-world applications."
+
+[[groups.items]]
+id = "oeis"
+title = "The On-Line Encyclopedia of Integer Sequences (OEIS)"
+authors = "The OEIS Foundation"
+type = "database"
+access = "free"
+url = "https://oeis.org/"
+link_text = "oeis.org"
+description = "Look up a sequence by its first terms to check a count against the literature; Practice 2 matches its Catalan numbers to A000108. Maintained by The OEIS Foundation Inc."
+verified = 2026-10-21

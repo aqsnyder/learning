@@ -6,8 +6,9 @@
 
 [[groups.items]]
 id = "introduction-to-solid-state-physics"
-title = "Introduction to Solid State Physics"
+title = "Introduction to Solid State Physics (8th ed.)"
 authors = "Charles Kittel"
+year = "2005"
 type = "book"
 marks = ["core"]
 description = "The classic undergraduate text: crystal structure, phonons, the free-electron Fermi gas, energy bands and semiconductor crystals, plus the chapter on dielectrics and ferroelectrics behind Practice 4. Read it after Simon, for breadth and for its problems."
@@ -18,18 +19,23 @@ level = "intermediate"
 id = "the-oxford-solid-state-basics"
 title = "The Oxford Solid State Basics"
 authors = "Steven H. Simon"
+year = "2013"
 type = "book"
 marks = ["core"]
-description = "A clear modern first course: the Drude and Sommerfeld models, vibrations and electrons in one-dimensional chains, tight binding, semiconductor physics and devices, and magnetism with mean-field theory. The first pass through objectives 1–3, before Kittel."
+url = "https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680771"
+link_text = "Oxford University Press"
+description = "A clear modern first course in 23 short chapters: Drude and Sommerfeld theory (Ch. 3–4), vibrations of one-dimensional monatomic and diatomic chains (Ch. 9–10), electrons in periodic solids, semiconductors and devices, and magnetism up to mean-field theory (Ch. 22). The first pass through objectives 1–4, before Kittel."
 access = "paid"
 level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "solid-state-physics"
 title = "Solid State Physics"
-authors = "Ashcroft & Mermin"
+authors = "Neil W. Ashcroft & N. David Mermin"
+year = "1976"
 type = "book"
-description = "The standard graduate reference, more advanced and complete than Kittel: the Drude and Sommerfeld theories and their failures (Ch. 1–2, used in Practice 2), semiclassical transport, magnetism and superconductivity."
+description = "The standard graduate reference (Holt, Rinehart and Winston, 1976), more advanced and complete than Kittel: the Drude and Sommerfeld theories and their failures (Ch. 1–2, used in Practice 2), semiclassical transport, magnetism and superconductivity."
 access = "paid"
 level = "advanced"
 
@@ -50,8 +56,9 @@ verified = 2026-10-21
 id = "modern-condensed-matter-physics"
 title = "Modern Condensed Matter Physics"
 authors = "Girvin & Yang"
+year = "2019"
 type = "book"
-description = "A modern graduate text that reaches topological phases and the quantum Hall effect; the source for Practice 1's stretch goal, the winding number of the dimerized chain."
+description = "A modern graduate text (Cambridge University Press, 2019) that reaches topological phases and the quantum Hall effect; the source for Practice 1's stretch goal, the winding number of the dimerized chain."
 access = "paid"
 level = "advanced"
 

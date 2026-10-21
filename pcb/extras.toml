@@ -15,15 +15,20 @@ level = "beginner"
 url = "https://nostarch.com/practical-PCB-design"
 link_text = "nostarch.com"
 description = "No Starch Press, October 2026, 272 pp. ([nostarch.com](https://nostarch.com/practical-PCB-design)). Takes a working breadboard circuit to a production board: component selection and tolerances, symbols and footprints, board structure, placement, routing and vias, design rules, design reviews, assembly files, ordering and testing. Examples use Altium CircuitMaker; the methods carry over to KiCad"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "complete-pcb-design-using-orcad"
-title = "Complete PCB Design Using OrCAD"
-authors = "Kraig Mitzner"
+title = "Complete PCB Design Using OrCAD Capture and PCB Editor (2nd ed.)"
+authors = "Kraig Mitzner, Bob Doe, Alexander Akulin, Anton Suponin, Dirk Müller"
 type = "book"
 access = "paid"
 level = "beginner"
-description = "Industry-ready DFM/DFT practices"
+description = "A complete OrCAD Capture and PCB Editor workflow, from schematic to fabrication outputs, with design-for-manufacture and design-for-test practices (2nd edition, Academic Press, June 2019). Useful if your shop uses OrCAD rather than KiCad"
+year = "2019"
+url = "https://shop.elsevier.com/books/complete-pcb-design-using-orcad-capture-and-pcb-editor/mitzner/978-0-12-817684-9"
+link_text = "Elsevier"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "kicad-official-documentation"

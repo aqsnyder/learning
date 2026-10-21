@@ -20,23 +20,30 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "stanford-ee364a-convex-optimization"
-title = "Stanford EE364a: Convex Optimization"
-authors = "Stephen Boyd"
+title = "Stanford EE364a: Convex Optimization I"
+authors = "Stephen Boyd (course site); Summer 2026 instructors Logan Bell, Nikhil Devanathan"
+year = "2026"
 type = "course"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://web.stanford.edu/class/ee364a/"
-link_text = "Link"
-description = "The current course site: lecture slides, homework, and exams that accompany the textbook. Its lecture recordings are for enrolled students only — for free videos use the Stanford Engineering Everywhere recordings below."
-verified = 2026-10-13
+link_text = "Course site"
+description = "The live course site, headed \"Professor Stephen Boyd\"; as of October 2026 it shows the Summer 2025–26 offering taught by Logan Bell and Nikhil Devanathan. It has the full slide deck (and the original slides used until Summer 2023), weekly homework and exams that accompany the textbook. Its lecture recordings are for enrolled students only; for free videos use the Stanford Engineering Everywhere recordings below."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "numerical-optimization"
 title = "Numerical Optimization"
-authors = "Jorge Nocedal, Stephen Wright"
+authors = "Jorge Nocedal, Stephen J. Wright"
 year = "2006"
 type = "book"
-description = "Comprehensive treatment of numerical methods: line search, trust region, conjugate gradient, quasi-Newton methods. Essential reference for algorithm design."
+access = "paid"
+level = "advanced"
+url = "https://link.springer.com/book/10.1007/978-0-387-40065-5"
+link_text = "Springer"
+description = "The standard reference on numerical methods for continuous optimization: line search, trust regions, conjugate gradient, and quasi-Newton methods (Springer, 2006, the current edition). Practice 3 uses it for line search and BFGS."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mathematics-for-machine-learning-ch-7"
@@ -48,7 +55,7 @@ access = "free"
 level = "beginner"
 url = "https://mml-book.github.io/"
 link_text = "Link"
-description = "Chapter 7 covers continuous optimization with ML focus: gradient descent, momentum, constrained optimization. Good bridge from theory to practice."
+description = "Chapter 7 covers continuous optimization with ML focus: gradient descent, momentum, constrained optimization. Good bridge from theory to practice. Section 01 uses the same book's Ch. 2–4. Also used in ml/01."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -58,9 +65,10 @@ authors = "Sebastian Ruder"
 year = "2016"
 type = "article"
 label = "Blog Post"
+access = "free"
 url = "https://www.ruder.io/optimizing-gradient-descent/"
 link_text = "Link"
-description = "Excellent survey of SGD variants: momentum, Nesterov, Adagrad, RMSprop, Adam. Essential reading for understanding modern training."
+description = "A survey of SGD variants: momentum, Nesterov, Adagrad, RMSprop and Adam. Read it before the Adam paper; Practice 4 cites it."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -70,6 +78,7 @@ authors = "Stephen Boyd"
 year = "2008"
 type = "course"
 access = "free"
+level = "intermediate"
 url = "https://see.stanford.edu/Course/EE364A"
 link_text = "Link"
 description = "Boyd's complete set of 19 recorded lectures with transcripts and handouts, free and self-paced. These are the videos to watch alongside the textbook. (MIT's 6.079 by Boyd & Parrilo covers the same material in notes only.)"
@@ -82,6 +91,7 @@ authors = "John C. Duchi"
 year = "2018"
 type = "book"
 access = "free"
+level = "advanced"
 url = "https://web.stanford.edu/~jduchi/pcmi.html"
 link_text = "Link"
 description = "Lecture notes covering stochastic gradient methods with convergence analysis. Bridges theory and practice. Published in *The Mathematics of Data* (IAS/Park City Mathematics Series, AMS, 2018); the author's page has the free manuscript PDF plus the exercise data and MATLAB/Julia starter code."
@@ -90,14 +100,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "adam-a-method-for-stochastic"
 title = "Adam: A Method for Stochastic Optimization"
-authors = "Diederik Kingma, Jimmy Ba"
+authors = "Diederik P. Kingma, Jimmy Ba"
 year = "2014"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1412.6980"
-link_text = "Link"
-description = "The Adam optimizer paper — the most widely used optimizer in deep learning. Understanding its design illuminates optimization in practice."
-verified = 2026-10-13
+link_text = "arXiv"
+description = "The Adam paper (arXiv 2014; ICLR 2015): per-parameter steps from bias-corrected moving averages of the gradient and its square, with a convergence analysis. Practice 4 implements its Algorithm 1 and critiques that analysis. Also used in ml/08."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "first-order-methods-in-optimization"
@@ -105,6 +115,8 @@ title = "First-Order Methods in Optimization"
 authors = "Amir Beck"
 year = "2017"
 type = "book"
+access = "paid"
+level = "advanced"
 description = "Rigorous treatment of proximal methods, ADMM, and first-order algorithms. Advanced but essential for optimization research."
 
 [[groups.items]]
@@ -114,6 +126,7 @@ authors = "Mykel Kochenderfer, Tim Wheeler"
 year = "2019"
 type = "book"
 access = "free"
+level = "intermediate"
 url = "https://algorithmsbook.com/optimization/"
 link_text = "Link"
 description = "Broad, code-first survey (Julia) of the methods engineers reach for when problems aren't convex or differentiable: derivative-free and stochastic search, population methods, surrogate models, multi-objective optimization, and optimization under uncertainty. Free PDF (CC BY-NC-ND). The book site also links a PDF of the 2nd edition, whose print release it lists for 5 January 2027 (checked October 2026)."

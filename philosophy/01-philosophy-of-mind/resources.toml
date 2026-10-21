@@ -99,12 +99,14 @@ verified = 2026-10-21
 [[groups.items]]
 id = "philosophy-and-the-sciences-introduction"
 title = "Philosophy and the Sciences: Introduction to the Philosophy of Cognitive Sciences"
-authors = "University of Edinburgh (Suilin Lavelle, Mark Sprevak, Andy Clark et al.)"
+authors = "University of Edinburgh (Michela Massimi, Alasdair Richmond, Suilin Lavelle et al.)"
 type = "course"
+access = "partial"
+level = "beginner"
 url = "https://www.coursera.org/learn/philosophy-cognitive-sciences"
 link_text = "Coursera"
-description = "Accessible video course with modules on evolution and the mind, what consciousness is, intelligent machines and the brain, and embodied cognition (taught in part by Andy Clark). A video companion for Sections 01, 02 and 04."
-verified = 2026-10-13
+description = "Free-to-enroll MOOC (the certificate is paid) with modules on evolution and the mind (\"Stone-age minds in modern skulls\"), what consciousness is, intelligent machines and the human brain, and embodied cognition. A video companion for Sections 01, 02 and 04, and a review aid for Practice 3. Coursera does not show a launch date."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "personal-identity"

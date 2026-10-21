@@ -62,13 +62,14 @@ verified = 2026-10-21
 id = "linear-algebra"
 title = "Linear Algebra"
 authors = "Jim Hefferon"
+year = "undated (checked Oct 2026)"
 type = "book"
 access = "free"
 level = "intermediate"
 url = "https://hefferon.net/linearalgebra/"
-link_text = "Link"
-description = "A free, well-written textbook with good motivation and exercises. Solid alternative to Strang's text."
-verified = 2026-10-13
+link_text = "Author's page"
+description = "A free, well-written textbook with good motivation and many exercises; a solid alternative to Strang's text. The author's page offers the free PDF (through OpenIntro, with the price slider set to 0) and a paper copy; it gives no edition date."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "matrix-analysis-and-applied-linear"

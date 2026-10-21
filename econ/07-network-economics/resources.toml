@@ -16,7 +16,7 @@ level = "intermediate"
 marks = ["core"]
 url = "https://www.cs.cornell.edu/home/kleinber/networks-book/"
 link_text = "Link"
-description = "Outstanding interdisciplinary textbook spanning graph theory, game theory on networks, markets, information cascades, and network effects. Free online. The ideal starting point."
+description = "Free interdisciplinary textbook spanning graph theory, game theory on networks, markets, information cascades, cascading behavior, and network effects. The starting point for this section and the source for Practices 1–3."
 verified = 2026-10-13
 
 [[groups.items]]

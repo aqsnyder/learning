@@ -14,10 +14,12 @@ authors = "Nick Bostrom"
 year = "2003"
 type = "paper"
 marks = ["core"]
-url = "https://doi.org/10.1111/1467-9213.00309"
-link_text = "Link"
-description = "The simulation argument: at least one of three propositions must be true — civilizations go extinct before creating simulations, they choose not to, or we are almost certainly in a simulation. Elegant and unsettling."
-verified = 2026-10-13
+url = "https://simulation-argument.com/simulation.pdf"
+link_text = "Author's copy (PDF)"
+description = "The simulation argument: at least one of three propositions must be true — civilizations go extinct before creating simulations, they choose not to, or we are almost certainly in a simulation. Elegant and unsettling. Published in *Philosophical Quarterly* 53 (2003), whose own listing titles it \"Are We Living in a Computer Simulation?\"; the author's free copy keeps the original title."
+verified = 2026-10-21
+more_links = [{ text = "Journal (paywalled)", url = "https://doi.org/10.1111/1467-9213.00309" }]
+access = "free"
 
 [[groups.items]]
 id = "reality-virtual-worlds-and-the-problems"
@@ -76,9 +78,13 @@ title = "The Weirdness of the World"
 authors = "Eric Schwitzgebel"
 year = "2024"
 type = "book"
-access = "paid"
+access = "partial"
 level = "intermediate"
 description = "Argues that reality is fundamentally strange — whether materialism or dualism is true, something deeply weird must be going on. Embraces philosophical uncertainty."
+url = "https://press.princeton.edu/books/hardcover/9780691215679/the-weirdness-of-the-world"
+link_text = "Princeton University Press"
+more_links = [{ text = "Author's free draft (PDF, June 2022)", url = "http://www.faculty.ucr.edu/~eschwitz/SchwitzPapers/Weirdness-220622.pdf" }]
+verified = 2026-10-21
 
 [[groups.items]]
 id = "being-you-a-new-science-of-consciousness"

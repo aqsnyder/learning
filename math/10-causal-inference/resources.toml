@@ -57,7 +57,7 @@ marks = ["core"]
 url = "https://miguelhernan.org/whatifbook"
 link_text = "Link"
 description = "Free textbook from the epidemiology perspective. Covers potential outcomes, inverse probability weighting, and g-methods. Complements Pearl's graphical approach. The authors' book page has the latest free PDF (revised in place, so re-download it), the NHEFS data with its codebook, and code in Python, R, SAS, Stata and Julia."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-causal-inference"

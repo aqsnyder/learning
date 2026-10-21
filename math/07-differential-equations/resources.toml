@@ -3,28 +3,36 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Tracked in another curriculum:** Chen, Rubanova, Bettencourt & Duvenaud, *Neural Ordinary Differential Equations* (2018), is core in [physics/11](../../physics/11-physics-informed-ml-and-frontiers/README.md). Read it there for the mini-project's optional Neural ODE extension.
+'''
 
 [[groups.items]]
 id = "nonlinear-dynamics-and-chaos"
-title = "Nonlinear Dynamics and Chaos"
-authors = "Steven Strogatz"
+title = "Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering"
+authors = "Steven H. Strogatz"
 year = "2024"
 type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "The best introduction to dynamical systems and chaos theory (3rd edition; the 2015 2nd edition is equally usable). Strogatz writes with exceptional clarity and intuition. Covers phase portraits, bifurcations, limit cycles, and chaos. Essential."
+url = "https://www.routledge.com/Nonlinear-Dynamics-and-Chaos-With-Applications-to-Physics-Biology-Chemistry-and-Engineering/Strogatz/p/book/9780367026509"
+link_text = "CRC Press"
+description = "The standard first book on dynamical systems, 3rd edition (Chapman & Hall/CRC, 2024): flows on the line and circle, bifurcations, linear systems and the phase plane, limit cycles, the Lorenz equations, one-dimensional maps, fractals, strange attractors, and the Kuramoto model. Chapter numbers cited in Practice refer to this edition; the 2015 2nd edition also works."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mit-18-03-differential-equations"
-title = "MIT 18.03 Differential Equations"
-authors = "Arthur Mattuck"
+title = "MIT 18.03SC Differential Equations"
+authors = "Arthur Mattuck, Haynes Miller, Jeremy Orloff, John Lewis"
+year = "2011"
 type = "course"
 access = "free"
+level = "beginner"
 url = "https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/"
-link_text = "Link"
-description = "MIT's comprehensive ODE course. Covers first-order, second-order, Laplace transforms, and systems of ODEs with excellent problem sets."
-verified = 2026-10-13
+link_text = "MIT OCW"
+description = "MIT's ODE course in OCW Scholar format (Fall 2011): lecture videos, problem-solving videos, notes, and problem sets and exams with solutions, in four units — first-order equations, second-order constant-coefficient linear equations, Fourier series and the Laplace transform, and first-order systems. Practice 1 uses Units II–IV."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "differential-equations"
@@ -32,6 +40,7 @@ title = "Differential Equations"
 authors = "3Blue1Brown"
 type = "video-series"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/playlist?list=PLZHQObOWTQDNPOjrT6KVlfJuKtYTftqH6"
 link_text = "Link"
 description = "Beautiful visual explanations of differential equations, phase space, and dynamical systems. Classic 3Blue1Brown quality."
@@ -43,6 +52,8 @@ title = "Elementary Differential Equations and Boundary Value Problems"
 authors = "Boyce, DiPrima, Meade"
 year = "2021"
 type = "book"
+access = "paid"
+level = "beginner"
 description = "The standard undergraduate ODE textbook. Comprehensive coverage with applications. Good computational reference."
 
 [[groups.items]]
@@ -51,60 +62,59 @@ title = "Partial Differential Equations: An Introduction"
 authors = "Walter Strauss"
 year = "2007"
 type = "book"
+access = "paid"
+level = "intermediate"
 description = "Accessible introduction to PDEs: wave equation, heat equation, Laplace equation, Fourier methods. Foundation for understanding physics simulations and neural PDE solvers."
 
 [[groups.items]]
 id = "ordinary-differential-equations"
 title = "Ordinary Differential Equations"
-authors = "Vladimir Arnold"
+authors = "Vladimir I. Arnold"
 year = "1992"
 type = "book"
-description = "A geometric approach to ODEs by one of the greatest mathematicians. Emphasis on qualitative behavior and phase space. Elegant and insightful."
-
-[[groups.items]]
-id = "neural-ordinary-differential-equations"
-title = "Neural Ordinary Differential Equations"
-authors = "Ricky Chen et al."
-year = "2018"
-type = "paper"
-access = "free"
-url = "https://arxiv.org/abs/1806.07366"
-link_text = "Link"
-description = "The paper that introduced neural ODEs — treating neural networks as continuous dynamical systems. Seeing the math here connects this section directly to ML."
-verified = 2026-10-13
+access = "paid"
+level = "advanced"
+url = "https://link.springer.com/book/9783540345633"
+link_text = "Springer"
+description = "Arnold's geometric approach to ODEs, emphasizing phase space and qualitative behavior over solution recipes. Springer Universitext edition (© 1992; the original Russian edition appeared in 1984; softcover printing 2006). A second pass after Strogatz, not a first book."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "nonlinear-dynamics-and-chaos-2"
-title = "Nonlinear Dynamics and Chaos"
-authors = "Steven Strogatz"
-type = "course"
+title = "Nonlinear Dynamics and Chaos — Steven Strogatz, Cornell University (lectures)"
+authors = "Steven Strogatz (Cornell MAE channel)"
+type = "video-series"
 access = "free"
+level = "intermediate"
 url = "https://www.youtube.com/playlist?list=PLbN57C5Zdl6j_qJA-pARJnKsmROzPnO9V"
-link_text = "Link"
-description = "Strogatz's own lectures on nonlinear dynamics. Watch alongside the textbook for the full experience."
-verified = 2026-10-13
+link_text = "YouTube"
+description = "Strogatz's own recorded course lectures at Cornell, posted on the Cornell MAE YouTube channel. Watch them alongside the textbook. Also used in physics/10."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "efficiently-modeling-long-sequences-with"
-title = "Efficiently Modeling Long Sequences with Structured State Spaces (S4)"
+title = "S4 — Efficiently Modeling Long Sequences with Structured State Spaces"
 authors = "Albert Gu, Karan Goel, Christopher Ré"
 year = "2021"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2111.00396"
-link_text = "Link"
-description = "State-space models for sequence processing — the mathematics of continuous-time dynamics applied to deep learning. Connects ODEs to modern architectures."
-verified = 2026-10-13
+link_text = "arXiv"
+description = "The S4 paper: a continuous-time linear state-space model, discretized with the bilinear transform and computed either as a recurrence or as a long convolution. Practice 1 checks its discretization against SciPy and verifies the recurrence–convolution equivalence. Also used in ml/11."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "stochastic-differential-equations"
-title = "Stochastic Differential Equations"
+title = "Stochastic Differential Equations: An Introduction with Applications"
 authors = "Bernt Øksendal"
 year = "2003"
 type = "book"
 access = "paid"
 level = "advanced"
-description = "Introduction to SDEs, Itô calculus, and stochastic analysis. Foundation for diffusion models (DDPM, score-based generative models). Advanced but increasingly relevant."
+url = "https://link.springer.com/book/10.1007/978-3-642-14394-6"
+link_text = "Springer"
+description = "The standard rigorous introduction to SDEs and Itô calculus, 6th edition (Springer Universitext, 2003). Practice 5 uses its Itô formula and linear SDEs such as the Ornstein–Uhlenbeck process; it is also the mathematical background for diffusion models (DDPM, score-based generative models). Read Särkkä & Solin first."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "feedback-systems-an-introduction-for"
@@ -126,6 +136,7 @@ authors = "Simo Särkkä, Arno Solin"
 year = "2019"
 type = "book"
 access = "free"
+level = "intermediate"
 url = "https://users.aalto.fi/~asolin/sde-book/sde-book.pdf"
 link_text = "Link"
 description = "Accessible, applied introduction to SDEs and Itô calculus with numerical solution methods (Cambridge University Press). Much gentler than Øksendal and a better first book before diffusion models; free PDF and example code from the authors."

@@ -9,14 +9,17 @@ outro = '''
 
 [[groups.items]]
 id = "the-embodied-mind-cognitive-science-and"
-title = "The Embodied Mind: Cognitive Science and Human Experience"
-authors = "Francisco Varela, Evan Thompson, Eleanor Rosch"
-year = "1991"
+title = "The Embodied Mind: Cognitive Science and Human Experience (revised edition)"
+authors = "Francisco J. Varela, Evan Thompson, Eleanor Rosch"
+year = "1991 (rev. ed. 2017)"
 type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "Foundational text that integrates phenomenology, cognitive science, and Buddhist philosophy. Argues cognition is enacted through bodily engagement with the world, not abstract computation."
+url = "https://doi.org/10.7551/mitpress/9780262529365.001.0001"
+link_text = "MIT Press"
+description = "Foundational text that integrates phenomenology, cognitive science and Buddhist philosophy, and argues that cognition is enacted through bodily engagement with the world rather than computed over a pregiven one (Ch. 8, \"Enaction: Embodied Cognition\", is the heart of it and the basis of Practice 5). The revised MIT Press edition adds new introductions by Thompson and Rosch; the DOI opens it on MIT Press Scholarship Online (subscription), and the paperback is ISBN 9780262529365."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-extended-mind"
@@ -44,11 +47,13 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "what-computers-can-t-do-a-critique-of"
-title = "What Computers Can't Do: A Critique of Artificial Reason"
-authors = "Hubert Dreyfus"
-year = "1972"
+title = "What Computers Still Can't Do: A Critique of Artificial Reason"
+authors = "Hubert L. Dreyfus"
+year = "1972 (rev. ed. 1992)"
 type = "book"
-description = "Dreyfus draws on Heidegger and Merleau-Ponty to argue that human intelligence relies on embodied skills and background understanding that resist formalization. Prescient and provocative."
+access = "paid"
+level = "intermediate"
+description = "Dreyfus draws on Heidegger and Merleau-Ponty to argue that human intelligence relies on embodied skills and a background understanding that resist formalization, and that classical AI rests on four assumptions (biological, psychological, epistemological, ontological) — the ones Practice 1 tests against today's LLM agents. The MIT Press edition (1992) is the revised edition of *What Computers Can't Do* (1972; revised 1979) and the one in print. Its home is here; [Section 05](../05-philosophy-of-ai/README.md) uses it for Dreyfus's criterion for understanding."
 
 [[groups.items]]
 id = "being-and-time-selections-on-ready-to"

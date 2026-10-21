@@ -82,7 +82,7 @@ access = "free"
 level = "beginner"
 url = "https://www.khanacademy.org/"
 link_text = "Link"
-description = "Free drill with instant feedback. Use its linear algebra, calculus and statistics courses when an exercise here exposes a gap: the videos above give the intuition, Khan Academy the practice."
+description = "Free drill with instant feedback. Use its linear algebra, calculus and statistics courses when an exercise here exposes a gap: the videos above give the intuition, Khan Academy the practice. The math curriculum links the linear algebra (math/01) and multivariable calculus (math/02) courses directly."
 verified = 2026-10-13
 
 [[groups.items]]

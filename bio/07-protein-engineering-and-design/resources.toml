@@ -168,13 +168,26 @@ description = "ESM-2's successor reasons jointly over sequence, structure, and f
 verified = 2026-10-13
 
 [[groups.items]]
-id = "baker-lab-protein-design-lectures-and"
-title = "Baker Lab — Protein Design Lectures and Resources"
-authors = "Baker, D. & Baker Lab"
-year = "2024"
-type = "course"
+id = "rfdiffusion-code"
+title = "RFdiffusion"
+authors = "RFdiffusion team (RosettaCommons)"
+type = "tool"
+label = "Code"
 access = "free"
-url = "https://www.bakerlab.org/"
-link_text = "Baker Lab"
-description = "Hub for the world's leading protein design group — links to lectures, software (RFdiffusion, ProteinMPNN, RoseTTAFold), publications, and tutorials for getting started with AI protein design"
-verified = 2026-10-13
+url = "https://github.com/RosettaCommons/RFdiffusion"
+link_text = "GitHub"
+more_links = [{ text = "Google Colab notebook", url = "https://colab.research.google.com/github/sokrypton/ColabDesign/blob/v1.1.1/rf/examples/diffusion.ipynb" }]
+description = "The code behind Watson et al. (2023), open source under a BSD licence. Its README links the public Google Colab notebook that Practice 4 runs, and points binder designers to a ProteinMPNN–FastRelax pipeline (the `dl_binder_design` repository) for the mini-project"
+verified = 2026-10-21
+
+[[groups.items]]
+id = "proteinmpnn-code"
+title = "ProteinMPNN"
+authors = "Dauparas, J. (maintainer)"
+type = "tool"
+label = "Code"
+access = "free"
+url = "https://github.com/dauparas/ProteinMPNN"
+link_text = "GitHub"
+description = "The code for Dauparas et al. (2022), MIT-licensed, with Google Colab examples in its `colab_notebooks` folder. Its `--sampling_temp` flag (default 0.1; suggested values 0.1–0.3) is the temperature Practice 3 sweeps"
+verified = 2026-10-21

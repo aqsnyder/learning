@@ -120,14 +120,15 @@ verified = 2026-10-21
 
 [[groups.items]]
 id = "80-000-hours-ai-risk-profile"
-title = "80,000 Hours — AI Risk Profile"
-authors = "80,000 Hours"
-type = "blog"
+title = "How AI Could Create the World's Biggest Problems (80,000 Hours problem profile)"
+authors = "Zershaaneh Qureshi (80,000 Hours)"
+type = "article"
 access = "free"
 url = "https://80000hours.org/problem-profiles/artificial-intelligence/"
-link_text = "Link"
-description = "Overview of why 80,000 Hours ranks AI risk among the most pressing problems, with the career paths that address it. Advocacy from an organization that recommends working on the problem: read it as the case for, not as a neutral survey."
-verified = 2026-10-13
+link_text = "80,000 Hours"
+description = "80,000 Hours' problem profile on why it ranks risks from advanced AI among the most pressing problems, with the career paths that address it (published February 2026, updated October 2026). Advocacy from an organization that recommends working on the problem: read it as the case for, not as a neutral survey."
+verified = 2026-10-21
+year = "2026"
 
 [[groups.items]]
 id = "is-power-seeking-ai-an-existential-risk"

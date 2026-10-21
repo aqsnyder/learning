@@ -62,10 +62,10 @@ After this section you can:
 5. **μP** – See how to tune hyperparameters on a small proxy model and transfer them unchanged to a large one — what makes scaling-law experiments practical.
 6. **Parallelism** – Read GPipe for pipeline parallelism, then Megatron-LM for tensor parallelism at scale, then ZeRO for sharding optimizer state, gradients, and parameters (the idea behind PyTorch FSDP).
 7. **The Ultra-Scale Playbook** – Tie it all together: data, ZeRO/FSDP, tensor, sequence/context, and pipeline parallelism with measured trade-offs on real GPU clusters.
-8. **Mixture of Experts** – Read the original MoE paper, then Switch Transformer for simplified routing, then Mixtral for modern open-weight MoE.
-9. **Efficient attention** – Read FlashAttention to understand IO-aware exact attention and why it's now the default.
+8. **Mixture of Experts** – Read the original MoE paper, then Switch Transformer for simplified routing, then Mixtral for an open-weight MoE (2024).
+9. **Efficient attention** – Read FlashAttention to understand IO-aware exact attention, the idea behind fused attention kernels such as the one Practice 4 benchmarks.
 10. **Parameter-efficient fine-tuning** – Read LoRA, then QLoRA for 4-bit quantized fine-tuning.
-11. **Quantization** – Read Jacob et al. for int8 integer-only inference, the basis of TensorFlow Lite and most edge/microcontroller deployment. To take quantized models all the way down to a microcontroller — runtimes, on-target latency and energy measurement — continue with [Section 14 – Edge and Embedded ML](../14-edge-and-embedded-ml/README.md) after this section.
+11. **Quantization** – Read Jacob et al. for int8 integer-only inference, the scheme behind TensorFlow Lite's int8 models and the TFLM/CMSIS-NN stack used in Section 14. To take quantized models all the way down to a microcontroller — runtimes, on-target latency and energy measurement — continue with [Section 14 – Edge and Embedded ML](../14-edge-and-embedded-ml/README.md) after this section.
 12. **Knowledge distillation** – Read Hinton et al. to understand how to compress large models into smaller ones.
 13. **Fast inference** – Read PagedAttention/vLLM to understand KV-cache memory management in LLM serving, then Speculative Decoding for draft-model-based acceleration.
 

@@ -64,7 +64,7 @@ access = "paid"
 level = "advanced"
 url = "https://mitpress.mit.edu/9780262025768/"
 link_text = "Link"
-description = "Comprehensive graduate textbook covering adverse selection, moral hazard, and incomplete contracts. The definitive reference."
+description = "Comprehensive graduate textbook covering adverse selection, signaling, screening, moral hazard, and incomplete contracts: the systematic treatment behind all five Practices."
 
 [[groups.items]]
 id = "information-rules"

@@ -90,7 +90,7 @@ access = "free"
 url = "https://doi.org/10.1073/pnas.1210467109"
 link_text = "Link"
 description = "Shows that the readiness potential in Libet-style experiments can arise from spontaneous neural fluctuations drifting to a threshold, rather than from an unconscious \"decision.\" The key reinterpretation that undercuts the popular anti-free-will reading of Libet."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "free-agents-how-evolution-gave-us-free"

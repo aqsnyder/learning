@@ -34,6 +34,7 @@ link_text = "YouTube"
 description = "Phil's Lab captures the full schematic of a small TI MSPM0 microcontroller board in KiCad 9 (part 1 of 2; part 2, the layout, is Section 04's core video). Watch it end to end for the capture workflow; it carries over to KiCad 10."
 verified = 2026-10-21
 short = "Phil's Lab #165 — KiCad 9 schematic"
+year = "2025"
 
 [[groups.items]]
 id = "kicad-library-conventions-klc"
@@ -80,14 +81,14 @@ verified = 2026-10-21
 
 [[groups.items]]
 id = "snapeda-component-library"
-title = "SnapEDA component library"
-authors = "SnapEDA"
+title = "SnapMagic Search (formerly SnapEDA) component library"
+authors = "SnapMagic"
 type = "tool"
 access = "free"
 url = "https://www.snapeda.com/"
 link_text = "snapeda.com"
 description = "Free symbols, footprints and 3D models for many parts. Quality varies from part to part, so audit every model against the datasheet before first use (Practice 1)."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ultra-librarian"
@@ -98,7 +99,7 @@ access = "free"
 url = "https://www.ultralibrarian.com/"
 link_text = "ultralibrarian.com"
 description = "CAD-model downloads (symbols, footprints, 3D models) for many EDA tools. Audit each model against the datasheet before use (Practice 1)."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "samacsys"
@@ -109,7 +110,7 @@ access = "free"
 url = "https://supplyframe.com/samacsys"
 link_text = "supplyframe.com/samacsys"
 description = "Supplyframe's free component libraries (symbols, footprints, 3D models). Audit each model against the datasheet before use (Practice 1)."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "robert-feranec-schematic-review-series"

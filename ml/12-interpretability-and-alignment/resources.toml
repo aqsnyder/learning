@@ -147,7 +147,7 @@ id = "transformerlens-mech-interp-tutorials"
 title = "TransformerLens Documentation"
 authors = "Neel Nanda"
 year = "ongoing"
-type = "tutorial"
+type = "docs"
 access = "free"
 url = "https://transformerlensorg.github.io/TransformerLens/"
 link_text = "transformerlensorg.github.io"
@@ -263,7 +263,6 @@ level = "beginner"
 url = "https://nickbostrom.com/"
 link_text = "Author's page"
 description = "Bostrom's argument (Oxford University Press, 2014) that superintelligent AI could be hard to control: takeoff dynamics, orthogonality, instrumental convergence, the treacherous turn. Philosophical context, not technique."
-verified = 2026-10-21
 
 [[groups.items]]
 id = "human-compatible-artificial-intelligence"

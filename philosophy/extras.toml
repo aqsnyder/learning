@@ -2,20 +2,6 @@
 # Edit this file, then run `python tools/build.py`. Field reference: tools/README.md
 
 [[groups]]
-title = "Books"
-
-[[groups.items]]
-id = "human-compatible-ai-and-the-problem-of"
-title = "Human Compatible: AI and the Problem of Control"
-authors = "Stuart Russell"
-year = "2019"
-type = "book"
-access = "paid"
-level = "beginner"
-marks = ["core"]
-description = "Russell's framework for beneficial AI — accessible and practical"
-
-[[groups]]
 title = "Courses"
 
 [[groups.items]]

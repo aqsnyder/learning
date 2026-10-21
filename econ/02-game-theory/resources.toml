@@ -15,7 +15,7 @@ level = "intermediate"
 marks = ["core"]
 url = "https://press.princeton.edu/books/hardcover/9780691129082/game-theory"
 link_text = "Link"
-description = "The best modern game theory textbook. Clear exposition, excellent exercises. Covers strategic form, extensive form, repeated games, and incomplete information."
+description = "Modern undergraduate game theory textbook with clear exposition and many exercises: strategic form, extensive form, repeated games, and incomplete information (Bayesian games). Backs Practices 1–4."
 verified = 2026-10-13
 
 [[groups.items]]

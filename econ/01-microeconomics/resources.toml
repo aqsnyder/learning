@@ -84,6 +84,18 @@ description = "Foundational essay on the price system as a mechanism for informa
 verified = 2026-10-13
 
 [[groups.items]]
+id = "allocative-efficiency-of-markets-with"
+title = "Allocative Efficiency of Markets with Zero-Intelligence Traders: Market as a Partial Substitute for Individual Rationality"
+authors = "Dhananjay K. Gode & Shyam Sunder"
+year = "1993"
+type = "paper"
+access = "paid"
+url = "https://doi.org/10.1086/261868"
+link_text = "Link"
+description = "Double-auction experiments (*Journal of Political Economy*) in which budget-constrained traders who bid at random reach high allocative efficiency while unconstrained random traders do not: the market's rules, not the traders' intelligence, do much of the work. The model the mini-project rebuilds to probe Hayek."
+verified = 2026-10-21
+
+[[groups.items]]
 id = "the-problem-of-social-cost"
 title = "The Problem of Social Cost"
 authors = "Ronald Coase"

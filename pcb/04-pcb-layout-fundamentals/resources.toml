@@ -20,12 +20,13 @@ link_text = "YouTube"
 description = "Part 2 of the KiCad 9 board whose schematic is Section 02's core video: the PCB layout of the same design. Watch how placement is settled before routing starts, then compare with the larger board in #65 below."
 verified = 2026-10-21
 short = "Phil's Lab #166 — KiCad 9 PCB layout"
+year = "2025"
 
 [[groups.items]]
 id = "robert-feranec"
 title = "How To Improve Your PCB Layout - Routing & Space"
 authors = "Robert Feranec"
-type = "video-series"
+type = "video"
 label = "Videos"
 access = "free"
 level = "intermediate"
@@ -36,6 +37,7 @@ more_links = [{ text = "Review of a PCB Layout: Do you do same mistakes? (Part 1
 description = "Feranec on routing and on using board space well, plus the first part of his four-part review of a beginner's layout and its mistakes. Watch both before Practice 3's placement study."
 verified = 2026-10-21
 short = "Feranec — layout and routing videos"
+year = "2020"
 
 [[groups.items]]
 id = "kicad-pcb-editor-guide-kicad-10"
@@ -106,3 +108,4 @@ url = "https://www.youtube.com/watch?v=CaGzxD0jCKM"
 link_text = "YouTube"
 description = "Lesson 9 of Altium Academy's microcontroller hardware-design course: routing tips, shown in Altium Designer. The ideas carry over to KiCad."
 verified = 2026-10-21
+year = "2022"

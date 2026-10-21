@@ -67,8 +67,9 @@ access = "free"
 level = "advanced"
 url = "https://www.youtube.com/playlist?list=PLpRLWqLFLVTCL15U6N3o35g4uhMSBVA2b"
 link_text = "Link"
-description = "Lecture series covering fundamental groups, covering spaces, and homology. Good visual approach to algebraic topology."
-verified = 2026-10-13
+description = "Pierre Albin's 27-lecture graduate course: fundamental groups, covering spaces and homology, with a good visual approach. The playlist is a third-party upload (the Mat Neth channel, January 2019) that credits Albin but states no licence."
+verified = 2026-10-21
+year = "2019"
 
 [[groups.items]]
 id = "riemannian-geometry"
@@ -118,7 +119,7 @@ access = "free"
 url = "https://doi.org/10.1090/S0273-0979-09-01249-X"
 link_text = "Link"
 description = "Survey paper on topological data analysis (TDA), *Bulletin of the AMS*. Connects persistent homology to practical data analysis. Bridge from theory to applications."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-topological-data-analysis"

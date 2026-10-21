@@ -16,7 +16,7 @@ marks = ["core", "canon"]
 url = "https://bitcoin.org/bitcoin.pdf"
 link_text = "bitcoin.pdf"
 description = "The original design: a peer-to-peer timestamp server secured by proof-of-work, the most-work chain rule, simplified payment verification (§8) and the attacker-success calculation (§11). Read it first, and again at the end of this section. Also used in econ/10."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "a-cypherpunk-s-manifesto"
@@ -53,7 +53,7 @@ marks = ["canon"]
 url = "http://www.weidai.com/bmoney.txt"
 link_text = "weidai.com"
 more_links = [{ text = "SNI copy", url = "https://nakamotoinstitute.org/library/b-money/" }]
-description = "Dai's November 1998 proposal for anonymous, distributed electronic cash, in two protocols: in the first every participant keeps a database of how much money belongs to each pseudonym; in the second a subset of participants (\"servers\") keeps the accounts and communicates over a broadcast channel. Cited in the whitepaper's references. The Satoshi Nakamoto Institute (SNI) hosts a copy that links this original."
+description = "Dai's November 1998 proposal for anonymous, distributed electronic cash, in two protocols: in the first every participant keeps a database of how much money belongs to each pseudonym; in the second a subset of participants (\"servers\") keeps the accounts and communicates over a broadcast channel. Reference [1] of the whitepaper. The Satoshi Nakamoto Institute (SNI) hosts a copy that links this original."
 
 [[groups.items]]
 id = "hashcash"
@@ -66,7 +66,7 @@ marks = ["canon"]
 url = "http://www.hashcash.org/papers/hashcash.pdf"
 link_text = "hashcash.org"
 more_links = [{ text = "SNI copy", url = "https://nakamotoinstitute.org/library/hashcash/" }]
-description = "Back's paper (dated August 1, 2002) on the hashcash proof-of-work cost function — minting a stamp by searching for a partial hash preimage — which Bitcoin's mining chains together and retargets. Cited in the whitepaper's references; exercise 3 measures its cost-function properties."
+description = "Back's paper (dated August 1, 2002) on the hashcash proof-of-work cost function — minting a stamp by searching for a partial hash preimage — which Bitcoin's mining chains together and retargets. Reference [6] of the whitepaper; exercise 3 measures its cost-function properties."
 
 [[groups.items]]
 id = "bitcoin-a-peer-to-peer-electronic-cash-2"

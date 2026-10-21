@@ -23,10 +23,10 @@ Watch these alongside the corresponding section READMEs, not as a separate track
 | 16 | 🔑 | MIT 6.5940: TinyML and Efficient Deep Learning Computing | Song Han | 2024 | Free | Advanced | [Link](https://hanlab.mit.edu/courses/2024-fall-65940) | [14](../14-edge-and-embedded-ml/README.md) |
 | 17 | | Stanford CS336: Language Modeling from Scratch | Hashimoto & Liang | 2025 | Free | Advanced | [cs336.stanford.edu](https://cs336.stanford.edu/spring2025/) | [09](../09-llms-and-language/README.md) |
 | 18 | | Stanford CS234: Reinforcement Learning (Winter 2019) | Emma Brunskill (Stanford Online) | 2019 | Free | Advanced | [YouTube Playlist](https://www.youtube.com/playlist?list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u) | [10](../10-reinforcement-learning/README.md) |
-| 19 | 🔑 | Let's build GPT: from scratch, in code, spelled out | Karpathy | 2023 | Free | — | [YouTube](https://www.youtube.com/watch?v=kCc8FmEb1nY) | [06](../06-transformers-and-attention/README.md) |
-| 20 | | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | 2023 | Free | — | [youtube.com](https://www.youtube.com/watch?v=zjkBMFhNj_g) | [09](../09-llms-and-language/README.md) |
-| 21 | 🔑 | Deep Dive into LLMs like ChatGPT | Andrej Karpathy | 2025 | Free | — | [youtube.com](https://www.youtube.com/watch?v=7xTGNNLPyMI) | [09](../09-llms-and-language/README.md) |
-| 22 | | Let's build the GPT Tokenizer | Andrej Karpathy | 2024 | Free | — | [youtube.com](https://www.youtube.com/watch?v=zduSFxRajkE) | [09](../09-llms-and-language/README.md) |
-| 23 | | Let's reproduce GPT-2 (124M) | Andrej Karpathy | 2024 | Free | — | [youtube.com](https://www.youtube.com/watch?v=l8pRSuU81PU) | [09](../09-llms-and-language/README.md) |
-| 24 | | ARENA (Alignment Research Engineer Accelerator) — self-study curriculum: transformer interpretability, RL/RLHF, LLM evals, alignment science | Callum McDougall / ARENA | ongoing | — | — | [learn.arena.education](https://learn.arena.education) | [12](../12-interpretability-and-alignment/README.md) |
+| 19 | | ARENA — AI Safety Curriculum | ARENA (Alignment Research Engineer Accelerator) | ongoing | Free | Advanced | [learn.arena.education](https://learn.arena.education) | [12](../12-interpretability-and-alignment/README.md) |
+| 20 | 🔑 | Let's build GPT: from scratch, in code, spelled out | Karpathy | 2023 | Free | — | [YouTube](https://www.youtube.com/watch?v=kCc8FmEb1nY) | [06](../06-transformers-and-attention/README.md) |
+| 21 | | [1hr Talk] Intro to Large Language Models | Andrej Karpathy | 2023 | Free | — | [youtube.com](https://www.youtube.com/watch?v=zjkBMFhNj_g) | [09](../09-llms-and-language/README.md) |
+| 22 | 🔑 | Deep Dive into LLMs like ChatGPT | Andrej Karpathy | 2025 | Free | — | [youtube.com](https://www.youtube.com/watch?v=7xTGNNLPyMI) | [09](../09-llms-and-language/README.md) |
+| 23 | | Let's build the GPT Tokenizer | Andrej Karpathy | 2024 | Free | — | [youtube.com](https://www.youtube.com/watch?v=zduSFxRajkE) | [09](../09-llms-and-language/README.md) |
+| 24 | | Let's reproduce GPT-2 (124M) | Andrej Karpathy | 2024 | Free | — | [youtube.com](https://www.youtube.com/watch?v=l8pRSuU81PU) | [09](../09-llms-and-language/README.md) |
 <!-- courses:end -->

@@ -81,7 +81,7 @@ verified = 2026-10-13
 id = "robert-feranec-signal-integrity-and-high"
 title = "When a Signal Hits The End of a PCB Track - What happens? | Reflections by Eric Bogatin"
 authors = "Robert Feranec, Eric Bogatin"
-type = "video-series"
+type = "video"
 label = "Videos"
 access = "free"
 level = "intermediate"
@@ -95,6 +95,7 @@ more_links = [
 description = "Three videos on Robert Feranec's channel in which Eric Bogatin explains reflections at the end of a line, crosstalk, and whether a differential pair needs a ground reference. Watch them with the matching chapters of Bogatin's book; they back Practices 1, 3 and 4."
 verified = 2026-10-21
 short = "Bogatin on Feranec's channel — reflections, crosstalk, differential pairs"
+year = "2022"
 
 [[groups.items]]
 id = "high-speed-interface-layout-guidelines"
@@ -123,10 +124,10 @@ verified = 2026-10-13
 [[groups.items]]
 id = "ultracad-calculators"
 title = "UltraCAD Calculators"
-authors = "UltraCAD"
+authors = "UltraCAD Design, Inc. (Douglas Brooks)"
 type = "tool"
 access = "free"
 url = "https://www.ultracad.com/calc.htm"
 link_text = "Website"
 description = "Impedance, trace width, and via calculations. Useful for quick design verification. For trace width vs. current, prefer an IPC-2152-based calculator such as Saturn (Section 05)."
-verified = 2026-10-13
+verified = 2026-10-21

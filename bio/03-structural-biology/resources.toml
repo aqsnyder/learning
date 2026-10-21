@@ -30,6 +30,7 @@ access = "free"
 marks = ["core"]
 url = "https://pdb101.rcsb.org/"
 link_text = "PDB-101"
+more_links = [{ text = "Molecule of the Month", url = "https://pdb101.rcsb.org/motm" }]
 description = "Authoritative educational resource from the Protein Data Bank with Molecule of the Month, structural biology guides, and interactive tutorials. This is its home in the curriculum; Section 01 uses its Molecule of the Month enzyme articles for a mechanism write-up"
 verified = 2026-10-13
 
@@ -43,8 +44,8 @@ access = "free"
 marks = ["core"]
 url = "https://www.rcsb.org/"
 link_text = "PDB"
-description = "The primary global repository for 3D structural data of biological macromolecules — learn to search, visualize, and download structures"
-verified = 2026-10-13
+description = "The primary global repository for 3D structural data of biological macromolecules — learn to search, visualize, and download structures. As of October 2026 its home page counts 260,896 experimental structures, plus about 1.06 million computed structure models from AlphaFold DB and ModelArchive"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "protein-structure-and-function"

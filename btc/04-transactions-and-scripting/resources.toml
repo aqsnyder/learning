@@ -3,18 +3,22 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Also used here (tracked in its home section):** Learn Me A Bitcoin: UTXO and *Mastering Bitcoin* Ch. 2 ([Section 02](../02-protocol-fundamentals/README.md)) for inputs, outputs, change and coin selection; *Mastering Bitcoin* Ch. 9 ([Section 06](../06-network-and-p2p/README.md)) for fee rates in exercise 2.'''
 
 [[groups.items]]
 id = "mastering-bitcoin-chapters-67"
 title = "Mastering Bitcoin, Chapters 6–7: Transactions; Authorization and Authentication"
-authors = "Antonopoulos & Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch06_transactions.adoc"
-link_text = "GitHub"
-description = "The definitive walkthrough of transaction structure (Ch. 6) and Bitcoin Script (Ch. 7: P2SH, OP_RETURN, flow control, Taproot and Tapscript)"
-verified = 2026-10-13
+link_text = "Ch. 6"
+more_links = [{ text = "Ch. 7", url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch07_authorization-authentication.adoc" }]
+description = "Ch. 6 takes a serialized transaction apart field by field (version, marker and flag, inputs, outputs, witness, lock time, coinbase, weight and vbytes, legacy serialization); ch. 7 covers Script, scripted multisignatures, P2SH, OP_RETURN, flow control, the \"Complex Script Example\" this section's mini-project builds, and Taproot and Tapscript. 3rd edition (O'Reilly, December 2023)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "learn-me-a-bitcoin-transactions"
@@ -25,25 +29,28 @@ access = "free"
 marks = ["core"]
 url = "https://learnmeabitcoin.com/technical/transaction/"
 link_text = "Website"
-description = "Interactive, field-by-field transaction dissection, with built-in transaction splitter and builder tools"
+description = "Interactive, field-by-field transaction dissection, with built-in transaction splitter and builder tools — decode raw transactions by hand, then check your work with its splitter or `bitcoin-cli decoderawtransaction`"
 verified = 2026-10-13
 
 [[groups.items]]
 id = "programming-bitcoin-chapters-58-and-13"
-title = "Programming Bitcoin, Chapters 5–8 and 13"
+title = "Programming Bitcoin, Chapters 5–8 and 13: Transactions; Script; Transaction Creation and Validation; Pay-to-Script Hash; Segwit"
 authors = "Jimmy Song"
+year = "2019"
 type = "book"
 access = "free"
 level = "intermediate"
 marks = ["core"]
-url = "https://github.com/jimmysong/programmingbitcoin"
-link_text = "GitHub"
-description = "Build transaction parsing and Script interpreter from scratch; ch. 13 adds SegWit serialization and signing"
-verified = 2026-10-13
+url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch05.asciidoc"
+link_text = "Ch. 5"
+more_links = [{ text = "Ch. 6", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch06.asciidoc" }, { text = "Ch. 7", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch07.asciidoc" }, { text = "Ch. 8", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch08.asciidoc" }, { text = "Ch. 13", url = "https://github.com/jimmysong/programmingbitcoin/blob/master/ch13.asciidoc" }]
+description = "In Python, test-first: parse and serialize transactions (ch. 5), build a Script interpreter (ch. 6), create and validate signed transactions (ch. 7), add P2SH multisig (ch. 8), and SegWit serialization with BIP 143 signing (ch. 13). O'Reilly, March 2019 (pre-Taproot); free on GitHub (CC BY-NC-ND). Chs. 1–3 are in Section 01, chs. 9–11 in Section 02."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-developer-reference-transactions"
 title = "Bitcoin Developer Reference: Transactions"
+authors = "Bitcoin Project (bitcoin.org)"
 type = "docs"
 label = "Documentation"
 access = "free"
@@ -53,39 +60,41 @@ description = "bitcoin.org's reference for raw transaction fields — community-
 verified = 2026-10-13
 
 [[groups.items]]
-id = "utxo-model-deep-dive"
-title = "UTXO model deep dive"
-type = "concept"
-description = "Inputs, outputs, change, coin selection"
-
-[[groups.items]]
 id = "bitcoin-script"
-title = "Bitcoin Script"
-type = "concept"
-description = "Stack-based, opcodes, P2PKH, P2SH"
+title = "Learn Me A Bitcoin: Bitcoin Script"
+authors = "Greg Walker"
+type = "website"
+access = "free"
+url = "https://learnmeabitcoin.com/technical/script/"
+link_text = "learnmeabitcoin.com"
+description = "How Script runs: data is pushed onto a stack, opcodes pop and push, and an output can be spent only if a single non-zero value remains; locking scripts (ScriptPubKey) vs unlocking scripts (ScriptSig or witness), the standard script types, and a link to the full opcode list. Keep it open while you build exercise 3's interpreter."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "segwit-bip-141"
-title = "SegWit (BIP 141)"
-type = "concept"
+title = "BIP 141: Segregated Witness (Consensus layer)"
+authors = "Eric Lombrozo, Johnson Lau, Pieter Wuille"
+year = "2015"
+type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki"
 link_text = "BIP 141"
-more_links = [{ text = "BIP 143", url = "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki" }]
-description = "Segregated Witness, witness discount, transaction malleability fix; BIP 143 defines the new signature hash (with worked examples)"
-verified = 2026-10-13
+more_links = [{ text = "BIP 143", url = "https://github.com/bitcoin/bips/blob/master/bip-0143.mediawiki" }, { text = "BIP 147", url = "https://github.com/bitcoin/bips/blob/master/bip-0147.mediawiki" }]
+description = "SegWit's consensus rules: the witness structure, the wtxid commitment in the coinbase, block weight (base size × 3 + total size ≤ 4,000,000) and why taking signatures out of the txid ends unintentional malleability. BIP 143 (Johnson Lau, Pieter Wuille, 2016) defines the version 0 signature hash — linear-time hashing that also commits to the amount being spent — with worked examples exercise 4 checks against; BIP 147 (Johnson Lau, 2016) is the NULLDUMMY rule in exercise 3. All three Deployed."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "timelocks"
-title = "Timelocks"
-type = "concept"
-description = "CLTV (BIP 65), CSV (BIP 112), nLocktime"
-
-[[groups.items]]
-id = "bitcoin-transaction-decoder"
-title = "Bitcoin Transaction Decoder"
-type = "tool"
-description = "Manually decode raw transactions, then check your work with `bitcoin-cli decoderawtransaction` or Learn Me A Bitcoin's transaction splitter"
+title = "BIP 65: OP_CHECKLOCKTIMEVERIFY (with BIPs 68, 112 and 113)"
+authors = "Peter Todd (65); Mark Friedenbach, BtcDrak, Nicolas Dorier, kinoshitajona (68); BtcDrak, Mark Friedenbach, Eric Lombrozo (112); Thomas Kerin, Mark Friedenbach (113)"
+year = "2014–2015"
+type = "standard"
+access = "free"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki"
+link_text = "BIP 65"
+more_links = [{ text = "BIP 68", url = "https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki" }, { text = "BIP 112", url = "https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki" }, { text = "BIP 113", url = "https://github.com/bitcoin/bips/blob/master/bip-0113.mediawiki" }]
+description = "The timelock rules exercise 5 maps its rejections to: absolute locks in script (OP_CHECKLOCKTIMEVERIFY, BIP 65), relative lock-time in nSequence (BIP 68) and its script opcode (CHECKSEQUENCEVERIFY, BIP 112), and median time-past as the clock for time-based locks (BIP 113). All Deployed; Mastering Bitcoin chs. 6–7 explain them in prose."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-tx-tutorial-jupyter-notebooks"

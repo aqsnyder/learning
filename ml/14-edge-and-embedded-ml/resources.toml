@@ -161,7 +161,7 @@ access = "free"
 url = "https://arxiv.org/abs/2106.07597"
 link_text = "Paper"
 more_links = [{ text = "Code", url = "https://github.com/mlcommons/tiny" }]
-description = "The industry-standard benchmark for tiny ML systems, built by more than 50 organizations. Four tasks (keyword spotting, visual wake words, image classification, anomaly detection) are scored on accuracy, latency and energy, under rules that keep results comparable across hardware and software stacks. Copy its reporting discipline for your own boards; the repository holds the reference models and benchmark code, built on TFLM."
+description = "MLCommons' benchmark suite for tiny ML systems (2021), built by more than 50 organizations. Four tasks (keyword spotting, visual wake words, image classification, anomaly detection) are scored on accuracy, latency and energy, under rules that keep results comparable across hardware and software stacks. Copy its reporting discipline for your own boards; the repository holds the reference models and benchmark code, built on TFLM."
 verified = 2026-10-13
 
 [[groups.items]]

@@ -6,6 +6,8 @@
 outro = '''
 **Also used here (tracked in its home section):** Searle, "Minds, Brains, and Programs" ([Section 03](../03-computation-and-mind/README.md)) for the Chinese Room, the systems and robot replies, and Searle's claim that syntax is not sufficient for semantics — the most influential objection to strong AI (Practices 4 and 5, Check Yourself 5 and 7).
 
+**Also used here (tracked in its home section):** Dreyfus, *What Computers Still Can't Do* ([Section 04](../04-intelligence-and-understanding/README.md)) for the phenomenological critique of AI: common-sense understanding needs embodied know-how that can't be captured in rules or representations — Dreyfus's criterion in Practice 5.
+
 > **See also:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md), for the methodology behind this section's mini-project: what makes a prediction a real test, severe testing, and whether a benchmark measures the construct it claims to.
 '''
 
@@ -32,14 +34,6 @@ url = "https://doi.org/10.1016/0167-2789(90)90087-6"
 link_text = "Link"
 description = "How do symbols in a formal system get their meaning? Harnad argues that symbols must be grounded in sensorimotor experience — a problem AI has yet to fully solve."
 verified = 2026-10-13
-
-[[groups.items]]
-id = "what-computers-still-can-t-do"
-title = "What Computers Still Can't Do"
-authors = "Hubert Dreyfus"
-year = "1992"
-type = "book"
-description = "Updated edition of Dreyfus's critique of AI. Argues that common-sense understanding requires embodied know-how that can't be captured in rules or representations."
 
 [[groups.items]]
 id = "artificial-intelligence"

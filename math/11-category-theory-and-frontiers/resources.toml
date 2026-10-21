@@ -30,6 +30,7 @@ url = "https://arxiv.org/abs/1302.6946"
 link_text = "arXiv (free earlier version)"
 description = "Category theory written for the broader scientific community rather than for mathematicians or computer scientists (MIT Press, October 2014). The link is the author's free earlier version on arXiv, *Category theory for scientists* (2013), whose abstract says the MIT Press edition adds solutions to the exercises."
 verified = 2026-10-21
+more_links = [{ text = "MIT Press (hardcover, 2014)", url = "https://mitpress.mit.edu/9780262028134/category-theory-for-the-sciences/" }]
 
 [[groups.items]]
 id = "category-theory-in-context"

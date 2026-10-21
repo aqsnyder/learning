@@ -3,35 +3,43 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Also used here (tracked in its home section):** Mempool.space ([Section 03](../03-mining-and-consensus/README.md)) for watching the live mempool, fee-rate bands and recent replacements; Learning Bitcoin from the Command Line and Lab 0 ([Section 12](../12-hands-on-labs/README.md)) and *Mastering Bitcoin* Ch. 3 ([Section 10](../10-development-and-programming/README.md)) for running your own node — start on regtest or signet; nothing teaches the network like participating in it.
+
+**Status as of October 2026:** the latest Bitcoin Core release is 31.1 (8 July 2026); cluster mempool shipped in 31.0 (19 April 2026); Erlay (BIP 330) is still Draft and not deployed.'''
 
 [[groups.items]]
 id = "mastering-bitcoin-chapter-10-the-bitcoin"
 title = "Mastering Bitcoin, Chapter 10: The Bitcoin Network"
-authors = "Antonopoulos & Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch10_network.adoc"
 link_text = "GitHub"
-description = "Comprehensive overview of Bitcoin's P2P network architecture: node roles, compact block relay, lightweight clients and compact block filters, encrypted connections, mempools"
-verified = 2026-10-13
+description = "Node types and roles, compact block relay, private block relay networks, network discovery, inventory exchange, lightweight clients (Bloom filters and compact block filters) and their privacy, encrypted and authenticated connections, and mempools and orphan pools. 3rd edition (O'Reilly, December 2023), so it predates cluster mempool."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "chaincode-labs-p2p-section"
-title = "Chaincode Labs: P2P section"
+title = "Chaincode Labs seminar: P2P"
 authors = "Chaincode Labs"
+year = "2021–2025"
 type = "course"
 label = "Curriculum"
 access = "free"
+level = "intermediate"
 marks = ["core"]
-url = "https://github.com/chaincodelabs/bitcoin-curriculum"
-link_text = "GitHub"
-description = "Deep dive into P2P networking"
-verified = 2026-10-13
+url = "https://chaincode.gitbook.io/seminars/bitcoin-protocol-development/p2p"
+link_text = "Session 4"
+description = "Week 4 of Chaincode's Bitcoin Protocol Development seminar, the study-group half of its bitcoin-curriculum: readings on mapping and attacking the network (Uttarwar's \"Attacking p2p of Bitcoin Core\", Newbery's p2p talk), network partition resistance, Heilman et al.'s eclipse-attack paper and network-level privacy attacks, an optional BIP 324 reading, discussion questions on inbound and outbound limits, the new/tried address tables, anchor and feeler connections, and the tinybitcoinpeer exercise. Published May 2021, last revised February 2025."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-developer-guide-p2p-network"
 title = "Bitcoin Developer Guide: P2P Network"
+authors = "Bitcoin Project (bitcoin.org)"
 type = "docs"
 label = "Documentation"
 access = "free"
@@ -43,67 +51,76 @@ verified = 2026-10-13
 [[groups.items]]
 id = "btc-nodes"
 title = "BTC Nodes"
+authors = "Rodrigo Martínez (brunneis)"
 type = "tool"
+access = "free"
 url = "https://btcnodes.io/"
 link_text = "Website"
-description = "Live map and snapshots (about every 10 minutes) of reachable Bitcoin nodes, with counts by country and a free API (no key; 10 requests a day per IP) whose snapshots list each node's user agent. Replaces Bitnodes: bitnodes.io is a \"Bitnodes is coming back\" holding page that points here (checked Oct 2026)"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "mempool-space"
-title = "Mempool.space"
-type = "tool"
-url = "https://mempool.space/"
-link_text = "Website"
-description = "Real-time mempool visualization"
-verified = 2026-10-13
+description = "\"Reachable Bitcoin Nodes\": live map and snapshots of reachable nodes with counts by country, and a free API whose snapshots list each node's user agent (about every 10 minutes; no key, 10 requests a day per IP when checked in October 2026). The site names Rodrigo Martínez (@brunneis) as its contact and links his fork of the Bitnodes crawler. It replaces Bitnodes: bitnodes.io is a \"Bitnodes is coming back\" holding page that points here (checked October 2026)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "node-types"
-title = "Node types"
-type = "concept"
-description = "Full nodes, pruned nodes, SPV clients"
+title = "Bitcoin Core source: connection types (src/node/connection_types.h)"
+authors = "Bitcoin Core contributors"
+type = "docs"
+label = "Source code"
+access = "free"
+url = "https://github.com/bitcoin/bitcoin/blob/v31.1/src/node/connection_types.h"
+link_text = "connection_types.h (v31.1)"
+description = "The documented list of every connection Bitcoin Core makes, and why: inbound, outbound full-relay, manual, feeler (test-before-evict and moving addresses from the new to the tried table), block-relay-only (against partition attacks, opened first from anchors.dat), address-fetch, and private-broadcast connections over Tor or I2P for your own transactions (new in 31.0, April 2026). The vocabulary for exercise 1's census and exercise 5's mitigations; node types (full, pruned, lightweight) are in Mastering Bitcoin ch. 10."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "transaction-and-block-propagation"
-title = "Transaction and block propagation"
-type = "concept"
-description = "Compact blocks (BIP 152); Erlay set reconciliation (BIP 330) is still a draft and not deployed"
+title = "BIP 152: Compact Block Relay (with BIPs 339 and 330)"
+authors = "Matt Corallo; Suhas Daftuar (339); Gleb Naumenko, Pieter Wuille (330)"
+year = "2016"
+type = "standard"
+access = "free"
+url = "https://github.com/bitcoin/bips/blob/master/bip-0152.mediawiki"
+link_text = "BIP 152"
+more_links = [{ text = "BIP 339 (wtxid relay)", url = "https://github.com/bitcoin/bips/blob/master/bip-0339.mediawiki" }, { text = "BIP 330 (Erlay)", url = "https://github.com/bitcoin/bips/blob/master/bip-0330.mediawiki" }]
+description = "How blocks travel fast: a compact block carries the header, short transaction IDs and a few prefilled transactions, and the receiver fetches what its mempool lacks with getblocktxn, in high- or low-bandwidth mode. BIP 339 (Deployed) announces transactions by wtxid; BIP 330's Erlay set reconciliation would cut announcement bandwidth but is still Draft and not deployed (BIPs repository, checked October 2026). Exercise 2 and the mini-project use all three."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mempool-policies-and-fee-estimation"
-title = "Mempool policies and fee estimation"
-type = "concept"
-description = "Policy vs. consensus, fee markets, RBF (full-RBF default since Bitcoin Core 28), CPFP, package relay and TRUC (v3) transactions"
-
-[[groups.items]]
-id = "run-your-own-bitcoin-full-node"
-title = "Run your own Bitcoin full node"
-type = "practice"
-description = "The best way to learn the network — follow Mastering Bitcoin Ch. 3 (Section 10) or Learning Bitcoin from the Command Line, as set up in Section 12's Lab 0, starting on regtest/signet"
+title = "Bitcoin Core: Transaction Relay Policy docs (doc/policy, v31.1)"
+authors = "Bitcoin Core contributors"
+type = "docs"
+access = "free"
+url = "https://github.com/bitcoin/bitcoin/blob/v31.1/doc/policy/README.md"
+link_text = "doc/policy (v31.1)"
+more_links = [{ text = "Mempool design and limits", url = "https://github.com/bitcoin/bitcoin/blob/v31.1/doc/policy/mempool-design.md" }, { text = "Replacements", url = "https://github.com/bitcoin/bitcoin/blob/v31.1/doc/policy/mempool-replacements.md" }, { text = "Packages", url = "https://github.com/bitcoin/bitcoin/blob/v31.1/doc/policy/packages.md" }]
+description = "Policy is a node's own, configurable rules for unconfirmed transactions, on top of consensus and never applied to blocks. These pages cover the cluster-mempool design and limits, the current replace-by-fee rules (signaling no longer required: full-RBF has been the default since 28.0, October 2024) and package acceptance (child-with-parents packages, TRUC). Exercise 4 maps every rejection message to them."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mastering-bitcoin-chapter-9-transaction"
 title = "Mastering Bitcoin, Chapter 9: Transaction Fees"
-authors = "Antonopoulos & Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09_fees.adoc"
 link_text = "GitHub"
-description = "Fee rates and estimation, RBF and CPFP fee bumping, package relay, transaction pinning, anchor outputs — the policy layer behind every mempool"
-verified = 2026-10-13
+description = "Fee rates and their estimation, RBF and CPFP fee bumping, package relay, transaction pinning, CPFP carve-out and anchor outputs, and timelocks against fee sniping — the policy layer as of December 2023, before cluster mempool removed the carve-out (Bitcoin Core 31.0)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bip-324-version-2-p2p-encrypted"
-title = "BIP 324: Version 2 P2P Encrypted Transport"
+title = "BIP 324: Version 2 P2P Encrypted Transport Protocol"
 authors = "Dhruv Mehta, Tim Ruffing, Jonas Schnelli, Pieter Wuille"
+year = "2019"
 type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0324.mediawiki"
 link_text = "BIP 324"
-description = "Opportunistic encryption of node-to-node traffic against passive eavesdropping; enabled by default since Bitcoin Core 27.0 (April 2024)"
-verified = 2026-10-13
+description = "Opportunistic, unauthenticated encryption of node-to-node traffic, with a pseudorandom bytestream, against passive eavesdropping and pattern-matching firewalls. Enabled by default since Bitcoin Core 27.0 (April 2024); Deployed in the BIPs repository (checked October 2026)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-optech-cluster-mempool"
@@ -113,16 +130,18 @@ type = "website"
 access = "free"
 url = "https://bitcoinops.org/en/topics/cluster-mempool/"
 link_text = "Topic"
-description = "The mempool redesign shipped in Bitcoin Core 31.0 (April 2026): transactions grouped into clusters (≤64 tx / 101 kvB) and ordered by the feerate they are expected to be mined at; ancestor/descendant limits and the CPFP carve-out removed; replacements must improve the mempool's feerate diagram"
-verified = 2026-10-13
+more_links = [{ text = "31.0 release notes", url = "https://github.com/bitcoin/bitcoin/blob/master/doc/release-notes/release-notes-31.0.md" }]
+description = "Optech's topic page on the mempool redesign — related transactions grouped into clusters split into feerate-sorted chunks, so eviction and block building agree — with every newsletter mention (the latest in August 2026). It shipped in Bitcoin Core 31.0 (19 April 2026): clusters of at most 64 transactions and 101 kvB, no ancestor/descendant limits, the CPFP carve-out removed, and replacements accepted only if they improve the mempool's feerate diagram. The topic's summary still calls it a proposal (October 2026); the release notes are authoritative."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bitcoin-core-development-and-transaction"
 title = "Bitcoin Core development and transaction relay policy"
 authors = "Bitcoin Core contributors (31 signers)"
+year = "2025"
 type = "article"
 access = "free"
 url = "https://bitcoincore.org/en/2025/06/06/relay-statement/"
 link_text = "bitcoincore.org"
-description = "The 2025 OP_RETURN debate from Core's side: relay policy should predict what miners will mine rather than filter in-demand transactions — the rationale for v30's change (default `-datacarriersize` 100,000; multiple OP_RETURN outputs). Read [Optech Newsletter #352](https://bitcoinops.org/en/newsletters/2025/05/02/) for the arguments on both sides; the consensus-level counter-proposal, [BIP 110](https://github.com/bitcoin/bips/blob/master/bip-0110.mediawiki) \"Reduced Data Temporary Softfork\" (Dec 2025), is marked Closed in the BIPs repository (checked October 2026)"
+description = "The 2025 OP_RETURN debate from Core's side (6 June 2025): relay policy should predict what miners will mine rather than filter in-demand transactions — the rationale for Bitcoin Core 30.0's change (October 2025: default `-datacarriersize` 100,000; multiple OP_RETURN outputs). Read [Optech Newsletter #352](https://bitcoinops.org/en/newsletters/2025/05/02/) for the arguments on both sides; the consensus-level counter-proposal, [BIP 110](https://github.com/bitcoin/bips/blob/master/bip-0110.mediawiki) \"Reduced Data Temporary Softfork\" (Dec 2025), is marked Closed in the BIPs repository (checked October 2026)"
 verified = 2026-10-13

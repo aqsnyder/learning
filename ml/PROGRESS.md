@@ -351,16 +351,16 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] Verbalizable Representations Form a Global Workspace in Language Models — Gurnee, Sofroniew et al. <!-- id:ml/12/verbalizable-representations-form-a -->
 - [ ] Softmax Linear Units — Elhage et al. <!-- id:ml/12/softmax-linear-units -->
 - [ ] Representation Engineering: A Top-Down Approach to AI Transparency — Zou et al. <!-- id:ml/12/representation-engineering -->
-- [ ] TransformerLens & Mech Interp tutorials — Neel Nanda <!-- id:ml/12/transformerlens-mech-interp-tutorials -->
-- [ ] ARENA (Alignment Research Engineer Accelerator) — self-study curriculum: transformer interpretability, RL/RLHF, LLM evals, alignment science — Callum McDougall / ARENA <!-- id:ml/12/arena-alignment-research-engineer -->
+- [ ] TransformerLens Documentation — Neel Nanda <!-- id:ml/12/transformerlens-mech-interp-tutorials -->
+- [ ] ARENA — AI Safety Curriculum — ARENA (Alignment Research Engineer Accelerator) <!-- id:ml/12/arena-alignment-research-engineer -->
 - [ ] 🔑 Constitutional AI: Harmlessness from AI Feedback — Bai et al. <!-- id:ml/12/constitutional-ai-harmlessness-from-ai -->
 - [ ] Sleeper Agents: Training Deceptive LLMs That Persist Through Safety Training — Hubinger et al. <!-- id:ml/12/sleeper-agents-training-deceptive-llms -->
 - [ ] Alignment Faking in Large Language Models — Greenblatt et al. <!-- id:ml/12/alignment-faking-in-large-language -->
 - [ ] Emergent Misalignment: Narrow Finetuning Can Produce Broadly Misaligned LLMs — Betley et al. <!-- id:ml/12/emergent-misalignment-narrow-finetuning -->
 - [ ] AI Control: Improving Safety Despite Intentional Subversion — Greenblatt, Shlegeris, Sachan, Roger <!-- id:ml/12/ai-control-improving-safety-despite -->
 - [ ] Chain of Thought Monitorability: A New and Fragile Opportunity for AI Safety — Korbak, Balesni et al. <!-- id:ml/12/chain-of-thought-monitorability-a-new -->
-- [ ] Superintelligence: Paths, Dangers, Strategies — Bostrom <!-- id:ml/12/superintelligence-paths-dangers -->
-- [ ] Human Compatible: Artificial Intelligence and the Problem of Control — Russell <!-- id:ml/12/human-compatible-artificial-intelligence -->
+- [ ] Superintelligence: Paths, Dangers, Strategies — Nick Bostrom <!-- id:ml/12/superintelligence-paths-dangers -->
+- [ ] Human Compatible: Artificial Intelligence and the Problem of Control — Stuart Russell <!-- id:ml/12/human-compatible-artificial-intelligence -->
 - [ ] Are Emergent Abilities of Large Language Models a Mirage? — Schaeffer et al. <!-- id:ml/12/are-emergent-abilities-of-large-language -->
 - [ ] Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Chiang et al. <!-- id:ml/12/chatbot-arena-an-open-platform-for -->
 - [ ] METR time horizons — Measuring AI Ability to Complete Long Software Tasks — Kwa et al. <!-- id:ml/12/measuring-ai-ability-to-complete-long -->
@@ -420,8 +420,8 @@ pass are ticked. Everything else is there for going deeper.
 ## Section 13 — Graphs, Geometry, and Science
 
 - [ ] A Gentle Introduction to Graph Neural Networks — Sanchez-Lengeling, Reif, Pearce, Wiltschko <!-- id:ml/13/a-gentle-introduction-to-graph-neural -->
-- [ ] 🔑 Semi-Supervised Classification with Graph Convolutional Networks (GCN) — Kipf & Welling <!-- id:ml/13/semi-supervised-classification-with -->
-- [ ] Graph Attention Networks (GAT) — Veličković et al. <!-- id:ml/13/graph-attention-networks-gat -->
+- [ ] 🔑 GCN — Semi-Supervised Classification with Graph Convolutional Networks — Kipf & Welling <!-- id:ml/13/semi-supervised-classification-with -->
+- [ ] GAT — Graph Attention Networks — Veličković et al. <!-- id:ml/13/graph-attention-networks-gat -->
 - [ ] Neural Message Passing for Quantum Chemistry — Gilmer et al. <!-- id:ml/13/neural-message-passing-for-quantum -->
 - [ ] A Simple Neural Network Module for Relational Reasoning (Relation Networks) — Santoro et al. <!-- id:ml/13/a-simple-neural-network-module-for -->
 - [ ] 🔑 Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges — Bronstein et al. <!-- id:ml/13/geometric-deep-learning-grids-groups -->

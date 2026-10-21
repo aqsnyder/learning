@@ -33,8 +33,9 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "chaos-making-a-new-science"
-title = "Chaos: Making a New Science"
+title = "Chaos: Making a New Science (20th anniversary ed.)"
 authors = "James Gleick"
+year = "2008"
 type = "book"
 description = "The popular history of chaos theory and the people who built it. Read it for motivation, and for the account of Lorenz's rounded-restart discovery (\"The Butterfly Effect\") that Practice 3 recreates."
 access = "paid"
@@ -65,8 +66,9 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "chaotic-dynamics-an-introduction"
-title = "Chaotic Dynamics: An Introduction"
-authors = "Baker & Gollub"
+title = "Chaotic Dynamics: An Introduction (2nd ed.)"
+authors = "Gregory L. Baker & Jerry P. Gollub"
+year = "1996"
 type = "book"
 description = "A concise, physics-oriented introduction that links the theory to experiment; Practice 4 uses it alongside Strogatz for attractor reconstruction and dimension."
 access = "paid"
@@ -75,9 +77,10 @@ level = "intermediate"
 [[groups.items]]
 id = "the-essence-of-chaos"
 title = "The Essence of Chaos"
-authors = "Edward N. Lorenz"
+authors = "Edward Lorenz"
+year = "1996"
 type = "book"
-description = "Lorenz's own account of chaos for a broad audience: a short, careful companion to Gleick's history by the scientist at its centre."
+description = "Lorenz's own account of chaos for a broad audience, from his Jessie and John Danz Lectures (University of Washington Press; paperback 1996): a short, careful companion to Gleick's history by the scientist at its centre."
 access = "paid"
 level = "beginner"
 

@@ -7,59 +7,59 @@ Do not read cover-to-cover. Use as companions to the section READMEs. Start with
 |---|---|---|---|---|---|---|---|---|
 | 1 | 🔑 | Principles of Economics (10th ed.) | N. Gregory Mankiw | 2024 | Paid | Beginner | [Link](https://cengage.com/c/principles-of-economics-10e-mankiw/9780357722718) | [00](../00-economic-thinking/README.md) |
 | 2 | | The Economy 2.0 (Microeconomics and Macroeconomics volumes) | CORE Econ team | 2023 | Free | Beginner | [Link](https://books.core-econ.org/the-economy/index.html) | [00](../00-economic-thinking/README.md) |
-| 3 | | The Undercover Economist | Tim Harford | 2005 | Paid | Beginner | — | [00](../00-economic-thinking/README.md) |
-| 4 | 🔑 | Intermediate Microeconomics: A Modern Approach (10th ed.) | Hal Varian & Marc Melitz | 2024 | Paid | Beginner | [Link](https://wwnorton.com/books/9781324034292) | [01](../01-microeconomics/README.md) |
-| 5 | 🔑 | Mastering 'Metrics: The Path from Cause to Effect | Joshua D. Angrist & Jörn-Steffen Pischke | 2014 | Paid | Beginner | [Link](https://press.princeton.edu/books/paperback/9780691152844/mastering-metrics) | [13](../13-empirical-economics-and-causal-inference/README.md) |
-| 6 | | The Effect: An Introduction to Research Design and Causality (2nd ed.) | Nick Huntington-Klein | 2025 | Free | Beginner | [Link](https://theeffectbook.net/) | [13](../13-empirical-economics-and-causal-inference/README.md) |
-| 7 | 🔑 | Thinking, Fast and Slow | Daniel Kahneman | 2011 | Paid | Beginner | — | [03](../03-decision-theory/README.md) |
-| 8 | 🔑 | Misbehaving: The Making of Behavioral Economics | Richard Thaler | 2015 | Paid | Beginner | — | [06](../06-behavioral-economics/README.md) |
-| 9 | 🔑 | Nudge: Improving Decisions About Health, Wealth, and Happiness | Richard Thaler & Cass Sunstein | 2008 (Final Edition 2021) | Paid | Beginner | [Link](https://www.penguinrandomhouse.com/books/304634/nudge-by-richard-h-thaler-and-cass-r-sunstein/) | [06](../06-behavioral-economics/README.md) |
-| 10 | | The Bitcoin Standard | Saifedean Ammous | 2018 | Paid | Beginner | [Link](https://saifedean.com/thebitcoinstandard/) | [10](../10-monetary-economics-and-crypto/README.md) |
-| 11 | | The Alignment Problem | Brian Christian | 2020 | Paid | Beginner | — | [11](../11-ai-alignment-economics-and-frontiers/README.md) |
-| 12 | | Causal Inference: The Mixtape | Scott Cunningham | 2021 | Free | Intermediate | [Link](https://mixtape.scunning.com/) | [13](../13-empirical-economics-and-causal-inference/README.md) |
-| 13 | 🔑 | Game Theory: An Introduction | Steven Tadelis | 2013 | Paid | Intermediate | [Link](https://press.princeton.edu/books/hardcover/9780691129082/game-theory) | [02](../02-game-theory/README.md) |
-| 14 | | A Course in Game Theory | Martin Osborne & Ariel Rubinstein | 1994 | Free | Intermediate | [Link](https://www.economics.utoronto.ca/osborne/cgt/) | [02](../02-game-theory/README.md) |
-| 15 | | The Strategy of Conflict | Thomas Schelling | 1960 | Paid | Intermediate | — | [02](../02-game-theory/README.md) |
-| 16 | 🔑 | An Introduction to the Theory of Mechanism Design | Tilman Börgers | 2015 | Paid | Intermediate | [Link](https://global.oup.com/academic/product/an-introduction-to-the-theory-of-mechanism-design-9780199734023) | [04](../04-mechanism-design/README.md) |
-| 17 | 🔑 | Networks, Crowds, and Markets | David Easley & Jon Kleinberg | 2010 | Free | Intermediate | [Link](https://www.cs.cornell.edu/home/kleinber/networks-book/) | [07](../07-network-economics/README.md) |
-| 18 | 🔑 | Introduction to Industrial Organization (2nd ed.) | Luis Cabral | 2017 | Paid | Intermediate | [Link](https://mitpress.mit.edu/9780262035941/introduction-to-industrial-organization/) | [15](../15-industrial-organization-and-strategy/README.md) |
-| 19 | | Contract Theory | Patrick Bolton & Mathias Dewatripont | 2004 | Paid | Advanced | [Link](https://mitpress.mit.edu/9780262025768/) | [05](../05-information-economics/README.md) |
-| 20 | | Industrial Organization: Markets and Strategies (2nd ed.) | Paul Belleflamme & Martin Peitz | 2015 | Paid | Advanced | [Link](https://doi.org/10.1017/CBO9781107707139) | [15](../15-industrial-organization-and-strategy/README.md) |
-| 21 | 🔑 | Algorithmic Game Theory | Nisan, Roughgarden, Tardos, Vazirani | 2007 | Free | Advanced | [Link](https://www.cs.cmu.edu/~sandholm/cs15-892F13/algorithmic-game-theory.pdf) | [08](../08-computational-economics/README.md) |
-| 22 | | Prediction, Learning, and Games | Nicolo Cesa-Bianchi & Gabor Lugosi | 2006 | Paid | Advanced | — | [08](../08-computational-economics/README.md) |
-| 23 | 🔑 | Social Choice and Individual Values | Kenneth Arrow | 1951 | Paid | Advanced | [Link](https://yalebooks.yale.edu/book/9780300013641/social-choice-and-individual-values/) | [09](../09-social-choice-and-voting/README.md) |
-| 24 | | Economics in One Lesson | Henry Hazlitt | 1946 | — | — | — | [00](../00-economic-thinking/README.md) |
-| 25 | | Intermediate Microeconomics with Calculus (2nd ed.) | Hal Varian & Marc Melitz | 2024 | — | — | [Link](https://wwnorton.com/books/9781324034414) | [01](../01-microeconomics/README.md) |
-| 26 | | Microeconomic Theory | Mas-Colell, Whinston, Green | 1995 | — | — | — | [01](../01-microeconomics/README.md) |
-| 27 | | Price Theory | David Friedman | 1990 | Free | — | [Link](http://www.daviddfriedman.com/Academic/Price_Theory/PThy_ToC.html) | [01](../01-microeconomics/README.md) |
-| 28 | | Models in Microeconomic Theory | Martin J. Osborne & Ariel Rubinstein | 2020 | Free | — | [Link](https://www.openbookpublishers.com/books/10.11647/obp.0204) | [01](../01-microeconomics/README.md) |
-| 29 | | Mostly Harmless Econometrics: An Empiricist's Companion | Joshua D. Angrist & Jörn-Steffen Pischke | 2009 | — | — | [Link](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics) | [13](../13-empirical-economics-and-causal-inference/README.md) |
-| 30 | | Strategy: An Introduction to Game Theory | Joel Watson | 2013 | — | — | — | [02](../02-game-theory/README.md) |
-| 31 | | Evolution and the Theory of Games | John Maynard Smith | 1982 | — | — | — | [02](../02-game-theory/README.md) |
-| 32 | | The Art of Strategy | Avinash Dixit & Barry Nalebuff | 2008 | — | — | — | [02](../02-game-theory/README.md) |
-| 33 | | Bargaining and Markets | Martin J. Osborne & Ariel Rubinstein | 1990 | Free | — | [Link](https://www.economics.utoronto.ca/osborne/bm/) | [02](../02-game-theory/README.md) |
-| 34 | | The Foundations of Statistics | Leonard Savage | 1954 | — | — | — | [03](../03-decision-theory/README.md) |
-| 35 | | Risk, Uncertainty and Profit | Frank Knight | 1921 | — | — | [Link](https://oll.libertyfund.org/titles/knight-risk-uncertainty-and-profit) | [03](../03-decision-theory/README.md) |
-| 36 | | Theory of Games and Economic Behavior (Ch. 1 & Appendix) | John von Neumann & Oskar Morgenstern | 1944 | — | — | — | [03](../03-decision-theory/README.md) |
-| 37 | | Rational Choice in an Uncertain World | Reid Hastie & Robyn Dawes | 2009 | — | — | — | [03](../03-decision-theory/README.md) |
-| 38 | | Predictably Irrational | Dan Ariely | 2008 | — | — | — | [03](../03-decision-theory/README.md) |
-| 39 | | Auction Theory | Vijay Krishna | 2009 | — | — | [Link](https://shop.elsevier.com/books/auction-theory/krishna/978-0-12-374507-1) | [04](../04-mechanism-design/README.md) |
-| 40 | | Information Rules | Carl Shapiro & Hal Varian | 1998 | — | — | — | [05](../05-information-economics/README.md), [07](../07-network-economics/README.md) |
-| 41 | | Noise: A Flaw in Human Judgment | Daniel Kahneman, Olivier Sibony, Cass Sunstein | 2021 | — | — | — | [06](../06-behavioral-economics/README.md) |
-| 42 | | The Undoing Project | Michael Lewis | 2016 | — | — | — | [06](../06-behavioral-economics/README.md) |
-| 43 | | Behavioral Game Theory: Experiments in Strategic Interaction | Colin Camerer | 2003 | — | — | [Link](https://press.princeton.edu/books/hardcover/9780691090399/behavioral-game-theory) | [06](../06-behavioral-economics/README.md) |
-| 44 | | Platform Revolution | Geoffrey Parker, Marshall Van Alstyne, Sangeet Paul Choudary | 2016 | — | — | — | [07](../07-network-economics/README.md) |
-| 45 | | Matchmakers: The New Economics of Multisided Platforms | David Evans & Richard Schmalensee | 2016 | — | — | — | [07](../07-network-economics/README.md) |
-| 46 | | The Economics of Platforms: Concepts and Strategy | Paul Belleflamme & Martin Peitz | 2021 | — | — | [Link](https://doi.org/10.1017/9781108696913) | [15](../15-industrial-organization-and-strategy/README.md) |
-| 47 | | Twenty Lectures on Algorithmic Game Theory | Tim Roughgarden | 2016 | — | — | — | [08](../08-computational-economics/README.md) |
-| 48 | | QuantEcon Lectures (Quantitative Economics with Python) | Thomas J. Sargent & John Stachurski | — | Free | — | [Link](https://quantecon.org/lectures/) | [08](../08-computational-economics/README.md) |
-| 49 | | Collective Choice and Social Welfare | Amartya Sen | 1970/2017 | — | — | [Link](https://www.hup.harvard.edu/catalog.php?isbn=9780674971608) | [09](../09-social-choice-and-voting/README.md) |
-| 50 | | Fair Division and Collective Welfare | Hervé Moulin | 2003 | — | — | — | [09](../09-social-choice-and-voting/README.md) |
-| 51 | | Gaming the Vote | William Poundstone | 2008 | — | — | — | [09](../09-social-choice-and-voting/README.md) |
-| 52 | | Handbook of Computational Social Choice | Felix Brandt, Vincent Conitzer, Ulle Endriss, Jérôme Lang & Ariel D. Procaccia (eds.) | 2016 | Free | — | [Link](https://cgi.cse.unsw.edu.au/~haziz/comsoc.pdf) | [09](../09-social-choice-and-voting/README.md) |
-| 53 | | The Fed Explained: What the Central Bank Does (11th ed.) | Board of Governors of the Federal Reserve System | — | Free | — | [Link](https://www.federalreserve.gov/aboutthefed/the-fed-explained.htm) | [14](../14-macroeconomics-money-and-financial-markets/README.md) |
-| 54 | | Money: The Unauthorized Biography | Felix Martin | 2013 | — | — | — | [10](../10-monetary-economics-and-crypto/README.md) |
-| 55 | | Denationalisation of Money: The Argument Refined | F.A. Hayek | 1976 (2nd ed. 1978) | — | — | [Link](https://mises.org/library/denationalisation-money-argument-refined) | [10](../10-monetary-economics-and-crypto/README.md) |
-| 56 | | Monetary Theory and Policy | Carl Walsh | 2017 | — | — | — | [10](../10-monetary-economics-and-crypto/README.md) |
-| 57 | | Cryptoeconomics | Eric Voskuil | — | Free | — | [Link](https://github.com/libbitcoin/libbitcoin-system/wiki/Cryptoeconomics) | [10](../10-monetary-economics-and-crypto/README.md) |
+| 3 | | The Undercover Economist | Tim Harford | 2005 (new ed. 2011) | Paid | Beginner | [Author's page](https://timharford.com/books/undercovereconomist/) | [00](../00-economic-thinking/README.md) |
+| 4 | | Economics in One Lesson | Henry Hazlitt | 1946 (FEE printing 1952) | Free | Beginner | [FEE (free)](https://fee.org/resources/economics-in-one-lesson/) | [00](../00-economic-thinking/README.md) |
+| 5 | 🔑 | Intermediate Microeconomics: A Modern Approach (10th ed.) | Hal Varian & Marc Melitz | 2024 | Paid | Beginner | [Link](https://wwnorton.com/books/9781324034292) | [01](../01-microeconomics/README.md) |
+| 6 | 🔑 | Mastering 'Metrics: The Path from Cause to Effect | Joshua D. Angrist & Jörn-Steffen Pischke | 2014 | Paid | Beginner | [Link](https://press.princeton.edu/books/paperback/9780691152844/mastering-metrics) | [13](../13-empirical-economics-and-causal-inference/README.md) |
+| 7 | | The Effect: An Introduction to Research Design and Causality (2nd ed.) | Nick Huntington-Klein | 2025 | Free | Beginner | [Link](https://theeffectbook.net/) | [13](../13-empirical-economics-and-causal-inference/README.md) |
+| 8 | | The Art of Strategy: A Game Theorist's Guide to Success in Business and Life | Avinash K. Dixit & Barry J. Nalebuff | 2008 (paperback 2010) | Paid | Beginner | [Norton](https://wwnorton.com/books/9780393337174) | [02](../02-game-theory/README.md) |
+| 9 | 🔑 | Thinking, Fast and Slow | Daniel Kahneman | 2011 | Paid | Beginner | [Penguin](https://www.penguin.co.uk/books/56314/thinking-fast-and-slow-by-kahneman-daniel/9780141033570) | [03](../03-decision-theory/README.md) |
+| 10 | | Predictably Irrational: The Hidden Forces That Shape Our Decisions | Dan Ariely | 2008 | Paid | Beginner | [Author's page](https://danariely.com/books/) | [03](../03-decision-theory/README.md) |
+| 11 | | Information Rules | Carl Shapiro & Hal Varian | 1998 | Paid | Beginner | — | [05](../05-information-economics/README.md) |
+| 12 | 🔑 | Misbehaving: The Making of Behavioral Economics | Richard H. Thaler | 2015 (paperback 2016) | Paid | Beginner | [Norton](https://wwnorton.com/books/misbehaving/) | [06](../06-behavioral-economics/README.md) |
+| 13 | 🔑 | Nudge: Improving Decisions About Health, Wealth, and Happiness | Richard Thaler & Cass Sunstein | 2008 (Final Edition 2021) | Paid | Beginner | [Link](https://www.penguinrandomhouse.com/books/304634/nudge-by-richard-h-thaler-and-cass-r-sunstein/) | [06](../06-behavioral-economics/README.md) |
+| 14 | | Noise: A Flaw in Human Judgment | Daniel Kahneman, Olivier Sibony & Cass R. Sunstein | 2021 | Paid | Beginner | [Little, Brown Spark](https://www.hachettebookgroup.com/titles/daniel-kahneman/noise/9780316451406/?lens=little-brown) | [06](../06-behavioral-economics/README.md) |
+| 15 | | The Undoing Project: A Friendship That Changed Our Minds | Michael Lewis | 2016 (paperback 2017) | Paid | Beginner | [Norton](https://wwnorton.com/books/The-Undoing-Project/) | [06](../06-behavioral-economics/README.md) |
+| 16 | | Platform Revolution: How Networked Markets Are Transforming the Economy and How to Make Them Work for You | Geoffrey G. Parker, Marshall W. Van Alstyne & Sangeet Paul Choudary | 2016 (paperback 2017) | Paid | Beginner | [Norton](https://wwnorton.com/books/Platform-Revolution/) | [07](../07-network-economics/README.md) |
+| 17 | | Matchmakers: The New Economics of Multisided Platforms | David Evans & Richard Schmalensee | 2016 | Paid | Beginner | — | [07](../07-network-economics/README.md) |
+| 18 | | Money: The Unauthorised Biography | Felix Martin | 2013 | Paid | Beginner | [Penguin](https://www.penguin.co.uk/books/416100/money-by-felix-martin/9780099578529) | [10](../10-monetary-economics-and-crypto/README.md) |
+| 19 | | The Bitcoin Standard | Saifedean Ammous | 2018 | Paid | Beginner | [Link](https://saifedean.com/thebitcoinstandard/) | [10](../10-monetary-economics-and-crypto/README.md) |
+| 20 | | The Alignment Problem | Brian Christian | 2020 | Paid | Beginner | — | [11](../11-ai-alignment-economics-and-frontiers/README.md) |
+| 21 | | Intermediate Microeconomics with Calculus (2nd ed.) | Hal Varian & Marc Melitz | 2024 | Paid | Intermediate | [Link](https://wwnorton.com/books/9781324034414) | [01](../01-microeconomics/README.md) |
+| 22 | | Price Theory | David Friedman | 1990 | Free | Intermediate | [Link](http://www.daviddfriedman.com/Academic/Price_Theory/PThy_ToC.html) | [01](../01-microeconomics/README.md) |
+| 23 | | Models in Microeconomic Theory | Martin J. Osborne & Ariel Rubinstein | 2020 | Free | Intermediate | [Link](https://www.openbookpublishers.com/books/10.11647/obp.0204) | [01](../01-microeconomics/README.md) |
+| 24 | | Causal Inference: The Mixtape | Scott Cunningham | 2021 | Free | Intermediate | [Link](https://mixtape.scunning.com/) | [13](../13-empirical-economics-and-causal-inference/README.md) |
+| 25 | 🔑 | Game Theory: An Introduction | Steven Tadelis | 2013 | Paid | Intermediate | [Link](https://press.princeton.edu/books/hardcover/9780691129082/game-theory) | [02](../02-game-theory/README.md) |
+| 26 | | Strategy: An Introduction to Game Theory | Joel Watson | 2013 | Paid | Intermediate | [Norton](https://wwnorton.com/books/9780393918380) | [02](../02-game-theory/README.md) |
+| 27 | | A Course in Game Theory | Martin Osborne & Ariel Rubinstein | 1994 | Free | Intermediate | [Link](https://www.economics.utoronto.ca/osborne/cgt/) | [02](../02-game-theory/README.md) |
+| 28 | | The Strategy of Conflict (with a new preface by the author) | Thomas C. Schelling | 1960 (paperback with new preface 1981) | Paid | Intermediate | [Harvard University Press](https://www.hup.harvard.edu/books/9780674840317) | [02](../02-game-theory/README.md) |
+| 29 | | Evolution and the Theory of Games | John Maynard Smith | 1982 | Paid | Intermediate | [Cambridge University Press](https://doi.org/10.1017/CBO9780511806292) | [02](../02-game-theory/README.md) |
+| 30 | | Risk, Uncertainty and Profit | Frank Knight | 1921 | Free | Intermediate | [Link](https://oll.libertyfund.org/titles/knight-risk-uncertainty-and-profit) | [03](../03-decision-theory/README.md) |
+| 31 | | Rational Choice in an Uncertain World: The Psychology of Judgment and Decision Making (2nd ed.) | Reid Hastie & Robyn M. Dawes | 2009 | Paid | Intermediate | [SAGE](https://collegepublishing.sagepub.com/products/rational-choice-in-an-uncertain-world-2-231783) | [03](../03-decision-theory/README.md) |
+| 32 | 🔑 | An Introduction to the Theory of Mechanism Design | Tilman Börgers | 2015 | Paid | Intermediate | [Link](https://global.oup.com/academic/product/an-introduction-to-the-theory-of-mechanism-design-9780199734023) | [04](../04-mechanism-design/README.md) |
+| 33 | 🔑 | Networks, Crowds, and Markets | David Easley & Jon Kleinberg | 2010 | Free | Intermediate | [Link](https://www.cs.cornell.edu/home/kleinber/networks-book/) | [07](../07-network-economics/README.md) |
+| 34 | 🔑 | Introduction to Industrial Organization (2nd ed.) | Luis Cabral | 2017 | Paid | Intermediate | [Link](https://mitpress.mit.edu/9780262035941/introduction-to-industrial-organization/) | [15](../15-industrial-organization-and-strategy/README.md) |
+| 35 | | Denationalisation of Money: The Argument Refined | F.A. Hayek | 1976 (2nd ed. 1978) | Free | Intermediate | [Link](https://mises.org/library/denationalisation-money-argument-refined) | [10](../10-monetary-economics-and-crypto/README.md) |
+| 36 | | Microeconomic Theory | Andreu Mas-Colell, Michael D. Whinston & Jerry R. Green | 1995 | Paid | Advanced | [Oxford University Press](https://global.oup.com/ushe/product/microeconomic-theory-9780195073409) | [01](../01-microeconomics/README.md) |
+| 37 | | Bargaining and Markets | Martin J. Osborne & Ariel Rubinstein | 1990 | Free | Advanced | [Link](https://www.economics.utoronto.ca/osborne/bm/) | [02](../02-game-theory/README.md) |
+| 38 | | The Foundations of Statistics (2nd rev. ed.) | Leonard J. Savage | 1954 (2nd rev. ed. 1972) | Paid | Advanced | [Dover](https://store.doverpublications.com/products/9780486623498) | [03](../03-decision-theory/README.md) |
+| 39 | | Theory of Games and Economic Behavior: 60th Anniversary Commemorative Edition (Ch. 1 & Appendix) | John von Neumann & Oskar Morgenstern | 1944 (commemorative ed. 2004, paperback 2007) | Paid | Advanced | [Princeton University Press](https://press.princeton.edu/books/paperback/9780691130613/theory-of-games-and-economic-behavior) | [03](../03-decision-theory/README.md) |
+| 40 | | Auction Theory (2nd ed.) | Vijay Krishna | 2009 | Paid | Advanced | [Link](https://shop.elsevier.com/books/auction-theory/krishna/978-0-12-374507-1) | [04](../04-mechanism-design/README.md) |
+| 41 | | Contract Theory | Patrick Bolton & Mathias Dewatripont | 2004 | Paid | Advanced | [Link](https://mitpress.mit.edu/9780262025768/) | [05](../05-information-economics/README.md) |
+| 42 | | Behavioral Game Theory: Experiments in Strategic Interaction | Colin Camerer | 2003 | Paid | Advanced | [Link](https://press.princeton.edu/books/hardcover/9780691090399/behavioral-game-theory) | [06](../06-behavioral-economics/README.md) |
+| 43 | | Industrial Organization: Markets and Strategies (2nd ed.) | Paul Belleflamme & Martin Peitz | 2015 | Paid | Advanced | [Link](https://doi.org/10.1017/CBO9781107707139) | [15](../15-industrial-organization-and-strategy/README.md) |
+| 44 | 🔑 | Algorithmic Game Theory | Nisan, Roughgarden, Tardos, Vazirani | 2007 | Free | Advanced | [Link](https://www.cs.cmu.edu/~sandholm/cs15-892F13/algorithmic-game-theory.pdf) | [08](../08-computational-economics/README.md) |
+| 45 | | Prediction, Learning, and Games | Nicolo Cesa-Bianchi & Gabor Lugosi | 2006 | Paid | Advanced | — | [08](../08-computational-economics/README.md) |
+| 46 | 🔑 | Social Choice and Individual Values | Kenneth Arrow | 1951 | Paid | Advanced | [Link](https://yalebooks.yale.edu/book/9780300013641/social-choice-and-individual-values/) | [09](../09-social-choice-and-voting/README.md) |
+| 47 | | Monetary Theory and Policy (4th ed.) | Carl E. Walsh | 2017 | Paid | Advanced | [MIT Press Bookstore](https://mitpressbookstore.mit.edu/book/9780262035811) | [10](../10-monetary-economics-and-crypto/README.md) |
+| 48 | | Cryptoeconomics | Eric Voskuil | 2020 | Partly free | Advanced | [libbitcoin wiki](https://github.com/libbitcoin/libbitcoin-system/wiki/Cryptoeconomics) | [10](../10-monetary-economics-and-crypto/README.md) |
+| 49 | | Mostly Harmless Econometrics: An Empiricist's Companion | Joshua D. Angrist & Jörn-Steffen Pischke | 2009 | — | — | [Link](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics) | [13](../13-empirical-economics-and-causal-inference/README.md) |
+| 50 | | The Economics of Platforms: Concepts and Strategy | Paul Belleflamme & Martin Peitz | 2021 | — | — | [Link](https://doi.org/10.1017/9781108696913) | [15](../15-industrial-organization-and-strategy/README.md) |
+| 51 | | Twenty Lectures on Algorithmic Game Theory | Tim Roughgarden | 2016 | — | — | — | [08](../08-computational-economics/README.md) |
+| 52 | | QuantEcon Lectures (Quantitative Economics with Python) | Thomas J. Sargent & John Stachurski | — | Free | — | [Link](https://quantecon.org/lectures/) | [08](../08-computational-economics/README.md) |
+| 53 | | Collective Choice and Social Welfare | Amartya Sen | 1970/2017 | — | — | [Link](https://www.hup.harvard.edu/catalog.php?isbn=9780674971608) | [09](../09-social-choice-and-voting/README.md) |
+| 54 | | Fair Division and Collective Welfare | Hervé Moulin | 2003 | — | — | — | [09](../09-social-choice-and-voting/README.md) |
+| 55 | | Gaming the Vote | William Poundstone | 2008 | — | — | — | [09](../09-social-choice-and-voting/README.md) |
+| 56 | | Handbook of Computational Social Choice | Felix Brandt, Vincent Conitzer, Ulle Endriss, Jérôme Lang & Ariel D. Procaccia (eds.) | 2016 | Free | — | [Link](https://cgi.cse.unsw.edu.au/~haziz/comsoc.pdf) | [09](../09-social-choice-and-voting/README.md) |
+| 57 | | The Fed Explained: What the Central Bank Does (11th ed.) | Board of Governors of the Federal Reserve System | — | Free | — | [Link](https://www.federalreserve.gov/aboutthefed/the-fed-explained.htm) | [14](../14-macroeconomics-money-and-financial-markets/README.md) |
 <!-- books:end -->

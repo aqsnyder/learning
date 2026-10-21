@@ -79,7 +79,8 @@ label = "Statement"
 url = "https://doi.org/10.1080/00031305.2016.1154108"
 link_text = "The American Statistician"
 description = "Six principles, two pages, from the American Statistical Association. Read it before you next write \"significant\", and note which of the six your own habits violate. Am. Stat. 70(2):129–133"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
 
 [[groups.items]]
 id = "statistics-for-biologists-including-the"

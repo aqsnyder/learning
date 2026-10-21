@@ -40,8 +40,20 @@ access = "paid"
 marks = ["core"]
 url = "https://www.jstor.org/stable/1914185"
 link_text = "Link"
-description = "The most-cited paper in economics. Introduced loss aversion, reference dependence, and probability weighting. Foundational."
+description = "The foundational paper on how people decide under risk: introduced loss aversion, reference dependence, and probability weighting, using Allais-type choice problems and the reflection effect that Practices 1 and 3 work through."
 verified = 2026-10-13
+
+[[groups.items]]
+id = "advances-in-prospect-theory"
+title = "Advances in Prospect Theory: Cumulative Representation of Uncertainty"
+authors = "Amos Tversky & Daniel Kahneman"
+year = "1992"
+type = "paper"
+access = "paid"
+url = "https://doi.org/10.1007/BF00122574"
+link_text = "Link"
+description = "Cumulative prospect theory, published in the *Journal of Risk and Uncertainty*: rank-dependent decision weights with separate probability-weighting functions for gains and losses, fitted to experimental choices. The source of the parameters (0.88, 2.25, 0.61, 0.69) you implement in Practices 1 and 3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "judgment-under-uncertainty-heuristics"
@@ -80,6 +92,18 @@ url = "https://oll.libertyfund.org/titles/knight-risk-uncertainty-and-profit"
 link_text = "Link"
 description = "Introduced the crucial distinction between measurable risk and unmeasurable uncertainty (\"Knightian uncertainty\")."
 verified = 2026-10-13
+
+[[groups.items]]
+id = "risk-ambiguity-and-the-savage-axioms"
+title = "Risk, Ambiguity, and the Savage Axioms"
+authors = "Daniel Ellsberg"
+year = "1961"
+type = "paper"
+access = "paid"
+url = "https://doi.org/10.2307/1884324"
+link_text = "Link"
+description = "The Ellsberg urn experiments (*Quarterly Journal of Economics*): most people prefer bets on known odds to bets on unknown odds in a pattern that no subjective probability can explain, violating Savage's sure-thing principle. The source for Practice 1(e) and Check Yourself 1 and 7."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "theory-of-games-and-economic-behavior-ch"

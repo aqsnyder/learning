@@ -36,14 +36,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "igem-international-genetically"
 title = "iGEM — International Genetically Engineered Machine Competition"
-authors = "iGEM"
+authors = "iGEM Foundation"
 type = "website"
 label = "Community"
 access = "free"
 url = "https://igem.org/"
 link_text = "iGEM"
 description = "The annual student competition that built synthetic biology's parts-and-documentation culture: teams specify, build and publicly document an engineered-organism project each year, and the associated registry of standardised parts is where Practice 1 gets real part data rather than invented numbers"
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups]]
 title = "Brain-Computer Interfaces"
@@ -61,7 +61,8 @@ marks = ["core"]
 url = "https://doi.org/10.1038/s41586-023-06377-x"
 link_text = "Nature"
 description = "The result this subsection is built on: intracortical recordings from a participant with paralysis decoded into attempted speech at roughly 62 words per minute, with the vocabulary-dependent error rates quoted above. Practice 2 converts those figures into an information rate and then into channel-count, link and power requirements for the implant"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
 
 [[groups.items]]
 id = "neuronal-ensemble-control-of-prosthetic"
@@ -114,7 +115,8 @@ type = "paper"
 url = "https://doi.org/10.1016/j.cell.2021.12.025"
 link_text = "Cell"
 description = "A spatially resolved kinetic simulation of JCVI-syn3A, the 493-gene synthetic minimal cell, in which growth and division behaviour emerges from the modelled chemistry rather than being imposed by hand — the decade-later successor to Karr et al. and the comparison point in Practice 3"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
 
 [[groups.items]]
 id = "how-to-build-the-virtual-cell-with"
@@ -150,12 +152,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "induction-of-pluripotent-stem-cells-from"
 title = "Induction of Pluripotent Stem Cells from Mouse Embryonic and Adult Fibroblast Cultures by Defined Factors"
-authors = "Takahashi & Yamanaka"
+authors = "Kazutoshi Takahashi, Shinya Yamanaka"
 year = "2006"
 type = "paper"
 url = "https://doi.org/10.1016/j.cell.2006.07.024"
 link_text = "Cell"
 description = "The four-factor reprogramming experiment that turned differentiated mouse fibroblasts back into pluripotent cells, and so made cellular age look like something that can be reset. Every partial-reprogramming rejuvenation claim in the longevity literature descends from it; Practice 4 uses it to separate what has been shown in cells from what is claimed for organisms"
+access = "free"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "lifespan-why-we-age-and-why-we-don-t"
@@ -201,7 +205,8 @@ type = "paper"
 url = "https://doi.org/10.1038/s41586-023-06139-9"
 link_text = "Nature"
 description = "Geneformer: a transformer pre-trained on tens of millions of single-cell transcriptomes, then fine-tuned to make network-biology predictions from small datasets. The single-cell counterpart to Evo here, and one of the embeddings compared against a plain PCA baseline in [Section 10](../10-ai-for-biology/README.md)'s Practice 5"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "paid"
 
 [[groups.items]]
 id = "genome-modelling-and-design-across-all"
@@ -212,7 +217,8 @@ type = "paper"
 url = "https://doi.org/10.1038/s41586-026-10176-5"
 link_text = "Nature"
 description = "Evo 2: the successor trained across all domains of life, at 7B and 40B parameters on about 9 trillion bases, with weights released openly; it scores variant effects and generates sequence at genome scale. As of October 2026 it is the newest genomic foundation model listed here — treat \"largest\" or \"state of the art\" claims in this area as dated facts rather than durable ones, and re-check them when you revisit the section"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
 
 [[groups]]
 title = "Biosecurity and Dual Use"

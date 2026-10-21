@@ -81,3 +81,4 @@ Answer from memory first, then check against the sources — or paste this secti
 6. Misconception: "Shannon's theorem says a noisy channel always produces some errors." What does it actually guarantee, and what does that guarantee cost?
 7. For the AWGN channel, what happens to capacity as bandwidth → ∞ at fixed power, and where does the −1.59 dB figure come from?
 8. Explain to a smart friend in 3 sentences why information is measured as log(1/p).
+9. You estimate the entropy of a sensor stream by plugging observed symbol frequencies into H = −Σ p log p. Why does this plug-in estimate tend to come out too low — worse for higher-order (context) models — and how do you get an honest number instead?

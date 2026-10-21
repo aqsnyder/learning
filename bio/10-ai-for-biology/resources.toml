@@ -14,7 +14,8 @@ marks = ["core"]
 url = "https://doi.org/10.1038/s41586-021-03819-2"
 link_text = "Paper"
 description = "AlphaFold 2: the Evoformer trunk and structure module that reached experimental-level accuracy on most CASP14 targets, together with the confidence estimates (pLDDT, PAE) that decide whether a prediction is usable. The anchor of this section — Practice 1 runs it and Practice 6 draws it block by block. Also used in physics/11."
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
 
 [[groups.items]]
 id = "accurate-structure-prediction-of"
@@ -26,7 +27,8 @@ marks = ["core"]
 url = "https://doi.org/10.1038/s41586-024-07487-w"
 link_text = "Paper"
 description = "AlphaFold 3 extends structure prediction to protein–ligand, protein–DNA/RNA, and multi-chain complexes using diffusion-based architecture"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
 
 [[groups.items]]
 id = "improved-protein-structure-prediction"
@@ -54,14 +56,15 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "biobert-a-pre-trained-biomedical"
-title = "BioBERT: A Pre-trained Biomedical Language Representation Model"
+title = "BioBERT: A Pre-trained Biomedical Language Representation Model for Biomedical Text Mining"
 authors = "Lee, Yoon, Kim, Kim, Kim, So & Kang"
 year = "2020"
 type = "paper"
 url = "https://doi.org/10.1093/bioinformatics/btz682"
 link_text = "Paper"
 description = "Domain-specific BERT model pre-trained on biomedical literature, achieving state-of-the-art on biomedical NLP benchmarks"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
 
 [[groups.items]]
 id = "scgpt-toward-building-a-foundation-model"
@@ -72,7 +75,8 @@ type = "paper"
 url = "https://doi.org/10.1038/s41592-024-02201-0"
 link_text = "Paper"
 description = "Foundation model for single-cell biology built by generative pre-training over millions of cells, applied to cell-type annotation, perturbation prediction and gene-network inference. This section is its home: Practice 5 benchmarks its embeddings against a marker-gene annotation and a plain PCA baseline, and [Section 11](../11-frontiers/README.md)'s foundation-model subsection cross-links to it"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "paid"
 
 [[groups.items]]
 id = "3d-infomax-improves-gnns-for-molecular"

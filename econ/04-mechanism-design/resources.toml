@@ -15,7 +15,7 @@ level = "intermediate"
 marks = ["core"]
 url = "https://global.oup.com/academic/product/an-introduction-to-the-theory-of-mechanism-design-9780199734023"
 link_text = "Link"
-description = "The clearest modern textbook on mechanism design. Covers social choice, incentive compatibility, VCG, auctions, and bilateral trade."
+description = "A clear modern textbook on mechanism design: social choice, incentive compatibility, VCG, revenue-maximizing auctions, and bilateral trade (Myerson–Satterthwaite). Backs Practices 3–5."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -87,6 +87,7 @@ authors = "Paul Milgrom"
 year = "2020"
 type = "video"
 access = "free"
+level = "intermediate"
 url = "https://www.nobelprize.org/prizes/economic-sciences/2020/milgrom/lecture/"
 link_text = "Link"
 description = "Milgrom's Nobel lecture on improvements to auction theory and new auction formats."

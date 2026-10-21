@@ -95,6 +95,7 @@ url = "https://www.youtube.com/watch?v=F-CIJDsTwwE"
 link_text = "YouTube"
 description = "Altium Academy video on when a low-Dk material is worth choosing over standard FR-4. Watch it before you write Practice 3's memo."
 verified = 2026-10-21
+year = "2022"
 
 [[groups.items]]
 id = "kicad-calculator-tools"

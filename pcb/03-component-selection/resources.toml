@@ -85,6 +85,7 @@ more_links = [{ text = "#71: Switching Regulator Component Selection & Sizing (s
 description = "Two Phil's Lab selection walkthroughs: #114 on MLCC basics, for Practice 2, and #71, a sponsored episode on choosing and sizing a switching regulator's components."
 verified = 2026-10-21
 short = "Phil's Lab #114 and #71"
+year = "2023"
 
 [[groups.items]]
 id = "phil-s-lab-qfn-pcb-design-tips"
@@ -97,3 +98,4 @@ url = "https://www.youtube.com/watch?v=hOamoJ15hmA"
 link_text = "YouTube"
 description = "Phil's Lab's tips for putting QFN packages (leadless, usually with an exposed pad) on a board. Use it for Practice 1's fab and assembly consequences of a package choice."
 verified = 2026-10-21
+year = "2024"

@@ -76,12 +76,13 @@ verified = 2026-10-21
 id = "introduction-to-critical-thinking"
 title = "Introduction to Critical Thinking"
 authors = "Wireless Philosophy (Wi-Phi)"
-type = "video"
+type = "video-series"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/playlist?list=PLtKNX4SfKpzX_bhh4LOEWEGy3pkLmFDmk"
-link_text = "YouTube"
-description = "35 short animated lessons from Wi-Phi on the basics of good reasoning — what arguments are and how to evaluate them. The fastest on-ramp before formal logic."
-verified = 2026-10-13
+link_text = "YouTube playlist"
+description = "35 short animated lessons from Wi-Phi on the basics of good reasoning — what arguments are and how to evaluate them. The fastest on-ramp before formal logic, and the companion to Practice 1."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "forall-x-calgary-a-free-and-open"
@@ -98,47 +99,57 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "1000-word-philosophy-ethics-essays"
-title = "1000-Word Philosophy — Ethics essays: \"Consequentialism and Utilitarianism\", \"Kantian Deontology\", \"Virtue Ethics\", \"Social Contract Theory\""
+title = "1000-Word Philosophy — Ethics essays: \"Consequentialism and Utilitarianism\", \"Kantian Deontology: Immanuel Kant's Ethics\", \"Virtue Ethics\", \"Social Contract Theory: Hobbes, Locke, and the State of Nature\""
 authors = "Shane Gronholz; Andrew Chapman; David Merry; David Antonini"
+year = "2014–2022"
 type = "article"
 label = "Essays"
-url = "https://1000wordphilosophy.com/ethics/"
-link_text = "Link"
-description = "Short, free introductions to the main normative theories. The curriculum otherwise has no ethics primer before Section 06 — these give you the vocabulary that AI-ethics and alignment debates assume."
+url = "https://1000wordphilosophy.com/2014/05/15/consequentialism/"
+link_text = "Consequentialism"
+more_links = [
+  { text = "Kantian deontology", url = "https://1000wordphilosophy.com/2014/06/09/kantian-ethics/" },
+  { text = "Virtue ethics", url = "https://1000wordphilosophy.com/2022/02/06/virtue-ethics/" },
+  { text = "Social contract", url = "https://1000wordphilosophy.com/2018/10/03/social-contract-theory/" },
+]
+description = "Four short, free introductions to the main normative theories, one link per essay (Gronholz 2014, Chapman 2014, Merry 2022, Antonini 2018). The curriculum otherwise has no ethics primer before Section 06 — these give you the vocabulary that AI-ethics and alignment debates assume, and Practice 4 applies all four."
 access = "free"
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "meno"
 title = "Meno"
-authors = "Plato"
+authors = "Plato (trans. Benjamin Jowett)"
 year = "~380 BC"
-type = "paper"
+type = "book"
 label = "Dialogue"
+access = "free"
+level = "beginner"
 url = "https://www.gutenberg.org/ebooks/1643"
 link_text = "Free"
-description = "Classic dialogue on knowledge vs. true belief. Introduces the paradox of inquiry."
-verified = 2026-10-13
+description = "Classic dialogue on knowledge vs. true belief: the paradox of inquiry (80d–e), the doctrine of recollection, and the \"statues of Daedalus\" passage on why knowledge is worth more than true belief (97a–98a). Practice 2 starts here. The free link is Benjamin Jowett's public-domain translation on Project Gutenberg."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "an-enquiry-concerning-human"
 title = "An Enquiry Concerning Human Understanding"
-authors = "David Hume"
+authors = "David Hume (ed. L. A. Selby-Bigge)"
 year = "1748"
 type = "book"
 access = "free"
 level = "intermediate"
 url = "https://www.gutenberg.org/ebooks/9662"
 link_text = "Free"
-description = "Empiricism, causation, the problem of induction. Read at least Sections 2-5 and 7 for foundations."
-verified = 2026-10-13
+description = "Empiricism, causation, the problem of induction. Read at least Sections II–V and VII; Sections IV–V (the sceptical doubts and their \"sceptical solution\") are the basis of Practice 5 and Check Yourself 4. The free link is the public-domain Selby-Bigge text on Project Gutenberg."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-philosophy"
 title = "Introduction to Philosophy"
-authors = "University of Edinburgh"
+authors = "University of Edinburgh (Dave Ward, Duncan Pritchard, Michela Massimi et al.)"
 type = "course"
+access = "partial"
+level = "beginner"
 url = "https://www.coursera.org/learn/philosophy"
 link_text = "Coursera"
-description = "Broad intro covering epistemology, metaphysics, philosophy of mind, and ethics. Good video companion."
-verified = 2026-10-13
+description = "Free-to-enroll MOOC (about 18 hours of modules; the certificate is paid): what philosophy is, morality, knowledge and testimony, political obligation, minds, brains and computers, scientific realism, free will, and time travel. An optional video companion to Blackburn. Coursera does not show a launch date."
+verified = 2026-10-21

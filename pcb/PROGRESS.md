@@ -11,12 +11,12 @@ pass are ticked. Everything else is there for going deeper.
 ## Section 00 — Electronics Fundamentals
 
 - [ ] 🔑 *The Art of Electronics* (3rd ed.) — Horowitz & Hill <!-- id:pcb/00/the-art-of-electronics-3rd-ed -->
-- [ ] 🔑 *Learning the Art of Electronics* — Hayes & Horowitz <!-- id:pcb/00/learning-the-art-of-electronics -->
+- [ ] 🔑 *Learning the Art of Electronics: A Hands-On Lab Course* (2nd ed.) — Thomas C. Hayes & David Abrams <!-- id:pcb/00/learning-the-art-of-electronics -->
 - [ ] EEVblog #859, #33 and #453 — Dave Jones <!-- id:pcb/00/eevblog -->
 - [ ] Electronic Basics — GreatScott! <!-- id:pcb/00/greatscott -->
 - [ ] Khan Academy Electrical Engineering — Khan Academy <!-- id:pcb/00/khan-academy-electrical-engineering -->
 - [ ] MIT 6.002 Circuits and Electronics (OCW) — Anant Agarwal (with Jeffrey Lang) <!-- id:pcb/00/mit-6-002-circuits-and-electronics-ocw -->
-- [ ] *Practical Electronics for Inventors* — Scherz & Monk <!-- id:pcb/00/practical-electronics-for-inventors -->
+- [ ] *Practical Electronics for Inventors* — Paul Scherz & Simon Monk <!-- id:pcb/00/practical-electronics-for-inventors -->
 - [ ] TI Precision Labs — Op Amps — Texas Instruments <!-- id:pcb/00/ti-precision-labs-op-amps -->
 - [ ] LTspice — Analog Devices <!-- id:pcb/00/ltspice -->
 - [ ] 🛠️ Exercise 1: Rise time vs bandwidth, on your bench <!-- id:pcb/00/ex-1 -->
@@ -57,7 +57,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 KiCad Library Conventions (KLC) — KiCad Library Team <!-- id:pcb/02/kicad-library-conventions-klc -->
 - [ ] KiCad 10 manual — Schematic Editor — The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Wayne Stambaugh, Graham Keeth) <!-- id:pcb/02/kicad-schematic-editor-manual -->
 - [ ] KiCad 10 manual — Project templates — The KiCad Documentation Contributors (Jean-Pierre Charras, Fabrizio Tappero, Jon Evans, Graham Keeth) <!-- id:pcb/02/kicad-project-templates -->
-- [ ] SnapEDA component library — SnapEDA <!-- id:pcb/02/snapeda-component-library -->
+- [ ] SnapMagic Search (formerly SnapEDA) component library — SnapMagic <!-- id:pcb/02/snapeda-component-library -->
 - [ ] Ultra Librarian — Ultra Librarian <!-- id:pcb/02/ultra-librarian -->
 - [ ] SamacSys — Supplyframe <!-- id:pcb/02/samacsys -->
 - [ ] How to Draw Schematic & Tips to Improve Schematic (Parts 1–3) — Robert Feranec <!-- id:pcb/02/robert-feranec-schematic-review-series -->
@@ -113,12 +113,12 @@ pass are ticked. Everything else is there for going deeper.
 ## Section 05 — Power Distribution and Grounding
 
 - [ ] 🔑 How to Achieve Proper Grounding — Rick Hartley <!-- id:pcb/05/how-to-achieve-proper-grounding -->
-- [ ] 🔑 Power Distribution Network — Rick Hartley <!-- id:pcb/05/power-distribution-networks -->
+- [ ] 🔑 Power Distribution Network — Nine Dot Connects <!-- id:pcb/05/power-distribution-networks -->
 - [ ] 🔑 Switching Regulator PCB Design — Phil's Lab #60 — Phil's Lab <!-- id:pcb/05/phil-s-lab-power-design-tutorials -->
 - [ ] Fast Circuit Boards: Energy Management (2018) — Ralph Morrison <!-- id:pcb/05/fast-circuit-boards-energy-management -->
 - [ ] Principles of Power Integrity for PDN Design — Simplified (2017) — Larry D. Smith, Eric Bogatin <!-- id:pcb/05/principles-of-power-integrity-for-pdn -->
 - [ ] Grounding and Shielding: Circuits and Interference (6th ed., 2016) — Ralph Morrison <!-- id:pcb/05/grounding-and-shielding-circuits-and -->
-- [ ] Saturn PCB Design Toolkit — Saturn PCB Design <!-- id:pcb/05/saturn-pcb-design-toolkit -->
+- [ ] Saturn PCB Design Toolkit — Saturn PCB Design, Inc. <!-- id:pcb/05/saturn-pcb-design-toolkit -->
 - [ ] IPC-2152 — Standard for Determining Current-Carrying Capacity in Printed Board Design (2009) — IPC <!-- id:pcb/05/ipc-2152-standard-for-determining -->
 - [ ] MT-101: Decoupling Techniques (2009) — Analog Devices <!-- id:pcb/05/mt-101-decoupling-techniques-2009 -->
 - [ ] MT-031: Grounding Data Converters and Solving the Mystery of "AGND" and "DGND" (2008) — Walt Kester, James Bryant, Mike Byrne (Analog Devices) <!-- id:pcb/05/mt-031-grounding-data-converters-and -->
@@ -167,7 +167,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 Bogatin on Feranec's channel — reflections, crosstalk, differential pairs <!-- id:pcb/06/robert-feranec-signal-integrity-and-high -->
 - [ ] High-Speed Interface Layout Guidelines (SPRAAR7J, 2023) — Texas Instruments <!-- id:pcb/06/high-speed-interface-layout-guidelines -->
 - [ ] Ethernet PHY PCB Design Layout Checklist (SNLA387, 2021) — Lysny Woodahl (Texas Instruments) <!-- id:pcb/06/ethernet-phy-pcb-design-layout-checklist -->
-- [ ] UltraCAD Calculators — UltraCAD <!-- id:pcb/06/ultracad-calculators -->
+- [ ] UltraCAD Calculators — UltraCAD Design, Inc. (Douglas Brooks) <!-- id:pcb/06/ultracad-calculators -->
 - [ ] 🛠️ Exercise 1: Bounce diagram vs SPICE <!-- id:pcb/06/ex-1 -->
 - [ ] 🛠️ Exercise 2: Write a 2D field solver <!-- id:pcb/06/ex-2 -->
 - [ ] 🛠️ Exercise 3: Crosstalk vs spacing <!-- id:pcb/06/ex-3 -->

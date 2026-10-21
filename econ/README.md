@@ -38,7 +38,7 @@ This repository is a structured curriculum for self-studying economics, decision
 | [Section 08 — Computational Economics](08-computational-economics/) |  | Roughgarden's CS364A lecture notes → Nisan et al., *Algorithmic Game Theory* |
 | [Section 09 — Social Choice and Voting](09-social-choice-and-voting/) |  | Arrow, *Social Choice and Individual Values* |
 | [Section 14 — Macroeconomics, Money and Financial Markets](14-macroeconomics-money-and-financial-markets/) | Before 10 | Mehrling's Economics of Money and Banking → Shiller's Financial Markets (ECON 252) |
-| [Section 10 — Monetary Economics and Crypto](10-monetary-economics-and-crypto/) |  | Nakamoto's Bitcoin whitepaper → Gensler's MIT *Blockchain and Money* |
+| [Section 10 — Monetary Economics and Crypto](10-monetary-economics-and-crypto/) |  | McLeay, Radia & Thomas, "Money in the modern economy: an introduction" → Bernanke's lectures, *The Federal Reserve and the Financial Crisis* → Halaburda et al., "The Microeconomics of Cryptocurrencies" |
 | [Section 11 — AI Alignment through an Economic Lens](11-ai-alignment-economics-and-frontiers/) |  | Manheim & Garrabrant on Goodhart's Law → Dafoe et al., "Open Problems in Cooperative AI" |
 | [Section 12 — Economics of AI](12-economics-of-ai/) | After 11 (needs 13) | Acemoglu & Restrepo, "Automation and New Tasks" → Brynjolfsson, Li & Raymond, "Generative AI at Work" → Acemoglu, "The Simple Macroeconomics of AI" |
 <!-- learning-path:end -->

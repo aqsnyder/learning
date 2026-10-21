@@ -15,7 +15,7 @@ level = "beginner"
 marks = ["core"]
 url = "https://www.cambridge.org/highereducation/books/how-to-prove-it/6D2965D625C6836CD4A785A2C843B3DA"
 link_text = "Cambridge UP"
-description = "Velleman's step-by-step course in reading and writing proofs, 3rd edition (Cambridge University Press, 2019): sentential and quantificational logic, proof strategies, relations, functions, induction, number theory and infinite sets. The section's core text; Practice 1–4 cite its chapters, so work its exercises rather than just reading."
+description = "Velleman's step-by-step course in reading and writing proofs, 3rd edition (Cambridge University Press, 2019): logic, proof strategies, sets and relations, functions, induction, number theory and infinite sets. The section's core text; Practice 1–4 cite its chapters, so work its exercises rather than just reading."
 verified = 2026-10-21
 
 [[groups.items]]

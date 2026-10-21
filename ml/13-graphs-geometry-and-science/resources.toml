@@ -22,7 +22,7 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "semi-supervised-classification-with"
-title = "Semi-Supervised Classification with Graph Convolutional Networks (GCN)"
+title = "GCN — Semi-Supervised Classification with Graph Convolutional Networks"
 authors = "Kipf & Welling"
 year = "2016"
 type = "paper"
@@ -30,12 +30,12 @@ access = "free"
 marks = ["core"]
 url = "https://arxiv.org/abs/1609.02907"
 link_text = "arxiv.org/abs/1609.02907"
-description = "Derives a scalable graph convolution from a first-order approximation of spectral filters, for semi-supervised node classification on citation graphs. You implement it in Practice 1."
-verified = 2026-10-13
+description = "Derives a scalable graph convolution from a first-order approximation of spectral filters, for semi-supervised node classification on citation graphs. You implement it in Practice 1. Also used in math/06."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "graph-attention-networks-gat"
-title = "Graph Attention Networks (GAT)"
+title = "GAT — Graph Attention Networks"
 authors = "Veličković et al."
 year = "2018"
 type = "paper"
@@ -43,7 +43,7 @@ access = "free"
 url = "https://arxiv.org/abs/1710.10903"
 link_text = "arxiv.org/abs/1710.10903"
 description = "Masked self-attention over each node's neighbors learns per-edge weights, replacing GCN's fixed normalization; works inductively. Compared with GCN in Practice 2."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "neural-message-passing-for-quantum"
@@ -55,7 +55,7 @@ access = "free"
 marks = ["canon"]
 url = "https://arxiv.org/abs/1704.01212"
 link_text = "arxiv.org/abs/1704.01212"
-description = "Recasts earlier graph networks as message passing neural networks (message, update, readout) and sets a new state of the art on QM9 molecular properties."
+description = "Recasts earlier graph networks as message passing neural networks (message, update, readout) and set a new state of the art on QM9 molecular properties at the time (2017)."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -83,8 +83,8 @@ level = "advanced"
 marks = ["core"]
 url = "https://arxiv.org/abs/2104.13478"
 link_text = "arxiv.org/abs/2104.13478"
-description = "Unifies CNNs, GNNs, transformers and equivariant networks as architectures built from symmetry: equivariant layers, local pooling and invariant readouts. The section's organizing framework."
-verified = 2026-10-13
+description = "Unifies CNNs, GNNs, transformers and equivariant networks as architectures built from symmetry: equivariant layers, local pooling and invariant readouts. The section's organizing framework. Also used in math/06."
+verified = 2026-10-21
 
 [[groups]]
 title = "Equivariant & Geometric Networks"
@@ -101,8 +101,8 @@ type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2102.09844"
 link_text = "arxiv.org/abs/2102.09844"
-description = "A graph network equivariant to rotations, translations, reflections and permutations, without costly higher-order (spherical-harmonic) features. Simple enough to implement in Practice 3."
-verified = 2026-10-13
+description = "A graph network equivariant to rotations, translations, reflections and permutations, without costly higher-order (spherical-harmonic) features. Simple enough to implement in Practice 3. Also used in physics/11."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "se-3-transformers-3d-roto-translation"

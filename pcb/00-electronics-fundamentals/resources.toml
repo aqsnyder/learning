@@ -20,23 +20,25 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "learning-the-art-of-electronics"
-title = "*Learning the Art of Electronics*"
-authors = "Hayes & Horowitz"
+title = "*Learning the Art of Electronics: A Hands-On Lab Course* (2nd ed.)"
+authors = "Thomas C. Hayes & David Abrams"
 type = "book"
 label = "Book (Lab Companion)"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-url = "https://artofelectronics.net/"
-link_text = "artofelectronics.net"
-description = "The hands-on lab course that accompanies *The Art of Electronics*: do its labs alongside the AoE chapters. A paid Cambridge University Press book, not a free one. A 2nd edition is available (as of October 2026)"
-verified = 2026-10-13
+url = "https://learningtheartofelectronics.com/"
+link_text = "Book site"
+description = "The hands-on lab course that accompanies *The Art of Electronics*: do its labs alongside the AoE chapters. A paid Cambridge University Press book; the second edition (2025) covers analog circuits, then digital ones through Verilog on programmable logic and an ARM microcontroller running an RTOS. The book site has the table of contents, online chapters, parts lists and errata."
+verified = 2026-10-21
+year = "2025"
+more_links = [{ text = "Cambridge University Press", url = "https://www.cambridge.org/us/universitypress/subjects/physics/electronics-physicists/learning-art-electronics-hands-lab-course-2nd-edition" }]
 
 [[groups.items]]
 id = "eevblog"
 title = "EEVblog #859 — Bypass / Decoupling Capacitor Tutorial"
 authors = "Dave Jones (EEVblog)"
-type = "video-series"
+type = "video"
 label = "Videos"
 access = "free"
 level = "beginner"
@@ -49,6 +51,7 @@ more_links = [
 description = "Three EEVblog videos picked for this section: #859 on bypass and decoupling capacitors and #33 part 2 on ceramic capacitors and impedance (Objective 1, Practice 2), and #453 on x1 vs x10 oscilloscope probes, for what your probe does to the edge you measure (Practice 1)."
 verified = 2026-10-21
 short = "EEVblog #859, #33 and #453 — Dave Jones"
+year = "2016"
 
 [[groups.items]]
 id = "greatscott"
@@ -73,7 +76,8 @@ level = "beginner"
 url = "https://www.khanacademy.org/science/electrical-engineering"
 link_text = "khanacademy.org"
 description = "Free introductory lessons on voltage, current and the basic circuit laws. Use them to meet this section's prerequisites (step 1 of the Suggested Order) before starting AoE."
-verified = 2026-10-13
+verified = 2026-10-21
+year = "n.d."
 
 [[groups.items]]
 id = "mit-6-002-circuits-and-electronics-ocw"
@@ -91,23 +95,27 @@ verified = 2026-10-13
 [[groups.items]]
 id = "practical-electronics-for-inventors"
 title = "*Practical Electronics for Inventors*"
-authors = "Scherz & Monk"
+authors = "Paul Scherz & Simon Monk"
 type = "book"
 access = "paid"
 level = "beginner"
 description = "Broad, accessible desk reference on components and basic circuits; keep it for quick look-ups."
+url = "https://lccn.loc.gov/2016932853"
+link_text = "Library of Congress record"
+year = "2016"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ti-precision-labs-op-amps"
 title = "TI Precision Labs — Op Amps"
 authors = "Texas Instruments"
-type = "course"
+type = "video-series"
 access = "free"
 level = "intermediate"
 url = "https://www.ti.com/video/series/precision-labs/ti-precision-labs-op-amps.html"
 link_text = "ti.com"
 description = "Op-amp video curriculum, from offset and bias current through noise, bandwidth, stability, PCB layout and board-level troubleshooting: a practical bridge from textbook op amps to real analog front ends (Practices 3 and 4)."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ltspice"

@@ -16,7 +16,10 @@ type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "The most comprehensive anthology on AI ethics. Covers moral status of AI, fairness, responsibility, lethal autonomous weapons, and privacy. Systematic and philosophically rigorous."
+url = "https://academic.oup.com/book/33540"
+link_text = "OUP"
+description = "Anthology of seventeen original essays by philosophers and AI researchers: ethical learning (Railton), the trolley problem and self-driving cars (Kamm), the moral psychology of AI (Bonnefon, Shariff & Rahwan), the ethical matrix (O'Neil & Gunn), autonomous weapons (Asaro), mass unemployment (James), alignment and superintelligence policy (Russell; Taylor et al.; Bostrom, Dafoe & Flynn), AI consciousness (Schneider), and the moral status and rights of AI (Schwitzgebel & Garza; \"The Moral Status and Rights of Artificial Intelligence\"). Practices 1 and 5 and the mini-project use named chapters."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "weapons-of-math-destruction-how-big-data"

@@ -3,18 +3,21 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Also used here (tracked in its home section):** *Mastering Bitcoin* Ch. 10 ([Section 06](../06-network-and-p2p/README.md)) for full nodes vs lightweight clients, and *Mastering Bitcoin* Ch. 13 ([Section 08](../08-security-and-privacy/README.md)) for hardware signing devices, multisig, physical backups and survivability (inheritance). With Ch. 5's xpub-on-a-web-store example they cover objective 4's wallet comparison and objective 5's backup design.'''
 
 [[groups.items]]
 id = "mastering-bitcoin-chapter-5-wallet"
 title = "Mastering Bitcoin, Chapter 5: Wallet Recovery"
-authors = "Antonopoulos & Harding"
+authors = "Andreas M. Antonopoulos and David A. Harding"
+year = "2023"
 type = "book"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch05_wallets.adoc"
 link_text = "GitHub"
-description = "HD key derivation (BIP 32), BIP 39 recovery codes and passphrases, and what else a backup must capture (derivation paths, output script descriptors)"
-verified = 2026-10-13
+description = "Independent vs deterministic key generation, HD derivation (BIP 32) and public child derivation, seeds and recovery codes (BIP 39) with passphrases, what else a backup must hold (nonkey data, derivation paths, output script descriptors), and an extended public key used on a web store (watch-only). 3rd edition (O'Reilly, December 2023)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "learn-me-a-bitcoin-hd-wallets"
@@ -30,85 +33,86 @@ verified = 2026-10-13
 [[groups.items]]
 id = "bip-32-hierarchical-deterministic"
 title = "BIP 32: Hierarchical Deterministic Wallets"
+authors = "Pieter Wuille"
+year = "2012"
 type = "standard"
 access = "free"
 marks = ["core"]
 url = "https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki"
 link_text = "BIP 32"
-description = "The HD wallet standard"
-verified = 2026-10-13
+description = "The HD wallet spec: the master key from a seed (HMAC-SHA512 keyed with \"Bitcoin seed\"), CKDpriv and CKDpub, hardened vs normal children, xprv/xpub serialization, a security section on what a leaked child key exposes, and test vectors 1–5. Deployed."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bip-39-mnemonic-seed-phrases"
-title = "BIP 39: Mnemonic Seed Phrases"
+title = "BIP 39: Mnemonic code for generating deterministic keys"
+authors = "Marek Palatinus, Pavol Rusnak, Aaron Voisine, Sean Bowe"
+year = "2013"
 type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki"
 link_text = "BIP 39"
-description = "How 12/24 word seeds work"
-verified = 2026-10-13
+description = "Entropy plus checksum → 11-bit indices → words, and mnemonic plus optional passphrase → seed with PBKDF2 (HMAC-SHA512, 2,048 iterations, salt \"mnemonic\" + passphrase). Exercises 1–2 implement and stress it."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bip-44-multi-account-hierarchy"
-title = "BIP 44: Multi-Account Hierarchy"
+title = "BIP 44: Multi-Account Hierarchy for Deterministic Wallets"
+authors = "Marek Palatinus, Pavol Rusnak"
+year = "2014"
 type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki"
 link_text = "BIP 44"
-description = "Derivation path conventions"
-verified = 2026-10-13
+description = "The m / purpose' / coin_type' / account' / change / address_index path, with hardened derivation at the purpose, coin-type and account levels, and account-discovery rules."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bip-84-native-segwit-derivation"
-title = "BIP 84: Native SegWit Derivation"
+title = "BIP 84: Derivation scheme for P2WPKH based accounts"
+authors = "Pavol Rusnak"
+year = "2017"
 type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0084.mediawiki"
 link_text = "BIP 84"
-description = "bc1q address derivation"
-verified = 2026-10-13
+description = "Purpose 84' for native SegWit (bc1q) accounts, the zpub/zprv version bytes, and test vectors from the \"abandon … about\" mnemonic that exercise 5 reproduces."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bip-86-taproot-derivation"
-title = "BIP 86: Taproot Derivation"
+title = "BIP 86: Key Derivation for Single Key P2TR Outputs"
+authors = "Ava Chow"
+year = "2021"
 type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0086.mediawiki"
 link_text = "BIP 86"
-description = "bc1p address derivation"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "wallet-types"
-title = "Wallet types"
-type = "concept"
-description = "Full node, SPV, hardware, multisig, watch-only"
-
-[[groups.items]]
-id = "backup-and-recovery-strategies"
-title = "Backup and recovery strategies"
-type = "concept"
-description = "Seed storage, passphrase protection, inheritance planning"
+description = "Purpose 86' for single-key Taproot (bc1p) outputs: the output key is the internal key tweaked with hash_TapTweak and no script tree. Its test vectors finish exercise 5."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "output-script-descriptors-bips-380387"
 title = "Output Script Descriptors (BIPs 380–387)"
 authors = "Pieter Wuille, Ava Chow"
+year = "2021"
 type = "standard"
 access = "free"
 marks = ["core"]
 url = "https://github.com/bitcoin/bips/blob/master/bip-0380.mediawiki"
 link_text = "BIP 380"
-description = "The language modern wallets use to state exactly which scripts they own, e.g. `wpkh([fingerprint/84h/0h/0h]xpub…/0/*)`. Bitcoin Core wallets are descriptor-only since v30 removed legacy wallets; practical guide: [Bitcoin Core descriptors doc](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md)"
-verified = 2026-10-13
+description = "The language modern wallets use to state exactly which scripts they own, e.g. `wpkh([fingerprint/84h/0h/0h]xpub…/0/*)`; BIP 380 covers general operation and BIPs 381–387 the script types (all Deployed). Bitcoin Core wallets are descriptor-only since v30.0 (October 2025) removed legacy wallets; practical guide: [Bitcoin Core descriptors doc](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md)"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bip-379-miniscript-with-bip-388-wallet"
-title = "BIP 379: Miniscript (with BIP 388 Wallet Policies)"
+title = "BIP 379: Miniscript (with BIP 388: Wallet Policies for Descriptor Wallets)"
 authors = "Pieter Wuille, Andrew Poelstra, Sanket Kanjalkar, Antoine Poinsot, Ava Chow; Salvatore Ingala"
+year = "2023"
 type = "standard"
 access = "free"
 url = "https://github.com/bitcoin/bips/blob/master/bip-0379.md"
 link_text = "BIP 379"
-description = "A composable, analyzable subset of Script for spending policies (multisig, timelocked recovery, inheritance); BIP 388 adapts descriptors and miniscript for hardware signers. Specs are Draft (379) and Complete (388) — check wallet support before relying on them"
-verified = 2026-10-13
+more_links = [{ text = "BIP 388", url = "https://github.com/bitcoin/bips/blob/master/bip-0388.mediawiki" }]
+description = "A composable, analyzable subset of Script for spending policies (multisig, timelocked recovery, inheritance); BIP 388 adapts descriptors and miniscript for hardware signers. Status in the BIPs repository (checked October 2026): 379 Draft, 388 Complete — check wallet support before relying on them."
+verified = 2026-10-21

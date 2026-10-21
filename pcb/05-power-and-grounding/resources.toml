@@ -17,21 +17,23 @@ level = "intermediate"
 marks = ["core"]
 url = "https://www.youtube.com/watch?v=ySuUZEjARPY"
 link_text = "YouTube"
-description = "Rick Hartley's Altium *Expert Live Training* talk on grounding and return-current paths, posted on Altium's YouTube channel. Start the section with it; Practice 1 and the mini-project's grounding memo apply it."
 verified = 2026-10-21
+year = "2019"
+description = "Rick Hartley's Altium *Expert Live Training* talk on grounding and return-current paths, posted on Altium's YouTube channel (November 2019). Start the section with it; Practice 1 and the mini-project's grounding memo apply it."
 
 [[groups.items]]
 id = "power-distribution-networks"
 title = "Power Distribution Network"
-authors = "Rick Hartley"
+authors = "Nine Dot Connects"
 type = "video"
 access = "free"
 level = "intermediate"
 marks = ["core"]
 url = "https://www.youtube.com/watch?v=WnLRHuvl6Eg"
 link_text = "YouTube"
-description = "PDN design fundamentals: impedance, decoupling and energy delivery. Posted on the NineDotConnects YouTube channel."
-verified = 2026-10-13
+description = "A 2016 Nine Dot Connects webinar on PDN design: plane and capacitor impedances, how they interact, and choosing capacitors to manage the impedance, demonstrated with In-Circuit Design's PDN Planner. The presenter isn't named on the video page."
+verified = 2026-10-21
+year = "2016"
 
 [[groups.items]]
 id = "phil-s-lab-power-design-tutorials"
@@ -45,6 +47,7 @@ url = "https://www.youtube.com/watch?v=AmfLhT5SntE"
 link_text = "YouTube"
 description = "Phil's Lab on switching-regulator PCB layout. Watch it with AN-136 before Practice 4."
 verified = 2026-10-21
+year = "2022"
 
 [[groups.items]]
 id = "fast-circuit-boards-energy-management"
@@ -91,13 +94,13 @@ verified = 2026-10-13
 [[groups.items]]
 id = "saturn-pcb-design-toolkit"
 title = "Saturn PCB Design Toolkit"
-authors = "Saturn PCB Design"
+authors = "Saturn PCB Design, Inc."
 type = "tool"
 access = "free"
 url = "https://saturnpcb.com/saturn-pcb-toolkit/"
 link_text = "Website"
 description = "Free (Windows) calculator suite. This section uses two of its calculators: the conductor-current calculator, which follows IPC-2152 (the vendor notes that calculators built on the old IPC-2221 formula are obsolete), to size traces and planes for current, and the via calculator for Practice 3's via inductance. Section 08 lists the same toolkit for its impedance calculators."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ipc-2152-standard-for-determining"
@@ -144,7 +147,8 @@ access = "free"
 url = "https://www.analog.com/en/resources/app-notes/an-136.html"
 link_text = "App note"
 description = "The standard reference for buck/boost converter layout: power-stage placement, the high-di/dt \"hot loop\", and grounding of the power and control sections."
-verified = 2026-10-13
+verified = 2026-10-21
+year = "2012"
 
 [[groups.items]]
 id = "fasthenry2"

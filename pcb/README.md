@@ -32,7 +32,7 @@ This repository is a structured curriculum for self-studying PCB (Printed Circui
 | [Section 02 — Schematic Capture and Library Management](02-schematic-capture/) |  | *Getting Started in KiCad* (KiCad 10) → Phil's Lab #165 (KiCad 9 schematic) → KiCad Library Conventions (KLC) |
 | [Section 03 — Component Selection and Sourcing](03-component-selection/) |  | DigiKey / Mouser parametric search → Maxim AN5527 (MLCC derating) → J-STD-048A / J-STD-046A |
 | [Section 04 — PCB Layout Fundamentals](04-pcb-layout-fundamentals/) |  | Phil's Lab #166 (KiCad 9 PCB layout) → Feranec's layout and routing videos → KiCad 10 PCB Editor manual |
-| [Section 05 — Power Distribution and Grounding](05-power-and-grounding/) |  | Hartley's *How to Achieve Proper Grounding* → the *Power Distribution Network* talk → Phil's Lab #60 (switching-regulator layout) |
+| [Section 05 — Power Distribution and Grounding](05-power-and-grounding/) |  | Hartley's *How to Achieve Proper Grounding* → Nine Dot Connects' *Power Distribution Network* webinar → Phil's Lab #60 (switching-regulator layout) |
 | [Section 12 — Analog, Mixed-Signal and Precision Measurement](12-analog-mixed-signal-and-precision-measurement/) | After 05 | *Op Amp Applications Handbook* Section 7 → Keithley *Low Level Measurements Handbook* |
 | [Section 06 — Signal Integrity](06-signal-integrity/) |  | Bogatin's *Signal and Power Integrity — Simplified* → Bogatin's videos on Feranec's channel (reflections, crosstalk, differential pairs) → Johnson & Graham's *Black Magic* |
 | [Section 07 — EMC and Compliance](07-emc-and-compliance/) |  | LearnEMC → Ott's *Electromagnetic Compatibility Engineering* |

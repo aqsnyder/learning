@@ -17,6 +17,7 @@ url = "https://mitpress.mit.edu/9780262541855/theoretical-neuroscience/"
 link_text = "Book"
 more_links = [{ text = "Authors' page", url = "https://www.gatsby.ucl.ac.uk/~dayan/book/" }]
 description = "The standard graduate textbook for computational neuroscience: neural encoding and decoding, adaptation and plasticity, and network models, with the derivations Practice 2, 3 and 4 lean on. The book is paid, but the authors' page carries the contents, errata and a free sample chapter (Ch. 7, on network models)"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "principles-of-neural-science-6th-edition"
@@ -117,7 +118,9 @@ type = "paper"
 url = "https://doi.org/10.1113/jphysiol.1952.sp004764"
 link_text = "Paper"
 description = "The foundational biophysical model of the action potential — one of the most important papers in all of neuroscience"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"
+more_links = [{ text = "Free copy (PMC)", url = "https://pmc.ncbi.nlm.nih.gov/articles/PMC1392413/" }]
 
 [[groups.items]]
 id = "neuromatch-academy-computational"
@@ -154,4 +157,5 @@ type = "paper"
 url = "https://doi.org/10.1038/s41586-024-07558-y"
 link_text = "Nature"
 description = "The first synapse-resolution connectome of a complete adult brain — about 139,000 neurons and 54.5 million synapses in *Drosophila*, with the proofread dataset publicly browsable"
-verified = 2026-10-13
+verified = 2026-10-21
+access = "free"

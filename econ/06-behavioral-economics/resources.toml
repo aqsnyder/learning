@@ -29,7 +29,7 @@ level = "beginner"
 marks = ["core"]
 url = "https://www.penguinrandomhouse.com/books/304634/nudge-by-richard-h-thaler-and-cass-r-sunstein/"
 link_text = "Link"
-description = "The influential book on choice architecture and libertarian paternalism. Shaped public policy worldwide."
+description = "The influential book on choice architecture and libertarian paternalism; the link is the 2021 Final Edition. ⚠️ Nudge effects at scale are far smaller than in the headline studies: DellaVigna & Linos (below) find about 1.4 percentage points in nudge-unit trials versus 8.7 in published papers, so treat the book's examples as hypotheses (Practice 4)."
 
 [[groups.items]]
 id = "mental-accounting-matters"

@@ -10,23 +10,29 @@ outro = '''
 [[groups.items]]
 id = "philosophical-investigations-selections"
 title = "Philosophical Investigations (selections)"
-authors = "Ludwig Wittgenstein"
-year = "1953"
+authors = "Ludwig Wittgenstein (4th ed., eds. P. M. S. Hacker & Joachim Schulte)"
+year = "1953 (4th ed. 2009)"
 type = "book"
 access = "paid"
 level = "advanced"
 marks = ["core"]
 description = "The most influential work in 20th-century philosophy of language. Introduces language games, family resemblance, and the private language argument. Read §§1-133 and §§243-315 at minimum."
+url = "https://www.wiley.com/en-us/shop/general-philosophy/philosophical-investigations-4th-edition-p-9781405159289"
+link_text = "Wiley-Blackwell"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "how-to-do-things-with-words"
 title = "How to Do Things with Words"
-authors = "J.L. Austin"
-year = "1962"
+authors = "J. L. Austin (2nd ed., eds. J. O. Urmson & Marina Sbisà)"
+year = "1962 (2nd ed. 1975)"
 type = "book"
 access = "paid"
 level = "intermediate"
 description = "Introduces speech act theory: language isn't just about describing the world but performing actions (promising, requesting, asserting). Foundational for pragmatics."
+url = "https://www.hup.harvard.edu/books/9780674411524"
+link_text = "Harvard University Press"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "logic-and-conversation"

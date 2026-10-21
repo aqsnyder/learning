@@ -142,7 +142,8 @@ type = "paper"
 url = "https://doi.org/10.1126/science.aac4716"
 link_text = "Link"
 description = "*Science* report on replications of 100 experimental and correlational studies: 97% of the originals had significant results, 36% of the replications did, and replication effects were about half the size of the originals. The defining data point of the replication crisis; how to score a \"successful\" replication is itself debated."
-verified = 2026-10-13
+verified = 2026-10-21
+access = "paid"
 
 [[groups.items]]
 id = "ai-and-the-everything-in-the-whole-wide"
@@ -177,5 +178,6 @@ access = "partial"
 level = "beginner"
 url = "https://www.coursera.org/learn/philosophy-physical-sciences"
 link_text = "Coursera"
-description = "Companion to the Edinburgh cognitive-sciences course in Section 01: \"What is this thing called science?\" (Massimi and Duncan Pritchard), then the origins of the universe, dark matter and dark energy, and the anthropic principle and multiverse cosmology — philosophy of science applied to live physics. About 12 hours. Free to enroll; the certificate is paid (checked October 2026)."
-verified = 2026-10-13
+description = "Companion to the Edinburgh cognitive-sciences course in Section 01: \"What is this thing called science?\" (Massimi and Duncan Pritchard), then the origins of the universe, dark matter and dark energy, and the anthropic principle and multiverse cosmology — philosophy of science applied to live physics. About 12 hours. Free to enroll; the certificate is paid (checked October 2026). Coursera shows no launch date; the year is that of its earliest review (November 2017)."
+verified = 2026-10-21
+year = "2017"

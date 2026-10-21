@@ -195,7 +195,7 @@ type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2412.19437"
 link_text = "arxiv.org/abs/2412.19437"
-description = "A 671B MoE (37B active per token) with multi-head latent attention, auxiliary-loss-free load balancing and multi-token prediction. Frontier MoE engineering, openly documented."
+description = "A 671B MoE (37B active per token) with multi-head latent attention, auxiliary-loss-free load balancing and multi-token prediction. Frontier MoE engineering as of December 2024, openly documented."
 verified = 2026-10-21
 
 [[groups.items]]

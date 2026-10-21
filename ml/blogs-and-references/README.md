@@ -14,7 +14,7 @@
 | 🔑 | [Lilian Weng](https://lilianweng.github.io/) | In-depth survey-style posts covering transformers, RL, diffusion models, and more |
 | 🔑 | [Jay Alammar](https://jalammar.github.io/) | Step-by-step illustrated guides to transformers, BERT, GPT, and NLP concepts |
 | | [Andrej Karpathy's Blog](https://karpathy.github.io/) | Practical deep learning insights from one of the field's most influential practitioners |
-| | [Sebastian Ruder](https://www.ruder.io/) | NLP-focused posts on transfer learning, optimization, and multilingual models |
+| | [Sebastian Ruder](https://www.ruder.io/) | NLP-focused posts on transfer learning, optimization, multilingual models and LLM evaluation (latest post May 2024, as of October 2026) |
 | | [The Gradient](https://thegradient.pub/) | Long-form essays and interviews on ML research trends and societal impact |
 
 ---
@@ -24,8 +24,8 @@
 | Newsletter | Description |
 |------------|-------------|
 | [Import AI](https://importai.substack.com/) | Weekly digest of the most important AI research, policy, and industry developments |
-| [The Batch](https://www.deeplearning.ai/the-batch/) | Andrew Ng's weekly newsletter breaking down AI news and research for practitioners |
-| [AI Index Report](https://hai.stanford.edu/ai-index) | Stanford's annual comprehensive report on the state of artificial intelligence |
+| [The Batch](https://www.deeplearning.ai/the-batch/) | DeepLearning.AI's weekly newsletter of AI news and research for practitioners, with a letter from Andrew Ng |
+| [AI Index Report](https://hai.stanford.edu/ai-index) | Stanford HAI's annual comprehensive report on the state of artificial intelligence (latest: the 2026 report, as of October 2026) |
 | [Ahead of AI](https://magazine.sebastianraschka.com/) | Sebastian Raschka's newsletter covering practical ML research and engineering |
 
 ---
@@ -50,4 +50,4 @@
 | [Papers With Code](https://paperswithcode.com/) | Formerly ML papers paired with code, datasets, and leaderboards — sunset by Meta in July 2025. Use Hugging Face's [Trending Papers](https://huggingface.co/papers/trending) instead |
 | [Epoch AI](https://epoch.ai/) | Open datasets and trend analyses on training compute, models, hardware, and benchmarks — the best source for calibrated "how fast is this moving?" numbers |
 | [Hugging Face](https://huggingface.co/) | Open-source hub for models, datasets, and spaces — the GitHub of ML |
-| [Weights & Biases](https://wandb.ai/) | Experiment tracking platform with excellent free tutorials and community reports |
+| [Weights & Biases](https://wandb.ai/) | Experiment-tracking platform (part of CoreWeave Forge as of October 2026) with courses, tutorials and shareable reports |
