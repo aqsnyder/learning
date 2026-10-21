@@ -7,11 +7,16 @@
 [[groups.items]]
 id = "misbehaving-the-making-of-behavioral"
 title = "Misbehaving: The Making of Behavioral Economics"
-authors = "Richard Thaler"
-year = "2015"
+authors = "Richard H. Thaler"
+year = "2015 (paperback 2016)"
 type = "book"
+access = "paid"
+level = "beginner"
 marks = ["core"]
-description = "The autobiographical account of behavioral economics by one of its founders. Covers mental accounting, endowment effect, fairness, and nudges through engaging stories. Essential."
+url = "https://wwnorton.com/books/misbehaving/"
+link_text = "Norton"
+description = "The autobiographical account of behavioral economics by one of its founders. Covers mental accounting, the endowment effect, fairness, and nudges through engaging stories. ⚠️ Some findings it recounts are contested, notably the mug endowment effect (see the Anomalies row below)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "nudge-improving-decisions-about-health"
@@ -19,6 +24,8 @@ title = "Nudge: Improving Decisions About Health, Wealth, and Happiness"
 authors = "Richard Thaler & Cass Sunstein"
 year = "2008 (Final Edition 2021)"
 type = "book"
+access = "paid"
+level = "beginner"
 marks = ["core"]
 url = "https://www.penguinrandomhouse.com/books/304634/nudge-by-richard-h-thaler-and-cass-r-sunstein/"
 link_text = "Link"
@@ -30,6 +37,7 @@ title = "Mental Accounting Matters"
 authors = "Richard Thaler"
 year = "1999"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1002/(SICI)1099-0771(199909)12:3%3C183::AID-BDM318%3E3.0.CO;2-F"
 link_text = "Link"
 description = "How people mentally categorize and track money, leading to systematic deviations from rational behavior."
@@ -37,14 +45,16 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "anomalies-series"
-title = "Anomalies Series"
-authors = "Richard Thaler"
+title = "Anomalies (column series in the *Journal of Economic Perspectives*)"
+authors = "Richard H. Thaler, with Daniel Kahneman, Jack L. Knetsch & George Loewenstein"
 year = "1987–1991"
 type = "paper"
-url = "https://www.aeaweb.org/articles?id=10.1257/jep.1.1.197"
-link_text = "Link"
-description = "Thaler's famous Journal of Economic Perspectives column documenting violations of standard economic theory."
-verified = 2026-10-13
+access = "free"
+url = "https://www.aeaweb.org/articles?id=10.1257/jep.5.1.193"
+link_text = "Endowment effect (1991)"
+more_links = [{ text = "Intertemporal choice (1989)", url = "https://www.aeaweb.org/articles?id=10.1257/jep.3.4.181" }, { text = "The January effect (1987, the first column)", url = "https://www.aeaweb.org/articles?id=10.1257/jep.1.1.197" }]
+description = "Thaler's column documenting violations of standard economic theory, free on the AEA site. Read the two columns this section uses: Kahneman, Knetsch & Thaler, \"The Endowment Effect, Loss Aversion, and Status Quo Bias\" (1991; Check Yourself 2) and Loewenstein & Thaler, \"Intertemporal Choice\" (1989; Practice 2). ⚠️ The mug endowment effect is contested: Plott & Zeiler ([*AER* 2005](https://www.aeaweb.org/articles?id=10.1257/0002828054201387)) found no gap between willingness to accept and willingness to pay for mugs or lotteries once subjects were trained on the elicitation procedure, and argued such gaps are not evidence of loss aversion."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "libertarian-paternalism"
@@ -52,6 +62,7 @@ title = "Libertarian Paternalism"
 authors = "Richard Thaler & Cass Sunstein"
 year = "2003"
 type = "paper"
+access = "paid"
 url = "https://www.aeaweb.org/articles?id=10.1257/000282803321947001"
 link_text = "Link"
 description = "The intellectual foundation for nudge theory. Argues for preserving freedom of choice while steering toward better outcomes."
@@ -67,11 +78,16 @@ description = "Companion to Thinking, Fast and Slow, focusing on variability (no
 
 [[groups.items]]
 id = "the-undoing-project"
-title = "The Undoing Project"
+title = "The Undoing Project: A Friendship That Changed Our Minds"
 authors = "Michael Lewis"
-year = "2016"
+year = "2016 (paperback 2017)"
 type = "book"
+access = "paid"
+level = "beginner"
+url = "https://wwnorton.com/books/The-Undoing-Project/"
+link_text = "Norton"
 description = "Narrative of the Kahneman–Tversky collaboration that created behavioral economics. Reads like a novel."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "behavioral-scientist"
@@ -88,6 +104,7 @@ title = "Psychology and Economics: Evidence from the Field"
 authors = "Stefano DellaVigna"
 year = "2009"
 type = "paper"
+access = "paid"
 url = "https://www.aeaweb.org/articles?id=10.1257/jel.47.2.315"
 link_text = "Link"
 description = "The standard survey of behavioral economics in the field, organized by nonstandard preferences (self-control, reference dependence, social preferences), beliefs, and decision-making — plus how firms, employers, and markets respond. The rigorous backbone that the popular books lack."
@@ -111,6 +128,8 @@ title = "Behavioral Game Theory: Experiments in Strategic Interaction"
 authors = "Colin Camerer"
 year = "2003"
 type = "book"
+access = "paid"
+level = "advanced"
 url = "https://press.princeton.edu/books/hardcover/9780691090399/behavioral-game-theory"
 link_text = "Link"
 description = "How real people play games in the lab (ultimatum and trust games, limited strategic reasoning, learning) and the models built to fit them. Bridges Sections 02 and 06, and is directly relevant to modeling humans in multi-agent AI."

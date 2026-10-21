@@ -166,7 +166,12 @@ verified = 2026-10-13
 [[groups]]
 title = "Safety and Alignment"
 intro = '''
-Alignment research aims to ensure AI systems act in accordance with human values. Constitutional AI removes the need for human labels at every step by encoding principles into the training process. DPO simplifies RLHF by directly optimizing preferences without a separate reward model. A newer empirical line of work stress-tests these techniques on real models: Sleeper Agents shows deceptive behavior can persist through safety training, Alignment Faking shows a model strategically complying with training it disagrees with, and Emergent Misalignment shows narrow fine-tuning can produce broadly misaligned behavior. AI Control and Chain-of-Thought Monitorability ask the complementary question: how to stay safe even if alignment fails, by monitoring and constraining what models do.
+Alignment research aims to ensure AI systems act in accordance with human values. Constitutional AI removes the need for human labels at every step by encoding principles into the training process. DPO simplifies RLHF by directly optimizing preferences without a separate reward model (both RLHF's founding paper and DPO are tracked in Section 10; see the note under this table). A newer empirical line of work stress-tests these techniques on real models: Sleeper Agents shows deceptive behavior can persist through safety training, Alignment Faking shows a model strategically complying with training it disagrees with, and Emergent Misalignment shows narrow fine-tuning can produce broadly misaligned behavior. AI Control and Chain-of-Thought Monitorability ask the complementary question: how to stay safe even if alignment fails, by monitoring and constraining what models do.
+'''
+outro = '''
+**Also used here (tracked in its home section):** Deep reinforcement learning from human preferences ([Section 10](../10-reinforcement-learning/README.md)) for the reward model fitted to human comparisons, the recipe RLHF and Constitutional AI's RL stage build on.
+
+**Also used here (tracked in its home section):** Direct Preference Optimization: Your Language Model is Secretly a Reward Model ([Section 10](../10-reinforcement-learning/README.md)) for preference tuning without a separate reward model; Practice 4 uses it as a safety-training method.
 '''
 
 [[groups.items]]
@@ -180,30 +185,6 @@ marks = ["core"]
 url = "https://arxiv.org/abs/2212.08073"
 link_text = "arxiv.org/abs/2212.08073"
 description = "Trains a harmless, non-evasive assistant from a list of principles, in a supervised stage and an RL stage, without human harm labels. Introduced RLAIF."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "direct-preference-optimization-dpo"
-title = "Direct Preference Optimization (DPO)"
-authors = "Rafailov et al."
-year = "2023"
-type = "paper"
-access = "free"
-url = "https://arxiv.org/abs/2305.18290"
-link_text = "arxiv.org/abs/2305.18290"
-description = "Optimizes the RLHF objective directly on preference pairs with a classification loss, skipping the explicit reward model and RL loop. Section 10 covers it too."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "deep-rl-from-human-preferences"
-title = "Deep RL from Human Preferences"
-authors = "Christiano et al."
-year = "2017"
-type = "paper"
-access = "free"
-url = "https://arxiv.org/abs/1706.03741"
-link_text = "arxiv.org/abs/1706.03741"
-description = "Fits a reward model to human comparisons of trajectory clips and trains RL agents on it, for Atari and simulated robots. The foundational RLHF paper."
 verified = 2026-10-13
 
 [[groups.items]]

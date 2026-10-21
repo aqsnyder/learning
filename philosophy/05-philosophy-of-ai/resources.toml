@@ -4,6 +4,8 @@
 
 [[groups]]
 outro = '''
+**Also used here (tracked in its home section):** Searle, "Minds, Brains, and Programs" ([Section 03](../03-computation-and-mind/README.md)) for the Chinese Room, the systems and robot replies, and Searle's claim that syntax is not sufficient for semantics — the most influential objection to strong AI (Practices 4 and 5, Check Yourself 5 and 7).
+
 > **See also:** [Section 12 — Philosophy of Science and Scientific Reasoning](../12-philosophy-of-science/README.md), for the methodology behind this section's mini-project: what makes a prediction a real test, severe testing, and whether a benchmark measures the construct it claims to.
 '''
 
@@ -17,17 +19,6 @@ marks = ["core"]
 url = "https://academic.oup.com/mind/article/LIX/236/433/986238"
 link_text = "Link"
 description = "The paper that asked \"Can machines think?\" and proposed the imitation game (Turing Test). Still the essential starting point for philosophy of AI. Every argument in this section is in dialogue with Turing."
-verified = 2026-10-13
-
-[[groups.items]]
-id = "minds-brains-and-programs-chinese-room"
-title = "Minds, Brains, and Programs (Chinese Room)"
-authors = "John Searle"
-year = "1980"
-type = "paper"
-url = "https://doi.org/10.1017/S0140525X00005756"
-link_text = "Link"
-description = "Searle's famous argument that syntax is not sufficient for semantics — a computer running a program doesn't understand anything. The most influential objection to strong AI."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -52,24 +43,26 @@ description = "Updated edition of Dreyfus's critique of AI. Argues that common-s
 [[groups.items]]
 id = "artificial-intelligence"
 title = "Artificial Intelligence"
-authors = "SEP"
+authors = "Selmer Bringsjord, Naveen Sundar Govindarajulu"
+year = "2018"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/artificial-intelligence/"
 link_text = "SEP"
-description = "Comprehensive philosophical survey of AI — strong vs. weak AI, the frame problem, and the role of representation."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy survey of what AI is, its main approaches and their history, and the philosophy of AI: §8.1 \"Strong\" versus \"Weak\" AI (used in Practice 5), §8.2 the Chinese Room and §8.3 the Gödelian argument. First published in 2018, before today's large language models; read the LLM papers below for the current debate."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-turing-test"
 title = "The Turing Test"
-authors = "SEP"
+authors = "Graham Oppy, David Dowe"
+year = "2003, rev. 2021"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/turing-test/"
 link_text = "SEP"
-description = "Detailed analysis of the Turing Test: what it tests, what it doesn't, and why it matters."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry on Turing's imitation game: how to read it, his replies to the objections, his predictions, and the later criticisms of the test. Context for Practice 1."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "climbing-towards-nlu-on-meaning-form-and"

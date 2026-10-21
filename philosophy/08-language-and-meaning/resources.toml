@@ -3,6 +3,9 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** Bender & Koller, "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data" ([Section 05](../05-philosophy-of-ai/README.md)) for the octopus test, the claim that a system trained only on linguistic form cannot learn meaning, which Practice 4 and 5 and the mini-project set against Harris, Andreas and Coelho Mollo & Millière.
+'''
 
 [[groups.items]]
 id = "philosophical-investigations-selections"
@@ -16,18 +19,6 @@ marks = ["core"]
 description = "The most influential work in 20th-century philosophy of language. Introduces language games, family resemblance, and the private language argument. Read §§1-133 and §§243-315 at minimum."
 
 [[groups.items]]
-id = "climbing-towards-nlu-on-meaning-form-and"
-title = "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data"
-authors = "Emily Bender, Alexander Koller"
-year = "2020"
-type = "paper"
-marks = ["core"]
-url = "https://doi.org/10.18653/v1/2020.acl-main.463"
-link_text = "Link"
-description = "The \"Octopus Test\" — argues that a system trained only on form (text) cannot learn meaning. Essential for evaluating LLM understanding."
-verified = 2026-10-13
-
-[[groups.items]]
 id = "how-to-do-things-with-words"
 title = "How to Do Things with Words"
 authors = "J.L. Austin"
@@ -38,29 +29,39 @@ description = "Introduces speech act theory: language isn't just about describin
 [[groups.items]]
 id = "logic-and-conversation"
 title = "Logic and Conversation"
-authors = "H.P. Grice"
+authors = "H. P. Grice"
 year = "1975"
 type = "paper"
-description = "Introduces the cooperative principle and conversational implicature — how we communicate more than we literally say. Crucial for understanding how meaning exceeds syntax."
+access = "paid"
+url = "https://doi.org/10.1163/9789004368811_003"
+link_text = "Brill"
+description = "Introduces the cooperative principle, the four maxims, and conversational implicature: how we communicate more than we literally say. Published in *Syntax and Semantics 3: Speech Acts* (1975), pp. 41–58, now issued by Brill; the source for Practice 3's probe set."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "speech-acts-an-essay-in-the-philosophy"
 title = "Speech Acts: An Essay in the Philosophy of Language"
-authors = "John Searle"
+authors = "John R. Searle"
 year = "1969"
 type = "book"
-description = "Extends Austin's speech act theory. Relevant because Searle later uses these ideas in the Chinese Room argument."
+access = "paid"
+level = "advanced"
+url = "https://doi.org/10.1017/CBO9781139173438"
+link_text = "Cambridge"
+description = "Extends Austin's speech act theory into a systematic account, including the conditions on promising (propositional content, preparatory, sincerity, essential) used in Practice 2. Relevant also because Searle later uses these ideas in the Chinese Room argument."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "theories-of-meaning"
 title = "Theories of Meaning"
-authors = "SEP"
+authors = "Jeff Speaks"
+year = "2010 (rev. 2024)"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/meaning/"
 link_text = "SEP"
-description = "Jeff Speaks's entry (first published 2010, revised 2024). It separates semantic theories, which say what expressions mean (theories of reference; Fregean, Russellian and possible-worlds semantics; Davidsonian, inferentialist and dynamic alternatives), from metasemantic theories of what gives expressions their meanings (the Gricean program, convention, causal origin, rules of use). SEP has no general \"Philosophy of Language\" entry; this is its broadest map of the field."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry (first published January 2010, substantively revised July 2024). It separates semantic theories, which say what expressions mean (theories of reference; Fregean, Russellian and possible-worlds semantics; Davidsonian, inferentialist and dynamic alternatives), from metasemantic theories of what gives expressions their meanings (the Gricean program, convention, causal origin, rules of use). SEP has no general \"Philosophy of Language\" entry; this is its broadest map of the field."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "sense-and-reference-uber-sinn-und"
@@ -68,6 +69,7 @@ title = "Sense and Reference (\"Über Sinn und Bedeutung\")"
 authors = "Gottlob Frege"
 year = "1892"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.2307/2181485"
 link_text = "Link"
 description = "The founding text of the theory of reference. Frege distinguishes an expression's sense (its mode of presentation) from its reference (what it picks out), to explain why \"the morning star is the evening star\" is informative while \"the morning star is the morning star\" is not. The link is Max Black's English translation, *The Philosophical Review* 57(3), 1948. Ask of an LLM: do its representations have reference, or only something like sense?"
@@ -79,6 +81,7 @@ title = "The Meaning of \"Meaning\""
 authors = "Hilary Putnam"
 year = "1975"
 type = "paper"
+access = "free"
 url = "https://hdl.handle.net/11299/185225"
 link_text = "Link"
 description = "The Twin Earth argument: two speakers in the same internal state can mean different things by \"water\", because meaning depends on the environment and on the linguistic community (\"meanings just ain't in the head\"), and the division of linguistic labor. Content externalism in its founding form, and the background to whether a model trained on human text inherits reference from the people who wrote it (compare Coelho Mollo & Millière). *Minnesota Studies in the Philosophy of Science* 7, pp. 131–193; free PDF from the University of Minnesota Digital Conservancy."
@@ -86,14 +89,15 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "wittgenstein"
-title = "Wittgenstein"
-authors = "SEP"
+title = "Ludwig Wittgenstein"
+authors = "Anat Matar"
+year = "2002 (rev. 2026)"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/wittgenstein/"
 link_text = "SEP"
-description = "Detailed overview of Wittgenstein's philosophy — early (Tractatus) and late (Investigations)."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry (first published 2002, substantively revised September 2026): a detailed overview of Wittgenstein's philosophy — early (*Tractatus*), middle, and late (*Investigations*)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "language-models-as-agent-models"
@@ -113,6 +117,7 @@ title = "Distributional Structure"
 authors = "Zellig S. Harris"
 year = "1954"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1080/00437956.1954.11659520"
 link_text = "Link"
 description = "The founding statement of the distributional hypothesis — that differences in meaning correlate with differences in the contexts words occur in. The linguistic idea behind word embeddings and, ultimately, LLMs; essential background to whether \"form alone\" can carry meaning."
@@ -125,6 +130,7 @@ authors = "Dimitri Coelho Mollo, Raphaël Millière"
 year = "2023"
 type = "paper"
 access = "free"
+marks = ["core"]
 url = "https://arxiv.org/abs/2304.01481"
 link_text = "Link"
 description = "Updates Harnad's symbol grounding problem for neural networks and argues that LLMs can achieve referential grounding — internal states that refer to things in the world — through causal-informational relations and selection history, even without embodiment or multimodality. A rigorous philosophical reply to the Octopus argument."

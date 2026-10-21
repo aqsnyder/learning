@@ -60,24 +60,26 @@ description = "Heidegger's concept of ready-to-hand (Zuhandenheit) — that we p
 [[groups.items]]
 id = "embodied-cognition"
 title = "Embodied Cognition"
-authors = "SEP"
+authors = "Lawrence Shapiro, Shannon Spaulding"
+year = "2021"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/embodied-cognition/"
 link_text = "SEP"
-description = "Comprehensive overview of theories that emphasize the role of the body in shaping thought and cognition."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy overview of embodied cognition: its foils and inspirations, and its three main themes, which the entry calls Conceptualization, Replacement and Constitution. The map for this section's readings, and the background for Practice 5."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "externalism-about-the-mind-57-extended"
 title = "Externalism About the Mind (§§5–7: Extended Mind)"
-authors = "SEP"
+authors = "Mark Rowlands, Joe Lau, Max Deutsch"
+year = "2020"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/content-externalism/#ExteMind"
 link_text = "SEP"
-description = "SEP has no standalone \"Extended Mind\" entry; sections 5–7 of this one give a detailed treatment of the thesis that mental processes can extend into the world, its main objections, and its place in \"4E\" cognition."
-verified = 2026-10-13
+description = "SEP has no standalone \"Extended Mind\" entry; §5 of this one treats the thesis that mental states and processes can extend into the world (§5.2 gives the objections to it, which Practice 2 answers), §6 its scope and §7 its place in \"4E\" cognition."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "supersizing-the-mind-embodiment-action"

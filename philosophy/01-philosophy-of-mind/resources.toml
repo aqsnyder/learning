@@ -3,6 +3,9 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** Descartes, *Meditations on First Philosophy* ([Section 00](../00-foundations-of-philosophy/README.md)) for Meditations II and VI — the cogito and the "real distinction" argument for substance dualism that sets this section's agenda (Practice 1, Check Yourself 1).
+'''
 
 [[groups.items]]
 id = "philosophy-of-mind-3rd-edition"
@@ -21,21 +24,12 @@ title = "What Is It Like to Be a Bat?"
 authors = "Thomas Nagel"
 year = "1974"
 type = "paper"
+access = "paid"
 marks = ["core"]
-url = "https://www.jstor.org/stable/2183914"
-link_text = "Link"
-description = "Argues that consciousness has an irreducibly subjective character that cannot be captured by objective, physical science. One of the most cited papers in all of philosophy."
-
-[[groups.items]]
-id = "meditations-on-first-philosophy"
-title = "Meditations on First Philosophy (Meditation II and VI)"
-authors = "René Descartes"
-year = "1641"
-type = "book"
-url = "https://www.earlymoderntexts.com/assets/pdfs/descartes1641.pdf"
-link_text = "Free"
-description = "The origin of substance dualism. Descartes argues mind and body are fundamentally different kinds of substance. Essential historical context."
-verified = 2026-10-13
+url = "https://doi.org/10.2307/2183914"
+link_text = "DOI"
+description = "*The Philosophical Review* 83(4). Argues that consciousness has an irreducibly subjective character — there is something it is like to be a bat — that an objective, physical science must leave out. The anchor for Practice 3 and for every later question about whether a machine has a point of view. The DOI resolves to JSTOR."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-concept-of-mind-selections"
@@ -56,36 +50,39 @@ description = "Introduces machine-state functionalism: mental states are defined
 
 [[groups.items]]
 id = "epiphenomenal-qualia-mary-s-room"
-title = "Epiphenomenal Qualia (Mary's Room)"
+title = "Epiphenomenal Qualia"
 authors = "Frank Jackson"
 year = "1982"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.2307/2960077"
-link_text = "Link"
-description = "The famous \"Mary the color scientist\" thought experiment. Argues that physical knowledge leaves out subjective experience."
-verified = 2026-10-13
+link_text = "DOI"
+description = "*The Philosophical Quarterly* 32(127). The \"Mary's room\" paper: Mary knows every physical fact about color vision but has never seen red, so (Jackson argues) physical knowledge leaves out what experience is like. Practice 3 reconstructs it; Jackson later rejected the conclusion."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "functionalism"
 title = "Functionalism"
-authors = "SEP"
+authors = "Janet Levin"
+year = "2004, rev. 2023"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/functionalism/"
 link_text = "SEP"
-description = "Comprehensive entry on the view that mental states are constituted by their functional relations. Key bridge to philosophy of AI."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry on the view that mental states are constituted by their functional roles, its machine-state and causal-role versions, and the objections; §5.5.1 \"Inverted and Absent Qualia\" covers Block's \"Chinese nation\" (China brain) case used in Practice 2. The key bridge to the philosophy of AI."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "qualia"
 title = "Qualia"
-authors = "SEP"
+authors = "Michael Tye"
+year = "1997, rev. 2025"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/qualia/"
 link_text = "SEP"
-description = "The subjective, experiential properties of mental states. Central concept for consciousness debates."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry on the subjective, experiential properties of mental states, the central concept of the consciousness debates. §3 (\"Are Qualia Irreducible, Non-Physical Entities?\") discusses Jackson's Mary and the physicalist replies that Practice 3 asks you to evaluate."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "philosophy-and-the-sciences-introduction"
@@ -100,13 +97,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "personal-identity"
 title = "Personal Identity"
-authors = "SEP"
+authors = "Eric T. Olson"
+year = "2002, rev. 2023"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/identity-personal/"
 link_text = "SEP"
-description = "Eric Olson's entry on what makes you the same person over time: psychological-continuity views, animalism, fission cases, and brain-state transfer. The question every \"mind upload\" or \"copied AI\" scenario turns on."
-verified = 2026-10-13
+description = "What makes you the same person over time: psychological-continuity views (§4), fission (§5), and animalism (§7). The question every \"mind upload\" or \"copied AI\" scenario turns on, and the source for Practice 5."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "reasons-and-persons-part-iii-personal"

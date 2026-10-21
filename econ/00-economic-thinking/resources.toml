@@ -45,23 +45,28 @@ description = "Accessible popular introduction to economic reasoning in everyday
 id = "khan-academy-microeconomics"
 title = "Khan Academy Microeconomics"
 authors = "Khan Academy"
+year = "undated (checked Oct 2026)"
 type = "course"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://www.khanacademy.org/economics-finance-domain/microeconomics"
 link_text = "Link"
-description = "Free, comprehensive introduction to microeconomic concepts. Covers supply/demand, elasticity, consumer/producer surplus, market failures. Ideal for visual learners."
+description = "Free, comprehensive introduction to microeconomic concepts. Covers supply/demand, elasticity, consumer/producer surplus, market failures. Ideal for visual learners. Section 01 sends you back here for visual reinforcement of consumer and producer theory."
 verified = 2026-10-13
 
 [[groups.items]]
 id = "principles-of-microeconomics"
 title = "Principles of Microeconomics"
 authors = "MRUniversity (Tyler Cowen, Alex Tabarrok & Joana Girante)"
+year = "undated (checked Oct 2026)"
 type = "course"
+access = "free"
+level = "beginner"
 url = "https://learn.mru.org/courses/principles-of-microeconomics"
 link_text = "Link"
-description = "Short, engaging video lectures on core economic concepts. Excellent supplement to a textbook."
-verified = 2026-10-13
+description = "Free course of short video lessons with quizzes (17 units as of October 2026) on core economic concepts, including the price system that Practice 4 uses. A good supplement to a textbook."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "economics-in-one-lesson"
@@ -77,6 +82,7 @@ title = "\"I, Pencil\""
 authors = "Leonard Read"
 year = "1958"
 type = "article"
+access = "free"
 url = "https://fee.org/resources/i-pencil/"
 link_text = "Link"
 description = "Famous essay illustrating the astonishing complexity of market coordination through the simple example of a pencil's production."
@@ -87,6 +93,7 @@ id = "marginal-revolution"
 title = "Marginal Revolution"
 authors = "Tyler Cowen & Alex Tabarrok"
 type = "blog"
+access = "free"
 url = "https://marginalrevolution.com/"
 link_text = "Link"
 description = "The most influential economics blog. Daily posts covering economics, policy, culture, and ideas. Essential for staying current."

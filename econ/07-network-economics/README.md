@@ -37,7 +37,7 @@ After this section you can:
 | | 🎓 Course | Social and Economic Networks | Matthew Jackson, Stanford | — | [Link](https://www.coursera.org/learn/social-economic-networks) | Coursera course on network formation, diffusion, learning, and game theory on networks. |
 | | 📕 Book | Matchmakers: The New Economics of Multisided Platforms | David Evans & Richard Schmalensee | 2016 | — | Clear treatment of multi-sided platform economics with case studies. |
 | | 📰 Blog | Stratechery | Ben Thompson | — | [Link](https://stratechery.com/) | Leading analysis of technology strategy through an economics lens. Developed aggregation theory. |
-| | 📝 Article | Metcalfe's Law is Wrong | Bob Briscoe, Andrew Odlyzko & Benjamin Tilly | 2006 | [Link](https://spectrum.ieee.org/metcalfes-law-is-wrong) | Argues a network's value grows roughly like n·log(n), not n², because not all connections are equally valuable — so Metcalfe's law overstates the value of large networks. A needed corrective to n² claims common in crypto valuation arguments (compare btc Section 09). |
+| | 📝 Article (free) | Metcalfe's Law is Wrong | Bob Briscoe, Andrew Odlyzko & Benjamin Tilly | 2006 | [Link](https://spectrum.ieee.org/metcalfes-law-is-wrong) | Argues a network's value grows roughly like n·log(n), not n², because not all connections are equally valuable — so Metcalfe's law overstates the value of large networks. A needed corrective to n² claims common in crypto valuation arguments (compare btc Section 09). |
 
 <!-- resources:end -->
 

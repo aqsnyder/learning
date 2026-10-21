@@ -6,7 +6,9 @@
 
 [[groups.items]]
 id = "reinforcement-learning-an-introduction"
-title = "Reinforcement Learning: An Introduction – Sutton & Barto (2nd ed.)"
+title = "Reinforcement Learning: An Introduction (2nd ed.)"
+authors = "Richard S. Sutton, Andrew G. Barto"
+year = "2018"
 type = "book"
 access = "free"
 level = "intermediate"
@@ -18,18 +20,20 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "rl-course"
-title = "RL Course"
-authors = "David Silver (DeepMind, YouTube)"
+title = "Introduction to Reinforcement Learning (DeepMind x UCL, 2015)"
+authors = "David Silver (DeepMind x UCL)"
+year = "2015"
 type = "course"
 access = "free"
+level = "intermediate"
 url = "https://www.youtube.com/playlist?list=PLqYmG7hTraZDM-OYHWgPebj2MfCFzFObQ"
 link_text = "YouTube Playlist"
 description = "Ten lectures: MDPs, dynamic programming, model-free prediction and control, value-function approximation, policy gradients, planning, exploration, games. The video companion to Sutton & Barto."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "dqn"
-title = "DQN"
+title = "DQN — Playing Atari with Deep Reinforcement Learning"
 authors = "Mnih et al."
 year = "2013"
 type = "paper"
@@ -37,22 +41,23 @@ access = "free"
 url = "https://arxiv.org/abs/1312.5602"
 link_text = "arxiv.org/abs/1312.5602"
 description = "A CNN trained with Q-learning and experience replay learns Atari control from raw pixels, a first for deep learning. The Nature version adds target networks."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "human-level-control-nature-dqn"
-title = "Human-Level Control (Nature DQN)"
+title = "Nature DQN — Human-level control through deep reinforcement learning"
 authors = "Mnih et al."
 year = "2015"
 type = "paper"
+access = "paid"
 url = "https://www.nature.com/articles/nature14236"
 link_text = "nature.com"
 description = "DQN with experience replay and a periodically updated target network, using one architecture and hyperparameter set across 49 Atari games. Practice 3 uses its ablations."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ddpg"
-title = "DDPG"
+title = "DDPG — Continuous control with deep reinforcement learning"
 authors = "Lillicrap et al."
 year = "2015"
 type = "paper"
@@ -60,7 +65,7 @@ access = "free"
 url = "https://arxiv.org/abs/1509.02971"
 link_text = "arxiv.org/abs/1509.02971"
 description = "Brings DQN's ideas to continuous actions: an actor-critic built on the deterministic policy gradient. Spinning Up also documents TD3 and SAC, its newer relatives."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "alphago"
@@ -75,18 +80,19 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "alphago-zero"
-title = "AlphaGo Zero"
+title = "AlphaGo Zero — Mastering the game of Go without human knowledge"
 authors = "Silver et al."
 year = "2017"
 type = "paper"
+access = "paid"
 url = "https://www.nature.com/articles/nature24270"
 link_text = "nature.com"
 description = "Self-play RL from rules alone: one network predicts moves and winners, and MCTS acts as policy improvement. The recipe the mini-project rebuilds for Connect Four."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ppo"
-title = "PPO"
+title = "Proximal Policy Optimization Algorithms"
 authors = "Schulman et al."
 year = "2017"
 type = "paper"
@@ -95,28 +101,33 @@ marks = ["core"]
 url = "https://arxiv.org/abs/1707.06347"
 link_text = "arxiv.org/abs/1707.06347"
 description = "Optimizes a clipped surrogate objective over several minibatch epochs per batch: some of TRPO's benefits, simpler code. Learn L^CLIP and generalized advantage estimation."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "stanford-cs234-reinforcement-learning"
-title = "Stanford CS234 – Reinforcement Learning (YouTube, Winter 2019 lectures)"
+title = "Stanford CS234: Reinforcement Learning (Winter 2019)"
+authors = "Emma Brunskill (Stanford Online)"
+year = "2019"
 type = "course"
 access = "free"
+level = "advanced"
 url = "https://www.youtube.com/playlist?list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u"
 link_text = "YouTube Playlist"
 description = "Stanford's RL course lectures: a more mathematical treatment of MDPs, value-function approximation, policy gradients and exploration. Optional depth after Silver."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "spinning-up-in-deep-rl"
 title = "Spinning Up in Deep RL"
-authors = "Josh Achiam, OpenAI"
+authors = "Josh Achiam (OpenAI)"
 year = "2018"
 type = "course"
+access = "free"
+level = "intermediate"
 url = "https://spinningup.openai.com/"
 link_text = "spinningup.openai.com"
 description = "OpenAI's hands-on deep-RL introduction: key concepts, policy-optimization derivations, documented implementations (VPG, TRPO, PPO, DDPG, TD3, SAC), exercises and a key-papers list. Implement VPG here."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups]]
 title = "RL for Language Models"
@@ -126,7 +137,7 @@ Reinforcement learning has become central to aligning large language models with
 
 [[groups.items]]
 id = "deep-rl-from-human-preferences"
-title = "Deep RL from Human Preferences"
+title = "Deep reinforcement learning from human preferences"
 authors = "Christiano et al."
 year = "2017"
 type = "paper"
@@ -134,11 +145,11 @@ access = "free"
 url = "https://arxiv.org/abs/1706.03741"
 link_text = "arxiv.org/abs/1706.03741"
 description = "Fits a reward model to human comparisons of trajectory-segment pairs, then trains RL agents on it with feedback on under 1% of interactions. RLHF's foundation."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "direct-preference-optimization-dpo"
-title = "Direct Preference Optimization (DPO)"
+title = "Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
 authors = "Rafailov et al."
 year = "2023"
 type = "paper"
@@ -147,11 +158,11 @@ marks = ["core"]
 url = "https://arxiv.org/abs/2305.18290"
 link_text = "arxiv.org/abs/2305.18290"
 description = "Gets the KL-constrained RLHF optimum in closed form, so preference tuning becomes a classification loss with no separate reward model or sampling. Derive it yourself."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "self-play-fine-tuning-spin"
-title = "Self-Play Fine-Tuning (SPIN)"
+title = "SPIN — Self-Play Fine-Tuning Converts Weak Language Models to Strong Language Models"
 authors = "Chen et al."
 year = "2024"
 type = "paper"
@@ -159,11 +170,11 @@ access = "free"
 url = "https://arxiv.org/abs/2401.01335"
 link_text = "arxiv.org/abs/2401.01335"
 description = "Self-play for LLMs: the SFT model learns to tell its own outputs from human SFT data, iterating with no extra human or preference data."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "star-self-taught-reasoner"
-title = "STaR — Self-Taught Reasoner"
+title = "STaR: Bootstrapping Reasoning With Reasoning"
 authors = "Zelikman et al."
 year = "2022"
 type = "paper"
@@ -171,11 +182,11 @@ access = "free"
 url = "https://arxiv.org/abs/2203.14465"
 link_text = "arxiv.org/abs/2203.14465"
 description = "Bootstraps reasoning: generate rationales, retry failures given the correct answer, fine-tune on rationales that reach correct answers, repeat. Needs only a few rationales plus answers."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "let-s-verify-step-by-step-process-reward"
-title = "Let's Verify Step by Step (process reward models)"
+title = "Let's Verify Step by Step"
 authors = "Lightman et al."
 year = "2023"
 type = "paper"
@@ -183,11 +194,11 @@ access = "free"
 url = "https://arxiv.org/abs/2305.20050"
 link_text = "arxiv.org/abs/2305.20050"
 description = "Compares outcome supervision with process supervision (feedback on each reasoning step) on MATH; process supervision wins clearly. Releases PRM800K, its 800,000 step-level human labels."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "deepseekmath-introduces-grpo"
-title = "DeepSeekMath (introduces GRPO)"
+title = "DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models"
 authors = "Shao et al."
 year = "2024"
 type = "paper"
@@ -195,11 +206,11 @@ access = "free"
 url = "https://arxiv.org/abs/2402.03300"
 link_text = "arxiv.org/abs/2402.03300"
 description = "A 7B math model continually pretrained on 120B Common Crawl math tokens. Read it for GRPO, a PPO variant replacing the critic with group-relative baselines."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "tulu-3-pushing-frontiers-in-open-lm-post"
-title = "Tülu 3: Pushing Frontiers in Open LM Post-Training (introduces RLVR)"
+title = "Tulu 3: Pushing Frontiers in Open Language Model Post-Training"
 authors = "Lambert et al."
 year = "2024"
 type = "paper"
@@ -207,7 +218,7 @@ access = "free"
 url = "https://arxiv.org/abs/2411.15124"
 link_text = "arxiv.org/abs/2411.15124"
 description = "Fully open post-training of Llama 3.1 (data, code, recipes, evaluation): SFT, then DPO, then RL with verifiable rewards (RLVR). Where RLVR is introduced."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "reinforcement-learning-from-human"

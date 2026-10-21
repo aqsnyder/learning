@@ -15,8 +15,10 @@ authors = "Nielsen, Voigt et al."
 year = "2016"
 type = "paper"
 marks = ["core"]
+access = "paid"
 url = "https://doi.org/10.1126/science.aac7341"
 link_text = "Science"
+description = "Cello: a compiler that takes a Verilog description of a logic circuit and emits a DNA sequence implementing it in *E. coli*, with each gate characterised as an input-output transfer function in relative promoter units. The section's model of biology-as-design-automation, and the source of the gate parameters, noise margins and fan-out limits in Practice 1"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -25,23 +27,28 @@ title = "Complete Biosynthesis of Opioids in Yeast"
 authors = "Galanie, Thodey, Trenchard, Interrante & Smolke"
 year = "2015"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1126/science.aac9373"
 link_text = "Science"
+description = "The pathway-engineering counterpart to circuit design: a long biosynthetic route reconstituted in yeast so that the host makes the end product from sugar, with every heterologous step balanced against the others. Read it for what limits such work in practice — titre, flux balance and host burden rather than missing enzymes — and for the governance discussion the paper itself prompted"
 verified = 2026-10-13
 
 [[groups.items]]
 id = "igem-international-genetically"
 title = "iGEM — International Genetically Engineered Machine Competition"
+authors = "iGEM"
 type = "website"
 label = "Community"
+access = "free"
 url = "https://igem.org/"
 link_text = "iGEM"
+description = "The annual student competition that built synthetic biology's parts-and-documentation culture: teams specify, build and publicly document an engineered-organism project each year, and the associated registry of standardised parts is where Practice 1 gets real part data rather than invented numbers"
 verified = 2026-10-13
 
 [[groups]]
 title = "Brain-Computer Interfaces"
 outro = '''
-Brain-computer interfaces are transitioning from laboratory demonstrations to clinical reality. Hochberg's BrainGate trial first showed that a paralyzed human could control a computer cursor with thought alone. Willett et al. achieved a stunning leap in 2023 — decoding attempted speech from neural activity at 62 words per minute, 3.4 times the previous record, with a 9.1% word error rate on a 50-word vocabulary and 23.8% on a 125,000-word one. The paper's own framing is the honest one: that rate *begins to approach* natural conversation, which it puts at 160 words per minute. Neuralink is scaling the hardware side with high-density implantable electrode arrays.
+Brain-computer interfaces are transitioning from laboratory demonstrations to clinical reality. Hochberg's BrainGate trial first showed that a paralyzed human could control a computer cursor with thought alone. Willett et al. achieved a stunning leap in 2023 — decoding attempted speech from neural activity at 62 words per minute, 3.4 times the previous record, with a 9.1% word error rate on a 50-word vocabulary and 23.8% on a 125,000-word one. The paper's own framing is the honest one: that rate *begins to approach* natural conversation, which it puts at 160 words per minute. The company row below is here for the hardware side — high-density implantable arrays and robotic insertion — but as of October 2026 its claims sit on its own website rather than in peer-reviewed results, so date anything you take from it and keep the measured numbers coming from Willett and Hochberg.
 '''
 
 [[groups.items]]
@@ -53,6 +60,7 @@ type = "paper"
 marks = ["core"]
 url = "https://doi.org/10.1038/s41586-023-06377-x"
 link_text = "Nature"
+description = "The result this subsection is built on: intracortical recordings from a participant with paralysis decoded into attempted speech at roughly 62 words per minute, with the vocabulary-dependent error rates quoted above. Practice 2 converts those figures into an information rate and then into channel-count, link and power requirements for the implant"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -61,17 +69,22 @@ title = "Neuronal Ensemble Control of Prosthetic Devices by a Human with Tetrapl
 authors = "Hochberg, Serruya, Friehs, Mukand et al."
 year = "2006"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1038/nature04970"
 link_text = "Nature"
+description = "The BrainGate first: a person with tetraplegia controlling a computer cursor and a simple robotic hand from motor-cortex activity recorded on a microelectrode array. The baseline against which Practice 2 measures what the following seventeen years of decoding and electrode work bought"
 verified = 2026-10-13
 
 [[groups.items]]
 id = "neuralink"
 title = "Neuralink — Brain-Computer Interface Technology"
+authors = "Neuralink"
 type = "website"
 label = "Company"
+access = "free"
 url = "https://neuralink.com/"
 link_text = "Neuralink"
+description = "A company's own site, kept only as the pointer to the hardware-scaling side of this subsection — high-channel-count implants, robotic insertion, wireless telemetry. Everything on it is a vendor claim rather than peer-reviewed evidence, so date any figure you take from it (this row was last checked in October 2026) and get the measured numbers from Willett et al. and Hochberg et al. instead"
 verified = 2026-10-13
 
 [[groups]]
@@ -86,8 +99,10 @@ title = "A Whole-Cell Computational Model Predicts Phenotype from Genotype"
 authors = "Karr, Sanghvi, Macklin, Gutschow et al."
 year = "2012"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1016/j.cell.2012.05.044"
 link_text = "Cell"
+description = "The first whole-cell model: 28 submodels covering replication, transcription, metabolism and division in *Mycoplasma genitalium*, integrated into one simulation that predicts phenotype from genotype. The object of Practice 3's accounting of measured, fitted and assumed parameters, and of its compute-cost extrapolation"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -98,6 +113,7 @@ year = "2022"
 type = "paper"
 url = "https://doi.org/10.1016/j.cell.2021.12.025"
 link_text = "Cell"
+description = "A spatially resolved kinetic simulation of JCVI-syn3A, the 493-gene synthetic minimal cell, in which growth and division behaviour emerges from the modelled chemistry rather than being imposed by hand — the decade-later successor to Karr et al. and the comparison point in Practice 3"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -110,6 +126,7 @@ label = "Perspective"
 access = "free"
 url = "https://arxiv.org/abs/2409.11654"
 link_text = "Cell"
+description = "The opposite route to the two papers above: a perspective arguing for an \"AI virtual cell\" learned from data instead of assembled from mechanism, with the datasets, benchmarks and open-model infrastructure such a programme would need, and the evaluation problem it creates. Free preprint of the *Cell* perspective"
 verified = 2026-10-13
 
 [[groups]]
@@ -124,8 +141,10 @@ title = "Hallmarks of Aging: An Expanding Universe"
 authors = "López-Otín, Blasco, Partridge, Serrano & Kroemer"
 year = "2023"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1016/j.cell.2022.11.001"
 link_text = "Cell"
+description = "The canonical taxonomy of aging, updated: the hallmarks, the criteria a process has to meet to count as one, and the interventional evidence behind each. The reference frame for Practice 4's scorecard and the standard against which the popular account below is read"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -136,6 +155,7 @@ year = "2006"
 type = "paper"
 url = "https://doi.org/10.1016/j.cell.2006.07.024"
 link_text = "Cell"
+description = "The four-factor reprogramming experiment that turned differentiated mouse fibroblasts back into pluripotent cells, and so made cellular age look like something that can be reset. Every partial-reprogramming rejuvenation claim in the longevity literature descends from it; Practice 4 uses it to separate what has been shown in cells from what is claimed for organisms"
 
 [[groups.items]]
 id = "lifespan-why-we-age-and-why-we-don-t"
@@ -146,12 +166,17 @@ type = "book"
 url = "https://lifespanbook.com/"
 link_text = "Atria Books"
 link_note = "*(popular book advocating one contested hypothesis — read against the hallmarks review not instead of it)*"
+description = "The field's most widely read popular account, listed as the argument to push against rather than as a source: the \"information theory of aging\" is the author's own hypothesis, not a settled finding, and several of the book's intervention claims run ahead of the evidence in the hallmarks review. Practice 4 asks you to locate three of those places specifically"
+access = "paid"
+level = "beginner"
 verified = 2026-10-13
 
 [[groups]]
 title = "Foundation Models for Biology"
 outro = '''
-Foundation models — large-scale pre-trained models fine-tuned for downstream tasks — are arriving in biology (the dual-use consequences of exactly this capability are the next subsection). Evo is a genomic foundation model trained on 2.7 million prokaryotic and phage genomes that can generate functional DNA sequences and predict fitness effects across scales from single nucleotides to entire genomes. Its successor Evo 2 (7B and 40B parameters, ~9 trillion bases spanning all domains of life, released openly) predicts the functional effects of genetic variation and generates genome-scale sequence. Geneformer learns gene network biology from 30 million single-cell transcriptomes, enabling predictions about disease mechanisms. scGPT applies generative pre-training to single-cell multi-omics. Together, these models represent a paradigm shift: learning biology's language directly from data.
+Foundation models — large-scale pre-trained models fine-tuned for downstream tasks — are arriving in biology (the dual-use consequences of exactly this capability are the next subsection). Evo is a genomic foundation model trained on 2.7 million prokaryotic and phage genomes that can generate functional DNA sequences and predict fitness effects across scales from single nucleotides to entire genomes. Its successor Evo 2 (7B and 40B parameters, ~9 trillion bases spanning all domains of life, released openly) predicts the functional effects of genetic variation and generates genome-scale sequence; as of October 2026 it is the newest of the three, which is the kind of fact to re-check rather than to trust. Geneformer learns gene network biology from 30 million single-cell transcriptomes, enabling predictions about disease mechanisms. Together, these models represent a bet that biology's language can be learned directly from data — a bet Practice 5 asks you to test on one of them rather than accept.
+
+**Also used here (tracked in its home section):** scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics Using Generative AI ([Section 10](../10-ai-for-biology/README.md)) for the single-cell half of this comparison — it is the foundation model benchmarked against a PCA baseline in that section's Practice 5.
 '''
 
 [[groups.items]]
@@ -161,8 +186,10 @@ authors = "Nguyen, Poli, Durrant, Kang et al."
 year = "2024"
 type = "paper"
 marks = ["core"]
+access = "paid"
 url = "https://doi.org/10.1126/science.ado9336"
 link_text = "Science"
+description = "Evo: a genomic language model trained on prokaryotic and phage genomes that scores mutational effects and generates sequence across scales, from single nucleotides to whole loci. The core item of this subsection and the model Practice 5 probes to find out what it has actually learned about coding sequence"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -173,16 +200,7 @@ year = "2023"
 type = "paper"
 url = "https://doi.org/10.1038/s41586-023-06139-9"
 link_text = "Nature"
-verified = 2026-10-13
-
-[[groups.items]]
-id = "scgpt-toward-building-a-foundation-model"
-title = "scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics"
-authors = "Cui, Wang, Maan et al."
-year = "2024"
-type = "paper"
-url = "https://doi.org/10.1038/s41592-024-02201-0"
-link_text = "Nature Methods"
+description = "Geneformer: a transformer pre-trained on tens of millions of single-cell transcriptomes, then fine-tuned to make network-biology predictions from small datasets. The single-cell counterpart to Evo here, and one of the embeddings compared against a plain PCA baseline in [Section 10](../10-ai-for-biology/README.md)'s Practice 5"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -193,6 +211,7 @@ year = "2026"
 type = "paper"
 url = "https://doi.org/10.1038/s41586-026-10176-5"
 link_text = "Nature"
+description = "Evo 2: the successor trained across all domains of life, at 7B and 40B parameters on about 9 trillion bases, with weights released openly; it scores variant effects and generates sequence at genome scale. As of October 2026 it is the newest genomic foundation model listed here — treat \"largest\" or \"state of the art\" claims in this area as dated facts rather than durable ones, and re-check them when you revisit the section"
 verified = 2026-10-13
 
 [[groups]]
@@ -206,9 +225,13 @@ Read these with Urbina et al. (2022), listed in [Section 10](../10-ai-for-biolog
 [[groups.items]]
 id = "biodefense-in-the-age-of-synthetic"
 title = "Biodefense in the Age of Synthetic Biology"
+authors = "National Academies of Sciences, Engineering, and Medicine"
+year = "2018"
 type = "report"
+access = "free"
 url = "https://doi.org/10.17226/24890"
 link_text = "National Academies of Sciences, Engineering, and Medicine (2018)"
+description = "A National Academies consensus study that sets out a method: rank capabilities by level of concern, then ask which defensive measures a given ranking argues for first. It is the baseline framework for this subsection, and it is useful precisely because it predates the current generation of models — it reads as an assessment procedure rather than a reaction to one technology. Free to read online"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -221,6 +244,7 @@ label = "Preprint"
 access = "free"
 url = "https://arxiv.org/abs/2306.13952"
 link_text = "arXiv"
+description = "The distinction most of this debate blurs, argued in one short preprint: language models and biological design tools sit at different points in the risk chain and therefore call for different mitigations. Listed for that framing, not for a number — the paper is explicitly about differentiating risks, and the evidence base is thin enough that confident estimates in either direction should be distrusted"
 verified = 2026-10-13
 
 [[groups.items]]
@@ -229,6 +253,8 @@ title = "Strengthening Nucleic Acid Biosecurity Screening against Generative Pro
 authors = "Wittmann, Alexanian, Bartling, Beal et al."
 year = "2025"
 type = "paper"
+access = "paid"
 url = "https://doi.org/10.1126/science.adu8578"
 link_text = "Science"
+description = "The engineer's entry point to biosecurity: nucleic-acid synthesis screening is a software control sitting between a sequence on a screen and a physical sample, so the authors evaluated that pipeline, reported where its coverage fell short, patched the screening software and ran a coordinated disclosure. Read it as an adversarial evaluation of a control system, which is the discipline this section wants you to bring to the rest of its claims"
 verified = 2026-10-13

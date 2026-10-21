@@ -14,7 +14,7 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 MIT 7.01SC Fundamentals of Biology — Eric Lander, Robert Weinberg, Tyler Jacks, Hazel Sive, Graham Walker, Sallie Chisholm, Michelle Mischke <!-- id:bio/00/mit-7-01sc-fundamentals-of-biology -->
 - [ ] MIT 7.012 Introductory Biology — Eric Lander, Robert Weinberg <!-- id:bio/00/mit-7-012-introductory-biology -->
 - [ ] Molecular Cell Biology (9th Edition) — Harvey Lodish, Arnold Berk, Chris A. Kaiser, Monty Krieger, Anthony Bretscher, Hidde Ploegh, Kelsey C. Martin, Michael Yaffe, Angelika Amon <!-- id:bio/00/molecular-cell-biology-9th-edition -->
-- [ ] What Is Life? — Erwin Schrödinger <!-- id:bio/00/what-is-life -->
+- [ ] What Is Life? The Physical Aspect of the Living Cell — Erwin Schrödinger <!-- id:bio/00/what-is-life -->
 - [ ] Molecular Animations — Drew Berry <!-- id:bio/00/molecular-animations -->
 - [ ] iBiology Cell Biology Talks — Various (iBiology) <!-- id:bio/00/ibiology-cell-biology-talks -->
 - [ ] Khan Academy — Molecular Biology — Sal Khan <!-- id:bio/00/khan-academy-molecular-biology -->
@@ -37,11 +37,13 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 MIT 5.07SC Biological Chemistry I — JoAnne Stubbe, John Essigmann <!-- id:bio/01/mit-5-07sc-biological-chemistry-i -->
 - [ ] Biochemistry (10th Edition) — Jeremy M. Berg, Gregory J. Gatto Jr., Justin Hines, John L. Tymoczko, Lubert Stryer <!-- id:bio/01/biochemistry-10th-edition -->
 - [ ] Biochemistry (4th Edition) — Donald Voet, Judith G. Voet <!-- id:bio/01/biochemistry-4th-edition -->
-- [ ] PDB-101: Structural Biology Educational Resources — RCSB PDB <!-- id:bio/01/pdb-101-structural-biology-educational -->
-- [ ] HHMI BioInteractive: Enzyme Resources (Biochemistry & Molecular Biology) — HHMI <!-- id:bio/01/hhmi-biointeractive-enzyme-resources -->
+- [ ] ATP Synthesis — HHMI BioInteractive <!-- id:bio/01/hhmi-biointeractive-enzyme-resources -->
 - [ ] AK Lectures — Biochemistry — AK Lectures <!-- id:bio/01/ak-lectures-biochemistry -->
 - [ ] MIT 7.05 General Biochemistry — Matthew Vander Heiden <!-- id:bio/01/mit-7-05-general-biochemistry -->
 - [ ] The Protein-Folding Problem, 50 Years On — Ken A. Dill, Justin L. MacCallum <!-- id:bio/01/the-protein-folding-problem-50-years-on -->
+- [ ] Levinthal's Paradox — Robert Zwanzig, Attila Szabo, Biman Bagchi <!-- id:bio/01/levinthals-paradox-zwanzig -->
+- [ ] The Original Michaelis Constant: Translation of the 1913 Michaelis–Menten Paper — Kenneth A. Johnson, Roger S. Goody <!-- id:bio/01/the-original-michaelis-constant -->
+- [ ] How Much Energy Is Released in ATP Hydrolysis? (Cell Biology by the Numbers) — Ron Milo, Rob Phillips <!-- id:bio/01/how-much-energy-is-released-in-atp -->
 - [ ] 🛠️ Exercise 1: Derive Michaelis-Menten twice <!-- id:bio/01/ex-1 -->
 - [ ] 🛠️ Exercise 2: MIT 5.07SC problem sets, solutions sealed <!-- id:bio/01/ex-2 -->
 - [ ] 🛠️ Exercise 3: ATP's real ΔG, and what it can pay for <!-- id:bio/01/ex-3 -->
@@ -228,7 +230,8 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] 🔑 Experimental and Computational Approaches to Estimate Solubility and Permeability in Drug Discovery and Development Settings — Lipinski, C. A., Lombardo, F., Dominy, B. W., Feeney, P. J. <!-- id:bio/06/experimental-and-computational -->
 - [ ] AutoDock Vina Documentation (v1.2.0) — Forli Lab / CCSB, Scripps Research (original program by Oleg Trott) <!-- id:bio/06/autodock-vina-documentation-v1-2-0 -->
 - [ ] RDKit: Open-Source Cheminformatics — Landrum, G. <!-- id:bio/06/rdkit-open-source-cheminformatics -->
-- [ ] ZINC Database — Free Library of Commercially Available Compounds — Irwin, J. J. & Shoichet, B. K. <!-- id:bio/06/zinc-database-free-library-of -->
+- [ ] ZINC-22 — A Free Multi-Billion-Scale Database of Tangible Compounds for Ligand Discovery — Tingle, B. I., Tang, K. G., Castanon, M., Gutierrez, J. J., Khurelbaatar, M., Dandarchuluun, C., Moroz, Y. S., Irwin, J. J. <!-- id:bio/06/zinc-database-free-library-of -->
+- [ ] ChEMBL — EMBL-EBI (ChEMBL team) <!-- id:bio/06/chembl -->
 - [ ] Docking and Scoring in Virtual Screening for Drug Discovery: Methods and Applications — Kitchen, D. B., Decornez, H., Furr, J. R., Bajorath, J. <!-- id:bio/06/docking-and-scoring-in-virtual-screening -->
 - [ ] Automating Drug Discovery — Schneider, G. <!-- id:bio/06/automating-drug-discovery -->
 - [ ] Virtual Screening of Chemical Libraries — Shoichet, B. K. <!-- id:bio/06/virtual-screening-of-chemical-libraries -->
@@ -357,10 +360,10 @@ pass are ticked. Everything else is there for going deeper.
 
 - [ ] 🔑 Genetic Circuit Design Automation — Nielsen, Voigt et al. <!-- id:bio/11/genetic-circuit-design-automation -->
 - [ ] Complete Biosynthesis of Opioids in Yeast — Galanie, Thodey, Trenchard, Interrante & Smolke <!-- id:bio/11/complete-biosynthesis-of-opioids-in -->
-- [ ] iGEM — International Genetically Engineered Machine Competition <!-- id:bio/11/igem-international-genetically -->
+- [ ] iGEM — International Genetically Engineered Machine Competition — iGEM Foundation <!-- id:bio/11/igem-international-genetically -->
 - [ ] 🔑 A High-Performance Speech Neuroprosthesis — Willett, Kunz, Fan, Avansino et al. <!-- id:bio/11/a-high-performance-speech -->
 - [ ] Neuronal Ensemble Control of Prosthetic Devices by a Human with Tetraplegia — Hochberg, Serruya, Friehs, Mukand et al. <!-- id:bio/11/neuronal-ensemble-control-of-prosthetic -->
-- [ ] Neuralink — Brain-Computer Interface Technology <!-- id:bio/11/neuralink -->
+- [ ] Neuralink — Brain-Computer Interface Technology — Neuralink <!-- id:bio/11/neuralink -->
 - [ ] A Whole-Cell Computational Model Predicts Phenotype from Genotype — Karr, Sanghvi, Macklin, Gutschow et al. <!-- id:bio/11/a-whole-cell-computational-model -->
 - [ ] Fundamental Behaviors Emerge from Simulations of a Living Minimal Cell — Thornburg, Bianchi, Brier, Gilbert et al. <!-- id:bio/11/fundamental-behaviors-emerge-from -->
 - [ ] How to Build the Virtual Cell with Artificial Intelligence: Priorities and Opportunities — Bunne, Roohani, Rosen et al. <!-- id:bio/11/how-to-build-the-virtual-cell-with -->
@@ -369,9 +372,8 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] Lifespan: Why We Age — and Why We Don't Have To — David Sinclair <!-- id:bio/11/lifespan-why-we-age-and-why-we-don-t -->
 - [ ] 🔑 Sequence Modeling and Design from Molecular to Genome Scale with Evo — Nguyen, Poli, Durrant, Kang et al. <!-- id:bio/11/sequence-modeling-and-design-from -->
 - [ ] Transfer Learning Enables Predictions in Network Biology — Theodoris, Xiao, Chopra, Chaffin et al. <!-- id:bio/11/transfer-learning-enables-predictions-in -->
-- [ ] scGPT: Toward Building a Foundation Model for Single-Cell Multi-omics — Cui, Wang, Maan et al. <!-- id:bio/11/scgpt-toward-building-a-foundation-model -->
 - [ ] Genome Modelling and Design Across All Domains of Life with Evo 2 — Brixi, Durrant, Ku, Naghipourfar, Poli et al. <!-- id:bio/11/genome-modelling-and-design-across-all -->
-- [ ] Biodefense in the Age of Synthetic Biology <!-- id:bio/11/biodefense-in-the-age-of-synthetic -->
+- [ ] Biodefense in the Age of Synthetic Biology — National Academies of Sciences, Engineering, and Medicine <!-- id:bio/11/biodefense-in-the-age-of-synthetic -->
 - [ ] Artificial Intelligence and Biological Misuse: Differentiating Risks of Language Models and Biological Design Tools — Jonas B. Sandbrink <!-- id:bio/11/artificial-intelligence-and-biological -->
 - [ ] Strengthening Nucleic Acid Biosecurity Screening against Generative Protein Design Tools — Wittmann, Alexanian, Bartling, Beal et al. <!-- id:bio/11/strengthening-nucleic-acid-biosecurity -->
 - [ ] 🛠️ Exercise 1: Genetic logic gates with real design rules <!-- id:bio/11/ex-1 -->

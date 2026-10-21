@@ -13,7 +13,10 @@ type = "book"
 access = "paid"
 level = "beginner"
 marks = ["core"]
-description = "The definitive popular account of decades of research on judgment and decision-making: heuristics, biases, prospect theory, and two-systems thinking. ⚠️ Some studies it relies on have not survived replication, notably the social-priming results (Ch. 4) and ego depletion (Ch. 3); Kahneman later conceded he \"placed too much faith in underpowered studies.\" The core heuristics-and-biases and prospect-theory findings have held up much better."
+url = "https://www.penguin.co.uk/books/56314/thinking-fast-and-slow-by-kahneman-daniel/9780141033570"
+link_text = "Penguin"
+verified = 2026-10-21
+description = "Kahneman's popular account of decades of research on judgment and decision-making: heuristics, biases, prospect theory, and two-systems thinking. ⚠️ Some studies it relies on have not survived replication, notably the social-priming results (Ch. 4) and ego depletion (Ch. 3); Kahneman later conceded he \"placed too much faith in underpowered studies.\" Its treatment of the basketball \"hot hand\" as an illusion is contested too: Miller & Sanjurjo, \"Surprised by the Hot Hand Fallacy?\" ([*Econometrica* 2018](https://doi.org/10.3982/ECTA14943)), found a bias in the original test (Practice 5). The core heuristics-and-biases and prospect-theory findings have held up much better."
 
 [[groups.items]]
 id = "reconstruction-of-a-train-wreck-how"
@@ -21,6 +24,7 @@ title = "Reconstruction of a Train Wreck: How Priming Research Went off the Rail
 authors = "Ulrich Schimmack, Moritz Heene & Kamini Kesavan"
 year = "2017"
 type = "article"
+access = "free"
 url = "https://replicationindex.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/"
 link_text = "Link"
 description = "Statistical audit of the priming studies cited in Ch. 4 of *Thinking, Fast and Slow*, showing they were too underpowered to be credible; Kahneman's reply in the comments accepts the critique. Read right after Kahneman as a lesson in judging evidence."
@@ -32,6 +36,7 @@ title = "Prospect Theory: An Analysis of Decision under Risk"
 authors = "Daniel Kahneman & Amos Tversky"
 year = "1979"
 type = "paper"
+access = "paid"
 marks = ["core"]
 url = "https://www.jstor.org/stable/1914185"
 link_text = "Link"
@@ -44,6 +49,7 @@ title = "Judgment under Uncertainty: Heuristics and Biases"
 authors = "Amos Tversky & Daniel Kahneman"
 year = "1974"
 type = "paper"
+access = "paid"
 url = "https://www.science.org/doi/10.1126/science.185.4157.1124"
 link_text = "Link"
 description = "The landmark paper cataloging anchoring, availability, and representativeness heuristics."
@@ -51,11 +57,16 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "the-foundations-of-statistics"
-title = "The Foundations of Statistics"
-authors = "Leonard Savage"
-year = "1954"
+title = "The Foundations of Statistics (2nd rev. ed.)"
+authors = "Leonard J. Savage"
+year = "1954 (2nd rev. ed. 1972)"
 type = "book"
-description = "The foundational axiomatization of subjective expected utility theory. Dense but historically essential."
+access = "paid"
+level = "advanced"
+url = "https://store.doverpublications.com/products/9780486623498"
+link_text = "Dover"
+description = "The foundational axiomatization of subjective expected utility theory, including the sure-thing principle that the Ellsberg urn violates. Dense but historically essential; the Dover paperback is the 1972 second revised edition."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "risk-uncertainty-and-profit"
@@ -63,6 +74,8 @@ title = "Risk, Uncertainty and Profit"
 authors = "Frank Knight"
 year = "1921"
 type = "book"
+access = "free"
+level = "intermediate"
 url = "https://oll.libertyfund.org/titles/knight-risk-uncertainty-and-profit"
 link_text = "Link"
 description = "Introduced the crucial distinction between measurable risk and unmeasurable uncertainty (\"Knightian uncertainty\")."
@@ -70,11 +83,16 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "theory-of-games-and-economic-behavior-ch"
-title = "Theory of Games and Economic Behavior (Ch. 1 & Appendix)"
+title = "Theory of Games and Economic Behavior: 60th Anniversary Commemorative Edition (Ch. 1 & Appendix)"
 authors = "John von Neumann & Oskar Morgenstern"
-year = "1944"
+year = "1944 (commemorative ed. 2004, paperback 2007)"
 type = "book"
-description = "The book that founded game theory. Ch. 1 argues for numerical utility; the axiomatic derivation of expected utility was added as an appendix in the 1947 second edition. Read that appendix for the normative starting point."
+access = "paid"
+level = "advanced"
+url = "https://press.princeton.edu/books/paperback/9780691130613/theory-of-games-and-economic-behavior"
+link_text = "Princeton University Press"
+description = "The book that founded game theory. Ch. 1 argues for numerical utility; the axiomatic derivation of expected utility was added as an appendix in the 1947 second edition. Read that appendix (\"The Axiomatic Treatment of Utility\" in the linked Princeton edition, which adds an introduction by Harold W. Kuhn and an afterword by Ariel Rubinstein) for the normative starting point."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "decision-theory-stanford-encyclopedia-of"
@@ -91,16 +109,26 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "rational-choice-in-an-uncertain-world"
-title = "Rational Choice in an Uncertain World"
-authors = "Reid Hastie & Robyn Dawes"
+title = "Rational Choice in an Uncertain World: The Psychology of Judgment and Decision Making (2nd ed.)"
+authors = "Reid Hastie & Robyn M. Dawes"
 year = "2009"
 type = "book"
-description = "Clear textbook on the psychology of judgment and decision-making. Good companion to Kahneman."
+access = "paid"
+level = "intermediate"
+url = "https://collegepublishing.sagepub.com/products/rational-choice-in-an-uncertain-world-2-231783"
+link_text = "SAGE"
+description = "Clear textbook on the psychology of judgment and decision-making, more formal than Kahneman. Used for Bayesian reasoning and decision analysis in Practices 2 and 4."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "predictably-irrational"
-title = "Predictably Irrational"
+title = "Predictably Irrational: The Hidden Forces That Shape Our Decisions"
 authors = "Dan Ariely"
 year = "2008"
 type = "book"
+access = "paid"
+level = "beginner"
+url = "https://danariely.com/books/"
+link_text = "Author's page"
+verified = 2026-10-21
 description = "Accessible popular introduction to behavioral anomalies in decision-making. ⚠️ Read critically: a 2012 *PNAS* honesty study Ariely co-authored was retracted in 2021 after evidence its field data were fabricated, and the \"Ten Commandments\" honesty result described in the book failed a 25-lab preregistered replication (2018)."

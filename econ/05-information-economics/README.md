@@ -30,7 +30,7 @@ After this section you can:
 
 | Priority | Type | Resource | Author(s) | Year | Link | Description |
 |---|---|---|---|---|---|---|
-| 🔑 | 📄 Paper | The Market for "Lemons": Quality Uncertainty and the Market Mechanism | George Akerlof | 1970 | [Link](https://www.jstor.org/stable/1879431) | The foundational paper on adverse selection. Showed how information asymmetry can cause market collapse. Was rejected three times before publication. Nobel Prize winning. |
+| 🔑 | 📄 Paper | The Market for "Lemons": Quality Uncertainty and the Market Mechanism | George Akerlof | 1970 | [Link](https://doi.org/10.2307/1879431) | The foundational paper on adverse selection (*Quarterly Journal of Economics*). Showed how information asymmetry can cause market collapse. Was rejected three times before publication. Nobel Prize winning. |
 | 🔑 | 📄 Paper | Job Market Signaling | Michael Spence | 1973 | [Link](https://www.jstor.org/stable/1882010) | Introduced signaling theory. Education as a costly signal of ability, even if it teaches nothing useful. Nobel Prize winning. |
 | | 📄 Paper | Equilibrium in Competitive Insurance Markets | Michael Rothschild & Joseph Stiglitz | 1976 | [Link](https://www.jstor.org/stable/1885326) | The screening model. How insurers use contract menus to separate high-risk from low-risk customers. |
 | | 📄 Paper | Moral Hazard and Observability | Bengt Holmström | 1979 | [Link](https://www.jstor.org/stable/3003320) | The informativeness principle: optimal contracts should condition pay on any informative signal of effort. Nobel Prize work. |

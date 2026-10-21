@@ -35,8 +35,8 @@ After this section you can:
 | | 📕 Book | Microeconomic Theory | Mas-Colell, Whinston, Green | 1995 | — | The graduate-level bible of microeconomics ("MWG"). Definitive reference for rigorous proofs. Not for first pass — use after Varian. |
 | | 📕 Book (free) | Price Theory | David Friedman | 1990 | [Link](http://www.daviddfriedman.com/Academic/Price_Theory/PThy_ToC.html) | Refreshingly intuitive approach to price theory. Free online. Good alternative perspective. |
 | | 🎓 Course (free) | Khan Academy Microeconomics | Khan Academy | — | [Link](https://www.khanacademy.org/economics-finance-domain/microeconomics) | Free comprehensive coverage of micro concepts. Useful for visual reinforcement of textbook material. |
-| | 📄 Paper | The Use of Knowledge in Society | F.A. Hayek | 1945 | [Link](https://www.econlib.org/library/Essays/hykKnw.html) | Foundational essay on the price system as a mechanism for information aggregation. Essential for understanding why markets work. |
-| | 📄 Paper | The Problem of Social Cost | Ronald Coase | 1960 | [Link](https://www.law.uchicago.edu/files/file/coase-problem.pdf) | Introduced the Coase theorem — foundational for law and economics. Shows how property rights and bargaining resolve externalities. |
+| | 📄 Paper (free) | The Use of Knowledge in Society | F.A. Hayek | 1945 | [Link](https://www.econlib.org/library/Essays/hykKnw.html) | Foundational essay on the price system as a mechanism for information aggregation. Essential for understanding why markets work. |
+| | 📄 Paper (free) | The Problem of Social Cost | Ronald Coase | 1960 | [Link](https://www.law.uchicago.edu/files/file/coase-problem.pdf) | Introduced the Coase theorem — foundational for law and economics. Shows how property rights and bargaining resolve externalities. |
 | | 📄 Paper (free) | Beyond Markets and States: Polycentric Governance of Complex Economic Systems | Elinor Ostrom | 2009 | [Link](https://www.nobelprize.org/prizes/economics/2009/ostrom/lecture/) | Ostrom's Nobel lecture: field evidence that communities often manage shared resources (fisheries, forests, irrigation) well without either privatization or state control — the empirical answer to the "tragedy of the commons." Summarizes the work behind her book *Governing the Commons* (1990) and fills this section's gap on public goods and common-pool resources. |
 | | 📕 Book (free) | Models in Microeconomic Theory | Martin J. Osborne & Ariel Rubinstein | 2020 | [Link](https://www.openbookpublishers.com/books/10.11647/obp.0204) | Free, concise, mathematically careful micro text from the authors of *A Course in Game Theory*. A good free bridge between Varian and MWG; an expanded second edition is also available from the publisher. |
 
@@ -48,7 +48,7 @@ After this section you can:
 
 **Core path (🔑):** Varian & Melitz, *Intermediate Microeconomics* → MIT 14.01 lectures
 
-1. **Khan Academy Microeconomics** — Review the modules on consumer/producer theory if you need visual reinforcement.
+1. **Khan Academy Microeconomics** (tracked in [Section 00](../00-economic-thinking/README.md)) — Review the modules on consumer/producer theory if you need visual reinforcement.
 2. **Varian — Intermediate Microeconomics** — Work through the textbook systematically. This is the core of the section.
 3. **MIT 14.01 (OCW)** — Watch Gruber's lectures alongside or after Varian for a different exposition.
 4. **Hayek — "The Use of Knowledge in Society"** — Read this essay to understand the informational role of prices.

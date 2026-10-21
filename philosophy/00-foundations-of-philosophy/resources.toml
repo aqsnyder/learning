@@ -21,14 +21,15 @@ description = "The best single-volume introduction to philosophy. Covers knowled
 [[groups.items]]
 id = "epistemology"
 title = "Epistemology"
-authors = "SEP"
+authors = "Matthias Steup, Ram Neta"
+year = "2005, rev. 2024"
 type = "encyclopedia"
 access = "free"
 marks = ["core"]
 url = "https://plato.stanford.edu/entries/epistemology/"
 link_text = "SEP"
-description = "Comprehensive entry on the nature, sources, and limits of knowledge. The gold-standard reference."
-verified = 2026-10-13
+description = "Stanford Encyclopedia of Philosophy entry on what knowledge and justification are, how knowledge is structured (foundationalism, coherentism), its sources, and its limits. Practice 2 uses §2.3 \"Knowing Facts\" (the Gettier problem); Practice 3 uses §6 \"The Limits of Cognitive Success\", including the responses to the closure argument."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "what-does-it-all-mean-a-very-short"
@@ -52,13 +53,14 @@ verified = 2026-10-13
 [[groups.items]]
 id = "logic-and-ontology"
 title = "Logic and Ontology"
-authors = "SEP"
+authors = "Thomas Hofweber"
+year = "2004, rev. 2023"
 type = "encyclopedia"
 access = "free"
 url = "https://plato.stanford.edu/entries/logic-ontology/"
 link_text = "SEP"
-description = "Thomas Hofweber's entry on how logic relates to ontology (the study of what exists): ontological commitment, whether logic is neutral about what there is, Carnap's rejection of ontology. An advanced metaphysics entry, not a reasoning primer — *forall x* below is the actual toolkit. Optional."
-verified = 2026-10-13
+description = "How logic relates to ontology (the study of what exists): ontological commitment, whether logic is neutral about what there is, Carnap's rejection of ontology. An advanced metaphysics entry, not a reasoning primer — *forall x* below is the actual toolkit. Optional."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "introduction-to-critical-thinking"

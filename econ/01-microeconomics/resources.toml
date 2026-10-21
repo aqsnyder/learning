@@ -3,6 +3,7 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''**Also used here (tracked in its home section):** Khan Academy Microeconomics ([Section 00](../00-economic-thinking/README.md)) for visual reinforcement of consumer and producer theory.'''
 
 [[groups.items]]
 id = "intermediate-microeconomics-a-modern"
@@ -24,6 +25,8 @@ title = "Intermediate Microeconomics with Calculus (2nd ed.)"
 authors = "Hal Varian & Marc Melitz"
 year = "2024"
 type = "book"
+access = "paid"
+level = "intermediate"
 url = "https://wwnorton.com/books/9781324034414"
 link_text = "Link"
 description = "Calculus-based companion to the main text. Use if you want the mathematical treatment."
@@ -31,23 +34,30 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "mit-14-01-principles-of-microeconomics"
-title = "MIT 14.01 Principles of Microeconomics (OCW)"
+title = "MIT 14.01SC Principles of Microeconomics (OCW, Fall 2011)"
 authors = "Jonathan Gruber"
+year = "2011"
 type = "course"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/"
 link_text = "Link"
-description = "Full MIT course with video lectures, problem sets, and exams. Gruber is an excellent lecturer."
-verified = 2026-10-13
+description = "Full MIT undergraduate course with lecture videos, problem sets and exams with solutions, and problem-solving videos (CC BY-NC-SA). Gruber's lectures on consumer choice, production and monopoly back Practices 1–3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "microeconomic-theory"
 title = "Microeconomic Theory"
-authors = "Mas-Colell, Whinston, Green"
+authors = "Andreu Mas-Colell, Michael D. Whinston & Jerry R. Green"
 year = "1995"
 type = "book"
-description = "The graduate-level bible of microeconomics (\"MWG\"). Definitive reference for rigorous proofs. Not for first pass — use after Varian."
+access = "paid"
+level = "advanced"
+url = "https://global.oup.com/ushe/product/microeconomic-theory-9780195073409"
+link_text = "Oxford University Press"
+description = "The standard graduate reference for microeconomics (\"MWG\"; 1,008 pages), with rigorous proofs of duality, general equilibrium and the welfare theorems. Not for a first pass: use it after Varian and Osborne & Rubinstein, e.g. for the optional duality part of Practice 1."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "price-theory"
@@ -56,20 +66,10 @@ authors = "David Friedman"
 year = "1990"
 type = "book"
 access = "free"
+level = "intermediate"
 url = "http://www.daviddfriedman.com/Academic/Price_Theory/PThy_ToC.html"
 link_text = "Link"
 description = "Refreshingly intuitive approach to price theory. Free online. Good alternative perspective."
-
-[[groups.items]]
-id = "khan-academy-microeconomics"
-title = "Khan Academy Microeconomics"
-authors = "Khan Academy"
-type = "course"
-access = "free"
-url = "https://www.khanacademy.org/economics-finance-domain/microeconomics"
-link_text = "Link"
-description = "Free comprehensive coverage of micro concepts. Useful for visual reinforcement of textbook material."
-verified = 2026-10-13
 
 [[groups.items]]
 id = "the-use-of-knowledge-in-society"
@@ -77,6 +77,7 @@ title = "The Use of Knowledge in Society"
 authors = "F.A. Hayek"
 year = "1945"
 type = "paper"
+access = "free"
 url = "https://www.econlib.org/library/Essays/hykKnw.html"
 link_text = "Link"
 description = "Foundational essay on the price system as a mechanism for information aggregation. Essential for understanding why markets work."
@@ -88,6 +89,7 @@ title = "The Problem of Social Cost"
 authors = "Ronald Coase"
 year = "1960"
 type = "paper"
+access = "free"
 url = "https://www.law.uchicago.edu/files/file/coase-problem.pdf"
 link_text = "Link"
 description = "Introduced the Coase theorem — foundational for law and economics. Shows how property rights and bargaining resolve externalities."
@@ -112,6 +114,7 @@ authors = "Martin J. Osborne & Ariel Rubinstein"
 year = "2020"
 type = "book"
 access = "free"
+level = "intermediate"
 url = "https://www.openbookpublishers.com/books/10.11647/obp.0204"
 link_text = "Link"
 description = "Free, concise, mathematically careful micro text from the authors of *A Course in Game Theory*. A good free bridge between Varian and MWG; an expanded second edition is also available from the publisher."

@@ -6,21 +6,21 @@
 
 [[groups.items]]
 id = "vae"
-title = "VAE"
-authors = "Kingma & Welling"
+title = "VAE — Auto-Encoding Variational Bayes"
+authors = "Diederik P. Kingma, Max Welling"
 year = "2013"
 type = "paper"
 access = "free"
 marks = ["core"]
 url = "https://arxiv.org/abs/1312.6114"
 link_text = "arxiv.org/abs/1312.6114"
-description = "Auto-Encoding Variational Bayes, the VAE paper: a reparameterized lower-bound (ELBO) estimator trained with standard SGD. Master the ELBO and the reparameterization trick here."
-verified = 2026-10-13
+description = "The VAE paper: a reparameterized estimator of the variational lower bound (ELBO) that trains an encoder and a decoder together with standard stochastic gradients. Master the ELBO and the reparameterization trick here."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "gan"
-title = "GAN"
-authors = "Goodfellow et al."
+title = "GAN — Generative Adversarial Networks"
+authors = "Ian J. Goodfellow et al."
 year = "2014"
 type = "paper"
 access = "free"
@@ -28,36 +28,36 @@ marks = ["core"]
 url = "https://arxiv.org/abs/1406.2661"
 link_text = "arxiv.org/abs/1406.2661"
 description = "The original adversarial framework: generator versus discriminator in a minimax game. Work through its proof that the global optimum recovers the data distribution."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "dcgan"
-title = "DCGAN"
-authors = "Radford et al."
+title = "DCGAN — Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks"
+authors = "Alec Radford, Luke Metz, Soumith Chintala"
 year = "2015"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1511.06434"
 link_text = "arxiv.org/abs/1511.06434"
 description = "Convolutional GANs made stable through a short list of architecture guidelines; their learned features transfer to other tasks. Follow it for Practice 2's DCGAN."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "normalizing-flows"
-title = "Normalizing Flows"
-authors = "Rezende & Mohamed"
+title = "Variational Inference with Normalizing Flows"
+authors = "Danilo Jimenez Rezende, Shakir Mohamed"
 year = "2015"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1505.05770"
 link_text = "arxiv.org/abs/1505.05770"
 description = "Builds flexible variational posteriors by pushing a simple density through invertible maps. Learn the change-of-variables formula and the planar flow used in Practice 3."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ddpm"
-title = "DDPM"
-authors = "Ho, Jain & Abbeel"
+title = "DDPM — Denoising Diffusion Probabilistic Models"
+authors = "Jonathan Ho, Ajay Jain, Pieter Abbeel"
 year = "2020"
 type = "paper"
 access = "free"
@@ -65,19 +65,19 @@ marks = ["core"]
 url = "https://arxiv.org/abs/2006.11239"
 link_text = "arxiv.org/abs/2006.11239"
 description = "High-quality image synthesis with diffusion probabilistic models, via a link to denoising score matching. Derive its closed-form forward process and simplified noise-prediction loss."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "latent-diffusion"
-title = "Latent Diffusion"
-authors = "Rombach et al."
+title = "High-Resolution Image Synthesis with Latent Diffusion Models"
+authors = "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer"
 year = "2022"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2112.10752"
 link_text = "arxiv.org/abs/2112.10752"
-description = "Diffusion in a pretrained autoencoder's latent space, conditioned on text or boxes via cross-attention. The basis of Stable Diffusion; see how latents cut compute."
-verified = 2026-10-13
+description = "Diffusion in a pretrained autoencoder's latent space, conditioned on text or boxes via cross-attention (CVPR 2022; first posted December 2021). The basis of Stable Diffusion; see how latents cut compute."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "what-are-diffusion-models"
@@ -92,13 +92,17 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "distill-pub"
-title = "Distill.pub"
-type = "blog"
+title = "Deconvolution and Checkerboard Artifacts"
+authors = "Augustus Odena, Vincent Dumoulin, Chris Olah"
+year = "2016"
+type = "article"
 access = "free"
-url = "https://distill.pub/"
-link_text = "distill.pub"
-description = "Interactive ML explainer journal, on hiatus since July 2021. Here, read \"Deconvolution and Checkerboard Artifacts\" (Practice 2) and \"Open Questions about Generative Adversarial Networks\"."
-verified = 2026-10-13
+url = "https://distill.pub/2016/deconv-checkerboard/"
+link_text = "Distill"
+more_links = [{ text = "Open Questions about GANs (Odena, 2019)", url = "https://distill.pub/2019/gan-open-problems/" }]
+description = "Why transposed (\"de-\") convolutions paint checkerboard patterns into generated images, and the fix: resize, then convolve. Read it before Practice 2's DCGAN. The second link is Odena's *Open Questions about Generative Adversarial Networks* (*Distill*, 2019), a short map of what GAN research had not settled."
+verified = 2026-10-21
+short = "Odena, Dumoulin & Olah — Deconvolution and Checkerboard Artifacts (Distill)"
 
 [[groups.items]]
 id = "flow-matching-for-generative-modeling"
@@ -138,27 +142,27 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "dalle-2"
-title = "DALL·E 2"
-authors = "Ramesh et al."
+title = "DALL·E 2 — Hierarchical Text-Conditional Image Generation with CLIP Latents"
+authors = "Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, Mark Chen"
 year = "2022"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2204.06125"
 link_text = "arxiv.org/abs/2204.06125"
 description = "Two stages: a prior turns a caption into a CLIP image embedding, then a diffusion decoder generates the image. Compare with Imagen's frozen-T5 conditioning."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "imagen"
-title = "Imagen"
-authors = "Saharia et al."
+title = "Imagen — Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding"
+authors = "Chitwan Saharia et al."
 year = "2022"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2205.11487"
 link_text = "arxiv.org/abs/2205.11487"
 description = "Text-to-image diffusion conditioned on a frozen T5 text encoder. Key finding: scaling the language model helps more than scaling the image diffusion model."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "variational-lossy-autoencoder"
@@ -175,15 +179,15 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "vq-vae-neural-discrete-representation"
-title = "VQ-VAE: Neural Discrete Representation Learning"
-authors = "van den Oord, Vinyals & Kavukcuoglu"
+title = "VQ-VAE — Neural Discrete Representation Learning"
+authors = "Aaron van den Oord, Oriol Vinyals, Koray Kavukcuoglu"
 year = "2017"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1711.00937"
 link_text = "arxiv.org/abs/1711.00937"
 description = "Encodes data as discrete codes via vector quantization, with a learned autoregressive prior, avoiding posterior collapse. See how images and audio become tokens."
-verified = 2026-10-13
+verified = 2026-10-21
 
 [[groups.items]]
 id = "score-based-generative-modeling-through"
@@ -199,15 +203,15 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "dit-scalable-diffusion-models-with"
-title = "DiT: Scalable Diffusion Models with Transformers"
-authors = "Peebles & Xie"
+title = "DiT — Scalable Diffusion Models with Transformers"
+authors = "William Peebles, Saining Xie"
 year = "2022"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2212.09748"
 link_text = "arxiv.org/abs/2212.09748"
-description = "Swaps the diffusion U-Net for a transformer on latent patches; FID improves with Gflops. The backbone family behind many current image and video generators."
-verified = 2026-10-13
+description = "Swaps the diffusion U-Net for a transformer on latent patches; FID improves as Gflops grow. The backbone family behind many image and video generators as of October 2026."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "mit-6-s184-introduction-to-flow-matching"
@@ -215,6 +219,8 @@ title = "MIT 6.S184: Introduction to Flow Matching and Diffusion Models"
 authors = "Holderrieth & Erives"
 year = "2025"
 type = "course"
+access = "free"
+level = "intermediate"
 url = "https://diffusion.csail.mit.edu/2025/index.html"
 link_text = "diffusion.csail.mit.edu"
 more_links = [{ text = "Notes", url = "https://arxiv.org/abs/2506.02070" }]

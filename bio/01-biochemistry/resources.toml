@@ -3,6 +3,9 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** PDB-101 ([Section 03](../03-structural-biology/README.md)) for its Molecule of the Month articles on enzymes (Practice 5) and its illustrated guides to protein structure.
+'''
 
 [[groups.items]]
 id = "lehninger-principles-of-biochemistry-8th"
@@ -26,6 +29,7 @@ authors = "JoAnne Stubbe, John Essigmann"
 year = "2013"
 type = "course"
 access = "free"
+level = "intermediate"
 marks = ["core"]
 url = "https://ocw.mit.edu/courses/5-07sc-biological-chemistry-i-fall-2013/"
 link_text = "MIT OCW"
@@ -39,6 +43,8 @@ authors = "Jeremy M. Berg, Gregory J. Gatto Jr., Justin Hines, John L. Tymoczko,
 year = "2023"
 type = "book"
 label = "Textbook"
+access = "paid"
+level = "intermediate"
 url = "https://www.macmillanlearning.com/college/us/product/Biochemistry/p/1319333621"
 link_text = "Book"
 description = "Stryer's classic — known for clarity on enzyme mechanisms and metabolic regulation with excellent pathway diagrams"
@@ -48,35 +54,29 @@ verified = 2026-10-13
 id = "biochemistry-4th-edition"
 title = "Biochemistry (4th Edition)"
 authors = "Donald Voet, Judith G. Voet"
-year = "2010"
+year = "2011"
 type = "book"
 label = "Textbook"
+access = "paid"
+level = "advanced"
 url = "https://www.wiley.com/en-us/Biochemistry%2C+4th+Edition-p-9780470570951"
 link_text = "Book"
-description = "The most detailed and rigorous of the major biochemistry textbooks — best for deep dives into enzyme mechanisms and thermodynamics"
-
-[[groups.items]]
-id = "pdb-101-structural-biology-educational"
-title = "PDB-101: Structural Biology Educational Resources"
-authors = "RCSB PDB"
-year = "2024"
-type = "website"
-label = "Resource"
-url = "https://pdb101.rcsb.org/"
-link_text = "PDB-101"
-description = "Beautifully illustrated guides to protein structure, molecular machines, and drug design from the Protein Data Bank"
-verified = 2026-10-13
+more_links = [{ text = "Open Library record", url = "https://openlibrary.org/isbn/9780470570951" }]
+description = "The most detailed and rigorous of the major biochemistry textbooks — best for deep dives into enzyme mechanisms and thermodynamics. 4th edition, John Wiley & Sons, 2011 (1,428 pp)"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "hhmi-biointeractive-enzyme-resources"
-title = "HHMI BioInteractive: Enzyme Resources (Biochemistry & Molecular Biology)"
-authors = "HHMI"
+title = "ATP Synthesis"
+authors = "HHMI BioInteractive"
+year = "2020"
 type = "video"
-label = "Animations"
-url = "https://www.biointeractive.org/search?keyword=enzyme&type_page=1&topics%5B23%5D=23&sort_bef_combine=search_api_relevance_DESC"
+label = "Animation"
+access = "free"
+url = "https://www.biointeractive.org/classroom-resources/atp-synthesis"
 link_text = "BioInteractive"
-description = "BioInteractive's enzyme resources within its Biochemistry & Molecular Biology topic: molecular animations of enzymes at work — ATP synthase, the electron transport chain, glycolysis, pyruvate dehydrogenase — plus a video of Thomas Cech on discovering that RNA can act as an enzyme, and several classroom activities. Good on mechanism; for kinetics, stay with Lehninger and AK Lectures. (The topic-filter URL given here before returned a generic, unfiltered resource listing)"
-verified = 2026-10-13
+description = "A 2¼-minute animation (published 2020, updated 2023) of how the proton gradient across the inner mitochondrial membrane drives ATP synthase: the machine behind Practice 3(c)'s protons-per-ATP question. It is the fifth of six BioInteractive animations on cellular respiration (glycolysis through ATP use), each linked from its page; free under CC BY-NC-SA 4.0. Replaces a site-search listing of enzyme resources"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ak-lectures-biochemistry"
@@ -86,6 +86,7 @@ year = "2022"
 type = "video-series"
 label = "Videos"
 access = "free"
+level = "beginner"
 url = "https://www.youtube.com/c/AKLECTURES"
 link_text = "YouTube"
 description = "Comprehensive YouTube lecture series covering amino acids, enzyme kinetics, metabolism, and protein structure with clear whiteboard explanations"
@@ -98,6 +99,7 @@ authors = "Matthew Vander Heiden"
 year = "2020"
 type = "course"
 access = "free"
+level = "intermediate"
 url = "https://ocw.mit.edu/courses/7-05-general-biochemistry-spring-2020/"
 link_text = "MIT OCW"
 description = "MIT's biochemistry course for biology majors — strong coverage of metabolic pathways and bioenergetics"
@@ -110,7 +112,46 @@ authors = "Ken A. Dill, Justin L. MacCallum"
 year = "2012"
 type = "paper"
 label = "Review"
+access = "paid"
 url = "https://doi.org/10.1126/science.1219021"
 link_text = "Science"
-description = "Accessible overview of the protein folding problem — essential context before studying structural biology and computational approaches"
-verified = 2026-10-13
+description = "Accessible overview of the protein folding problem — essential context before studying structural biology and computational approaches. *Science* 338:1042–1046"
+verified = 2026-10-21
+
+[[groups.items]]
+id = "levinthals-paradox-zwanzig"
+title = "Levinthal's Paradox"
+authors = "Robert Zwanzig, Attila Szabo, Biman Bagchi"
+year = "1992"
+type = "paper"
+access = "free"
+url = "https://doi.org/10.1073/pnas.89.1.20"
+link_text = "PNAS"
+description = "A three-page paper devoted to Levinthal's paradox (*PNAS* 89:20–22, free to read). Use it for objective 5 and Practice 6, which ask you to compute the paradox and say what resolves it, and read it next to Dill & MacCallum's funnel picture"
+verified = 2026-10-21
+
+[[groups.items]]
+id = "the-original-michaelis-constant"
+title = "The Original Michaelis Constant: Translation of the 1913 Michaelis–Menten Paper"
+authors = "Kenneth A. Johnson, Roger S. Goody"
+year = "2011"
+type = "paper"
+access = "paid"
+url = "https://doi.org/10.1021/bi201284u"
+link_text = "Biochemistry"
+description = "The 1913 Michaelis–Menten paper in English (*Biochemistry* 50:8264–8269). Read it with Practice 1 and Check Yourself 2: see which assumption the original derivation made and what the original constant measured, before the steady-state treatment generalized it"
+verified = 2026-10-21
+
+[[groups.items]]
+id = "how-much-energy-is-released-in-atp"
+title = "How Much Energy Is Released in ATP Hydrolysis? (Cell Biology by the Numbers)"
+authors = "Ron Milo, Rob Phillips"
+year = "2015"
+type = "article"
+label = "Vignette"
+access = "free"
+url = "https://book.bionumbers.org/how-much-energy-is-released-in-atp-hydrolysis/"
+link_text = "Vignette"
+more_links = [{ text = "Hydrophobic-effect energy scale", url = "https://book.bionumbers.org/what-is-the-energy-scale-associated-with-the-hydrophobic-effect/" }, { text = "Enzyme turnover rates", url = "https://book.bionumbers.org/how-many-reactions-do-enzymes-carry-out-each-second/" }]
+description = "Puts numbers on Practice 3: under standard conditions ATP hydrolysis gives about −28 to −34 kJ/mol, but at real cellular concentrations about −47 kJ/mol (*E. coli* on glucose) to −70 kJ/mol, roughly twice as much. The two companion vignettes give the energy scale of the hydrophobic effect (objective 3) and how many reactions per second enzymes really carry out (Practice 1). From Milo & Phillips's free book, whose home is [Section 00](../00-molecular-biology-fundamentals/README.md)"
+verified = 2026-10-21

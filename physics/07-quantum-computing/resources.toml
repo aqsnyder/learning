@@ -3,71 +3,106 @@
 # Field reference: tools/README.md
 
 [[groups]]
+outro = '''
+**Also used here (tracked in its home section):** 3Blue1Brown, "Some light quantum mechanics (with minutephysics)" ([Section 04](../04-quantum-mechanics/README.md)) for visual intuition about quantum states.
+'''
 
 [[groups.items]]
 id = "understanding-quantum-information"
-title = "Understanding Quantum Information & Computation — John Watrous (IBM Quantum Learning; successor to the archived Qiskit Textbook)"
+title = "Understanding Quantum Information and Computation"
+authors = "John Watrous"
+year = "2025"
 type = "course"
 marks = ["core"]
 url = "https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information"
 link_text = "IBM Quantum Learning"
-verified = 2026-10-13
+more_links = [{ text = "full text (arXiv, July 2025)", url = "https://arxiv.org/abs/2507.11536" }]
+description = "Watrous's free four-course series on IBM Quantum Learning (basics of quantum information; fundamentals of quantum algorithms; general formulation of quantum information; foundations of quantum error correction), 16 lessons each with a video and a written part. It covers every objective here: qubit states and circuits, the CHSH game, query algorithms through Shor and Grover, density matrices and channels, and stabilizer codes up to fault tolerance."
+access = "free"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "quantum-computation-and-quantum"
-title = "Quantum Computation and Quantum Information"
-authors = "Nielsen & Chuang"
+title = "Quantum Computation and Quantum Information (10th Anniversary Edition)"
+authors = "Michael A. Nielsen & Isaac L. Chuang"
+year = "2010"
 type = "book"
 marks = ["core"]
+url = "https://www.cambridge.org/us/universitypress/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition"
+link_text = "Cambridge University Press"
+more_links = [{ text = "front matter and contents (PDF)", url = "https://assets.cambridge.org/97811070/02173/frontmatter/9781107002173_frontmatter.pdf" }]
+description = "The standard graduate text (first published 2000). This section uses Ch. 2 (introduction to quantum mechanics), Ch. 4 (quantum circuits), Ch. 5 (the quantum Fourier transform and its applications), Ch. 6 (search), Ch. 8 (quantum noise and quantum operations) and Ch. 10 (quantum error-correction)."
+access = "paid"
+level = "advanced"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "ibm-quantum-learning"
-title = "IBM Quantum Learning"
-type = "course"
-url = "https://quantum.cloud.ibm.com/learning/en"
-link_text = "quantum.cloud.ibm.com/learning"
-verified = 2026-10-13
+title = "IBM Quantum Learning (course catalog)"
+authors = "IBM Quantum"
+type = "website"
+label = "Courses"
+url = "https://quantum.cloud.ibm.com/learning/en/courses"
+link_text = "Course catalog"
+more_links = [{ text = "Quantum computing in practice", url = "https://quantum.cloud.ibm.com/learning/en/courses/quantum-computing-in-practice" }, { text = "Tools for quantum advantage", url = "https://quantum.cloud.ibm.com/learning/en/courses/tools-for-quantum-advantage" }]
+description = "IBM's free courses beyond Watrous's series. For this section's hardware runs (Practice 2 and 3, the mini-project) use two of them: *Quantum computing in practice*, on best practices for running experiments on processors of 100 or more qubits, and *Tools for quantum advantage*, on error suppression, mitigation, detection and correction in Qiskit (its lessons were still being released as of October 2026)."
+access = "free"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "quantum-computing-john-preskill-caltech"
 title = "Quantum Computing — John Preskill (Caltech Ph219 lecture notes)"
+authors = "John Preskill"
 type = "docs"
 label = "Notes"
 url = "http://theory.caltech.edu/~preskill/ph219/index.html"
 link_text = "theory.caltech.edu"
+description = "Preskill's graduate lecture notes for Caltech's quantum computation course, free online. More theoretical than Nielsen & Chuang in places; use them for entanglement (Practice 3) and quantum error correction (Practice 5)."
+access = "free"
+level = "advanced"
 
 [[groups.items]]
 id = "quantum-computing-since-democritus"
-title = "Quantum Computing Since Democritus"
+title = "Quantum Computing since Democritus"
 authors = "Scott Aaronson"
+year = "2013"
 type = "book"
-
-[[groups.items]]
-id = "some-light-quantum-mechanics-3blue1brown"
-title = "Some light quantum mechanics — 3Blue1Brown"
-type = "video"
-access = "free"
-url = "https://www.youtube.com/watch?v=MzRCDLre1b4"
-link_text = "YouTube"
-verified = 2026-10-13
+url = "https://www.cambridge.org/9780521199568"
+link_text = "Cambridge University Press"
+description = "A complexity theorist's tour from Democritus through logic, computability and complexity to quantum computing, cryptography and the interpretation of quantum mechanics. Read it for objective 5: what quantum computers can and cannot do, in complexity-theory terms."
+access = "paid"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "quantum-computer-science-an-introduction"
 title = "Quantum Computer Science: An Introduction"
 authors = "N. David Mermin"
+year = "2007"
 type = "book"
+url = "https://www.cambridge.org/9780521876582"
+link_text = "Cambridge University Press"
+more_links = [{ text = "front matter and contents (PDF)", url = "https://assets.cambridge.org/97805218/76582/frontmatter/9780521876582_frontmatter.pdf" }]
+description = "A short textbook built on Mermin's Cbits-and-Qbits notation, with one chapter each on breaking RSA encryption, searching with a quantum computer, quantum error correction, and protocols that use just a few Qbits. A cleaner second explanation of Shor's algorithm and error correction than Nielsen & Chuang."
+access = "paid"
+level = "intermediate"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "algorithms-for-quantum-computation"
-title = "Algorithms for Quantum Computation"
-authors = "Peter Shor"
+title = "Algorithms for Quantum Computation: Discrete Logarithms and Factoring"
+authors = "Peter W. Shor"
 year = "1994"
 type = "paper"
 marks = ["core"]
-url = "https://ieeexplore.ieee.org/document/365700"
-link_text = "Link"
-more_links = [{ text = "free expanded version (arXiv)", url = "https://arxiv.org/abs/quant-ph/9508027" }]
-verified = 2026-10-13
+url = "https://doi.org/10.1109/SFCS.1994.365700"
+link_text = "DOI (FOCS 1994)"
+more_links = [{ text = "free expanded version (arXiv; SIAM J. Comput., 1997)", url = "https://arxiv.org/abs/quant-ph/9508027" }]
+description = "The paper that showed a quantum computer could factor integers and compute discrete logarithms in polynomial time, by reducing factoring to order finding and finding the order with the quantum Fourier transform. The free arXiv text is the expanded journal paper, \"Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer\". Practice 4 implements its classical shell and uses its asymptotics."
+access = "free"
+verified = 2026-10-21
 
 [[groups.items]]
 id = "quantum-computing-in-the-nisq-era-and"
@@ -78,27 +113,33 @@ type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1801.00862"
 link_text = "arXiv"
-verified = 2026-10-13
+description = "The keynote essay (published in *Quantum*, 2018) that named the noisy intermediate-scale quantum (NISQ) era: machines of 50–100 qubits may beat classical computers at some tasks, but gate noise limits the circuits they can run, so they are a step toward fault-tolerant quantum computing rather than its arrival. Background for objective 5."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "a-quantum-engineer-s-guide-to"
 title = "A Quantum Engineer's Guide to Superconducting Qubits"
-authors = "Krantz, Kjaergaard, Yan, Orlando, Gustavsson & Oliver"
+authors = "Philip Krantz, Morten Kjaergaard, Fei Yan, Terry P. Orlando, Simon Gustavsson & William D. Oliver"
 year = "2019"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1904.06560"
 link_text = "arXiv"
-verified = 2026-10-13
+description = "A review for engineers entering superconducting quantum circuits (*Applied Physics Reviews*, 2019): circuit-QED basics, qubit design, noise and decoherence, control and readout. Read it before the mini-project; it explains the T₁ and readout errors you will measure."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "quantum-error-correction-below-the"
-title = "Quantum Error Correction Below the Surface Code Threshold — Google Quantum AI and Collaborators (Nature, 2024/2025)"
+title = "Quantum Error Correction Below the Surface Code Threshold"
+authors = "Google Quantum AI and Collaborators (Rajeev Acharya et al.)"
+year = "2024"
 type = "paper"
 access = "free"
-url = "https://arxiv.org/abs/2408.13687"
-link_text = "arXiv"
-verified = 2026-10-13
+url = "https://doi.org/10.1038/s41586-024-08449-y"
+link_text = "Nature (open access)"
+more_links = [{ text = "arXiv", url = "https://arxiv.org/abs/2408.13687" }]
+description = "The first surface-code memory clearly below threshold (arXiv August 2024; *Nature*, online December 2024): a distance-7 code on 101 qubits with a logical error of 0.143% per cycle, errors suppressed by a factor Λ = 2.14 each time the distance grows by two, and a logical lifetime 2.4 times that of the best physical qubit. The worked example of objective 5's threshold idea."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "how-to-factor-2048-bit-rsa-integers-with"
@@ -109,4 +150,5 @@ type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2505.15917"
 link_text = "arXiv"
-verified = 2026-10-13
+description = "A May 2025 resource estimate: RSA-2048 factored in under a week on fewer than a million noisy qubits, down from about 20 million in the 2019 Gidney–Ekerå estimate, under the same assumptions (0.1% gate error, nearest-neighbour connectivity on a square grid, 1 µs surface-code cycles, 10 µs control reaction time). The worked example of a resource estimate for objective 5."
+verified = 2026-10-21

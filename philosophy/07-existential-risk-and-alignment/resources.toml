@@ -8,21 +8,29 @@
 id = "superintelligence-paths-dangers"
 title = "Superintelligence: Paths, Dangers, Strategies"
 authors = "Nick Bostrom"
-year = "2014"
+year = "2016"
 type = "book"
 access = "paid"
 level = "intermediate"
 marks = ["core"]
-description = "The book that put AI existential risk on the map. Analyzes paths to superintelligence, the control problem, and strategic considerations. Dense but essential."
+url = "https://india.oup.com/product/superintelligence-9780198739838"
+link_text = "OUP"
+description = "The book that put AI existential risk on the philosophical agenda: paths to superintelligence, the orthogonality and instrumental-convergence theses, the kinetics of an intelligence explosion, and the control problem. Dense. The link is Oxford University Press's 2016 paperback, which ends with an afterword."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "human-compatible-artificial-intelligence"
-title = "Human Compatible: Artificial Intelligence and the Problem of Control"
+title = "Human Compatible: AI and the Problem of Control"
 authors = "Stuart Russell"
 year = "2019"
 type = "book"
+access = "paid"
+level = "beginner"
 marks = ["core"]
-description = "Russell argues that the standard model of AI (optimize a fixed objective) is fundamentally flawed. Proposes a new framework based on uncertainty about human preferences. More practical and accessible than Bostrom."
+url = "https://www.penguin.com.au/books/human-compatible-9780241335246"
+link_text = "Penguin"
+description = "Russell argues that the standard model of AI (optimize a fixed objective) is fundamentally flawed, and proposes machines that are uncertain about human preferences and learn them from human behavior: his three principles, and the off-switch game in Practice 4. More accessible than Bostrom."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-precipice-existential-risk-and-the"
@@ -30,7 +38,12 @@ title = "The Precipice: Existential Risk and the Future of Humanity"
 authors = "Toby Ord"
 year = "2020"
 type = "book"
-description = "Broad treatment of existential risks, with a major focus on unaligned AI. Places AI risk in the context of humanity's long-term trajectory."
+access = "paid"
+level = "beginner"
+url = "https://www.hachettebookgroup.com/titles/toby-ord/the-precipice/9780316484893"
+link_text = "Hachette"
+description = "Broad treatment of existential risks, with a major focus on unaligned AI. Places AI risk in the context of humanity's long-term trajectory, and gives the per-risk estimates that Check Yourself question 7 and the mini-project compare against."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "intelligence-explosion-microeconomics"
@@ -38,9 +51,10 @@ title = "Intelligence Explosion Microeconomics"
 authors = "Eliezer Yudkowsky"
 year = "2013"
 type = "paper"
+access = "free"
 url = "https://intelligence.org/files/IEM.pdf"
 link_text = "Link"
-description = "Technical analysis of how recursive self-improvement could lead to an intelligence explosion. Core theoretical framework for AI risk thinking."
+description = "Technical analysis of how recursive self-improvement could lead to an intelligence explosion, framed as a question about the returns on reinvesting cognitive capability. The source for Practice 3's takeoff model."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -49,6 +63,7 @@ title = "What Failure Looks Like"
 authors = "Paul Christiano"
 year = "2019"
 type = "blog"
+access = "free"
 url = "https://www.alignmentforum.org/posts/HBxe6wdjxK239zajf/what-failure-looks-like"
 link_text = "Link"
 description = "Influential post describing plausible failure modes of advanced AI that don't require dramatic takeover scenarios."
@@ -56,46 +71,62 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "the-alignment-problem-from-a-deep"
-title = "The alignment problem from a deep learning perspective"
+title = "The Alignment Problem from a Deep Learning Perspective"
 authors = "Richard Ngo, Lawrence Chan, Sören Mindermann"
 year = "2022"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2209.00626"
 link_text = "Link"
-description = "Analyzes alignment risk specifically in the context of deep learning systems. Bridges theoretical AI safety and practical ML research."
-verified = 2026-10-13
+description = "Analyzes alignment risk specifically in the context of deep learning systems: reward hacking that exploits situational awareness, misaligned internally represented goals, and power-seeking. Bridges theoretical AI safety and practical ML research. First posted August 2022; the arXiv version is v8 (May 2025)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "concrete-problems-in-ai-safety"
 title = "Concrete Problems in AI Safety"
-authors = "Amodei et al."
+authors = "Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, Dan Mané"
 year = "2016"
 type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/1606.06565"
 link_text = "Link"
-description = "Identifies five practical research problems in AI safety: avoiding negative side effects, scalable oversight, safe exploration, robustness to distributional shift, and reward hacking."
-verified = 2026-10-13
+description = "Identifies five practical research problems in AI safety: avoiding negative side effects, scalable oversight, safe exploration, robustness to distributional shift, and reward hacking. Also used in econ/11."
+verified = 2026-10-21
+
+[[groups.items]]
+id = "specification-gaming-the-flip-side"
+title = "Specification gaming: the flip side of AI ingenuity"
+authors = "Victoria Krakovna, Jonathan Uesato, Vladimir Mikulik, Matthew Rahtz, Tom Everitt, Ramana Kumar, Zac Kenton, Jan Leike, Shane Legg"
+year = "2020"
+type = "blog"
+access = "free"
+url = "https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/"
+link_text = "Google DeepMind"
+description = "Defines specification gaming as behavior that satisfies the literal specification of an objective without achieving the intended outcome, works through examples from learning agents, and links DeepMind's public master list of examples. The published-case source for Practice 2's casebook."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "bluedot-impact-ai-safety-courses"
-title = "BlueDot Impact AI safety courses (formerly \"AI Safety Fundamentals\")"
+title = "Online AI safety courses and project sprints"
 authors = "BlueDot Impact"
+year = "2026"
 type = "course"
-url = "https://bluedot.org/"
-link_text = "Course"
-description = "Structured courses covering the core arguments and open problems in AI alignment and governance; the short introductory course is free and self-paced. The old aisafetyfundamentals.com address now redirects here. Good entry point."
-verified = 2026-10-13
+access = "free"
+level = "beginner"
+url = "https://bluedot.org/courses"
+link_text = "BlueDot"
+description = "Course catalog of BlueDot Impact (formerly \"AI Safety Fundamentals\"), a nonprofit founded in 2022. As of October 2026 every course is free: a two-hour self-paced introduction, *The Future of AI*, and 25–30-hour cohort courses in AGI strategy, frontier AI governance and technical AI safety, plus project sprints. A guided entry point to the arguments and open problems. Also used in econ/11."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "80-000-hours-ai-risk-profile"
 title = "80,000 Hours — AI Risk Profile"
 authors = "80,000 Hours"
 type = "blog"
+access = "free"
 url = "https://80000hours.org/problem-profiles/artificial-intelligence/"
 link_text = "Link"
-description = "Comprehensive overview of why AI risk matters and what career paths address it."
+description = "Overview of why 80,000 Hours ranks AI risk among the most pressing problems, with the career paths that address it. Advocacy from an organization that recommends working on the problem: read it as the case for, not as a neutral survey."
 verified = 2026-10-13
 
 [[groups.items]]
@@ -107,8 +138,8 @@ type = "paper"
 access = "free"
 url = "https://arxiv.org/abs/2206.13353"
 link_text = "Link"
-description = "The most carefully argued philosophical version of the AI-risk case: six explicit premises, each given a probability, yielding roughly a 5% chance of existential catastrophe by 2070 (later revised by the author to over 10%). Lets you pinpoint exactly which premise you reject."
-verified = 2026-10-13
+description = "The most carefully argued philosophical version of the AI-risk case: six explicit premises, each given a probability, yielding roughly a 5% chance of existential catastrophe of this kind by 2070 (in a May 2022 update the author raised his estimate to over 10%). Lets you pinpoint exactly which premise you reject."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "artificial-intelligence-values-and"
@@ -128,6 +159,7 @@ title = "AI as Normal Technology"
 authors = "Arvind Narayanan, Sayash Kapoor"
 year = "2025"
 type = "paper"
+access = "free"
 url = "https://knightcolumbia.org/content/ai-as-normal-technology"
 link_text = "Link"
 description = "The most developed skeptical alternative to the superintelligence frame: AI as a transformative but controllable technology, like electricity or the internet, whose effects unfold over decades through institutions. Read it against Bostrom and Carlsmith."
@@ -136,10 +168,11 @@ verified = 2026-10-13
 [[groups.items]]
 id = "international-ai-safety-report-2026"
 title = "International AI Safety Report 2026"
-authors = "Yoshua Bengio (lead) et al."
+authors = "Yoshua Bengio (chair) et al."
 year = "2026"
 type = "report"
-url = "https://internationalaisafetyreport.org/"
+access = "free"
+url = "https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026"
 link_text = "Link"
-description = "Second edition (February 2026) of the government-backed scientific assessment of general-purpose AI capabilities, risks, and safeguards, led by Yoshua Bengio; the first edition (2025) is [arXiv:2501.17805](https://arxiv.org/abs/2501.17805). The best single source for where the evidence actually stands."
-verified = 2026-10-13
+description = "The second edition (3 February 2026) of the government-backed scientific assessment of general-purpose AI capabilities, risks, and safeguards, written by over 100 AI experts and chaired by Yoshua Bengio; it covers research published before December 2025. As of October 2026 it is the latest full report (the most recent interim \"Key Update\" came out in November 2025). The first edition (2025) is [arXiv:2501.17805](https://arxiv.org/abs/2501.17805). Use it for where the evidence stands."
+verified = 2026-10-21

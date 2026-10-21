@@ -20,15 +20,17 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "game-theory-econ-159"
-title = "Game Theory (ECON 159)"
+title = "Game Theory (ECON 159, Open Yale Courses, Fall 2007)"
 authors = "Ben Polak, Yale"
+year = "2007"
 type = "course"
 access = "free"
+level = "beginner"
 marks = ["core"]
 url = "https://oyc.yale.edu/economics/econ-159"
 link_text = "Link"
-description = "Outstanding open course. Polak is an exceptional lecturer. Covers Nash equilibrium, mixed strategies, sequential games, repeated games, evolution."
-verified = 2026-10-13
+description = "24 recorded lectures from Yale's undergraduate course (CC BY-NC-SA; needs only introductory micro and one-variable calculus): dominance, Nash equilibrium, mixed strategies, backward induction, commitment and credibility, repeated games, evolutionary stability, and asymmetric information. Polak is an exceptional lecturer; his tennis-serve and oligopoly lectures feed Practices 1–2."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "strategy-an-introduction-to-game-theory"
@@ -36,7 +38,12 @@ title = "Strategy: An Introduction to Game Theory"
 authors = "Joel Watson"
 year = "2013"
 type = "book"
-description = "Excellent alternative textbook with emphasis on contract and mechanism design applications."
+access = "paid"
+level = "intermediate"
+url = "https://wwnorton.com/books/9780393918380"
+link_text = "Norton"
+description = "Alternative undergraduate textbook with an emphasis on contracts and mechanism-design applications; the 2013 Norton edition is the one linked. Use it as a second explanation when Tadelis is terse (Practice 3)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "a-course-in-game-theory"
@@ -53,13 +60,16 @@ verified = 2026-10-13
 
 [[groups.items]]
 id = "the-strategy-of-conflict"
-title = "The Strategy of Conflict"
-authors = "Thomas Schelling"
-year = "1960"
+title = "The Strategy of Conflict (with a new preface by the author)"
+authors = "Thomas C. Schelling"
+year = "1960 (paperback with new preface 1981)"
 type = "book"
 access = "paid"
 level = "intermediate"
-description = "Nobel laureate's classic on focal points, credible commitments, and strategic interaction. Brilliant insights without formal math."
+url = "https://www.hup.harvard.edu/books/9780674840317"
+link_text = "Harvard University Press"
+description = "Nobel laureate's classic on focal points, credible commitments, and strategic interaction, with insights that need no formal math. The source for Practice 3's commitment test and the mini-project's tacit-coordination questions."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "non-cooperative-games"
@@ -67,29 +77,36 @@ title = "Non-Cooperative Games"
 authors = "John Nash"
 year = "1951"
 type = "paper"
-url = "https://www.jstor.org/stable/1969529"
+access = "paid"
+url = "https://doi.org/10.2307/1969529"
 link_text = "Link"
-description = "The full statement and existence proof of Nash equilibrium (first announced in a one-page 1950 *PNAS* note). Short, elegant, and historically essential."
+description = "The full statement and existence proof of Nash equilibrium, published in the *Annals of Mathematics* (first announced in a one-page 1950 *PNAS* note). Short, elegant, and historically essential."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "game-theory-coursera"
 title = "Game Theory (Coursera)"
-authors = "Matthew Jackson, Kevin Leyton-Brown & Yoav Shoham (Stanford / UBC)"
+authors = "Matthew O. Jackson, Kevin Leyton-Brown & Yoav Shoham (Stanford / UBC)"
+year = "undated (checked Oct 2026)"
 type = "course"
+access = "partial"
+level = "beginner"
 url = "https://www.coursera.org/learn/game-theory-1"
 link_text = "Link"
-description = "Accessible online course covering normal form, extensive form, repeated, and coalitional games."
-verified = 2026-10-13
+description = "Accessible eight-module online course covering normal form, extensive form, repeated, and coalitional games; free to enroll, certificate paid. Use it for extra practice on the oligopoly models of Practice 2."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "game-theory-101"
 title = "Game Theory 101"
 authors = "William Spaniel"
-type = "blog"
+type = "video-series"
+access = "partial"
+level = "beginner"
 url = "https://gametheory101.com/"
 link_text = "Link"
-description = "Free video tutorials and textbook companion. Good for reinforcing specific concepts."
-verified = 2026-10-13
+description = "Video lectures organized as short courses (the main one runs from dominance and Nash equilibrium through subgame perfection, repeated games, Bayesian Nash equilibrium and signaling games), based on Spaniel's textbook, which is sold separately. Good for quick refreshers on specific concepts (Practice 1)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "evolution-and-the-theory-of-games"
@@ -97,15 +114,25 @@ title = "Evolution and the Theory of Games"
 authors = "John Maynard Smith"
 year = "1982"
 type = "book"
-description = "The foundational text on evolutionary game theory and evolutionarily stable strategies (ESS)."
+access = "paid"
+level = "intermediate"
+url = "https://doi.org/10.1017/CBO9780511806292"
+link_text = "Cambridge University Press"
+description = "The foundational text on evolutionary game theory and evolutionarily stable strategies (ESS), including the Hawk–Dove analysis behind Practice 5. The link is Cambridge's record for the 1982 book (print or Cambridge Core e-book)."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-art-of-strategy"
-title = "The Art of Strategy"
-authors = "Avinash Dixit & Barry Nalebuff"
-year = "2008"
+title = "The Art of Strategy: A Game Theorist's Guide to Success in Business and Life"
+authors = "Avinash K. Dixit & Barry J. Nalebuff"
+year = "2008 (paperback 2010)"
 type = "book"
-description = "Accessible popular book applying game theory to business and everyday strategic decisions."
+access = "paid"
+level = "beginner"
+url = "https://wwnorton.com/books/9780393337174"
+link_text = "Norton"
+description = "Accessible popular book applying game theory to business and everyday strategic decisions; its treatment of credibility and commitment supports Practice 3."
+verified = 2026-10-21
 
 [[groups.items]]
 id = "the-evolution-of-cooperation"
@@ -113,6 +140,7 @@ title = "The Evolution of Cooperation"
 authors = "Robert Axelrod & William D. Hamilton"
 year = "1981"
 type = "paper"
+access = "free"
 url = "https://websites.umich.edu/~axe/research/Axelrod%20and%20Hamilton%20EC%201981.pdf"
 link_text = "Link"
 description = "Short *Science* paper on how cooperation emerges in the repeated Prisoner's Dilemma, built on computer tournaments won by Tit-for-Tat. Expanded into Axelrod's 1984 book of the same name; the intuitive core of repeated games and essential background for cooperative AI (Section 11)."
@@ -125,6 +153,7 @@ authors = "Martin J. Osborne & Ariel Rubinstein"
 year = "1990"
 type = "book"
 access = "free"
+level = "advanced"
 url = "https://www.economics.utoronto.ca/osborne/bm/"
 link_text = "Link"
 description = "Free text on bargaining theory — Nash's axiomatic solution and alternating-offers models with time — and how bargaining between traders produces market outcomes. Fills the bargaining gap that Section 11's cooperative-AI papers lean on."
