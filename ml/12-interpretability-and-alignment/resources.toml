@@ -301,3 +301,103 @@ url = "https://arxiv.org/abs/2503.14499"
 link_text = "arxiv.org/abs/2503.14499"
 description = "Measures a model's 50% time horizon, the human duration of tasks it completes half the time, finding it doubled about every seven months since 2019."
 verified = 2026-10-13
+
+[[groups]]
+title = "Weights as Data (emerging)"
+intro = '''
+Mechanistic interpretability reads a network through its **activations**. This group asks whether you can read and change it through its **weights** alone. Two lines of work meet here:
+
+- **Weight-space learning** (established, 2016 onward): train other networks on weights to predict a model's properties, embed it, or generate new weights. The central difficulty is symmetry: permuting hidden neurons changes the weights without changing the function, so architectures that process weights are built to be permutation-equivariant.
+- **Weight-space programming** (new, November 2026): a general-purpose LLM reads a network's raw weights as text and edits or writes them from a plain-language goal, with no optimizer.
+
+⚠️ **Status, checked 2026-11-24:** weight-space programming is a blog post plus a few weeks of arXiv preprints, none peer-reviewed. The original results use one model, and several experiments allowed tools or forward passes. The first independent studies are mixed: weight-*reading* looks like local arithmetic plus memorized dataset priors, and LLM-*written* networks turn out to be mostly-zero, program-like networks that hand-written programs match or beat. Treat it as an open question to track, not a method. Nothing here is on the core path.
+'''
+outro = '''
+Also used here: permutation and E(n) equivariance are taught in [ml/13 Graphs, Geometry & Science](../13-graphs-geometry-and-science/); the small sensor networks that weight-space programming may suit best are [ml/14 Edge & Embedded ML](../14-edge-and-embedded-ml/)'s subject.
+'''
+
+[[groups.items]]
+id = "survey-of-weight-space-learning"
+title = "A Survey of Weight Space Learning: Understanding, Representation, and Generation"
+authors = "Han et al."
+year = "2026"
+type = "paper"
+url = "https://arxiv.org/abs/2603.10090"
+link_text = "arxiv.org/abs/2603.10090"
+description = "Maps the field into three parts: the geometry and symmetries of weight space, learned representations of whole models, and weight generation (hypernetworks, diffusion over weights). Start here for the established side."
+access = "free"
+verified = 2026-11-24
+
+[[groups.items]]
+id = "equivariant-architectures-deep-weight-spaces"
+title = "Equivariant Architectures for Learning in Deep Weight Spaces"
+authors = "Navon, Shamsian, Achituve, Fetaya, Chechik, Maron"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2301.12780"
+link_text = "arxiv.org/abs/2301.12780"
+description = "ICML 2023. Characterizes the linear layers that respect an MLP's neuron-permutation symmetry and builds networks that take other networks' weights as input."
+access = "free"
+verified = 2026-11-24
+
+[[groups.items]]
+id = "permutation-equivariant-neural-functionals"
+title = "Permutation Equivariant Neural Functionals"
+authors = "Zhou, Yang, Burns, Cardace, Jiang, Sokota, Kolter, Finn"
+year = "2023"
+type = "paper"
+url = "https://arxiv.org/abs/2302.14040"
+link_text = "arxiv.org/abs/2302.14040"
+description = "NeurIPS 2023. Neural functionals: permutation-equivariant layers for MLP and CNN weights, used to predict generalization from weights and to edit networks. The companion to Navon et al."
+access = "free"
+verified = 2026-11-24
+
+[[groups.items]]
+id = "sparks-of-weight-space-programming"
+title = "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights"
+authors = "Takehi, Teoh, Zhang, Khattab"
+year = "2026"
+type = "blog"
+url = "https://rikiyat.github.io/blog/weight-space-programming"
+link_text = "rikiyat.github.io"
+more_links = [{ text = "Logs", url = "https://github.com/RikiyaT/lm_understand-logs" }]
+description = "⚠️ Speculative, not peer-reviewed. Coins the term: GPT-6 Astra identifies tasks from weights, repairs policies and reduces reasoning loops in a small LLM by editing weights directly. The authors call the results early and uneven: it failed to detect sycophancy from weights alone and failed to improve Gemma 3 270M. Every prompt and response is in the logs repository."
+access = "free"
+verified = 2026-11-24
+
+[[groups.items]]
+id = "can-an-llm-reason-about-weights"
+title = "\"Can an LLM Actually Reason and Program about Neural Network's Weights or is it just memorization on steroids?\" Exploring \"Weight-Space Programming\""
+authors = "Nazmus Sakib Ahmed"
+year = "2026"
+type = "paper"
+url = "https://arxiv.org/abs/2611.08070"
+link_text = "arxiv.org/abs/2611.08070"
+short = "Ahmed — Can an LLM reason about weights?"
+description = "⚠️ Preprint. A skeptical test of weight-reading with Claude Opus 5.5: accurate local arithmetic (e.g. inferring optimizer steps from batch-norm statistics), but semantic readings lean on memorized dataset priors, such as calling unrelated networks CIFAR-10."
+access = "free"
+verified = 2026-11-24
+
+[[groups.items]]
+id = "compiling-known-rules-compact-neural-agents"
+title = "Compiling Known Rules into Compact Neural Agents: Weight-Space Programming on Unseen Games"
+authors = "Jens Lehmann"
+year = "2026"
+type = "paper"
+url = "https://arxiv.org/abs/2611.16981"
+link_text = "arxiv.org/abs/2611.16981"
+description = "⚠️ Preprint. LLM-written game networks generalize to unseen levels but lose to the same LLMs' plain Python programs; most of their weights are exactly zero or small integers, i.e. programs in network form. Fragile under PPO fine-tuning."
+access = "free"
+verified = 2026-11-24
+
+[[groups.items]]
+id = "mixed-signals-wsp-eeg-ecg"
+title = "Mixed Signals: Weight-Space Programming for EEG and ECG"
+authors = "Varam, Najafi, Atienza"
+year = "2026"
+type = "paper"
+url = "https://arxiv.org/abs/2611.13758"
+link_text = "arxiv.org/abs/2611.13758"
+description = "⚠️ Preprint. Biosignal networks: LLMs fixed planted faults and wrote small EEG/ECG networks from a few subjects that beat classic hand-crafted pipelines, but struggled to improve well-trained classifiers or name a task from weights alone. The closest result to small sensor networks on edge hardware."
+access = "free"
+verified = 2026-11-24

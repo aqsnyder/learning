@@ -368,6 +368,13 @@ pass are ticked. Everything else is there for going deeper.
 - [ ] Are Emergent Abilities of Large Language Models a Mirage? — Schaeffer et al. <!-- id:ml/12/are-emergent-abilities-of-large-language -->
 - [ ] Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference — Chiang et al. <!-- id:ml/12/chatbot-arena-an-open-platform-for -->
 - [ ] Measuring AI Ability to Complete Long Software Tasks (METR time horizons) — Kwa et al. <!-- id:ml/12/measuring-ai-ability-to-complete-long -->
+- [ ] A Survey of Weight Space Learning: Understanding, Representation, and Generation — Han et al. <!-- id:ml/12/survey-of-weight-space-learning -->
+- [ ] Equivariant Architectures for Learning in Deep Weight Spaces — Navon, Shamsian, Achituve, Fetaya, Chechik, Maron <!-- id:ml/12/equivariant-architectures-deep-weight-spaces -->
+- [ ] Permutation Equivariant Neural Functionals — Zhou, Yang, Burns, Cardace, Jiang, Sokota, Kolter, Finn <!-- id:ml/12/permutation-equivariant-neural-functionals -->
+- [ ] Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights — Takehi, Teoh, Zhang, Khattab <!-- id:ml/12/sparks-of-weight-space-programming -->
+- [ ] Ahmed — Can an LLM reason about weights? <!-- id:ml/12/can-an-llm-reason-about-weights -->
+- [ ] Compiling Known Rules into Compact Neural Agents: Weight-Space Programming on Unseen Games — Jens Lehmann <!-- id:ml/12/compiling-known-rules-compact-neural-agents -->
+- [ ] Mixed Signals: Weight-Space Programming for EEG and ECG — Varam, Najafi, Atienza <!-- id:ml/12/mixed-signals-wsp-eeg-ecg -->
 - [ ] 🛠️ Exercise 1: Reproduce Toy Models of Superposition <!-- id:ml/12/ex-1 -->
 - [ ] 🛠️ Exercise 2: Circuits with TransformerLens: induction heads, then IOI <!-- id:ml/12/ex-2 -->
 - [ ] 🛠️ Exercise 3: Logit lens vs. J-lens <!-- id:ml/12/ex-3 -->
